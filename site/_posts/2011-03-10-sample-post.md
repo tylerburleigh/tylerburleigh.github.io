@@ -2,14 +2,12 @@
 layout: post
 title: Sample Post
 excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-modified: 2013-05-31
-tags: [intro, beginner, jekyll, tutorial]
+categories: [hello world]
 comments: true
-pinned: true
 image:
-  feature: sample-image-2.jpg
-  creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
+  feature: https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250
   credit: thomas shellberg
+  creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
 ---
 
 ## HTML Elements
@@ -32,8 +30,7 @@ Below is just about everything you'll need to style in the theme. Check the sour
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
-![Smithsonian Image]({{ site.url }}/img/sample-image-2.jpg)
-{: .pull-right}
+![Smithsonian Image](https://images.unsplash.com/photo-1440635592348-167b1b30296f?crop=entropy&dpr=2&fit=crop&fm=jpg&h=475&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1250)
 
 *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
