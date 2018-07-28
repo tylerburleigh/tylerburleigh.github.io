@@ -6,9 +6,10 @@
   width: 100%;
   min-height: 400px;
   padding: 30px 15px 20px;
+  z-index: 1;
   @include media-query($small-screen) {
     background-position: center;
-    padding: 30px 15px;
+    padding: 30px;
   }
   @include media-query($medium-screen) {
     height: 100vh;
@@ -18,23 +19,18 @@
 }
 .cover-card {
   color: $text-color;
-  padding: 0 50px;
+  padding: 0 30px;
   .avatar {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     float: none;
-    @include media-query($medium-screen) {
-      display: none;
-    }
   }
   .author_name {
     display: block;
-    color: $primary;
-    font-size: 2.2em;
-    font-weight: 700;
+    color: #F36170;
+    font-size: 1.75em;
     text-transform: lowercase;
-    font-style: italic;
   }
   .author_job {
     display: block;
@@ -42,9 +38,10 @@
     font-size: 0.8em;
     font-weight: 700;
     text-transform: uppercase;
-    margin: -10px auto 20px;
+    margin: -5px auto 10px;
   }
   .author_bio {
+    font-size: 90%;
     display: block;
   }
   @include media-query($medium-screen) {
