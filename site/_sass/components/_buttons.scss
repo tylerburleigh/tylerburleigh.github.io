@@ -7,7 +7,7 @@
   margin-bottom: 20px;
   padding: 8px 20px;
   font-size: 0.875em;
-  font-family: $font-family-base;
+  font-family: $base-font-family;
   font-weight: 700;
   background-color: $primary;
   color: $white;
@@ -16,6 +16,7 @@
   border-color: $primary;
   text-decoration: none !important;
   border-radius: 5px;
+  @include box-shadow;
   &:visited {
     color: $white;
     border-color: $primary;

@@ -12,10 +12,8 @@
   padding: 0.5em 1em;
 }
 img {
-  display: block;
+  height: auto;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 // Tables
@@ -114,7 +112,7 @@ footer {
 .related-articles {
   margin-top: 2em;
   h4 {
-    font-family: $font-family-base;
+    font-family: $base-font-family;
   }
   ul {
     margin: 0;

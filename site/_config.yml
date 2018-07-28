@@ -4,21 +4,23 @@
 ####################################
 #
 title: Leonids
-email: zourenyuan@gmail.com
+email:
 description: A simple and awesome blog theme powered by jekyll.
-url: https://renyuanz.github.io/leonids # the base hostname & protocol for your site
-keywords: ["Programming", "PHP", "Ruby"]
+# the base hostname & protocol for your site
+# If your project is placed in https://github.com/yourname/yourname.github.io at master branch
+# Then, the 'url' is: http://yourname.github.io
+# If your project is placed in another repository as a gh-pages branch, like: https://github.com/yourname/projectname
+# Then, the 'url' is: http://yourname.github.io/projectname
+url:
 
 #
 ###################################
 # Jekyll configuration
 ####################################
 #
-timezone:          Europe/Paris
-markdown:          kramdown
-highlighter:       rouge
+markdown:    kramdown
+highlighter:  pygments
 excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
 
 kramdown:
   auto_ids: true
@@ -33,24 +35,24 @@ kramdown:
 ####################################
 #
 owner:
-  name: Leonids
-  avatar: leonids-logo.png
+  name: Renyuan
+  avatar: avatar.jpg
   job: "PHP & Ruby Developer"
-  bio: "A backend developer who loves design awesome things. Working for RendezvousCheznous atm in Marseille, France."
-  email: zourenyuan@gmail.com
-  disqus-shortname: renyuanzblog
-  twitter: renyuan814 #username
+  bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  email:
+  disqus-shortname:
+  twitter: #username
   facebook: #username
   google:
     plus: #username
-    analytics: UA-62251910-2
+    analytics:
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: renyuanz #username
+  github: #username
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: renyuan-zou-69b7038a #username
+  linkedin: #username
   xing: #username
   instagram: #username
   lastfm: #username
@@ -64,4 +66,3 @@ owner:
   weibo: #username
   flickr: #username
   codepen: #username
-  telegram: #username
