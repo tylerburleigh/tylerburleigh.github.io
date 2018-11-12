@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/example.com/work/peer-reviewed-publications/</loc>
+    <lastmod>2045-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/example.com/work/white-papers/</loc>
+    <lastmod>2044-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/example.com/about/</loc>
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/example.com/post/my-peer-reviewed-publications/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/example.com/work/my-peer-reviewed-publications/</loc>
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -110,7 +115,7 @@
   
   <url>
     <loc>/example.com/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2045-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
