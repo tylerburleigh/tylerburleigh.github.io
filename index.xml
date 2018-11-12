@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tyler Burleigh</title>
+    <title>Tyler Burleigh, PhD</title>
     <link>/example.com/</link>
-    <description>Recent content on Tyler Burleigh</description>
+    <description>Recent content on Tyler Burleigh, PhD</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2018 Tyler Burleigh</copyright>
     <lastBuildDate>Sun, 01 Jan 2045 00:00:00 +0000</lastBuildDate>
@@ -34,47 +34,12 @@
     </item>
     
     <item>
-      <title>My peer-reviewed publications</title>
-      <link>/example.com/post/my-peer-reviewed-publications/</link>
+      <title>Hello blogdown</title>
+      <link>/example.com/blog/hello-blogdown/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/example.com/post/my-peer-reviewed-publications/</guid>
-      <description>Test</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/example.com/blog/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/example.com/blog/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/example.com/blog/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/example.com/blog/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>/example.com/blog/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/example.com/blog/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>/example.com/blog/hello-blogdown/</guid>
+      <description>I like to reinvent my website from time to time. This means doing a “spring cleaning,” but also using the opportunity to try something new. I like to experiment with new designs, layouts, and software. I’ve been using R quite a lot lately, and for the sake of curiosity I’m trying to see how many different uses I can find for it. This time I decided to try using blogdown to run my site.</description>
     </item>
     
   </channel>

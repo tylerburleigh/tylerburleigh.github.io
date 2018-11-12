@@ -4,11 +4,9 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content="Hugo 0.51" />
-		<title>Hello R Markdown - Tyler Burleigh, PhD</title>
+		<title>Hello blogdown - Tyler Burleigh, PhD</title>
 
-		<meta name="description" content="R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.">
+		<meta name="description" content="Hello blogdown">
 
 
 		
@@ -58,18 +56,14 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 
 <article>
 	<header><hgroup id="brand">
-	<h1>Hello R Markdown</h1>
+	<h1>Hello blogdown</h1>
 	<h5>
 		
-		<time datetime="2015-07-23 21:13:14 -0500 -0500">Jul 23, 2015</time>
+		<time datetime="2018-11-12 00:00:00 &#43;0000 UTC">Nov 12, 2018</time>
 		<span class="no-print">
 			-
 				
-				<a href="/tags/R%20Markdown">R Markdown</a>
-				
-				<a href="/tags/plot">plot</a>
-				
-				<a href="/tags/regression">regression</a>
+				<a href="/tags/meta">meta</a>
 				<span>
 	</h5>
 	
@@ -79,55 +73,21 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
 	
 
 
-<div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
-</div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span id="fig:pie"></span>
-<img src="/example.comblog/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
+<p>I like to reinvent my website from time to time. This means doing a “spring cleaning,” but also using the opportunity to try something new. I like to experiment with new designs, layouts, and software. I’ve been using <a href="%22https://www.r-project.org%22">R</a> quite a lot lately, and for the sake of curiosity I’m trying to see how many different uses I can find for it. This time I decided to try using <a href="%22https://bookdown.org/yihui/blogdown%22">blogdown</a> to run my site.</p>
+<div id="why-blogdown" class="section level1">
+<h1>Why blogdown?</h1>
+<p>I’ve decided to use blogdown for a few reasons.</p>
+<div id="section" class="section level2">
+<h2>1</h2>
+<p>As <a href="https://twitter.com/jsomers">James Somers</a> put it in an article over at The Atlantic, <a href="https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676">The Scientific Paper is Obsolete</a>. I’m interested in new ways of doing scientific publishing, not just for some of the reasons cited in that article – e.g., the stodgy printed-on-papoer article can’t accommodate new and useful ways of presenting knowledge like interactive computational notebooks can – but also because I’ve found myself transitioning out of academia and into industry where the scientific process takes a different form.</p>
+<p>In academia, knowledge is created and careers are built upon the publication of journal articles – end results that can often take years to achieve given the glacial pace of peer-review. But in industry science is more agile, taking shape in blips and bursts as it is needed to inform different decisions. The end result is better decisions, but much of the process that lead to those decisions can be lost unless someone is making an effort to document it.</p>
+<p>Part of my industry transition has also involved placing a greater emphasis on “data science” where the process is <em>almost as much</em> about applying programming and other technical skills as it is about applying theory and testing hypotheses. I usually learn new technical skills by jumping right in and trying to solve problems, but I also find that writing helps to develop explicit knowledge of what it is that I’ve learned to do in practice. It also becomes a resource for future-me to look back at so I don’t re-tread the same ground!</p>
 </div>
 </div>
 
 </article>
 <nav class="no-print post-nav">
 
-	<a class="prev-post" href="/example.com/blog/goisforlovers/">
-		<img class="icon-text" src="/img/prev.svg"/>(Hu)go Template Primer</a>
-
-
-	<a class="next-post" href="/example.com/blog/hello-blogdown/">Hello blogdown<img class="icon-text" src="/img/next.svg"/>
-	</a>
 
 </nav>
 
