@@ -11,5 +11,16 @@
 	<atom:link href="/example.com/work/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>My peer-reviewed publications</title>
+      <link>/example.com/work/my-peer-reviewed-publications/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/example.com/work/my-peer-reviewed-publications/</guid>
+      <description>PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
+Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley. Frontiers in Psychology, 6:249. doi: 10.3389/fpsyg.2015.00249. [PDF]
+Burleigh, T. J. &amp;amp; Schoenherr, J. R.</description>
+    </item>
+    
   </channel>
 </rss>
