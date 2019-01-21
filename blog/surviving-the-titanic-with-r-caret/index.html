@@ -157,6 +157,34 @@
 </tbody>
 </table>
 
+<h2 id="sons-learned">sons learned</h2>
+
+<p>I learned a lot by tackling this challenge. More than I can possibly list, but here are some of Here are some of the major lessons.</p>
+
+<h3 id="1-the-illusion-of-predictive-power">1. The illusion of (predictive) power</h3>
+
+<p>There were a few times where I encountered overfitting. I thought I&rsquo;d found a significant new feature in the data. When I added it to the model, it increased the in-sample prediction accuracy by several percentage points. But when I applied this model to the test data, the out-of-sample prediction accuracy actually DECREASED. What happened? Well, as it turns out, it&rsquo;s easy to find features that soak up variance in a training set, but those features might not be useful beyond the data they were trained on. Put simply: they don&rsquo;t generalize.</p>
+
+<p>Their power is an illusion.</p>
+
+<p><img src="/blog/2019-01-21-titanic/illusion.gif" alt="gif" /></p>
+
+<p>One example that kind of took me by surprise was that continuous variables like <code>Age</code>, and <code>Fare</code>, and <code>Family Size</code> performed really well on the training set, but they did not perform so well on the test data. When I <em>binned</em> these variables, they performed slightly worse on the training data, but they performed MUCH better on the test data.</p>
+
+<h3 id="2-what-s-in-a-name-anyway">2. What&rsquo;s in a name, anyway?</h3>
+
+<p>Feature engineering was one of my favorite parts of the process. It was there that I could draw on the knowledge I&rsquo;ve gained as a student of human behavior and psychology. The most trivial-seeming piece of data is in fact a proxy for something incredibly meaningful. You just need to know where to look, and how to manipulate and organize the data. As it turns out, one of the most interesting variables was <code>Name</code>. From that variable I was able to extract a Bayesian prediction of the passenger&rsquo;s race/ethnicity, family relationships (which told me if they had relatives who had also died aboard the ship), and social class (from titles like &ldquo;Dr&rdquo;, &ldquo;Lady&rdquo;, and &ldquo;the Countess.</p>
+
+<p><img src="/blog/2019-01-21-titanic/pompous.gif" alt="gif" /></p>
+
+<h3 id="3-a-picture-is-worth-a-thousand-words">3. A picture is worth a thousand words</h3>
+
+<p>As I was engineering features, I found that data visualization was vital. While I was considering different ways of slicing up the data, visualizations like histograms and bar plots were key to determining if a particular demarcation might be fruitful &ndash; if it was giving me any new signals about survival. During this process, I found that my ability to quickly spin up different kinds visualizations was also really important. Exploratory data analysis is a bit of a stream-of-consciousness, moving from one shallow thread of thought to another until something seems to <em>click</em> or <em>pop out</em> at you.</p>
+
+<p><img src="/blog/2019-01-21-titanic/flight.gif" alt="gif" /></p>
+
+<hr />
+
 <h2 id="model-performance">Model performance</h2>
 
 <p>So how did I do?</p>
@@ -164,8 +192,6 @@
 <p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of 96.5% (kappa = 0.926). With the <code>xgboost</code> method, in-sample accuracy was 95.5% (kappa = 0.905). Although I&rsquo;ve yet to submit my latest model which includes <code>dead relatives</code>, my best Kaggle submission has yielded an out-of-sample prediction accuracy of 81.3%. At the time of this writing, that puts my model in the <strong>top 6%</strong> of all Kaggle submissions.</p>
 
 <p>Not bad! I think I&rsquo;m getting the hang of this. 😁🤝🎉</p>
-
-<hr />
 
 <hr />
 
