@@ -198,6 +198,7 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
+  overflow-x: scroll;
   background: #f1f1f1;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
@@ -206,19 +207,24 @@ code {
 pre > code {
   display: block;
   padding: 1rem 1.5rem;
-  white-space: pre-wrap;
+  /*white-space: pre-wrap;*/
   background: #2b303b;
   color: #c0c5ce;
   font-family: 'Fira Mono', monospace;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 /* #Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
 td {
-  padding: 12px 15px;
+  padding: 2px 15px;
   text-align: left;
   border-bottom: 1px solid #e1e1e1;
+  vertical-align:top;
+  min-width:200px;
 }
 th:first-child,
 td:first-child {
@@ -227,6 +233,11 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0;
+}
+
+table{
+	margin-left:auto;
+	margin-right:auto;
 }
 
 /* #Blockquote
