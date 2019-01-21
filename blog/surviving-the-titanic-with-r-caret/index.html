@@ -4,9 +4,9 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content="Hugo 0.51" />
-		<title>Surviving the Titanic with R caret - Tyler Burleigh, PhD</title>
+		<title>Surviving the Titanic with R caret || Machine Learning - Tyler Burleigh, PhD</title>
 
-		<meta name="description" content="An analysis of the Titanic survival problem.">
+		<meta name="description" content="I decided to try my hand at Kaggle&#39;s Titanic prediction challenge.">
 
 
 		
@@ -14,6 +14,13 @@
 		
 		<link rel="stylesheet" href="/css/ui.min.css"/>
 		
+		<meta name="twitter:site" content="@tylerburleigh">
+		<meta name="twitter:creator" content="@tylerburleigh">
+		
+		<meta name="twitter:description" content="I decided to try my hand at Kaggle&#39;s Titanic prediction challenge." />
+		<meta name="twitter:title" content="Surviving the Titanic with R caret || Machine Learning" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content="https://tylerburleigh.com/blog/2019-01-21-titanic/the-titanic.jpg" />
 		
 		
 
@@ -56,14 +63,14 @@
 
 <article>
 	<header><hgroup id="brand">
-	<h1>Surviving the Titanic with R caret</h1>
+	<h1>Surviving the Titanic with R caret || Machine Learning</h1>
 	<h5>
 		
 		<time datetime="2019-01-21 00:00:00 &#43;0000 UTC">Jan 21, 2019</time>
 		<span class="no-print">
 			-
 				
-				<a href="/tags/analysis">analysis</a>
+				<a href="/tags/machine%20learning">machine learning</a>
 				
 				<a href="/tags/r">r</a>
 				
@@ -78,19 +85,17 @@
 </header>
 	
 
+<p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png" /></p>
+
 <h1 id="introduction">Introduction</h1>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Machine Learning is statistics in a Computer Science department. Data Science is statistics at a startup. It&#39;s statistics all the way down.</p>&mdash; Jake VanderPlas (@jakevdp) <a href="https://twitter.com/jakevdp/status/635880802530660352?ref_src=twsrc%5Etfw">August 24, 2015</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I&rsquo;ve been meaning to &ldquo;upskill&rdquo; into the world of machine learning for some time. I&rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</p>
 
+<p>So I decided to try <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>.</p>
 
-<p>I&rsquo;ve been meaning to &ldquo;upskill&rdquo; into the world of machine learning for some time. I&rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression!</p>
+<p>In this competition, the goal is to predict the survival of Titanic passengers whose fates are unknown, using what is known about some of the passengers who are known to have survived or perished. You get &ldquo;training&rdquo; and &ldquo;test&rdquo; data. Your goal is to train a statistical model on traing data so that it can generate accurate predictions on the outcome of interest when applied to test data.</p>
 
-<p>But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. Ultimately I wanted to learn new skills that would help me be a better data scientist, and machine learning seemed like a good place to start. I decided to try <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>.</p>
-
-<p>The following is the code from my submission to the <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>. In this competition, the goal is to predict the survival of Titanic passengers whose fates are unknown, using what is known about some of the passengers who are known to have survived or perished.</p>
-
-<p>I developed a model with 9 features. With the exception of <code>Sex</code>, these features involved transformations (e.g., binning) or engineering of existing variables (e.g., text extraction).</p>
+<p>For this competition I created a model trained on 9 features of Titanic passengers. These features involved transformations (e.g., binning) and &ldquo;engineering&rdquo; of existing variables (e.g., string extraction and manipulation).</p>
 
 <h2 id="features">Features</h2>
 
@@ -154,13 +159,13 @@
 
 <h2 id="model-performance">Model performance</h2>
 
-<p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of my model was 0.965 (kappa = 0.926). With the <code>xgboost</code> method, in-sample accuracy was 0.955 (kappa = 0.905). Not bad! 😁🤝🎉</p>
+<p>So how did I do? Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of my model was 0.965 (kappa = 0.926). With the <code>xgboost</code> method, in-sample accuracy was 0.955 (kappa = 0.905). Not bad, I think I&rsquo;m getting the hang of this! 😁🤝🎉</p>
 
 <hr />
 
 <hr />
 
-<p>Without further ado, let&rsquo;s get modeling!</p>
+<p>Below is the code for my model building procedures, and some of the visualizations that I examined along the way to check assumptions and generate insights. Enjoy!</p>
 
 <h1 id="loading-packages">Loading packages</h1>
 <div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="kn">library</span><span class="p">(</span><span class="s">&#34;tidyverse&#34;</span><span class="p">)</span>
