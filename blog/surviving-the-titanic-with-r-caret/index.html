@@ -154,10 +154,33 @@
 <td>Race / ethnicity</td>
 <td>Bayesian prediction of race/ethnicity using passenger surname</td>
 </tr>
+</tbody>
+</table>
+
+<p>In addition, although these features were not used to train the model <em>per se</em>, they were used later to adjust the predictions:</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td># family members</td>
+<td>How many family members a passenger has</td>
+</tr>
 
 <tr>
-<td>Dead relatives</td>
-<td>A count of how many relatives a passenger was on board with who are known to have died</td>
+<td># dead family</td>
+<td>How many family members died</td>
+</tr>
+
+<tr>
+<td>All died (boolean)</td>
+<td>If all family members died</td>
 </tr>
 </tbody>
 </table>
@@ -192,11 +215,23 @@
 
 <p><img src="/blog/2019-01-21-titanic/flight.gif" alt="gif" /></p>
 
+<h3 id="4-unconventional-is-sometimes-better">4. Unconventional is sometimes better</h3>
+
+<p>I learned that it&rsquo;s important to experiment with approaches that make logical sense, but from a tooling or procedural standpoint seem unconventional.</p>
+
+<p>One of the most interesting variables was the number of family members who died. If a passenger had family members who died, they were more likely to die themselves. Although it was clear from the data visualizations that this feature was significant, I couldn&rsquo;t improve the model&rsquo;s predictive accuracy by simply plugging it into the model like all of the other variables. (In fact, doing so was detrimental &ndash; in one model variant, out-of-sample accuracy was reduced to ~40% &ndash; ouch!)</p>
+
+<p><img src="/blog/2019-01-21-titanic/unconventional.gif" alt="gif" /></p>
+
+<p>But I persisted. Rather than train a model on this feature like I did for all the other features, I added a post-processing step in which the feature was used flip the bits on some of the passengers who were predicted to survive. Namely, if a passenger was predicted to survive, and if they had more than one family member, and if all of their family members died, then it seemed reasonable to predict that they also died.</p>
+
+<p>This turned out to be a useful application of the feature, boosting the model&rsquo;s out-of-sample accuracy by ~1%.</p>
+
 <h2 id="model-performance">Model performance</h2>
 
 <p>So how did I do?</p>
 
-<p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of 96.5% (kappa = 0.926). With the <code>xgboost</code> method, in-sample accuracy was 95.5% (kappa = 0.905). Although I&rsquo;ve yet to submit my latest model which includes <code>dead relatives</code>, my best Kaggle submission has yielded an out-of-sample prediction accuracy of 81.3%. At the time of this writing, that puts my model in the <strong>top 6%</strong> of all Kaggle submissions.</p>
+<p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of 83% (kappa = 0.63) and an out-of-sample prediction accuracy of 82%. At the time of this writing, that puts my model in the <strong>top 6%</strong> of all Kaggle submissions.</p>
 
 <p>Not bad! I think I&rsquo;m getting the hang of this. 😁🤝🎉</p>
 
@@ -528,24 +563,32 @@ Warning message in merge_surnames(voter.file):
 train <span class="o">%&gt;%</span>
   ungroup <span class="o">%&gt;%</span>
   group_by<span class="p">(</span>surname.E<span class="p">)</span> <span class="o">%&gt;%</span>
-  summarise<span class="p">(</span>dead.family <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span><span class="m">1</span> <span class="o">-</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>Survived<span class="p">))),</span>
-           dead.family.boolean <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>dead.family <span class="o">&gt;</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span> <span class="o">-&gt;</span> dead.family.df
+  summarise<span class="p">(</span>n.fam <span class="o">=</span> n<span class="p">(),</span>
+            dead.family <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span><span class="m">1</span> <span class="o">-</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>Survived<span class="p">))),</span>
+            all.died <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>dead.family<span class="o">/</span>n.fam <span class="o">==</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span> <span class="o">-&gt;</span> dead.family.df
 
 train <span class="o">%&gt;%</span>
   left_join<span class="p">(</span><span class="m">.</span><span class="p">,</span> dead.family.df<span class="p">,</span> by <span class="o">=</span> <span class="s">&#39;surname.E&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> train</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>dead.family<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
+  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>all.died<span class="p">),</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
   geom_bar<span class="p">()</span> <span class="o">+</span>
   theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by number of dead family members&#34;</span><span class="p">)</span> <span class="o">+</span>
-  scale_x_continuous<span class="p">(</span><span class="s">&#34;dead.family&#34;</span><span class="p">,</span> breaks <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">10</span><span class="p">))</span></code></pre></div>
-<p><img src="/blog/2019-01-21-titanic/output_24_0.png" alt="png" /></p>
+  ggtitle<span class="p">(</span><span class="s">&#34;Survival by dead relatives (boolean)&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+
+train <span class="o">%&gt;%</span>
+  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>all.died<span class="p">),</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
+  geom_bar<span class="p">()</span> <span class="o">+</span>
+  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
+  ggtitle<span class="p">(</span><span class="s">&#34;Survival by dead relatives (boolean)&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="o">*</span>Pclass<span class="p">)</span></code></pre></div>
+<p><img src="/blog/2019-01-21-titanic/output_24_0a.png" alt="png" />
+<img src="/blog/2019-01-21-titanic/output_24_0b.png" alt="png" /></p>
 
 <h1 id="models">Models</h1>
 
 <h2 id="random-forest">Random forest</h2>
 <div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">trctrl <span class="o">&lt;-</span> trainControl<span class="p">(</span>
-  method <span class="o">=</span> <span class="s">&#34;cv&#34;</span><span class="p">,</span>
+  method <span class="o">=</span> <span class="s">&#34;repeatedcv&#34;</span><span class="p">,</span>
   number <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
+  repeats <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
   allowParallel <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 
 tgctrl <span class="o">&lt;-</span> <span class="kp">expand.grid</span><span class="p">(</span>
@@ -562,88 +605,34 @@ fit.rf <span class="o">&lt;-</span> train<span class="p">(</span>Survived <span 
                     Age.grps <span class="o">+</span> 
                     Embarked <span class="o">+</span> 
                     ticket.prefix <span class="o">+</span> 
-                    race <span class="o">+</span> 
-                    dead.family<span class="p">,</span>
+                    race
              data <span class="o">=</span> train<span class="p">,</span> 
              trControl <span class="o">=</span> trctrl<span class="p">,</span>
              metric <span class="o">=</span> <span class="s">&#34;Accuracy&#34;</span><span class="p">,</span>
              importance <span class="o">=</span> <span class="s">&#34;impurity&#34;</span><span class="p">,</span>
              tuneGrid <span class="o">=</span> tgctrl<span class="p">,</span>
-             num.trees <span class="o">=</span> <span class="m">500</span><span class="p">,</span>
+             num.trees <span class="o">=</span> <span class="m">2000</span><span class="p">,</span>
              method <span class="o">=</span> <span class="s">&#34;ranger&#34;</span><span class="p">)</span>
 fit.rf</code></pre></div>
 <pre><code>Random Forest 
 
 891 samples
- 10 predictor
+  9 predictor
   2 classes: '0', '1' 
 
 No pre-processing
-Resampling: Cross-Validated (10 fold) 
-Summary of sample sizes: 803, 802, 802, 802, 802, 802, ... 
+Resampling: Cross-Validated (10 fold, repeated 10 times) 
+Summary of sample sizes: 802, 802, 801, 802, 802, 802, ... 
 Resampling results:
 
   Accuracy   Kappa    
-  0.9652168  0.9261029
+  0.8295113  0.6252777
 
 Tuning parameter 'mtry' was held constant at a value of 7
 Tuning
  parameter 'splitrule' was held constant at a value of gini
 Tuning
  parameter 'min.node.size' was held constant at a value of 10
-</code></pre>
-
-<h2 id="xgboost">xgboost</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">trctrl <span class="o">&lt;-</span> trainControl<span class="p">(</span>
-    method <span class="o">=</span> <span class="s">&#34;cv&#34;</span><span class="p">,</span> 
-    number <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
-
-tgctrl <span class="o">&lt;-</span> <span class="kp">expand.grid</span><span class="p">(</span>
-    nrounds <span class="o">=</span> <span class="m">200</span><span class="p">,</span>
-    max_depth <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
-    eta <span class="o">=</span> <span class="m">0.05</span><span class="p">,</span>
-    gamma <span class="o">=</span> <span class="m">0.01</span><span class="p">,</span>
-    colsample_bytree <span class="o">=</span> <span class="m">0.75</span><span class="p">,</span>
-    min_child_weight <span class="o">=</span> <span class="m">0</span><span class="p">,</span>
-    subsample <span class="o">=</span> <span class="m">0.5</span><span class="p">)</span>
-fit.xgb <span class="o">&lt;-</span> train<span class="p">(</span>Survived <span class="o">~</span> 
-                     Sex <span class="o">+</span> 
-                     title.class <span class="o">+</span> 
-                     family.size.simple <span class="o">+</span> 
-                     Fare.grps <span class="o">+</span> 
-                     Pclass <span class="o">+</span> 
-                     Age.grps <span class="o">+</span> 
-                     Embarked <span class="o">+</span> 
-                     ticket.prefix <span class="o">+</span> 
-                     race <span class="o">+</span> 
-                     dead.family<span class="p">,</span>
-             data <span class="o">=</span> train<span class="p">,</span> 
-             method <span class="o">=</span> <span class="s">&#34;xgbTree&#34;</span><span class="p">,</span>
-             trControl <span class="o">=</span> trctrl<span class="p">,</span>
-             tuneGrid <span class="o">=</span> tgctrl<span class="p">,</span>
-             tuneLength <span class="o">=</span> <span class="m">10</span>
-<span class="p">)</span>
-fit.xgb</code></pre></div>
-<pre><code>eXtreme Gradient Boosting 
-
-891 samples
- 10 predictor
-  2 classes: '0', '1' 
-
-No pre-processing
-Resampling: Cross-Validated (10 fold) 
-Summary of sample sizes: 802, 802, 802, 802, 802, 802, ... 
-Resampling results:
-
-  Accuracy   Kappa    
-  0.9551561  0.9047739
-
-Tuning parameter 'nrounds' was held constant at a value of 200
-Tuning
-
-Tuning parameter 'min_child_weight' was held constant at a value of 0
-
-Tuning parameter 'subsample' was held constant at a value of 0.5
 </code></pre>
 
 <h1 id="predict">Predict!</h1>
@@ -721,37 +710,30 @@ test.final <span class="o">%&gt;%</span>
 
 <span class="c1"># Dead family members</span>
 test.final <span class="o">%&gt;%</span>
-  left_join<span class="p">(</span><span class="m">.</span><span class="p">,</span> dead.family<span class="p">,</span> by <span class="o">=</span> <span class="s">&#39;surname.E&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> test.final
-
-test.final <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>dead.family <span class="o">=</span> replace_na<span class="p">(</span>dead.family<span class="p">,</span> median<span class="p">(</span>dead.family.df<span class="o">$</span>dead.family<span class="p">)))</span> <span class="o">-&gt;</span> test.final</code></pre></div>
-<pre><code>[1] &quot;Proceeding with surname-only predictions...&quot;
-
-
-Warning message in merge_surnames(voter.file):
-&quot;Probabilities were imputed for 73 surnames that could not be matched to Census list.&quot;
-</code></pre>
-
+  left_join<span class="p">(</span><span class="m">.</span><span class="p">,</span> dead.family.df<span class="p">,</span> by <span class="o">=</span> <span class="s">&#39;surname.E&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> test.final</code></pre></div>
 <h2 id="predict-using-random-forest">Predict using random forest</h2>
 <div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">Survived <span class="o">&lt;-</span> predict<span class="p">(</span>fit.rf<span class="p">,</span> test.final<span class="p">)</span>
+Survived <span class="o">&lt;-</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>Survived<span class="p">))</span>
+
+test.final <span class="o">%&gt;%</span>
+    <span class="kp">cbind</span><span class="p">(</span><span class="m">.</span><span class="p">,</span> Survived<span class="p">)</span> <span class="o">-&gt;</span> test.pred
+
+test.pred <span class="o">%&gt;%</span>
+    mutate<span class="p">(</span>Survived <span class="o">=</span> case_when<span class="p">(</span>
+                          <span class="kp">is.na</span><span class="p">(</span>n.fam<span class="p">)</span> <span class="o">~</span> Survived<span class="p">,</span>
+                          all.died <span class="o">==</span> <span class="m">1</span> <span class="o">&amp;</span> n.fam <span class="o">&gt;</span> <span class="m">1</span> <span class="o">&amp;</span> Survived <span class="o">==</span> <span class="m">1</span> <span class="o">~</span> <span class="m">0</span><span class="p">,</span>
+                          <span class="kc">TRUE</span> <span class="o">~</span> Survived
+                        <span class="p">)</span>
+           <span class="p">)</span> <span class="o">-&gt;</span> test.pred
+
 pred.rf <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>
   <span class="kp">cbind</span><span class="p">(</span>
-    PassengerId <span class="o">=</span> test.final<span class="o">$</span>PassengerId<span class="p">,</span> 
-    <span class="kp">as.data.frame</span><span class="p">(</span>Survived<span class="p">)</span>
+    PassengerId <span class="o">=</span> <span class="kp">as.integer</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>test.final<span class="o">$</span>PassengerId<span class="p">)),</span>
+    Survived <span class="o">=</span> <span class="kp">as.integer</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>test.pred<span class="o">$</span>Survived<span class="p">))</span>
     <span class="p">)</span>
-  <span class="p">)</span>
+  <span class="p">)</span>        
 
 write_csv<span class="p">(</span>pred.rf<span class="p">,</span> <span class="s">&#39;rf.output.csv&#39;</span><span class="p">)</span></code></pre></div>
-<h2 id="predict-using-xgboost">Predict using xgboost</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">Survived <span class="o">&lt;-</span> predict<span class="p">(</span>fit.xgb<span class="p">,</span> test.final<span class="p">)</span>
-pred.xgb <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>
-  <span class="kp">cbind</span><span class="p">(</span>
-    PassengerId <span class="o">=</span> test.final<span class="o">$</span>PassengerId<span class="p">,</span> 
-    <span class="kp">as.data.frame</span><span class="p">(</span>Survived<span class="p">)</span>
-    <span class="p">)</span>
-  <span class="p">)</span>
-
-write_csv<span class="p">(</span>pred.xgb<span class="p">,</span> <span class="s">&#39;xgb.output.csv&#39;</span><span class="p">)</span></code></pre></div>
 </article>
 <nav class="no-print post-nav">
 
