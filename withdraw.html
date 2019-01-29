@@ -1,0 +1,108 @@
+When conducting survey research online using MTurk, researchers are under an ethical obligation to give participants the ability to withdraw from a study without incurring a financial penalty. In practice, however, this is often not the case.
+
+In most of the academic Qualtrics surveys I've seen, researchers tell participants something to the effect of: "you can withdraw at any time by exiting the survey (e.g., by closing your web browser or navigating away from the survey)". Most academic researchers also use the <a href="https://tylerburleigh.com/mturk/survey-completion-codes-in-qualtrics/">Survey Completion Code</a> mechanic, whereby participants must reach the end of the survey to receive a unique code that they submit to MTurk for compensation.
+
+Taken together, these two elements create a situation where, if participants withdraw by closing their browser or navigating away, then they will <em><strong>not</strong> </em>receive compensation for their participation. Arguably, this creates a <strong>financial penalty for withdrawing</strong><span class="st">—</span>the penalty of not receiving payment<span class="st">—</span>and thus an ethical dilemma.
+
+This dilemma can be avoided by adding a withdraw button in the survey that, once clicked, will take participants to the end of the survey (or a custom withdraw page) where they may still obtain a completion code. Qualtrics doesn't have this functionality baked-in, but fortunately it's pretty easy to implement. In this tutorial, I describe the method that I use.
+
+<!--more-->
+
+<hr />
+
+<h1>1.</h1>
+<ul>
+ 	<li>Go to <strong>Survey Flow</strong> and add a new <strong>Branch</strong> element.</li>
+ 	<li>Add a <strong>Condition</strong> to the Branch element: choose <strong>Embedded Data</strong>, then enter "withdraw" -&gt; Is Equal To -&gt; "true".</li>
+ 	<li>Add a new element nested under this Branch element, set it to <strong>End of Survey</strong>.</li>
+ 	<li>Then <strong>Move</strong> the branch element to the top of the Survey Flow.</li>
+</ul>
+It should look like this in the end:
+
+<img src="http://i.imgur.com/NoQmx10.jpg" alt="http://i.imgur.com/NoQmx10.jpg" />
+
+Here's what this element does. It says: "If someone navigates to the survey using a link that contains 'withdraw=true' as embedded data, then go to the end of the survey". In this case, embedded data refers to a URL parameter. This could be done by you navigating to <strong>http://yoursurveylink.com?withdraw=true </strong>(which is exactly what we will program the withdraw button to do in a subsequent step!).
+<h1>2.</h1>
+Change the theme of your Qualtrics survey to "Qualtrics 2014" (it is one of the default themes). To do this, go to <strong>Look &amp; Feel</strong> click <strong>Change Theme</strong> and locate Qualtrics 2014.
+
+<img src="http://i.imgur.com/z348I6H.jpg" alt="http://i.imgur.com/z348I6H.jpg" />
+
+This theme must be used because the withdraw button inject code and style code is dependent on this theme's existing style elements.
+<h1>2.</h1>
+Open <strong>Look &amp; Feel</strong>, go to the <strong>Advanced </strong>tab, and paste the following code into the box that says <strong>Header</strong>:
+<pre class="easycode; title:;lang:;">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var inject_me = function() {
+    if (!$("#NextButton").length) {
+      window.requestAnimationFrame(inject_me());
+    }else {
+           var element =  document.getElementById('toggle');
+        if (typeof(element) != 'undefined' &amp;&amp; element != null)
+        {
+          document.getElementById('ProgressBar').style.display="none";
+        }
+        else {
+          function addParameterToURL(param){
+            _url = location.href;
+            _url += (_url.split('?')[1] ? '&amp;':'?') + param;
+            return _url;
+          }
+          newURL = addParameterToURL("withdraw=true");
+          
+          var withdraw = "&lt;a href=\""+newURL+"\" onclick=\"javascript:return confirm('Are you sure you want to withdraw?')\" class=confirm id='WithdrawLink'&gt;&lt;span class='ButtonLeft'&gt;&lt;/span&gt;&lt;span class='WithdrawButton Button' id='WithdrawButton'&gt;WITHDRAW&lt;/span&gt;&lt;span class='Button' style='float:left !important'&gt;&lt;/span&gt;&lt;/a&gt; &amp;nbsp; &amp;nbsp;"
+          var buttonsDiv = document.getElementById("Buttons");
+          
+          buttonsDiv.innerHTML = withdraw + buttonsDiv.innerHTML;
+        }
+        if (document.getElementsByClassName("EndOfSurvey").length){ 
+            document.getElementById('Withdraw').style.display="none";
+            document.getElementById('ProgressBar').style.display="none";
+        }
+        if (document.getElementsByClassName("SurveyError").length){ 
+            document.getElementById('Withdraw').style.display="none";
+        }
+     }
+  };
+  inject_me();
+&lt;/script&gt;</pre>
+<span style="color: #ffffff;">.</span>
+
+This code will <em>inject</em> a withdraw button into the survey. The button is programmed to navigate back to the survey with the withdraw=true as embedded data.
+<h1>3.</h1>
+Open <strong>Look &amp; Feel</strong>, go to the <strong>Advanced </strong>tab, then click <strong>+ Add Custom CSS</strong> and paste the following CSS code into the CSS Editor that appears:
+<pre class="easycode; title:;lang:;"> /* Place your CSS here */
+
+.Skin #Buttons #WithdrawButton {
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+    transition: background .3s;
+    background-color: #900;    
+    opacity: .25;
+}
+
+#WithdrawLink {
+    text-decoration: none;
+}</pre>
+<span style="color: #ffffff;">.</span>
+
+This code will style the withdraw button that gets injected so that it looks like the other survey button elements.
+
+That's it!
+
+<strong>Note: </strong>The withdraw button <strong>does not work </strong>in survey <strong>Preview</strong> mode. In order to test that it's working, you should use your survey's live link (the one created through the "Distributions" page).
+
+----
+
+Please see the <a href="https://tylerburleigh.com/mturk/survey-completion-codes-in-qualtrics/">Survey Completion Codes in Qualtrics</a> tutorial for instructions on how to configure an End of Survey message to present a unique completion code.
