@@ -56,7 +56,6 @@
 <div class="center-div">
 
 <div class="round-button"><div class="round-button-circle"><a id="btn" class="round-button">Learn About Clover Health</a></div></div>
-<input type="hidden" id="refresh" value="no">
 
 
 </div>
@@ -81,9 +80,12 @@ $(document).ready(function() {
 	  }
 	});
   });
-	
-    var $input = $('#refresh');
-    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+  
+  window.onpageshow = function (event) {
+  if (event.persisted) {
+    window.location.reload(); //reload page if it has been loaded from cache
+  }
+};
 	
 });
 	
