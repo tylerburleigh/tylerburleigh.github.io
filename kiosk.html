@@ -55,11 +55,32 @@
 
 <div class="center-div">
 
-<div class="round-button"><div class="round-button-circle"><a href="https://www.cloverhealth.com/en/?utm_source=Kiosk" class="round-button">Learn About Clover Health</a></div></div>
+<div class="round-button"><div class="round-button-circle"><a id="btn" class="round-button">Learn About Clover Health</a></div></div>
+
+
+
 </div>
 </body>
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+  $('#btn').click(function(event) {
+	event.preventDefault();
+    $.ajax({
+	  url: "https://hooks.zapier.com/hooks/catch/4471561/xnh12e/",
+	  type: "POST",
+	  data: {"kiosk_event":"button_push"},
+	  complete: function(){
+		window.location.href = "https://www.cloverhealth.com/en/?utm_source=Kiosk";
+	  }
+	});
+  });
+});
+	
+</script>
 </html>
