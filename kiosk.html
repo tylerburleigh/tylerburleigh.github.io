@@ -67,10 +67,12 @@
   crossorigin="anonymous"></script>
 
 <script>
-$(document).ready(function() {
+	
+bind = function(){
   $('#btn').click(function(event) {
     event.preventDefault();
     $('#btn').unbind();
+    setTimeout(function(){ bind(); }, 3000);
     $.ajax({
 	  url: "https://hooks.zapier.com/hooks/catch/4471561/xnh12e/",
 	  type: "POST",
@@ -80,7 +82,10 @@ $(document).ready(function() {
 	  }
 	});
   });
-  
+}
+	
+$(document).ready(function() {
+  bind()
   window.onpageshow = function (event) {
   if (event.persisted) {
     window.location.reload(); //reload page if it has been loaded from cache
