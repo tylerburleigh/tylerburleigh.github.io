@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research on Tyler Burleigh, PhD</title>
+    <link>/tags/research/</link>
+    <description>Recent content in Research on Tyler Burleigh, PhD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018 Tyler Burleigh</copyright>
+    <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a withdraw button in Qualtrics</title>
+      <link>/blog/creating-a-withdraw-button-in-qualtrics/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/creating-a-withdraw-button-in-qualtrics/</guid>
+      <description>When conducting survey research online using MTurk, researchers are under an ethical obligation to give participants the ability to withdraw from a study without incurring a financial penalty. In practice, however, this is often not the case. In most of the academic Qualtrics surveys I&amp;rsquo;ve seen, researchers tell participants something to the effect of: &amp;ldquo;you can withdraw at any time by exiting the survey (e.g., by closing your web browser or navigating away from the survey)&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>
