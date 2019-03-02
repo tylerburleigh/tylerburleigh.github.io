@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+	  <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
+
+	  <script src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+  
+	<div class="wrapper">
+		 <div class="videocontent">
+			<video
+			  id="vid1"
+			  class="video-js vjs-default-skin vjs-16-9"
+			  width="640" height="264" poster="poster.png"
+			  controls
+			  data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/CL31_z5yRW4"}], "youtube": { "iv_load_policy": 1, "rel": 0, "showinfo": false, "controls": false, "autoplay": false, "cc_load_policy": 1} }'
+			>
+			</video>
+		 </div>
+	</div>
+  
+	  
+  </body>
+	<script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
+	<script src="https://tylerburleigh.com//index/Youtube.js"></script>
+	<script src="js.js"></script>
+	
+	<style>
+	.vjs-has-started .vjs-loading-spinner {
+	  display: none !important;
+	}
+	.vjs-progress-control {
+		display: none !important;
+	}
+	</style>
+
+</html>
+
