@@ -215,7 +215,7 @@
 			tickColour: '#000000',
 			liquidColour: "#ff0000",
 			animationSpeed: 1000,
-			pathToSVG: "https://tylerburleigh.com//index/svg/thermo-bottom.svg",
+			pathToSVG: "https://tylerburleigh.com/svg/thermo-bottom.svg",
 			valueChanged: undefined,
 			onLoad: undefined
 		}
