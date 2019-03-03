@@ -3,39 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title></title>
-	  <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
-
-	  <script src="jquery-3.3.1.min.js"></script>
+	 <script src="jquery-3.3.1.min.js"></script>
+    <script src="plyr/plyr.min.js"></script>
+    <link rel="stylesheet" href="plyr/plyr.css" />
   </head>
   <body>
   
 	<div class="wrapper">
 		 <div class="videocontent">
-			<video
-			  id="vid1"
-			  class="video-js vjs-default-skin vjs-16-9"
-			  width="640" height="264" poster="poster.png"
-			  controls
-			  data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/DVF85rUc6Os"}], "youtube": { "iv_load_policy": 1, "rel": 0, "showinfo": false, "controls": false, "autoplay": false, "cc_load_policy": 1} }'
-			>
-			</video>
+        <div class="plyr__video-embed" id="player">
+            <iframe
+                src="https://www.youtube.com/embed/DVF85rUc6Os?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+            ></iframe>
+        </div>     
 		 </div>
-	</div>
-  
-	  
-  </body>
-	<script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
-	<script src="Youtube.js"></script>
-	<script src="js.js"></script>
-	
-	<style>
-	.vjs-has-started .vjs-loading-spinner {
-	  display: none !important;
-	}
-	.vjs-progress-control {
-		display: none !important;
-	}
-	</style>
-
+	</div>	  
+  </body>	
+  <script src="js_v2.js"></script>
 </html>
-
