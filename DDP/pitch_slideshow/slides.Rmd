@@ -1,0 +1,61 @@
+---
+title: "Macronutrient Analysis of Recipes Using Natural Language Processing API"
+author: "Tyler Burleigh"
+date: "3/9/2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Knowing is half the battle
+
+Have you ever wanted to know the macronutrient composition of a recipe? How many
+carbs are you *really* consuming in that sandwich? How much protein are you *really*
+getting from a plate of beans?
+
+Now you can find out!
+
+## What my Shiny app does
+
+I created a Shiny app that sends a user input to the Nutritionix API.
+https://www.nutritionix.com
+
+This API uses natural language processing to identify the ingredients, and the
+quantity of ingredients in the recipe. It returns a list with nutritional data
+about each ingredient. My app then calculates a sum total for
+
+- Fat
+- Protein
+- Carbohydrates
+- Calories
+
+And returns this to the user.
+
+## The app
+
+<iframe src="https://wizzywig.shinyapps.io/nutrition/" height="100%" width="75%" style="border:0"></iframe>
+
+## Recommended daily intake
+
+For a diet with 1,800 calories per day, it is recommended that you consume the following:
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(plotly)
+p <- plot_ly(
+  x = c("fat", "protein", "carbs"),
+  y = c(65, 145, 290),
+  text = c(65, 145, 290), 
+  textposition = 'auto',
+  name = "Recommended Macro Intake (grams)",
+  type = "bar"
+)
+p
+```
+
+## Thank you
+
+I hope you enjoyed this presentation. Thank you, and stay healthy!
+
+
