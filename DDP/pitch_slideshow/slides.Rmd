@@ -19,8 +19,7 @@ Now you can find out!
 
 ## What my Shiny app does
 
-I created a Shiny app that sends a user input to the Nutritionix API.
-https://www.nutritionix.com
+I created a Shiny app that sends a user input to the Edamam API (https://developer.edamam.com).
 
 This API uses natural language processing to identify the ingredients, and the
 quantity of ingredients in the recipe. It returns a list with nutritional data
@@ -41,7 +40,7 @@ And returns this to the user.
 
 For a diet with 1,800 calories per day, it is recommended that you consume the following:
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, warning=FALSE, message=FALSE, echo=TRUE}
 library(plotly)
 p <- plot_ly(
   x = c("fat", "protein", "carbs"),
@@ -58,8 +57,10 @@ p
 
 I hope you enjoyed this presentation. Thank you, and stay healthy!
 
-(Please note: This slideshow is hosted on GitHub pages, but I am using a custom domain name. You can find the source here:
-https://github.com/tylerburleigh/tylerburleigh.github.io/tree/master/DDP/pitch_slideshow)
+This slideshow is hosted on GitHub pages. I am just using a custom domain name. 
 
+You can find the slideshow source code here:
+https://github.com/tylerburleigh/tylerburleigh.github.io/tree/master/DDP/pitch_slideshow
 
-
+The Shiny app source code is here:
+https://github.com/tylerburleigh/coursera_projects/tree/master/jhu-data-science/developing_data_products/project/macronutrient_nlp
