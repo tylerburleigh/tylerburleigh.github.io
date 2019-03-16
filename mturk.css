@@ -1,0 +1,27 @@
+body {margin:0; font-family:Arial,Helvetica,sans-serif; font-size: large;width:100%;overflow: auto; background:#E3E3E3;}
+
+#beforeAccept {width:659px;margin-left:auto;margin-right:auto;font-size:large;}
+.header {width:641px; font-weight:bold; margin-top:5px; padding:8px; background:#fff; border:1px solid #CDCDCD;}
+.content {overflow:hidden;background:#fff; border-left:1px solid #CDCDCD; border-right:1px solid #CDCDCD; text-align: justify; text-justify: newspaper}
+.text {width:624px; border-bottom:1px solid #CDCDCD;padding:25px;}
+
+#workerNotFound {width:659px;margin-left:auto;margin-right:auto;;font-size:large;}
+.header2 {width:641px; font-weight:bold; margin-top:5px; padding:8px; background:#fff; border:1px solid #CDCDCD;}
+.content2 {overflow:hidden;background:#fff; border-left:1px solid #CDCDCD; border-right:1px solid #CDCDCD;}
+.text2 {width:624px; border-bottom:1px solid #CDCDCD;padding:25px;}
+
+#workerFound {width:659px;margin-left:auto;margin-right:auto;;font-size:large;}
+
+#Q2 {
+font-size: large !important;
+}
+
+p {width:657px;margin-left:auto;margin-right:auto;  background:#fff; border:1px solid #CDCDCD; margin-top:5px;margin-bottom:0px;}
+
+#submitButton {
+padding: 8px 15px !important;
+display: block !important;
+margin-left: 39px !important;
+margin-top:5px !important; 
+margin-bottom:5px !important;
+}
