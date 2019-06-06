@@ -103,7 +103,7 @@ var line = d3.svg.line()
 d3.csv("readme.csv", function(error, data) {
 
   // Compute the minimum and maximum date, and the maximum ppm.
-  x.domain([0, 3600]);
+  x.domain([0, 4800]);
   y.domain([600, 1800]);
 
   // Add an SVG element with the desired dimensions and margin.
@@ -170,7 +170,7 @@ d3.csv("readme.csv", function(error, data) {
   /* Create a shared transition for anything we're animating */
   var t = svg.transition()
     .delay(1000)
-    .duration(3600000)
+    .duration(4800000)
     .ease('linear')
     .each('end', function() {
       d3.select('line.guide')
@@ -203,7 +203,7 @@ d3.csv("readme.csv", function(error, data) {
   i = 1
   interval = setInterval(function(){
 	d3.select("#val").html(Math.round(json[i].ppm, 2))
-	if(i > 3600){
+	if(i > 4800){
 		clearInterval(interval)
 	}
 	
