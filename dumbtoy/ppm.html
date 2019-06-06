@@ -169,8 +169,8 @@ d3.csv("readme.csv", function(error, data) {
 
   /* Create a shared transition for anything we're animating */
   var t = svg.transition()
-    .delay(100)
-    .duration(36000)
+    .delay(1000)
+    .duration(3600000)
     .ease('linear')
     .each('end', function() {
       d3.select('line.guide')
@@ -200,7 +200,7 @@ d3.csv("readme.csv", function(error, data) {
 	  json = data;
 	});
 	
-  i = 10
+  i = 1
   interval = setInterval(function(){
 	d3.select("#val").html(Math.round(json[i].ppm, 2))
 	if(i > 3600){
@@ -213,8 +213,8 @@ d3.csv("readme.csv", function(error, data) {
 	} else {
 		d3.select("img").style("opacity", 0)
 	}
-	i = i + 10
-  }, 100)
+	i = i + 1
+  }, 1000)
   
 
 });
