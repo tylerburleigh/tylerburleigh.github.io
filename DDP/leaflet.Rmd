@@ -1,0 +1,55 @@
+---
+title: "Starbucks Within 0.5 Miles of Times Square"
+author: "Tyler Burleigh"
+date: "3/6/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("leaflet")
+library("tidyverse")
+library("geosphere")
+```
+
+```{r}
+# Locations of Starbucks
+sbucks <- read.csv(url("https://gist.githubusercontent.com/dankohn/09e5446feb4a8faea24f/raw/59154601e80ee2f3e2c7433f55f6fa047dddb6be/starbucks_us_locations.csv"), col.names = c("longitude", "latitude", "name", "address"))
+
+# Filter for only in NYC
+sbucks %>% filter(grepl("NY - New York", name)) -> sbucks.ny
+
+# Filter by distance from Times Square (less than 800 meters or ~0.5 miles)
+sbucks.ny %>%
+  rowwise %>%
+  mutate(m_from_TS = distm(c(-73.984474, 40.759010), 
+                           c(longitude, latitude), fun = distHaversine)) %>%
+  filter(m_from_TS < 800) -> sbucks.ts
+
+# Icon for Starbucks
+sbucks.icon <- makeIcon(
+  iconUrl = "sbucks_pin.png",
+  iconWidth = 240/4, iconHeight = 270/4
+)
+
+# Icon for Times Square
+ts.icon <- makeIcon(
+  iconUrl = "pin.png",
+  iconWidth = 512/5, iconHeight = 512/5
+)
+  
+```
+
+```{r}
+sbucks.ts %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(label = sbucks.ts$address,
+             icon = sbucks.icon) %>%
+  setView(-73.984474, 40.759010, 15) %>% 
+  addMarkers(-73.984474, 40.759010, 
+             label = "Times Square",
+             icon = ts.icon)
+```
+
+

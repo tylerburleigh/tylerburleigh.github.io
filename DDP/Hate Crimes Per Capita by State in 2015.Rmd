@@ -1,0 +1,60 @@
+---
+title: "Hate Crimes Per Capita by State in 2015"
+author: "Tyler Burleigh"
+date: "3/9/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(plotly)
+```
+
+## Read in data
+
+```{r, message = FALSE, warning = FALSE, echo = TRUE}
+# Read hate crime data
+df <- read.csv("data.csv", header=TRUE, stringsAsFactors=FALSE)
+# Read state data (name, abbreviation, population)
+states <- data.frame(State = datasets::state.name, 
+                     state_abbr = datasets::state.abb) %>%
+  bind_cols(as.data.frame(datasets::state.x77)[1])
+# Join data together, calculate per capita
+df <- df %>%
+  left_join(states, by="State") %>%
+  mutate(per_capita = round(as.numeric(Year.2015)/Population, 2))
+```
+
+Data is from: https://data.world/adl/hate-crime-laws-and-statistics
+
+## Plot code
+
+```{r, eval = FALSE, echo = TRUE}
+plot_geo(df, locationmode = 'USA-states') %>%
+  add_trace(z = ~per_capita, 
+            locations = ~state_abbr,
+            color = ~per_capita, 
+            colors = 'Purples') %>%
+  colorbar(title = "Hate Crimes Per Capita by State in 2015") %>%
+  layout(title = 'Hate Crimes Per Capita, 2015',
+  geo = list(scope = 'usa',
+             projection = list(type = 'albers usa'))
+  )
+```
+
+
+## Plot
+
+```{r, echo=FALSE, fig.align = 'center', message = FALSE, warning = FALSE}
+plot_geo(df, locationmode = 'USA-states') %>%
+  add_trace(z = ~per_capita, 
+            locations = ~state_abbr,
+            color = ~per_capita, 
+            colors = 'Purples') %>%
+  colorbar(title = "Hate Crimes Per Capita by State in 2015") %>%
+  layout(title = 'Hate Crimes Per Capita, 2015',
+  geo = list(scope = 'usa',
+             projection = list(type = 'albers usa'))
+  )
+```
