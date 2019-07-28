@@ -1,89 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="generator" content="Hugo 0.51" />
-		<title>Surviving the Titanic with R caret || Machine Learning - Tyler Burleigh, PhD</title>
-
-		<meta name="description" content="Taking on Kaggle&#39;s Titanic prediction challenge.">
-
-
-		
-		
-		
-		<link rel="stylesheet" href="/css/ui.min.css"/>
-		
-		<meta name="twitter:site" content="@tylerburleigh">
-		<meta name="twitter:creator" content="@tylerburleigh">
-		
-		<meta name="twitter:description" content="Taking on Kaggle&#39;s Titanic prediction challenge." />
-		<meta name="twitter:title" content="Surviving the Titanic with R caret || Machine Learning" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:image" content="https://tylerburleigh.com/blog/2019-01-21-titanic/the-titanic.jpg" />
-		
-		
-
-		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
-
-		
-
-		<style>
-	a { color: #ff8181; }
-	blockquote {
-		border-left-color: #ff8181;
-		border-right-color: #ff8181; }
-	.bar a:hover {
-		color: #ff8181;
-		text-decoration: none; }
-	.sep {
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-		margin-left:0;
-		width: 24rem;
-		border-top: 2px solid #ff8181; }
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Surviving the Titanic with R caret | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
 </style>
 
-	</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<body>
-<header class="container no-print">
-	<div class="u-header">
-		<nav class="bar">
-	<ul><li>
-			<a href="/">
-				<img class="icon-text" src="/img/prev.svg"/>
-			</a>
-		</li><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/work/">Work</a></li></ul>
-</nav>
-
-	</div>
-</header>
-<main class="container">
-
-<article>
-	<header><hgroup id="brand">
-	<h1>Surviving the Titanic with R caret || Machine Learning</h1>
-	<h5>
-		
-		<time datetime="2019-01-21 00:00:00 &#43;0000 UTC">Jan 21, 2019</time>
-		<span class="no-print">
-			-
-				
-				<a href="/tags/machine%20learning">machine learning</a>
-				
-				<a href="/tags/r">r</a>
-				
-				<a href="/tags/caret">caret</a>
-				
-				<a href="/tags/kaggle">kaggle</a>
-				<span>
-	</h5>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
 	
-</hgroup>
-<hr class="sep" />
-</header>
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/post/">Blog</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Surviving the Titanic with R caret</span>
 	
+		<div class="meta">January 21, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/upskilling'>Upskilling</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/machine-learning'>machine learning</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/r'>r</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/caret'>caret</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/kaggle'>kaggle</a></kbd>
+	
+</div>
+
+<main>
 
 <p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png" /></p>
 
@@ -244,98 +229,113 @@
 <p>Below is the code for my model building procedures, and some of the visualizations that I examined along the way to check assumptions and generate insights. Enjoy!</p>
 
 <h1 id="loading-packages">Loading packages</h1>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="kn">library</span><span class="p">(</span><span class="s">&#34;tidyverse&#34;</span><span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span><span class="s">&#34;caret&#34;</span><span class="p">)</span>
-<span class="kn">library</span><span class="p">(</span><span class="s">&#34;ranger&#34;</span><span class="p">)</span> <span class="c1"># Faster RF modeling</span>
-<span class="kn">library</span><span class="p">(</span><span class="s">&#34;wru&#34;</span><span class="p">)</span> <span class="c1"># Bayesian prediction of ethnicity</span>
 
-<span class="c1"># Setup parallel processing</span>
-<span class="kp">suppressWarnings</span><span class="p">(</span><span class="kp">suppressMessages</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span><span class="s">&#34;parallel&#34;</span><span class="p">)))</span>
-<span class="kp">suppressWarnings</span><span class="p">(</span><span class="kp">suppressMessages</span><span class="p">(</span><span class="kn">library</span><span class="p">(</span><span class="s">&#34;doParallel&#34;</span><span class="p">)))</span>
-cluster <span class="o">&lt;-</span> makeCluster<span class="p">(</span>detectCores<span class="p">()</span> <span class="o">-</span> <span class="m">1</span><span class="p">)</span> <span class="c1"># convention to leave 1 core for OS</span>
-registerDoParallel<span class="p">(</span>cluster<span class="p">)</span>
+<pre><code class="language-R">library(&quot;tidyverse&quot;)
+library(&quot;caret&quot;)
+library(&quot;ranger&quot;) # Faster RF modeling
+library(&quot;wru&quot;) # Bayesian prediction of ethnicity
 
-<span class="c1"># Custom function</span>
-<span class="sb">`%not in%`</span> <span class="o">&lt;-</span> <span class="kr">function</span> <span class="p">(</span>x<span class="p">,</span> <span class="kp">table</span><span class="p">)</span> <span class="kp">is.na</span><span class="p">(</span><span class="kp">match</span><span class="p">(</span>x<span class="p">,</span> <span class="kp">table</span><span class="p">,</span> nomatch<span class="o">=</span><span class="kc">NA_integer_</span><span class="p">))</span>
+# Setup parallel processing
+suppressWarnings(suppressMessages(library(&quot;parallel&quot;)))
+suppressWarnings(suppressMessages(library(&quot;doParallel&quot;)))
+cluster &lt;- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
+registerDoParallel(cluster)
 
-<span class="c1"># Random seed</span>
-<span class="kp">set.seed</span><span class="p">(</span><span class="m">43287</span><span class="p">)</span>
+# Custom function
+`%not in%` &lt;- function (x, table) is.na(match(x, table, nomatch=NA_integer_))
 
-<span class="c1"># Figure height</span>
-<span class="kp">options</span><span class="p">(</span>repr.plot.width<span class="o">=</span><span class="m">6</span><span class="p">,</span> repr.plot.height<span class="o">=</span><span class="m">4</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1"># Load data</span>
-test.csv <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#39;test.csv&#39;</span><span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-train.csv <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#39;train.csv&#39;</span><span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-train.csv<span class="o">$</span>Survived <span class="o">&lt;-</span> <span class="kp">as.factor</span><span class="p">(</span>train.csv<span class="o">$</span>Survived<span class="p">)</span>
-train <span class="o">&lt;-</span> train.csv
-test <span class="o">&lt;-</span> test.csv
+# Random seed
+set.seed(43287)
 
-<span class="c1"># Impute missing ages in Test data</span>
-test.csv <span class="o">%&gt;%</span> select<span class="p">(</span><span class="o">-</span>Ticket<span class="p">,</span> <span class="o">-</span>Name<span class="p">,</span> <span class="o">-</span>Cabin<span class="p">,</span> <span class="o">-</span>Embarked<span class="p">)</span> <span class="o">-&gt;</span> test.ages
-pre.proc <span class="o">&lt;-</span> preProcess<span class="p">(</span>test.ages<span class="p">,</span> method <span class="o">=</span> <span class="s">&#34;bagImpute&#34;</span><span class="p">)</span>
-test.ages <span class="o">&lt;-</span> predict<span class="p">(</span>pre.proc<span class="p">,</span> test.ages<span class="p">)</span>
-test<span class="o">$</span>Age <span class="o">&lt;-</span> test.ages<span class="o">$</span>Age
+# Figure height
+options(repr.plot.width=6, repr.plot.height=4)
+</code></pre>
 
-<span class="c1"># Impute missing ages in Training data</span>
-train.csv <span class="o">%&gt;%</span> select<span class="p">(</span><span class="o">-</span>Ticket<span class="p">,</span> <span class="o">-</span>Name<span class="p">,</span> <span class="o">-</span>Cabin<span class="p">,</span> <span class="o">-</span>Embarked<span class="p">)</span> <span class="o">-&gt;</span> train.ages
-pre.proc <span class="o">&lt;-</span> preProcess<span class="p">(</span>train.ages<span class="p">,</span> method <span class="o">=</span> <span class="s">&#34;bagImpute&#34;</span><span class="p">)</span>
-train.ages <span class="o">&lt;-</span> predict<span class="p">(</span>pre.proc<span class="p">,</span> train.ages<span class="p">)</span>
-train<span class="o">$</span>Age <span class="o">&lt;-</span> train.ages<span class="o">$</span>Age</code></pre></div>
+<pre><code class="language-R"># Load data
+test.csv &lt;- read.csv('test.csv', stringsAsFactors = FALSE)
+train.csv &lt;- read.csv('train.csv', stringsAsFactors = FALSE)
+train.csv$Survived &lt;- as.factor(train.csv$Survived)
+train &lt;- train.csv
+test &lt;- test.csv
+
+# Impute missing ages in Test data
+test.csv %&gt;% select(-Ticket, -Name, -Cabin, -Embarked) -&gt; test.ages
+pre.proc &lt;- preProcess(test.ages, method = &quot;bagImpute&quot;)
+test.ages &lt;- predict(pre.proc, test.ages)
+test$Age &lt;- test.ages$Age
+
+# Impute missing ages in Training data
+train.csv %&gt;% select(-Ticket, -Name, -Cabin, -Embarked) -&gt; train.ages
+pre.proc &lt;- preProcess(train.ages, method = &quot;bagImpute&quot;)
+train.ages &lt;- predict(pre.proc, train.ages)
+train$Age &lt;- train.ages$Age
+</code></pre>
+
 <h1 id="features-1">Features</h1>
 
 <h2 id="honorifics-titles">Honorifics (titles)</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>title <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&#39;(.*, )|(\\..*)&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> Name<span class="p">))</span> <span class="o">-&gt;</span> train</code></pre></div>
+
+<pre><code class="language-R">train %&gt;%
+  rowwise %&gt;%
+  mutate(title = gsub('(.*, )|(\\..*)', '', Name)) -&gt; train
+</code></pre>
+
 <pre><code>Warning message:
 &quot;package 'bindrcpp' was built under R version 3.4.4&quot;
 </code></pre>
 
 <p>Give unusual titles (e.g., &ldquo;the Countess&rdquo; or &ldquo;Capt&rdquo;) a special status. These titles are associated with survival among women. I think this suggests we&rsquo;re on the right track.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R"><span class="c1"># Titles</span>
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>title<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by titles&#34;</span><span class="p">)</span>
 
-<span class="c1"># Special titles</span>
-train <span class="o">%&gt;%</span>
-  filter<span class="p">(</span>title <span class="o">%not in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Mr&#34;</span><span class="p">,</span> <span class="s">&#34;Ms&#34;</span><span class="p">,</span> <span class="s">&#34;Mrs&#34;</span><span class="p">,</span> <span class="s">&#34;Miss&#34;</span><span class="p">,</span> <span class="s">&#34;Master&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>title<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by special titles by sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span></code></pre></div>
+<pre><code class="language-R"># Titles
+train %&gt;%
+  ggplot(., aes(title, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by titles&quot;)
+
+# Special titles
+train %&gt;%
+  filter(title %not in% c(&quot;Mr&quot;, &quot;Ms&quot;, &quot;Mrs&quot;, &quot;Miss&quot;, &quot;Master&quot;)) %&gt;%
+  ggplot(., aes(title, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by special titles by sex&quot;) + facet_wrap(~ Sex)
+</code></pre>
+
 <p><img src="/blog/2019-01-21-titanic/output_6_0.png" alt="png" /></p>
 
 <p><img src="/blog/2019-01-21-titanic/output_6_1.png" alt="png" /></p>
 
 <p>As I understand &ldquo;Master&rdquo; is a title given to young boys, while young girls are also often called &ldquo;Miss&rdquo;. One person with a &ldquo;Dr&rdquo; title is a woman, and so has a higher likelihood of survival than her male counterparts, so we&rsquo;ll reclassify her.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>child <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>Age <span class="o">&lt;</span> <span class="m">15</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span>
-         title.class <span class="o">=</span> case_when<span class="p">(</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Master&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Boy&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Miss&#34;</span><span class="p">)</span> <span class="o">&amp;</span> child <span class="o">==</span> <span class="m">1</span> <span class="o">~</span> <span class="s">&#34;Girl&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Mrs&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Woman&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Miss&#34;</span><span class="p">,</span> <span class="s">&#34;Mme&#34;</span><span class="p">,</span> <span class="s">&#34;Mlle&#34;</span><span class="p">,</span> <span class="s">&#34;Ms&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Lady&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Dr&#34;</span><span class="p">)</span> <span class="o">&amp;</span> Sex <span class="o">==</span> <span class="s">&#34;female&#34;</span> <span class="o">~</span> <span class="s">&#34;Woman&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Mr&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Man&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Capt&#34;</span><span class="p">,</span> <span class="s">&#34;Don&#34;</span><span class="p">,</span> <span class="s">&#34;Col&#34;</span><span class="p">,</span> <span class="s">&#34;Major&#34;</span><span class="p">,</span> <span class="s">&#34;Dr&#34;</span><span class="p">,</span> <span class="s">&#34;Rev&#34;</span><span class="p">,</span> 
-                         <span class="s">&#34;Dona&#34;</span><span class="p">,</span> <span class="s">&#34;Jonkheer&#34;</span><span class="p">,</span> <span class="s">&#34;the Countess&#34;</span><span class="p">,</span> <span class="s">&#34;Lady&#34;</span><span class="p">,</span> <span class="s">&#34;Sir&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Special&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&#34;Other&#34;</span><span class="p">))</span> <span class="o">-&gt;</span> train
 
-train <span class="o">%&gt;%</span> ungroup <span class="o">%&gt;%</span> count<span class="p">(</span>title.class<span class="p">)</span>
+<pre><code class="language-R">train %&gt;%
+  mutate(child = ifelse(Age &lt; 15, 1, 0),
+         title.class = case_when(
+            title %in% c(&quot;Master&quot;) ~ &quot;Boy&quot;,
+            title %in% c(&quot;Miss&quot;) &amp; child == 1 ~ &quot;Girl&quot;,
+            title %in% c(&quot;Mrs&quot;) ~ &quot;Woman&quot;,
+            title %in% c(&quot;Miss&quot;, &quot;Mme&quot;, &quot;Mlle&quot;, &quot;Ms&quot;) ~ &quot;Lady&quot;,
+            title %in% c(&quot;Dr&quot;) &amp; Sex == &quot;female&quot; ~ &quot;Woman&quot;,
+            title %in% c(&quot;Mr&quot;) ~ &quot;Man&quot;,
+            title %in% c(&quot;Capt&quot;, &quot;Don&quot;, &quot;Col&quot;, &quot;Major&quot;, &quot;Dr&quot;, &quot;Rev&quot;, 
+                         &quot;Dona&quot;, &quot;Jonkheer&quot;, &quot;the Countess&quot;, &quot;Lady&quot;, &quot;Sir&quot;) ~ &quot;Special&quot;,
+            TRUE ~ &quot;Other&quot;)) -&gt; train
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>title.class<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span> 
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by title and sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+train %&gt;% ungroup %&gt;% count(title.class)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>x<span class="o">=</span>title.class<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span> 
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by title and Pclass&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Pclass<span class="p">)</span></code></pre></div>
+train %&gt;%
+  ggplot(., aes(x=title.class, fill=Survived)) + 
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by title and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(x=title.class, fill=Survived)) + 
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by title and Pclass&quot;) + facet_wrap(~ Pclass)
+</code></pre>
+
 <table>
 <thead><tr><th scope=col>title.class</th><th scope=col>n</th></tr></thead>
 <tbody>
@@ -355,34 +355,40 @@ train <span class="o">%&gt;%</span>
 <h2 id="family-size">Family size</h2>
 
 <p>Combine <code>SibSp</code> and <code>Parch</code> into a single &ldquo;family size&rdquo; variable.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>family.size <span class="o">=</span> SibSp <span class="o">+</span> Parch<span class="p">,</span>
-         family.size.simple <span class="o">=</span> case_when<span class="p">(</span>
-            family.size <span class="o">==</span> <span class="m">0</span> <span class="o">~</span> <span class="s">&#34;0&#34;</span><span class="p">,</span>
-            between<span class="p">(</span>family.size<span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;1-3&#34;</span><span class="p">,</span>
-            family.size <span class="o">&gt;</span> <span class="m">3</span> <span class="o">~</span> <span class="s">&#34;&gt;3&#34;</span><span class="p">))</span> <span class="o">-&gt;</span> train</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>family.size<span class="p">))</span> <span class="o">+</span>
-  geom_histogram<span class="p">(</span>bins<span class="o">=</span><span class="m">30</span><span class="p">)</span>
 
-train <span class="o">%&gt;%</span> ungroup <span class="o">%&gt;%</span> count<span class="p">(</span>family.size.simple<span class="p">)</span>
+<pre><code class="language-R">train %&gt;%
+  mutate(family.size = SibSp + Parch,
+         family.size.simple = case_when(
+            family.size == 0 ~ &quot;0&quot;,
+            between(family.size, 1, 3) ~ &quot;1-3&quot;,
+            family.size &gt; 3 ~ &quot;&gt;3&quot;)) -&gt; train
+</code></pre>
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>family.size<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by family size and sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(family.size)) +
+  geom_histogram(bins=30)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>family.size.simple<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by family size and sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+train %&gt;% ungroup %&gt;% count(family.size.simple)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>family.size.simple<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by family size and Pclass&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Pclass<span class="p">)</span></code></pre></div>
+train %&gt;%
+  ggplot(., aes(family.size, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(family.size.simple, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(family.size.simple, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and Pclass&quot;) + facet_wrap(~ Pclass)
+</code></pre>
+
 <table>
 <thead><tr><th scope=col>family.size.simple</th><th scope=col>n</th></tr></thead>
 <tbody>
@@ -403,23 +409,26 @@ train <span class="o">%&gt;%</span>
 <h2 id="fare">Fare</h2>
 
 <p>Group fares into reasonably small buckets.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Fare<span class="p">))</span> <span class="o">+</span>
-  geom_histogram<span class="p">(</span>bins<span class="o">=</span><span class="m">30</span><span class="p">)</span>
 
-train <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>Fare.grps <span class="o">=</span> case_when<span class="p">(</span>
-            between<span class="p">(</span>Fare<span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;0-100&#34;</span><span class="p">,</span>
-            Fare <span class="o">&gt;</span> <span class="m">100</span> <span class="o">~</span> <span class="s">&#34;&gt;100&#34;</span><span class="p">))</span> <span class="o">-&gt;</span> train
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Fare)) +
+  geom_histogram(bins=30)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Fare.grps<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by fare groups and class&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Pclass<span class="p">)</span>
+train %&gt;%
+  rowwise %&gt;%
+  mutate(Fare.grps = case_when(
+            between(Fare, 0, 100) ~ &quot;0-100&quot;,
+            Fare &gt; 100 ~ &quot;&gt;100&quot;)) -&gt; train
 
-train <span class="o">%&gt;%</span> ungroup <span class="o">%&gt;%</span> count<span class="p">(</span>Fare.grps<span class="p">)</span></code></pre></div>
+train %&gt;%
+  ggplot(., aes(Fare.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by fare groups and class&quot;) + facet_wrap(~ Pclass)
+
+train %&gt;% ungroup %&gt;% count(Fare.grps)
+</code></pre>
+
 <p><img src="/blog/2019-01-21-titanic/output_13_0.png" alt="png" /></p>
 
 <table>
@@ -433,45 +442,51 @@ train <span class="o">%&gt;%</span> ungroup <span class="o">%&gt;%</span> count<
 <p><img src="/blog/2019-01-21-titanic/output_13_2.png" alt="png" /></p>
 
 <h2 id="passenger-class">Passenger class</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Pclass<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by passenger class&#34;</span><span class="p">)</span></code></pre></div>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Pclass, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by passenger class&quot;)
+</code></pre>
+
 <p><img src="/blog/2019-01-21-titanic/output_15_0.png" alt="png" /></p>
 
 <h2 id="age">Age</h2>
 
 <p>Group ages into reasonably small buckets.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Age<span class="p">))</span> <span class="o">+</span>
-  geom_histogram<span class="p">(</span>bins<span class="o">=</span><span class="m">30</span><span class="p">)</span>
 
-train <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>Age.grps <span class="o">=</span> case_when<span class="p">(</span>
-            between<span class="p">(</span>Age<span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">12</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;young&#34;</span><span class="p">,</span>
-            between<span class="p">(</span>Age<span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">50</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;middle&#34;</span><span class="p">,</span>
-            Age <span class="o">&gt;</span> <span class="m">50</span> <span class="o">~</span> <span class="s">&#34;old&#34;</span><span class="p">))</span> <span class="o">-&gt;</span> train
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Age)) +
+  geom_histogram(bins=30)
 
-train <span class="o">%&gt;%</span> ungroup <span class="o">%&gt;%</span> count<span class="p">(</span>Age.grps<span class="p">)</span>
+train %&gt;%
+  mutate(Age.grps = case_when(
+            between(Age, 0, 12) ~ &quot;young&quot;,
+            between(Age, 12, 50) ~ &quot;middle&quot;,
+            Age &gt; 50 ~ &quot;old&quot;)) -&gt; train
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Age.grps<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Age groups survival by Pclass&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Pclass<span class="p">)</span>
+train %&gt;% ungroup %&gt;% count(Age.grps)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Age.grps<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Age groups survival by Sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Pclass&quot;) + facet_wrap(~ Pclass)
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>Age.grps<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Age groups survival by Sex and Pclass&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="o">*</span>Pclass<span class="p">)</span></code></pre></div>
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Sex and Pclass&quot;) + facet_wrap(~ Sex*Pclass)
+</code></pre>
+
 <table>
 <thead><tr><th scope=col>Age.grps</th><th scope=col>n</th></tr></thead>
 <tbody>
@@ -492,56 +507,62 @@ train <span class="o">%&gt;%</span>
 <h2 id="ticket-prefix">Ticket prefix</h2>
 
 <p>Extract the prefix from the ticket, since this seems to represent the passenger&rsquo;s final destination. Combine codes that are similar or seem to have a typo.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-    rowwise <span class="o">%&gt;%</span>
-    mutate<span class="p">(</span>ticket.prefix <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span><span class="kp">grepl</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> Ticket<span class="p">),</span> <span class="kp">sub</span><span class="p">(</span><span class="s">&#34; .*&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> Ticket<span class="p">),</span> <span class="s">&#34;&#34;</span><span class="p">),</span>
-           ticket.prefix <span class="o">=</span> <span class="kp">toupper</span><span class="p">(</span><span class="kp">gsub</span><span class="p">(</span><span class="s">&#34;(\\.)|(\\/)&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> ticket.prefix<span class="p">)),</span>
-           ticket.prefix <span class="o">=</span> case_when<span class="p">(</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;STONO&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;STONO2&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOTONOQ&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOTONO2&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SCAH&#34;</span> <span class="o">~</span> <span class="s">&#34;SCA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SCA4&#34;</span> <span class="o">~</span> <span class="s">&#34;SCA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;PPP&#34;</span> <span class="o">~</span> <span class="s">&#34;PP&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;CASOTON&#34;</span> <span class="o">~</span> <span class="s">&#34;CA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;AS&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;A4&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;A5&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOP&#34;</span> <span class="o">~</span> <span class="s">&#34;SOPP&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SWPP&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;FA&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> ticket.prefix<span class="p">))</span> <span class="o">-&gt;</span> train
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>ticket.prefix<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by ticket prefix&#34;</span><span class="p">)</span> <span class="o">+</span>
-  coord_flip<span class="p">()</span></code></pre></div>
+<pre><code class="language-R">train %&gt;%
+    rowwise %&gt;%
+    mutate(ticket.prefix = ifelse(grepl(&quot; &quot;, Ticket), sub(&quot; .*&quot;, &quot;&quot;, Ticket), &quot;&quot;),
+           ticket.prefix = toupper(gsub(&quot;(\\.)|(\\/)&quot;, &quot;&quot;, ticket.prefix)),
+           ticket.prefix = case_when(
+            ticket.prefix == &quot;STONO&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SCAH&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA4&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;PPP&quot; ~ &quot;PP&quot;,
+            ticket.prefix == &quot;CASOTON&quot; ~ &quot;CA&quot;,
+            ticket.prefix == &quot;AS&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A4&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A5&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;SOP&quot; ~ &quot;SOPP&quot;,
+            ticket.prefix == &quot;SWPP&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;FA&quot; ~ &quot;&quot;,
+            TRUE ~ ticket.prefix)) -&gt; train
+
+train %&gt;%
+  ggplot(., aes(ticket.prefix, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by ticket prefix&quot;) +
+  coord_flip()
+</code></pre>
+
 <p><img src="/blog/2019-01-21-titanic/output_19_0.png" alt="png" /></p>
 
 <h2 id="race-from-surname">Race from surname</h2>
 
 <p>Predict the passenger&rsquo;s race/ethnicity using their surname. Since there wasn&rsquo;t a lot of diversity on the Titanic, we&rsquo;ll combine into &ldquo;White&rdquo; and &ldquo;Non-white&rdquo; categories.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-    rowwise <span class="o">%&gt;%</span>
-    mutate<span class="p">(</span>surname <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&#39;( .*)|(*,*)&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> Name<span class="p">))</span> <span class="o">-&gt;</span> train
 
-predict_race<span class="p">(</span>train<span class="p">,</span> surname.only <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">-&gt;</span> train
+<pre><code class="language-R">train %&gt;%
+    rowwise %&gt;%
+    mutate(surname = gsub('( .*)|(*,*)', '', Name)) -&gt; train
 
-train <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>race <span class="o">=</span> case_when<span class="p">(</span>
-            pred.whi <span class="o">==</span> <span class="kp">max</span><span class="p">(</span>pred.whi<span class="p">,</span> pred.bla<span class="p">,</span> pred.his<span class="p">,</span> pred.asi<span class="p">,</span> pred.oth<span class="p">)</span> <span class="o">~</span> <span class="s">&#34;White&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&#34;Non-White&#34;</span>
-          <span class="p">))</span> <span class="o">-&gt;</span>train
+predict_race(train, surname.only = T) -&gt; train
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span>race<span class="p">,</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by race and sex&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span></code></pre></div>
+train %&gt;%
+  rowwise %&gt;%
+  mutate(race = case_when(
+            pred.whi == max(pred.whi, pred.bla, pred.his, pred.asi, pred.oth) ~ &quot;White&quot;,
+            TRUE ~ &quot;Non-White&quot;
+          )) -&gt;train
+
+train %&gt;%
+  ggplot(., aes(race, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by race and sex&quot;) + facet_wrap(~ Sex)
+</code></pre>
+
 <pre><code>[1] &quot;Proceeding with surname-only predictions...&quot;
 
 
@@ -554,66 +575,75 @@ Warning message in merge_surnames(voter.file):
 <h2 id="dead-relatives">Dead relatives</h2>
 
 <p>You are more likely to die if you&rsquo;ve had other relatives who have died. It looks like some passengers have the same surname but embarked at different locations. It seems reasonable to assume that they were not actually family if they embarked from different places, so we&rsquo;ll tag their surnames with the location of embarkment before calculating the number of dead family members.</p>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  select<span class="p">(</span><span class="o">-</span>Embarked<span class="p">)</span> <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  <span class="kp">cbind</span><span class="p">(</span>Embarked <span class="o">=</span> train.csv<span class="o">$</span>Embarked<span class="p">)</span> <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>surname.E <span class="o">=</span> <span class="kp">paste0</span><span class="p">(</span>Embarked<span class="p">,</span><span class="s">&#34;.&#34;</span><span class="p">,</span>surname<span class="p">))</span> <span class="o">-&gt;</span> train
 
-train <span class="o">%&gt;%</span>
-  ungroup <span class="o">%&gt;%</span>
-  group_by<span class="p">(</span>surname.E<span class="p">)</span> <span class="o">%&gt;%</span>
-  summarise<span class="p">(</span>n.fam <span class="o">=</span> n<span class="p">(),</span>
-            dead.family <span class="o">=</span> <span class="kp">sum</span><span class="p">(</span><span class="m">1</span> <span class="o">-</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>Survived<span class="p">))),</span>
-            all.died <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>dead.family<span class="o">/</span>n.fam <span class="o">==</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span> <span class="o">-&gt;</span> dead.family.df
+<pre><code class="language-R">train %&gt;%
+  select(-Embarked) %&gt;%
+  rowwise %&gt;%
+  cbind(Embarked = train.csv$Embarked) %&gt;%
+  mutate(surname.E = paste0(Embarked,&quot;.&quot;,surname)) -&gt; train
 
-train <span class="o">%&gt;%</span>
-  left_join<span class="p">(</span><span class="m">.</span><span class="p">,</span> dead.family.df<span class="p">,</span> by <span class="o">=</span> <span class="s">&#39;surname.E&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> train</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>all.died<span class="p">),</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by dead relatives (boolean)&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="p">)</span>
+train %&gt;%
+  ungroup %&gt;%
+  group_by(surname.E) %&gt;%
+  summarise(n.fam = n(),
+            dead.family = sum(1 - as.numeric(as.character(Survived))),
+            all.died = ifelse(dead.family/n.fam == 1, 1, 0)) -&gt; dead.family.df
 
-train <span class="o">%&gt;%</span>
-  ggplot<span class="p">(</span><span class="m">.</span><span class="p">,</span> aes<span class="p">(</span><span class="kp">factor</span><span class="p">(</span>all.died<span class="p">),</span> fill<span class="o">=</span>Survived<span class="p">))</span> <span class="o">+</span> 
-  geom_bar<span class="p">()</span> <span class="o">+</span>
-  theme<span class="p">(</span>axis.text.x <span class="o">=</span> element_text<span class="p">(</span>angle <span class="o">=</span> <span class="m">45</span><span class="p">,</span> hjust <span class="o">=</span> <span class="m">1</span><span class="p">))</span> <span class="o">+</span> 
-  ggtitle<span class="p">(</span><span class="s">&#34;Survival by dead relatives (boolean)&#34;</span><span class="p">)</span> <span class="o">+</span> facet_wrap<span class="p">(</span><span class="o">~</span> Sex<span class="o">*</span>Pclass<span class="p">)</span></code></pre></div>
+train %&gt;%
+  left_join(., dead.family.df, by = 'surname.E') -&gt; train
+</code></pre>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(factor(all.died), fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by dead relatives (boolean)&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(factor(all.died), fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by dead relatives (boolean)&quot;) + facet_wrap(~ Sex*Pclass)
+</code></pre>
+
 <p><img src="/blog/2019-01-21-titanic/output_24_0a.png" alt="png" />
 <img src="/blog/2019-01-21-titanic/output_24_0b.png" alt="png" /></p>
 
 <h1 id="models">Models</h1>
 
 <h2 id="random-forest">Random forest</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">trctrl <span class="o">&lt;-</span> trainControl<span class="p">(</span>
-  method <span class="o">=</span> <span class="s">&#34;repeatedcv&#34;</span><span class="p">,</span>
-  number <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
-  repeats <span class="o">=</span> <span class="m">10</span><span class="p">,</span>
-  allowParallel <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 
-tgctrl <span class="o">&lt;-</span> <span class="kp">expand.grid</span><span class="p">(</span>
-    <span class="m">.</span>mtry <span class="o">=</span> <span class="m">7</span><span class="p">,</span>
-    <span class="m">.</span>splitrule <span class="o">=</span> <span class="s">&#34;gini&#34;</span><span class="p">,</span>
-    <span class="m">.</span>min.node.size <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
+<pre><code class="language-R">trctrl &lt;- trainControl(
+  method = &quot;repeatedcv&quot;,
+  number = 10,
+  repeats = 10,
+  allowParallel = TRUE)
 
-fit.rf <span class="o">&lt;-</span> train<span class="p">(</span>Survived <span class="o">~</span> 
-                    Sex <span class="o">+</span> 
-                    title.class <span class="o">+</span> 
-                    family.size.simple <span class="o">+</span> 
-                    Fare.grps <span class="o">+</span> 
-                    Pclass <span class="o">+</span> 
-                    Age.grps <span class="o">+</span> 
-                    Embarked <span class="o">+</span> 
-                    ticket.prefix <span class="o">+</span> 
+tgctrl &lt;- expand.grid(
+    .mtry = 7,
+    .splitrule = &quot;gini&quot;,
+    .min.node.size = 10)
+
+fit.rf &lt;- train(Survived ~ 
+                    Sex + 
+                    title.class + 
+                    family.size.simple + 
+                    Fare.grps + 
+                    Pclass + 
+                    Age.grps + 
+                    Embarked + 
+                    ticket.prefix + 
                     race
-             data <span class="o">=</span> train<span class="p">,</span> 
-             trControl <span class="o">=</span> trctrl<span class="p">,</span>
-             metric <span class="o">=</span> <span class="s">&#34;Accuracy&#34;</span><span class="p">,</span>
-             importance <span class="o">=</span> <span class="s">&#34;impurity&#34;</span><span class="p">,</span>
-             tuneGrid <span class="o">=</span> tgctrl<span class="p">,</span>
-             num.trees <span class="o">=</span> <span class="m">2000</span><span class="p">,</span>
-             method <span class="o">=</span> <span class="s">&#34;ranger&#34;</span><span class="p">)</span>
-fit.rf</code></pre></div>
+             data = train, 
+             trControl = trctrl,
+             metric = &quot;Accuracy&quot;,
+             importance = &quot;impurity&quot;,
+             tuneGrid = tgctrl,
+             num.trees = 2000,
+             method = &quot;ranger&quot;)
+fit.rf
+</code></pre>
+
 <pre><code>Random Forest 
 
 891 samples
@@ -638,176 +668,179 @@ Tuning
 <h1 id="predict">Predict!</h1>
 
 <h2 id="apply-transforms-to-test-data">Apply transforms to test data</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">test <span class="o">%&gt;%</span> 
-  mutate<span class="p">(</span>Fare <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>PassengerId <span class="o">==</span> <span class="m">1044</span><span class="p">,</span> 
-                       median<span class="p">((</span>test <span class="o">%&gt;%</span> filter<span class="p">(</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>Fare<span class="p">),</span> 
-                                               Pclass <span class="o">==</span> <span class="m">3</span><span class="p">,</span> 
-                                               PassengerId <span class="o">!=</span> <span class="m">1044</span><span class="p">))</span><span class="o">$</span>Fare<span class="p">),</span> Fare<span class="p">))</span> <span class="o">-&gt;</span> test
 
-test <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>title <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&#39;(.*, )|(\\..*)&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> Name<span class="p">),</span>
-         child <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span>Age <span class="o">&lt;</span> <span class="m">15</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">),</span>
-         title.class <span class="o">=</span> case_when<span class="p">(</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Master&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Boy&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Miss&#34;</span><span class="p">)</span> <span class="o">&amp;</span> child <span class="o">==</span> <span class="m">1</span> <span class="o">~</span> <span class="s">&#34;Girl&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Mrs&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Woman&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Miss&#34;</span><span class="p">,</span> <span class="s">&#34;Mme&#34;</span><span class="p">,</span> <span class="s">&#34;Mlle&#34;</span><span class="p">,</span> <span class="s">&#34;Ms&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Lady&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Dr&#34;</span><span class="p">)</span> <span class="o">&amp;</span> Sex <span class="o">==</span> <span class="s">&#34;female&#34;</span> <span class="o">~</span> <span class="s">&#34;Woman&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Mr&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Man&#34;</span><span class="p">,</span>
-            title <span class="o">%in%</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#34;Capt&#34;</span><span class="p">,</span> <span class="s">&#34;Don&#34;</span><span class="p">,</span> <span class="s">&#34;Col&#34;</span><span class="p">,</span> <span class="s">&#34;Major&#34;</span><span class="p">,</span> <span class="s">&#34;Dr&#34;</span><span class="p">,</span> <span class="s">&#34;Rev&#34;</span><span class="p">,</span> 
-                         <span class="s">&#34;Dona&#34;</span><span class="p">,</span> <span class="s">&#34;Jonkheer&#34;</span><span class="p">,</span> <span class="s">&#34;the Countess&#34;</span><span class="p">,</span> <span class="s">&#34;Lady&#34;</span><span class="p">,</span> <span class="s">&#34;Sir&#34;</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;Special&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&#34;Other&#34;</span><span class="p">),</span>
-         family.size <span class="o">=</span> SibSp <span class="o">+</span> Parch<span class="p">,</span>
-         family.size.simple <span class="o">=</span> case_when<span class="p">(</span>
-            family.size <span class="o">==</span> <span class="m">0</span> <span class="o">~</span> <span class="s">&#34;0&#34;</span><span class="p">,</span>
-            between<span class="p">(</span>family.size<span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;1-3&#34;</span><span class="p">,</span>
-            family.size <span class="o">&gt;</span> <span class="m">3</span> <span class="o">~</span> <span class="s">&#34;&gt;3&#34;</span>
-          <span class="p">),</span>
-         Fare.grps <span class="o">=</span> case_when<span class="p">(</span>
-            between<span class="p">(</span>Fare<span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">100</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;0-100&#34;</span><span class="p">,</span>
-            Fare <span class="o">&gt;</span> <span class="m">100</span> <span class="o">~</span> <span class="s">&#34;&gt;100&#34;</span><span class="p">,</span>
-          <span class="p">),</span>
-         Age.grps <span class="o">=</span> case_when<span class="p">(</span>
-            between<span class="p">(</span>Age<span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">12</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;young&#34;</span><span class="p">,</span>
-            between<span class="p">(</span>Age<span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">50</span><span class="p">)</span> <span class="o">~</span> <span class="s">&#34;middle&#34;</span><span class="p">,</span>
-            Age <span class="o">&gt;</span> <span class="m">50</span> <span class="o">~</span> <span class="s">&#34;old&#34;</span>
-          <span class="p">),</span>
-         ticket.prefix <span class="o">=</span> <span class="kp">ifelse</span><span class="p">(</span><span class="kp">grepl</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> Ticket<span class="p">),</span> <span class="kp">sub</span><span class="p">(</span><span class="s">&#34; .*&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> Ticket<span class="p">),</span> <span class="s">&#34;&#34;</span><span class="p">),</span>
-         ticket.prefix <span class="o">=</span> <span class="kp">toupper</span><span class="p">(</span><span class="kp">gsub</span><span class="p">(</span><span class="s">&#34;(\\.)|(\\/)&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> ticket.prefix<span class="p">)),</span>
-           ticket.prefix <span class="o">=</span> case_when<span class="p">(</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;STONO&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;STONOQ&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;STONO2&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOTONOQ&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOTONO2&#34;</span> <span class="o">~</span> <span class="s">&#34;SOTONO&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SCAH&#34;</span> <span class="o">~</span> <span class="s">&#34;SCA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SCA4&#34;</span> <span class="o">~</span> <span class="s">&#34;SCA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SCA3&#34;</span> <span class="o">~</span> <span class="s">&#34;SCA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;PPP&#34;</span> <span class="o">~</span> <span class="s">&#34;PP&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;CASOTON&#34;</span> <span class="o">~</span> <span class="s">&#34;CA&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;AS&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;A4&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;A5&#34;</span> <span class="o">~</span> <span class="s">&#34;A&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SOP&#34;</span> <span class="o">~</span> <span class="s">&#34;SOPP&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;SWPP&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;FA&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;AQ3&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;AQ4&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            ticket.prefix <span class="o">==</span> <span class="s">&#34;LP&#34;</span> <span class="o">~</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> ticket.prefix<span class="p">),</span>
-         surname <span class="o">=</span> <span class="kp">gsub</span><span class="p">(</span><span class="s">&#39;( .*)|(*,*)&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> Name<span class="p">),</span>
-         surname.E <span class="o">=</span> <span class="kp">paste0</span><span class="p">(</span>Embarked<span class="p">,</span> <span class="s">&#34;.&#34;</span><span class="p">,</span> surname<span class="p">))</span> <span class="o">-&gt;</span> test.final
+<pre><code class="language-R">test %&gt;% 
+  mutate(Fare = ifelse(PassengerId == 1044, 
+                       median((test %&gt;% filter(!is.na(Fare), 
+                                               Pclass == 3, 
+                                               PassengerId != 1044))$Fare), Fare)) -&gt; test
 
-<span class="c1"># Ethnicity</span>
-predict_race<span class="p">(</span>test.final<span class="p">,</span> surname.only <span class="o">=</span> <span class="bp">T</span><span class="p">)</span> <span class="o">-&gt;</span> test.final
+test %&gt;%
+  rowwise %&gt;%
+  mutate(title = gsub('(.*, )|(\\..*)', '', Name),
+         child = ifelse(Age &lt; 15, 1, 0),
+         title.class = case_when(
+            title %in% c(&quot;Master&quot;) ~ &quot;Boy&quot;,
+            title %in% c(&quot;Miss&quot;) &amp; child == 1 ~ &quot;Girl&quot;,
+            title %in% c(&quot;Mrs&quot;) ~ &quot;Woman&quot;,
+            title %in% c(&quot;Miss&quot;, &quot;Mme&quot;, &quot;Mlle&quot;, &quot;Ms&quot;) ~ &quot;Lady&quot;,
+            title %in% c(&quot;Dr&quot;) &amp; Sex == &quot;female&quot; ~ &quot;Woman&quot;,
+            title %in% c(&quot;Mr&quot;) ~ &quot;Man&quot;,
+            title %in% c(&quot;Capt&quot;, &quot;Don&quot;, &quot;Col&quot;, &quot;Major&quot;, &quot;Dr&quot;, &quot;Rev&quot;, 
+                         &quot;Dona&quot;, &quot;Jonkheer&quot;, &quot;the Countess&quot;, &quot;Lady&quot;, &quot;Sir&quot;) ~ &quot;Special&quot;,
+            TRUE ~ &quot;Other&quot;),
+         family.size = SibSp + Parch,
+         family.size.simple = case_when(
+            family.size == 0 ~ &quot;0&quot;,
+            between(family.size, 1, 3) ~ &quot;1-3&quot;,
+            family.size &gt; 3 ~ &quot;&gt;3&quot;
+          ),
+         Fare.grps = case_when(
+            between(Fare, 0, 100) ~ &quot;0-100&quot;,
+            Fare &gt; 100 ~ &quot;&gt;100&quot;,
+          ),
+         Age.grps = case_when(
+            between(Age, 0, 12) ~ &quot;young&quot;,
+            between(Age, 12, 50) ~ &quot;middle&quot;,
+            Age &gt; 50 ~ &quot;old&quot;
+          ),
+         ticket.prefix = ifelse(grepl(&quot; &quot;, Ticket), sub(&quot; .*&quot;, &quot;&quot;, Ticket), &quot;&quot;),
+         ticket.prefix = toupper(gsub(&quot;(\\.)|(\\/)&quot;, &quot;&quot;, ticket.prefix)),
+           ticket.prefix = case_when(
+            ticket.prefix == &quot;STONO&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SCAH&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA4&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA3&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;PPP&quot; ~ &quot;PP&quot;,
+            ticket.prefix == &quot;CASOTON&quot; ~ &quot;CA&quot;,
+            ticket.prefix == &quot;AS&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A4&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A5&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;SOP&quot; ~ &quot;SOPP&quot;,
+            ticket.prefix == &quot;SWPP&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;FA&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;AQ3&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;AQ4&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;LP&quot; ~ &quot;&quot;,
+            TRUE ~ ticket.prefix),
+         surname = gsub('( .*)|(*,*)', '', Name),
+         surname.E = paste0(Embarked, &quot;.&quot;, surname)) -&gt; test.final
 
-test.final <span class="o">%&gt;%</span>
-  rowwise <span class="o">%&gt;%</span>
-  mutate<span class="p">(</span>race <span class="o">=</span> case_when<span class="p">(</span>
-            pred.whi <span class="o">==</span> <span class="kp">max</span><span class="p">(</span>pred.whi<span class="p">,</span> pred.bla<span class="p">,</span> pred.his<span class="p">,</span> pred.asi<span class="p">,</span> pred.oth<span class="p">)</span> <span class="o">~</span> <span class="s">&#34;White&#34;</span><span class="p">,</span>
-            <span class="kc">TRUE</span> <span class="o">~</span> <span class="s">&#34;Non-White&#34;</span><span class="p">))</span> <span class="o">-&gt;</span> test.final
+# Ethnicity
+predict_race(test.final, surname.only = T) -&gt; test.final
 
-<span class="c1"># Dead family members</span>
-test.final <span class="o">%&gt;%</span>
-  left_join<span class="p">(</span><span class="m">.</span><span class="p">,</span> dead.family.df<span class="p">,</span> by <span class="o">=</span> <span class="s">&#39;surname.E&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> test.final</code></pre></div>
+test.final %&gt;%
+  rowwise %&gt;%
+  mutate(race = case_when(
+            pred.whi == max(pred.whi, pred.bla, pred.his, pred.asi, pred.oth) ~ &quot;White&quot;,
+            TRUE ~ &quot;Non-White&quot;)) -&gt; test.final
+
+# Dead family members
+test.final %&gt;%
+  left_join(., dead.family.df, by = 'surname.E') -&gt; test.final
+</code></pre>
+
 <h2 id="predict-using-random-forest">Predict using random forest</h2>
-<div class="highlight"><pre class="chroma"><code class="language-R" data-lang="R">Survived <span class="o">&lt;-</span> predict<span class="p">(</span>fit.rf<span class="p">,</span> test.final<span class="p">)</span>
-Survived <span class="o">&lt;-</span> <span class="kp">as.numeric</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>Survived<span class="p">))</span>
 
-test.final <span class="o">%&gt;%</span>
-    <span class="kp">cbind</span><span class="p">(</span><span class="m">.</span><span class="p">,</span> Survived<span class="p">)</span> <span class="o">-&gt;</span> test.pred
+<pre><code class="language-R">Survived &lt;- predict(fit.rf, test.final)
+Survived &lt;- as.numeric(as.character(Survived))
 
-test.pred <span class="o">%&gt;%</span>
-    mutate<span class="p">(</span>Survived <span class="o">=</span> case_when<span class="p">(</span>
-                          <span class="kp">is.na</span><span class="p">(</span>n.fam<span class="p">)</span> <span class="o">~</span> Survived<span class="p">,</span>
-                          all.died <span class="o">==</span> <span class="m">1</span> <span class="o">&amp;</span> n.fam <span class="o">&gt;</span> <span class="m">1</span> <span class="o">&amp;</span> Survived <span class="o">==</span> <span class="m">1</span> <span class="o">~</span> <span class="m">0</span><span class="p">,</span>
-                          <span class="kc">TRUE</span> <span class="o">~</span> Survived
-                        <span class="p">)</span>
-           <span class="p">)</span> <span class="o">-&gt;</span> test.pred
+test.final %&gt;%
+    cbind(., Survived) -&gt; test.pred
 
-pred.rf <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>
-  <span class="kp">cbind</span><span class="p">(</span>
-    PassengerId <span class="o">=</span> <span class="kp">as.integer</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>test.final<span class="o">$</span>PassengerId<span class="p">)),</span>
-    Survived <span class="o">=</span> <span class="kp">as.integer</span><span class="p">(</span><span class="kp">as.character</span><span class="p">(</span>test.pred<span class="o">$</span>Survived<span class="p">))</span>
-    <span class="p">)</span>
-  <span class="p">)</span>        
+test.pred %&gt;%
+    mutate(Survived = case_when(
+                          is.na(n.fam) ~ Survived,
+                          all.died == 1 &amp; n.fam &gt; 1 &amp; Survived == 1 ~ 0,
+                          TRUE ~ Survived
+                        )
+           ) -&gt; test.pred
 
-write_csv<span class="p">(</span>pred.rf<span class="p">,</span> <span class="s">&#39;rf.output.csv&#39;</span><span class="p">)</span></code></pre></div>
-</article>
-<nav class="no-print post-nav">
+pred.rf &lt;- data.frame(
+  cbind(
+    PassengerId = as.integer(as.character(test.final$PassengerId)),
+    Survived = as.integer(as.character(test.pred$Survived))
+    )
+  )        
+
+write_csv(pred.rf, 'rf.output.csv')
+</code></pre>
+</main>
 
 
-	<a class="next-post" href="/blog/creating-a-withdraw-button-in-qualtrics/">Creating a withdraw button in Qualtrics<img class="icon-text" src="/img/next.svg"/>
-	</a>
-
+	
+<nav class="post-nav">
+	<div class="post-prev">
+	</div>
+	<div class="post-next">
+		<a href="/blog/creating-a-withdraw-button-in-qualtrics/" rel="next">
+			<span class="post-nav__caption">
+				Newer »
+			</span>
+			<p class="post-nav__title-right">
+				Creating a withdraw button in Qualtrics
+			</p>
+		</a>
+	</div>
 </nav>
 
 
 
 
-	<div id="disqus_thread" class="no-print"></div>
-<script type="text/javascript">
 
-(function() {
+
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'tyler-burleigh';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-			<hr class="sep" />
-		</main>
-		<footer class="container no-print">
-			<div class="u-footer">
-				
-<a href="mailto:tylerburleigh@gmail.com"><img class="icon-social" src="/img/email.svg" alt="Email Me!"/></a>
+<footer>
+<hr/>
 
 
-<a href="https://github.com/tylerburleigh/"><img class="icon-social" src="/img/github.svg" alt="Github"/></a>
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
 
 
-<a href="https://twitter.com/tylerburleigh"><img class="icon-social" src="/img/twitter.svg" alt="Twitter"/></a>
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
 
-<a href="/index.xml" target="_blank"><img class="icon-social" src="/img/feed.svg" alt="Feed"></a>
-
-				<p>
-					
-					Theme used: <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
-					
-					
-					&copy; 2018 Tyler Burleigh
-					
-					
-				</p>
-				
-				<a href="#brand">
-					<img class="icon-text" src="/img/toup.svg" alt="To Up"/>
-					<span>Back to Up</span>
-				</a>
-				
-			</div>
-		</footer>
-		
-	</body>
-	
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-40957506-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+  </footer>
+  </body>
 </html>
 

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Surviving the Titanic with R caret | A minimal Hugo website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/post/">Blog</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Surviving the Titanic with R caret</span>
+	
+		<div class="meta">January 21, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/upskilling'>Upskilling</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/machine-learning'>machine learning</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/r'>r</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/caret'>caret</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/kaggle'>kaggle</a></kbd>
+	
+</div>
+
+<main>
+
+<p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png" /></p>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>I&rsquo;ve been meaning to &ldquo;upskill&rdquo; into the world of machine learning for some time. I&rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</p>
+
+<p>So I decided to try <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>.</p>
+
+<p>In this competition, the goal is to predict the survival of Titanic passengers whose fates are unknown, using what is known about some of the passengers who are known to have survived or perished. You get &ldquo;training&rdquo; and &ldquo;test&rdquo; data. Your goal is to train a statistical model on traing data so that it can generate accurate predictions on the outcome of interest when applied to test data.</p>
+
+<p>For this competition I created a model trained on 9 features of Titanic passengers. These features involved transformations (e.g., binning) and &ldquo;engineering&rdquo; of existing variables (e.g., string extraction and manipulation).</p>
+
+<h2 id="features">Features</h2>
+
+<p>The following features were used in the model.</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Titles</td>
+<td>Honorifics (e.g., &ldquo;Mr.&rdquo; or &ldquo;Master&rdquo;), extracted from <code>Name</code> strings</td>
+</tr>
+
+<tr>
+<td>Sex</td>
+<td>Sex (male or female)</td>
+</tr>
+
+<tr>
+<td>Embarked</td>
+<td>Port of embarkment</td>
+</tr>
+
+<tr>
+<td>Family size, binned</td>
+<td>Sum of <code>Parch</code> and <code>SibSp</code>, binned</td>
+</tr>
+
+<tr>
+<td>Fare, binned</td>
+<td>Binned <code>Fare</code> values</td>
+</tr>
+
+<tr>
+<td>Passenger class</td>
+<td><code>Pclass</code> without transformation</td>
+</tr>
+
+<tr>
+<td>Age, binned</td>
+<td>Binned <code>Age</code> values</td>
+</tr>
+
+<tr>
+<td>Ticket prefixes</td>
+<td>Grouped ticket prefixes (e.g., &ldquo;SOTONO&rdquo;), which presumably represent passengers&rsquo; destination</td>
+</tr>
+
+<tr>
+<td>Race / ethnicity</td>
+<td>Bayesian prediction of race/ethnicity using passenger surname</td>
+</tr>
+</tbody>
+</table>
+
+<p>In addition, although these features were not used to train the model <em>per se</em>, they were used later to adjust the predictions:</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td># family members</td>
+<td>How many family members a passenger has</td>
+</tr>
+
+<tr>
+<td># dead family</td>
+<td>How many family members died</td>
+</tr>
+
+<tr>
+<td>All died (boolean)</td>
+<td>If all family members died</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="lessons-learned">Lessons learned</h2>
+
+<p>I learned a lot by tackling this challenge. More than I can possibly list, but here are some of Here are some of the major lessons.</p>
+
+<h3 id="1-the-illusion-of-predictive-power">1. The illusion of (predictive) power</h3>
+
+<p>There were a few times where I encountered overfitting. I thought I&rsquo;d found a significant new feature in the data. When I added it to the model, it increased the in-sample prediction accuracy by several percentage points. But when I applied this model to the test data, the out-of-sample prediction accuracy actually DECREASED. What happened? Well, as it turns out, it&rsquo;s easy to find features that soak up variance in a training set, but those features might not be useful beyond the data they were trained on. Put simply: they don&rsquo;t generalize.</p>
+
+<p>Their power is an illusion.</p>
+
+<p><img src="/blog/2019-01-21-titanic/illusion.gif" alt="gif" /></p>
+
+<p>One example that kind of took me by surprise was that continuous variables like <code>Age</code>, and <code>Fare</code>, and <code>Family Size</code> performed really well on the training set, but they did not perform so well on the test data. When I <em>binned</em> these variables, they performed slightly worse on the training data, but they performed MUCH better on the test data.</p>
+
+<h3 id="2-what-s-in-a-name-anyway">2. What&rsquo;s in a name, anyway?</h3>
+
+<p>Feature engineering was one of my favorite parts of the process. It was there that I could draw on the knowledge I&rsquo;ve gained as a student of human behavior and psychology. The most trivial-seeming piece of data is in fact a proxy for something incredibly meaningful. You just need to know where to look, and how to manipulate and organize the data.</p>
+
+<p>As it turns out, one of the most interesting variables was <code>Name</code>. From that variable I was able to extract a Bayesian prediction of the passenger&rsquo;s race/ethnicity, family relationships (which told me if they had relatives who had also died aboard the ship), and social class (from titles like &ldquo;Dr&rdquo;, &ldquo;Lady&rdquo;, and &ldquo;the Countess.</p>
+
+<p><img src="/blog/2019-01-21-titanic/pompous.gif" alt="gif" /></p>
+
+<h3 id="3-a-picture-is-worth-a-thousand-words">3. A picture is worth a thousand words</h3>
+
+<p>As I was engineering features, I found that data visualization was vital. While I was considering different ways of slicing up the data, visualizations like histograms and bar plots were key to determining if a particular demarcation might be fruitful &ndash; if it was giving me any new signals about survival.</p>
+
+<p>During this process, I found that my ability to quickly spin up different kinds visualizations was also important. Exploratory data analysis is a bit of a stream-of-consciousness, moving from one shallow thread of thought to another until something seems to <em>click</em> or <em>pop out</em> at you.</p>
+
+<p><img src="/blog/2019-01-21-titanic/flight.gif" alt="gif" /></p>
+
+<h3 id="4-unconventional-is-sometimes-better">4. Unconventional is sometimes better</h3>
+
+<p>I learned that it&rsquo;s important to experiment with approaches that make logical sense, but from a tooling or procedural standpoint seem unconventional.</p>
+
+<p>One of the most interesting variables was the number of family members who died. If a passenger had family members who died, they were more likely to die themselves. Although it was clear from the data visualizations that this feature was significant, I couldn&rsquo;t improve the model&rsquo;s predictive accuracy by simply plugging it into the model like all of the other variables. (In fact, doing so was detrimental &ndash; in one model variant, out-of-sample accuracy was reduced to ~40% &ndash; ouch!)</p>
+
+<p><img src="/blog/2019-01-21-titanic/unconventional.gif" alt="gif" /></p>
+
+<p>But I persisted. Rather than train a model on this feature like I did for all the other features, I added a post-processing step in which the feature was used flip the bits on some of the passengers who were predicted to survive. Namely, if a passenger was predicted to survive, and if they had more than one family member, and if all of their family members died, then it seemed reasonable to predict that they also died.</p>
+
+<p>This turned out to be a useful application of the feature, boosting the model&rsquo;s out-of-sample accuracy by ~1%.</p>
+
+<h2 id="model-performance">Model performance</h2>
+
+<p>So how did I do?</p>
+
+<p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of 83% (kappa = 0.63) and an out-of-sample prediction accuracy of 82%. At the time of this writing, that puts my model in the <strong>top 6%</strong> of all Kaggle submissions.</p>
+
+<p>Not bad! I think I&rsquo;m getting the hang of this. 😁🤝🎉</p>
+
+<p><img src="/blog/2019-01-21-titanic/kaggle-rank.png" alt="png" /></p>
+
+<hr />
+
+<hr />
+
+<p>Below is the code for my model building procedures, and some of the visualizations that I examined along the way to check assumptions and generate insights. Enjoy!</p>
+
+<h1 id="loading-packages">Loading packages</h1>
+
+<pre><code class="language-R">library(&quot;tidyverse&quot;)
+library(&quot;caret&quot;)
+library(&quot;ranger&quot;) # Faster RF modeling
+library(&quot;wru&quot;) # Bayesian prediction of ethnicity
+
+# Setup parallel processing
+suppressWarnings(suppressMessages(library(&quot;parallel&quot;)))
+suppressWarnings(suppressMessages(library(&quot;doParallel&quot;)))
+cluster &lt;- makeCluster(detectCores() - 1) # convention to leave 1 core for OS
+registerDoParallel(cluster)
+
+# Custom function
+`%not in%` &lt;- function (x, table) is.na(match(x, table, nomatch=NA_integer_))
+
+# Random seed
+set.seed(43287)
+
+# Figure height
+options(repr.plot.width=6, repr.plot.height=4)
+</code></pre>
+
+<pre><code class="language-R"># Load data
+test.csv &lt;- read.csv('test.csv', stringsAsFactors = FALSE)
+train.csv &lt;- read.csv('train.csv', stringsAsFactors = FALSE)
+train.csv$Survived &lt;- as.factor(train.csv$Survived)
+train &lt;- train.csv
+test &lt;- test.csv
+
+# Impute missing ages in Test data
+test.csv %&gt;% select(-Ticket, -Name, -Cabin, -Embarked) -&gt; test.ages
+pre.proc &lt;- preProcess(test.ages, method = &quot;bagImpute&quot;)
+test.ages &lt;- predict(pre.proc, test.ages)
+test$Age &lt;- test.ages$Age
+
+# Impute missing ages in Training data
+train.csv %&gt;% select(-Ticket, -Name, -Cabin, -Embarked) -&gt; train.ages
+pre.proc &lt;- preProcess(train.ages, method = &quot;bagImpute&quot;)
+train.ages &lt;- predict(pre.proc, train.ages)
+train$Age &lt;- train.ages$Age
+</code></pre>
+
+<h1 id="features-1">Features</h1>
+
+<h2 id="honorifics-titles">Honorifics (titles)</h2>
+
+<pre><code class="language-R">train %&gt;%
+  rowwise %&gt;%
+  mutate(title = gsub('(.*, )|(\\..*)', '', Name)) -&gt; train
+</code></pre>
+
+<pre><code>Warning message:
+&quot;package 'bindrcpp' was built under R version 3.4.4&quot;
+</code></pre>
+
+<p>Give unusual titles (e.g., &ldquo;the Countess&rdquo; or &ldquo;Capt&rdquo;) a special status. These titles are associated with survival among women. I think this suggests we&rsquo;re on the right track.</p>
+
+<pre><code class="language-R"># Titles
+train %&gt;%
+  ggplot(., aes(title, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by titles&quot;)
+
+# Special titles
+train %&gt;%
+  filter(title %not in% c(&quot;Mr&quot;, &quot;Ms&quot;, &quot;Mrs&quot;, &quot;Miss&quot;, &quot;Master&quot;)) %&gt;%
+  ggplot(., aes(title, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by special titles by sex&quot;) + facet_wrap(~ Sex)
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_6_0.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_6_1.png" alt="png" /></p>
+
+<p>As I understand &ldquo;Master&rdquo; is a title given to young boys, while young girls are also often called &ldquo;Miss&rdquo;. One person with a &ldquo;Dr&rdquo; title is a woman, and so has a higher likelihood of survival than her male counterparts, so we&rsquo;ll reclassify her.</p>
+
+<pre><code class="language-R">train %&gt;%
+  mutate(child = ifelse(Age &lt; 15, 1, 0),
+         title.class = case_when(
+            title %in% c(&quot;Master&quot;) ~ &quot;Boy&quot;,
+            title %in% c(&quot;Miss&quot;) &amp; child == 1 ~ &quot;Girl&quot;,
+            title %in% c(&quot;Mrs&quot;) ~ &quot;Woman&quot;,
+            title %in% c(&quot;Miss&quot;, &quot;Mme&quot;, &quot;Mlle&quot;, &quot;Ms&quot;) ~ &quot;Lady&quot;,
+            title %in% c(&quot;Dr&quot;) &amp; Sex == &quot;female&quot; ~ &quot;Woman&quot;,
+            title %in% c(&quot;Mr&quot;) ~ &quot;Man&quot;,
+            title %in% c(&quot;Capt&quot;, &quot;Don&quot;, &quot;Col&quot;, &quot;Major&quot;, &quot;Dr&quot;, &quot;Rev&quot;, 
+                         &quot;Dona&quot;, &quot;Jonkheer&quot;, &quot;the Countess&quot;, &quot;Lady&quot;, &quot;Sir&quot;) ~ &quot;Special&quot;,
+            TRUE ~ &quot;Other&quot;)) -&gt; train
+
+train %&gt;% ungroup %&gt;% count(title.class)
+
+train %&gt;%
+  ggplot(., aes(x=title.class, fill=Survived)) + 
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by title and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(x=title.class, fill=Survived)) + 
+  geom_bar() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by title and Pclass&quot;) + facet_wrap(~ Pclass)
+</code></pre>
+
+<table>
+<thead><tr><th scope=col>title.class</th><th scope=col>n</th></tr></thead>
+<tbody>
+    <tr><td>Boy    </td><td> 40    </td></tr>
+    <tr><td>Girl   </td><td> 44    </td></tr>
+    <tr><td>Lady   </td><td>142    </td></tr>
+    <tr><td>Man    </td><td>517    </td></tr>
+    <tr><td>Special</td><td> 22    </td></tr>
+    <tr><td>Woman  </td><td>126    </td></tr>
+</tbody>
+</table>
+
+<p><img src="/blog/2019-01-21-titanic/output_8_1.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_8_2.png" alt="png" /></p>
+
+<h2 id="family-size">Family size</h2>
+
+<p>Combine <code>SibSp</code> and <code>Parch</code> into a single &ldquo;family size&rdquo; variable.</p>
+
+<pre><code class="language-R">train %&gt;%
+  mutate(family.size = SibSp + Parch,
+         family.size.simple = case_when(
+            family.size == 0 ~ &quot;0&quot;,
+            between(family.size, 1, 3) ~ &quot;1-3&quot;,
+            family.size &gt; 3 ~ &quot;&gt;3&quot;)) -&gt; train
+</code></pre>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(family.size)) +
+  geom_histogram(bins=30)
+
+train %&gt;% ungroup %&gt;% count(family.size.simple)
+
+train %&gt;%
+  ggplot(., aes(family.size, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(family.size.simple, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(family.size.simple, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by family size and Pclass&quot;) + facet_wrap(~ Pclass)
+</code></pre>
+
+<table>
+<thead><tr><th scope=col>family.size.simple</th><th scope=col>n</th></tr></thead>
+<tbody>
+    <tr><td>&gt;3 </td><td> 62   </td></tr>
+    <tr><td>0  </td><td>537</td></tr>
+    <tr><td>1-3</td><td>292</td></tr>
+</tbody>
+</table>
+
+<p><img src="/blog/2019-01-21-titanic/output_11_1.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_11_2.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_11_3.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_11_4.png" alt="png" /></p>
+
+<h2 id="fare">Fare</h2>
+
+<p>Group fares into reasonably small buckets.</p>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Fare)) +
+  geom_histogram(bins=30)
+
+train %&gt;%
+  rowwise %&gt;%
+  mutate(Fare.grps = case_when(
+            between(Fare, 0, 100) ~ &quot;0-100&quot;,
+            Fare &gt; 100 ~ &quot;&gt;100&quot;)) -&gt; train
+
+train %&gt;%
+  ggplot(., aes(Fare.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by fare groups and class&quot;) + facet_wrap(~ Pclass)
+
+train %&gt;% ungroup %&gt;% count(Fare.grps)
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_13_0.png" alt="png" /></p>
+
+<table>
+<thead><tr><th scope=col>Fare.grps</th><th scope=col>n</th></tr></thead>
+<tbody>
+    <tr><td>&gt;100 </td><td> 53     </td></tr>
+    <tr><td>0-100</td><td>838  </td></tr>
+</tbody>
+</table>
+
+<p><img src="/blog/2019-01-21-titanic/output_13_2.png" alt="png" /></p>
+
+<h2 id="passenger-class">Passenger class</h2>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Pclass, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by passenger class&quot;)
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_15_0.png" alt="png" /></p>
+
+<h2 id="age">Age</h2>
+
+<p>Group ages into reasonably small buckets.</p>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(Age)) +
+  geom_histogram(bins=30)
+
+train %&gt;%
+  mutate(Age.grps = case_when(
+            between(Age, 0, 12) ~ &quot;young&quot;,
+            between(Age, 12, 50) ~ &quot;middle&quot;,
+            Age &gt; 50 ~ &quot;old&quot;)) -&gt; train
+
+train %&gt;% ungroup %&gt;% count(Age.grps)
+
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Pclass&quot;) + facet_wrap(~ Pclass)
+
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Sex&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(Age.grps, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Age groups survival by Sex and Pclass&quot;) + facet_wrap(~ Sex*Pclass)
+</code></pre>
+
+<table>
+<thead><tr><th scope=col>Age.grps</th><th scope=col>n</th></tr></thead>
+<tbody>
+    <tr><td>middle</td><td>744   </td></tr>
+    <tr><td>old   </td><td> 65   </td></tr>
+    <tr><td>young </td><td> 82   </td></tr>
+</tbody>
+</table>
+
+<p><img src="/blog/2019-01-21-titanic/output_17_1.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_17_2.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_17_3.png" alt="png" /></p>
+
+<p><img src="/blog/2019-01-21-titanic/output_17_4.png" alt="png" /></p>
+
+<h2 id="ticket-prefix">Ticket prefix</h2>
+
+<p>Extract the prefix from the ticket, since this seems to represent the passenger&rsquo;s final destination. Combine codes that are similar or seem to have a typo.</p>
+
+<pre><code class="language-R">train %&gt;%
+    rowwise %&gt;%
+    mutate(ticket.prefix = ifelse(grepl(&quot; &quot;, Ticket), sub(&quot; .*&quot;, &quot;&quot;, Ticket), &quot;&quot;),
+           ticket.prefix = toupper(gsub(&quot;(\\.)|(\\/)&quot;, &quot;&quot;, ticket.prefix)),
+           ticket.prefix = case_when(
+            ticket.prefix == &quot;STONO&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SCAH&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA4&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;PPP&quot; ~ &quot;PP&quot;,
+            ticket.prefix == &quot;CASOTON&quot; ~ &quot;CA&quot;,
+            ticket.prefix == &quot;AS&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A4&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A5&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;SOP&quot; ~ &quot;SOPP&quot;,
+            ticket.prefix == &quot;SWPP&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;FA&quot; ~ &quot;&quot;,
+            TRUE ~ ticket.prefix)) -&gt; train
+
+train %&gt;%
+  ggplot(., aes(ticket.prefix, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by ticket prefix&quot;) +
+  coord_flip()
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_19_0.png" alt="png" /></p>
+
+<h2 id="race-from-surname">Race from surname</h2>
+
+<p>Predict the passenger&rsquo;s race/ethnicity using their surname. Since there wasn&rsquo;t a lot of diversity on the Titanic, we&rsquo;ll combine into &ldquo;White&rdquo; and &ldquo;Non-white&rdquo; categories.</p>
+
+<pre><code class="language-R">train %&gt;%
+    rowwise %&gt;%
+    mutate(surname = gsub('( .*)|(*,*)', '', Name)) -&gt; train
+
+predict_race(train, surname.only = T) -&gt; train
+
+train %&gt;%
+  rowwise %&gt;%
+  mutate(race = case_when(
+            pred.whi == max(pred.whi, pred.bla, pred.his, pred.asi, pred.oth) ~ &quot;White&quot;,
+            TRUE ~ &quot;Non-White&quot;
+          )) -&gt;train
+
+train %&gt;%
+  ggplot(., aes(race, fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by race and sex&quot;) + facet_wrap(~ Sex)
+</code></pre>
+
+<pre><code>[1] &quot;Proceeding with surname-only predictions...&quot;
+
+
+Warning message in merge_surnames(voter.file):
+&quot;Probabilities were imputed for 183 surnames that could not be matched to Census list.&quot;
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_21_2.png" alt="png" /></p>
+
+<h2 id="dead-relatives">Dead relatives</h2>
+
+<p>You are more likely to die if you&rsquo;ve had other relatives who have died. It looks like some passengers have the same surname but embarked at different locations. It seems reasonable to assume that they were not actually family if they embarked from different places, so we&rsquo;ll tag their surnames with the location of embarkment before calculating the number of dead family members.</p>
+
+<pre><code class="language-R">train %&gt;%
+  select(-Embarked) %&gt;%
+  rowwise %&gt;%
+  cbind(Embarked = train.csv$Embarked) %&gt;%
+  mutate(surname.E = paste0(Embarked,&quot;.&quot;,surname)) -&gt; train
+
+train %&gt;%
+  ungroup %&gt;%
+  group_by(surname.E) %&gt;%
+  summarise(n.fam = n(),
+            dead.family = sum(1 - as.numeric(as.character(Survived))),
+            all.died = ifelse(dead.family/n.fam == 1, 1, 0)) -&gt; dead.family.df
+
+train %&gt;%
+  left_join(., dead.family.df, by = 'surname.E') -&gt; train
+</code></pre>
+
+<pre><code class="language-R">train %&gt;%
+  ggplot(., aes(factor(all.died), fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by dead relatives (boolean)&quot;) + facet_wrap(~ Sex)
+
+train %&gt;%
+  ggplot(., aes(factor(all.died), fill=Survived)) + 
+  geom_bar() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  ggtitle(&quot;Survival by dead relatives (boolean)&quot;) + facet_wrap(~ Sex*Pclass)
+</code></pre>
+
+<p><img src="/blog/2019-01-21-titanic/output_24_0a.png" alt="png" />
+<img src="/blog/2019-01-21-titanic/output_24_0b.png" alt="png" /></p>
+
+<h1 id="models">Models</h1>
+
+<h2 id="random-forest">Random forest</h2>
+
+<pre><code class="language-R">trctrl &lt;- trainControl(
+  method = &quot;repeatedcv&quot;,
+  number = 10,
+  repeats = 10,
+  allowParallel = TRUE)
+
+tgctrl &lt;- expand.grid(
+    .mtry = 7,
+    .splitrule = &quot;gini&quot;,
+    .min.node.size = 10)
+
+fit.rf &lt;- train(Survived ~ 
+                    Sex + 
+                    title.class + 
+                    family.size.simple + 
+                    Fare.grps + 
+                    Pclass + 
+                    Age.grps + 
+                    Embarked + 
+                    ticket.prefix + 
+                    race
+             data = train, 
+             trControl = trctrl,
+             metric = &quot;Accuracy&quot;,
+             importance = &quot;impurity&quot;,
+             tuneGrid = tgctrl,
+             num.trees = 2000,
+             method = &quot;ranger&quot;)
+fit.rf
+</code></pre>
+
+<pre><code>Random Forest 
+
+891 samples
+  9 predictor
+  2 classes: '0', '1' 
+
+No pre-processing
+Resampling: Cross-Validated (10 fold, repeated 10 times) 
+Summary of sample sizes: 802, 802, 801, 802, 802, 802, ... 
+Resampling results:
+
+  Accuracy   Kappa    
+  0.8295113  0.6252777
+
+Tuning parameter 'mtry' was held constant at a value of 7
+Tuning
+ parameter 'splitrule' was held constant at a value of gini
+Tuning
+ parameter 'min.node.size' was held constant at a value of 10
+</code></pre>
+
+<h1 id="predict">Predict!</h1>
+
+<h2 id="apply-transforms-to-test-data">Apply transforms to test data</h2>
+
+<pre><code class="language-R">test %&gt;% 
+  mutate(Fare = ifelse(PassengerId == 1044, 
+                       median((test %&gt;% filter(!is.na(Fare), 
+                                               Pclass == 3, 
+                                               PassengerId != 1044))$Fare), Fare)) -&gt; test
+
+test %&gt;%
+  rowwise %&gt;%
+  mutate(title = gsub('(.*, )|(\\..*)', '', Name),
+         child = ifelse(Age &lt; 15, 1, 0),
+         title.class = case_when(
+            title %in% c(&quot;Master&quot;) ~ &quot;Boy&quot;,
+            title %in% c(&quot;Miss&quot;) &amp; child == 1 ~ &quot;Girl&quot;,
+            title %in% c(&quot;Mrs&quot;) ~ &quot;Woman&quot;,
+            title %in% c(&quot;Miss&quot;, &quot;Mme&quot;, &quot;Mlle&quot;, &quot;Ms&quot;) ~ &quot;Lady&quot;,
+            title %in% c(&quot;Dr&quot;) &amp; Sex == &quot;female&quot; ~ &quot;Woman&quot;,
+            title %in% c(&quot;Mr&quot;) ~ &quot;Man&quot;,
+            title %in% c(&quot;Capt&quot;, &quot;Don&quot;, &quot;Col&quot;, &quot;Major&quot;, &quot;Dr&quot;, &quot;Rev&quot;, 
+                         &quot;Dona&quot;, &quot;Jonkheer&quot;, &quot;the Countess&quot;, &quot;Lady&quot;, &quot;Sir&quot;) ~ &quot;Special&quot;,
+            TRUE ~ &quot;Other&quot;),
+         family.size = SibSp + Parch,
+         family.size.simple = case_when(
+            family.size == 0 ~ &quot;0&quot;,
+            between(family.size, 1, 3) ~ &quot;1-3&quot;,
+            family.size &gt; 3 ~ &quot;&gt;3&quot;
+          ),
+         Fare.grps = case_when(
+            between(Fare, 0, 100) ~ &quot;0-100&quot;,
+            Fare &gt; 100 ~ &quot;&gt;100&quot;,
+          ),
+         Age.grps = case_when(
+            between(Age, 0, 12) ~ &quot;young&quot;,
+            between(Age, 12, 50) ~ &quot;middle&quot;,
+            Age &gt; 50 ~ &quot;old&quot;
+          ),
+         ticket.prefix = ifelse(grepl(&quot; &quot;, Ticket), sub(&quot; .*&quot;, &quot;&quot;, Ticket), &quot;&quot;),
+         ticket.prefix = toupper(gsub(&quot;(\\.)|(\\/)&quot;, &quot;&quot;, ticket.prefix)),
+           ticket.prefix = case_when(
+            ticket.prefix == &quot;STONO&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;STONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONOQ&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SOTONO2&quot; ~ &quot;SOTONO&quot;,
+            ticket.prefix == &quot;SCAH&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA4&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;SCA3&quot; ~ &quot;SCA&quot;,
+            ticket.prefix == &quot;PPP&quot; ~ &quot;PP&quot;,
+            ticket.prefix == &quot;CASOTON&quot; ~ &quot;CA&quot;,
+            ticket.prefix == &quot;AS&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A4&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;A5&quot; ~ &quot;A&quot;,
+            ticket.prefix == &quot;SOP&quot; ~ &quot;SOPP&quot;,
+            ticket.prefix == &quot;SWPP&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;FA&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;AQ3&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;AQ4&quot; ~ &quot;&quot;,
+            ticket.prefix == &quot;LP&quot; ~ &quot;&quot;,
+            TRUE ~ ticket.prefix),
+         surname = gsub('( .*)|(*,*)', '', Name),
+         surname.E = paste0(Embarked, &quot;.&quot;, surname)) -&gt; test.final
+
+# Ethnicity
+predict_race(test.final, surname.only = T) -&gt; test.final
+
+test.final %&gt;%
+  rowwise %&gt;%
+  mutate(race = case_when(
+            pred.whi == max(pred.whi, pred.bla, pred.his, pred.asi, pred.oth) ~ &quot;White&quot;,
+            TRUE ~ &quot;Non-White&quot;)) -&gt; test.final
+
+# Dead family members
+test.final %&gt;%
+  left_join(., dead.family.df, by = 'surname.E') -&gt; test.final
+</code></pre>
+
+<h2 id="predict-using-random-forest">Predict using random forest</h2>
+
+<pre><code class="language-R">Survived &lt;- predict(fit.rf, test.final)
+Survived &lt;- as.numeric(as.character(Survived))
+
+test.final %&gt;%
+    cbind(., Survived) -&gt; test.pred
+
+test.pred %&gt;%
+    mutate(Survived = case_when(
+                          is.na(n.fam) ~ Survived,
+                          all.died == 1 &amp; n.fam &gt; 1 &amp; Survived == 1 ~ 0,
+                          TRUE ~ Survived
+                        )
+           ) -&gt; test.pred
+
+pred.rf &lt;- data.frame(
+  cbind(
+    PassengerId = as.integer(as.character(test.final$PassengerId)),
+    Survived = as.integer(as.character(test.pred$Survived))
+    )
+  )        
+
+write_csv(pred.rf, 'rf.output.csv')
+</code></pre>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+	</div>
+	<div class="post-next">
+		<a href="/post/creating-a-withdraw-button-in-qualtrics/" rel="next">
+			<span class="post-nav__caption">
+				Newer »
+			</span>
+			<p class="post-nav__title-right">
+				Creating a withdraw button in Qualtrics
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+

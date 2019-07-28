@@ -1,91 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="generator" content="Hugo 0.51" />
-		<title>Creating a withdraw button in Qualtrics - Tyler Burleigh, PhD</title>
-
-		<meta name="description" content="In this tutorial, I describe the method that I have used in the past to create a withdraw button on Qualtrics.">
-
-
-		
-		
-		
-		<link rel="stylesheet" href="/css/ui.min.css"/>
-		
-		<meta name="twitter:site" content="@tylerburleigh">
-		<meta name="twitter:creator" content="@tylerburleigh">
-		
-		<meta name="twitter:description" content="In this tutorial, I describe the method that I have used in the past to create a withdraw button on Qualtrics." />
-		<meta name="twitter:title" content="Creating a withdraw button in Qualtrics" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:image" content="" />
-		
-		
-
-		<link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato|Raleway">
-
-		
-
-		<style>
-	a { color: #ff8181; }
-	blockquote {
-		border-left-color: #ff8181;
-		border-right-color: #ff8181; }
-	.bar a:hover {
-		color: #ff8181;
-		text-decoration: none; }
-	.sep {
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-		margin-left:0;
-		width: 24rem;
-		border-top: 2px solid #ff8181; }
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creating a withdraw button in Qualtrics | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
 </style>
 
-	</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<body>
-<header class="container no-print">
-	<div class="u-header">
-		<nav class="bar">
-	<ul><li>
-			<a href="/">
-				<img class="icon-text" src="/img/prev.svg"/>
-			</a>
-		</li><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/work/">Work</a></li></ul>
-</nav>
-
-	</div>
-</header>
-<main class="container">
-
-<article>
-	<header><hgroup id="brand">
-	<h1>Creating a withdraw button in Qualtrics</h1>
-	<h5>
-		
-		<time datetime="2019-02-18 00:00:00 &#43;0000 UTC">Feb 18, 2019</time>
-		<span class="no-print">
-			-
-				
-				<a href="/tags/qualtrics">qualtrics</a>
-				
-				<a href="/tags/MTurk">MTurk</a>
-				
-				<a href="/tags/research">research</a>
-				
-				<a href="/tags/withdraw">withdraw</a>
-				
-				<a href="/tags/ethics">ethics</a>
-				<span>
-	</h5>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
 	
-</hgroup>
-<hr class="sep" />
-</header>
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/post/">Blog</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Creating a withdraw button in Qualtrics</span>
 	
+		<div class="meta">February 18, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/tutorials'>Tutorials</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/qualtrics'>qualtrics</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/mturk'>MTurk</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/research'>research</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/withdraw'>withdraw</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/ethics'>ethics</a></kbd>
+	
+</div>
+
+<main>
 
 <p>When conducting survey research online using MTurk, researchers are under an ethical obligation to give participants the ability to withdraw from a study without incurring a financial penalty. In practice, however, this is often not the case. In most of the academic Qualtrics surveys I&rsquo;ve seen, researchers tell participants something to the effect of: &ldquo;you can withdraw at any time by exiting the survey (e.g., by closing your web browser or navigating away from the survey)&rdquo;.</p>
 
@@ -184,81 +169,76 @@ inject_me();
 </code></pre>
 
 <p>This code will style the withdraw button that gets injected so that it looks like the other survey button elements. That&rsquo;s it! <strong>Note:</strong> The withdraw button <strong>does not work</strong> in survey <strong>Preview</strong> mode. In order to test that it&rsquo;s working, you should use your survey&rsquo;s live link (the one created through the &ldquo;Distributions&rdquo; page).</p>
-
-</article>
-<nav class="no-print post-nav">
-
-	<a class="prev-post" href="/blog/surviving-the-titanic-with-r-caret/">
-		<img class="icon-text" src="/img/prev.svg"/>Surviving the Titanic with R caret || Machine Learning</a>
+</main>
 
 
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/surviving-the-titanic-with-r-caret/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Surviving the Titanic with R caret
+			</p>
+		</a>
+	</div>
 </nav>
 
 
 
 
-	<div id="disqus_thread" class="no-print"></div>
-<script type="text/javascript">
 
-(function() {
+
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
     
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'tyler-burleigh';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-			<hr class="sep" />
-		</main>
-		<footer class="container no-print">
-			<div class="u-footer">
-				
-<a href="mailto:tylerburleigh@gmail.com"><img class="icon-social" src="/img/email.svg" alt="Email Me!"/></a>
+<footer>
+<hr/>
 
 
-<a href="https://github.com/tylerburleigh/"><img class="icon-social" src="/img/github.svg" alt="Github"/></a>
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
 
 
-<a href="https://twitter.com/tylerburleigh"><img class="icon-social" src="/img/twitter.svg" alt="Twitter"/></a>
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
 
-<a href="/index.xml" target="_blank"><img class="icon-social" src="/img/feed.svg" alt="Feed"></a>
-
-				<p>
-					
-					Theme used: <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
-					
-					
-					&copy; 2018 Tyler Burleigh
-					
-					
-				</p>
-				
-				<a href="#brand">
-					<img class="icon-text" src="/img/toup.svg" alt="To Up"/>
-					<span>Back to Up</span>
-				</a>
-				
-			</div>
-		</footer>
-		
-	</body>
-	
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-40957506-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+  </footer>
+  </body>
 </html>
 
