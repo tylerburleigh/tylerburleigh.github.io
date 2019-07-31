@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Upskilling on Tyler Burleigh</title>
-    <link>https://tylerburleigh.com/categories/upskilling/</link>
-    <description>Recent content in Upskilling on Tyler Burleigh</description>
+    <title>data science on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/data-science/</link>
+    <description>Recent content in data science on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tylerburleigh.com/categories/upskilling/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tylerburleigh.com/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://tylerburleigh.com/blog/looking-back-at-the-data-science-specialization/</guid>
       <description>I&amp;rsquo;ve just completed the Data Science Specialization on Coursera, earning my certificate.
 I decided to take this specialization because I&amp;rsquo;d just become a data scientist (technically a &amp;ldquo;Quantitative Researcher&amp;rdquo;), but I didn&amp;rsquo;t know what &amp;ldquo;data science&amp;rdquo; was. Was it just applied statistics repackaged for industry? At the very least, I figured I&amp;rsquo;d learn the sorts of terms that data scientists used by convention to refer to things, and I&amp;rsquo;d be better able to communicate with other data scientists.</description>
-    </item>
-    
-    <item>
-      <title>Surviving the Titanic with R caret</title>
-      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
-      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
-      <description>Introduction I&amp;rsquo;ve been meaning to &amp;ldquo;upskill&amp;rdquo; into the world of machine learning for some time. I&amp;rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</description>
     </item>
     
   </channel>
