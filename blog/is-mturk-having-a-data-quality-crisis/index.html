@@ -72,11 +72,11 @@ if (!doNotTrack) {
 
 <p>Is MTurk having a &ldquo;data quality crisis&rdquo;?</p>
 
-<p>In August 2018, there was an event that many called &ldquo;botgate&rdquo;. Basically,
-many researchers on Twitter started to panic after reports surfaced of extremely
-low quality data. Researchers seeing the same kinds of nonsense responses to open-ended
-survey questions by gobs and gobs of participants (responses like &ldquo;nice&rdquo; and &ldquo;GOOD&rdquo;) as
-well as repeated geo-locations (as geo-coded by Qualtrics).</p>
+<p>In August 2018, there was an event that I like to call &ldquo;MTurk botgate&rdquo;. Basically,
+researchers on Twitter started to panic after some reported a sudden uptick in
+low quality data. Some researchers were seeing the same kinds of nonsense response patterns
+to open-ended survey questions by large numbers of participants, and were also seeing
+repeated geo-locations appear in their datasets (more on this later).</p>
 
 <div style="display: flex; flex-direction: column; align-items: center;">
 
@@ -90,14 +90,15 @@ well as repeated geo-locations (as geo-coded by Qualtrics).</p>
 
 </div>
 
-<p>Researchers weren&rsquo;t the only ones reporting on the event. News outlets also jumped on the panic bandwagon with hits like these:</p>
+<p>News outlets also jumped on the bandwagon with hits like these:</p>
 
 <ul>
 <li><strong>Wired:</strong> <a href="https://www.wired.com/story/amazon-mechanical-turk-bot-panic/">A Bot Panic Hits Amazon&rsquo;s Mechanical Turk</a></li>
 <li><strong>NewScientist:</strong> <a href="https://www.newscientist.com/article/2176436-bots-on-amazons-mechanical-turk-are-ruining-psychology-studies/">Bots on Amazon&rsquo;s Mechanical Turk are ruining psychology studies</a></li>
 </ul>
 
-<p>So why were researchers finding low quality data? There&rsquo;s a few possibilities.</p>
+<p>So why were researchers finding low quality data? I&rsquo;d like to lay out a few of the possibilities
+and explain why I think the dominant narrative of &ldquo;bots&rdquo; is an unlikely candidate.</p>
 
 <h2 id="botpocalypse">Botpocalypse!</h2>
 
@@ -110,13 +111,9 @@ or semi-autonomously complete tasks for them. And maybe those bad actors had acq
 
 <p>And yes, the buying and selling of MTurk accounts does take place, though I don&rsquo;t know how successful those transactions are and for how long the accounts remain active post-transaction.</p>
 
-<p>Yet I&rsquo;m skeptical of the idea that either A) automation scripts had suddenly become widespread among users, B) that some users had suddenly acquired lots and lots of accounts to use as bots. Some of the evidence was also flaky. For instance, the repeat geo-coordinates were from Qualtrics, which are <a href="https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/understanding-your-dataset/">accurate to the city level</a>. In other words, duplicates could be explained simply by the density of users within a particular city.</p>
+<p>Yet I&rsquo;m skeptical of the idea that either A) automation scripts had suddenly become widespread among users, B) that some users had suddenly acquired lots and lots of accounts to use as bots. There just isn&rsquo;t enough evidence to support this. Even the evidence of repeat geo-coordinates was largely a misunderstanding of the fact that Qualtrics geo-locations are only <a href="https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/understanding-your-dataset/">accurate to the city level</a>. In other words, users who were thought to be coming from the same location could simply have been located in the same, densely-populated city.</p>
 
 <div style="display: flex; flex-direction: column; align-items: center;">
-
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think there&#39;s 2 parts to this:<br>1) Are there bots on MTurk? Almost certainly yes.<br>2) Are they smart enough to pass strict reputation criteria (% Approval, # of HITs Completed)? Doubtful. I suspect many (most) reports of bots are b/c researchers are not using these correctly. <a href="https://t.co/ptkVCrlQr3">https://t.co/ptkVCrlQr3</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1027967375168159744?ref_src=twsrc%5Etfw">August 10, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
   
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think the real story was academic psychologists collectively panicking when several anecdotes w/ bad data surfaced. IMO, plumbing those depths would have made a better story than the (exaggerated, possibly false) &quot;bots are destroying science&quot; hottake. <a href="https://twitter.com/hashtag/botpocalypse?src=hash&amp;ref_src=twsrc%5Etfw">#botpocalypse</a> <a href="https://twitter.com/hashtag/meta?src=hash&amp;ref_src=twsrc%5Etfw">#meta</a> <a href="https://t.co/5fj4xEC0Ub">https://t.co/5fj4xEC0Ub</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1028282777677049858?ref_src=twsrc%5Etfw">August 11, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -127,6 +124,14 @@ or semi-autonomously complete tasks for them. And maybe those bad actors had acq
 <h2 id="blame-the-user-not-the-tool">Blame the user, not the tool</h2>
 
 <p>Another possibility is that researchers were new to the platform and not following established best practices for screening out &ldquo;low-quality&rdquo; workers.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think there&#39;s 2 parts to this:<br>1) Are there bots on MTurk? Almost certainly yes.<br>2) Are they smart enough to pass strict reputation criteria (% Approval, # of HITs Completed)? Doubtful. I suspect many (most) reports of bots are b/c researchers are not using these correctly. <a href="https://t.co/ptkVCrlQr3">https://t.co/ptkVCrlQr3</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1027967375168159744?ref_src=twsrc%5Etfw">August 10, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
 
 <p>Typically, researchers will restrict access to their MTurk tasks by only allowing
 workers who have a history of at least 100 tasks, an approval rate of at least
@@ -214,9 +219,8 @@ was very good.</p>
 
 </div>
 
-<p>So to answer the question I posed: Is MTurk having a data quality crisis? I think
-the answer is pretty clearly no &ndash; at least, not if you&rsquo;re following some of the
-established best practices.</p>
+<p>So to answer the question I posed at the beginning: Is MTurk having a data quality crisis? I think
+the answer is pretty clearly no &ndash; at least, not if you&rsquo;re following some of the established best practices.</p>
 </main>
 
 
@@ -291,7 +295,7 @@ established best practices.</p>
 	<nav>
 		<ul class="menu">
 			
-			<li><a href="tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
 			
 			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
 			
