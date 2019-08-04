@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Is MTurk having a data quality crisis? | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writings</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Is MTurk having a data quality crisis?</span>
+	
+		<div class="meta">April 19, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/original-research'>Original Research</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/mturk'>MTurk</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/data-quality'>data quality</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/research-methods'>research methods</a></kbd>
+	
+</div>
+
+<main>
+
+<p>Is MTurk having a &ldquo;data quality crisis&rdquo;?</p>
+
+<p>In August 2018, there was an event that many called &ldquo;botgate&rdquo;. Basically,
+many researchers on Twitter started to panic after reports surfaced of extremely
+low quality data. Researchers seeing the same kinds of nonsense responses to open-ended
+survey questions by gobs and gobs of participants (responses like &ldquo;nice&rdquo; and &ldquo;GOOD&rdquo;) as
+well as repeated geo-locations (as geo-coded by Qualtrics).</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">MTurk may be contaminated! Bots are filling out psychology surveys. Apparently you can tell by repeating GPS coordinates. These researchers are looking into it, and you can report anything fishy at: <a href="https://t.co/YYtwAjKIyc">https://t.co/YYtwAjKIyc</a></p>&mdash; Kurt Gray (@kurtjgray) <a href="https://twitter.com/kurtjgray/status/1027543640489512965?ref_src=twsrc%5Etfw">August 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New study of MTurk data suggests many participants (some estimates as high as 48%) are bots with spoof accounts. Read more and learn how to detect suspicious participants here:  <a href="https://t.co/KwZlzzjmRu">https://t.co/KwZlzzjmRu</a></p>&mdash; Matt Motyl (@MattMotyl) <a href="https://twitter.com/MattMotyl/status/1027700171361140736?ref_src=twsrc%5Etfw">August 9, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+
+<p>Researchers weren&rsquo;t the only ones reporting on the event. News outlets also jumped on the panic bandwagon with hits like these:</p>
+
+<ul>
+<li><strong>Wired:</strong> <a href="https://www.wired.com/story/amazon-mechanical-turk-bot-panic/">A Bot Panic Hits Amazon&rsquo;s Mechanical Turk</a></li>
+<li><strong>NewScientist:</strong> <a href="https://www.newscientist.com/article/2176436-bots-on-amazons-mechanical-turk-are-ruining-psychology-studies/">Bots on Amazon&rsquo;s Mechanical Turk are ruining psychology studies</a></li>
+</ul>
+
+<p>So why were researchers finding low quality data? There&rsquo;s a few possibilities.</p>
+
+<h2 id="botpocalypse">Botpocalypse!</h2>
+
+<p>As you can probably guess, the story that really caught people&rsquo;s attention was that MTurk was over-run with bots! This came from the assertions of some researchers who believed that some bad actors had started using scripts that could autonomously
+or semi-autonomously complete tasks for them. And maybe those bad actors had acquired lots and lots of accounts through which they could enact their nefarious bot behavior.</p>
+
+<p>Yes, there are some scripts that MTurk &ldquo;power users&rdquo; are known to use to enhance their experience and increase their efficiency while working on the platform. A lot of these can be found at <a href="https://greasyfork.org/en/scripts/by-site/mturk.com">greasyfork.org</a> &ndash; a site where users share custom browser scripts that change the behavior of certain websites. For example, there&rsquo;s one script called &ldquo;MTurk Captcha Alert&rdquo; that supposedly alerts users when a captcha is found in a task. And another called &ldquo;mTurk survey highlight words&rdquo; that will highlight words used in attention check questions like &ldquo;ignore&rdquo;, &ldquo;reading&rdquo;, and &ldquo;attention&rdquo;. But there&rsquo;s nothing there on the order of automating entire MTurk tasks (let alone automate lots of different kinds of tasks).</p>
+
+<p>There&rsquo;s also clearly an appetite among some users for scripts <em>that would</em> automate some aspects of the drudgery, as one reddit user asks to the <a href="r/mturk>/r/mturk</a> subreddit: <a href="https://www.reddit.com/r/mturk/comments/40re3z/is_there_any_script_to_auto_check_all_the_radio/">&ldquo;Is there any script to auto check all the radio buttons?&rdquo;</a> and another asks, similarly, <a href="https://www.reddit.com/r/mturk/comments/7pm32h/how_do_i_find_a_script_that_automatically_fills/">&ldquo;How do I find a script that automatically fills radio buttons?&rdquo;</a>. Of course these users didn&rsquo;t get the answers they were looking for and the threads were unpopular with the communities. But scripts like these do in fact exist (I won&rsquo;t link them here so as not to make them easier to find), and I wouldn&rsquo;t be the least bit surprised if some users have figured out how to make them work to a relatively successful degree.</p>
+
+<p>And yes, the buying and selling of MTurk accounts does take place, though I don&rsquo;t know how successful those transactions are and for how long the accounts remain active post-transaction.</p>
+
+<p>Yet I&rsquo;m skeptical of the idea that either A) automation scripts had suddenly become widespread among users, B) that some users had suddenly acquired lots and lots of accounts to use as bots. Some of the evidence was also flaky. For instance, the repeat geo-coordinates were from Qualtrics, which are <a href="https://www.qualtrics.com/support/survey-platform/data-and-analysis-module/data/download-data/understanding-your-dataset/">accurate to the city level</a>. In other words, duplicates could be explained simply by the density of users within a particular city.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think there&#39;s 2 parts to this:<br>1) Are there bots on MTurk? Almost certainly yes.<br>2) Are they smart enough to pass strict reputation criteria (% Approval, # of HITs Completed)? Doubtful. I suspect many (most) reports of bots are b/c researchers are not using these correctly. <a href="https://t.co/ptkVCrlQr3">https://t.co/ptkVCrlQr3</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1027967375168159744?ref_src=twsrc%5Etfw">August 10, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think the real story was academic psychologists collectively panicking when several anecdotes w/ bad data surfaced. IMO, plumbing those depths would have made a better story than the (exaggerated, possibly false) &quot;bots are destroying science&quot; hottake. <a href="https://twitter.com/hashtag/botpocalypse?src=hash&amp;ref_src=twsrc%5Etfw">#botpocalypse</a> <a href="https://twitter.com/hashtag/meta?src=hash&amp;ref_src=twsrc%5Etfw">#meta</a> <a href="https://t.co/5fj4xEC0Ub">https://t.co/5fj4xEC0Ub</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1028282777677049858?ref_src=twsrc%5Etfw">August 11, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+
+<h2 id="blame-the-user-not-the-tool">Blame the user, not the tool</h2>
+
+<p>Another possibility is that researchers were new to the platform and not following established best practices for screening out &ldquo;low-quality&rdquo; workers.</p>
+
+<p>Typically, researchers will restrict access to their MTurk tasks by only allowing
+workers who have a history of at least 100 tasks, an approval rate of at least
+95% over those tasks (although lately I&rsquo;ve seen more researchers using &gt;= 98% approval),
+and who are located in the US.</p>
+
+<p>This practice dates back to a blog post from 2012 by one of the admins of the now defunct TurkerNation: <a href="http://turkrequesters.blogspot.com/2012/09/tips-for-academic-requesters-on-mturk.html">Tips for Academic Requesters on Mturk</a>, and the practice was later validated by a peer-reviewed research article: <a href="https://dx.doi.org/10.3758/s13428-013-0434-y">Reputation as a sufficient condition for data quality on Amazon Mechanical Turk</a></p>
+
+<p>In speaking with some of the researchers who were reporting data quality issues,
+I learned that at least a couple of them had apparently not followed these best practices. In one case,
+for instance, a user had set an approval % criteria, but had not also set a minimum number of HITs completed. This
+is important, because any users with fewer than 100 HITs completed are automatically assigned a 100% approval rate as stated in the <a href="https://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QualificationRequirementDataStructureArticle.html">MTurk documentation</a> (&ldquo;Note that a Worker&rsquo;s approval rate is statistically meaningless for small numbers of assignments, since a single rejection can reduce the approval rate by many percentage points. So to ensure that a new Worker&rsquo;s approval rate is unaffected by these statistically meaningless changes, if a Worker has submitted less than 100 assignments, the Worker&rsquo;s approval rate in the system is 100%.&rdquo;)</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you are using vanilla MTurk and you don&#39;t set a # of HITs completed for your task in addition to % Approval, then anyone with fewer than 100 HITs completed can participate even if they have a garbage track record. It&#39;s even more important to set this than I thought... <a href="https://t.co/8UexvUg0FK">https://t.co/8UexvUg0FK</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1029140062867521536?ref_src=twsrc%5Etfw">August 13, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+
+<h2 id="foreign-users">Foreign users</h2>
+
+<p>One weakness with the &ldquo;blame the user&rdquo; explanation is that researchers did report using a
+US location restriction, and furthermore, the repeated geo-locations were showing US locations (one
+location that was showing a lot of users was Buffalo, NY).</p>
+
+<p>This eventually gave rise to the idea, which now seems to be the most plausible in my estimation, that it was foreign users who were pretending to be from the US by using VPN (Virtual Private Networks; a.k.a. &ldquo;proxies&rdquo;) services to route their traffic through US server locations. This is what <a href="https://blog.turkprime.com/after-the-bot-scare-understanding-whats-been-happening-with-data-collection-on-mturk-and-how-to-stop-it?utm_content=77297782&utm_medium=social&utm_source=twitter">TurkPrime found in their analysis</a>, referring to these users as &ldquo;server farmers&rdquo;, and the analysis is pretty compelling.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">&quot;Our evidence suggests recent data quality problems [on MTurk] are tied to foreign workers, not bots&quot; <a href="https://t.co/XBstUYTJNL">https://t.co/XBstUYTJNL</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1042243333597196288?ref_src=twsrc%5Etfw">September 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+
+<p>When I saw this, I jumped at the opportunity to create a tool that would allow
+researchers to screen these users out by identifying where their traffic was coming from, and eventually collaborated with some folks to create a suite of tools for this purpose and to write up a document that described in detail
+how to actually do the screening in Qualtrics.</p>
+
+<ul>
+<li><p>Kennedy, R. &amp; Clifford, S. &amp; Burleigh, T., (October 24, 2018). The Shape of and Solutions to the MTurk Quality Crisis. Available at SSRN: <a href="https://ssrn.com/abstract=3272468">https://ssrn.com/abstract=3272468</a></p></li>
+
+<li><p><strong>Winter, N., Burleigh, T., Kennedy, R. &amp; Clifford, S. (February 1, 2019). A Simplified Protocol to Screen Out VPS and International Respondents Using Qualtrics. Available at SSRN:
+<a href="https://ssrn.com/abstract=3327274">https://ssrn.com/abstract=3327274</a> <a href="https://tylerburleigh.com/pubs/Winter, Burleigh, Kennedy, Clifford - 2019 - A Simplified Protocol to Screen Out VPS and International Respondents Using Qualtrics.pdf">[PDF]</a></strong></p></li>
+</ul>
+
+<p>I&rsquo;ve started using this protocol as standard practice. Since the panic I&rsquo;ve collected
+data for a few larger-scale studies and by all accounts the quality of that data
+was very good.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/10 If you use MTurk + Qualtrics and want to improve data quality, this is a reminder that <a href="https://twitter.com/njgwinter?ref_src=twsrc%5Etfw">@njgwinter</a>, <a href="https://twitter.com/ScottClif?ref_src=twsrc%5Etfw">@ScottClif</a>, <a href="https://twitter.com/RyanKennedy7?ref_src=twsrc%5Etfw">@RyanKennedy7</a>, and I put out a simple protocol to screen users behind &quot;server farms&quot;.<a href="https://t.co/VCwYRQ6AcK">https://t.co/VCwYRQ6AcK</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405588264435712?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">2/10 Months ago there was a fear that MTurk was having a quality crisis &amp; a &quot;bot&quot; crisis. Some observed low quality data, repeated geo-locations &amp; suspicious responses. Some of us hypothesized that this wasn&#39;t due to bots, per se, but rather users masquerading as US residents.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405589094916096?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">3/10 There were some indications this was the case, like this report by <a href="https://twitter.com/TurkPrime?ref_src=twsrc%5Etfw">@TurkPrime</a> where low-quality was associated with users behind &quot;server farms&quot; (i.e., commercial, non-residential Internet Service Providers -- often used as hosts for proxies).<a href="https://t.co/dF7jOKBvyZ">https://t.co/dF7jOKBvyZ</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405589891883009?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">4/10 I&#39;ve used the protocol &amp; have some results now. Is it worth it? I just finished a N&gt;1000 MTurk study. Using the protocol, I found and filtered out 5.6% of users who were behind a server farm, and a further 1.3% who were outside the US (despite a Location = US qualification)</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405590843940865?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">5/10 I should mention this was using the standard best-practice<br><br>&quot;Location = US&quot;<br>&quot;HIT Approval Rate &gt;= 98%&quot;<br>&quot;Number of HITs Approved &gt; 100&quot; <br><br>quality control settings</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405591649189894?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">6/10 On the issue of cost, my client was paying ~$1 for the pre-test and ~$5 for the post-test, so the screening protocol saved them ~$600 in payments to potentially suspicious participants.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405592420999169?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">7/10 What about data quality? We used attention checks. The pre-test survey had 4 (I know, it&#39;s a lot), and out of the ~1000 workers who passed the screener, 99% got 3 out of 4 attention checks correct and 95% got all 4 correct.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405593159249920?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">8/10 Another measure related to quality was retention. The pre- and post-tests were separated by a 2-week &quot;washout period&quot; (this was meant to obscure the relationship between the two surveys). 73% of participants were retained.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405594081931265?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">9/10 There were open-ended Qs in the post-test. In the past, low-quality workers have been found using phrases like &quot;NICE&quot; and &quot;GOOD&quot; in unusual places. The post-test had Qs like &quot;name 1 thing you liked about X&quot; where such responses would be expected, but I didn&#39;t find any.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405594887249920?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">10/10 So from my POV, MTurk isn&#39;t having a data quality crisis or a bot crisis. With the right precautions high-quality data can be had. Many MTurkers use services to hide their origins, and as they seem to produce bad data, screening them out might be another precaution to take.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1119405595885486080?ref_src=twsrc%5Etfw">April 20, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+
+<p>So to answer the question I posed: Is MTurk having a data quality crisis? I think
+the answer is pretty clearly no &ndash; at least, not if you&rsquo;re following some of the
+established best practices.</p>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/creating-a-withdraw-button-in-qualtrics/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Creating a withdraw button in Qualtrics
+			</p>
+		</a>
+	</div>
+	<div class="post-next">
+		<a href="/blog/what-is-fair-payment-on-mturk/" rel="next">
+			<span class="post-nav__caption">
+				Newer »
+			</span>
+			<p class="post-nav__title-right">
+				What is fair payment on MTurk?
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	<span class="date">2019/02/18</span>
+	<a href="/blog/creating-a-withdraw-button-in-qualtrics/">Creating a withdraw button in Qualtrics</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
