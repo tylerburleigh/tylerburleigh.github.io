@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tracking R package downloads on Github | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writings</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Tracking R package downloads on Github</span>
+	
+		<div class="meta">August 17, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/hacking'>Hacking</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/r'>R</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/python'>python</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/github'>github</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/analytics'>analytics</a></kbd>
+	
+</div>
+
+<main><p>As a package author, it&rsquo;s nice to know how often your package is getting installed
+and used. This is not only good for staying motivated (assuming your package is getting
+<em>some</em> use), but it&rsquo;s also important as part of building a portfolio in data science.
+After all, data science is all about measurement and quantification. What better evidence
+is there of your contributions to Open Source Software than cold hard numbers that represent
+usage data?</p>
+
+<p>If your R package is published to CRAN, then package installs can be found in the CRAN logs and
+accessed with the [cranlogs](&lsquo;<a href="https://r-hub.github.io/cranlogs'">https://r-hub.github.io/cranlogs'</a>) librart.</p>
+
+<p>If your package was published to Github, you can track repository clones. However, Github&rsquo;s built-in
+analytics is limited to the most recent two-weeks of data. This is not helpful if you want to track overall usage.
+So you really have to roll your own script that continually harvests this analytics data from Github.</p>
+
+<p>This is how I did it using R.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/5 I wanted to track how many times my <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> package was cloned on <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> to see how many users it has / how useful it is. But the built-in <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> analytics only has a history of 2 weeks. <br><br>I made a simple system with <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> to fetch/save stats on a regular basis. /thread</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1162747096405086209?ref_src=twsrc%5Etfw">August 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">2/5 First I installed the python library github-traffic-stats so I could fetch traffic stats using the <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> API. This allowed me to do it all in one line of R code using a system command. <br><br>I saved this as an R script (&quot;get_traffic.R&quot;)<a href="https://t.co/7wuFIreJ14">https://t.co/7wuFIreJ14</a> <a href="https://t.co/PpKSI2KqQP">pic.twitter.com/PpKSI2KqQP</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1162747101828263936?ref_src=twsrc%5Etfw">August 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">3/5 I wanted this script to run on a regular basis, so I installed the taskscheduleR package and used taskscheduler_create() to make the Windows version of a cron job scheduled task. (The cronR package can do this on Linux systems!)<br><br>Now it runs every Sunday at 9am. <a href="https://t.co/W3xr5ju8KD">pic.twitter.com/W3xr5ju8KD</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1162747106832146433?ref_src=twsrc%5Etfw">August 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">4/5 When it runs, it creates 3 csv files. I&#39;m only interested in the files that end with &quot;clone-stats.csv&quot; because these tell me how many times the repository was cloned each day. I&#39;ll need to filter on those files. <a href="https://t.co/7JBahQ6iLv">pic.twitter.com/7JBahQ6iLv</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1162747110938370049?ref_src=twsrc%5Etfw">August 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">5/5 The <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> API gives 2 weeks at a time, but my script runs weekly, so this will create duplicate entries within the csv files.<br><br>I use grepl to filter on the filenames, then I bind all the rows and filter on distinct dates. Finally, I sum all the clones. 52 clones so far! <a href="https://t.co/mp0ZUaeG1D">pic.twitter.com/mp0ZUaeG1D</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1162747116781035520?ref_src=twsrc%5Etfw">August 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/what-is-fair-payment-on-mturk/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				What is fair payment on MTurk?
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
