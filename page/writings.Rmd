@@ -13,7 +13,7 @@ sch <- scholar::get_profile(id)
 
 I've authored peer-reviewed scholarly articles and white papers.
 
-As of `r Sys.Date()`, my papers were cited `r sch$total_cites` times and my [h-index](https://en.wikipedia.org/wiki/H-index) was `r sch$h_index`.
+As of `r Sys.Date()`, my papers were cited `r sch$total_cites` times and my [h-index](https://en.wikipedia.org/wiki/H-index) was `r sch$h_index`. (source: [Google Scholar](https://scholar.google.com/citations?user=Y6l9qBUAAAAJ))
 
 # Papers
 
