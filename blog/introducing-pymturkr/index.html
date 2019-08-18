@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introducing pyMTurkR: An R package for MTurk Requesters | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writings</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Introducing pyMTurkR: An R package for MTurk Requesters</span>
+	
+		<div class="meta">August 18, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/foss'>FOSS</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/foss'>FOSS</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/open-source'>open source</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/mturk'>MTurk</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/r'>R</a></kbd>
+	
+</div>
+
+<main><p>For the past three months I&rsquo;ve been working<a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a>: An R package to interface with MTurk’s Requester API. It&rsquo;s a replacement for / successor to the now defunct MTurkR package. I&rsquo;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&rsquo;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</p>
+
+<p>Well today marks a <strong>major milestone</strong> in the development of <a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a> package: the first alpha build &ndash; now with 100% functional coverage of the API.</p>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m excited to announce the first alpha build of pyMTurkR: An R package to interface with MTurk&#39;s Requester API. This is a successor to the now obsolete MTurkR, with support for the latest MTurk API version 2017–01–17. <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/MTurk?src=hash&amp;ref_src=twsrc%5Etfw">#MTurk</a><a href="https://t.co/QCBwKf63GI">https://t.co/QCBwKf63GI</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1163167729458790411?ref_src=twsrc%5Etfw">August 18, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</div>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/tracking-r-package-downloads-on-github/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Tracking R package downloads on Github
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	<span class="date">2019/08/17</span>
+	<a href="/blog/tracking-r-package-downloads-on-github/">Tracking R package downloads on Github</a>
+</li>
+
+	
+		<li>
+	<span class="date">2019/08/04</span>
+	<a href="/blog/what-is-fair-payment-on-mturk/">What is fair payment on MTurk?</a>
+</li>
+
+	
+		<li>
+	<span class="date">2019/04/19</span>
+	<a href="/blog/is-mturk-having-a-data-quality-crisis/">Is MTurk having a data quality crisis?</a>
+</li>
+
+	
+		<li>
+	<span class="date">2019/02/18</span>
+	<a href="/blog/creating-a-withdraw-button-in-qualtrics/">Creating a withdraw button in Qualtrics</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
