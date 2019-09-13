@@ -6,10 +6,20 @@
     <description>Recent content in r on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using pyMTurkR to create a HIT with a Qualification Test (a.k.a. a &#34;Screener Survey&#34;)</title>
+      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
+      <description>Introduction Researchers are sometimes interested in recruiting people into a study who have certain traits or characteristics. For example, a researcher might be interested in surveying young adults between the ages of 18-24, or female executives over the age of 65.
+Targeted recruitment of participants is useful if you&amp;rsquo;re only interested in responses from a specific populations of individuals and not the &amp;ldquo;general population&amp;rdquo;. But it is also useful when you want to oversample a class of participants in your study who were underrepresented in a different sample.</description>
+    </item>
     
     <item>
       <title>Introducing pyMTurkR: An R package for MTurk Requesters</title>
@@ -17,7 +27,7 @@
       <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
-      <description>For the past three months I&amp;rsquo;ve been workingpyMTurkR: An R package to interface with MTurk’s Requester API. It&amp;rsquo;s a replacement for / successor to the now defunct MTurkR package. I&amp;rsquo;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
+      <description>For the past three months I&amp;rsquo;ve been working on pyMTurkR: An R package to interface with MTurk’s Requester API. It&amp;rsquo;s a replacement for / successor to the now defunct MTurkR package. I&amp;rsquo;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
     </item>
     
     <item>
