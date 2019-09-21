@@ -6,10 +6,19 @@
     <description>Recent content in R on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I&amp;rsquo;m kind of a nerd when it comes to nutrition and I&amp;rsquo;ve been wanting to do some nutrition analysis of recipes that I cook a lot just for curiosity&amp;rsquo;s sake. So I wrote a package that can do nutritional analysis of foods and recipes expressed in natural language. It supports lots of different nutrients (macros, micros, vitamins, minerals, etc).</description>
+    </item>
     
     <item>
       <title>Yet Another Data Science Job Market Analysis</title>
@@ -36,7 +45,7 @@ Targeted recruitment of participants is useful if you&amp;rsquo;re only interest
       <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
-      <description>For the past three months I&amp;rsquo;ve been working on pyMTurkR: An R package to interface with MTurk’s Requester API. It&amp;rsquo;s a replacement for / successor to the now defunct MTurkR package. I&amp;rsquo;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
+      <description>For the past three months I&#39;ve been working on [pyMTurkR](https://github.com/cloudyr/pyMTurkR): An R package to interface with MTurk’s Requester API. It&#39;s a replacement for / successor to the now defunct MTurkR package. I&#39;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&#39;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
     </item>
     
     <item>
