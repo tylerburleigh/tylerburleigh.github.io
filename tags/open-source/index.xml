@@ -17,17 +17,19 @@
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
-      <description>I&amp;rsquo;m a bit of a nutrition nerd and I&amp;rsquo;ve been wanting to do some analysis of recipes that I cook a lot just because I&amp;rsquo;m curious about some of their properties. To get closer to that goal, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
-nutritionR does this by wrapping the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
+      <description>I&amp;rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&amp;rsquo;m curious. So in order to move in that direction, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
+nutritionR is a wrapper for the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
     </item>
     
     <item>
       <title>pyMTurkR: An R package for MTurk Requesters</title>
       <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
-      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
-      <description>I&amp;rsquo;ve been working for a few months on this package called pyMTurkR. It&amp;rsquo;s an R package to interface with MTurk’s Requester API, replacing the now defunct MTurkR package. I&amp;rsquo;ve used MTurk for convenience sampling in many of my social science research, and when I use MTurk I like to use R to automate tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R lose support for the MTurk, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
+      <description>I&amp;rsquo;m pleased to announce pyMTurkR, an R package that allows you to interface with MTurk&amp;rsquo;s Requester API.
+pyMTurkR provides access to the latest Amazon Mechanical Turk (MTurk) Requester API (version &amp;lsquo;2017-01-17&amp;rsquo;), using reticulate to wrap the boto3 SDK for Python. pyMTurkR is a replacement for the now obsolete MTurkR.
+Using this package, you can perform operations like: creating HITs, updating HITs, creating custom Qualifications, reviewing submitted Assignments, approving/rejecting Assignments, sending bonus payments to Workers, sending messages to Workers, blocking/unblocking Workers, and many more.</description>
     </item>
     
   </channel>

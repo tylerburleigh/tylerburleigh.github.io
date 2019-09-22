@@ -50,7 +50,7 @@ if (!doNotTrack) {
 <div class="article-meta">
 	<span class="title">pyMTurkR: An R package for MTurk Requesters</span>
 	
-		<div class="meta">August 18, 2019</div>
+		<div class="meta">September 5, 2019</div>
 	
 	
 	
@@ -74,17 +74,15 @@ if (!doNotTrack) {
 <div style="display: flex; flex-direction: column; align-items: center;"><div class="github-card" data-github="cloudyr/pyMTurkR" data-width="400" data-height="150" data-theme="default"></div><script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script></div>
 <br></p>
 
-<p>I&rsquo;ve been working for a few months on this package called <code>pyMTurkR</code>. It&rsquo;s an R package to interface with MTurk’s Requester API, replacing the now defunct MTurkR package. I&rsquo;ve used MTurk for convenience sampling in many of my social science research, and when I use MTurk I like to use R to automate tasks like granting bonuses, approving assignments, etc. I didn&rsquo;t want to see R lose support for the MTurk, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</p>
+<p>I&rsquo;m pleased to announce <code>pyMTurkR</code>, an R package that allows you to interface with MTurk&rsquo;s Requester API.</p>
 
-<p>Today is a milestone in development: the first alpha build &ndash; now with 100% functional coverage of the API.</p>
+<p>pyMTurkR provides access to the latest Amazon Mechanical Turk (MTurk) Requester API (version &lsquo;2017-01-17&rsquo;), using reticulate to wrap the boto3 SDK for Python. pyMTurkR is a replacement for the now obsolete MTurkR.</p>
 
-<div style="display: flex; flex-direction: column; align-items: center;">
+<p>Using this package, you can perform operations like: creating HITs, updating HITs, creating custom Qualifications, reviewing submitted Assignments, approving/rejecting Assignments, sending bonus payments to Workers, sending messages to Workers, blocking/unblocking Workers, and many more.</p>
 
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m excited to announce the first alpha build of pyMTurkR: An R package to interface with MTurk&#39;s Requester API. This is a successor to the now obsolete MTurkR, with support for the latest MTurk API version 2017–01–17. <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/MTurk?src=hash&amp;ref_src=twsrc%5Etfw">#MTurk</a><a href="https://t.co/QCBwKf63GI">https://t.co/QCBwKf63GI</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1163167729458790411?ref_src=twsrc%5Etfw">August 18, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>pyMTurkR was created because on June 1, 2019 Amazon deprecated the MTurk API (version &lsquo;2014-08-15&rsquo;) that MTurkR was using, rendering it obsolete. This package was created to maintain MTurk access for R users while migrating to the new MTurk API (version &lsquo;2017-01-17&rsquo;).</p>
 
-
-</div>
+<p>pyMTurkR is not a native R language package. It uses reticulate to import and wrap the boto3 module for Python. Cross-language dependency is not necessarily a bad thing, and from the user perspective there is probably no difference, besides a few extra installation steps. Welcome to the wonderful world of R-python interoperability.</p>
 </main>
 
 
