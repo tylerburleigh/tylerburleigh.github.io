@@ -30,6 +30,10 @@ I started looking through the website, <a href="https://www.muralarts.org">Mural
 
 So I set about scraping the data to explore later. In this post, Part 1, I show how I scraped the data to obtain a tidy dataset containing mural locations and completion dates.
 
+## Important caveat
+
+From the outset I should mention that the Mural Arts Philadephia website is not a complete database of all Philly murals. As I learned when scraping the website, only about 200 works are catalogued on the website, but Philadelphia apparently has <a href="https://www.npr.org/templates/story/story.php?storyId=129281658">over 3000 murals</a>. According to the <a href="https://en.wikipedia.org/wiki/Mural_Arts_Program">Wikipedia page for Mural Arts</a>, more than 600 murals were painted between 2001-2004, but I don't see that in the data. When I look at the data, I see many more murals in recent years than I do in previous years, so there's a recency bias and we shouldn't over-interpret the temporal pattern.
+
 ## Getting links to mural pages
 
 First we need a way to fetch and scrape the artworks page. We'll start with the Artworks main page and grab all of the links on that page. Then we'll figure out how to deal with the other pages of results.

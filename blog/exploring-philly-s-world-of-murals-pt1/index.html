@@ -88,6 +88,10 @@ if (!doNotTrack) {
 <p>I started looking through the website, <a href="https://www.muralarts.org">Mural Arts Philadephia</a>, and to my surprise the murals had been carefully catalogued with locations and the dates when they were completed. Just the data I was looking for. I’d recently learned how to scrape websites, and I thought what a perfect specimen for web scraping this website would be.</p>
 <p><img src="/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/firefox_2019-09-22_12-57-22.png" /></p>
 <p>So I set about scraping the data to explore later. In this post, Part 1, I show how I scraped the data to obtain a tidy dataset containing mural locations and completion dates.</p>
+<div id="important-caveat" class="section level2">
+<h2>Important caveat</h2>
+<p>From the outset I should mention that the Mural Arts Philadephia website is not a complete database of all Philly murals. As I learned when scraping the website, only about 200 works are catalogued on the website, but Philadelphia apparently has <a href="https://www.npr.org/templates/story/story.php?storyId=129281658">over 3000 murals</a>. According to the <a href="https://en.wikipedia.org/wiki/Mural_Arts_Program">Wikipedia page for Mural Arts</a>, more than 600 murals were painted between 2001-2004, but I don’t see that in the data. When I look at the data, I see many more murals in recent years than I do in previous years, so there’s a recency bias and we shouldn’t over-interpret the temporal pattern.</p>
+</div>
 <div id="getting-links-to-mural-pages" class="section level2">
 <h2>Getting links to mural pages</h2>
 <p>First we need a way to fetch and scrape the artworks page. We’ll start with the Artworks main page and grab all of the links on that page. Then we’ll figure out how to deal with the other pages of results.</p>
