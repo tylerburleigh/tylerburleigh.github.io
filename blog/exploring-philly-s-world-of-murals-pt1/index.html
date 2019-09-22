@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exploring Philly&#39;s world of murals (pt1) | Tyler Burleigh</title>
+    <title>Exploring Philadelphia&#39;s world of murals (pt1) | Tyler Burleigh</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <style>
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 
 
 <div class="article-meta">
-	<span class="title">Exploring Philly&#39;s world of murals (pt1)</span>
+	<span class="title">Exploring Philadelphia&#39;s world of murals (pt1)</span>
 	
 		<div class="meta">September 22, 2019</div>
 	
@@ -83,10 +83,10 @@ if (!doNotTrack) {
 <center>
 <img src="/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/ct_mural.jpg">
 </center>
-<p>When I visited Philadelphia recently I was left with a lasting impression of the street art. It was really incredible, not just because it was beautiful art and culture to stand before and appreciate, but also because of what it meant about the city organizing around and celebrating this public good and trying to create more of it.</p>
-<p>I was curious about the history. When did it start? How are the murals distributed across the city and how does that distribution look across time? In other words, I had some questions that only the data could answer.</p>
-<p>I started looking through the website, <a href="https://www.muralarts.org">Mural Arts Philadephia</a>, and to my surprise the arts were all carefully catalogued when locations and completion dates. I recently learned how to scrape websites, and I thought what a perfect specimen for web scraping this website would be!</p>
-<p>So in the following I’ll show how I scraped this information.</p>
+<p>When I visited Philadelphia recently I was left with a lasting impression of the street art. I really liked how the murals added beauty to the neighborhoods, and how each mural was, it seemed, a statement about human virtue and resilience and empowerment. I was also struck by what it meant about the community of Philadelphia organizing around and celebrating this public good, and creating more of it. Philadelphia prides itself on being the “City of Murals”, and I can see why!</p>
+<p>I was curious about the history of the murals. When did they start? How are the murals distributed around the city and how does that distribution look across time? In other words, I had some questions that could only be answered by quantitative data.</p>
+<p>I started looking through the website, <a href="https://www.muralarts.org">Mural Arts Philadephia</a>, and to my surprise the murals had been carefully catalogued with locations and the dates when they were completed. Just the data I was looking for. I’d recently learned how to scrape websites, and I thought what a perfect specimen for web scraping this website would be.</p>
+<p>So I set about scraping the data to explore later. In this post, Part 1, I show how I scraped the data to obtain a tidy dataset containing mural locations and completion dates.</p>
 <div id="getting-links-to-mural-pages" class="section level2">
 <h2>Getting links to mural pages</h2>
 <p>First we need a way to fetch and scrape the artworks page. We’ll start with the Artworks main page and grab all of the links on that page. Then we’ll figure out how to deal with the other pages of results.</p>
