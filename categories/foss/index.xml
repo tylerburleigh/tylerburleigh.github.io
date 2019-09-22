@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FOSS on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/categories/foss/</link>
+    <description>Recent content in FOSS on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/categories/foss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducing pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>For the past three months I&amp;rsquo;ve been working on pyMTurkR: An R package to interface with MTurk’s Requester API. It&amp;rsquo;s a replacement for / successor to the now defunct MTurkR package. I&amp;rsquo;ve used MTurk as a source of convenience sample data for a lot of my social science research, and I like to use R for automating a lot of MTurk tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R support for the MTurk API go away, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
+    </item>
+    
+  </channel>
+</rss>

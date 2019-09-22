@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on A minimal Hugo website</title>
+    <link>https://example.com/categories/development/</link>
+    <description>Recent content in Development on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Tables Demo</title>
+      <link>https://example.com/post/markdown-tables-demo/</link>
+      <pubDate>Sat, 26 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/markdown-tables-demo/</guid>
+      <description>   Some Header Second Header     Content Cell Content Cell   Content Cell Content Cell    </description>
+    </item>
+    
+    <item>
+      <title>Markdown Header Test</title>
+      <link>https://example.com/post/markdown-header-test/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/markdown-header-test/</guid>
+      <description>This is an h1 header This is an h2 header This is an h3 header This is an h4 header This is an h5 header This is an h6 header This is normal text.</description>
+    </item>
+    
+    <item>
+      <title>Milano Has 230 Lines of Code</title>
+      <link>https://example.com/post/lines-of-code/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/lines-of-code/</guid>
+      <description>find . -not -path &#39;*/exampleSite/*&#39; \( -name &#39;*.html&#39; -o -name &#39;*.css&#39; \) | xargs wc -l   15 ./layouts/partials/paginator.html 20 ./layouts/partials/footer.html 0 ./layouts/partials/head_custom.html 0 ./layouts/partials/foot_custom.html 7 ./layouts/partials/css.html 21 ./layouts/partials/header.html 41 ./layouts/_default/single.html 21 ./layouts/_default/list.html 16 ./layouts/_default/terms.html 5 ./layouts/404.html 78 ./static/css/style.css 12 ./static/css/fonts.css 236 total  </description>
+    </item>
+    
+    <item>
+      <title>Fork, Branch, and Pull - A Concise Git Workflow</title>
+      <link>https://example.com/post/concise-git-workflow/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/concise-git-workflow/</guid>
+      <description>Here’s a super concise workflow for contributing to an existing Github project. In this guide, you will learn how to fork a project, branch a new feature or big fix, and contribute to the original project. Initial Steps: Fork, Clone, and Add Upstream Head over to the Github page you want to contribute to and click the “Fork” button. Copy the url to your forked repository and then from the command line:</description>
+    </item>
+    
+    <item>
+      <title>A Plain Markdown Post</title>
+      <link>https://example.com/post/markdown-vs-rmarkdown/</link>
+      <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
+      
+      <guid>https://example.com/post/markdown-vs-rmarkdown/</guid>
+      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
+1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
+ You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
+    </item>
+    
+    <item>
+      <title>About Hugo</title>
+      <link>https://example.com/post/introducing-hugo/</link>
+      <pubDate>Wed, 07 Sep 2016 14:48:17 -0700</pubDate>
+      
+      <guid>https://example.com/post/introducing-hugo/</guid>
+      <description>Make the Web Fun Again
+Introducing Hugo, a new idea around making website creation simple again. Hugo flexibly works with many formats and is ideal for blogs, docs, portfolios and much more. Hugo’s speed fosters creativity and makes building a website fun again.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/categories/software/</link>
+    <description>Recent content in Software on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I&amp;rsquo;m a bit of a nutrition nerd and I&amp;rsquo;ve been wanting to do some analysis of recipes that I cook a lot just because I&amp;rsquo;m curious about some of their properties. To get closer to that goal, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
+nutritionR does this by wrapping the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I&amp;rsquo;ve been working for a few months on this package called pyMTurkR. It&amp;rsquo;s an R package to interface with MTurk’s Requester API, replacing the now defunct MTurkR package. I&amp;rsquo;ve used MTurk for convenience sampling in many of my social science research, and when I use MTurk I like to use R to automate tasks like granting bonuses, approving assignments, etc. I didn&amp;rsquo;t want to see R lose support for the MTurk, so as soon as I heard the API on which MTurkR was based was going away and MTurkR would no longer work, I decided to roll up my sleeves and build a replacement.</description>
+    </item>
+    
+  </channel>
+</rss>
