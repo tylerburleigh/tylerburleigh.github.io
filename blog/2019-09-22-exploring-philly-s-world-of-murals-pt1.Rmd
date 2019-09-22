@@ -1,0 +1,200 @@
+---
+title: Exploring Philly's world of murals (pt1)
+author: ~
+date: '2019-09-22'
+slug: exploring-philly-s-world-of-murals-pt1
+categories: ['Analysis']
+tags: ['R', 'scraping', 'dataviz']
+disableComments: no
+---
+
+
+```{r, include = FALSE}
+library(tidyverse)
+load("philly_murals_data.RData")
+load("philly_art_links.RData")
+load("philly_all_links.RData")
+```
+
+<center>
+<img src="/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/ct_mural.jpg">
+</center>
+
+When I visited Philadelphia recently I was left with a lasting impression of the street art. It was really incredible, not just because it was beautiful art and culture to stand before and appreciate, but also because of what it meant about the city organizing around and celebrating this public good and trying to create more of it.
+
+I was curious about the history. When did it start? How are the murals distributed across the city and how does that distribution look across time? In other words, I had some questions that only the data could answer.
+
+I started looking through the website, <a href="https://www.muralarts.org">Mural Arts Philadephia</a>, and to my surprise the arts were all carefully catalogued when locations and completion dates. I recently learned how to scrape websites, and I thought what a perfect specimen for web scraping this website would be!
+
+So in the following I'll show how I scraped this information.
+
+## Getting links to mural pages
+
+First we need a way to fetch and scrape the artworks page. We'll start with the Artworks main page and grab all of the links on that page. Then we'll figure out how to deal with the other pages of results.
+
+```{r, eval = FALSE}
+url <- 'https://www.muralarts.org/artworks'
+site <- GET(url)
+```
+
+I know from inspecting the code using Firefox developer tools that the elements I'm interested in have a class of `.click-whole-area`. I'll extract all of these elements from the page I just fetched.
+
+```{r, eval = FALSE}
+arts <- html_nodes(content(site), ".click-whole-area")
+```
+
+Now let's see what results we're getting by extracting the `href` element from the XML/HTML. The objects I just extracted were `a` ("anchor") elements, and in HTML `href` is the URL property of that object. We'll inspect the first 5 items as a plausibility check.
+
+```{r, eval = FALSE}
+sapply(arts[1:5], function(x){
+  xml2::xml_attr(x, 'href')
+}) -> art_links
+```
+
+```{r}
+art_links
+```
+
+Looks good! There are some duplicates because multiple `.click-whole-area` elements exist for some of the works. That's fine, we can just deduplicate the list.
+
+```{r}
+unique(art_links)
+```
+
+Now to deal with pagination.
+
+## Dealing with pagination
+
+Going back to the Artworks page in my browser, I can see that the pagination follows a simple scheme where the page is given as a URL parameter, like this: `https://www.muralarts.org/artworks/?sf_paged=2`. 
+
+How will I know when I've reached the end? I can see that by jumping to a page that doesn't exist (like `https://www.muralarts.org/artworks/?sf_paged=200`) that the page will tell me if I've reached the end with a big "No results found." message. This element also has a distinct class called `searchandfilter-no-results`. This means that I can just iterate over pages until I see that message object, and then stop. Easy!
+
+## Function and loop: Putting it all together
+
+### The function
+
+So let's take the procedure that I followed above and abstract it to a function that can be repeated, using what we've learned about how to fetch, scrape, and deal with pagination. This function will take a page number as input, and then return a deduped list of links.
+
+```{r, eval = FALSE}
+arts_on_page <- function(page){
+  
+  # Set URL to fetch
+  url <- paste0('https://www.muralarts.org/artworks?sf_paged=', page)
+  
+  # Fetch URL
+  site <- GET(url)
+  
+  # Check that we're not at the end (look for the "no results" message)
+  if(length(html_nodes(content(site), ".searchandfilter-no-results")) == 0){
+    
+    # Get arts links on page just fetched
+    arts <- html_nodes(content(site), ".click-whole-area")
+    
+    # Extract all of the art links
+    sapply(arts, function(x){
+      xml2::xml_attr(x, 'href')
+    }) -> art_links
+    
+    # Dedupe the list
+    art_links <- unique(art_links)
+    
+    # Return the results
+    return(art_links)
+    
+  } else {
+    
+    # Otherwise, return a vector of length 0
+    return(c())
+    
+  }
+  
+  
+}
+```
+
+### The loop
+
+Now let's loop through all of the pages until we get a vector of length 0 returned, meaning we've reached the end.
+
+```{r, eval = FALSE}
+i <- 1
+results <- arts_on_page(i)
+all_links <- results
+while(length(results) > 0){
+  i <- i + 1
+  results <- arts_on_page(i)
+  all_links <- c(all_links, results)
+}
+
+```
+
+Now we should have all of the links in one vector. How many links are there?
+
+```{r}
+length(unique(all_links))
+```
+
+## Scraping the mural page content
+
+Great! Now we need to figure out how to scrape what we want from each one. I want to know the location, neighborhood, and completion date of each one. I'll just pull up a mural page and find the HTML elements that contain these details.
+
+It looks like these are contained in the following elements:
+
+- `.icon-location > .f-primary`
+- `.icon-neighborhood > .f-primary`
+- `.icon-calendar > .f-primary`
+
+Let's write another function and loop to extract these details from all of the links.
+
+## Function
+
+```{r, eval = FALSE}
+
+get_details <- function(link){
+  
+  # Get link
+  site <- GET(link)
+  
+  # If it doesn't have location data, skip
+  if(length(html_nodes(content(site), ".icon-location > .f-primary")) > 0){
+    
+    # Extract details into a data frame
+    details <- data.frame(
+      url = link,
+      location = location <- html_nodes(content(site), ".icon-location > .f-primary") %>%
+        xml2::xml_text(),
+      neighborhood = html_nodes(content(site), ".icon-neighborhood > .f-primary") %>%
+        xml2::xml_text(),
+      date = html_nodes(content(site), ".icon-calendar > .f-primary") %>%
+        xml2::xml_text() %>%
+        as.Date(., "%B %d, %Y") %>%
+        as.character()
+    )
+    
+    # Return
+    return(details) 
+  }
+}
+```
+
+## Loop
+
+```{r, eval = FALSE}
+details <- data.frame()
+for(link in unique(all_links)){
+  details %>% 
+    bind_rows(get_details(link)) -> details
+}
+```
+
+Now we have our data!
+
+You'll notice that we have fewer rows of data than we expect. This is because some of the artworks pages did not have the information we were looking for. For example, this page: https://www.muralarts.org/artworks/spring-arts-district does not have a location, neighborhood, or completion date. Only the pages that had the information we were looking for were saved to the dataframe. This is what we want.
+
+```{r}
+library(DT)
+datatable(details, rownames = FALSE,
+          options = list(pageLength = 5))
+```
+
+In the next part I'll start exploring the data!
