@@ -72,12 +72,59 @@ if (!doNotTrack) {
 	
 </div>
 
-<main><p><div class="github-card" data-github="tylerburleigh/nutritionR" data-width="400" data-height="" data-theme="default"></div>
-<script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script></p>
+<main><p><div style="display: flex; flex-direction: column; align-items: center;"></p>
 
-<p><br><br></p>
+<p><div class="github-card" data-github="tylerburleigh/nutritionR" data-width="400" data-height="" data-theme="default"></div>
+  <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script></p>
 
-<p>I&rsquo;m kind of a nerd when it comes to nutrition and I&rsquo;ve been wanting to do some nutrition analysis of recipes that I cook a lot just for curiosity&rsquo;s sake. So I wrote a package that can do nutritional analysis of foods and recipes expressed in natural language. It supports lots of different nutrients (macros, micros, vitamins, minerals, etc).</p>
+<p></div>
+<br></p>
+
+<p>I&rsquo;m a bit of a nutrition nerd and I&rsquo;ve been wanting to do some analysis of recipes that I cook a lot just because I&rsquo;m curious about some of their properties. To get closer to that goal, I decided to write a package, <code>nutritionR</code>, that can perform a nutritional analysis of foods and recipes expressed in natural language.</p>
+
+<p><code>nutritionR</code> does this by wrapping the <a href="https://www.nutritionix.com">Nutritionix</a> <a href="https://developer.nutritionix.com">API</a>. It requires a free developer API key or above.</p>
+
+<p>Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&rsquo;ve seen by supporting lots of micronutrients. Using <code>nutritionR</code>, it&rsquo;s possible to check 68 different nutrients, including the usual suspects: fats, carbs, protein, calories &ndash; but also things like choline, lycopene, vitamin d, vitamin b12, etc&hellip;</p>
+
+<p>I wrote it to support nutrition analysis of meals, where you can enter one or more ingredients or food items and then search for a specific nutrient like this:</p>
+
+<pre><code>obj &lt;- nutritionix_lookup(&quot;I had eggs and toast for breakfast, and a burrito for lunch.&quot;)
+nutrient(obj, &quot;calories&quot;)
+
+$name
+[1] &quot;calories&quot;
+
+$amount
+[1] 569.1
+
+$unit
+[1] &quot;kcal&quot;
+</code></pre>
+
+<p>It can also be used to analyze recipes, by entering a comma-separated ingredients list like this:</p>
+
+<pre><code>obj &lt;- nutritionix_lookup(&quot;2 cups red lentils, 
+                           2 tsps turmeric, 
+                           4 tbsp olive oil, 
+                           2 tsps cumin seeds, 
+                           1 small onion, 
+                           2 cloves garlic, 
+                           2 fresh green chiles, 
+                           1 tsp garam masala, 
+                           1 tsp ground coriander, 
+                           1 tbsp fresh ginger, 
+                           2 medium tomatoes&quot;)
+nutrient(obj, &quot;calories&quot;)
+
+$name
+[1] &quot;calories&quot;
+
+$amount
+[1] 2022.532
+
+$unit
+[1] &quot;kcal&quot;
+</code></pre>
 </main>
 
 
