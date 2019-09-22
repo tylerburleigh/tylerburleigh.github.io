@@ -26,6 +26,8 @@ I was curious about the history of the murals. When did they start? How are the 
 
 I started looking through the website, <a href="https://www.muralarts.org">Mural Arts Philadephia</a>, and to my surprise the murals had been carefully catalogued with locations and the dates when they were completed. Just the data I was looking for. I'd recently learned how to scrape websites, and I thought what a perfect specimen for web scraping this website would be.
 
+![](/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/firefox_2019-09-22_12-57-22.png)
+
 So I set about scraping the data to explore later. In this post, Part 1, I show how I scraped the data to obtain a tidy dataset containing mural locations and completion dates.
 
 ## Getting links to mural pages
@@ -36,6 +38,8 @@ First we need a way to fetch and scrape the artworks page. We'll start with the 
 url <- 'https://www.muralarts.org/artworks'
 site <- GET(url)
 ```
+
+![](/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/firefox_2019-09-22_13-00-46.png)
 
 I know from inspecting the code using Firefox developer tools that the elements I'm interested in have a class of `.click-whole-area`. I'll extract all of these elements from the page I just fetched.
 
@@ -139,6 +143,8 @@ length(unique(all_links))
 Great! Now we need to figure out how to scrape what we want from each one. I want to know the location, neighborhood, and completion date of each one. I'll just pull up a mural page and find the HTML elements that contain these details.
 
 It looks like these are contained in the following elements:
+
+![](/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/firefox_2019-09-22_12-59-20.png)
 
 - `.icon-location > .f-primary`
 - `.icon-neighborhood > .f-primary`
