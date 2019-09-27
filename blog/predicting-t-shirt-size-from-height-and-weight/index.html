@@ -73,23 +73,23 @@ if (!doNotTrack) {
 <main>
 
 
-<p>Today I was given a task that sounded so straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
-<p>It was so straight-forward that I was <strong>sure</strong> there <strong>must</strong> be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something! To my surprise, there wasn’t any, not that I could find anyway.</p>
-<p>It seems like this is a problem that hasn’t received a lot of attention.</p>
-<p>So I did what a data scientist does: I set out to build my own predictive algorithm.</p>
+<p>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
+<p>In fact, it seemed <em>so straight-forward</em> that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something! To my surprise, there wasn’t any, not that I could find anyway.</p>
+<p>I guess this is a problem that hasn’t received a lot of attention. Or at least, it’s not the sort of problem that someone in the open source / open science community has tackled.</p>
+<p>So I set out to build my own predictive algorithm.</p>
 <div id="the-model-and-the-data" class="section level1">
 <h1>The model and the data</h1>
 <p>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</p>
 <p>I knew that the only information I’d have to predict shirt sizes from was: gender, height and weight. Sometimes I’d have body mass index (BMI) instead of height and weight.</p>
 <p>I also knew that I’d be sending “unisex” t-shirts. I’ve done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem – enter the “size chart”. Okay, so now I’d found a measurement that could be used to classify shirt sizes: <strong>chest size</strong>.</p>
-<p><img src="gildan_unisex_size_chart.png" /></p>
+<p><img src="/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png" /></p>
 <p>So now I just had to find a way to get from gender, height, and weight to chest size.</p>
 <p>I know from experience that there are several large public datasets that contain health and health-related measurements. One of these is the <a href="https://www.cdc.gov/nchs/nhanes">The National Health and Nutrition Examination Survey (NHANES)</a>, which is run by the CDC. I decided to poke around there and see what I could find. I found the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/default.aspx">variable search tool</a> and started keying in some of these variables: “height”, “weight”, “chest”, “bmi”, “gender”.</p>
 <p>Of course they would have gender, height, weight and BMI. It would be a pretty odd health and nutrition study if they didn’t have basic demographics and measurements. But chest measurement? The context seemed a bit odd. What does chest circumference have to do with health and nutrition?</p>
 <p>Maybe chest circumference is important if we’re talking about breathing? Eureka! NHANES does have chest measurements for inhalation and exhalation as part of the arthritis datasets!</p>
 <p>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009">2009-2010 cohort</a>, so I downloaded the dataset files for that cohort.</p>
-<p><img src="nhanes_chest.png" /></p>
-<p>Now my model was complete. My model would be a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data I would then the predicted chest circumference to determine shirt size.</p>
+<p><img src="/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png" /></p>
+<p>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</p>
 </div>
 <div id="data-wrangling" class="section level1">
 <h1>Data wrangling</h1>
@@ -97,14 +97,12 @@ if (!doNotTrack) {
 <h2>Read in the data</h2>
 <p>Of course the data had to be in a SAS format. 🙄</p>
 <p>Luckily there’s an R package for reading SAS data files.</p>
-<pre class="r"><code>library(SASxport)</code></pre>
 <pre><code>## Warning: package &#39;SASxport&#39; was built under R version 3.6.1</code></pre>
 <pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
 ##   method         from 
 ##   [.quosures     rlang
 ##   c.quosures     rlang
 ##   print.quosures rlang</code></pre>
-<pre class="r"><code>library(tidyverse)</code></pre>
 <pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.6.1</code></pre>
 <pre><code>## -- Attaching packages ---------------------------------------------------- tidyverse 1.2.1 --</code></pre>
 <pre><code>## v ggplot2 3.1.1     v purrr   0.3.2
@@ -114,15 +112,11 @@ if (!doNotTrack) {
 <pre><code>## -- Conflicts ------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(MASS)</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;MASS&#39;</code></pre>
 <pre><code>## The following object is masked from &#39;package:dplyr&#39;:
 ## 
 ##     select</code></pre>
-<pre class="r"><code>a &lt;- read.xport(&quot;ARX_F.XPT&quot;) # Arthritis data
-b &lt;- read.xport(&quot;BMX_F.XPT&quot;) # Body measurements
-d &lt;- read.xport(&quot;DEMO_F.XPT&quot;) # Demographics</code></pre>
 </div>
 </div>
 <div id="data-wrangling-1" class="section level1">
@@ -138,12 +132,7 @@ d &lt;- read.xport(&quot;DEMO_F.XPT&quot;) # Demographics</code></pre>
 </ul>
 <p>I’m using the inhale chest circumference because I found in some exploratory analyses (not reported here) that it has a stronger correlation to the other measurements. I guess the exhale circumference was more noisy for some reason?</p>
 <pre class="r"><code>a %&gt;% dplyr::select(id = SEQN, chest_in_cm = ARXCCIN) -&gt; chest_measures
-
-b %&gt;% dplyr::select(id = SEQN, 
-                    weight_kg = BMXWT, 
-                    height_cm = BMXHT,
-                    bmi = BMXBMI) -&gt; height_weight
-
+b %&gt;% dplyr::select(id = SEQN, weight_kg = BMXWT, height_cm = BMXHT, bmi = BMXBMI) -&gt; height_weight
 d %&gt;% dplyr::select(id = SEQN, gender = DMDHRGND) %&gt;%
   mutate(gender = case_when(gender == 1 ~ &quot;M&quot;, TRUE ~ &quot;F&quot;)) -&gt; gender
 
@@ -177,7 +166,8 @@ chest_measures %&gt;%
 </div>
 <div id="model-building" class="section level1">
 <h1>Model building</h1>
-<p>I decided to build two models. Why? Sometimes I know a person’s height and weight but not their BMI, and other times I know their BMI but not their height and weight. Although I could take all of the heights and weights and convert them into BMIs, I’m guessing this leads to some loss of information. Plus, the correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it’s better to use height and weight when it’s available, but BMI as a fallback.</p>
+<p>I decided to build two models because sometimes I know a person’s height and weight but not their BMI, and other times I know their BMI but not their height and weight.</p>
+<p>Although I could take all of the heights and weights and convert them into BMIs, I’m guessing this could lead a loss of information. The correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it might be better to use height and weight when it’s available, but use BMI as a fallback when height and weight are not available.</p>
 <div id="height-and-weight-model" class="section level2">
 <h2>Height and weight model</h2>
 <p>To build a model, I’ll run a stepwise linear regression to determine the model of best fit. I’ll enter height, weight, and gender as predictors and allow interaction terms. I’ll use AIC (Akaike’s Information Criterion) for model selection, since it penalizes models with added complexity and I want a parsimonious model that doesn’t overfit the data.</p>
@@ -242,7 +232,8 @@ step.model &lt;- stepAIC(mod, direction = &quot;both&quot;, trace = TRUE, scope 
 ## Residual standard error: 5.001 on 4604 degrees of freedom
 ## Multiple R-squared:  0.8152, Adjusted R-squared:  0.815 
 ## F-statistic:  4061 on 5 and 4604 DF,  p-value: &lt; 2.2e-16</code></pre>
-<pre class="r"><code>height_weight_model &lt;- step.model</code></pre>
+<pre class="r"><code># Save the model for later
+height_weight_model &lt;- step.model</code></pre>
 </div>
 <div id="body-mass-index-bmi-model" class="section level2">
 <h2>Body Mass Index (BMI) model</h2>
@@ -287,7 +278,8 @@ step.model &lt;- stepAIC(mod, direction = &quot;both&quot;, trace = TRUE, scope 
 ## Residual standard error: 7.021 on 4606 degrees of freedom
 ## Multiple R-squared:  0.6355, Adjusted R-squared:  0.6353 
 ## F-statistic:  2677 on 3 and 4606 DF,  p-value: &lt; 2.2e-16</code></pre>
-<pre class="r"><code>bmi_model &lt;- step.model</code></pre>
+<pre class="r"><code># Save the model for later
+bmi_model &lt;- step.model</code></pre>
 </div>
 </div>
 <div id="predicting-chest-size-from-height-weight-bmi-and-gender" class="section level1">
@@ -323,7 +315,7 @@ predict(bmi_model, input) * 0.393701</code></pre>
 <div id="chest-size-to-shirt-size" class="section level2">
 <h2>Chest size to shirt size</h2>
 <p>Finally, I’ll need to take the chest size prediction and convert it to a shirt size. Remember the size chart?</p>
-<p><img src="Gildan_Unisex_Sizing_Chart.png" /></p>
+<p><img src="/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png" /></p>
 <p>For some reason the chart leaves out “XS” and the ranges lso don’t provide full coverage of the possible chest size values (34-36" and then 38-40"???). So I’ll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!</p>
 <pre class="r"><code>input &lt;- data.frame(height_cm = 168, weight_kg = 83, gender = &quot;F&quot;)
 

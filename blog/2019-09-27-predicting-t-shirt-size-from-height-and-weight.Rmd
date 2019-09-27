@@ -8,13 +8,13 @@ tags: ['R', 'regression', 'shirts', 'body measurements']
 disableComments: no
 ---
 
-Today I was given a task that sounded so straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender? 
+Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender? 
 
-It was so straight-forward that I was **sure** there **must** be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post -- there had to be something! To my surprise, there wasn't any, not that I could find anyway. 
+In fact, it seemed *so straight-forward* that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post -- there had to be something! To my surprise, there wasn't any, not that I could find anyway. 
 
-It seems like this is a problem that hasn't received a lot of attention.
+I guess this is a problem that hasn't received a lot of attention. Or at least, it's not the sort of problem that someone in the open source / open science community has tackled.
 
-So I did what a data scientist does: I set out to build my own predictive algorithm. 
+So I set out to build my own predictive algorithm. 
 
 # The model and the data
 
@@ -24,7 +24,7 @@ I knew that the only information I'd have to predict shirt sizes from was: gende
 
 I also knew that I'd be sending "unisex" t-shirts. I've done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem -- enter the "size chart". Okay, so now I'd found a measurement that could be used to classify shirt sizes: **chest size**.
 
-![](gildan_unisex_size_chart.png)
+![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png)
 
 So now I just had to find a way to get from gender, height, and weight to chest size.
 
@@ -36,9 +36,9 @@ Maybe chest circumference is important if we're talking about breathing? Eureka!
 
 The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the [2009-2010 cohort](https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&CycleBeginYear=2009), so I downloaded the dataset files for that cohort.
 
-![](nhanes_chest.png)
+![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png)
 
-Now my model was complete. My model would be a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data I would then the predicted chest circumference to determine shirt size.
+Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.
 
 # Data wrangling
 
@@ -48,7 +48,7 @@ Of course the data had to be in a SAS format. 🙄
 
 Luckily there's an R package for reading SAS data files.
 
-```{r}
+```{r, echo = FALSE}
 library(SASxport)
 library(tidyverse)
 library(MASS)
@@ -73,12 +73,7 @@ I'm using the inhale chest circumference because I found in some exploratory ana
 
 ```{r}
 a %>% dplyr::select(id = SEQN, chest_in_cm = ARXCCIN) -> chest_measures
-
-b %>% dplyr::select(id = SEQN, 
-                    weight_kg = BMXWT, 
-                    height_cm = BMXHT,
-                    bmi = BMXBMI) -> height_weight
-
+b %>% dplyr::select(id = SEQN, weight_kg = BMXWT, height_cm = BMXHT, bmi = BMXBMI) -> height_weight
 d %>% dplyr::select(id = SEQN, gender = DMDHRGND) %>%
   mutate(gender = case_when(gender == 1 ~ "M", TRUE ~ "F")) -> gender
 
@@ -110,7 +105,9 @@ df %>%
 
 # Model building
 
-I decided to build two models. Why? Sometimes I know a person's height and weight but not their BMI, and other times I know their BMI but not their height and weight. Although I could take all of the heights and weights and convert them into BMIs, I'm guessing this leads to some loss of information. Plus, the correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it's better to use height and weight when it's available, but BMI as a fallback.
+I decided to build two models because sometimes I know a person's height and weight but not their BMI, and other times I know their BMI but not their height and weight. 
+
+Although I could take all of the heights and weights and convert them into BMIs, I'm guessing this could lead a loss of information. The correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it might be better to use height and weight when it's available, but use BMI as a fallback when height and weight are not available.
 
 ## Height and weight model
 
@@ -123,6 +120,8 @@ lm(data = subset(df, select= c(chest_in_cm, height_cm, weight_kg, gender)),
    chest_in_cm ~ .) -> mod
 step.model <- stepAIC(mod, direction = "both", trace = TRUE, scope = . ~ .^2)
 summary(step.model)
+
+# Save the model for later
 height_weight_model <- step.model
 ```
 
@@ -134,6 +133,8 @@ Now I'll do the same with BMI and gender.
 lm(data = subset(df, select= c(chest_in_cm, bmi, gender)), chest_in_cm ~ .) -> mod
 step.model <- stepAIC(mod, direction = "both", trace = TRUE, scope = . ~ .^2)
 summary(step.model)
+
+# Save the model for later
 bmi_model <- step.model
 ```
 
@@ -176,7 +177,7 @@ predict(bmi_model, input) * 0.393701
 
 Finally, I'll need to take the chest size prediction and convert it to a shirt size. Remember the size chart?
 
-![](Gildan_Unisex_Sizing_Chart.png)
+![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png)
 
 For some reason the chart leaves out "XS" and the ranges lso don't provide full coverage of the possible chest size values (34-36" and then 38-40"???). So I'll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!
 
