@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Predicting t-shirt size from height and weight | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writings</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Predicting t-shirt size from height and weight</span>
+	
+		<div class="meta">September 27, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/prediction'>Prediction</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/r'>R</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/regression'>regression</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/shirts'>shirts</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/body-measurements'>body measurements</a></kbd>
+	
+</div>
+
+<main>
+
+
+<p>Today I was given a task that sounded so straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
+<p>It was so straight-forward that I was <strong>sure</strong> there <strong>must</strong> be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something! To my surprise, there wasn’t any, not that I could find anyway.</p>
+<p>It seems like this is a problem that hasn’t received a lot of attention.</p>
+<p>So I did what a data scientist does: I set out to build my own predictive algorithm.</p>
+<div id="the-model-and-the-data" class="section level1">
+<h1>The model and the data</h1>
+<p>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</p>
+<p>I knew that the only information I’d have to predict shirt sizes from was: gender, height and weight. Sometimes I’d have body mass index (BMI) instead of height and weight.</p>
+<p>I also knew that I’d be sending “unisex” t-shirts. I’ve done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem – enter the “size chart”. Okay, so now I’d found a measurement that could be used to classify shirt sizes: <strong>chest size</strong>.</p>
+<p><img src="gildan_unisex_size_chart.png" /></p>
+<p>So now I just had to find a way to get from gender, height, and weight to chest size.</p>
+<p>I know from experience that there are several large public datasets that contain health and health-related measurements. One of these is the <a href="https://www.cdc.gov/nchs/nhanes">The National Health and Nutrition Examination Survey (NHANES)</a>, which is run by the CDC. I decided to poke around there and see what I could find. I found the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/default.aspx">variable search tool</a> and started keying in some of these variables: “height”, “weight”, “chest”, “bmi”, “gender”.</p>
+<p>Of course they would have gender, height, weight and BMI. It would be a pretty odd health and nutrition study if they didn’t have basic demographics and measurements. But chest measurement? The context seemed a bit odd. What does chest circumference have to do with health and nutrition?</p>
+<p>Maybe chest circumference is important if we’re talking about breathing? Eureka! NHANES does have chest measurements for inhalation and exhalation as part of the arthritis datasets!</p>
+<p>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009">2009-2010 cohort</a>, so I downloaded the dataset files for that cohort.</p>
+<p><img src="nhanes_chest.png" /></p>
+<p>Now my model was complete. My model would be a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data I would then the predicted chest circumference to determine shirt size.</p>
+</div>
+<div id="data-wrangling" class="section level1">
+<h1>Data wrangling</h1>
+<div id="read-in-the-data" class="section level2">
+<h2>Read in the data</h2>
+<p>Of course the data had to be in a SAS format. 🙄</p>
+<p>Luckily there’s an R package for reading SAS data files.</p>
+<pre class="r"><code>library(SASxport)</code></pre>
+<pre><code>## Warning: package &#39;SASxport&#39; was built under R version 3.6.1</code></pre>
+<pre><code>## Registered S3 methods overwritten by &#39;ggplot2&#39;:
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; was built under R version 3.6.1</code></pre>
+<pre><code>## -- Attaching packages ---------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## v ggplot2 3.1.1     v purrr   0.3.2
+## v tibble  2.1.3     v dplyr   0.8.1
+## v tidyr   0.8.3     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.4.0</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(MASS)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<pre class="r"><code>a &lt;- read.xport(&quot;ARX_F.XPT&quot;) # Arthritis data
+b &lt;- read.xport(&quot;BMX_F.XPT&quot;) # Body measurements
+d &lt;- read.xport(&quot;DEMO_F.XPT&quot;) # Demographics</code></pre>
+</div>
+</div>
+<div id="data-wrangling-1" class="section level1">
+<h1>Data wrangling</h1>
+<p>These are the variables I’ll pull out from the different dataframes.</p>
+<ul>
+<li>SEQN - Participant ID</li>
+<li>ARXCCIN - Inhale chest circumference in CM</li>
+<li>BMXWT - Weight in KG</li>
+<li>BMXHT - Height in CM</li>
+<li>BMXBMI - Body Mass Index (BMI)</li>
+<li>DMDHRGND - Gender of participant (1 = Male, 2 = Female)</li>
+</ul>
+<p>I’m using the inhale chest circumference because I found in some exploratory analyses (not reported here) that it has a stronger correlation to the other measurements. I guess the exhale circumference was more noisy for some reason?</p>
+<pre class="r"><code>a %&gt;% dplyr::select(id = SEQN, chest_in_cm = ARXCCIN) -&gt; chest_measures
+
+b %&gt;% dplyr::select(id = SEQN, 
+                    weight_kg = BMXWT, 
+                    height_cm = BMXHT,
+                    bmi = BMXBMI) -&gt; height_weight
+
+d %&gt;% dplyr::select(id = SEQN, gender = DMDHRGND) %&gt;%
+  mutate(gender = case_when(gender == 1 ~ &quot;M&quot;, TRUE ~ &quot;F&quot;)) -&gt; gender
+
+# Join datasets and select only the rows that have all measurements
+chest_measures %&gt;%
+  left_join(., height_weight, by = c(&#39;id&#39;)) %&gt;%
+  left_join(., gender, by = c(&#39;id&#39;)) %&gt;%
+  filter(!is.na(chest_in_cm),
+         !is.na(height_cm), 
+         !is.na(weight_kg),
+         !is.na(gender), 
+         !is.na(bmi)) -&gt; df</code></pre>
+</div>
+<div id="correlations" class="section level1">
+<h1>Correlations</h1>
+<p>I’ll check some basic correlations and descriptives. I see that men have larger chests than women, on average. And importantly, BMI does not correlate with chest size as well as weight.</p>
+<pre class="r"><code>cor(df$weight_kg, df$chest_in_cm)</code></pre>
+<pre><code>## [1] 0.9006851</code></pre>
+<pre class="r"><code>cor(df$height_cm, df$chest_in_cm)</code></pre>
+<pre><code>## [1] 0.4174028</code></pre>
+<pre class="r"><code>cor(df$bmi, df$chest_in_cm)</code></pre>
+<pre><code>## [1] 0.7850526</code></pre>
+<pre class="r"><code>df %&gt;%
+  group_by(gender) %&gt;%
+  summarize(mean = mean(chest_in_cm))</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   gender  mean
+##   &lt;chr&gt;  &lt;dbl&gt;
+## 1 F       95.1
+## 2 M       98.0</code></pre>
+</div>
+<div id="model-building" class="section level1">
+<h1>Model building</h1>
+<p>I decided to build two models. Why? Sometimes I know a person’s height and weight but not their BMI, and other times I know their BMI but not their height and weight. Although I could take all of the heights and weights and convert them into BMIs, I’m guessing this leads to some loss of information. Plus, the correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it’s better to use height and weight when it’s available, but BMI as a fallback.</p>
+<div id="height-and-weight-model" class="section level2">
+<h2>Height and weight model</h2>
+<p>To build a model, I’ll run a stepwise linear regression to determine the model of best fit. I’ll enter height, weight, and gender as predictors and allow interaction terms. I’ll use AIC (Akaike’s Information Criterion) for model selection, since it penalizes models with added complexity and I want a parsimonious model that doesn’t overfit the data.</p>
+<p>I see that the best model includes all terms, including <code>weight*height</code> and <code>weight*gender</code> interaction terms.</p>
+<pre class="r"><code>lm(data = subset(df, select= c(chest_in_cm, height_cm, weight_kg, gender)), 
+   chest_in_cm ~ .) -&gt; mod
+step.model &lt;- stepAIC(mod, direction = &quot;both&quot;, trace = TRUE, scope = . ~ .^2)</code></pre>
+<pre><code>## Start:  AIC=14857.43
+## chest_in_cm ~ height_cm + weight_kg + gender
+## 
+##                       Df Sum of Sq    RSS   AIC
+## + height_cm:weight_kg  1       220 115291 14851
+## - height_cm            1         2 115513 14856
+## + weight_kg:gender     1        89 115421 14856
+## &lt;none&gt;                             115510 14857
+## + height_cm:gender     1         7 115503 14859
+## - gender               1      2052 117563 14937
+## - weight_kg            1    397116 512627 21725
+## 
+## Step:  AIC=14850.64
+## chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg
+## 
+##                       Df Sum of Sq    RSS   AIC
+## + weight_kg:gender     1    144.02 115147 14847
+## &lt;none&gt;                             115291 14851
+## + height_cm:gender     1     13.37 115277 14852
+## - height_cm:weight_kg  1    219.87 115510 14857
+## - gender               1   2064.63 117355 14930
+## 
+## Step:  AIC=14846.88
+## chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg + 
+##     weight_kg:gender
+## 
+##                       Df Sum of Sq    RSS   AIC
+## &lt;none&gt;                             115147 14847
+## + height_cm:gender     1     3.499 115143 14849
+## - weight_kg:gender     1   144.020 115291 14851
+## - height_cm:weight_kg  1   274.743 115421 14856</code></pre>
+<pre class="r"><code>summary(step.model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg + 
+##     weight_kg:gender, data = subset(df, select = c(chest_in_cm, 
+##     height_cm, weight_kg, gender)))
+## 
+## Residuals:
+## Chest circumference, inspiration (cm) 
+##      Min       1Q   Median       3Q      Max 
+## -21.3179  -3.2347   0.2087   3.4462  15.4911 
+## 
+## Coefficients:
+##                      Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)         41.491415   4.708485   8.812  &lt; 2e-16 ***
+## height_cm            0.086786   0.028263   3.071 0.002148 ** 
+## weight_kg            0.666925   0.055507  12.015  &lt; 2e-16 ***
+## genderM             -0.030639   0.599462  -0.051 0.959239    
+## height_cm:weight_kg -0.001087   0.000328  -3.314 0.000925 ***
+## weight_kg:genderM    0.016955   0.007065   2.400 0.016449 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.001 on 4604 degrees of freedom
+## Multiple R-squared:  0.8152, Adjusted R-squared:  0.815 
+## F-statistic:  4061 on 5 and 4604 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>height_weight_model &lt;- step.model</code></pre>
+</div>
+<div id="body-mass-index-bmi-model" class="section level2">
+<h2>Body Mass Index (BMI) model</h2>
+<p>Now I’ll do the same with BMI and gender.</p>
+<pre class="r"><code>lm(data = subset(df, select= c(chest_in_cm, bmi, gender)), chest_in_cm ~ .) -&gt; mod
+step.model &lt;- stepAIC(mod, direction = &quot;both&quot;, trace = TRUE, scope = . ~ .^2)</code></pre>
+<pre><code>## Start:  AIC=17986.13
+## chest_in_cm ~ bmi + gender
+## 
+##              Df Sum of Sq    RSS   AIC
+## + bmi:gender  1       725 227076 17973
+## &lt;none&gt;                    227801 17986
+## - gender      1     11229 239030 18206
+## - bmi         1    385144 612946 22547
+## 
+## Step:  AIC=17973.44
+## chest_in_cm ~ bmi + gender + bmi:gender
+## 
+##              Df Sum of Sq    RSS   AIC
+## &lt;none&gt;                    227076 17973
+## - bmi:gender  1    724.73 227801 17986</code></pre>
+<pre class="r"><code>summary(step.model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = chest_in_cm ~ bmi + gender + bmi:gender, data = subset(df, 
+##     select = c(chest_in_cm, bmi, gender)))
+## 
+## Residuals:
+## Chest circumference, inspiration (cm) 
+##      Min       1Q   Median       3Q      Max 
+## -26.7682  -5.0630   0.2613   5.2463  23.2969 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 56.77733    0.66042  85.971  &lt; 2e-16 ***
+## bmi          1.31235    0.02203  59.573  &lt; 2e-16 ***
+## genderM     -0.34122    0.92789  -0.368 0.713084    
+## bmi:genderM  0.11906    0.03105   3.834 0.000128 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 7.021 on 4606 degrees of freedom
+## Multiple R-squared:  0.6355, Adjusted R-squared:  0.6353 
+## F-statistic:  2677 on 3 and 4606 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>bmi_model &lt;- step.model</code></pre>
+</div>
+</div>
+<div id="predicting-chest-size-from-height-weight-bmi-and-gender" class="section level1">
+<h1>Predicting chest size from height, weight, BMI, and gender</h1>
+<p>Now that I have the models, I can use them to generate chest size predictions.</p>
+<div id="predict-chest-size-given-height-weight-and-gender" class="section level2">
+<h2>Predict chest size given height, weight, and gender</h2>
+<p>Next we’ll take the final model selected from the above procedure and use it to predict chest circumference, in inches, given height, weight, and gender.</p>
+<p>To test the model, I’ll use average values.</p>
+<pre class="r"><code>mean(df$weight_kg)</code></pre>
+<pre><code>## [1] 82.48026</code></pre>
+<pre class="r"><code>mean(df$height_cm)</code></pre>
+<pre><code>## [1] 168.0299</code></pre>
+<pre class="r"><code>mean(df$bmi)</code></pre>
+<pre><code>## [1] 29.12334</code></pre>
+<div id="height-weight-and-gender" class="section level3">
+<h3>Height, weight, and gender</h3>
+<pre class="r"><code>input &lt;- data.frame(height_cm = 168, weight_kg = 83, gender = &quot;F&quot;)
+
+# 1 cm = 0.393701 inches
+predict(height_weight_model, input) * 0.393701</code></pre>
+<pre><code>##        1 
+## 37.90109</code></pre>
+</div>
+<div id="bmi-and-gender" class="section level3">
+<h3>BMI and gender</h3>
+<pre class="r"><code>input &lt;- data.frame(bmi = 29, gender = &quot;F&quot;)
+predict(bmi_model, input) * 0.393701</code></pre>
+<pre><code>##        1 
+## 37.33684</code></pre>
+</div>
+</div>
+<div id="chest-size-to-shirt-size" class="section level2">
+<h2>Chest size to shirt size</h2>
+<p>Finally, I’ll need to take the chest size prediction and convert it to a shirt size. Remember the size chart?</p>
+<p><img src="Gildan_Unisex_Sizing_Chart.png" /></p>
+<p>For some reason the chart leaves out “XS” and the ranges lso don’t provide full coverage of the possible chest size values (34-36" and then 38-40"???). So I’ll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!</p>
+<pre class="r"><code>input &lt;- data.frame(height_cm = 168, weight_kg = 83, gender = &quot;F&quot;)
+
+data.frame(chest = predict(height_weight_model,input)[[1]] * 0.393701) %&gt;%
+  mutate(shirt_size = case_when(
+          chest &lt; 32 ~ &quot;XS&quot;,
+          between(chest, 32, 36) ~ &quot;S&quot;,
+          between(chest, 36, 40) ~ &quot;M&quot;,
+          between(chest, 40, 44) ~ &quot;L&quot;,
+          between(chest, 44, 48) ~ &quot;XL&quot;,
+          between(chest, 48, 52) ~ &quot;2XL&quot;,
+          between(chest, 52, 56) ~ &quot;3XL&quot;,
+          between(chest, 56, 64) ~ &quot;4XL&quot;,
+          chest &gt; 64 ~ &quot;5XL&quot;
+    )
+)</code></pre>
+<pre><code>##      chest shirt_size
+## 1 37.90109          M</code></pre>
+</div>
+</div>
+<div id="wrapping-it-up-in-a-function" class="section level1">
+<h1>Wrapping it up in a function</h1>
+<p>And finally, I can put it in a function that will select the model to use for me, based on the information it’s been given.</p>
+<pre class="r"><code>predict_shirt_size &lt;- function(height_cm, weight_kg, bmi, gender){
+  
+  if(!is.na(height_cm) &amp; !is.na(weight_kg)){
+    input &lt;- data.frame(height_cm = height_cm, weight_kg = weight_kg, gender = gender)
+    chest &lt;- predict(height_weight_model, input)[[1]] * 0.393701
+  } else if(!is.na(bmi)){
+    input &lt;- data.frame(bmi = bmi, gender = gender)
+    chest &lt;- predict(bmi_model, input)[[1]] * 0.393701
+  } else {
+    # Just in case height, weight, and BMI are all missing
+    chest &lt;- -99 # A value that gets ignored below
+  }
+  
+  shirt_size = case_when(
+              between(chest, 0, 32) ~ &quot;XS&quot;,
+              between(chest, 32, 36) ~ &quot;S&quot;,
+              between(chest, 36, 40) ~ &quot;M&quot;,
+              between(chest, 40, 44) ~ &quot;L&quot;,
+              between(chest, 44, 48) ~ &quot;XL&quot;,
+              between(chest, 48, 52) ~ &quot;2XL&quot;,
+              between(chest, 52, 56) ~ &quot;3XL&quot;,
+              between(chest, 56, 64) ~ &quot;4XL&quot;,
+              chest &gt; 64 ~ &quot;5XL&quot;,
+              
+              # Defaults in case height, weight, BMI are missing
+              # but gender is not
+              gender == &quot;F&quot; ~ &quot;M&quot;,
+              gender == &quot;M&quot; ~ &quot;L&quot;,
+              
+              # Last resort
+              TRUE ~ &quot;L&quot;
+            )
+  
+  return(shirt_size)
+}</code></pre>
+<pre class="r"><code>predict_shirt_size(height_cm = 168, weight_kg = 83, gender = &quot;F&quot;)</code></pre>
+<pre><code>## [1] &quot;M&quot;</code></pre>
+</div>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/exploring-philly-s-world-of-murals-pt1/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Exploring Philadelphia&#39;s world of murals in data (pt1)
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/22</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Analysis</strong>
+	</span> - 
+	<a href="/blog/exploring-philly-s-world-of-murals-pt1/">Exploring Philadelphia&#39;s world of murals in data (pt1)</a>
+</li>
+
+	
+		<li>
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/21</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Software</strong>
+	</span> - 
+	<a href="/blog/nutritionr-nlp-nutrition-analysis-in-r/">nutritionR: NLP nutrition analysis in R</a>
+</li>
+
+	
+		<li>
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/14</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Analysis</strong>
+	</span> - 
+	<a href="/blog/yadsjma/">Yet Another Data Science Job Market Analysis</a>
+</li>
+
+	
+		<li>
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/13</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Vignette</strong>
+	</span> - 
+	<a href="/blog/mturk-qualification-tests/">pyMTurkR (vignette): A HIT with a Qualification Test</a>
+</li>
+
+	
+		<li>
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/05</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Software</strong>
+	</span> - 
+	<a href="/blog/introducing-pymturkr/">pyMTurkR: An R package for MTurk Requesters</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh/"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh/"><i class="fa fa-twitter"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
