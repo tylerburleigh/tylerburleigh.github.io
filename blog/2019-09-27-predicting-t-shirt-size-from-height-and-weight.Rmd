@@ -48,7 +48,17 @@ Of course the data had to be in a SAS format. 🙄
 
 Luckily there's an R package for reading SAS data files.
 
-```{r, echo = FALSE}
+```
+library(SASxport)
+library(tidyverse)
+library(MASS)
+
+a <- read.xport("ARX_F.XPT") # Arthritis data
+b <- read.xport("BMX_F.XPT") # Body measurements
+d <- read.xport("DEMO_F.XPT") # Demographics
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(SASxport)
 library(tidyverse)
 library(MASS)
