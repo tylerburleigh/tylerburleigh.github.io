@@ -6,6 +6,7 @@ slug: predicting-t-shirt-size-from-height-and-weight
 categories: ['Prediction']
 tags: ['R', 'regression', 'shirts', 'body measurements']
 disableComments: no
+bestof: yes
 ---
 
 Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender? 

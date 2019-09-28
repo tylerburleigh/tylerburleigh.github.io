@@ -143,3 +143,10 @@ h5{
 h6{
     font-size:.8rem
 }
+
+
+.asterisk {
+	margin-left: -16px;
+	color:red;
+	background-color:white;
+}
