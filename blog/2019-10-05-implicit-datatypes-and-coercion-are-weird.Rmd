@@ -15,7 +15,7 @@ Error in as.POSIXlt.character(x, tz, ...) :
   character string is not in a standard unambiguous format
 ```
 
-In the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe's columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.
+In the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
 
 ## R dataframes are flexible
 
@@ -64,9 +64,9 @@ for(i in 1:3){
 df
 ```
 
-Importantly, the dataframe is flexible. Even though the columns were initialized to have a `logical` type (because the matrix contained NA), when the dataframe is initialized it doesn't yet contain any data, so we're not confined to putting only `logical` data into those columns.
+Importantly, the dataframe is flexible. Even though the columns were initialized to have a `logical` type (because the matrix contained `NA`), when the dataframe is initialized it doesn't yet contain any data, so we're not confined to putting only `logical` data into those columns.
 
-If we put a different type of data into one of these columns, R knows that it should probably change the column's data type to match whatever we put into it. For example, if we `rbind` the empty dataframe to one containing a name of `character` type and an age of `double` type, the name and age columns will change to assume these types accordingly.
+If we put a different type of data into one of these columns, R knows that it should change the column's data type to match whatever we put into it. For example, if we `rbind` the empty dataframe to one containing a name of `character` type and an age of `double` type, the name and age columns will change to assume these types accordingly.
 
 ```{r}
 colnames <- c('name', 'age')
@@ -135,7 +135,7 @@ df_final
 typeof(df_final$time_filled)
 ```
 
-But what happens if each of the orders doesn't contain the same type of data? For example, what if the fulfillment time (`time_fulfilled`) is `NA` when the order has not yet been filled? If the first order that we put into the dataframe has the data type we're expecting -- a `POSIXct` time/date type) -- then the column gets initialized to a `POSIXct` column and there's no problem if `NA` values come in later because `POSIXct` data can assume an `NA` value.
+But what happens if each of the orders doesn't contain the same type of data? For example, what if the fulfillment time (`time_fulfilled`) is `NA` when the order has not yet been filled? If the first order that we put into the dataframe has the data type we're expecting -- a `POSIXct` time/date type -- then the column gets initialized to a `POSIXct` column and there's no problem if `NA` values come in later because `POSIXct` data can assume an `NA` value.
 
 ```{r}
 df_final <- df # df is our empty dataframe from before

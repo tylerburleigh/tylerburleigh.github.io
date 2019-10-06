@@ -74,7 +74,7 @@ if (!doNotTrack) {
 <p>The other day, a user of my <a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a> package wrote to say they encountered an issue with the <code>GetAssignments()</code> function. When they tried calling the function it would throw the following error:</p>
 <pre><code>Error in as.POSIXlt.character(x, tz, ...) :
   character string is not in a standard unambiguous format</code></pre>
-<p>In the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe’s columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.</p>
+<p>In the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.</p>
 <div id="r-dataframes-are-flexible" class="section level2">
 <h2>R dataframes are flexible</h2>
 <p>The dataframe is an R object with columns and rows, where each column of a dataframe has a single data type. For example, a dataframe might have a column <code>name</code> that contains data of the <code>character</code> type, or a column <code>age</code> that contains data of the <code>double</code> type (a type of number). But dataframes are flexible, and the data type doesn’t have to be defined when a dataframe is created.</p>
@@ -109,12 +109,12 @@ for(i in 1:3){
   df[i,2] &lt;- round(runif(min = 0, max = 24, n = 1)) # hour_of_day
 }
 df</code></pre>
-<pre><code>##     weekday hour_of_day
-## 1  Thursday           6
-## 2 Wednesday          10
-## 3 Wednesday           6</code></pre>
-<p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained NA), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
-<p>If we put a different type of data into one of these columns, R knows that it should probably change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
+<pre><code>##    weekday hour_of_day
+## 1   Sunday           3
+## 2 Thursday          11
+## 3   Sunday          21</code></pre>
+<p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained <code>NA</code>), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
+<p>If we put a different type of data into one of these columns, R knows that it should change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
 df &lt;- setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
 typeof(df$name)</code></pre>
@@ -177,7 +177,7 @@ df_final</code></pre>
 ## 2 Friedrich 2019-10-05 14:00:00 2019-10-05 21:00:00</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
-<p>But what happens if each of the orders doesn’t contain the same type of data? For example, what if the fulfillment time (<code>time_fulfilled</code>) is <code>NA</code> when the order has not yet been filled? If the first order that we put into the dataframe has the data type we’re expecting – a <code>POSIXct</code> time/date type) – then the column gets initialized to a <code>POSIXct</code> column and there’s no problem if <code>NA</code> values come in later because <code>POSIXct</code> data can assume an <code>NA</code> value.</p>
+<p>But what happens if each of the orders doesn’t contain the same type of data? For example, what if the fulfillment time (<code>time_fulfilled</code>) is <code>NA</code> when the order has not yet been filled? If the first order that we put into the dataframe has the data type we’re expecting – a <code>POSIXct</code> time/date type – then the column gets initialized to a <code>POSIXct</code> column and there’s no problem if <code>NA</code> values come in later because <code>POSIXct</code> data can assume an <code>NA</code> value.</p>
 <pre class="r"><code>df_final &lt;- df # df is our empty dataframe from before
 
 order1 &lt;- data.frame(
