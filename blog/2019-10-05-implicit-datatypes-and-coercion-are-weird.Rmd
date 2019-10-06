@@ -277,7 +277,7 @@ as.POSIXct(as.numeric(numchr), origin = '1970-01-01')
 
 ## Insight into the original bug report
 
-As I was investigating the problem underlying the bug that would produce the error, I realized that implicit datatyping and POSIXct were both to blame.
+As I was investigating the problem underlying the bug that would produce the error, I realized that implicit datatyping and `POSIXct` coercion were both to blame.
 
 ```
 Error in as.POSIXlt.character(x, tz, ...) :

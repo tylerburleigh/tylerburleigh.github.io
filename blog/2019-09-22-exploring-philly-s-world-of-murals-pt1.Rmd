@@ -203,6 +203,6 @@ datatable(details, rownames = FALSE,
           options = list(pageLength = 5))
 ```
 
-## Caveat
+## Fin
 
 Although I scraped the data because I wanted to explore and visualize it, as I learned from a bit more research only about 200 murals have been catalogued on the Mural Arts website, yet Philadelphia has <a href="https://www.npr.org/templates/story/story.php?storyId=129281658">over 3000 murals</a>. According to the <a href="https://en.wikipedia.org/wiki/Mural_Arts_Program">Wikipedia page for Mural Arts</a>, more than 600 murals were painted between 2001-2004, but I don't see that in the data. When I looked at the data, I saw more murals in recent years than in previous years, so there's a pretty heavy recency bias. Ah well.
