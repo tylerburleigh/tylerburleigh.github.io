@@ -1,0 +1,153 @@
+body{
+    max-width:800px;
+    margin:auto;
+    padding:1em;
+    line-height:1.5em
+}
+.menu li{
+    display:inline-block
+}
+.menu a{
+    padding:5px
+}
+.menu{
+    padding:0
+}
+.article-meta{
+    padding:18px
+}
+.title{
+    font-weight:700;
+    font-size:2.25rem;
+    line-height:1em
+}
+.meta{
+    margin:2px
+}
+.article-meta,.comment,.menu,.related,footer{
+    text-align:center
+}
+hr{
+    border-style:dashed;
+    color:#ddd
+}
+a:hover,a:link,a:visited{
+    color:var(--accent)
+}
+.menu a,a.icon:hover,a:link,a:visited,footer a{
+    text-decoration:none
+}
+a:hover{
+    text-decoration:underline
+}
+pre{
+    border:1px solid #ddd;
+    padding:1em;
+    overflow-x:auto
+}
+blockquote,code,pre{
+    background:#f7f7f7
+}
+pre code{
+    background:0 0
+}
+blockquote{
+    border-left:5px solid #ccc;
+    padding:3px 1em 3px
+}
+iframe,img,video{
+    max-width:100%
+}
+main{
+    hyphens:auto
+}
+.item-tag{
+    border:1px solid #828892;
+    font-size:.9em;
+    box-shadow:none;
+    padding:4px;
+    border-radius:3px
+}
+.copyright{
+    margin:15px 0;
+    font-size:.85em
+}
+.pages{
+    padding:15px 0;
+    text-align:center
+}
+.pages-icon{
+    padding:0 15px
+}
+table{
+    margin:auto;
+    border-top:1px solid #666;
+    border-bottom:1px solid #666
+}
+table thead th{
+    border-bottom:1px solid #ddd
+}
+td,th{
+    padding:5px
+}
+tfoot,thead,tr:nth-child(even){
+    background:#eee
+}
+.post-nav{
+    display:flex;
+    justify-content:space-between;
+    padding-top:25px;
+    padding-bottom:25px;
+    margin-bottom:25px;
+    border-bottom:1px solid #ddd
+}
+.post-nav__caption{
+    display:block;
+    font-weight:700;
+    line-height:1rem;
+    overflow:hidden
+}
+.post-nav__title-left{
+    margin-right:5px
+}
+.post-nav__title-left,.post-nav__title-right{
+    font-size:.95rem;
+    overflow:hidden;
+    margin-top:5px
+}
+.post-next{
+    text-align:right
+}
+code{
+    font-family:Consolas,Monaco,"Lucida Console",monospace;
+    font-size:85%
+}
+body{
+    font-size:1rem
+}
+h1{
+    font-size:2.25rem
+}
+h2{
+    font-size:1.75rem
+}
+h3{
+    font-size:1.5rem
+}
+h4{
+    font-size:1.2rem
+}
+h5{
+    font-size:1rem
+}
+h6{
+    font-size:.8rem
+}
+
+
+.asterisk {
+	margin-left: -16px;
+	color:red;
+	background-color:white;
+	margin-right: 2px;
+}

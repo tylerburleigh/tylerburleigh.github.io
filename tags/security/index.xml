@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on A minimal Hugo website</title>
+    <link>https://example.com/tags/security/</link>
+    <description>Recent content in security on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Oct 2016 21:00:36 -0700</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Disable Password Authentication for SSH</title>
+      <link>https://example.com/post/disable-password-authentication-for-ssh-linux/</link>
+      <pubDate>Fri, 21 Oct 2016 21:00:36 -0700</pubDate>
+      
+      <guid>https://example.com/post/disable-password-authentication-for-ssh-linux/</guid>
+      <description>If you are already set up to login to your Linux server using SSH key authentication, you can increase the security of your server by disabling password authentication. To disable password authentication for SSH, do the following:
+$ sudo nano /etc/ssh/sshd_config  Set the following settings, or change them to &amp;ldquo;no&amp;rdquo; if they already exist:
+ChallengeResponseAuthentication no PasswordAuthentication no UsePAM no  Save the file and restart the ssh server:</description>
+    </item>
+    
+  </channel>
+</rss>

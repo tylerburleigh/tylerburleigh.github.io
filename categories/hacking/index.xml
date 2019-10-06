@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacking on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/categories/hacking/</link>
+    <description>Recent content in Hacking on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tracking R package downloads on Github</title>
+      <link>https://tylerburleigh.com/blog/tracking-r-package-downloads-on-github/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/tracking-r-package-downloads-on-github/</guid>
+      <description>As a package author, it&amp;rsquo;s nice to know how often your package is getting installed and used. This is not only good for staying motivated (assuming your package is getting some use), but it&amp;rsquo;s also important as part of building a portfolio in data science. After all, data science is all about measurement and quantification. What better evidence is there of your contributions to Open Source Software than cold hard numbers that represent usage data?</description>
+    </item>
+    
+  </channel>
+</rss>
