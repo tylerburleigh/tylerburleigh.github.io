@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Other on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/categories/other/</link>
+    <description>Recent content in Other on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/categories/other/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Implicit datatypes and coercion are weird</title>
+      <link>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</guid>
+      <description>The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe’s columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.</description>
+    </item>
+    
+  </channel>
+</rss>

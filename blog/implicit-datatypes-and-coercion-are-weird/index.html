@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Implicit datatypes and coercion are weird | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writing</a></li>
+      
+      <li><a href="/page/teachings/">Teaching</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Implicit datatypes and coercion are weird</span>
+	
+		<div class="meta">October 5, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/other'>Other</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/r'>R</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/pymturkr'>pyMTurkR</a></kbd>
+	
+</div>
+
+<main>
+
+
+<p>The other day, a user of my <a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a> package wrote to say they encountered an issue with the <code>GetAssignments()</code> function. When they tried calling the function it would throw the following error:</p>
+<pre><code>Error in as.POSIXlt.character(x, tz, ...) :
+  character string is not in a standard unambiguous format</code></pre>
+<p>In the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe’s columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.</p>
+<div id="r-dataframes-are-flexible" class="section level2">
+<h2>R dataframes are flexible</h2>
+<p>The dataframe is an R object with columns and rows, where each column of a dataframe has a single data type. For example, a dataframe might have a column <code>name</code> that contains data of the <code>character</code> type, or a column <code>age</code> that contains data of the <code>double</code> type (a type of number). But dataframes are flexible, and the data type doesn’t have to be defined when a dataframe is created.</p>
+<p>For example, you can create a dataframe with no rows or columns. Then you can put stuff into the dataframe by binding to it the rows of another dataframe that contains data. If a dataframe is empty, you can bind the rows of any other dataframe to it.</p>
+<pre class="r"><code>df &lt;- data.frame()
+df</code></pre>
+<pre><code>## data frame with 0 columns and 0 rows</code></pre>
+<pre class="r"><code>df &lt;- rbind(df, data.frame(greeting = &#39;Hello!&#39;))
+df</code></pre>
+<pre><code>##   greeting
+## 1   Hello!</code></pre>
+<p>You can also create a dataframe that has columns but no rows. This can be done by giving the dataframe a matrix with predefined dimensions, like this</p>
+<pre class="r"><code>data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE)</code></pre>
+<pre><code>## [1] X1 X2
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<p>You can also name the columns of the empty dataframe using the <code>setNames</code> function from the <code>stats</code> library, like this:</p>
+<pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
+stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)</code></pre>
+<pre><code>## [1] name age 
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<p>This can be helpful if you want to initialize a dataframe with pre-defined columns to put data into later. If you check the column types for the dataframe just created, you’ll find that they were initialized to <code>logical</code> because the matrix contained <code>NA</code> which is a logical type of data.</p>
+<pre class="r"><code>typeof(NA)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>df &lt;- setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+typeof(df$name)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>If you define the names of the dataframe when it’s initialized, this will have the effect of constraining the data that can be put into it. For example, if you define a dataframe in advance that has 2 columns, then you can iterate over the dataframe and put data into each column by referring to the indices <code>1</code> and <code>2</code>.</p>
+<pre class="r"><code>colnames &lt;- c(&#39;weekday&#39;, &#39;hour_of_day&#39;)
+df &lt;- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+for(i in 1:3){
+  df[i,1] &lt;- sample(weekdays(.leap.seconds), 1) # weekday
+  df[i,2] &lt;- round(runif(min = 0, max = 24, n = 1)) # hour_of_day
+}
+df</code></pre>
+<pre><code>##     weekday hour_of_day
+## 1  Thursday           6
+## 2 Wednesday          10
+## 3 Wednesday           6</code></pre>
+<p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained NA), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
+<p>If we put a different type of data into one of these columns, R knows that it should probably change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
+<pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
+df &lt;- setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+typeof(df$name)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>typeof(df$age)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<pre class="r"><code>df &lt;- rbind(df, data.frame(name = &#39;Tyler&#39;, age = 33))
+typeof(df$name)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>typeof(df$age)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>This flexibility is great and usually helpful. But it also creates the potential for unexpected behavior.</p>
+</div>
+<div id="implicit-dataframe-datatypes-can-sometimes-get-weird" class="section level2">
+<h2>Implicit dataframe datatypes can sometimes get weird</h2>
+<div id="example-1" class="section level3">
+<h3>Example 1</h3>
+<p>Imagine you have an API for an online shopping sites that returns the following information about orders:</p>
+<ul>
+<li>Name on order</li>
+<li>Time order was placed</li>
+<li>Time order was fulfilled</li>
+</ul>
+<p>In the form of a dataframe, a single item might look like this:</p>
+<pre class="r"><code>data.frame(
+  name = &quot;Tyler&quot;,
+  time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+  time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+)</code></pre>
+<pre><code>##    name         time_placed         time_filled
+## 1 Tyler 2019-10-05 18:00:00 2019-10-05 22:00:00</code></pre>
+<p>If you wanted to ingest a lot of orders and then put them into the same dataframe, you might start by initializing an empty dataframe like we did before using the matrix method.</p>
+<pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
+df &lt;- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df</code></pre>
+<pre><code>## [1] name        time_placed time_filled
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<p>Then, you can rbind in the data for each order. (Imagine the <code>orders</code> object here was given to us by an API.)</p>
+<pre class="r"><code>order1 &lt;- data.frame(
+            name = &quot;Tyler&quot;,
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+          )
+
+order2 &lt;- data.frame(
+        name = &quot;Friedrich&quot;,
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+orders &lt;- list(order1, order2)
+
+df_final &lt;- df
+for(order in orders){
+  df_final &lt;- rbind(df_final, order)
+}
+df_final</code></pre>
+<pre><code>##        name         time_placed         time_filled
+## 1     Tyler 2019-10-05 18:00:00 2019-10-05 22:00:00
+## 2 Friedrich 2019-10-05 14:00:00 2019-10-05 21:00:00</code></pre>
+<pre class="r"><code>typeof(df_final$time_filled)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>But what happens if each of the orders doesn’t contain the same type of data? For example, what if the fulfillment time (<code>time_fulfilled</code>) is <code>NA</code> when the order has not yet been filled? If the first order that we put into the dataframe has the data type we’re expecting – a <code>POSIXct</code> time/date type) – then the column gets initialized to a <code>POSIXct</code> column and there’s no problem if <code>NA</code> values come in later because <code>POSIXct</code> data can assume an <code>NA</code> value.</p>
+<pre class="r"><code>df_final &lt;- df # df is our empty dataframe from before
+
+order1 &lt;- data.frame(
+            name = &quot;Tyler&quot;,
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+          )
+
+order2 &lt;- data.frame(
+        name = &quot;Friedrich&quot;,
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+orders &lt;- list(order1, order2)
+
+for(order in orders){
+  df_final &lt;- rbind(df_final, order)
+}
+df_final</code></pre>
+<pre><code>##        name         time_placed         time_filled
+## 1     Tyler 2019-10-05 18:00:00 2019-10-05 22:00:00
+## 2 Friedrich 2019-10-05 14:00:00 2019-10-05 21:00:00</code></pre>
+<pre class="r"><code>typeof(df_final$time_filled)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<p>If, on the other hand, the first order that we put into the dataframe contains an <code>NA</code> value for that column, the column first gets initialized to a <code>logical</code>. We saw this in the previous section, no big deal.</p>
+<pre class="r"><code>df_final &lt;- df # df is our empty dataframe from before
+
+order1 &lt;- data.frame(
+            name = &quot;Tyler&quot;,
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = NA
+          )
+
+df_final &lt;- rbind(df_final, order1)
+df_final</code></pre>
+<pre><code>##    name         time_placed time_filled
+## 1 Tyler 2019-10-05 18:00:00          NA</code></pre>
+<pre class="r"><code>typeof(df_final$time_filled)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>But – and here’s where it gets a bit weird – if the next order that comes in has a value for that same column, the column gets coerced to a <code>double</code> and we see a numerical value instead (this is what we call an <code>epoch</code> value). For some reason, R has decided that this is the best data type to use for the column.</p>
+<pre class="r"><code>order2 &lt;- data.frame(
+        name = &quot;Friedrich&quot;,
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+df_final &lt;- rbind(df_final, order2)
+df_final</code></pre>
+<pre><code>##        name         time_placed time_filled
+## 1     Tyler 2019-10-05 18:00:00          NA
+## 2 Friedrich 2019-10-05 14:00:00  1570323600</code></pre>
+<p>Instead of initializing the matrix with <code>NA</code>, we also could have used an empty string (<code>""</code>) for the same result.</p>
+<pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
+df &lt;- stats::setNames(data.frame(matrix(&quot;&quot;, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df</code></pre>
+<pre><code>## [1] name        time_placed time_filled
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<pre class="r"><code>df_final &lt;- df # df is our empty dataframe from before
+
+order1 &lt;- data.frame(
+            name = &quot;Tyler&quot;,
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = NA
+          )
+
+df_final &lt;- rbind(df_final, order1)
+df_final</code></pre>
+<pre><code>##    name         time_placed time_filled
+## 1 Tyler 2019-10-05 18:00:00          NA</code></pre>
+<pre class="r"><code>order2 &lt;- data.frame(
+        name = &quot;Friedrich&quot;,
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+df_final &lt;- rbind(df_final, order2)
+df_final</code></pre>
+<pre><code>##        name         time_placed time_filled
+## 1     Tyler 2019-10-05 18:00:00          NA
+## 2 Friedrich 2019-10-05 14:00:00  1570323600</code></pre>
+</div>
+<div id="example-2" class="section level3">
+<h3>Example 2</h3>
+<p>But here’s where it gets a bit weird. If we initialize the dataframe with an empty string (<code>""</code>) and then add data by row and column indices, but only for the elements that don’t contain an <code>NA</code> value, then we get a different datatype altogether.</p>
+<pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
+df &lt;- stats::setNames(data.frame(matrix(&quot;&quot;, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df</code></pre>
+<pre><code>## [1] name        time_placed time_filled
+## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
+<pre class="r"><code>df_final &lt;- df # df is our empty dataframe from before
+
+df_final[1,1] &lt;- &quot;Tyler&quot;
+df_final[1,2] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(2)
+# df_final[1,3] Because time_filled was empty, we&#39;ll skip adding it to the dataframe and let it assume a value
+
+df_final</code></pre>
+<pre><code>##    name time_placed time_filled
+## 1 Tyler  1570312800        &lt;NA&gt;</code></pre>
+<pre class="r"><code>typeof(df_final$time_filled)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>df_final[2,1] &lt;- &quot;Tyler&quot;
+df_final[2,2] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(6)
+df_final[2,3] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(1)
+
+df_final</code></pre>
+<pre><code>##    name time_placed time_filled
+## 1 Tyler  1570312800        &lt;NA&gt;
+## 2 Tyler  1570298400  1570316400</code></pre>
+<p>This time <code>time_filled</code> becomes a <code>character</code> type!</p>
+</div>
+</div>
+<div id="posixct-coercion-is-also-weird" class="section level2">
+<h2>POSIXct coercion is also weird</h2>
+<p>Coercing <code>POSIXct</code> is also a bit weird. <code>POSIXct</code> data is stored in epoch time, which is the number of seconds since the year 1970. It can be converted to <code>numeric</code> or <code>character</code> types, and then converted back. Although when converting a number back the “origin” has to be supplied.</p>
+<p>The <code>numeric</code> form can be also converted to a <code>charcter</code> string, but it can’t be convered back to <code>POSIXct</code> at that point without first converting it back to <code>numeric</code>.</p>
+<pre class="r"><code>time &lt;- as.POSIXct(Sys.Date())
+
+as.character(time) -&gt; chr
+chr</code></pre>
+<pre><code>## [1] &quot;2019-10-05 20:00:00&quot;</code></pre>
+<pre class="r"><code>as.POSIXct(chr)</code></pre>
+<pre><code>## [1] &quot;2019-10-05 20:00:00 EDT&quot;</code></pre>
+<pre class="r"><code>as.numeric(time) -&gt; num
+num</code></pre>
+<pre><code>## [1] 1570320000</code></pre>
+<pre class="r"><code>as.POSIXct(num, origin = &#39;1970-01-01&#39;)</code></pre>
+<pre><code>## [1] &quot;2019-10-05 20:00:00 EDT&quot;</code></pre>
+<pre class="r"><code>as.character(num) -&gt; numchr
+numchr</code></pre>
+<pre><code>## [1] &quot;1570320000&quot;</code></pre>
+<pre class="r"><code>try(as.POSIXct(numchr))</code></pre>
+<pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
+##   character string is not in a standard unambiguous format</code></pre>
+<pre class="r"><code>as.POSIXct(as.numeric(numchr), origin = &#39;1970-01-01&#39;)</code></pre>
+<pre><code>## [1] &quot;2019-10-05 20:00:00 EDT&quot;</code></pre>
+</div>
+<div id="insight-into-the-original-bug-report" class="section level2">
+<h2>Insight into the original bug report</h2>
+<p>As I was investigating the problem underlying the bug that would produce the error, I realized that implicit datatyping and POSIXct were both to blame.</p>
+<pre><code>Error in as.POSIXlt.character(x, tz, ...) :
+  character string is not in a standard unambiguous format</code></pre>
+<p>The <code>time</code> column was sometimes <code>POSIXct</code> and other times it was an empty <code>character</code> string.</p>
+<p>If you try joining these together, you get an error if the first value that comes in is of the <code>POSIXct</code> type, because a <code>character</code> cannot be coerced to a <code>POSIXct</code>, but the reverse isn’t possible.</p>
+<pre class="r"><code>data.frame(name = &quot;Tyler&quot;, time = &quot;&quot;, stringsAsFactors = F) -&gt; a
+data.frame(name = &quot;Friedrich&quot;, time = as.POSIXct(Sys.Date()), stringsAsFactors = F) -&gt; b
+rbind(a, b)</code></pre>
+<pre><code>##        name       time
+## 1     Tyler           
+## 2 Friedrich 1570320000</code></pre>
+<pre class="r"><code>try(rbind(b, a))</code></pre>
+<pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
+##   character string is not in a standard unambiguous format</code></pre>
+<p>The solution was to catch the empty values as they were coming in and convert them to <code>NA</code> of the <code>POSIXct</code> type.</p>
+<pre class="r"><code>time &lt;- &quot;&quot;
+if(time == &quot;&quot;) {
+  data.frame(name = &quot;Tyler&quot;, time = as.POSIXct(NA)) -&gt; a
+}
+
+time &lt;- as.POSIXct(Sys.Date())
+data.frame(name = &quot;Friedrich&quot;, time = time) -&gt; b
+
+rbind(a, b)</code></pre>
+<pre><code>##        name                time
+## 1     Tyler                &lt;NA&gt;
+## 2 Friedrich 2019-10-05 20:00:00</code></pre>
+<pre class="r"><code>rbind(b, a)</code></pre>
+<pre><code>##        name                time
+## 1 Friedrich 2019-10-05 20:00:00
+## 2     Tyler                &lt;NA&gt;</code></pre>
+</div>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/predicting-t-shirt-size-from-height-and-weight/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Predicting t-shirt size from height and weight
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/13</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Tutorial</strong>
+	</span> - 
+	<a href="/blog/mturk-qualification-tests/">pyMTurkR (vignette): A HIT with a Qualification Test</a>
+</li>
+
+	
+		<li>
+	
+	<span class="asterisk">
+		♥️
+	</span>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/27</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Prediction</strong>
+	</span> - 
+	<a href="/blog/predicting-t-shirt-size-from-height-and-weight/">Predicting t-shirt size from height and weight</a>
+</li>
+
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/22</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Scraping</strong>
+	</span> - 
+	<a href="/blog/exploring-philly-s-world-of-murals-pt1/">Scraping the Mural Arts Philadephia website</a>
+</li>
+
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/21</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Package</strong>
+	</span> - 
+	<a href="/blog/nutritionr-nlp-nutrition-analysis-in-r/">nutritionR: NLP nutrition analysis in R</a>
+</li>
+
+	
+		<li>
+	
+	<span class="asterisk">
+		♥️
+	</span>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/14</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Data Viz</strong>
+	</span> - 
+	<a href="/blog/yadsjma/">Yet Another Data Science Job Market Analysis</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh"><i class="fa fa-twitter"></i></a></li>
+			
+			<li><a href="https://www.linkedin.com/in/tylerburleigh"><i class="fa fa-linkedin"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+

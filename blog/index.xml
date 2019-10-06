@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implicit datatypes and coercion are weird</title>
+      <link>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</guid>
+      <description>The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe’s columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.</description>
+    </item>
     
     <item>
       <title>Predicting t-shirt size from height and weight</title>
@@ -22,7 +32,7 @@ In fact, it seemed so straight-forward that I was sure there must be prior art o
     </item>
     
     <item>
-      <title>Exploring Philadelphia&#39;s world of murals in data (pt1)</title>
+      <title>Scraping the Mural Arts Philadephia website</title>
       <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
       <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
       

@@ -1,0 +1,312 @@
+---
+title: Implicit datatypes and coercion are weird
+author: ~
+date: '2019-10-05'
+slug: implicit-datatypes-and-coercion-are-weird
+categories: ['Other']
+tags: ['R', 'pyMTurkR']
+disableComments: no
+---
+
+The other day, a user of my <a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a> package wrote to say they encountered an issue with the `GetAssignments()` function. When they tried calling the function it would throw the following error:
+
+```
+Error in as.POSIXlt.character(x, tz, ...) :
+  character string is not in a standard unambiguous format
+```
+
+In the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe's columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.
+
+## R dataframes are flexible
+
+The dataframe is an R object with columns and rows, where each column of a dataframe has a single data type. For example, a dataframe might have a column `name` that contains data of the `character` type, or a column `age` that contains data of the `double` type (a type of number). But dataframes are flexible, and the data type doesn't have to be defined when a dataframe is created. 
+
+For example, you can create a dataframe with no rows or columns. Then you can put stuff into the dataframe by binding to it the rows of another dataframe that contains data. If a dataframe is empty, you can bind the rows of any other dataframe to it.
+
+```{r}
+df <- data.frame()
+df
+
+df <- rbind(df, data.frame(greeting = 'Hello!'))
+df
+```
+
+You can also create a dataframe that has columns but no rows. This can be done by giving the dataframe a matrix with predefined dimensions, like this
+
+```{r}
+data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE)
+```
+
+You can also name the columns of the empty dataframe using the `setNames` function from the `stats` library, like this:
+
+```{r}
+colnames <- c('name', 'age')
+stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+```
+
+This can be helpful if you want to initialize a dataframe with pre-defined columns to put data into later. If you check the column types for the dataframe just created, you'll find that they were initialized to `logical` because the matrix contained `NA` which is a logical type of data.
+
+```{r}
+typeof(NA)
+df <- setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+typeof(df$name)
+```
+
+If you define the names of the dataframe when it's initialized, this will have the effect of constraining the data that can be put into it. For example, if you define a dataframe in advance that has 2 columns, then you can iterate over the dataframe and put data into each column by referring to the indices `1` and `2`.
+
+```{r}
+colnames <- c('weekday', 'hour_of_day')
+df <- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+for(i in 1:3){
+  df[i,1] <- sample(weekdays(.leap.seconds), 1) # weekday
+  df[i,2] <- round(runif(min = 0, max = 24, n = 1)) # hour_of_day
+}
+df
+```
+
+Importantly, the dataframe is flexible. Even though the columns were initialized to have a `logical` type (because the matrix contained NA), when the dataframe is initialized it doesn't yet contain any data, so we're not confined to putting only `logical` data into those columns.
+
+If we put a different type of data into one of these columns, R knows that it should probably change the column's data type to match whatever we put into it. For example, if we `rbind` the empty dataframe to one containing a name of `character` type and an age of `double` type, the name and age columns will change to assume these types accordingly.
+
+```{r}
+colnames <- c('name', 'age')
+df <- setNames(data.frame(matrix(NA, nrow = 0, ncol = 2), stringsAsFactors = FALSE), colnames)
+typeof(df$name)
+typeof(df$age)
+
+df <- rbind(df, data.frame(name = 'Tyler', age = 33))
+typeof(df$name)
+typeof(df$age)
+```
+
+This flexibility is great and usually helpful. But it also creates the potential for unexpected behavior.
+
+## Implicit dataframe datatypes can sometimes get weird
+
+### Example 1
+
+Imagine you have an API for an online shopping sites that returns the following information about orders:
+
+- Name on order
+- Time order was placed
+- Time order was fulfilled
+
+In the form of a dataframe, a single item might look like this:
+
+```{r}
+data.frame(
+  name = "Tyler",
+  time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+  time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+)
+```
+
+If you wanted to ingest a lot of orders and then put them into the same dataframe, you might start by initializing an empty dataframe like we did before using the matrix method.
+
+```{r}
+colnames <- c('name', 'time_placed', 'time_filled')
+df <- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df
+```
+
+Then, you can rbind in the data for each order. (Imagine the `orders` object here was given to us by an API.)
+
+```{r}
+order1 <- data.frame(
+            name = "Tyler",
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+          )
+
+order2 <- data.frame(
+        name = "Friedrich",
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+orders <- list(order1, order2)
+
+df_final <- df
+for(order in orders){
+  df_final <- rbind(df_final, order)
+}
+df_final
+
+typeof(df_final$time_filled)
+```
+
+But what happens if each of the orders doesn't contain the same type of data? For example, what if the fulfillment time (`time_fulfilled`) is `NA` when the order has not yet been filled? If the first order that we put into the dataframe has the data type we're expecting -- a `POSIXct` time/date type) -- then the column gets initialized to a `POSIXct` column and there's no problem if `NA` values come in later because `POSIXct` data can assume an `NA` value.
+
+```{r}
+df_final <- df # df is our empty dataframe from before
+
+order1 <- data.frame(
+            name = "Tyler",
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
+          )
+
+order2 <- data.frame(
+        name = "Friedrich",
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+orders <- list(order1, order2)
+
+for(order in orders){
+  df_final <- rbind(df_final, order)
+}
+df_final
+
+typeof(df_final$time_filled)
+```
+
+If, on the other hand, the first order that we put into the dataframe contains an `NA` value for that column, the column first gets initialized to a `logical`. We saw this in the previous section, no big deal.
+
+```{r}
+df_final <- df # df is our empty dataframe from before
+
+order1 <- data.frame(
+            name = "Tyler",
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = NA
+          )
+
+df_final <- rbind(df_final, order1)
+df_final
+
+typeof(df_final$time_filled)
+```
+
+But -- and here's where it gets a bit weird -- if the next order that comes in has a value for that same column, the column gets coerced to a `double` and we see a numerical value instead (this is what we call an `epoch` value). For some reason, R has decided that this is the best data type to use for the column. 
+
+```{r}
+order2 <- data.frame(
+        name = "Friedrich",
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+df_final <- rbind(df_final, order2)
+df_final
+```
+
+Instead of initializing the matrix with `NA`, we also could have used an empty string (`""`) for the same result.
+
+```{r}
+colnames <- c('name', 'time_placed', 'time_filled')
+df <- stats::setNames(data.frame(matrix("", nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df
+
+df_final <- df # df is our empty dataframe from before
+
+order1 <- data.frame(
+            name = "Tyler",
+            time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(2),
+            time_filled = NA
+          )
+
+df_final <- rbind(df_final, order1)
+df_final
+
+order2 <- data.frame(
+        name = "Friedrich",
+        time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
+        time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(1)
+      )
+
+df_final <- rbind(df_final, order2)
+df_final
+```
+
+### Example 2
+
+But here's where it gets a bit weird. If we initialize the dataframe with an empty string (`""`) and then add data by row and column indices, but only for the elements that don't contain an `NA` value, then we get a different datatype altogether.
+
+```{r}
+colnames <- c('name', 'time_placed', 'time_filled')
+df <- stats::setNames(data.frame(matrix("", nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
+df
+
+df_final <- df # df is our empty dataframe from before
+
+df_final[1,1] <- "Tyler"
+df_final[1,2] <- as.POSIXct(Sys.Date()) - lubridate::hours(2)
+# df_final[1,3] Because time_filled was empty, we'll skip adding it to the dataframe and let it assume a value
+
+df_final
+
+typeof(df_final$time_filled)
+
+df_final[2,1] <- "Tyler"
+df_final[2,2] <- as.POSIXct(Sys.Date()) - lubridate::hours(6)
+df_final[2,3] <- as.POSIXct(Sys.Date()) - lubridate::hours(1)
+
+df_final
+```
+
+This time `time_filled` becomes a `character` type!
+
+## POSIXct coercion is also weird
+
+Coercing `POSIXct` is also a bit weird. `POSIXct` data is stored in epoch time, which is the number of seconds since the year 1970. It can be converted to `numeric` or `character` types, and then converted back. Although when converting a number back the "origin" has to be supplied. 
+
+The `numeric` form can be also converted to a `charcter` string, but it can't be convered back to `POSIXct` at that point without first converting it back to `numeric`.
+
+```{r}
+time <- as.POSIXct(Sys.Date())
+
+as.character(time) -> chr
+chr
+as.POSIXct(chr)
+
+as.numeric(time) -> num
+num
+as.POSIXct(num, origin = '1970-01-01')
+
+as.character(num) -> numchr
+numchr
+try(as.POSIXct(numchr))
+```
+
+```{r}
+as.POSIXct(as.numeric(numchr), origin = '1970-01-01')
+```
+
+
+## Insight into the original bug report
+
+As I was investigating the problem underlying the bug that would produce the error, I realized that implicit datatyping and POSIXct were both to blame.
+
+```
+Error in as.POSIXlt.character(x, tz, ...) :
+  character string is not in a standard unambiguous format
+```
+
+The `time` column was sometimes `POSIXct` and other times it was an empty `character` string. 
+
+If you try joining these together, you get an error if the first value that comes in is of the `POSIXct` type, because a `character` cannot be coerced to a `POSIXct`, but the reverse isn't possible.
+
+```{r}
+data.frame(name = "Tyler", time = "", stringsAsFactors = F) -> a
+data.frame(name = "Friedrich", time = as.POSIXct(Sys.Date()), stringsAsFactors = F) -> b
+rbind(a, b)
+try(rbind(b, a))
+```
+
+The solution was to catch the empty values as they were coming in and convert them to `NA` of the `POSIXct` type.
+
+```{r}
+time <- ""
+if(time == "") {
+  data.frame(name = "Tyler", time = as.POSIXct(NA)) -> a
+}
+
+time <- as.POSIXct(Sys.Date())
+data.frame(name = "Friedrich", time = time) -> b
+
+rbind(a, b)
+rbind(b, a)
+```
+

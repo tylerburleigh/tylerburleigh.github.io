@@ -6,10 +6,20 @@
     <description>Recent content in Home on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implicit datatypes and coercion are weird</title>
+      <link>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</link>
+      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</guid>
+      <description>The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned a lesson about how R dataframes behave: Unless a dataframe’s columns are explicitly defined to have a datatype, they can change to accommodate the type of data that is first put into them.</description>
+    </item>
     
     <item>
       <title>Predicting t-shirt size from height and weight</title>
@@ -22,7 +32,7 @@ In fact, it seemed so straight-forward that I was sure there must be prior art o
     </item>
     
     <item>
-      <title>Exploring Philadelphia&#39;s world of murals in data (pt1)</title>
+      <title>Scraping the Mural Arts Philadephia website</title>
       <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
       <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
       
@@ -109,7 +119,7 @@ An educational talk for a non-academic audience about measurements in psychology
       
       <guid>https://tylerburleigh.com/page/writings/</guid>
       <description>I’ve authored peer-reviewed scholarly articles and white papers.
-As of 2019-09-29, my papers were cited 303 times and my h-index was 8. (source: Google Scholar)
+As of 2019-10-06, my papers were cited 309 times and my h-index was 8. (source: Google Scholar)
 PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
 Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
     </item>

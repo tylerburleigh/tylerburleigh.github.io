@@ -1,5 +1,5 @@
 ---
-title: Exploring Philadelphia's world of murals in data (pt1)
+title: Scraping the Mural Arts Philadephia website
 author: ~
 date: '2019-09-22'
 slug: exploring-philly-s-world-of-murals-pt1
@@ -28,13 +28,7 @@ I started looking through the website, <a href="https://www.muralarts.org">Mural
 
 ![](/blog/2019-09-22-exploring-philly-s-world-of-murals-pt1_files/firefox_2019-09-22_12-57-22.png)
 
-So I set about scraping the data to explore later. In this post, Part 1, I show how I scraped the data to obtain a tidy dataset containing mural locations and completion dates.
-
-## Important caveat
-
-A little context is important here.
-
-The Mural Arts Philadephia website is not a complete database of Philly murals. As I learned from the data, only about 200 murals have been catalogued on the website, but Philadelphia has <a href="https://www.npr.org/templates/story/story.php?storyId=129281658">over 3000 murals</a>. According to the <a href="https://en.wikipedia.org/wiki/Mural_Arts_Program">Wikipedia page for Mural Arts</a>, more than 600 murals were painted between 2001-2004, but I don't see that in the data. When I look at the data, I see more murals in recent years than in previous years, so there's something of a recency bias.
+So I set about scraping the data.
 
 ## Getting links to mural pages
 
@@ -209,4 +203,6 @@ datatable(details, rownames = FALSE,
           options = list(pageLength = 5))
 ```
 
-In the next part I'll start exploring the data!
+## Caveat
+
+Although I scraped the data because I wanted to explore and visualize it, as I learned from a bit more research only about 200 murals have been catalogued on the Mural Arts website, yet Philadelphia has <a href="https://www.npr.org/templates/story/story.php?storyId=129281658">over 3000 murals</a>. According to the <a href="https://en.wikipedia.org/wiki/Mural_Arts_Program">Wikipedia page for Mural Arts</a>, more than 600 murals were painted between 2001-2004, but I don't see that in the data. When I looked at the data, I saw more murals in recent years than in previous years, so there's a pretty heavy recency bias. Ah well.
