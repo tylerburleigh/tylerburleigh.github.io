@@ -1,0 +1,191 @@
+---
+title: Simple Moving Average algorithm & backtest
+author: ~
+date: '2019-10-12'
+slug: simple-moving-average-algorithmic-backtest
+categories: ['Timeseries']
+tags: ['r', 'algotrading', 'TSLA', 'stock market']
+disableComments: no
+bestof: yes
+---
+
+I decided to try making a simple algorithm trader in R.
+
+The algorithm is based on the "moving average crossover". Basically, the idea is to take two simple moving averages (SMAs) -- one that averages over a longer time window, and one that averages over a shorter time window -- and buy or sell based on when the two SMAs crossover. Here I used 50-day and 200-day SMAs. Buy decisions were when the SMA-50 went above the SMA-200, and sell decisions were when the SMA-50 went below the SMA-200.
+
+To obtain historical stock data, I used the <a href="https://github.com/business-science/alphavantager">alphavantager</a> R package to access the <a href="https://www.alphavantage.co/documentation/">Alpha Vantage API</a>; the <a href="https://github.com/business-science/tidyquant">tidyquant</a> package to calculate simple moving averages; and tidyverse, ggplot2, etc to wrangle and visualize data.
+
+I picked Tesla (ticker: "TSLA") as the stock I would invest in, because as I understand it has had a lot of volatility which makes it fruitful for day trading. I assumed a $100 USD investment and simulated a backtest over the daily close data between 2015 and 2019. <strong>TL;DR: My algorithm did not make money.</strong> But this was a fun exercise nonetheless!
+
+***
+
+# Setup
+
+Load libraries.
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(tidyquant)
+library(alphavantager)
+library(reshape2)
+library(ggplot2)
+library(lubridate)
+```
+
+```
+library(tidyverse)
+library(tidyquant)
+library(alphavantager)
+library(reshape2)
+library(ggplot2)
+library(lubridate)
+```
+
+Set Alphavantager key.
+
+```{r}
+# av_api_key(readLines("C:/Users/tyler/Documents/av_key.txt"))
+```
+
+# Get historical stock data
+
+Get daily price data between 2016 and 2019.
+
+```{r}
+# av_get(symbol = "TSLA",
+#        av_fun = "TIME_SERIES_DAILY",
+#        outputsize = 'full') %>%
+#   select(timestamp, close, high, low) %>%
+#   filter(timestamp > as.Date('2015-01-01') &
+#          timestamp < as.Date('2019-12-31')) -> df
+# save(df, file = "tsla_price_data.RData")
+
+load("tsla_price_data.RData")
+```
+
+# Simple Moving Averages
+
+Calculate simple moving averages (50-day and 200-day).
+
+```{r}
+df %>%
+  mutate(sma_50 = SMA(close, n = 50),
+         sma_200 = SMA(close, n = 200)) %>%
+  filter(!is.na(sma_200)) -> df_with_sma
+```
+
+Convert long to wide.
+
+```{r}
+melt(df_with_sma, id.vars = c("timestamp")) -> df_long
+```
+
+Plot daily close, SMA50 and SMA200.
+
+```{r}
+df_long %>%
+  filter(variable %in% c('close', 'sma_50', 'sma_200')) %>%
+  ggplot(., aes(x = timestamp, y = value)) + 
+    geom_line(aes(color = variable), size = 1) + 
+    ggtitle("TSLA stock with SMAs")
+```
+
+# Encode buy/sell signals and decisions
+
+We'll use SMA50/SMA200 crossover events to make buy/sell decisions.
+
+- Buy if SMA50 > SMA200 (unless we've bought already)
+- Sell if SMA50 < SMA200 (unless we've sold already)
+
+We'll encode the decisions in two passes: the first pass will encode the signal, and the second pass will encode the decision. Basically, the decision encoding will make sure we won't buy again if the last action was to buy, and we won't sell again if the last action was to sell.
+
+```{r}
+df_with_sma %>%
+  mutate(
+    # Buy if SMA50 > SMA200
+    # Otherwise sell
+    signal = case_when(
+      sma_50 > sma_200 ~ "buy",
+      sma_50 < sma_200 ~ "sell"
+    ),
+    # Create a lagging indicator for action
+    previous_signal = lag(signal, 1),
+    # Encode hold as any time when current and last action are the same
+    # since we don't want to keep buying / selling
+    decision = case_when(
+      signal == previous_signal ~ "hold",
+      TRUE ~ signal
+    )
+  ) -> df_with_decisions
+```
+
+Show periods when we would have bought or sold.
+
+```{r}
+df_with_decisions %>%
+  filter(decision != 'hold') %>%
+  select(timestamp, close, high, low, sma_50, sma_200, decision) -> df_bought_sold
+
+df_bought_sold
+```
+
+Visualize the decisions by plotting them as vertical intercept lines over the graph.
+
+```{r}
+df_long %>%
+  filter(variable %in% c('close', 'sma_50', 'sma_200')) %>%
+  ggplot(., aes(x = timestamp, y = value)) + 
+  geom_line(aes(color = variable), size = 1) +
+  geom_vline(data = df_bought_sold %>% filter(decision == 'buy'), 
+             aes(xintercept = as.numeric(timestamp)),
+             col = 'black',
+             linetype="dashed") +
+  geom_vline(data = df_bought_sold %>% filter(decision == 'sell'), 
+             aes(xintercept = as.numeric(timestamp)),
+             col = 'red') + 
+  ggtitle("TSLA stock with SMAs and algorithmic buy/sell decisions\n(black = buy, red = sell)")
+```
+
+
+Calculate gains/losses, assuming 100 initial investment, and assuming we buy/sell at the mid-day price.
+
+```{r}
+usd <- 100
+shares <- 0
+stock_price <- NA
+for(i in 1:nrow(df_bought_sold)){
+  stock_price <- (df_bought_sold[i,]$high + df_bought_sold[i,]$low)/2
+  
+  if(shares > 0 && df_bought_sold[i,]$decision == "sell") {
+    
+    print(paste0("SELL: ", shares, " shares @ $", stock_price, " USD"))
+    usd <- stock_price * shares
+    print(paste0("USD IS NOW @ ", round(usd, 2)))
+    shares <- 0
+    
+  } else if(usd > 0 && df_bought_sold[i,]$decision == "buy"){
+    
+    print(paste0("BUY: ", shares, " shares @ $", stock_price, " USD"))
+    stock_price <- df_bought_sold[i,]$close
+    shares <- usd/stock_price
+    usd <- 0
+    
+  }
+  
+  cat("\n")
+  
+}
+```
+
+What was our total ROI?
+
+```{r}
+total_return <- usd/100
+print(paste0("Total return: ", round(total_return*100)-100, "%"))
+```
+
+Wow that did not turn out well!
+
+
+
+

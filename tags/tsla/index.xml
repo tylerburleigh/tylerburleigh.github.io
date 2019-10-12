@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TSLA on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/tsla/</link>
+    <description>Recent content in TSLA on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/tags/tsla/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Moving Average algorithm &amp; backtest</title>
+      <link>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</guid>
+      <description>I decided to try making a simple algorithm trader in R.
+The algorithm is based on the “moving average crossover”. Basically, the idea is to take two simple moving averages (SMAs) – one that averages over a longer time window, and one that averages over a shorter time window – and buy or sell based on when the two SMAs crossover. Here I used 50-day and 200-day SMAs. Buy decisions were when the SMA-50 went above the SMA-200, and sell decisions were when the SMA-50 went below the SMA-200.</description>
+    </item>
+    
+  </channel>
+</rss>

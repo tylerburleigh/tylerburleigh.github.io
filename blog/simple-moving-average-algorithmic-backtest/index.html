@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Moving Average algorithm &amp; backtest | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writing</a></li>
+      
+      <li><a href="/page/teachings/">Teaching</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">Simple Moving Average algorithm &amp; backtest</span>
+	
+		<div class="meta">October 12, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/timeseries'>Timeseries</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/r'>r</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/algotrading'>algotrading</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/tsla'>TSLA</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/stock-market'>stock market</a></kbd>
+	
+</div>
+
+<main>
+
+
+<p>I decided to try making a simple algorithm trader in R.</p>
+<p>The algorithm is based on the “moving average crossover”. Basically, the idea is to take two simple moving averages (SMAs) – one that averages over a longer time window, and one that averages over a shorter time window – and buy or sell based on when the two SMAs crossover. Here I used 50-day and 200-day SMAs. Buy decisions were when the SMA-50 went above the SMA-200, and sell decisions were when the SMA-50 went below the SMA-200.</p>
+<p>To obtain historical stock data, I used the <a href="https://github.com/business-science/alphavantager">alphavantager</a> R package to access the <a href="https://www.alphavantage.co/documentation/">Alpha Vantage API</a>; the <a href="https://github.com/business-science/tidyquant">tidyquant</a> package to calculate simple moving averages; and tidyverse, ggplot2, etc to wrangle and visualize data.</p>
+<p>I picked Tesla (ticker: “TSLA”) as the stock I would invest in, because as I understand it has had a lot of volatility which makes it fruitful for day trading. I assumed a $100 USD investment and simulated a backtest over the daily close data between 2015 and 2019. <strong>TL;DR: My algorithm did not make money.</strong> But this was a fun exercise nonetheless!</p>
+<hr />
+<div id="setup" class="section level1">
+<h1>Setup</h1>
+<p>Load libraries.</p>
+<pre><code>library(tidyverse)
+library(tidyquant)
+library(alphavantager)
+library(reshape2)
+library(ggplot2)
+library(lubridate)</code></pre>
+<p>Set Alphavantager key.</p>
+<pre class="r"><code># av_api_key(readLines(&quot;C:/Users/tyler/Documents/av_key.txt&quot;))</code></pre>
+</div>
+<div id="get-historical-stock-data" class="section level1">
+<h1>Get historical stock data</h1>
+<p>Get daily price data between 2016 and 2019.</p>
+<pre class="r"><code># av_get(symbol = &quot;TSLA&quot;,
+#        av_fun = &quot;TIME_SERIES_DAILY&quot;,
+#        outputsize = &#39;full&#39;) %&gt;%
+#   select(timestamp, close, high, low) %&gt;%
+#   filter(timestamp &gt; as.Date(&#39;2015-01-01&#39;) &amp;
+#          timestamp &lt; as.Date(&#39;2019-12-31&#39;)) -&gt; df
+# save(df, file = &quot;tsla_price_data.RData&quot;)
+
+load(&quot;tsla_price_data.RData&quot;)</code></pre>
+</div>
+<div id="simple-moving-averages" class="section level1">
+<h1>Simple Moving Averages</h1>
+<p>Calculate simple moving averages (50-day and 200-day).</p>
+<pre class="r"><code>df %&gt;%
+  mutate(sma_50 = SMA(close, n = 50),
+         sma_200 = SMA(close, n = 200)) %&gt;%
+  filter(!is.na(sma_200)) -&gt; df_with_sma</code></pre>
+<p>Convert long to wide.</p>
+<pre class="r"><code>melt(df_with_sma, id.vars = c(&quot;timestamp&quot;)) -&gt; df_long</code></pre>
+<p>Plot daily close, SMA50 and SMA200.</p>
+<pre class="r"><code>df_long %&gt;%
+  filter(variable %in% c(&#39;close&#39;, &#39;sma_50&#39;, &#39;sma_200&#39;)) %&gt;%
+  ggplot(., aes(x = timestamp, y = value)) + 
+    geom_line(aes(color = variable), size = 1) + 
+    ggtitle(&quot;TSLA stock with SMAs&quot;)</code></pre>
+<p><img src="/blog/2019-10-12-simple-moving-average-algorithmic-backtest_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="encode-buysell-signals-and-decisions" class="section level1">
+<h1>Encode buy/sell signals and decisions</h1>
+<p>We’ll use SMA50/SMA200 crossover events to make buy/sell decisions.</p>
+<ul>
+<li>Buy if SMA50 &gt; SMA200 (unless we’ve bought already)</li>
+<li>Sell if SMA50 &lt; SMA200 (unless we’ve sold already)</li>
+</ul>
+<p>We’ll encode the decisions in two passes: the first pass will encode the signal, and the second pass will encode the decision. Basically, the decision encoding will make sure we won’t buy again if the last action was to buy, and we won’t sell again if the last action was to sell.</p>
+<pre class="r"><code>df_with_sma %&gt;%
+  mutate(
+    # Buy if SMA50 &gt; SMA200
+    # Otherwise sell
+    signal = case_when(
+      sma_50 &gt; sma_200 ~ &quot;buy&quot;,
+      sma_50 &lt; sma_200 ~ &quot;sell&quot;
+    ),
+    # Create a lagging indicator for action
+    previous_signal = lag(signal, 1),
+    # Encode hold as any time when current and last action are the same
+    # since we don&#39;t want to keep buying / selling
+    decision = case_when(
+      signal == previous_signal ~ &quot;hold&quot;,
+      TRUE ~ signal
+    )
+  ) -&gt; df_with_decisions</code></pre>
+<p>Show periods when we would have bought or sold.</p>
+<pre class="r"><code>df_with_decisions %&gt;%
+  filter(decision != &#39;hold&#39;) %&gt;%
+  select(timestamp, close, high, low, sma_50, sma_200, decision) -&gt; df_bought_sold
+
+df_bought_sold</code></pre>
+<pre><code>## # A tibble: 12 x 7
+##    timestamp  close  high   low sma_50 sma_200 decision
+##    &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;   
+##  1 2015-10-16  227.  230.  223.   243.    232. buy     
+##  2 2015-11-16  214.  215.  206.   233.    233. sell    
+##  3 2016-05-02  242.  243.  235.   227.    226. buy     
+##  4 2016-07-07  216.  218.  213.   218.    218. sell    
+##  5 2016-07-21  220.  228.  219.   217.    217. buy     
+##  6 2016-10-05  208.  213.  208.   214.    215. sell    
+##  7 2017-01-31  252.  256.  248.   214.    214. buy     
+##  8 2017-12-12  341.  341.  330.   326.    326. sell    
+##  9 2018-08-02  350.  350.  323.   319.    318. buy     
+## 10 2018-09-11  279.  282   274.   317.    318. sell    
+## 11 2018-12-03  358.  366   352    313.    312. buy     
+## 12 2019-02-28  320.  320   311.   316.    316. sell</code></pre>
+<p>Visualize the decisions by plotting them as vertical intercept lines over the graph.</p>
+<pre class="r"><code>df_long %&gt;%
+  filter(variable %in% c(&#39;close&#39;, &#39;sma_50&#39;, &#39;sma_200&#39;)) %&gt;%
+  ggplot(., aes(x = timestamp, y = value)) + 
+  geom_line(aes(color = variable), size = 1) +
+  geom_vline(data = df_bought_sold %&gt;% filter(decision == &#39;buy&#39;), 
+             aes(xintercept = as.numeric(timestamp)),
+             col = &#39;black&#39;,
+             linetype=&quot;dashed&quot;) +
+  geom_vline(data = df_bought_sold %&gt;% filter(decision == &#39;sell&#39;), 
+             aes(xintercept = as.numeric(timestamp)),
+             col = &#39;red&#39;) + 
+  ggtitle(&quot;TSLA stock with SMAs and algorithmic buy/sell decisions\n(black = buy, red = sell)&quot;)</code></pre>
+<p><img src="/blog/2019-10-12-simple-moving-average-algorithmic-backtest_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Calculate gains/losses, assuming 100 initial investment, and assuming we buy/sell at the mid-day price.</p>
+<pre class="r"><code>usd &lt;- 100
+shares &lt;- 0
+stock_price &lt;- NA
+for(i in 1:nrow(df_bought_sold)){
+  stock_price &lt;- (df_bought_sold[i,]$high + df_bought_sold[i,]$low)/2
+  
+  if(shares &gt; 0 &amp;&amp; df_bought_sold[i,]$decision == &quot;sell&quot;) {
+    
+    print(paste0(&quot;SELL: &quot;, shares, &quot; shares @ $&quot;, stock_price, &quot; USD&quot;))
+    usd &lt;- stock_price * shares
+    print(paste0(&quot;USD IS NOW @ &quot;, round(usd, 2)))
+    shares &lt;- 0
+    
+  } else if(usd &gt; 0 &amp;&amp; df_bought_sold[i,]$decision == &quot;buy&quot;){
+    
+    print(paste0(&quot;BUY: &quot;, shares, &quot; shares @ $&quot;, stock_price, &quot; USD&quot;))
+    stock_price &lt;- df_bought_sold[i,]$close
+    shares &lt;- usd/stock_price
+    usd &lt;- 0
+    
+  }
+  
+  cat(&quot;\n&quot;)
+  
+}</code></pre>
+<pre><code>## [1] &quot;BUY: 0 shares @ $226.66995 USD&quot;
+## 
+## [1] &quot;SELL: 0.440509228668341 shares @ $210.39 USD&quot;
+## [1] &quot;USD IS NOW @ 92.68&quot;
+## 
+## [1] &quot;BUY: 0 shares @ $239.005 USD&quot;
+## 
+## [1] &quot;SELL: 0.38328675194182 shares @ $215.565 USD&quot;
+## [1] &quot;USD IS NOW @ 82.62&quot;
+## 
+## [1] &quot;BUY: 0 shares @ $223.4735 USD&quot;
+## 
+## [1] &quot;SELL: 0.374708429398361 shares @ $210.635 USD&quot;
+## [1] &quot;USD IS NOW @ 78.93&quot;
+## 
+## [1] &quot;BUY: 0 shares @ $251.795 USD&quot;
+## 
+## [1] &quot;SELL: 0.313288254778405 shares @ $335.735 USD&quot;
+## [1] &quot;USD IS NOW @ 105.18&quot;
+## 
+## [1] &quot;BUY: 0 shares @ $336.575 USD&quot;
+## 
+## [1] &quot;SELL: 0.300915008920375 shares @ $277.775 USD&quot;
+## [1] &quot;USD IS NOW @ 83.59&quot;
+## 
+## [1] &quot;BUY: 0 shares @ $359 USD&quot;
+## 
+## [1] &quot;SELL: 0.233163174991931 shares @ $315.405 USD&quot;
+## [1] &quot;USD IS NOW @ 73.54&quot;</code></pre>
+<p>What was our total ROI?</p>
+<pre class="r"><code>total_return &lt;- usd/100
+print(paste0(&quot;Total return: &quot;, round(total_return*100)-100, &quot;%&quot;))</code></pre>
+<pre><code>## [1] &quot;Total return: -26%&quot;</code></pre>
+<p>Wow that did not turn out well!</p>
+</div>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/implicit-datatypes-and-coercion-are-weird/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Implicit datatypes and coercion are weird
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/01/21</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>ML</strong>
+	</span> - 
+	<a href="/blog/surviving-the-titanic-with-r-caret/">Surviving the Titanic with R caret</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh"><i class="fa fa-twitter"></i></a></li>
+			
+			<li><a href="https://www.linkedin.com/in/tylerburleigh"><i class="fa fa-linkedin"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
