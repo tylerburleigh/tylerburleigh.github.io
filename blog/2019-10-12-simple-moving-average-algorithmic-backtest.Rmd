@@ -26,7 +26,7 @@ Load libraries.
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(tidyquant)
-library(alphavantager)
+#library(alphavantager)
 library(reshape2)
 library(ggplot2)
 library(lubridate)
@@ -116,18 +116,10 @@ df_with_sma %>%
       signal == previous_signal ~ "hold",
       TRUE ~ signal
     )
-  ) -> df_with_decisions
+  ) -> df_bought_sold
 ```
 
-Show periods when we would have bought or sold.
-
-```{r}
-df_with_decisions %>%
-  filter(decision != 'hold') %>%
-  select(timestamp, close, high, low, sma_50, sma_200, decision) -> df_bought_sold
-
-df_bought_sold
-```
+# Visualizing the algorithm decisions
 
 Visualize the decisions by plotting them as vertical intercept lines over the graph.
 
@@ -146,6 +138,7 @@ df_long %>%
   ggtitle("TSLA stock with SMAs and algorithmic buy/sell decisions\n(black = buy, red = sell)")
 ```
 
+# Simulating the backtest
 
 Calculate gains/losses, assuming 100 initial investment, and assuming we buy/sell at the mid-day price.
 
@@ -176,6 +169,8 @@ for(i in 1:nrow(df_bought_sold)){
   
 }
 ```
+
+# Final result
 
 What was our total ROI?
 
