@@ -116,8 +116,19 @@ df_with_sma %>%
       signal == previous_signal ~ "hold",
       TRUE ~ signal
     )
-  ) -> df_bought_sold
+  ) -> df_with_decisions
 ```
+
+Extract the periods when we would have bought or sold.
+
+```{r}
+df_with_decisions %>%
+  filter(decision != 'hold') %>%
+  select(timestamp, close, high, low, sma_50, sma_200, decision) -> df_bought_sold
+
+df_bought_sold
+```
+
 
 # Visualizing the algorithm decisions
 
