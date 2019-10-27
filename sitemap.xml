@@ -3,25 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tylerburleigh.com/blog/2019-data-science-bowl-part-1/</loc>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/blog/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/categories/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/data-viz/</loc>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/tags/r/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/</loc>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/data-science-bowl/</loc>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
+    <lastmod>2019-10-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -32,12 +61,6 @@
   
   <url>
     <loc>https://tylerburleigh.com/tags/tsla/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -147,12 +170,6 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/data-viz/</loc>
-    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/blog/yadsjma/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
   </url>
@@ -245,12 +262,6 @@
   
   <url>
     <loc>https://tylerburleigh.com/tags/caret/</loc>
-    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
     <lastmod>2019-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

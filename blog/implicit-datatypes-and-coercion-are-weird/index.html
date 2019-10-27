@@ -109,10 +109,10 @@ for(i in 1:3){
   df[i,2] &lt;- round(runif(min = 0, max = 24, n = 1)) # hour_of_day
 }
 df</code></pre>
-<pre><code>##     weekday hour_of_day
-## 1    Sunday          20
-## 2 Wednesday          20
-## 3  Thursday           1</code></pre>
+<pre><code>##    weekday hour_of_day
+## 1 Thursday          21
+## 2   Sunday          19
+## 3   Sunday          12</code></pre>
 <p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained <code>NA</code>), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
 <p>If we put a different type of data into one of these columns, R knows that it should change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
@@ -145,7 +145,7 @@ typeof(df$name)</code></pre>
   time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
 )</code></pre>
 <pre><code>##    name         time_placed         time_filled
-## 1 Tyler 2019-10-11 18:00:00 2019-10-11 22:00:00</code></pre>
+## 1 Tyler 2019-10-26 18:00:00 2019-10-26 22:00:00</code></pre>
 <p>If you wanted to ingest a lot of orders and then put them into the same dataframe, you might start by initializing an empty dataframe like we did before using the matrix method.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
 df &lt;- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
@@ -173,8 +173,8 @@ for(order in orders){
 }
 df_final</code></pre>
 <pre><code>##        name         time_placed         time_filled
-## 1     Tyler 2019-10-11 18:00:00 2019-10-11 22:00:00
-## 2 Friedrich 2019-10-11 14:00:00 2019-10-11 21:00:00</code></pre>
+## 1     Tyler 2019-10-26 18:00:00 2019-10-26 22:00:00
+## 2 Friedrich 2019-10-26 14:00:00 2019-10-26 21:00:00</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <p>But what happens if each of the orders doesn’t contain the same type of data? For example, what if the fulfillment time (<code>time_fulfilled</code>) is <code>NA</code> when the order has not yet been filled? If the first order that we put into the dataframe has the data type we’re expecting – a <code>POSIXct</code> time/date type – then the column gets initialized to a <code>POSIXct</code> column and there’s no problem if <code>NA</code> values come in later because <code>POSIXct</code> data can assume an <code>NA</code> value.</p>
@@ -199,8 +199,8 @@ for(order in orders){
 }
 df_final</code></pre>
 <pre><code>##        name         time_placed         time_filled
-## 1     Tyler 2019-10-11 18:00:00 2019-10-11 22:00:00
-## 2 Friedrich 2019-10-11 14:00:00 2019-10-11 21:00:00</code></pre>
+## 1     Tyler 2019-10-26 18:00:00 2019-10-26 22:00:00
+## 2 Friedrich 2019-10-26 14:00:00 2019-10-26 21:00:00</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <p>If, on the other hand, the first order that we put into the dataframe contains an <code>NA</code> value for that column, the column first gets initialized to a <code>logical</code>. We saw this in the previous section, no big deal.</p>
@@ -215,7 +215,7 @@ order1 &lt;- data.frame(
 df_final &lt;- rbind(df_final, order1)
 df_final</code></pre>
 <pre><code>##    name         time_placed time_filled
-## 1 Tyler 2019-10-11 18:00:00          NA</code></pre>
+## 1 Tyler 2019-10-26 18:00:00          NA</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 <p>But – and here’s where it gets a bit weird – if the next order that comes in has a value for that same column, the column gets coerced to a <code>double</code> and we see a numerical value instead (this is what we call an <code>epoch</code> value). For some reason, R has decided that this is the best data type to use for the column.</p>
@@ -228,8 +228,8 @@ df_final</code></pre>
 df_final &lt;- rbind(df_final, order2)
 df_final</code></pre>
 <pre><code>##        name         time_placed time_filled
-## 1     Tyler 2019-10-11 18:00:00          NA
-## 2 Friedrich 2019-10-11 14:00:00  1570842000</code></pre>
+## 1     Tyler 2019-10-26 18:00:00          NA
+## 2 Friedrich 2019-10-26 14:00:00  1572138000</code></pre>
 <p>Instead of initializing the matrix with <code>NA</code>, we also could have used an empty string (<code>""</code>) for the same result.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
 df &lt;- stats::setNames(data.frame(matrix(&quot;&quot;, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
@@ -247,7 +247,7 @@ order1 &lt;- data.frame(
 df_final &lt;- rbind(df_final, order1)
 df_final</code></pre>
 <pre><code>##    name         time_placed time_filled
-## 1 Tyler 2019-10-11 18:00:00          NA</code></pre>
+## 1 Tyler 2019-10-26 18:00:00          NA</code></pre>
 <pre class="r"><code>order2 &lt;- data.frame(
         name = &quot;Friedrich&quot;,
         time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
@@ -257,8 +257,8 @@ df_final</code></pre>
 df_final &lt;- rbind(df_final, order2)
 df_final</code></pre>
 <pre><code>##        name         time_placed time_filled
-## 1     Tyler 2019-10-11 18:00:00          NA
-## 2 Friedrich 2019-10-11 14:00:00  1570842000</code></pre>
+## 1     Tyler 2019-10-26 18:00:00          NA
+## 2 Friedrich 2019-10-26 14:00:00  1572138000</code></pre>
 </div>
 <div id="example-2" class="section level3">
 <h3>Example 2</h3>
@@ -276,7 +276,7 @@ df_final[1,2] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(2)
 
 df_final</code></pre>
 <pre><code>##    name time_placed time_filled
-## 1 Tyler  1570831200        &lt;NA&gt;</code></pre>
+## 1 Tyler  1572127200        &lt;NA&gt;</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <pre class="r"><code>df_final[2,1] &lt;- &quot;Tyler&quot;
@@ -285,8 +285,8 @@ df_final[2,3] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(1)
 
 df_final</code></pre>
 <pre><code>##    name time_placed time_filled
-## 1 Tyler  1570831200        &lt;NA&gt;
-## 2 Tyler  1570816800  1570834800</code></pre>
+## 1 Tyler  1572127200        &lt;NA&gt;
+## 2 Tyler  1572112800  1572130800</code></pre>
 <p>This time <code>time_filled</code> becomes a <code>character</code> type!</p>
 </div>
 </div>
@@ -298,22 +298,22 @@ df_final</code></pre>
 
 as.character(time) -&gt; chr
 chr</code></pre>
-<pre><code>## [1] &quot;2019-10-11 20:00:00&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-26 20:00:00&quot;</code></pre>
 <pre class="r"><code>as.POSIXct(chr)</code></pre>
-<pre><code>## [1] &quot;2019-10-11 20:00:00 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-26 20:00:00 EDT&quot;</code></pre>
 <pre class="r"><code>as.numeric(time) -&gt; num
 num</code></pre>
-<pre><code>## [1] 1570838400</code></pre>
+<pre><code>## [1] 1572134400</code></pre>
 <pre class="r"><code>as.POSIXct(num, origin = &#39;1970-01-01&#39;)</code></pre>
-<pre><code>## [1] &quot;2019-10-11 20:00:00 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-26 20:00:00 EDT&quot;</code></pre>
 <pre class="r"><code>as.character(num) -&gt; numchr
 numchr</code></pre>
-<pre><code>## [1] &quot;1570838400&quot;</code></pre>
+<pre><code>## [1] &quot;1572134400&quot;</code></pre>
 <pre class="r"><code>try(as.POSIXct(numchr))</code></pre>
 <pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
 ##   character string is not in a standard unambiguous format</code></pre>
 <pre class="r"><code>as.POSIXct(as.numeric(numchr), origin = &#39;1970-01-01&#39;)</code></pre>
-<pre><code>## [1] &quot;2019-10-11 20:00:00 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2019-10-26 20:00:00 EDT&quot;</code></pre>
 </div>
 <div id="insight-into-the-original-bug-report" class="section level2">
 <h2>Insight into the original bug report</h2>
@@ -327,7 +327,7 @@ data.frame(name = &quot;Friedrich&quot;, time = as.POSIXct(Sys.Date()), stringsA
 rbind(a, b)</code></pre>
 <pre><code>##        name       time
 ## 1     Tyler           
-## 2 Friedrich 1570838400</code></pre>
+## 2 Friedrich 1572134400</code></pre>
 <pre class="r"><code>try(rbind(b, a))</code></pre>
 <pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
 ##   character string is not in a standard unambiguous format</code></pre>
@@ -343,10 +343,10 @@ data.frame(name = &quot;Friedrich&quot;, time = time) -&gt; b
 rbind(a, b)</code></pre>
 <pre><code>##        name                time
 ## 1     Tyler                &lt;NA&gt;
-## 2 Friedrich 2019-10-11 20:00:00</code></pre>
+## 2 Friedrich 2019-10-26 20:00:00</code></pre>
 <pre class="r"><code>rbind(b, a)</code></pre>
 <pre><code>##        name                time
-## 1 Friedrich 2019-10-11 20:00:00
+## 1 Friedrich 2019-10-26 20:00:00
 ## 2     Tyler                &lt;NA&gt;</code></pre>
 </div>
 </main>
