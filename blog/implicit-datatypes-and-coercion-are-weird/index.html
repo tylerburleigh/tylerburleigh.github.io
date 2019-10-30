@@ -109,10 +109,10 @@ for(i in 1:3){
   df[i,2] &lt;- round(runif(min = 0, max = 24, n = 1)) # hour_of_day
 }
 df</code></pre>
-<pre><code>##     weekday hour_of_day
-## 1    Friday           3
-## 2    Sunday           3
-## 3 Wednesday           2</code></pre>
+<pre><code>##    weekday hour_of_day
+## 1 Saturday           9
+## 2   Monday          15
+## 3 Saturday           2</code></pre>
 <p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained <code>NA</code>), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
 <p>If we put a different type of data into one of these columns, R knows that it should change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
