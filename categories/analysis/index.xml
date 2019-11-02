@@ -6,13 +6,31 @@
     <description>Recent content in Analysis on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/categories/analysis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2019 Data Science Bowl - Part 2 - Handling the JSON</title>
+      <title>2019 DS Bowl - Part 4 - A deeper exploration of game structure</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-4/</link>
+      <pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-4/</guid>
+      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html</description>
+    </item>
+    
+    <item>
+      <title>2019 DS Bowl - Part 3 - Exploring the Game data</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-3/</link>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-3/</guid>
+      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html</description>
+    </item>
+    
+    <item>
+      <title>2019 DS Bowl - Part 2 - Handling the JSON</title>
       <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-2/</link>
       <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
       
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>2019 Data Science Bowl - Part 1 - Reading in the data</title>
+      <title>2019 DS Bowl - Part 1 - Reading in the data</title>
       <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-1/</link>
       <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
       
