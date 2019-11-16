@@ -6,54 +6,20 @@
     <description>Recent content in Home on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tylerburleigh.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2019 DS Bowl - Part 5 - Scoring &amp; &#34;ground truth&#34; calibration</title>
-      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-5/</link>
-      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      <title>2019 Data Science Bowl</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-5/</guid>
-      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth.html</description>
-    </item>
-    
-    <item>
-      <title>2019 DS Bowl - Part 4 - A deeper exploration of game structure</title>
-      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-4/</link>
-      <pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-4/</guid>
-      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html</description>
-    </item>
-    
-    <item>
-      <title>2019 DS Bowl - Part 3 - Exploring the Game data</title>
-      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-3/</link>
-      <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-3/</guid>
-      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html</description>
-    </item>
-    
-    <item>
-      <title>2019 DS Bowl - Part 2 - Handling the JSON</title>
-      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-2/</link>
-      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-2/</guid>
-      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-2-handling-the-json.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-2-handling-the-json.html</description>
-    </item>
-    
-    <item>
-      <title>2019 DS Bowl - Part 1 - Reading in the data</title>
-      <link>https://tylerburleigh.com/blog/2019-data-science-bowl-part-1/</link>
-      <pubDate>Sun, 27 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl-part-1/</guid>
-      <description> window.location.replace(&#34;https://tylerburleigh.com/data-science-bowl-2019/part-1-reading-in-the-data.html&#34;);Go here: https://tylerburleigh.com/data-science-bowl-2019/part-1-reading-in-the-data.html</description>
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl/</guid>
+      <description>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
+I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo;ll list below.
+ Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&amp;rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</description>
     </item>
     
     <item>
@@ -175,7 +141,7 @@ An educational talk for a non-academic audience about measurements in psychology
       
       <guid>https://tylerburleigh.com/page/writings/</guid>
       <description>I’ve authored peer-reviewed scholarly articles and white papers.
-As of 2019-11-03, my papers were cited 323 times and my h-index was 8. (source: Google Scholar)
+As of 2019-11-16, my papers were cited 331 times and my h-index was 8. (source: Google Scholar)
 PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
 Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
     </item>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kaggle on Tyler Burleigh</title>
-    <link>https://tylerburleigh.com/tags/kaggle/</link>
-    <description>Recent content in Kaggle on Tyler Burleigh</description>
+    <title>ML on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/ml/</link>
+    <description>Recent content in ML on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tylerburleigh.com/tags/kaggle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tylerburleigh.com/tags/ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
 I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo;ll list below.
  Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&amp;rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</description>
-    </item>
-    
-    <item>
-      <title>Surviving the Titanic with R caret</title>
-      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
-      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
-      <description>Introduction I&amp;rsquo;ve been meaning to &amp;ldquo;upskill&amp;rdquo; into the world of machine learning for some time. I&amp;rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</description>
     </item>
     
   </channel>

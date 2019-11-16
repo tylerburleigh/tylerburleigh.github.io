@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2019 Data Science Bowl | Tyler Burleigh</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <style>
+    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
+    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
+    :root {--accent: #0078ff;}
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/blog/">Blog</a></li>
+      
+      <li><a href="/page/writings/">Writing</a></li>
+      
+      <li><a href="/page/teachings/">Teaching</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+	<span class="title">2019 Data Science Bowl</span>
+	
+		<div class="meta">November 16, 2019</div>
+	
+	
+	
+		<div class="meta">
+			[ 
+			<a href='/categories/analysis'>Analysis</a> ]
+		</div>
+	
+	<kbd class="item-tag">
+		<a href='/tags/kaggle'>Kaggle</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/r'>R</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/analysis'>analysis</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/eda'>EDA</a></kbd>
+	<kbd class="item-tag">
+		<a href='/tags/ml'>ML</a></kbd>
+	
+</div>
+
+<main><p>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.</p>
+
+<p>I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.</p>
+
+<ul>
+<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-1-reading-in-the-data.html">Part 1</a> - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</p></li>
+
+<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-2-handling-the-json.html">Part 2</a> - I discover that the dataframe contains unstructured text in the form of JSON. I proceed to devise a solution to extracting this data in a way that will make it easier to explore.</p></li>
+
+<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html">Part 3</a> - I begin to explore the data, focusing on the &ldquo;Game&rdquo; session type, with the goal of trying to understand what exactly constitutes a game. In doing this, I discover an edge case with my JSON extraction function developed in the last part, and spend time fixing this.</p></li>
+
+<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html">Part 4</a> - I continue to explore the Game data. I try to questions about levels, level progression (are higher levels more difficult, and does difficulty climb indefinitely?), and basic game events (e.g., what determines when a game session is “finished”?).</p></li>
+
+<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth">Part 5</a> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p></li>
+</ul>
+
+<p>At this point I realize that I will need to start working on Kaggle itself because the competition submissions require notebook-based submissions. So I start to write some Kaggle notebooks.</p>
+
+<ul>
+<li><p><a href="https://www.kaggle.com/bluewizard/basic-median-model">Simple R median baseline model</a> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p></li>
+
+<li><p><a href="https://www.kaggle.com/bluewizard/basic-random-forest-model">Basic random forest model</a> - I create a baseline random forest model using only the Assessment title as a predictor and obtain similar performance to the median model.</p></li>
+
+<li><p><a href="https://www.kaggle.com/bluewizard/exploring-accuracy-on-games">Exploring accuracy on Games</a> - I start to explore the possibility that Game performance might help predict performance on the Assessments and compare the fit of a baseline Random Forest model against one that includes game performance.</p></li>
+
+<li><p><a href="https://www.kaggle.com/bluewizard/random-forest-with-performance-history">Random forest with performance history</a> - I take what I&rsquo;ve learned so far and apply it to predicting test performance. This model is a Random Forest that includes game performance. This model is a slight improvement over the baseline model.</p></li>
+</ul>
+</main>
+
+
+	
+<nav class="post-nav">
+	<div class="post-prev">
+		<a href="/blog/simple-moving-average-algorithmic-backtest/" rel="prev">
+			<span class="post-nav__caption">
+				« Older
+			</span>
+			<p class="post-nav__title-left">
+				Simple Moving Average algorithm &amp; backtest
+			</p>
+		</a>
+	</div>
+</nav>
+
+
+
+
+
+
+
+	<h4 class="related">Related Posts</h4>
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/10/05</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Other</strong>
+	</span> - 
+	<a href="/blog/implicit-datatypes-and-coercion-are-weird/">Implicit datatypes and coercion are weird</a>
+</li>
+
+	
+		<li>
+	
+	<span class="asterisk">
+		♥️
+	</span>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/27</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Prediction</strong>
+	</span> - 
+	<a href="/blog/predicting-t-shirt-size-from-height-and-weight/">Predicting t-shirt size from height and weight</a>
+</li>
+
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/22</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Scraping</strong>
+	</span> - 
+	<a href="/blog/exploring-philly-s-world-of-murals-pt1/">Scraping the Mural Arts Philadephia website</a>
+</li>
+
+	
+		<li>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/21</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Package</strong>
+	</span> - 
+	<a href="/blog/nutritionr-nlp-nutrition-analysis-in-r/">nutritionR: NLP nutrition analysis in R</a>
+</li>
+
+	
+		<li>
+	
+	<span class="asterisk">
+		♥️
+	</span>
+	
+	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/14</span> - 
+	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
+		<strong>Data Viz</strong>
+	</span> - 
+	<a href="/blog/yadsjma/">Yet Another Data Science Job Market Analysis</a>
+</li>
+
+	
+
+    
+
+	<h4 class="comment">Comments</h4>
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+<footer>
+<hr/>
+
+
+	<nav>
+		<ul class="menu">
+			
+			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+			
+			<li><a href="https://github.com/tylerburleigh"><i class="fa fa-github"></i></a></li>
+			
+			<li><a href="https://twitter.com/tylerburleigh"><i class="fa fa-twitter"></i></a></li>
+			
+			<li><a href="https://www.linkedin.com/in/tylerburleigh"><i class="fa fa-linkedin"></i></a></li>
+			
+		</ul>
+	</nav>
+
+
+<p class="copyright text-muted">
+	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
+</p>
+
+  </footer>
+  </body>
+</html>
+
