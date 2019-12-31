@@ -1,74 +1,373 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Implicit datatypes and coercion are weird | Tyler Burleigh</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <style>
-    html body, h1, h2, h3, h4, h5, h6 {font-family: Raleway, Verdana, Arial, sans-serif;}
-    main {font-family: Proxima Nova, Verdana, Arial, sans-serif;}
-    :root {--accent: #0078ff;}
-</style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Implicit datatypes and coercion are weird - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
+R dataframes are flexibleThe dataframe is an R object with columns and rows, where each column of a dataframe has a single data type." />
+  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <title>Implicit datatypes and coercion are weird - Tyler Burleigh</title>
+  
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima%20Nova">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="Implicit datatypes and coercion are weird" />
+<meta property="og:description" content="The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
+R dataframes are flexibleThe dataframe is an R object with columns and rows, where each column of a dataframe has a single data type." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/" />
+<meta property="article:published_time" content="2019-10-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-05T00:00:00+00:00" />
+<meta itemprop="name" content="Implicit datatypes and coercion are weird">
+<meta itemprop="description" content="The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
+R dataframes are flexibleThe dataframe is an R object with columns and rows, where each column of a dataframe has a single data type.">
 
-    
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-40957506-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
+<meta itemprop="datePublished" content="2019-10-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1910">
+
+
+
+<meta itemprop="keywords" content="R,pyMTurkR," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Implicit datatypes and coercion are weird"/>
+<meta name="twitter:description" content="The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
+Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
+R dataframes are flexibleThe dataframe is an R object with columns and rows, where each column of a dataframe has a single data type."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
   </head>
+  
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/blog/">Blog</a></li>
-      
-      <li><a href="/page/writings/">Writing</a></li>
-      
-      <li><a href="/page/teachings/">Teaching</a></li>
-      
-    </ul>
-    <hr/>
-    </nav>
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/tylerburleigh" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">xiaoheiAh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">author title</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC area</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-blog">
+                <a href="/blog">
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Categories</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">Tags</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-writing">
+                <a href="/page/writings/">
+                  <span class="menu-title">Writing</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-
-<div class="article-meta">
-	<span class="title">Implicit datatypes and coercion are weird</span>
-	
-		<div class="meta">October 5, 2019</div>
-	
-	
-	
-		<div class="meta">
-			[ 
-			<a href='/categories/other'>Other</a> ]
-		</div>
-	
-	<kbd class="item-tag">
-		<a href='/tags/r'>R</a></kbd>
-	<kbd class="item-tag">
-		<a href='/tags/pymturkr'>pyMTurkR</a></kbd>
-	
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>enjoy~</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<main>
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/data-viz/" class="category-list-link">data-viz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/ml/" class="category-list-link">ml</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/package/" class="category-list-link">package</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/prediction/" class="category-list-link">prediction</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/scraping/" class="category-list-link">scraping</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/timeseries/" class="category-list-link">timeseries</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">1</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/algotrading/" class="tag-list-link">algotrading</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/analysis/" class="tag-list-link">analysis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/caret/" class="tag-list-link">caret</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/crowdwork/" class="tag-list-link">crowdwork</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-science/" class="tag-list-link">data-science</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/dataviz/" class="tag-list-link">dataviz</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/economics/" class="tag-list-link">economics</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/fairness/" class="tag-list-link">fairness</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/jobs/" class="tag-list-link">jobs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/ml/" class="tag-list-link">ml</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/online-research-methods/" class="tag-list-link">online-research-methods</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/open-source/" class="tag-list-link">open-source</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/package/" class="tag-list-link">package</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/pymturkr/" class="tag-list-link">pymturkr</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">10</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/shirts/" class="tag-list-link">shirts</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/stock-market/" class="tag-list-link">stock-market</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tsla/" class="tag-list-link">tsla</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-implicit-datatypes-and-coercion-are-weird" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/implicit-datatypes-and-coercion-are-weird/"
+    >Implicit datatypes and coercion are weird</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/" class="article-date">
+  <time datetime="2019-10-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-10-05</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/other/"> Other </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/r/"> R </a>
+    <a class="article-tag-link" href="/tags/pymturkr/"> pyMTurkR </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/implicit-datatypes-and-coercion-are-weird/#comments"
+            class="article-comment-link">Comments</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count:1910words</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count:9minutes </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      
 
 
 <p>The other day, a user of my <a href="https://github.com/cloudyr/pyMTurkR">pyMTurkR</a> package wrote to say they encountered an issue with the <code>GetAssignments()</code> function. When they tried calling the function it would throw the following error:</p>
@@ -110,9 +409,9 @@ for(i in 1:3){
 }
 df</code></pre>
 <pre><code>##    weekday hour_of_day
-## 1   Friday           0
-## 2 Saturday          22
-## 3   Sunday          13</code></pre>
+## 1 Thursday          19
+## 2  Tuesday           9
+## 3  Tuesday          22</code></pre>
 <p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained <code>NA</code>), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
 <p>If we put a different type of data into one of these columns, R knows that it should change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
@@ -145,7 +444,7 @@ typeof(df$name)</code></pre>
   time_filled = as.POSIXct(Sys.Date()) + lubridate::hours(2)
 )</code></pre>
 <pre><code>##    name         time_placed         time_filled
-## 1 Tyler 2019-11-15 17:00:00 2019-11-15 21:00:00</code></pre>
+## 1 Tyler 2019-12-29 17:00:00 2019-12-29 21:00:00</code></pre>
 <p>If you wanted to ingest a lot of orders and then put them into the same dataframe, you might start by initializing an empty dataframe like we did before using the matrix method.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
 df &lt;- stats::setNames(data.frame(matrix(NA, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
@@ -173,8 +472,8 @@ for(order in orders){
 }
 df_final</code></pre>
 <pre><code>##        name         time_placed         time_filled
-## 1     Tyler 2019-11-15 17:00:00 2019-11-15 21:00:00
-## 2 Friedrich 2019-11-15 13:00:00 2019-11-15 20:00:00</code></pre>
+## 1     Tyler 2019-12-29 17:00:00 2019-12-29 21:00:00
+## 2 Friedrich 2019-12-29 13:00:00 2019-12-29 20:00:00</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <p>But what happens if each of the orders doesn’t contain the same type of data? For example, what if the fulfillment time (<code>time_fulfilled</code>) is <code>NA</code> when the order has not yet been filled? If the first order that we put into the dataframe has the data type we’re expecting – a <code>POSIXct</code> time/date type – then the column gets initialized to a <code>POSIXct</code> column and there’s no problem if <code>NA</code> values come in later because <code>POSIXct</code> data can assume an <code>NA</code> value.</p>
@@ -199,8 +498,8 @@ for(order in orders){
 }
 df_final</code></pre>
 <pre><code>##        name         time_placed         time_filled
-## 1     Tyler 2019-11-15 17:00:00 2019-11-15 21:00:00
-## 2 Friedrich 2019-11-15 13:00:00 2019-11-15 20:00:00</code></pre>
+## 1     Tyler 2019-12-29 17:00:00 2019-12-29 21:00:00
+## 2 Friedrich 2019-12-29 13:00:00 2019-12-29 20:00:00</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;double&quot;</code></pre>
 <p>If, on the other hand, the first order that we put into the dataframe contains an <code>NA</code> value for that column, the column first gets initialized to a <code>logical</code>. We saw this in the previous section, no big deal.</p>
@@ -215,7 +514,7 @@ order1 &lt;- data.frame(
 df_final &lt;- rbind(df_final, order1)
 df_final</code></pre>
 <pre><code>##    name         time_placed time_filled
-## 1 Tyler 2019-11-15 17:00:00          NA</code></pre>
+## 1 Tyler 2019-12-29 17:00:00          NA</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;logical&quot;</code></pre>
 <p>But – and here’s where it gets a bit weird – if the next order that comes in has a value for that same column, the column gets coerced to a <code>double</code> and we see a numerical value instead (this is what we call an <code>epoch</code> value). For some reason, R has decided that this is the best data type to use for the column.</p>
@@ -228,8 +527,8 @@ df_final</code></pre>
 df_final &lt;- rbind(df_final, order2)
 df_final</code></pre>
 <pre><code>##        name         time_placed time_filled
-## 1     Tyler 2019-11-15 17:00:00          NA
-## 2 Friedrich 2019-11-15 13:00:00  1573866000</code></pre>
+## 1     Tyler 2019-12-29 17:00:00          NA
+## 2 Friedrich 2019-12-29 13:00:00  1577667600</code></pre>
 <p>Instead of initializing the matrix with <code>NA</code>, we also could have used an empty string (<code>""</code>) for the same result.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;time_placed&#39;, &#39;time_filled&#39;)
 df &lt;- stats::setNames(data.frame(matrix(&quot;&quot;, nrow = 0, ncol = 3), stringsAsFactors = FALSE), colnames)
@@ -247,7 +546,7 @@ order1 &lt;- data.frame(
 df_final &lt;- rbind(df_final, order1)
 df_final</code></pre>
 <pre><code>##    name         time_placed time_filled
-## 1 Tyler 2019-11-15 17:00:00          NA</code></pre>
+## 1 Tyler 2019-12-29 17:00:00          NA</code></pre>
 <pre class="r"><code>order2 &lt;- data.frame(
         name = &quot;Friedrich&quot;,
         time_placed = as.POSIXct(Sys.Date()) - lubridate::hours(6),
@@ -257,8 +556,8 @@ df_final</code></pre>
 df_final &lt;- rbind(df_final, order2)
 df_final</code></pre>
 <pre><code>##        name         time_placed time_filled
-## 1     Tyler 2019-11-15 17:00:00          NA
-## 2 Friedrich 2019-11-15 13:00:00  1573866000</code></pre>
+## 1     Tyler 2019-12-29 17:00:00          NA
+## 2 Friedrich 2019-12-29 13:00:00  1577667600</code></pre>
 </div>
 <div id="example-2" class="section level3">
 <h3>Example 2</h3>
@@ -276,7 +575,7 @@ df_final[1,2] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(2)
 
 df_final</code></pre>
 <pre><code>##    name time_placed time_filled
-## 1 Tyler  1573855200        &lt;NA&gt;</code></pre>
+## 1 Tyler  1577656800        &lt;NA&gt;</code></pre>
 <pre class="r"><code>typeof(df_final$time_filled)</code></pre>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <pre class="r"><code>df_final[2,1] &lt;- &quot;Tyler&quot;
@@ -285,8 +584,8 @@ df_final[2,3] &lt;- as.POSIXct(Sys.Date()) - lubridate::hours(1)
 
 df_final</code></pre>
 <pre><code>##    name time_placed time_filled
-## 1 Tyler  1573855200        &lt;NA&gt;
-## 2 Tyler  1573840800  1573858800</code></pre>
+## 1 Tyler  1577656800        &lt;NA&gt;
+## 2 Tyler  1577642400  1577660400</code></pre>
 <p>This time <code>time_filled</code> becomes a <code>character</code> type!</p>
 </div>
 </div>
@@ -298,22 +597,22 @@ df_final</code></pre>
 
 as.character(time) -&gt; chr
 chr</code></pre>
-<pre><code>## [1] &quot;2019-11-15 19:00:00&quot;</code></pre>
+<pre><code>## [1] &quot;2019-12-29 19:00:00&quot;</code></pre>
 <pre class="r"><code>as.POSIXct(chr)</code></pre>
-<pre><code>## [1] &quot;2019-11-15 19:00:00 EST&quot;</code></pre>
+<pre><code>## [1] &quot;2019-12-29 19:00:00 EST&quot;</code></pre>
 <pre class="r"><code>as.numeric(time) -&gt; num
 num</code></pre>
-<pre><code>## [1] 1573862400</code></pre>
+<pre><code>## [1] 1577664000</code></pre>
 <pre class="r"><code>as.POSIXct(num, origin = &#39;1970-01-01&#39;)</code></pre>
-<pre><code>## [1] &quot;2019-11-15 19:00:00 EST&quot;</code></pre>
+<pre><code>## [1] &quot;2019-12-29 19:00:00 EST&quot;</code></pre>
 <pre class="r"><code>as.character(num) -&gt; numchr
 numchr</code></pre>
-<pre><code>## [1] &quot;1573862400&quot;</code></pre>
+<pre><code>## [1] &quot;1577664000&quot;</code></pre>
 <pre class="r"><code>try(as.POSIXct(numchr))</code></pre>
 <pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
 ##   character string is not in a standard unambiguous format</code></pre>
 <pre class="r"><code>as.POSIXct(as.numeric(numchr), origin = &#39;1970-01-01&#39;)</code></pre>
-<pre><code>## [1] &quot;2019-11-15 19:00:00 EST&quot;</code></pre>
+<pre><code>## [1] &quot;2019-12-29 19:00:00 EST&quot;</code></pre>
 </div>
 <div id="insight-into-the-original-bug-report" class="section level2">
 <h2>Insight into the original bug report</h2>
@@ -327,7 +626,7 @@ data.frame(name = &quot;Friedrich&quot;, time = as.POSIXct(Sys.Date()), stringsA
 rbind(a, b)</code></pre>
 <pre><code>##        name       time
 ## 1     Tyler           
-## 2 Friedrich 1573862400</code></pre>
+## 2 Friedrich 1577664000</code></pre>
 <pre class="r"><code>try(rbind(b, a))</code></pre>
 <pre><code>## Error in as.POSIXlt.character(x, tz, ...) : 
 ##   character string is not in a standard unambiguous format</code></pre>
@@ -343,155 +642,170 @@ data.frame(name = &quot;Friedrich&quot;, time = time) -&gt; b
 rbind(a, b)</code></pre>
 <pre><code>##        name                time
 ## 1     Tyler                &lt;NA&gt;
-## 2 Friedrich 2019-11-15 19:00:00</code></pre>
+## 2 Friedrich 2019-12-29 19:00:00</code></pre>
 <pre class="r"><code>rbind(b, a)</code></pre>
 <pre><code>##        name                time
-## 1 Friedrich 2019-11-15 19:00:00
+## 1 Friedrich 2019-12-29 19:00:00
 ## 2     Tyler                &lt;NA&gt;</code></pre>
 </div>
-</main>
 
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/" title="Implicit datatypes and coercion are weird" target="_blank" rel="external">https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
 
-	
-<nav class="post-nav">
-	<div class="post-prev">
-		<a href="/blog/predicting-t-shirt-size-from-height-and-weight/" rel="prev">
-			<span class="post-nav__caption">
-				« Older
-			</span>
-			<p class="post-nav__title-left">
-				Predicting t-shirt size from height and weight
-			</p>
-		</a>
-	</div>
-	<div class="post-next">
-		<a href="/blog/simple-moving-average-algorithmic-backtest/" rel="next">
-			<span class="post-nav__caption">
-				Newer »
-			</span>
-			<p class="post-nav__title-right">
-				Simple Moving Average algorithm &amp; backtest
-			</p>
-		</a>
-	</div>
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/tylerburleigh" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/tylerburleigh" target="_blank"><span class="text-dark">xiaoheiAh</span><small class="ml-1x">author title</small></a></h3>
+        <div>Quantitative Researcher</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/" title="Predicting t-shirt size from height and weight"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/"
+                    title="Simple Moving Average algorithm &amp; backtest"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
 </nav>
 
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/xiaoheiAh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://tylerburleigh.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2019
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
 
-
-
-
-
-
-	<h4 class="related">Related Posts</h4>
-	
-		<li>
-	
-	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/13</span> - 
-	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
-		<strong>Tutorial</strong>
-	</span> - 
-	<a href="/blog/mturk-qualification-tests/">pyMTurkR (vignette): A HIT with a Qualification Test</a>
-</li>
-
-	
-		<li>
-	
-	<span class="asterisk">
-		♥️
-	</span>
-	
-	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/27</span> - 
-	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
-		<strong>Prediction</strong>
-	</span> - 
-	<a href="/blog/predicting-t-shirt-size-from-height-and-weight/">Predicting t-shirt size from height and weight</a>
-</li>
-
-	
-		<li>
-	
-	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/22</span> - 
-	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
-		<strong>Scraping</strong>
-	</span> - 
-	<a href="/blog/exploring-philly-s-world-of-murals-pt1/">Scraping the Mural Arts Philadephia website</a>
-</li>
-
-	
-		<li>
-	
-	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/21</span> - 
-	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
-		<strong>Package</strong>
-	</span> - 
-	<a href="/blog/nutritionr-nlp-nutrition-analysis-in-r/">nutritionR: NLP nutrition analysis in R</a>
-</li>
-
-	
-		<li>
-	
-	<span class="asterisk">
-		♥️
-	</span>
-	
-	<span class="date" style="font-family:'Lucida Console', Monaco, monospace">2019/09/14</span> - 
-	<span class="category" style="width:100px;display:inline-block;text-align:center;background:#efefef">
-		<strong>Data Viz</strong>
-	</span> - 
-	<a href="/blog/yadsjma/">Yet Another Data Science Job Market Analysis</a>
-</li>
-
-	
-
-    
-
-	<h4 class="comment">Comments</h4>
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tyler-burleigh" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-<footer>
-<hr/>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<nav>
-		<ul class="menu">
-			
-			<li><a href="mailto:tylerburleigh@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-			
-			<li><a href="https://github.com/tylerburleigh"><i class="fa fa-github"></i></a></li>
-			
-			<li><a href="https://twitter.com/tylerburleigh"><i class="fa fa-twitter"></i></a></li>
-			
-			<li><a href="https://www.linkedin.com/in/tylerburleigh"><i class="fa fa-linkedin"></i></a></li>
-			
-		</ul>
-	</nav>
-
-
-<p class="copyright text-muted">
-	Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/oneleaftea/milano">Milano</a>
-</p>
-
-  </footer>
   </body>
 </html>
-

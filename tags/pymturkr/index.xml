@@ -5,11 +5,40 @@
     <link>https://tylerburleigh.com/tags/pymturkr/</link>
     <description>Recent content in pyMTurkR on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tylerburleigh.com/tags/pymturkr/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://tylerburleigh.com/tags/pymturkr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Titanic prediction with Python</title>
+      <link>https://tylerburleigh.com/blog/titanic-prediction-with-python/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/titanic-prediction-with-python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2019 Data Science Bowl</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl/</guid>
+      <description>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
+I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo;ll list below.
+ Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&amp;rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</description>
+    </item>
+    
+    <item>
+      <title>Simple Moving Average algorithm &amp; backtest</title>
+      <link>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</guid>
+      <description>I decided to try making a simple algorithm trader in R.
+The algorithm is based on the “moving average crossover”. Basically, the idea is to take two simple moving averages (SMAs) – one that averages over a longer time window, and one that averages over a shorter time window – and buy or sell based on when the two SMAs crossover. Here I used 50-day and 200-day SMAs. Buy decisions were when the SMA-50 went above the SMA-200, and sell decisions were when the SMA-50 went below the SMA-200.</description>
+    </item>
     
     <item>
       <title>Implicit datatypes and coercion are weird</title>
@@ -23,6 +52,44 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
     </item>
     
     <item>
+      <title>Predicting t-shirt size from height and weight</title>
+      <link>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</guid>
+      <description>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?
+In fact, it seemed so straight-forward that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something!</description>
+    </item>
+    
+    <item>
+      <title>Scraping the Mural Arts Philadephia website</title>
+      <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</guid>
+      <description>When I visited Philadelphia recently I was left with a lasting impression of the street art. I really liked how the murals added beauty to the neighborhoods, and how each mural was, it seemed, a statement about human virtue and resilience and empowerment. I was also struck by what it meant about the community of Philadelphia organizing around and celebrating this public good, and creating more of it.</description>
+    </item>
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I&amp;rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&amp;rsquo;m curious. So in order to move in that direction, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
+nutritionR is a wrapper for the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
+    </item>
+    
+    <item>
+      <title>Yet Another Data Science Job Market Analysis</title>
+      <link>https://tylerburleigh.com/blog/yadsjma/</link>
+      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/yadsjma/</guid>
+      <description> window.location.replace(&#34;https://tylerburleigh.com/YADSJMA&#34;);Go here: https://tylerburleigh.com/YADSJMA</description>
+    </item>
+    
+    <item>
       <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
       <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
@@ -30,6 +97,70 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
       <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
       <description>Introduction Researchers are sometimes interested in recruiting people into a study who have certain traits or characteristics. For example, a researcher might be interested in surveying young adults between the ages of 18-24, or female executives over the age of 65.
 Targeted recruitment of participants is useful if you&amp;rsquo;re only interested in responses from a specific populations of individuals and not the &amp;ldquo;general population&amp;rdquo;. But it is also useful when you want to oversample a class of participants in your study who were underrepresented in a different sample.</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I&amp;rsquo;m pleased to announce pyMTurkR, an R package that allows you to interface with MTurk&amp;rsquo;s Requester API.
+pyMTurkR provides access to the latest Amazon Mechanical Turk (MTurk) Requester API (version &amp;lsquo;2017-01-17&amp;rsquo;), using reticulate to wrap the boto3 SDK for Python. pyMTurkR is a replacement for the now obsolete MTurkR.
+Using this package, you can perform operations like: creating HITs, updating HITs, creating custom Qualifications, reviewing submitted Assignments, approving/rejecting Assignments, sending bonus payments to Workers, sending messages to Workers, blocking/unblocking Workers, and many more.</description>
+    </item>
+    
+    <item>
+      <title>What is fair payment on MTurk?</title>
+      <link>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
+      <description>My go-to place for convenience sampling is MTurk. It&amp;rsquo;s fast, it&amp;rsquo;s easy, it&amp;rsquo;s flexible, it can be as simple or complicated as you need it to be, the data is high quality and the samples are fairly &amp;ldquo;representative&amp;rdquo; of the US population. But what is &amp;ldquo;fair payment&amp;rdquo; for &amp;ldquo;work&amp;rdquo; on MTurk?
+Objectively, if we accept that MTurk work is like other kinds of work, then we should aim to pay an amount that equates to a minimum hourly wage.</description>
+    </item>
+    
+    <item>
+      <title>Surviving the Titanic with R caret</title>
+      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
+      <description>Introduction I&amp;rsquo;ve been meaning to &amp;ldquo;upskill&amp;rdquo; into the world of machine learning for some time. I&amp;rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tylerburleigh.com/blog/2019-12-30-titanic-prediction-with-python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-12-30-titanic-prediction-with-python/</guid>
+      <description>Titanic prediction with Python/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */!function(a,b){&#34;object&#34;==typeof module&amp;&amp;&#34;object&#34;==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(&#34;jQuery requires a window with a document&#34;);return b(a)}:b(a)}(&#34;undefined&#34;!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l=&#34;1.11.3&#34;,m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:&#34;&#34;,length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&amp;&amp;bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for(&#34;boolean&#34;==typeof g&amp;&amp;(j=g,g=arguments[h]||{},h++),&#34;object&#34;==typeof g||m.isFunction(g)||(g={}),h===i&amp;&amp;(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&amp;&amp;(j&amp;&amp;c&amp;&amp;(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&amp;&amp;m.isArray(a)?a:[]):f=a&amp;&amp;m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&amp;&amp;(g[d]=c));return g},m.extend({expando:&#34;jQuery&#34;+(l+Math.random()).replace(/\D/g,&#34;&#34;),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return&#34;function&#34;===m.type(a)},isArray:Array.isArray||function(a){return&#34;array&#34;===m.type(a)},isWindow:function(a){return null!=a&amp;&amp;a==a.window},isNumeric:function(a){return!m.isArray(a)&amp;&amp;a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||&#34;object&#34;!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&amp;&amp;!j.call(a,&#34;constructor&#34;)&amp;&amp;!j.call(a.constructor.prototype,&#34;isPrototypeOf&#34;))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+&#34;&#34;:&#34;object&#34;==typeof a||&#34;</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://tylerburleigh.com/page/teachings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/teachings/</guid>
+      <description>I’ve given talks and lectures.
+Psychology2019/04 - A whirlwind tour of persuasion psychology
+An educational talk for a non-academic audience about the foundations of persuasion psychology. Covers human evolution, irrationality, heuristics and biases, cognitive dissonance, and social norms.
+2017/11 - What and how we measure things in psychology
+An educational talk for a non-academic audience about measurements in psychology. Sort of a 101 on measurement: What a measurement is, how a measurement comes to be created, and why we measure things at all.</description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://tylerburleigh.com/page/writings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/writings/</guid>
+      <description>I’ve authored peer-reviewed scholarly articles and white papers.
+As of 2019-12-30, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
+PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
+Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
     </item>
     
   </channel>
