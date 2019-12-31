@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tylerburleigh.com/categories/analysis/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/blog/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -22,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/ml/</loc>
+    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -44,12 +50,6 @@
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -75,12 +75,6 @@
     <lastmod>2019-11-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/analysis/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -196,7 +190,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/data-viz/</loc>
+    <loc>https://tylerburleigh.com/categories/dataviz/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -304,12 +298,6 @@
   
   <url>
     <loc>https://tylerburleigh.com/tags/caret/</loc>
-    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/machine-learning/</loc>
     <lastmod>2019-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
