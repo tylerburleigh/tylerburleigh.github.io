@@ -80,9 +80,9 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
           <a id="avatar" href="https://github.com/tylerburleigh" target="_blank">
             <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
-          <h2 id="name" class="hidden-xs hidden-sm">xiaoheiAh</h2>
-          <h3 id="title" class="hidden-xs hidden-sm hidden-md">author title</h3>
-          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC area</small>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Quantitative Researcher</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
         </div><div class="search" id="search-form-wrap">
     <form class="search-form sidebar-form">
         <div class="input-group">
@@ -128,25 +128,15 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
                   <span class="menu-title">Blog</span>
                 </a>
             </li>
-            <li class="menu-item menu-item-categories">
-                <a href="/categories">
-                    <i class="icon icon-folder"></i>
-                  <span class="menu-title">Categories</span>
-                </a>
-            </li>
-            <li class="menu-item menu-item-tags">
-                <a href="/tags">
-                    <i class="icon icon-tags"></i>
-                  <span class="menu-title">Tags</span>
-                </a>
-            </li>
             <li class="menu-item menu-item-writing">
                 <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
                   <span class="menu-title">Writing</span>
                 </a>
             </li>
             <li class="menu-item menu-item-teaching">
                 <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
                   <span class="menu-title">Teaching</span>
                 </a>
             </li>
@@ -158,16 +148,6 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
 <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
   <div class="slimContent">
     
-      <div class="widget">
-    <h3 class="widget-title">Board</h3>
-    <div class="widget-body">
-        <div id="board">
-            <div class="content"><p>enjoy~</p>
-            </div>
-        </div>
-    </div>
-</div>
-
       <div class="widget">
     <h3 class="widget-title"> Categories</h3>
     <div class="widget-body">
@@ -362,8 +342,6 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
 
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/implicit-datatypes-and-coercion-are-weird/#comments"
             class="article-comment-link">Comments</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count:1910words</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count:9minutes </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -409,9 +387,9 @@ for(i in 1:3){
 }
 df</code></pre>
 <pre><code>##    weekday hour_of_day
-## 1 Thursday          19
-## 2  Tuesday           9
-## 3  Tuesday          22</code></pre>
+## 1 Saturday           6
+## 2  Tuesday          20
+## 3   Sunday          22</code></pre>
 <p>Importantly, the dataframe is flexible. Even though the columns were initialized to have a <code>logical</code> type (because the matrix contained <code>NA</code>), when the dataframe is initialized it doesn’t yet contain any data, so we’re not confined to putting only <code>logical</code> data into those columns.</p>
 <p>If we put a different type of data into one of these columns, R knows that it should change the column’s data type to match whatever we put into it. For example, if we <code>rbind</code> the empty dataframe to one containing a name of <code>character</code> type and an age of <code>double</code> type, the name and age columns will change to assume these types accordingly.</p>
 <pre class="r"><code>colnames &lt;- c(&#39;name&#39;, &#39;age&#39;)
@@ -672,8 +650,8 @@ rbind(a, b)</code></pre>
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/tylerburleigh" target="_blank"><span class="text-dark">xiaoheiAh</span><small class="ml-1x">author title</small></a></h3>
-        <div>Quantitative Researcher</div>
+        <h3 class="media-heading"><a href="https://github.com/tylerburleigh" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Quantitative Researcher</small></a></h3>
+        <div></div>
       </div>
     </figure>
   </div>
