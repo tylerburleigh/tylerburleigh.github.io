@@ -5079,6 +5079,8 @@ a.label:focus {
 
 table {
   border: 1px solid #f2f2f2;
+  display: block;
+  overflow-x: auto;
 }
 
 table > thead > tr > th,

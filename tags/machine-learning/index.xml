@@ -16,7 +16,7 @@
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/titanic-prediction-with-python/</guid>
-      <description>Load data import pandas as pd import numpy as np import zipfile  z = zipfile.ZipFile(&#39;titanic.zip&#39;) train = pd.read_csv(z.open(&#39;train.csv&#39;)) test = pd.read_csv(z.open(&#39;test.csv&#39;))  train.describe()   .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    PassengerId Survived Pclass Age SibSp Parch Fare     count 891.000000 891.000000 891.000000 714.000000 891.000000 891.</description>
+      <description>I wanted to try out some of what I&amp;rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
-      <description>I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes</description>
+      <description>I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.</description>
     </item>
     
     <item>
@@ -79,8 +79,7 @@
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
-      <description>Introduction Researchers are sometimes interested in recruiting people into a study who have certain traits or characteristics. For example, a researcher might be interested in surveying young adults between the ages of 18-24, or female executives over the age of 65.
-Targeted recruitment of participants is useful if you&amp;rsquo;re only interested in responses from a specific populations of individuals and not the &amp;ldquo;general population&amp;rdquo;. But it is also useful when you want to oversample a class of participants in your study who were underrepresented in a different sample.</description>
+      <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
     </item>
     
     <item>
