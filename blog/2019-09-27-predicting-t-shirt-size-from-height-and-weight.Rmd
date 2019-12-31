@@ -3,10 +3,11 @@ title: 'Predicting t-shirt size from height and weight'
 author: ~
 date: '2019-09-27'
 slug: predicting-t-shirt-size-from-height-and-weight
-categories: ['Prediction']
-tags: ['R', 'regression', 'shirts']
+categories: ['Analysis']
+tags: ['R', 'regression', 'prediction', 'ML']
 disableComments: no
 bestof: yes
+summary: 'Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.'
 ---
 
 Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender? 

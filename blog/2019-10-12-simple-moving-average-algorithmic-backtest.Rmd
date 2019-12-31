@@ -3,10 +3,11 @@ title: Simple Moving Average algorithm & backtest
 author: ~
 date: '2019-10-12'
 slug: simple-moving-average-algorithmic-backtest
-categories: ['Timeseries']
-tags: ['r', 'algotrading', 'TSLA', 'stock market']
+categories: ['Analysis']
+tags: ['R', 'algotrading', 'ML', 'prediction']
 disableComments: no
 bestof: yes
+summary: 'I made an algorithmic trader in R based on the "moving average crossover" technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.'
 ---
 
 I decided to try making a simple algorithm trader in R.
@@ -26,7 +27,6 @@ Load libraries.
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library(tidyverse)
 library(tidyquant)
-#library(alphavantager)
 library(reshape2)
 library(ggplot2)
 library(lubridate)

@@ -3,6 +3,74 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tylerburleigh.com/blog/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/ml/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/titanic/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/blog/titanic-prediction-with-python/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/logistic-regression/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/python/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/random-forest/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/blog/2019-data-science-bowl/</loc>
     <lastmod>2019-11-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -16,32 +84,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/blog/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/tags/eda/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/kaggle/</loc>
     <lastmod>2019-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -54,12 +97,6 @@
   
   <url>
     <loc>https://tylerburleigh.com/tags/r/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/</loc>
     <lastmod>2019-11-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -78,45 +115,14 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/tsla/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/timeseries/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/tags/algotrading/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/stock-market/</loc>
+    <loc>https://tylerburleigh.com/tags/prediction/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/other/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/pymturkr/</loc>
-    <lastmod>2019-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -128,26 +134,8 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/prediction/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/tags/regression/</loc>
     <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/shirts/</loc>
-    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/scraping/</loc>
-    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,13 +147,19 @@
   </url>
   
   <url>
+    <loc>https://tylerburleigh.com/categories/tutorial/</loc>
+    <lastmod>2019-09-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/tags/scraping/</loc>
     <lastmod>2019-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/package/</loc>
+    <loc>https://tylerburleigh.com/categories/dev/</loc>
     <lastmod>2019-09-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -196,6 +190,12 @@
   </url>
   
   <url>
+    <loc>https://tylerburleigh.com/tags/software-development/</loc>
+    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/categories/data-viz/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -215,13 +215,13 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/dataviz/</loc>
+    <loc>https://tylerburleigh.com/tags/jobs/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/jobs/</loc>
+    <loc>https://tylerburleigh.com/tags/visualization/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -233,13 +233,13 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/tutorial/</loc>
+    <loc>https://tylerburleigh.com/tags/online-research-methods/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/online-research-methods/</loc>
+    <loc>https://tylerburleigh.com/tags/pymturkr/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -249,6 +249,12 @@
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/mturkr/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -286,12 +292,6 @@
   <url>
     <loc>https://tylerburleigh.com/tags/fairness/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/ml/</loc>
-    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

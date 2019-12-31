@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visualization on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/visualization/</link>
+    <description>Recent content in visualization on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 14 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://tylerburleigh.com/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Titanic prediction with Python</title>
+      <link>https://tylerburleigh.com/blog/titanic-prediction-with-python/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/titanic-prediction-with-python/</guid>
+      <description>Load data import pandas as pd import numpy as np import zipfile  z = zipfile.ZipFile(&#39;titanic.zip&#39;) train = pd.read_csv(z.open(&#39;train.csv&#39;)) test = pd.read_csv(z.open(&#39;test.csv&#39;))  train.describe()   .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    PassengerId Survived Pclass Age SibSp Parch Fare     count 891.000000 891.000000 891.000000 714.000000 891.000000 891.</description>
+    </item>
+    
+    <item>
+      <title>2019 Data Science Bowl</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl/</guid>
+      <description>I was inspired to participate in Kaggle&amp;rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.</description>
+    </item>
+    
+    <item>
+      <title>Simple Moving Average algorithm &amp; backtest</title>
+      <link>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</guid>
+      <description>I made an algorithmic trader in R based on the &amp;ldquo;moving average crossover&amp;rdquo; technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.</description>
+    </item>
+    
+    <item>
+      <title>Predicting t-shirt size from height and weight</title>
+      <link>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</guid>
+      <description>Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.</description>
+    </item>
+    
+    <item>
+      <title>Scraping the Mural Arts Philadephia website</title>
+      <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</guid>
+      <description>A mini-tutorial on web scraping with R.</description>
+    </item>
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes</description>
+    </item>
+    
+    <item>
+      <title>Yet Another Data Science Job Market Analysis</title>
+      <link>https://tylerburleigh.com/blog/yadsjma/</link>
+      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/yadsjma/</guid>
+      <description>An analysis of the data science job market from scraped LinkedIn data</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
+      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
+      <description>Introduction Researchers are sometimes interested in recruiting people into a study who have certain traits or characteristics. For example, a researcher might be interested in surveying young adults between the ages of 18-24, or female executives over the age of 65.
+Targeted recruitment of participants is useful if you&amp;rsquo;re only interested in responses from a specific populations of individuals and not the &amp;ldquo;general population&amp;rdquo;. But it is also useful when you want to oversample a class of participants in your study who were underrepresented in a different sample.</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
+    </item>
+    
+    <item>
+      <title>What is fair payment on MTurk?</title>
+      <link>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
+      <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
+    </item>
+    
+    <item>
+      <title>Surviving the Titanic with R caret</title>
+      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
+      <description>I use R to tackle the Kaggle Titanic data science competition.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://tylerburleigh.com/page/teachings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/teachings/</guid>
+      <description>I’ve given talks and lectures.
+Psychology2019/04 - A whirlwind tour of persuasion psychology
+An educational talk for a non-academic audience about the foundations of persuasion psychology. Covers human evolution, irrationality, heuristics and biases, cognitive dissonance, and social norms.
+2017/11 - What and how we measure things in psychology
+An educational talk for a non-academic audience about measurements in psychology. Sort of a 101 on measurement: What a measurement is, how a measurement comes to be created, and why we measure things at all.</description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://tylerburleigh.com/page/writings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/writings/</guid>
+      <description>I’ve authored peer-reviewed scholarly articles and white papers.
+As of 2019-12-31, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
+PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
+Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
+    </item>
+    
+  </channel>
+</rss>

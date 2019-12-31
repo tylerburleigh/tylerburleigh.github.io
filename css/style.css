@@ -542,6 +542,11 @@ mark,
   color: #777777 !important;
 }
 
+.article-meta {
+  color: #777777 !important;
+  padding-top: 20px;
+}
+
 .text-primary {
   color: #2196f3;
 }

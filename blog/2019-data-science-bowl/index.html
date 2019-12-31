@@ -23,9 +23,7 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <meta name="description" content="When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
-I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo;ll list below.
- Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&amp;rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe)." />
+  <meta name="description" content="I was inspired to participate in Kaggle&amp;rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models." />
   <meta name="generator" content="Hugo 0.56.1 with theme pure" />
   <title>2019 Data Science Bowl - Tyler Burleigh</title>
   
@@ -34,31 +32,25 @@ I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="2019 Data Science Bowl" />
-<meta property="og:description" content="When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
-I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.
- Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe)." />
+<meta property="og:description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/2019-data-science-bowl/" />
 <meta property="article:published_time" content="2019-11-16T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-11-16T00:00:00+00:00" />
 <meta itemprop="name" content="2019 Data Science Bowl">
-<meta itemprop="description" content="When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
-I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.
- Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).">
+<meta itemprop="description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.">
 
 
 <meta itemprop="datePublished" content="2019-11-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="428">
+<meta itemprop="wordCount" content="436">
 
 
 
 <meta itemprop="keywords" content="Kaggle,R,analysis,EDA,ML," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2019 Data Science Bowl"/>
-<meta name="twitter:description" content="When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
-I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.
- Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe)."/>
+<meta name="twitter:description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models."/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -153,16 +145,12 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
     <h3 class="widget-title"> Categories</h3>
     <div class="widget-body">
         <ul class="category-list">
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">3</span></li>
             <li class="category-list-item"><a href="https://tylerburleigh.com/categories/data-viz/" class="category-list-link">data-viz</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/ml/" class="category-list-link">ml</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/other/" class="category-list-link">other</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/package/" class="category-list-link">package</a><span class="category-list-count">2</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/prediction/" class="category-list-link">prediction</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dev/" class="category-list-link">dev</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/ml/" class="category-list-link">ml</a><span class="category-list-count">2</span></li>
             <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/scraping/" class="category-list-link">scraping</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/timeseries/" class="category-list-link">timeseries</a><span class="category-list-count">1</span></li>
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
         </ul>
     </div>
 </div>
@@ -192,10 +180,6 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
                     class="tag-list-count">1</span></li>
             
             
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/dataviz/" class="tag-list-link">dataviz</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/economics/" class="tag-list-link">economics</a><span
                     class="tag-list-count">1</span></li>
             
@@ -213,7 +197,11 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
@@ -221,11 +209,15 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/ml/" class="tag-list-link">ml</a><span
-                    class="tag-list-count">1</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturkr/" class="tag-list-link">mturkr</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
@@ -244,12 +236,24 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
                     class="tag-list-count">2</span></li>
             
             
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/pymturkr/" class="tag-list-link">pymturkr</a><span
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/prediction/" class="tag-list-link">prediction</a><span
                     class="tag-list-count">2</span></li>
             
             
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/pymturkr/" class="tag-list-link">pymturkr</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
-                    class="tag-list-count">10</span></li>
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
@@ -260,15 +264,15 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
                     class="tag-list-count">2</span></li>
             
             
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/shirts/" class="tag-list-link">shirts</a><span
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software-development/" class="tag-list-link">software-development</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
                     class="tag-list-count">1</span></li>
             
             
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/stock-market/" class="tag-list-link">stock-market</a><span
-                    class="tag-list-count">1</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tsla/" class="tag-list-link">tsla</a><span
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/visualization/" class="tag-list-link">visualization</a><span
                     class="tag-list-count">1</span></li>
             
         </ul>
@@ -341,7 +345,7 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
 <li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth">Part 5</a> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p></li>
 </ul>
 
-<p>At this point I realize that I will need to start working on Kaggle itself because the competition submissions require notebook-based submissions. So I start to write some Kaggle notebooks.</p>
+<p>At this point I realize that I will need to start working on Kaggle itself because the competition submissions require notebook-based submissions. So I start to write some Kaggle notebooks. These were some of the notebooks I created:</p>
 
 <ul>
 <li><p><a href="https://www.kaggle.com/bluewizard/basic-median-model">Simple R median baseline model</a> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p></li>
@@ -397,6 +401,11 @@ I&rsquo;ve been working through this competition in stages which I&rsquo;ll list
                 <a href="https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/" title="Simple Moving Average algorithm &amp; backtest"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/"
+                    title="Titanic prediction with Python"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">

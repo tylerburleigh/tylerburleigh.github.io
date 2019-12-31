@@ -5,10 +5,19 @@
     <link>https://tylerburleigh.com/tags/pymturkr/</link>
     <description>Recent content in pyMTurkR on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/pymturkr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Titanic prediction with Python</title>
+      <link>https://tylerburleigh.com/blog/titanic-prediction-with-python/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/titanic-prediction-with-python/</guid>
+      <description>Load data import pandas as pd import numpy as np import zipfile  z = zipfile.ZipFile(&#39;titanic.zip&#39;) train = pd.read_csv(z.open(&#39;train.csv&#39;)) test = pd.read_csv(z.open(&#39;test.csv&#39;))  train.describe()   .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    PassengerId Survived Pclass Age SibSp Parch Fare     count 891.000000 891.000000 891.000000 714.000000 891.000000 891.</description>
+    </item>
     
     <item>
       <title>2019 Data Science Bowl</title>
@@ -16,9 +25,7 @@
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/2019-data-science-bowl/</guid>
-      <description>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.
-I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo;ll list below.
- Part 1 - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&amp;rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</description>
+      <description>I was inspired to participate in Kaggle&amp;rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.</description>
     </item>
     
     <item>
@@ -27,19 +34,7 @@ I&amp;rsquo;ve been working through this competition in stages which I&amp;rsquo
       <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</guid>
-      <description>I decided to try making a simple algorithm trader in R.
-The algorithm is based on the “moving average crossover”. Basically, the idea is to take two simple moving averages (SMAs) – one that averages over a longer time window, and one that averages over a shorter time window – and buy or sell based on when the two SMAs crossover. Here I used 50-day and 200-day SMAs. Buy decisions were when the SMA-50 went above the SMA-200, and sell decisions were when the SMA-50 went below the SMA-200.</description>
-    </item>
-    
-    <item>
-      <title>Implicit datatypes and coercion are weird</title>
-      <link>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</link>
-      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/implicit-datatypes-and-coercion-are-weird/</guid>
-      <description>The other day, a user of my pyMTurkR package wrote to say they encountered an issue with the GetAssignments() function. When they tried calling the function it would throw the following error:
-Error in as.POSIXlt.character(x, tz, ...) :character string is not in a standard unambiguous formatIn the process of debugging this error, I learned an important lesson about implicit dataframe datatypes and coercion.
-R dataframes are flexibleThe dataframe is an R object with columns and rows, where each column of a dataframe has a single data type.</description>
+      <description>I made an algorithmic trader in R based on the &amp;ldquo;moving average crossover&amp;rdquo; technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.</description>
     </item>
     
     <item>
@@ -48,8 +43,7 @@ R dataframes are flexibleThe dataframe is an R object with columns and rows, wh
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</guid>
-      <description>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?
-In fact, it seemed so straight-forward that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something!</description>
+      <description>Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.</description>
     </item>
     
     <item>
@@ -58,7 +52,7 @@ In fact, it seemed so straight-forward that I was sure there must be prior art o
       <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</guid>
-      <description>When I visited Philadelphia recently I was left with a lasting impression of the street art. I really liked how the murals added beauty to the neighborhoods, and how each mural was, it seemed, a statement about human virtue and resilience and empowerment. I was also struck by what it meant about the community of Philadelphia organizing around and celebrating this public good, and creating more of it.</description>
+      <description>A mini-tutorial on web scraping with R.</description>
     </item>
     
     <item>
@@ -67,8 +61,7 @@ In fact, it seemed so straight-forward that I was sure there must be prior art o
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
-      <description>I&amp;rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&amp;rsquo;m curious. So in order to move in that direction, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
-nutritionR is a wrapper for the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
+      <description>I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes</description>
     </item>
     
     <item>
@@ -96,9 +89,7 @@ Targeted recruitment of participants is useful if you&amp;rsquo;re only interest
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
-      <description>I&amp;rsquo;m pleased to announce pyMTurkR, an R package that allows you to interface with MTurk&amp;rsquo;s Requester API.
-pyMTurkR provides access to the latest Amazon Mechanical Turk (MTurk) Requester API (version &amp;lsquo;2017-01-17&amp;rsquo;), using reticulate to wrap the boto3 SDK for Python. pyMTurkR is a replacement for the now obsolete MTurkR.
-Using this package, you can perform operations like: creating HITs, updating HITs, creating custom Qualifications, reviewing submitted Assignments, approving/rejecting Assignments, sending bonus payments to Workers, sending messages to Workers, blocking/unblocking Workers, and many more.</description>
+      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
     </item>
     
     <item>
@@ -107,8 +98,7 @@ Using this package, you can perform operations like: creating HITs, updating HIT
       <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
-      <description>My go-to place for convenience sampling is MTurk. It&amp;rsquo;s fast, it&amp;rsquo;s easy, it&amp;rsquo;s flexible, it can be as simple or complicated as you need it to be, the data is high quality and the samples are fairly &amp;ldquo;representative&amp;rdquo; of the US population. But what is &amp;ldquo;fair payment&amp;rdquo; for &amp;ldquo;work&amp;rdquo; on MTurk?
-Objectively, if we accept that MTurk work is like other kinds of work, then we should aim to pay an amount that equates to a minimum hourly wage.</description>
+      <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
     </item>
     
     <item>
@@ -117,7 +107,7 @@ Objectively, if we accept that MTurk work is like other kinds of work, then we s
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
-      <description>Introduction I&amp;rsquo;ve been meaning to &amp;ldquo;upskill&amp;rdquo; into the world of machine learning for some time. I&amp;rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</description>
+      <description>I use R to tackle the Kaggle Titanic data science competition.</description>
     </item>
     
     <item>
@@ -140,7 +130,7 @@ An educational talk for a non-academic audience about measurements in psychology
       
       <guid>https://tylerburleigh.com/page/writings/</guid>
       <description>I’ve authored peer-reviewed scholarly articles and white papers.
-As of 2019-12-30, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
+As of 2019-12-31, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
 PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
 Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
     </item>
