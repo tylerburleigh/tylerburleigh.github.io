@@ -111,14 +111,8 @@
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-home">
                 <a href="/">
-                    <i class="icon icon-home-fill"></i>
-                  <span class="menu-title">Home</span>
-                </a>
-            </li>
-            <li class="menu-item menu-item-blog">
-                <a href="/blog">
                     <i class="icon icon-cup-fill"></i>
-                  <span class="menu-title">Blog</span>
+                  <span class="menu-title">Home</span>
                 </a>
             </li>
             <li class="menu-item menu-item-writing">
@@ -791,8 +785,6 @@ Name: TotalCharges, dtype: float64
 
 <p>Another bi-modal distribution. One peak is customers who have been tenured for a very long time; the other peak is customers who joined very recently. I&rsquo;m going to assume <code>tenure</code> is in the unit of &ldquo;months&rdquo;, because this is how services are billed.</p>
 
-<p>They are highly correlated, but there is an interesting funneling pattern. I wouldn&rsquo;t expect them to be perfectly correlated, because <code>TotalCharges</code> won&rsquo;t grow linearly as a function of <code>tenure</code> if services change over time. Maybe this pattern reflects that noise.</p>
-
 <h3 id="bivariate">Bivariate</h3>
 
 <h4 id="churn-by-totalcharges">Churn by TotalCharges</h4>
@@ -922,6 +914,8 @@ plt.show()
 </code></pre>
 
 <p><img src="/blog/predictingchurn/output_48_0.png" alt="png" /></p>
+
+<p>They are highly correlated, but there is an interesting funneling pattern. I wouldn&rsquo;t expect them to be perfectly correlated, because <code>TotalCharges</code> won&rsquo;t grow linearly as a function of <code>tenure</code> if services change over time. Maybe this pattern reflects that noise.</p>
 
 <h4 id="supplemental-internet-services">Supplemental Internet services</h4>
 
