@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Predicting customer churn - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal." />
+  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <title>Predicting customer churn - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="Predicting customer churn" />
+<meta property="og:description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/" />
+<meta property="article:published_time" content="2020-01-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-01T00:00:00+00:00" />
+<meta itemprop="name" content="Predicting customer churn">
+<meta itemprop="description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.">
+
+
+<meta itemprop="datePublished" content="2020-01-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2721">
+
+
+
+<meta itemprop="keywords" content="python,random forest,feature selection,eda," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting customer churn"/>
+<meta name="twitter:description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Quantitative Researcher</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-blog">
+                <a href="/blog">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-writing">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Writing</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">6</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dev/" class="category-list-link">dev</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/algotrading/" class="tag-list-link">algotrading</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/analysis/" class="tag-list-link">analysis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/caret/" class="tag-list-link">caret</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/crowdwork/" class="tag-list-link">crowdwork</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-science/" class="tag-list-link">data-science</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/economics/" class="tag-list-link">economics</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/fairness/" class="tag-list-link">fairness</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/jobs/" class="tag-list-link">jobs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/ml/" class="tag-list-link">ml</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturkr/" class="tag-list-link">mturkr</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/online-research-methods/" class="tag-list-link">online-research-methods</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/open-source/" class="tag-list-link">open-source</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/package/" class="tag-list-link">package</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/prediction/" class="tag-list-link">prediction</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/pymturkr/" class="tag-list-link">pymturkr</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software-development/" class="tag-list-link">software-development</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/visualization/" class="tag-list-link">visualization</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-predicting-customer-churn-telco-customer-churn" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/predicting-customer-churn-telco-customer-churn/"
+    >Predicting customer churn</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/" class="article-date">
+  <time datetime="2020-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-01</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/random-forest/"> random forest </a>
+    <a class="article-tag-link" href="/tags/feature-selection/"> feature selection </a>
+    <a class="article-tag-link" href="/tags/eda/"> eda </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/predicting-customer-churn-telco-customer-churn/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      
+
+<p>In this post I look at the the <a href="https://www.kaggle.com/blastchar/telco-customer-churn/kernels">Telco Customer Churn</a> from Kaggle. This data originally comes from the IBM Sample Data Sets.</p>
+
+<p>If you don&rsquo;t already know, churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</p>
+
+<p>I decided to use this analysis to practice some of my python skills. Plus, I&rsquo;ve been working with churn at work recently, so I thought it might be interesting to work on a different dataset &ndash; one with an analysis that I can share publicly.</p>
+
+<p>For this analysis, I set out to find a parsimonious model that would predict churn with a high level of accuracy. I used a random forest model and performed a feature selection procedure to reduce the model&rsquo;s complexity.</p>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+
+<p>Data is from <a href="https://www.kaggle.com/blastchar/telco-customer-churn">https://www.kaggle.com/blastchar/telco-customer-churn</a></p>
+
+<pre><code class="language-python">df = pd.read_csv('WA_Fn-UseC_-Telco-Customer-Churn.csv')
+</code></pre>
+
+<p>Some recoding of the variables.</p>
+
+<pre><code class="language-python">## String to numeric
+df.TotalCharges = pd.to_numeric(df.TotalCharges.replace(' ', 0), errors='coerce')
+df.MonthlyCharges = pd.to_numeric(df.MonthlyCharges, errors='coerce')
+df.tenure = pd.to_numeric(df.tenure, errors='coerce')
+</code></pre>
+
+<pre><code class="language-python">import warnings
+warnings.filterwarnings('ignore') # Suppress warnings
+</code></pre>
+
+<h2 id="train-test-split">Train-test split</h2>
+
+<p>I&rsquo;ll split the data with <sup>80</sup>&frasl;<sub>20</sub> train/test while stratifying on the Churn label.</p>
+
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(df, 
+                                                    df.Churn, 
+                                                    test_size=0.2, 
+                                                    random_state=42,
+                                                    stratify=df.Churn)
+</code></pre>
+
+<p>How many churn events were there?</p>
+
+<pre><code class="language-python">df.Churn.value_counts()
+</code></pre>
+
+<pre><code>No     5174
+Yes    1869
+Name: Churn, dtype: int64
+</code></pre>
+
+<h2 id="describe-the-predictors">Describe the predictors</h2>
+
+<p>What predictor variables do I have to work with?</p>
+
+<pre><code class="language-python">X_train.columns.tolist()
+</code></pre>
+
+<pre><code>['customerID',
+ 'gender',
+ 'SeniorCitizen',
+ 'Partner',
+ 'Dependents',
+ 'tenure',
+ 'PhoneService',
+ 'MultipleLines',
+ 'InternetService',
+ 'OnlineSecurity',
+ 'OnlineBackup',
+ 'DeviceProtection',
+ 'TechSupport',
+ 'StreamingTV',
+ 'StreamingMovies',
+ 'Contract',
+ 'PaperlessBilling',
+ 'PaymentMethod',
+ 'MonthlyCharges',
+ 'TotalCharges',
+ 'Churn']
+</code></pre>
+
+<pre><code class="language-python">X_train.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>customerID</th>
+      <th>gender</th>
+      <th>SeniorCitizen</th>
+      <th>Partner</th>
+      <th>Dependents</th>
+      <th>tenure</th>
+      <th>PhoneService</th>
+      <th>MultipleLines</th>
+      <th>InternetService</th>
+      <th>OnlineSecurity</th>
+      <th>...</th>
+      <th>DeviceProtection</th>
+      <th>TechSupport</th>
+      <th>StreamingTV</th>
+      <th>StreamingMovies</th>
+      <th>Contract</th>
+      <th>PaperlessBilling</th>
+      <th>PaymentMethod</th>
+      <th>MonthlyCharges</th>
+      <th>TotalCharges</th>
+      <th>Churn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3738</th>
+      <td>4950-BDEUX</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>No</td>
+      <td>No</td>
+      <td>35</td>
+      <td>No</td>
+      <td>No phone service</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Electronic check</td>
+      <td>49.20</td>
+      <td>1701.65</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3151</th>
+      <td>7993-NQLJE</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>15</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Fiber optic</td>
+      <td>Yes</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Mailed check</td>
+      <td>75.10</td>
+      <td>1151.55</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>4860</th>
+      <td>7321-ZNSLA</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>13</td>
+      <td>No</td>
+      <td>No phone service</td>
+      <td>DSL</td>
+      <td>Yes</td>
+      <td>...</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Two year</td>
+      <td>No</td>
+      <td>Mailed check</td>
+      <td>40.55</td>
+      <td>590.35</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3867</th>
+      <td>4922-CVPDX</td>
+      <td>Female</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>26</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Two year</td>
+      <td>Yes</td>
+      <td>Credit card (automatic)</td>
+      <td>73.50</td>
+      <td>1905.70</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3810</th>
+      <td>2903-YYTBW</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Electronic check</td>
+      <td>44.55</td>
+      <td>44.55</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div>
+
+<p>What are the values for each of the columns (other than <code>customerID</code>)?</p>
+
+<pre><code class="language-python">for c in X_train.drop(['customerID'], axis=1).columns:
+    print(&quot;---- %s ---&quot; % c)
+    print(X_train[c].value_counts())
+    print(&quot;&quot;)
+</code></pre>
+
+<pre><code>---- gender ---
+Male      2833
+Female    2801
+Name: gender, dtype: int64
+
+---- SeniorCitizen ---
+0    4714
+1     920
+Name: SeniorCitizen, dtype: int64
+
+---- Partner ---
+No     2905
+Yes    2729
+Name: Partner, dtype: int64
+
+---- Dependents ---
+No     3955
+Yes    1679
+Name: Dependents, dtype: int64
+
+---- tenure ---
+1     487
+72    292
+2     187
+3     150
+71    142
+     ... 
+21     45
+44     43
+28     42
+36     40
+0       8
+Name: tenure, Length: 73, dtype: int64
+
+---- PhoneService ---
+Yes    5075
+No      559
+Name: PhoneService, dtype: int64
+
+---- MultipleLines ---
+No                  2685
+Yes                 2390
+No phone service     559
+Name: MultipleLines, dtype: int64
+
+---- InternetService ---
+Fiber optic    2483
+DSL            1937
+No             1214
+Name: InternetService, dtype: int64
+
+---- OnlineSecurity ---
+No                     2797
+Yes                    1623
+No internet service    1214
+Name: OnlineSecurity, dtype: int64
+
+---- OnlineBackup ---
+No                     2442
+Yes                    1978
+No internet service    1214
+Name: OnlineBackup, dtype: int64
+
+---- DeviceProtection ---
+No                     2472
+Yes                    1948
+No internet service    1214
+Name: DeviceProtection, dtype: int64
+
+---- TechSupport ---
+No                     2771
+Yes                    1649
+No internet service    1214
+Name: TechSupport, dtype: int64
+
+---- StreamingTV ---
+No                     2226
+Yes                    2194
+No internet service    1214
+Name: StreamingTV, dtype: int64
+
+---- StreamingMovies ---
+No                     2217
+Yes                    2203
+No internet service    1214
+Name: StreamingMovies, dtype: int64
+
+---- Contract ---
+Month-to-month    3102
+Two year          1359
+One year          1173
+Name: Contract, dtype: int64
+
+---- PaperlessBilling ---
+Yes    3331
+No     2303
+Name: PaperlessBilling, dtype: int64
+
+---- PaymentMethod ---
+Electronic check             1891
+Mailed check                 1286
+Bank transfer (automatic)    1244
+Credit card (automatic)      1213
+Name: PaymentMethod, dtype: int64
+
+---- MonthlyCharges ---
+20.05     50
+19.65     37
+20.00     37
+20.15     36
+19.95     36
+          ..
+114.05     1
+40.25      1
+66.20      1
+110.70     1
+21.45      1
+Name: MonthlyCharges, Length: 1489, dtype: int64
+
+---- TotalCharges ---
+20.20      9
+0.00       8
+19.65      7
+45.30      7
+20.05      6
+          ..
+625.05     1
+901.25     1
+666.00     1
+4036.00    1
+189.45     1
+Name: TotalCharges, Length: 5276, dtype: int64
+
+---- Churn ---
+No     4139
+Yes    1495
+Name: Churn, dtype: int64
+</code></pre>
+
+<p>Most of these variables are categorical but a few (<code>TotalCharges</code>, <code>MonthlyCharges</code>,<code>tenure</code>) are continuous.</p>
+
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+
+<h3 id="univariate-distributions">Univariate distributions</h3>
+
+<pre><code class="language-python">import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy import stats
+</code></pre>
+
+<h4 id="totalcharges">TotalCharges</h4>
+
+<pre><code class="language-python">sns.distplot(X_train.TotalCharges)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe489aac9b0&gt;
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_22_1.png" alt="png" /></p>
+
+<p><code>TotalCharges</code> is probably correlated with <code>tenure</code> and might be redundant if I were to include both in a model. Though I might be able to get an &ldquo;average monthly&rdquo; by dividing the two variables, and it might not be the same as <code>MonthlyCharges</code> (which I assume is current-monthly). I noticed some missing values that I had to replace earlier with 0, but there weren&rsquo;t many. Maybe these are the newest customers (who have no charges yet). Or maybe they&rsquo;re errors that are meaningful somehow.</p>
+
+<pre><code class="language-python">X_train[X_train.tenure == 0]['TotalCharges']
+</code></pre>
+
+<pre><code>6670    0.0
+4380    0.0
+3826    0.0
+488     0.0
+1082    0.0
+1340    0.0
+6754    0.0
+3331    0.0
+Name: TotalCharges, dtype: float64
+</code></pre>
+
+<p>It looks like <code>TotalCharges</code> is indeed 0 for customers with 0 <code>tenure</code>. These customers should be removed at the stage of analysis because by definition they cannot have churned.</p>
+
+<h4 id="monthlycharges">MonthlyCharges</h4>
+
+<pre><code class="language-python">sns.distplot(X_train.MonthlyCharges)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe489f80f98&gt;
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_27_1.png" alt="png" /></p>
+
+<p>Interesting bi-modal distribution. One group of customers is paying relatively little, while another group is paying much more. I&rsquo;m sure this reflects the number and type of services customers are subscribed to. Unlike <code>TotalCharges</code>, there were no missing values for <code>MonthlyCharges</code>.</p>
+
+<h4 id="tenure">tenure</h4>
+
+<pre><code class="language-python">sns.distplot(X_train.tenure)
+</code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe48a026dd8&gt;
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_30_1.png" alt="png" /></p>
+
+<p>Another bi-modal distribution. One peak is customers who have been tenured for a very long time; the other peak is customers who joined very recently. I&rsquo;m going to assume <code>tenure</code> is in the unit of &ldquo;months&rdquo;, because this is how services are billed.</p>
+
+<p>They are highly correlated, but there is an interesting funneling pattern. I wouldn&rsquo;t expect them to be perfectly correlated, because <code>TotalCharges</code> won&rsquo;t grow linearly as a function of <code>tenure</code> if services change over time. Maybe this pattern reflects that noise.</p>
+
+<h3 id="bivariate">Bivariate</h3>
+
+<h4 id="churn-by-totalcharges">Churn by TotalCharges</h4>
+
+<pre><code class="language-python">bins = 30
+plt.hist(X_train[X_train.Churn == 'Yes'].TotalCharges, 
+         bins, alpha=0.5, density=True, label='Churned')
+plt.hist(X_train[X_train.Churn == 'No'].TotalCharges, 
+         bins, alpha=0.5, density=True, label=&quot;Didn't Churn&quot;)
+plt.legend(loc='upper right')
+plt.show()
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_35_0.png" alt="png" /></p>
+
+<p>Customers who didn&rsquo;t churn had more <code>TotalCharges</code>. No surprise there. :)</p>
+
+<h4 id="churn-by-monthlycharges">Churn by MonthlyCharges</h4>
+
+<pre><code class="language-python">bins = 30
+plt.hist(X_train[X_train.Churn == 'Yes'].MonthlyCharges, 
+         bins, alpha=0.5, density=True, label='Churned')
+plt.hist(X_train[X_train.Churn == 'No'].MonthlyCharges, 
+         bins, alpha=0.5, density=True, label=&quot;Didn't Churn&quot;)
+plt.legend(loc='upper right')
+plt.show()
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_38_0.png" alt="png" /></p>
+
+<p>This is interesting. Customers who churned seemed to be more likely located towards the higher-end of the <code>MonthlyCharges</code> distribution, and customers who didn&rsquo;t churn were more likely to be paying the least per month.</p>
+
+<h4 id="churn-by-tenure">Churn by tenure</h4>
+
+<pre><code class="language-python">bins = 30
+plt.hist(X_train[X_train.Churn == 'Yes'].tenure, 
+         bins, alpha=0.5, density=True, label='Churned')
+plt.hist(X_train[X_train.Churn == 'No'].tenure, 
+         bins, alpha=0.5, density=True, label=&quot;Didn't Churn&quot;)
+plt.legend(loc='upper right')
+plt.show()
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_41_0.png" alt="png" /></p>
+
+<p>The first few months of tenure &ndash; between months 1-10 &ndash; seem to be critical, as this is when most of the churn is happening. There also seems to be a kind of diverging pattern in the middle. Maybe this is some kind of a survivor effect &ndash; members who make it past a certain tenure length are more likely to stick it out for the long-term.</p>
+
+<h4 id="churn-by-categorical-variables">Churn by categorical variables</h4>
+
+<pre><code class="language-python">catvars = X_train.columns.tolist()
+catvars = [e for e in catvars if e not in ('TotalCharges', 'MonthlyCharges', 
+                                           'tenure', 'customerID', 'Churn')]
+
+y = 'Churn'
+for x in catvars:
+    plot = X_train.groupby(x)[y]\
+        .value_counts(normalize=True).mul(100)\
+        .rename('percent').reset_index()\
+        .pipe((sns.catplot,'data'), x=x, y='percent', hue=y, kind='bar')
+    plot.fig.suptitle(&quot;Churn by &quot; + x)
+    plot
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_44_0.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_1.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_2.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_3.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_4.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_5.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_6.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_7.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_8.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_9.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_10.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_11.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_12.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_13.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_14.png" alt="png" /></p>
+
+<p><img src="/blog/predictingchurn/output_44_15.png" alt="png" /></p>
+
+<p>The most interesting variables seem to be:</p>
+
+<ul>
+<li>SeniorCitizen</li>
+<li>Partner</li>
+<li>Dependents</li>
+<li>InternetService</li>
+<li>OnlineSecurity</li>
+<li>OnlineBackup</li>
+<li>DeviceProtection</li>
+<li>TechSupport</li>
+<li>Contract</li>
+<li>PaperlessBilling</li>
+<li>PaymentMethod</li>
+</ul>
+
+<p>There seems to be a latent variable underlying many of these that reflects either tech-savviness, or service benefit maximization &ndash; or both. For example, customers with <code>InternetService</code> are less likely to churn if they have some of the other services, like <code>TechSupport</code>, <code>OnlineSecurity</code>, or <code>OnlineBackup</code>. A tech-savvy person would not be paying for these services but would &ldquo;roll their own&rdquo;.</p>
+
+<p>I wonder how these &ldquo;supplemental service&rdquo; variables are related. Maybe they are redundant.</p>
+
+<h4 id="totalcharges-by-tenure">TotalCharges by tenure</h4>
+
+<pre><code class="language-python">np.corrcoef(X_train.TotalCharges, X_train.tenure)
+</code></pre>
+
+<pre><code>array([[1.        , 0.82969844],
+       [0.82969844, 1.        ]])
+</code></pre>
+
+<pre><code class="language-python">plt.scatter(X_train.TotalCharges, X_train.tenure)
+plt.show()
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_48_0.png" alt="png" /></p>
+
+<h4 id="supplemental-internet-services">Supplemental Internet services</h4>
+
+<p>I&rsquo;ll exclude customers without <code>InternetService</code> because they wouldn&rsquo;t be eligible.</p>
+
+<p>OnlineBackup vs. OnlineSecurity</p>
+
+<pre><code class="language-python">x,y = 'OnlineBackup', 'OnlineSecurity'
+plot = X_train[X_train.InternetService != 'No'].groupby(x)[y]\
+    .value_counts(normalize=True).mul(100)\
+    .rename('percent').reset_index()\
+    .pipe((sns.catplot,'data'), x=x, y='percent', hue=y, kind='bar')
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_51_0.png" alt="png" /></p>
+
+<p>TechSupport vs. OnlineSecurity</p>
+
+<pre><code class="language-python">x,y = 'TechSupport', 'OnlineSecurity'
+plot = X_train[X_train.InternetService != 'No'].groupby(x)[y]\
+    .value_counts(normalize=True).mul(100)\
+    .rename('percent').reset_index()\
+    .pipe((sns.catplot,'data'), x=x, y='percent', hue=y, kind='bar')
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_53_0.png" alt="png" /></p>
+
+<p>StreamingTV vs. StreamingMovies</p>
+
+<pre><code class="language-python">x,y = 'StreamingMovies', 'StreamingTV'
+plot = X_train[X_train.InternetService != 'No'].groupby(x)[y]\
+    .value_counts(normalize=True).mul(100)\
+    .rename('percent').reset_index()\
+    .pipe((sns.catplot,'data'), x=x, y='percent', hue=y, kind='bar')
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_55_0.png" alt="png" /></p>
+
+<p>DeviceProtection vs. OnlineSecurity</p>
+
+<pre><code class="language-python">x,y = 'DeviceProtection', 'OnlineSecurity'
+plot = X_train[X_train.InternetService != 'No'].groupby(x)[y]\
+    .value_counts(normalize=True).mul(100)\
+    .rename('percent').reset_index()\
+    .pipe((sns.catplot,'data'), x=x, y='percent', hue=y, kind='bar')
+</code></pre>
+
+<p><img src="/blog/predictingchurn/output_57_0.png" alt="png" /></p>
+
+<p>There&rsquo;s a fair bit of redundancy (especially with streaming TV vs. movies), but they&rsquo;re not completely redundant. I think there&rsquo;s enough variance to keep them as independent predictors.</p>
+
+<h2 id="modeling">Modeling</h2>
+
+<p>Before fitting any model, I will need to transform the categorical variables and remove customerID.</p>
+
+<pre><code class="language-python">from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import RandomizedSearchCV
+le = LabelEncoder()
+</code></pre>
+
+<pre><code class="language-python">catvars = X_train.columns.tolist()
+catvars = [e for e in catvars if e not in ('TotalCharges', 'MonthlyCharges', 
+                                           'tenure', 'customerID')]
+
+for x in catvars:
+    X_train[x] = le.fit_transform(X_train[x])
+    X_test[x] = le.fit_transform(X_test[x])
+    
+y_train = le.fit_transform(y_train)
+y_test = le.fit_transform(y_test)
+
+X_train = X_train.drop(['Churn', 'customerID'], axis=1)
+X_test = X_test.drop(['Churn', 'customerID'], axis=1)
+</code></pre>
+
+<h3 id="model-1-kitchen-sink">Model 1 - Kitchen sink</h3>
+
+<p>I&rsquo;ll start by building a &ldquo;kitchen sink&rdquo; random forest model. I&rsquo;ll use <code>RandomizedSearchCV</code> to perform a randomize grid search over a set of model parameters.</p>
+
+<pre><code class="language-python">random_grid = {'n_estimators': [int(x) for x in np.linspace(10, 50, num = 5)],
+               'max_features': ['auto','sqrt'],
+               'max_depth': [int(x) for x in np.linspace(10, 50, num = 10)],
+               'min_samples_split': [int(x) for x in np.linspace(2, 11, num = 9)],
+               'min_samples_leaf': [int(x) for x in np.linspace(2, 11, num = 9)],
+               'bootstrap': [True, False]}
+
+rf_random = RandomizedSearchCV(estimator = RandomForestClassifier(), 
+                               param_distributions = random_grid, 
+                               n_iter=500, 
+                               cv=3, 
+                               verbose=2, 
+                               random_state=42, 
+                               scoring='accuracy',
+                               n_jobs = -1)
+</code></pre>
+
+<pre><code class="language-python">rf_random.fit(X_train, y_train)
+</code></pre>
+
+<pre><code>Fitting 3 folds for each of 500 candidates, totalling 1500 fits
+
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  33 tasks      | elapsed:    7.6s
+[Parallel(n_jobs=-1)]: Done 154 tasks      | elapsed:   17.5s
+[Parallel(n_jobs=-1)]: Done 357 tasks      | elapsed:   32.1s
+[Parallel(n_jobs=-1)]: Done 640 tasks      | elapsed:   50.7s
+[Parallel(n_jobs=-1)]: Done 1005 tasks      | elapsed:  1.2min
+[Parallel(n_jobs=-1)]: Done 1450 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 1500 out of 1500 | elapsed:  1.8min finished
+
+
+
+
+
+RandomizedSearchCV(cv=3, error_score=nan,
+                   estimator=RandomForestClassifier(bootstrap=True,
+                                                    ccp_alpha=0.0,
+                                                    class_weight=None,
+                                                    criterion='gini',
+                                                    max_depth=None,
+                                                    max_features='auto',
+                                                    max_leaf_nodes=None,
+                                                    max_samples=None,
+                                                    min_impurity_decrease=0.0,
+                                                    min_impurity_split=None,
+                                                    min_samples_leaf=1,
+                                                    min_samples_split=2,
+                                                    min_weight_fraction_leaf=0.0,
+                                                    n_estimators=100,
+                                                    n_jobs...
+                   iid='deprecated', n_iter=500, n_jobs=-1,
+                   param_distributions={'bootstrap': [True, False],
+                                        'max_depth': [10, 14, 18, 23, 27, 32,
+                                                      36, 41, 45, 50],
+                                        'max_features': ['auto', 'sqrt'],
+                                        'min_samples_leaf': [2, 3, 4, 5, 6, 7,
+                                                             8, 9, 11],
+                                        'min_samples_split': [2, 3, 4, 5, 6, 7,
+                                                              8, 9, 11],
+                                        'n_estimators': [10, 20, 30, 40, 50]},
+                   pre_dispatch='2*n_jobs', random_state=42, refit=True,
+                   return_train_score=False, scoring='accuracy', verbose=2)
+</code></pre>
+
+<h4 id="model-score">Model score</h4>
+
+<pre><code class="language-python">rf_random.best_score_
+</code></pre>
+
+<pre><code>0.805999290024849
+</code></pre>
+
+<h4 id="out-of-sample-prediction">Out-of-sample prediction</h4>
+
+<pre><code class="language-python">pred = rf_random.predict(X_test)
+errors = abs(pred - y_test)
+1 - (sum(errors) / len(X_test.index))
+</code></pre>
+
+<pre><code>0.7977288857345635
+</code></pre>
+
+<p>This is pretty good, but the model is not very parsimonious. As expected, some of the features did not add much.</p>
+
+<h3 id="model-2-reduce-feature-level-redundancy">Model 2 - Reduce feature level redundancy</h3>
+
+<p>There&rsquo;s some redundancy in the levels of some features. This is because <code>InternetService</code> is &ldquo;baked into&rdquo; other features that depend on it. These variables, like <code>OnlineSecurity</code>, have a &ldquo;No internet service&rdquo; level. But if we&rsquo;re already taking <code>InternetService</code> into account, then that level is unnecessary and could skew how the feature levels are weighted. For this model, I&rsquo;ll recode &ldquo;No internet serice&rdquo; values to &ldquo;No&rdquo;.</p>
+
+<pre><code class="language-python">df_recode = df
+int_vars = ['OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 
+            'TechSupport', 'StreamingTV', 'StreamingMovies']
+
+for x in int_vars:
+    df_recode.loc[df_recode[x] == 'No internet service', x] = 'No'
+    
+X_train, X_test, y_train, y_test = train_test_split(df_recode, 
+                                                    df.Churn, 
+                                                    test_size=0.2, 
+                                                    random_state=42,
+                                                    stratify=df.Churn)
+
+catvars = X_train.columns.tolist()
+catvars = [e for e in catvars if e not in ('TotalCharges', 'MonthlyCharges', 
+                                           'tenure', 'customerID')]
+for x in catvars:
+    X_train[x] = le.fit_transform(X_train[x])
+    X_test[x] = le.fit_transform(X_test[x])
+    
+y_train = le.fit_transform(y_train)
+y_test = le.fit_transform(y_test)
+
+X_train = X_train.drop(['Churn', 'customerID'], axis=1)
+X_test = X_test.drop(['Churn', 'customerID'], axis=1)
+</code></pre>
+
+<pre><code class="language-python">rf_random.fit(X_train, y_train)
+</code></pre>
+
+<pre><code>Fitting 3 folds for each of 500 candidates, totalling 1500 fits
+
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  58 tasks      | elapsed:    5.1s
+[Parallel(n_jobs=-1)]: Done 300 tasks      | elapsed:   19.5s
+[Parallel(n_jobs=-1)]: Done 561 tasks      | elapsed:   41.1s
+[Parallel(n_jobs=-1)]: Done 844 tasks      | elapsed:   59.1s
+[Parallel(n_jobs=-1)]: Done 1209 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 1500 out of 1500 | elapsed:  1.7min finished
+
+
+
+
+
+RandomizedSearchCV(cv=3, error_score=nan,
+                   estimator=RandomForestClassifier(bootstrap=True,
+                                                    ccp_alpha=0.0,
+                                                    class_weight=None,
+                                                    criterion='gini',
+                                                    max_depth=None,
+                                                    max_features='auto',
+                                                    max_leaf_nodes=None,
+                                                    max_samples=None,
+                                                    min_impurity_decrease=0.0,
+                                                    min_impurity_split=None,
+                                                    min_samples_leaf=1,
+                                                    min_samples_split=2,
+                                                    min_weight_fraction_leaf=0.0,
+                                                    n_estimators=100,
+                                                    n_jobs...
+                   iid='deprecated', n_iter=500, n_jobs=-1,
+                   param_distributions={'bootstrap': [True, False],
+                                        'max_depth': [10, 14, 18, 23, 27, 32,
+                                                      36, 41, 45, 50],
+                                        'max_features': ['auto', 'sqrt'],
+                                        'min_samples_leaf': [2, 3, 4, 5, 6, 7,
+                                                             8, 9, 11],
+                                        'min_samples_split': [2, 3, 4, 5, 6, 7,
+                                                              8, 9, 11],
+                                        'n_estimators': [10, 20, 30, 40, 50]},
+                   pre_dispatch='2*n_jobs', random_state=42, refit=True,
+                   return_train_score=False, scoring='accuracy', verbose=2)
+</code></pre>
+
+<h4 id="out-of-sample-prediction-1">Out-of-sample prediction</h4>
+
+<pre><code class="language-python">pred = rf_random.predict(X_test)
+errors = abs(pred - y_test)
+1 - (sum(errors) / len(X_test.index))
+</code></pre>
+
+<pre><code>0.7963094393186657
+</code></pre>
+
+<p>The accuracy hasn&rsquo;t changed. This is good.</p>
+
+<h4 id="feature-importance">Feature importance</h4>
+
+<pre><code class="language-python">features_imp = list(zip(X_train.columns, rf_random.best_estimator_.feature_importances_))
+features_imp.sort(key=lambda x: x[1], reverse=True)
+features_imp
+</code></pre>
+
+<pre><code>[('tenure', 0.17480257510722047),
+ ('MonthlyCharges', 0.1685986986317731),
+ ('TotalCharges', 0.1621832404990236),
+ ('Contract', 0.1460694596356221),
+ ('InternetService', 0.0764545302723155),
+ ('PaymentMethod', 0.041984125999528034),
+ ('OnlineSecurity', 0.038104291064396036),
+ ('PaperlessBilling', 0.036661780564273265),
+ ('TechSupport', 0.022116314064718583),
+ ('OnlineBackup', 0.016840414057895),
+ ('MultipleLines', 0.016371002760704433),
+ ('DeviceProtection', 0.016030071580043416),
+ ('StreamingTV', 0.01584585756896422),
+ ('gender', 0.014675035134160228),
+ ('Dependents', 0.01440662583031926),
+ ('SeniorCitizen', 0.011962023431441905),
+ ('Partner', 0.011185987835762707),
+ ('StreamingMovies', 0.010686697048558088),
+ ('PhoneService', 0.005021268913280056)]
+</code></pre>
+
+<h3 id="model-3-feature-selection-by-importance">Model 3 - Feature selection by importance</h3>
+
+<p>There are still a LOT of features in the model, and some are not very important. One approach to model reduction is to set a threshold for feature importance, and only keep the features above that threshold. For example, the default method in <code>SelectFromModel</code> keeps features with importances greater than the mean of the importances. I&rsquo;ll try that here.</p>
+
+<pre><code class="language-python">fpd = pd.DataFrame(features_imp)
+fpd
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tenure</td>
+      <td>0.174803</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MonthlyCharges</td>
+      <td>0.168599</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TotalCharges</td>
+      <td>0.162183</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Contract</td>
+      <td>0.146069</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>InternetService</td>
+      <td>0.076455</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>PaymentMethod</td>
+      <td>0.041984</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>OnlineSecurity</td>
+      <td>0.038104</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>PaperlessBilling</td>
+      <td>0.036662</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>TechSupport</td>
+      <td>0.022116</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>OnlineBackup</td>
+      <td>0.016840</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>MultipleLines</td>
+      <td>0.016371</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>DeviceProtection</td>
+      <td>0.016030</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>StreamingTV</td>
+      <td>0.015846</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>gender</td>
+      <td>0.014675</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Dependents</td>
+      <td>0.014407</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SeniorCitizen</td>
+      <td>0.011962</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Partner</td>
+      <td>0.011186</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>StreamingMovies</td>
+      <td>0.010687</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>PhoneService</td>
+      <td>0.005021</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">fpd[fpd[1] &gt; np.mean(fpd[1])]
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tenure</td>
+      <td>0.174803</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MonthlyCharges</td>
+      <td>0.168599</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TotalCharges</td>
+      <td>0.162183</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Contract</td>
+      <td>0.146069</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>InternetService</td>
+      <td>0.076455</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Using the mean as a threshold, the model would be reduced from 19 to 5 features.</p>
+
+<pre><code class="language-python">features = X_train[fpd[fpd[1] &gt; np.mean(fpd[1])][0].tolist()]
+rf_random.fit(features, y_train)
+</code></pre>
+
+<pre><code>Fitting 3 folds for each of 500 candidates, totalling 1500 fits
+
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  58 tasks      | elapsed:    3.8s
+[Parallel(n_jobs=-1)]: Done 300 tasks      | elapsed:   19.4s
+[Parallel(n_jobs=-1)]: Done 706 tasks      | elapsed:   47.3s
+[Parallel(n_jobs=-1)]: Done 1272 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 1493 out of 1500 | elapsed:  1.7min remaining:    0.5s
+[Parallel(n_jobs=-1)]: Done 1500 out of 1500 | elapsed:  1.7min finished
+
+
+
+
+
+RandomizedSearchCV(cv=3, error_score=nan,
+                   estimator=RandomForestClassifier(bootstrap=True,
+                                                    ccp_alpha=0.0,
+                                                    class_weight=None,
+                                                    criterion='gini',
+                                                    max_depth=None,
+                                                    max_features='auto',
+                                                    max_leaf_nodes=None,
+                                                    max_samples=None,
+                                                    min_impurity_decrease=0.0,
+                                                    min_impurity_split=None,
+                                                    min_samples_leaf=1,
+                                                    min_samples_split=2,
+                                                    min_weight_fraction_leaf=0.0,
+                                                    n_estimators=100,
+                                                    n_jobs...
+                   iid='deprecated', n_iter=500, n_jobs=-1,
+                   param_distributions={'bootstrap': [True, False],
+                                        'max_depth': [10, 14, 18, 23, 27, 32,
+                                                      36, 41, 45, 50],
+                                        'max_features': ['auto', 'sqrt'],
+                                        'min_samples_leaf': [2, 3, 4, 5, 6, 7,
+                                                             8, 9, 11],
+                                        'min_samples_split': [2, 3, 4, 5, 6, 7,
+                                                              8, 9, 11],
+                                        'n_estimators': [10, 20, 30, 40, 50]},
+                   pre_dispatch='2*n_jobs', random_state=42, refit=True,
+                   return_train_score=False, scoring='accuracy', verbose=2)
+</code></pre>
+
+<h4 id="out-of-sample-prediction-2">Out-of-sample prediction</h4>
+
+<pre><code class="language-python">features = X_test[fpd[fpd[1] &gt; np.mean(fpd[1])][0].tolist()]
+pred = rf_random.predict(features)
+errors = abs(pred - y_test)
+1 - (sum(errors) / len(X_test.index))
+</code></pre>
+
+<pre><code>0.7906316536550745
+</code></pre>
+
+<p>Pretty good! We&rsquo;ve managed to reduce the feature set substantially without losing a lot of accuracy. What we&rsquo;ve lost in accuracy we&rsquo;ve gained in explanatory power and generalizability. For example, we now know that with just 5 features we can predict with 79.1% accuracy who is going to churn. These 5 features could also be targets for interventions.</p>
+
+<p>One last check&hellip; to make sure we didn&rsquo;t predict churn for anyone with a tenure of 0 months.</p>
+
+<pre><code class="language-python">tmp = features.reset_index()
+no_tenures = tmp[tmp.tenure == 0].index.tolist()
+for i in no_tenures:
+    print(pred[i])
+</code></pre>
+
+<pre><code>0
+0
+0
+</code></pre>
+
+<p>Nope, all good!</p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/" title="Predicting customer churn" target="_blank" rel="external">https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Quantitative Researcher</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/" title="Predicting survival on the Titanic (this time with Python)"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://tylerburleigh.com/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright" style="display:none">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>EDA on Tyler Burleigh</title>
+    <title>eda on Tyler Burleigh</title>
     <link>https://tylerburleigh.com/tags/eda/</link>
-    <description>Recent content in EDA on Tyler Burleigh</description>
+    <description>Recent content in eda on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/eda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Titanic prediction with Python</title>
+      <title>Predicting customer churn</title>
+      <link>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</guid>
+      <description>Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</description>
+    </item>
+    
+    <item>
+      <title>Predicting survival on the Titanic (this time with Python)</title>
       <link>https://tylerburleigh.com/blog/titanic-prediction-with-python/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -129,7 +138,7 @@ An educational talk for a non-academic audience about measurements in psychology
       
       <guid>https://tylerburleigh.com/page/writings/</guid>
       <description>I’ve authored peer-reviewed scholarly articles and white papers.
-As of 2019-12-31, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
+As of 2020-01-01, my papers were cited 350 times and my h-index was 8. (source: Google Scholar)
 PapersUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
 Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M. (2015). Stimulus-category competition, inhibition and affective devaluation: A novel account of the Uncanny Valley.</description>
     </item>
