@@ -43,11 +43,11 @@
 
 <meta itemprop="datePublished" content="2020-01-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2721">
+<meta itemprop="wordCount" content="2713">
 
 
 
-<meta itemprop="keywords" content="python,random forest,feature selection,eda," />
+<meta itemprop="keywords" content="python,random forest,feature selection,eda,ml," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Predicting customer churn"/>
 <meta name="twitter:description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal."/>
@@ -208,7 +208,7 @@
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/ml/" class="tag-list-link">ml</a><span
-                    class="tag-list-count">4</span></li>
+                    class="tag-list-count">5</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
@@ -320,6 +320,7 @@
     <a class="article-tag-link" href="/tags/random-forest/"> random forest </a>
     <a class="article-tag-link" href="/tags/feature-selection/"> feature selection </a>
     <a class="article-tag-link" href="/tags/eda/"> eda </a>
+    <a class="article-tag-link" href="/tags/ml/"> ml </a>
   </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/predicting-customer-churn-telco-customer-churn/#comments"
@@ -329,13 +330,13 @@
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       
 
-<p>In this post I look at the the <a href="https://www.kaggle.com/blastchar/telco-customer-churn/kernels">Telco Customer Churn</a> from Kaggle. This data originally comes from the IBM Sample Data Sets.</p>
+<p>Let&rsquo;s analyze the <a href="https://www.kaggle.com/blastchar/telco-customer-churn/kernels">Telco Customer Churn</a> from Kaggle. This data originally comes from <a href="https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113">IBM Sample Data Sets</a>.</p>
 
 <p>If you don&rsquo;t already know, churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</p>
 
-<p>I decided to use this analysis to practice some of my python skills. Plus, I&rsquo;ve been working with churn at work recently, so I thought it might be interesting to work on a different dataset &ndash; one with an analysis that I can share publicly.</p>
+<p>I decided to use this dataset to practice some of my newfound python skills. Plus, I&rsquo;ve been working with churn at work recently, so I thought it might be interesting to work on a different dataset &ndash; one with an analysis that I can share publicly!</p>
 
-<p>For this analysis, I set out to find a parsimonious model that would predict churn with a high level of accuracy. I used a random forest model and performed a feature selection procedure to reduce the model&rsquo;s complexity.</p>
+<p>I set out to find a parsimonious model that would predict churn with a high level of accuracy. I used a random forest model and performed a feature selection procedure to reduce the model&rsquo;s complexity.</p>
 
 <pre><code class="language-python">import pandas as pd
 import numpy as np
@@ -1511,7 +1512,7 @@ for i in no_tenures:
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/" title="Predicting survival on the Titanic (this time with Python)"><i
+                <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/" title="Predicting survival on the Titanic (with Python!)"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
