@@ -3,39 +3,81 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tylerburleigh.com/categories/analysis/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/blog/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/categories/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://tylerburleigh.com/tags/javascript/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/nodejs/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/sms/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/software/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/tags/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/twilio/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/frontend/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/software/</loc>
+    <lastmod>2020-01-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/analysis/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -47,13 +89,26 @@
   </url>
   
   <url>
+    <loc>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/churn/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tylerburleigh.com/tags/feature-selection/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/ml/</loc>
+    <loc>https://tylerburleigh.com/tags/machine-learning/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -109,12 +164,6 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/analysis/</loc>
-    <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -122,13 +171,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/algotrading/</loc>
-    <lastmod>2019-10-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/prediction/</loc>
+    <loc>https://tylerburleigh.com/tags/timeseries/</loc>
     <lastmod>2019-10-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -166,12 +209,6 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/categories/dev/</loc>
-    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/tags/nutrition/</loc>
     <lastmod>2019-09-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -182,24 +219,6 @@
     <lastmod>2019-09-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/open-source/</loc>
-    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/package/</loc>
-    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/software-development/</loc>
-    <lastmod>2019-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -216,19 +235,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/data-science/</loc>
-    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/jobs/</loc>
-    <lastmod>2019-09-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/visualization/</loc>
+    <loc>https://tylerburleigh.com/tags/data-visualization/</loc>
     <lastmod>2019-09-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -240,28 +247,10 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/online-research-methods/</loc>
-    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/pymturkr/</loc>
-    <lastmod>2019-09-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/blog/mturk-qualification-tests/</loc>
     <lastmod>2019-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/mturkr/</loc>
-    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -285,19 +274,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/crowdwork/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/economics/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/fairness/</loc>
+    <loc>https://tylerburleigh.com/tags/research/</loc>
     <lastmod>2019-08-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -307,12 +284,6 @@
     <lastmod>2019-01-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/caret/</loc>
-    <lastmod>2019-01-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

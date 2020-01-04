@@ -4,7 +4,7 @@ author: ~
 date: '2019-10-12'
 slug: simple-moving-average-algorithmic-backtest
 categories: ['Analysis']
-tags: ['R', 'algotrading', 'ML', 'prediction']
+tags: ['R', 'machine learning', 'timeseries']
 disableComments: no
 bestof: yes
 summary: 'I made an algorithmic trader in R based on the "moving average crossover" technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.'

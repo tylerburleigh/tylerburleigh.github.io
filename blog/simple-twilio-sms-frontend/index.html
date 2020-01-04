@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        A simple Twilio SMS frontend using Nodejs - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="We&amp;rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log." />
+  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <title>A simple Twilio SMS frontend using Nodejs - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="A simple Twilio SMS frontend using Nodejs" />
+<meta property="og:description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" />
+<meta property="article:published_time" content="2020-01-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-04T00:00:00+00:00" />
+<meta itemprop="name" content="A simple Twilio SMS frontend using Nodejs">
+<meta itemprop="description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.">
+
+
+<meta itemprop="datePublished" content="2020-01-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1317">
+
+
+
+<meta itemprop="keywords" content="Nodejs,JavaScript,software,frontend,SMS,Twilio," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A simple Twilio SMS frontend using Nodejs"/>
+<meta name="twitter:description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Quantitative Researcher</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">6</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">6</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-simple-twilio-sms-frontend" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/simple-twilio-sms-frontend/"
+    >A simple Twilio SMS frontend using Nodejs</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" class="article-date">
+  <time datetime="2020-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-04</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/software/"> Software </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/nodejs/"> Nodejs </a>
+    <a class="article-tag-link" href="/tags/javascript/"> JavaScript </a>
+    <a class="article-tag-link" href="/tags/software/"> software </a>
+    <a class="article-tag-link" href="/tags/frontend/"> frontend </a>
+    <a class="article-tag-link" href="/tags/sms/"> SMS </a>
+    <a class="article-tag-link" href="/tags/twilio/"> Twilio </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/simple-twilio-sms-frontend/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>I really like <a href="https://www.twilio.com">Twilio</a> as a service for programmatically sending and receiving SMS messages. The API has solid documentation for a number of programming languages, which makes it easy to develop with.</p>
+
+<p>We&rsquo;re starting to use Twilio at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we&rsquo;re sending from. With that in mind, I made a simple frontend to the Twilio API.</p>
+
+<p>I decided to use <a href="https://expressjs.com">Express</a> for <a href="https://nodejs.org/en/">Node.js</a>.</p>
+
+<p>The end result is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</p>
+
+<p><img src="/blog/nodejstwilio/2020-01-04_16-34-18.gif" alt="A simple Twilio SMS frontend using Node.js" /></p>
+
+<p>First I installed <code>express</code> and <code>express-generator</code> and used it to generate an app skeleton.</p>
+
+<pre><code class="language-bash">npm install express --save
+npm install -g express-generator
+express
+</code></pre>
+
+<p>Next, I modified <code>app.js</code> in the root of the app folder to add my Twilio API credentials, and routes to the API client. I created routes for sending an SMS message, and for fetching inbound/outbound communications.</p>
+
+<pre><code class="language-javascript">
+#[...]
+
+const accountSid = 'MY-TWILIO-ACCOUNT-SID';
+const authToken = 'MY-TWILIO-AUTH-TOKEN';
+const client = require('twilio')(accountSid, authToken);
+const my_number = 'MY-TWILIO-PHONE-NUMBER';
+
+var app = express();
+
+#[...]
+
+// routes
+app.use('/', indexRouter);
+app.post('/submit', (req, res) =&gt; {
+	client.messages
+	  .create({
+	     body: req.body.message,
+	     from: my_number,
+	     to: req.body.number
+	   })
+	  .then(function(message){
+			res.send(JSON.stringify(message, undefined, 2));
+			res.end();
+		  })
+	  .catch(function(error) {
+			res.send(JSON.stringify(error, undefined, 2));
+			res.end();
+		});
+})
+app.post('/fetch-inbound', (req, res) =&gt; {
+	if(req.body.number == &quot;&quot;){
+		data = { limit: 100 };
+	} else {
+		data = { limit: 100, from: req.body.number };
+	}
+	client.messages.list(data)
+		.then(function(messages){
+			res.send(JSON.stringify(messages));
+			res.end();
+		});		
+})
+app.post('/fetch-outbound', (req, res) =&gt; {
+	if(req.body.number == &quot;&quot;){
+		data = { limit: 100 };
+	} else {
+		data = { limit: 100, to: req.body.number };
+	}
+	client.messages.list(data)
+		.then(function(messages){
+			res.send(JSON.stringify(messages));
+			res.end();
+		});	
+})
+app.post('/fetch-calls', (req, res) =&gt; {
+	if(req.body.number == &quot;&quot;){
+		data = { limit: 100 };
+	} else {
+		data = { limit: 100, from: req.body.number };
+	}
+	client.calls.list(data)
+		.then(function(calls){
+			res.send(JSON.stringify(calls));
+			res.end();
+		});		
+})
+
+#[...]
+</code></pre>
+
+<p>Then I wrote the <code>index.ejs</code> page. I used <a href="https://getbootstrap.com">Bootstrap</a> to make it less ugly, I used <a href="https://datatables.net/">Datatables</a> to add functionality to the tables that displayed SMS and calls, and I used <a href="https://jquery.com/">jQuery</a> to make some of the frontend stuff like aJax and DOM-manipulation easier.</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Twilio SMS Frontend&lt;/title&gt;
+
+    &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'&gt;
+    &lt;link rel='stylesheet' href='/stylesheets/style.css' /&gt;  
+    &lt;link rel='stylesheet' href='https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css' /&gt;  
+
+    &lt;link rel=&quot;stylesheet&quot; 
+      href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; 
+      integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; 
+      crossorigin=&quot;anonymous&quot;&gt;
+    &lt;script
+	  src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;
+	  integrity=&quot;sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=&quot;
+	  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+	&lt;script 
+	  src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; 
+	  integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; 
+	  crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+	&lt;script src=&quot;https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/sms_forms.js&quot; &gt;&lt;/script&gt;
+	&lt;script src=&quot;js/fetch_messages.js&quot; &gt;&lt;/script&gt;
+	&lt;script src=&quot;js/fetch_call_log.js&quot; &gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+
+	&lt;nav&gt;
+	  &lt;div class=&quot;nav nav-tabs&quot; id=&quot;nav-tab&quot; role=&quot;tablist&quot;&gt;
+	    &lt;a class=&quot;nav-item nav-link active&quot; id=&quot;nav-single-sms-tab&quot; 
+	    	data-toggle=&quot;tab&quot; href=&quot;#single-sms&quot; role=&quot;tab&quot; aria-controls=&quot;nav-single-sms&quot; aria-selected=&quot;true&quot;&gt;
+	    	Single SMS
+		&lt;/a&gt;
+	    &lt;a class=&quot;nav-item nav-link&quot; id=&quot;nav-bulk-sms-tab&quot; 
+	    	data-toggle=&quot;tab&quot; href=&quot;#bulk-sms&quot; role=&quot;tab&quot; aria-controls=&quot;nav-bulk-sms&quot; aria-selected=&quot;true&quot;&gt;
+	    	Bulk Send SMS
+	    &lt;/a&gt;
+	    &lt;a class=&quot;nav-item nav-link&quot; id=&quot;nav-send-status-tab&quot; 
+	    	data-toggle=&quot;tab&quot; href=&quot;#nav-send-status&quot; role=&quot;tab&quot; aria-controls=&quot;nav-send-status&quot; aria-selected=&quot;false&quot;&gt;
+	    	Send Status
+	    &lt;/a&gt;
+	    &lt;a class=&quot;nav-item nav-link&quot; id=&quot;nav-read-messages-tab&quot; 
+	    	data-toggle=&quot;tab&quot; href=&quot;#nav-read-messages&quot; role=&quot;tab&quot; aria-controls=&quot;nav-read-messages&quot; aria-selected=&quot;false&quot;&gt;
+	    	Read Messages
+		&lt;/a&gt;
+	  &lt;/div&gt;
+	&lt;/nav&gt;
+	&lt;div class=&quot;tab-content&quot; id=&quot;nav-tabContent&quot;&gt;
+
+	  &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;single-sms&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;nav-single-sms-tab&quot;&gt;	  	
+		&lt;h1&gt;Single SMS&lt;/h1&gt;
+		&lt;p&gt;Use this to send an SMS to a single number.&lt;/p&gt;
+		&lt;form id=&quot;form_single&quot; method=&quot;post&quot; action=&quot;/submit&quot;&gt;
+			Phone number:&lt;br&gt;
+		    &lt;input id=&quot;number_single&quot; type=&quot;number&quot; name=&quot;number&quot; style=&quot;width:200px&quot;&gt;&lt;br&gt;&lt;br&gt;
+		    Message:&lt;br&gt;
+		    &lt;textarea id=&quot;message_single&quot; type=&quot;message&quot; name=&quot;message&quot; rows=5 style=&quot;width:80%&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+		    &lt;input id=&quot;submit_single&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+		&lt;/form&gt;
+	  &lt;/div&gt;
+
+	  &lt;div class=&quot;tab-pane fade&quot; id=&quot;bulk-sms&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;nav-bulk-sms-tab&quot;&gt;	  	
+		&lt;h1&gt;Bulk Send SMS&lt;/h1&gt;
+		&lt;p&gt;
+			Use this to send SMS in bulk.&lt;br&gt;
+			One message, multiple numbers.&lt;br&gt;
+			Each phone number should be entered on a new line.
+		&lt;/p&gt;
+		&lt;form id=&quot;form_bulk&quot; method=&quot;post&quot; action=&quot;/submit&quot;&gt;
+			Phone numbers:&lt;br&gt;
+		    &lt;textarea id=&quot;number_bulk&quot; type=&quot;message&quot; name=&quot;message&quot; rows=3 style=&quot;width:200px&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+		    Message:&lt;br&gt;
+		    &lt;textarea id=&quot;message_bulk&quot; type=&quot;message&quot; name=&quot;message&quot; rows=5 style=&quot;width:80%&quot;&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+		    &lt;input id=&quot;submit_bulk&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+		&lt;/form&gt;
+	  &lt;/div&gt;
+
+	  &lt;div class=&quot;tab-pane fade&quot; id=&quot;nav-send-status&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;nav-send-status-tab&quot;&gt;
+		    &lt;h1&gt;Send Status&lt;/h1&gt;
+		    &lt;p&gt;
+		    	Use this to view the status of the message(s) that you just sent.&lt;br&gt;
+		    	This page displays the response from Twilio.
+		    &lt;/p&gt;
+	      	&lt;table class=&quot;table&quot; id=&quot;twilio_response_table&quot;&gt;
+			  &lt;thead&gt;
+			    &lt;tr&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Number&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Message&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Timestamp&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Twilio Response&lt;/th&gt;
+			    &lt;/tr&gt;
+			  &lt;/thead&gt;
+			  &lt;tbody&gt;
+			  &lt;/tbody&gt;
+			&lt;/table&gt;
+	  &lt;/div&gt;
+
+	  &lt;div class=&quot;tab-pane fade&quot; id=&quot;nav-read-messages&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;nav-read-messages-tab&quot;&gt;
+		    &lt;h1&gt;Read Messages&lt;/h1&gt;
+		    &lt;p&gt;
+		    	Use this to read the last 100 inbound and outbound messages.&lt;br&gt;
+		    	Optionally, specify a number to see messages to/from.
+		    &lt;/p&gt;
+			Filter by number (optional):&lt;br&gt; &lt;input id=&quot;fetch_number&quot; type=&quot;number&quot; name=&quot;number&quot; style=&quot;width:200px&quot;&gt;&lt;br&gt;&lt;br&gt;
+		    &lt;button type=&quot;button&quot; id=&quot;fetch_messages&quot; class=&quot;btn btn-primary&quot;&gt;Refresh&lt;/button&gt;&lt;br&gt;&lt;br&gt;
+	      	&lt;table class=&quot;table&quot; id=&quot;twilio_messages_table&quot;&gt;
+			  &lt;thead&gt;
+			    &lt;tr&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Type&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Direction&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Number&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Message&lt;/th&gt;
+			      &lt;th scope=&quot;col&quot;&gt;Timestamp&lt;/th&gt;
+			    &lt;/tr&gt;
+			  &lt;/thead&gt;
+			  &lt;tbody&gt;
+			  &lt;/tbody&gt;
+			&lt;/table&gt;
+	  &lt;/div&gt;
+
+	&lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Finally, I wrote the jQuery scripts in <code>/public/js/fetch_call_log.js</code>, <code>/public/js/fetch_messages.js</code> and <code>/public/js/sms_forms.js</code>:</p>
+
+<pre><code class="language-javascript">
+// fetch_call_log.js
+$( document ).ready(function() {
+
+	calls_table = $('#twilio_calls_table').DataTable( {
+          &quot;order&quot;: [[ 1, &quot;desc&quot; ]]
+	});
+
+
+	$(&quot;#fetch_calls&quot;).click(function(e){
+
+		calls_table.clear().draw();
+		results = [];
+
+    	var number = $(&quot;#fetch_call_log_number&quot;).val();
+		$.ajax({
+	        url: &quot;./fetch-calls&quot;,
+	        type: &quot;POST&quot;,
+	       	data: JSON.stringify({number: number}),
+	        dataType: &quot;json&quot;,
+	        contentType: &quot;application/json&quot;,
+	        complete: function(data) {
+	        	calls = JSON.parse(data.responseText);    
+				for (i = 0; i &lt; calls.length; i++) {
+					date = new Date(calls[i].dateCreated);
+					date = moment(date).format('YYYY-MM-DD HH:mm:ss')
+					calls_table
+					    .row.add( [ 
+					    	calls[i].from, 
+					    	date
+					    	] )
+					    .draw();
+				}
+	        }
+	    });
+
+	});
+
+});
+
+
+
+// fetch_messages.js
+
+$( document ).ready(function() {
+
+	messages_table = $('#twilio_messages_table').DataTable( {
+	  &quot;columnDefs&quot;: [
+	    { &quot;width&quot;: &quot;5%&quot;, &quot;targets&quot;: [0] },
+	    { &quot;width&quot;: &quot;15%&quot;, &quot;targets&quot;: [1] },
+	    { &quot;width&quot;: &quot;20%&quot;, &quot;targets&quot;: [2] },
+	    { &quot;width&quot;: &quot;37%&quot;, &quot;targets&quot;: [3] },
+	    { &quot;width&quot;: &quot;23%&quot;, &quot;targets&quot;: [4] }
+	  ], 
+	  autoWidth: false,
+      &quot;order&quot;: [[ 3, &quot;desc&quot; ]]
+	});
+
+
+	$(&quot;#fetch_messages&quot;).click(function(e){
+
+		messages_table.clear().draw();
+		results = [];
+
+		fetch_inbound = function() {
+	    	var number = $(&quot;#fetch_number&quot;).val();
+			$.ajax({
+		        url: &quot;./fetch-inbound&quot;,
+		        type: &quot;POST&quot;,
+	       		data: JSON.stringify({number: number}),
+		        dataType: &quot;json&quot;,
+		        contentType: &quot;application/json&quot;,
+		        complete: function(data) {    
+		        	messages = JSON.parse(data.responseText);	
+		        	console.log(&quot;inbound: &quot; + messages.length);   	        
+					for (i = 0; i &lt; messages.length; i++) {
+						message = messages[i];
+						results.push(message);
+					}
+					fetch_outbound();
+		        }
+		    });
+		}
+
+		fetch_outbound = function() {
+	    	var number = $(&quot;#fetch_number&quot;).val();
+			$.ajax({
+		        url: &quot;./fetch-outbound&quot;,
+		        type: &quot;POST&quot;,
+		        data: JSON.stringify({number: number}),
+		        dataType: &quot;json&quot;,
+		        contentType: &quot;application/json&quot;,
+		        complete: function(data) {
+		        	messages = JSON.parse(data.responseText);     
+					for (i = 0; i &lt; messages.length; i++) {
+						message = messages[i];
+						results.push(message);
+					}
+
+					var temp = [];
+					for (var i = 0; i &lt; results.length; i++) {
+					    if (temp.indexOf(results[i].sid) === -1) {
+					        temp.push(results[i].sid);
+					        results.splice(i + 1, 1)
+					    };
+					};
+
+					for (i = 0; i &lt; results.length; i++) {
+						date = new Date(results[i].dateCreated);
+						date = moment(date).format('YYYY-MM-DD HH:mm:ss')
+						direction = results[i].direction.replace(&quot;-api&quot;, &quot;&quot;).replace(&quot;-reply&quot;, &quot;&quot;)
+						messages_table
+						    .row.add( [ 
+				    			&quot;sms&quot;,
+						    	direction, 
+						    	results[i].from, 
+						    	results[i].body,
+						    	date
+						    	] )
+						    .draw();
+					}
+					fetch_calls();
+		        }
+		    });
+		}
+
+		fetch_calls = function() {
+	    	var number = $(&quot;#fetch_number&quot;).val();
+			$.ajax({
+		        url: &quot;./fetch-calls&quot;,
+		        type: &quot;POST&quot;,
+		       	data: JSON.stringify({number: number}),
+		        dataType: &quot;json&quot;,
+		        contentType: &quot;application/json&quot;,
+		        complete: function(data) {
+		        	calls = JSON.parse(data.responseText);    
+					for (i = 0; i &lt; calls.length; i++) {
+						date = new Date(calls[i].dateCreated);
+						date = moment(date).format('YYYY-MM-DD HH:mm:ss')
+						messages_table
+						    .row.add( [ 
+					    		&quot;call&quot;,
+					    		&quot;inbound&quot;,
+						    	calls[i].from, 
+					    		&quot;N/A&quot;,
+						    	date
+						    	] )
+						    .draw();
+					}
+		        }
+		    });
+		}
+
+		fetch_inbound();
+
+	});
+
+});
+
+
+// sms_forms.js
+
+$( document ).ready(function() {
+
+	var response_table = $('#twilio_response_table').DataTable( {
+		  &quot;columnDefs&quot;: [
+		    { &quot;width&quot;: &quot;13%&quot;, &quot;targets&quot;: [0] },
+		    { &quot;width&quot;: &quot;23%&quot;, &quot;targets&quot;: [2] },
+		    { &quot;width&quot;: &quot;32%&quot;, &quot;targets&quot;: [1, 3] }
+		  ], 
+		  autoWidth: false,
+          &quot;order&quot;: [[ 3, &quot;asc&quot; ]]
+		});
+
+	var enableSubmit = function(e) {
+	    $(e).removeAttr(&quot;disabled&quot;);
+	}
+
+	$(&quot;#form_single, #form_bulk&quot;).submit(function(e){
+	    e.preventDefault();
+	});
+
+	$(&quot;#submit_single&quot;).click(function(e){
+		e.preventDefault();
+	    var number = $(&quot;#number_single&quot;).val();
+	    var message = $(&quot;#message_single&quot;).val();
+
+	    $.ajax({
+	        url: &quot;./submit&quot;,
+	        type: &quot;POST&quot;,
+	        data: JSON.stringify({number: number, message: message}),
+	        dataType: &quot;json&quot;,
+	        contentType: &quot;application/json&quot;,
+	        complete: function(data) {
+				date = new Date();
+				date = moment(date).format('YYYY-MM-DD HH:mm:ss')
+		        data = JSON.parse(data.responseText);
+				if(data.status == 400){
+					status = &quot;Failure: &quot; + data.message;
+				} else {
+					status = data.status;
+				}
+				response_table
+				    .row.add( [ 
+				    	number, 
+				    	message, 
+				    	date,
+					    status
+				    	] )
+				    .draw();
+	        }
+	    })
+
+	    var that = this;
+	    $(this).attr(&quot;disabled&quot;, true);
+	    setTimeout(function() { enableSubmit(that) }, 1000);
+	});
+
+
+
+	$(&quot;#submit_bulk&quot;).click(function(e){
+		e.preventDefault();
+	    var numbers = $(&quot;#number_bulk&quot;).val().split('\n');
+	    var message = $(&quot;#message_bulk&quot;).val();
+
+	    var that = this;
+	    $(this).attr(&quot;disabled&quot;, true);
+
+	    // Run ajax requests sequentially
+		var sendSMS = function(userIndex) {
+			if (numbers.length == userIndex) {
+				console.log(&quot;sendSMS succeeded&quot;, numbers);
+				setTimeout(function() { enableSubmit(that) }, 1000);
+				return;
+			}
+
+			var this_number = numbers[userIndex];
+
+		    $.ajax({
+		        url: &quot;./submit&quot;,
+		        type: &quot;POST&quot;,
+		        data: JSON.stringify({number: this_number, message: message}),
+		        dataType: &quot;json&quot;,
+		        contentType: &quot;application/json&quot;,
+		        complete: function(data) {
+
+					date = new Date();
+					date = moment(date).format('YYYY-MM-DD HH:mm:ss')
+			        data = JSON.parse(data.responseText);
+					if(data.status == 400){
+						status = &quot;Failure: &quot; + data.message;
+					} else {
+						status = data.status;
+					}
+					response_table
+					    .row.add( [ 
+					    	this_number, 
+					    	message, 
+					    	date,
+						    status
+					    	] )
+					    .draw();
+				  	sendSMS(++userIndex);
+		        }
+		    })
+
+		};
+
+		sendSMS(0);
+
+	});
+
+
+});
+
+
+</code></pre>
+
+<p>I wrote the SMS form processor to allow sending SMS messages one-at-a-time or in bulk using newline delimited phone numbers.</p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" title="A simple Twilio SMS frontend using Nodejs" target="_blank" rel="external">https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Quantitative Researcher</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/" title="Predicting customer churn"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright" style="display:none">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

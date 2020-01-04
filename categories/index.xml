@@ -5,10 +5,19 @@
     <link>https://tylerburleigh.com/categories/</link>
     <description>Recent content in Categories on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A simple Twilio SMS frontend using Nodejs</title>
+      <link>https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</guid>
+      <description>We&amp;rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</description>
+    </item>
     
     <item>
       <title>Predicting customer churn</title>
