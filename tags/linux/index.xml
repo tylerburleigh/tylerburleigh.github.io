@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on A minimal Hugo website</title>
+    <link>https://example.com/tags/linux/</link>
+    <description>Recent content in linux on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Milano Has 230 Lines of Code</title>
+      <link>https://example.com/post/lines-of-code/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/lines-of-code/</guid>
+      <description>find . -not -path &#39;*/exampleSite/*&#39; \( -name &#39;*.html&#39; -o -name &#39;*.css&#39; \) | xargs wc -l   15 ./layouts/partials/paginator.html 20 ./layouts/partials/footer.html 0 ./layouts/partials/head_custom.html 0 ./layouts/partials/foot_custom.html 7 ./layouts/partials/css.html 21 ./layouts/partials/header.html 41 ./layouts/_default/single.html 21 ./layouts/_default/list.html 16 ./layouts/_default/terms.html 5 ./layouts/404.html 78 ./static/css/style.css 12 ./static/css/fonts.css 236 total  </description>
+    </item>
+    
+    <item>
+      <title>Introducing Bunsenlabs</title>
+      <link>https://example.com/post/introducing-bunsenlabs/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/introducing-bunsenlabs/</guid>
+      <description>From their Homepage:
+ BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop. The current release is Deuterium, derived from Debian Jessie. The project is a community continuation of CrunchBang Linux.
+ This distro is awesome. Check it out!</description>
+    </item>
+    
+    <item>
+      <title>How to Disable Password Authentication for SSH</title>
+      <link>https://example.com/post/disable-password-authentication-for-ssh-linux/</link>
+      <pubDate>Fri, 21 Oct 2016 21:00:36 -0700</pubDate>
+      
+      <guid>https://example.com/post/disable-password-authentication-for-ssh-linux/</guid>
+      <description>If you are already set up to login to your Linux server using SSH key authentication, you can increase the security of your server by disabling password authentication. To disable password authentication for SSH, do the following:
+$ sudo nano /etc/ssh/sshd_config  Set the following settings, or change them to &amp;ldquo;no&amp;rdquo; if they already exist:
+ChallengeResponseAuthentication no PasswordAuthentication no UsePAM no  Save the file and restart the ssh server:</description>
+    </item>
+    
+  </channel>
+</rss>

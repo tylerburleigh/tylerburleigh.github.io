@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nutritionix on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/nutritionix/</link>
+    <description>Recent content in Nutritionix on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://tylerburleigh.com/tags/nutritionix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I&amp;rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&amp;rsquo;m curious. So in order to move in that direction, I decided to write a package, nutritionR, that can perform a nutritional analysis of foods and recipes expressed in natural language.
+nutritionR is a wrapper for the Nutritionix API. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&amp;rsquo;ve seen by supporting lots of micronutrients.</description>
+    </item>
+    
+  </channel>
+</rss>
