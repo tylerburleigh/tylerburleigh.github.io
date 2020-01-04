@@ -52,7 +52,7 @@ data <- data.frame(
 )
 
 timevis(data, groups = data.frame(id = 1:2, content = c("G1", "G2"))) %>%
-  setGroups(data.frame(id = 1:2, content = c("Education", "Positions"))) %>%
+  setGroups(data.frame(id = 1:2, content = c("Education", "Jobs"))) %>%
   setOptions(options = list(showCurrentTime = FALSE, orientation = "top"))
 ```
 
