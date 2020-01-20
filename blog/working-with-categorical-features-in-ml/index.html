@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        Categorical features: cardinality and sparsity - Tyler Burleigh
+      </title>
+    
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  
+  <meta name="description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
+For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
+Cardinality In the context of machine learning, &amp;ldquo;cardinality&amp;rdquo; refers to the number of possible values that a feature can assume." />
+  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="Categorical features: cardinality and sparsity" />
+<meta property="og:description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
+For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
+Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" />
+<meta property="article:published_time" content="2020-01-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-20T00:00:00+00:00" />
+<meta itemprop="name" content="Categorical features: cardinality and sparsity">
+<meta itemprop="description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
+For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
+Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume.">
+
+
+<meta itemprop="datePublished" content="2020-01-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="693">
+
+
+
+<meta itemprop="keywords" content="python,machine learning,regression,boosting,encoding,categorical," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Categorical features: cardinality and sparsity"/>
+<meta name="twitter:description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
+For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
+Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com">
+            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Quantitative Researcher</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">7</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">3</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">7</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main"><div class="content">
+  <article id="-working-with-categorical-features-in-ml" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 >
+  <a
+    class="article-title"
+    href="/blog/working-with-categorical-features-in-ml/"
+    >Categorical features: cardinality and sparsity</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" class="article-date">
+  <time datetime="2020-01-20">2020-01-20</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/machine-learning/"> machine learning </a>
+    <a class="article-tag-link" href="/tags/regression/"> regression </a>
+    <a class="article-tag-link" href="/tags/boosting/"> boosting </a>
+    <a class="article-tag-link" href="/tags/encoding/"> encoding </a>
+    <a class="article-tag-link" href="/tags/categorical/"> categorical </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/working-with-categorical-features-in-ml/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content">
+      
+
+<p>This weekend I decided to dive into the <a href="https://www.kaggle.com/c/cat-in-the-dat-ii">Categorical Feature Encoding Challenge II</a> that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.</p>
+
+<p>For this challenge, the dataset contained <strong>only categorical features</strong> and also different <strong>kinds</strong> of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.</p>
+
+<h2 id="cardinality">Cardinality</h2>
+
+<p>In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume. For example, the variable &ldquo;US State&rdquo; is one that has 50 possible values. Dealing with high cardinality turned out to be one of the most interesting parts of the challenge. It&rsquo;s a problem that I haven&rsquo;t encountered much before, certainly not to this extent.</p>
+
+<p>There was a wide range of cardinality. The binary features, of course, could only assume one of two values (0 or 1). One of the ordinal features was uppercase letters of the alphabet, so it had 26 possible values. A feature that really took the cake had more than 1000 possible alpha-numeric strings like <code>de4c57ee2</code>. And not only that, but some of the values were unique &ndash; only appearing once in the training set. Improper encoding of high-cardinality features can lead to poor model performance, and memory issues when trying to fit the model because encoding can result in extremely large matrices of values.</p>
+
+<h2 id="dummy-one-hot-encoding">Dummy / one-hot encoding</h2>
+
+<p>A common strategy for encoding categorical variables is &ldquo;one-hot&rdquo; or &ldquo;dummy&rdquo; encoding, where a new column is created for every N (or N-1) of the possible values, and those columns are given a value of 1 or 0 depending on whether the feature had that value. Below is an example of dummy encoding for 4 hair colors:</p>
+
+<p>Original variable:</p>
+
+<table>
+<thead>
+<tr>
+<th>hair_color</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>red</td>
+</tr>
+
+<tr>
+<td>black</td>
+</tr>
+
+<tr>
+<td>brown</td>
+</tr>
+
+<tr>
+<td>blonde</td>
+</tr>
+</tbody>
+</table>
+
+<p>Dummy / one-hot encoded variable with N columns:</p>
+
+<table>
+<thead>
+<tr>
+<th>hair_color_red</th>
+<th>hair_color_black</th>
+<th>hair_color_brown</th>
+<th>hair_color_blonde</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="sparse-matrices">Sparse matrices</h2>
+
+<p>You can imagine how dummy-coding 1000s of possible values might get out of hand, especially when some of them are very rare. This leads to the problem of &ldquo;sparsity&rdquo; where you end up with a huge matrix and almost every value is zero. In this dataset, one of my models was running over essentially 600000 X 5000 (rows X columns).</p>
+
+<p>Fortunately there is a &ldquo;compressed sparse row&rdquo; matrix representation that solves this problem, which is part of the <code>scikit</code> library of methods. The graphic below (<a href="https://www.geeksforgeeks.org/sparse-matrix-representation/">source</a>) illustrates how the sparse data is encoded into the matrix.</p>
+
+<p><img src="catindat/Sparse-Matrix-Array-Representation1.png" alt="" /></p>
+
+<h2 id="target-mean-encoding">Target (mean) encoding</h2>
+
+<p>The other approach side-steps this problem entirely using a process called &ldquo;target encoding&rdquo;. Target encoding is when you calculate the mean of the target variable (in the training dataset) and use that in place of the categorical variable. Take the table below for example. The mean of the target variable for <code>hair_color</code> = <code>red</code> is <code>0.5</code>. We could substitute this mean for every time we see <code>hair_color</code> = <code>red</code>, and use this target-encoded variable as a predictor of the target (in the test set).</p>
+
+<table>
+<thead>
+<tr>
+<th>hair_color</th>
+<th>target</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>red</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>red</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>However, when you use target encoding you run the risk of &ldquo;target leakage&rdquo; because your model might then be using information about the target to predict the target. It&rsquo;s similar to how your model might be overfit if you trained and validated a model using the same data (instead of using the conventional &ldquo;train set&rdquo; / &ldquo;test set&rdquo; split). This can ultimately result in an overfit model that performs poorly out-of-sample. Leakage can be avoided by using a &ldquo;leave one out&rdquo; target encoder, which encodes the target value while excluding the current row that it&rsquo;s looking at.</p>
+
+<h2 id="model-selection">Model selection</h2>
+
+<p>The other challenge is finding the right model given how the data is encoded. I built a Logistic Regression model using a sparse one-hot encoded matrix for the high-cardinality features, and a CatBoost model using target encoding for the high-cardinality features.</p>
+
+<ul>
+<li><p><a href="https://www.kaggle.com/bluewizard/logistic-regression-w-onehot-catboost-encoders">Logistic Regression w/ OneHot &amp; Catboost Encoders</a></p></li>
+
+<li><p><a href="https://www.kaggle.com/bluewizard/catboost-model-w-dummy-target-encoders">CatBoost Model w/ Dummy &amp; Target Encoders</a></p></li>
+</ul>
+
+<p>My best model scored <code>0.78577</code> which is not far off from the #1 score of <code>0.78664</code>.</p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" title="Categorical features: cardinality and sparsity" target="_blank" rel="external">https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Quantitative Researcher</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" title="A simple Twilio SMS frontend using Nodejs"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright" style="display:none">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://tylerburleigh.com/js/application.js"></script>
+<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>
