@@ -6,15 +6,8 @@ title: About Me
 output: html_document
 ---
 
-I'm a behavioral scientist and a data scientist. I aim to work at the top of my license and make the world a better place to live. I am interested in working for companies that have a positive social impact.
+For more than ten years, I've been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry's first Behavioral Science team, I've been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.
 
-I hold a PhD in Psychology from the <a href="https://www.uoguelph.ca/">University of Guelph</a> Applied Cognitive Science program, and a Master's in Psychology with a concentration in Cognitive Psychology from <a href="https://carleton.ca">Carleton University</a>. 
-
-While I was a graduate student, I started to work as a freelance behavioral scientist and software developer for energy-conservation start-ups in Ontario (<a href="https://emergeguelph.ca">eMERGE Guelph</a>, <a href="https://www.greenbraininc.com">Greenbrain</a>, <a href="https://app.projectneutral.org/">Project Neutral</a>). I continue to provide services to eMERGE.
-
-Since graduating from my PhD program in 2017, I've been working full-time at healthcare start-ups, acting as a Research Scientist and a Quantitative Researcher -- in practice, a combination of a Behavioral Scientist and a Data Scientist.
-
-I'm proficient in R, JavaScript, and python, and I'm always learning new things so I can be a better scientist and programmer. In 2019 I completed two data science MOOCs to sharpen my skills in R and python: 1) the <a href="https://www.coursera.org/account/accomplishments/specialization/4LA5AKSYHYPM">Data Science Specialization offered by Johns Hopkins University on Coursera</a> (a 40-hour specialization), and 2) the <a href="https://www.datacamp.com/statement-of-accomplishment/track/7c14c4dbf42fa122825e3a1f23adaa049afc7f23">Data Scientist with Python Track</a> offered by Datacamp (a 100-hour specialization).
 
 You can find the best examples of my work here on <a href="https://tylerburleigh.com">my Blog</a>, on my <a href="https://tylerburleigh.com/page/writings">Publications page</a>, and at <a href="https://github.com/tylerburleigh">my GitHub</a>.
 
@@ -24,31 +17,27 @@ You can find the best examples of my work here on <a href="https://tylerburleigh
 library(timevis)
 
 data <- data.frame(
-  id      = 1:10,
+  id      = 1:8,
   
   content = c("BA in Psychology", 
               "MA in Cognitive Psychology",
               "PhD in Applied Cognitive Science",
-              "Freelance Behavioral Science / Software Development",
               "Assistant Research Scientist @ New York University",
               "Research Scientist @ Datacubed Health",
-              "Adjunct Professor in Applied Analytics @ Columbia University",
-              "Quantitative Researcher @ Clover Health",
+              "Data Scientist @ Clover Health",
               "Data Science Specialization @ Coursera",
               "Data Scientist with Python @ Datacamp"),
   
   start   = c("2005-09-01", 
               "2009-09-01",
               "2011-09-01",
-              "2014-01-01",
               "2017-02-28",
               "2017-12-31",
-              "2018-09-01",
               "2018-11-15",
               "2018-07-01",
               "2019-12-01"),
   
-  group = c(1, 1, 1, 2, 2, 2, 2, 2, 1, 1)
+  group = c(1, 1, 1, 2, 2, 2, 1, 1)
 )
 
 timevis(data, groups = data.frame(id = 1:2, content = c("G1", "G2"))) %>%
@@ -62,31 +51,27 @@ Code for the above visualization:
 library(timevis)
 
 data <- data.frame(
-  id      = 1:10,
+  id      = 1:8,
   
   content = c("BA in Psychology", 
               "MA in Cognitive Psychology",
               "PhD in Applied Cognitive Science",
-              "Freelance Behavioral Science / Software Development",
               "Assistant Research Scientist @ New York University",
               "Research Scientist @ Datacubed Health",
-              "Adjunct Professor in Applied Analytics @ Columbia University",
-              "Quantitative Researcher @ Clover Health",
+              "Data Scientist @ Clover Health",
               "Data Science Specialization @ Coursera",
               "Data Scientist with Python @ Datacamp"),
   
   start   = c("2005-09-01", 
               "2009-09-01",
               "2011-09-01",
-              "2014-01-01",
               "2017-02-28",
               "2017-12-31",
-              "2018-09-01",
               "2018-11-15",
               "2018-07-01",
               "2019-12-01"),
   
-  group = c(1, 1, 1, 2, 2, 2, 2, 2, 1, 1)
+  group = c(1, 1, 1, 2, 2, 2, 1, 1)
 )
 
 timevis(data, groups = data.frame(id = 1:2, content = c("G1", "G2"))) %>%
