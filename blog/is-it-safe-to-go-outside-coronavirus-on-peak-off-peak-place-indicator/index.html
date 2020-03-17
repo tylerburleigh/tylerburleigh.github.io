@@ -39,7 +39,7 @@ But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even i
 
 <meta itemprop="datePublished" content="2020-03-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="496">
+<meta itemprop="wordCount" content="607">
 
 
 
@@ -329,11 +329,13 @@ But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even i
 
 <p><img src="/blog/is_it_safe.png" alt="png" /></p>
 
-<hr>
+<p>Here I&rsquo;ve drawn bars for the popularity for each hour in the current day. The current hour of the current day is highlighted in red, and a horizontal bar is drawn to indicate the on-peak/off-peak threshold (in this case, based on the mean). When the current hour bar is above the red line, then it&rsquo;s on-peak and unsafe; when it&rsquo;s below it&rsquo;s off-peak and safe.</p>
 
-<hr>
+<p>For full python code implementing this algorithm, see below.</p>
 
-<h1 id="imports">Imports</h1>
+<h1 id="python-code">Python code</h1>
+
+<h2 id="imports">Imports</h2>
 
 <pre><code class="language-python">import ipywidgets as widgets
 import populartimes # https://github.com/m-wrzr/populartimes
@@ -351,7 +353,7 @@ place_widget = widgets.Text(value='Target in Jersey City')
 gmaps = googlemaps.Client(key=api_key)
 </code></pre>
 
-<h1 id="functions">Functions</h1>
+<h2 id="functions">Functions</h2>
 
 <pre><code class="language-python"># Take place name as text input, return place_id
 def place_name_to_id(x):
@@ -408,7 +410,9 @@ def plot_gen():
     plot.set_title(&quot;Is it safe to go to\n&quot; + place_widget.value + &quot;?\n&quot; + off_peak_label)
 </code></pre>
 
-<h1 id="is-it-safe-to-go-outside">Is it safe to go outside?</h1>
+<h2 id="is-it-safe-to-go-outside">Is it safe to go outside?</h2>
+
+<p>Here the user would be presented with a text input where they could enter the name of a place. Then they could run this code chunk to generate output like the graph at the bottom.</p>
 
 <pre><code class="language-python">display(place_widget) # Type place name in input box below
 place_name_to_id(place_widget.value)
