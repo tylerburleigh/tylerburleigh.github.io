@@ -17,9 +17,7 @@
   <meta name="theme-color" content="#000000" />
   
   
-  <meta name="description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
-For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
-Cardinality In the context of machine learning, &amp;ldquo;cardinality&amp;rdquo; refers to the number of possible values that a feature can assume." />
+  <meta name="description" content="Some observations about high-cardinality features and sparsity." />
   <meta name="generator" content="Hugo 0.56.1 with theme pure" />
   
 
@@ -27,17 +25,13 @@ Cardinality In the context of machine learning, &amp;ldquo;cardinality&amp;rdquo
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Categorical features: cardinality and sparsity" />
-<meta property="og:description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
-For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
-Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume." />
+<meta property="og:description" content="Some observations about high-cardinality features and sparsity." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" />
 <meta property="article:published_time" content="2020-01-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-01-20T00:00:00+00:00" />
 <meta itemprop="name" content="Categorical features: cardinality and sparsity">
-<meta itemprop="description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
-For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
-Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume.">
+<meta itemprop="description" content="Some observations about high-cardinality features and sparsity.">
 
 
 <meta itemprop="datePublished" content="2020-01-20T00:00:00&#43;00:00" />
@@ -49,9 +43,7 @@ Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers
 <meta itemprop="keywords" content="python,machine learning,regression,boosting,encoding,categorical," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Categorical features: cardinality and sparsity"/>
-<meta name="twitter:description" content="This weekend I decided to dive into the Categorical Feature Encoding Challenge II that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.
-For this challenge, the dataset contained only categorical features and also different kinds of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.
-Cardinality In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume."/>
+<meta name="twitter:description" content="Some observations about high-cardinality features and sparsity."/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
