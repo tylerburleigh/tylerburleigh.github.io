@@ -17,8 +17,7 @@
   <meta name="theme-color" content="#000000" />
   
   
-  <meta name="description" content="One of the best behavioral strategies for mitigating the risk of coronavirus infection is &amp;ldquo;social distancing&amp;rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.
-But for most individuals staying at home isn&amp;rsquo;t possible 24&amp;frasl;7, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce." />
+  <meta name="description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?" />
   <meta name="generator" content="Hugo 0.56.1 with theme pure" />
   
 
@@ -26,15 +25,13 @@ But for most individuals staying at home isn&amp;rsquo;t possible 24&amp;frasl;7
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator" />
-<meta property="og:description" content="One of the best behavioral strategies for mitigating the risk of coronavirus infection is &ldquo;social distancing&rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.
-But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce." />
+<meta property="og:description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/" />
 <meta property="article:published_time" content="2020-03-17T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-17T00:00:00+00:00" />
 <meta itemprop="name" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator">
-<meta itemprop="description" content="One of the best behavioral strategies for mitigating the risk of coronavirus infection is &ldquo;social distancing&rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.
-But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce.">
+<meta itemprop="description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?">
 
 
 <meta itemprop="datePublished" content="2020-03-17T00:00:00&#43;00:00" />
@@ -46,8 +43,7 @@ But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even i
 <meta itemprop="keywords" content="python,data visualization," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator"/>
-<meta name="twitter:description" content="One of the best behavioral strategies for mitigating the risk of coronavirus infection is &ldquo;social distancing&rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.
-But for most individuals staying at home isn&rsquo;t possible 24&frasl;7, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce."/>
+<meta name="twitter:description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?"/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -349,7 +345,7 @@ from pytz import timezone
 
 api_key = 'API_KEY_GOES_HERE'
 
-place_widget = widgets.Text(value='Target in Jersey City')
+place_widget = widgets.Text(value='Library in Hoboken, NJ')
 gmaps = googlemaps.Client(key=api_key)
 </code></pre>
 
