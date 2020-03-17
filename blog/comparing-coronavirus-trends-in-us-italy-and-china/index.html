@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-        What is fair payment on MTurk? - Tyler Burleigh
+        Comparing coronavirus trends in US, Italy, and China - Tyler Burleigh
       </title>
     
   <meta name="viewport"
@@ -17,33 +17,37 @@
   <meta name="theme-color" content="#000000" />
   
   
-  <meta name="description" content="A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair." />
+  <meta name="description" content="A coronavirus dataset was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.
+Before I share the trends, a bit of background. A question that&amp;rsquo;s on the mind of everyone following the news right now is: &amp;ldquo;How will the outbreak unfold in my community?" />
   <meta name="generator" content="Hugo 0.56.1 with theme pure" />
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-  <meta property="og:title" content="What is fair payment on MTurk?" />
-<meta property="og:description" content="A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair." />
+  <meta property="og:title" content="Comparing coronavirus trends in US, Italy, and China" />
+<meta property="og:description" content="A coronavirus dataset was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.
+Before I share the trends, a bit of background. A question that&rsquo;s on the mind of everyone following the news right now is: &ldquo;How will the outbreak unfold in my community?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/" />
-<meta property="article:published_time" content="2019-08-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-08-04T00:00:00+00:00" />
-<meta itemprop="name" content="What is fair payment on MTurk?">
-<meta itemprop="description" content="A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.">
+<meta property="og:url" content="https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/" />
+<meta property="article:published_time" content="2020-03-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-17T00:00:00+00:00" />
+<meta itemprop="name" content="Comparing coronavirus trends in US, Italy, and China">
+<meta itemprop="description" content="A coronavirus dataset was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.
+Before I share the trends, a bit of background. A question that&rsquo;s on the mind of everyone following the news right now is: &ldquo;How will the outbreak unfold in my community?">
 
 
-<meta itemprop="datePublished" content="2019-08-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-08-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="753">
+<meta itemprop="datePublished" content="2020-03-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="371">
 
 
 
-<meta itemprop="keywords" content="MTurk,research," />
+<meta itemprop="keywords" content="python,data visualization," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="What is fair payment on MTurk?"/>
-<meta name="twitter:description" content="A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair."/>
+<meta name="twitter:title" content="Comparing coronavirus trends in US, Italy, and China"/>
+<meta name="twitter:description" content="A coronavirus dataset was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.
+Before I share the trends, a bit of background. A question that&rsquo;s on the mind of everyone following the news right now is: &ldquo;How will the outbreak unfold in my community?"/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -271,113 +275,54 @@
   </div>
 </aside>
 <main class="main"><div class="content">
-  <article id="-what-is-fair-payment-on-mturk" class="article article-type-" itemscope
+  <article id="-comparing-coronavirus-trends-in-us-italy-and-china" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       <h1 >
   <a
     class="article-title"
-    href="/blog/what-is-fair-payment-on-mturk/"
-    >What is fair payment on MTurk?</a
+    href="/blog/comparing-coronavirus-trends-in-us-italy-and-china/"
+    >Comparing coronavirus trends in US, Italy, and China</a
   >
 </h1>
 
       <div class="article-meta">
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
-<a href="https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/" class="article-date">
-  <time datetime="2019-08-04">2019-08-04</time>
+<a href="https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/" class="article-date">
+  <time datetime="2020-03-17">2020-03-17</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
-  <a class="article-category-link" href="/categories/research/"> Research </a>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
 </span>  
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-    <a class="article-tag-link" href="/tags/mturk/"> MTurk </a>
-    <a class="article-tag-link" href="/tags/research/"> research </a>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/data-visualization/"> data visualization </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/what-is-fair-payment-on-mturk/#comments"
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/comparing-coronavirus-trends-in-us-italy-and-china/#comments"
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content">
-      <p>My go-to place for convenience sampling is <a href="https://www.mturk.com" title="Amazon Mechanical Turk">MTurk</a>. It&rsquo;s fast, it&rsquo;s easy, it&rsquo;s flexible, it can be as simple or complicated as you need it to be, the data is high quality and the samples are fairly &ldquo;representative&rdquo; of the US population. <strong>But what is &ldquo;fair payment&rdquo; for &ldquo;work&rdquo; on MTurk?</strong></p>
+      <p>A <a href="https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset">coronavirus dataset</a> was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.</p>
 
-<p>Objectively, if we accept that MTurk work is like other kinds of work,
-then we should aim to pay an amount that equates to a minimum hourly wage.
-We can do this by estimating the time that the task takes the average worker
-to complete, and then choosing a dollar value that would add up to a minimum hourly wage.
-For example, if a task takes an average of 1 hour to complete we could pay $7.25 or $12
-to every worker who completes the task; if a task takes 1 minute to complete, then we can pay
-1/60th that amount (e.g., 12 cents or 20 cents).</p>
+<p>Before I share the trends, a bit of background. A question that&rsquo;s on the mind of everyone following the news right now is: &ldquo;How will the outbreak unfold in my community?&rdquo; People want to know what they can expect, how well is the virus being contained and mitigated &ndash; ultimately, how much worse can they expect it to get before it starts to get better.</p>
 
-<p>Subjectively, we can ask people what they think would be fair.
-I wasn&rsquo;t aware of any current data that speaks to MTurk worker pay expectations
-or perceptions of payment fairness so I decided to run a survey and find out!</p>
+<p>Predicting the future isn&rsquo;t easy, but one approach to estimating how the virus will spread in our own community is to look at how the virus has spread in other communities that are further along in the spread of the virus.</p>
 
-<div style="display: flex; flex-direction: column; align-items: center;">
+<p>So here&rsquo;s how I approached it: Let&rsquo;s assume that the coronavirus spread in the US might mirror the spread of the virus in China or Italy. The confirmed cases data in China begins at a count of roughly 500, so we&rsquo;ll align the data in US and Italy to that. In other words, we&rsquo;ll make the (admittedly somewhat clumsy) assumption that &ldquo;Day 1&rdquo; of the outbreak is when a community reaches 500 cases, and look at how the virus spreads beyond that point.</p>
 
-  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/5 What&#39;s a fair payment on <a href="https://twitter.com/hashtag/MTurk?src=hash&amp;ref_src=twsrc%5Etfw">#MTurk</a>? <br><br>I was curious what MTurk workers would say to this, so I paid ~200 workers 5 cents to answer a single question: &quot;What is fair payment on MTurk to you?&quot;</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1157676430211391489?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The figure below illustrates these trends. We can make a few observations. First, in Mainland China the trend begins to flatten at around Day 25. Second, Italy is seeing a flatter growth trend than China, but at Day ~17 it&rsquo;s still increasing. Third, the US is at Day ~7 now, and the growth trend so far is a perfect match to the trend in Italy.</p>
 
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">2/5 A large number of workers anchored on $0.10/min, which aligns with the standards followed by some of the earlier worker communities like /r/HITsWorthTurkingFor.<br><br>From the wiki: <a href="https://t.co/SDggW4IBB7">pic.twitter.com/SDggW4IBB7</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1157676434711822338?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Can we expect the next 10 days of coronavirus spread in the US to look like Italy? Maybe. It&rsquo;s complicated and there are lots of other factors at play, but that&rsquo;s one crude prediction we could make given the data.</p>
 
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">3/5 Others anchored on minimum wages: the federal standard of $7.25/hr (~$0.12/min), California&#39;s $12/hr ($0.20/min), or a mid-point ($10/hr).<br><br>Interestingly, these are the standards that <a href="https://twitter.com/TurkerView?ref_src=twsrc%5Etfw">@TurkerView</a>, a newer worker community, uses to frame the fairness of payments: <a href="https://t.co/UvJVz8T2TJ">pic.twitter.com/UvJVz8T2TJ</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1157676440097361920?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><img src="/blog/coronavirus_trend.png"></p>
 
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">4/5 Finally, there was a group that anchored on $15/hr ($0.25/min), which is what many believe the minimum wage *should be*. One worker said quote: &quot;25 cents per minute = 15.00 per hour, a true living wage&quot; <a href="https://twitter.com/hashtag/FightFor15?src=hash&amp;ref_src=twsrc%5Etfw">#FightFor15</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1157676442077093889?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">5/5 <br>Here&#39;s the fuller picture (vertical line = mean).<br><br>Mean = 15 cents/min<br>Median = 13 cents/min<br><br>SD = 7.82 <a href="https://t.co/I0B1guOApa">pic.twitter.com/I0B1guOApa</a></p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1157676446174896129?ref_src=twsrc%5Etfw">August 3, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-</div>
-
-<p>I think researchers have a tendency to assume that it&rsquo;s &ldquo;okay&rdquo; to pay workers on MTurk
-less than a minimum wage because there has been some research that shows, despite money being the
-primary motivation, data quality seems to be just as good regardless of payment. (See <a href="http://dx.doi/10.3758/s13428-014-0483-x">Litman et al., 2014</a>)</p>
-
-<p>But I wonder if Litman et al.&rsquo;s research is still true today?</p>
-
-<p>I think the visibility of crowdwork and the discourse surrounding it has changed,
-and people are more aware and more vocal about the exploitation that crowdworkers
-are subjected to. I wonder if, for these reasons, workers would now be more willing
-to &ldquo;withhold effort&rdquo; if they felt they were not being paid fairly for their work?</p>
-
-<div style="display: flex; flex-direction: column; align-items: center;">
-
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">I&#39;d love to see an conceptual replication of this paper<br><br>Litman, L., Robinson, J., &amp; Rosenzweig, C. (2014). The relationship between motivation, monetary compensation, and data quality among US- and India-based workers on Mechanical Turk. Behavior Research Methods, 47(2), 519–528</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1158087256751648768?ref_src=twsrc%5Etfw">August 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">They ran a 6-minute task with 4 pay conditions:<br>$0.02 (= $0.20/hr)<br>$0.05 (= $0.50/hr)<br>$0.10 (= $1.00/hr)<br>$1.00 (= $10.00/hr)<br><br>They checked data quality and found no differences, concluding: &quot;US-based workers produce high-quality data, irrespective of financial incentives&quot;</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1158087259285053441?ref_src=twsrc%5Etfw">August 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">This was despite workers rating their motivation &quot;To make money&quot; at 6.3 on a 7-point scale. I wonder if, in the last 5 years, &quot;crowdwork&quot; has come to be seen as more legitimate and deserving of treatment on par with other kinds of work.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1158087261277294592?ref_src=twsrc%5Etfw">August 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">This was despite workers rating their motivation &quot;To make money&quot; at 6.3 on a 7-point scale. I wonder if, in the last 5 years, &quot;crowdwork&quot; has come to be seen as more legitimate and deserving of treatment on par with other kinds of work.</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1158087261277294592?ref_src=twsrc%5Etfw">August 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  
-  <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">And if, as a result, MTurk workers have become more willing to &quot;withhold effort&quot; when pay is perceived as unfair, as workers do in other kinds of work (as noted in the paper).</p>&mdash; Tyler Burleigh (@tylerburleigh) <a href="https://twitter.com/tylerburleigh/status/1158087927324434433?ref_src=twsrc%5Etfw">August 4, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-</div>
-
-<p>Something to think about.</p>
+<p>For more detail including the python code used to generate this figure, see my <a href="https://www.kaggle.com/bluewizard/tracking-us-cases-against-mainland-china-trend">Kaggle notebook (&ldquo;Tracking US cases against Mainland China trend&rdquo;)</a>.</p>
 
     </div>
     <div class="article-footer">
@@ -385,7 +330,7 @@ to &ldquo;withhold effort&rdquo; if they felt they were not being paid fairly fo
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/" title="What is fair payment on MTurk?" target="_blank" rel="external">https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</a>
+      <a href="https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/" title="Comparing coronavirus trends in US, Italy, and China" target="_blank" rel="external">https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -420,14 +365,9 @@ to &ldquo;withhold effort&rdquo; if they felt they were not being paid fairly fo
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/" title="Surviving the Titanic with R caret"><i
+                <a href="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" title="Categorical features: cardinality and sparsity"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
-            </li>
-            <li class="next">
-                <a href="https://tylerburleigh.com/blog/introducing-pymturkr/"
-                    title="pyMTurkR: An R package for MTurk Requesters"><span>Newer&nbsp;&nbsp;</span><i
-                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
