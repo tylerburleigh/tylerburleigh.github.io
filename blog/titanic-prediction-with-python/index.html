@@ -41,7 +41,7 @@
 <meta itemprop="description" content="I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?">
 <meta itemprop="datePublished" content="2019-12-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2555">
+<meta itemprop="wordCount" content="3214">
 
 
 
@@ -318,7 +318,7 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge? Previously, I <!-- raw HTML omitted -->tackled this challenge using R<!-- raw HTML omitted -->. Here I build logistic regression and random forest models, after doing some wrangling and feature engineering.</p>
+      <p>I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge? Previously, I <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/">tackled this challenge using R</a>. Here I build logistic regression and random forest models, after doing some wrangling and feature engineering.</p>
 <h2 id="load-data">Load data</h2>
 <pre><code class="language-python">import pandas as pd
 import numpy as np
@@ -330,7 +330,11 @@ test = pd.read_csv(z.open('test.csv'))
 </code></pre>
 <pre><code class="language-python">train.describe()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -339,11 +343,111 @@ test = pd.read_csv(z.open('test.csv'))
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>714.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>446.000000</td>
+      <td>0.383838</td>
+      <td>2.308642</td>
+      <td>29.699118</td>
+      <td>0.523008</td>
+      <td>0.381594</td>
+      <td>32.204208</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>257.353842</td>
+      <td>0.486592</td>
+      <td>0.836071</td>
+      <td>14.526497</td>
+      <td>1.102743</td>
+      <td>0.806057</td>
+      <td>49.693429</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.420000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>223.500000</td>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>20.125000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>7.910400</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>446.000000</td>
+      <td>0.000000</td>
+      <td>3.000000</td>
+      <td>28.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>14.454200</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>668.500000</td>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>38.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>31.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>891.000000</td>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>80.000000</td>
+      <td>8.000000</td>
+      <td>6.000000</td>
+      <td>512.329200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">train.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -352,8 +456,104 @@ test = pd.read_csv(z.open('test.csv'))
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
+      <td>female</td>
+      <td>35.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>113803</td>
+      <td>53.1000</td>
+      <td>C123</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Allen, Mr. William Henry</td>
+      <td>male</td>
+      <td>35.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>373450</td>
+      <td>8.0500</td>
+      <td>NaN</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <p>The Survived classes are unbalanced, so I should use stratification for the split later.</p>
 <pre><code class="language-python">train['Survived'].value_counts()
 </code></pre>
@@ -390,7 +590,11 @@ dtype: int64
 </code></pre>
 <pre><code class="language-python">df.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -399,8 +603,74 @@ dtype: int64
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Fare</th>
+      <th>Sex_male</th>
+      <th>Embarked_Q</th>
+      <th>Embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7.2500</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>71.2833</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>53.1000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.0500</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <h4 id="train-test-split">Train-test split</h4>
 <p>Make an 80/20 train-test split with stratification.</p>
 <pre><code class="language-python">from sklearn.model_selection import train_test_split
@@ -660,7 +930,11 @@ Name: Name, dtype: object
 <pre><code class="language-python">split1 = train[&quot;Name&quot;].str.split(', ', n = 1, expand = True)
 split1.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -669,12 +943,52 @@ split1.head()
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Braund</td>
+      <td>Mr. Owen Harris</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cumings</td>
+      <td>Mrs. John Bradley (Florence Briggs Thayer)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Heikkinen</td>
+      <td>Miss. Laina</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Futrelle</td>
+      <td>Mrs. Jacques Heath (Lily May Peel)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Allen</td>
+      <td>Mr. William Henry</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">split2 = split1[1].str.split('.', n = 1, expand = True)
 split2.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -683,8 +997,44 @@ split2.head()
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Mr</td>
+      <td>Owen Harris</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mrs</td>
+      <td>John Bradley (Florence Briggs Thayer)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Miss</td>
+      <td>Laina</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mrs</td>
+      <td>Jacques Heath (Lily May Peel)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mr</td>
+      <td>William Henry</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">train['LastName'] = split1[0]
 train['Honorific'] = split2[0]
 train['OtherNames'] = split2[1]
@@ -806,7 +1156,11 @@ df = pd.get_dummies(df, drop_first=True)
 </code></pre>
 <pre><code class="language-python">df.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -815,8 +1169,122 @@ df = pd.get_dummies(df, drop_first=True)
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Family</th>
+      <th>Sex_male</th>
+      <th>Embarked_Q</th>
+      <th>Embarked_S</th>
+      <th>CabinLetter_B</th>
+      <th>CabinLetter_C</th>
+      <th>CabinLetter_D</th>
+      <th>CabinLetter_E</th>
+      <th>CabinLetter_F</th>
+      <th>CabinLetter_G</th>
+      <th>CabinLetter_T</th>
+      <th>CabinLetter_U</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>0</td>
+      <td>7.2500</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>71.2833</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>7.9250</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0</td>
+      <td>53.1000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>0</td>
+      <td>8.0500</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">X_train, X_test, y_train, y_test = train_test_split(df, 
                                                     train.Survived, 
                                                     test_size=0.2, 
@@ -891,7 +1359,11 @@ train_features = pd.get_dummies(train_features, drop_first=True)
 </code></pre>
 <pre><code class="language-python">train_features
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -900,8 +1372,135 @@ train_features = pd.get_dummies(train_features, drop_first=True)
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Family</th>
+      <th>Sex_male</th>
+      <th>Embarked_Q</th>
+      <th>Embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>0</td>
+      <td>7.2500</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>71.2833</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0</td>
+      <td>7.9250</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>0</td>
+      <td>53.1000</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>0</td>
+      <td>8.0500</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>886</th>
+      <td>2</td>
+      <td>0</td>
+      <td>13.0000</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>887</th>
+      <td>1</td>
+      <td>1</td>
+      <td>30.0000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>888</th>
+      <td>3</td>
+      <td>0</td>
+      <td>23.4500</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>889</th>
+      <td>1</td>
+      <td>0</td>
+      <td>30.0000</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>890</th>
+      <td>3</td>
+      <td>0</td>
+      <td>7.7500</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>891 rows × 7 columns</p>
+</div>
 <pre><code class="language-python">test_features = test.drop(['PassengerId', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 test_features['Age'] = 1 * (test_features['Age'] &lt;= 21)
@@ -912,7 +1511,11 @@ test_features = pd.get_dummies(test_features, drop_first=True)
 <p>Check for NaN values.</p>
 <pre><code class="language-python">test_features[test_features.isna().any(axis=1)]
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -921,13 +1524,43 @@ test_features = pd.get_dummies(test_features, drop_first=True)
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Family</th>
+      <th>Sex_male</th>
+      <th>Embarked_Q</th>
+      <th>Embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>152</th>
+      <td>3</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <p>Fill in NaN value with median.</p>
 <pre><code class="language-python">test_features.Fare = test_features.Fare.fillna(np.nanmedian(test_features.Fare))
 test_features[test_features.isna().any(axis=1)]
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -936,8 +1569,24 @@ test_features[test_features.isna().any(axis=1)]
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Age</th>
+      <th>Fare</th>
+      <th>Family</th>
+      <th>Sex_male</th>
+      <th>Embarked_Q</th>
+      <th>Embarked_S</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">d = {'PassengerId': test.PassengerId, 'Survived': preds}
 submission = pd.DataFrame(data=d)
 submission.to_csv(&quot;submission_lr.csv&quot;, index=False)
@@ -981,7 +1630,11 @@ df = df.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked'], axis=1)
 </code></pre>
 <pre><code class="language-python">df.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -990,8 +1643,74 @@ df = df.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked'], axis=1)
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Fare</th>
+      <th>Child</th>
+      <th>CabinLetterLE</th>
+      <th>SexLE</th>
+      <th>HonorificLE</th>
+      <th>EmbarkedLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>7.2500</td>
+      <td>0</td>
+      <td>8</td>
+      <td>1</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>71.2833</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>12</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>7.9250</td>
+      <td>0</td>
+      <td>8</td>
+      <td>0</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>53.1000</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>12</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>8.0500</td>
+      <td>0</td>
+      <td>8</td>
+      <td>1</td>
+      <td>11</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(df, 
@@ -1169,7 +1888,11 @@ test_features = test_features.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked
 <p>Check for NaN values.</p>
 <pre><code class="language-python">test_features[test_features.isna().any(axis=1)]
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -1178,13 +1901,43 @@ test_features = test_features.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Fare</th>
+      <th>Child</th>
+      <th>CabinLetterLE</th>
+      <th>SexLE</th>
+      <th>HonorificLE</th>
+      <th>EmbarkedLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>152</th>
+      <td>3</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>7</td>
+      <td>1</td>
+      <td>5</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <p>Fill in NaN value with median.</p>
 <pre><code class="language-python">test_features.Fare = test_features.Fare.fillna(np.nanmedian(test_features.Fare))
 test_features[test_features.isna().any(axis=1)]
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -1193,8 +1946,24 @@ test_features[test_features.isna().any(axis=1)]
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Pclass</th>
+      <th>Fare</th>
+      <th>Child</th>
+      <th>CabinLetterLE</th>
+      <th>SexLE</th>
+      <th>HonorificLE</th>
+      <th>EmbarkedLE</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">preds = rf_random.predict(test_features)
 </code></pre>
 <pre><code class="language-python">d = {'PassengerId': test.PassengerId, 'Survived': preds}

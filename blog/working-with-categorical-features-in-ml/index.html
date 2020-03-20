@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Some observations about high-cardinality features and sparsity.">
 <meta itemprop="datePublished" content="2020-01-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="690">
+<meta itemprop="wordCount" content="693">
 
 
 
@@ -318,8 +318,8 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>This weekend I decided to dive into the <!-- raw HTML omitted -->Categorical Feature Encoding Challenge II<!-- raw HTML omitted --> that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.</p>
-<p>For this challenge, the dataset contained <!-- raw HTML omitted -->only categorical features<!-- raw HTML omitted --> and also different <!-- raw HTML omitted -->kinds<!-- raw HTML omitted --> of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.</p>
+      <p>This weekend I decided to dive into the <a href="https://www.kaggle.com/c/cat-in-the-dat-ii">Categorical Feature Encoding Challenge II</a> that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.</p>
+<p>For this challenge, the dataset contained <strong>only categorical features</strong> and also different <strong>kinds</strong> of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.</p>
 <h2 id="cardinality">Cardinality</h2>
 <p>In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume. For example, the variable &ldquo;US State&rdquo; is one that has 50 possible values. Dealing with high cardinality turned out to be one of the most interesting parts of the challenge. It&rsquo;s a problem that I haven&rsquo;t encountered much before, certainly not to this extent.</p>
 <p>There was a wide range of cardinality. The binary features, of course, could only assume one of two values (0 or 1). One of the ordinal features was uppercase letters of the alphabet, so it had 26 possible values. A feature that really took the cake had more than 1000 possible alpha-numeric strings like <code>de4c57ee2</code>. And not only that, but some of the values were unique &ndash; only appearing once in the training set. Improper encoding of high-cardinality features can lead to poor model performance, and memory issues when trying to fit the model because encoding can result in extremely large matrices of values.</p>
@@ -386,7 +386,7 @@
 </table>
 <h2 id="sparse-matrices">Sparse matrices</h2>
 <p>You can imagine how dummy-coding 1000s of possible values might get out of hand, especially when some of them are very rare. This leads to the problem of &ldquo;sparsity&rdquo; where you end up with a huge matrix and almost every value is zero. In this dataset, one of my models was running over essentially 600000 X 5000 (rows X columns).</p>
-<p>Fortunately there is a &ldquo;compressed sparse row&rdquo; matrix representation that solves this problem, which is part of the <code>scikit</code> library of methods. The graphic below (<!-- raw HTML omitted -->source<!-- raw HTML omitted -->) illustrates how the sparse data is encoded into the matrix.</p>
+<p>Fortunately there is a &ldquo;compressed sparse row&rdquo; matrix representation that solves this problem, which is part of the <code>scikit</code> library of methods. The graphic below (<a href="https://www.geeksforgeeks.org/sparse-matrix-representation/">source</a>) illustrates how the sparse data is encoded into the matrix.</p>
 <p><img src="/blog/catindat/Sparse-Matrix-Array-Representation1.png" alt=""></p>
 <h2 id="target-mean-encoding">Target (mean) encoding</h2>
 <p>The other approach side-steps this problem entirely using a process called &ldquo;target encoding&rdquo;. Target encoding is when you calculate the mean of the target variable (in the training dataset) and use that in place of the categorical variable. Take the table below for example. The mean of the target variable for <code>hair_color</code> = <code>red</code> is <code>0.5</code>. We could substitute this mean for every time we see <code>hair_color</code> = <code>red</code>, and use this target-encoded variable as a predictor of the target (in the test set).</p>
@@ -413,10 +413,10 @@
 <p>The other challenge is finding the right model given how the data is encoded. I built a Logistic Regression model using a sparse one-hot encoded matrix for the high-cardinality features, and a CatBoost model using target encoding for the high-cardinality features.</p>
 <ul>
 <li>
-<p><!-- raw HTML omitted -->Logistic Regression w/ OneHot &amp; Catboost Encoders<!-- raw HTML omitted --></p>
+<p><a href="https://www.kaggle.com/bluewizard/logistic-regression-w-onehot-catboost-encoders">Logistic Regression w/ OneHot &amp; Catboost Encoders</a></p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->CatBoost Model w/ Dummy &amp; Target Encoders<!-- raw HTML omitted --></p>
+<p><a href="https://www.kaggle.com/bluewizard/catboost-model-w-dummy-target-encoders">CatBoost Model w/ Dummy &amp; Target Encoders</a></p>
 </li>
 </ul>
 <p>My best model scored <code>0.78577</code> which is not far off from the #1 score of <code>0.78664</code>.</p>

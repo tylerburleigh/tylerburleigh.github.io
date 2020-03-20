@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Taking on Kaggle&#39;s Titanic prediction challenge">
 <meta itemprop="datePublished" content="2019-01-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2740">
+<meta itemprop="wordCount" content="2769">
 
 
 
@@ -321,7 +321,7 @@
       <p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png"></p>
 <h1 id="introduction">Introduction</h1>
 <p>I&rsquo;ve been meaning to &ldquo;upskill&rdquo; into the world of machine learning for some time. I&rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</p>
-<p>So I decided to try <!-- raw HTML omitted -->Kaggle&rsquo;s Titanic competition<!-- raw HTML omitted -->.</p>
+<p>So I decided to try <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>.</p>
 <p>In this competition, the goal is to predict the survival of Titanic passengers whose fates are unknown, using what is known about some of the passengers who are known to have survived or perished. You get &ldquo;training&rdquo; and &ldquo;test&rdquo; data. Your goal is to train a statistical model on traing data so that it can generate accurate predictions on the outcome of interest when applied to test data.</p>
 <p>For this competition I created a model trained on 9 features of Titanic passengers. These features involved transformations (e.g., binning) and &ldquo;engineering&rdquo; of existing variables (e.g., string extraction and manipulation).</p>
 <h2 id="features">Features</h2>
@@ -519,7 +519,17 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by title and Pclass&quot;) + facet_wrap(~ Pclass)
 </code></pre>
-<!-- raw HTML omitted -->
+<table>
+<thead><tr><th scope=col>title.class</th><th scope=col>n</th></tr></thead>
+<tbody>
+	<tr><td>Boy    </td><td> 40    </td></tr>
+	<tr><td>Girl   </td><td> 44    </td></tr>
+	<tr><td>Lady   </td><td>142    </td></tr>
+	<tr><td>Man    </td><td>517    </td></tr>
+	<tr><td>Special</td><td> 22    </td></tr>
+	<tr><td>Woman  </td><td>126    </td></tr>
+</tbody>
+</table>
 <p><img src="/blog/2019-01-21-titanic/output_8_1.png" alt="png"></p>
 <p><img src="/blog/2019-01-21-titanic/output_8_2.png" alt="png"></p>
 <h2 id="family-size">Family size</h2>
@@ -555,7 +565,14 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by family size and Pclass&quot;) + facet_wrap(~ Pclass)
 </code></pre>
-<!-- raw HTML omitted -->
+<table>
+<thead><tr><th scope=col>family.size.simple</th><th scope=col>n</th></tr></thead>
+<tbody>
+	<tr><td>&gt;3 </td><td> 62   </td></tr>
+	<tr><td>0  </td><td>537</td></tr>
+	<tr><td>1-3</td><td>292</td></tr>
+</tbody>
+</table>
 <p><img src="/blog/2019-01-21-titanic/output_11_1.png" alt="png"></p>
 <p><img src="/blog/2019-01-21-titanic/output_11_2.png" alt="png"></p>
 <p><img src="/blog/2019-01-21-titanic/output_11_3.png" alt="png"></p>
@@ -581,7 +598,13 @@ train %&gt;%
 train %&gt;% ungroup %&gt;% count(Fare.grps)
 </code></pre>
 <p><img src="/blog/2019-01-21-titanic/output_13_0.png" alt="png"></p>
-<!-- raw HTML omitted -->
+<table>
+<thead><tr><th scope=col>Fare.grps</th><th scope=col>n</th></tr></thead>
+<tbody>
+	<tr><td>&gt;100 </td><td> 53     </td></tr>
+	<tr><td>0-100</td><td>838  </td></tr>
+</tbody>
+</table>
 <p><img src="/blog/2019-01-21-titanic/output_13_2.png" alt="png"></p>
 <h2 id="passenger-class">Passenger class</h2>
 <pre><code class="language-R">train %&gt;%
@@ -623,7 +646,14 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Age groups survival by Sex and Pclass&quot;) + facet_wrap(~ Sex*Pclass)
 </code></pre>
-<!-- raw HTML omitted -->
+<table>
+<thead><tr><th scope=col>Age.grps</th><th scope=col>n</th></tr></thead>
+<tbody>
+	<tr><td>middle</td><td>744   </td></tr>
+	<tr><td>old   </td><td> 65   </td></tr>
+	<tr><td>young </td><td> 82   </td></tr>
+</tbody>
+</table>
 <p><img src="/blog/2019-01-21-titanic/output_17_1.png" alt="png"></p>
 <p><img src="/blog/2019-01-21-titanic/output_17_2.png" alt="png"></p>
 <p><img src="/blog/2019-01-21-titanic/output_17_3.png" alt="png"></p>

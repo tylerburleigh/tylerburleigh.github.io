@@ -41,7 +41,7 @@
 <meta itemprop="description" content="A simple prediction of coronavirus spread in the US, using case trends in China and Italy.">
 <meta itemprop="datePublished" content="2020-03-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="370">
+<meta itemprop="wordCount" content="371">
 
 
 
@@ -314,14 +314,14 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>A <!-- raw HTML omitted -->coronavirus dataset<!-- raw HTML omitted --> was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.</p>
+      <p>A <a href="https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset">coronavirus dataset</a> was recently posted to Kaggle containing confirmed cases over time in different regions. Being as caught up in the news as everyone else, I decided to dig in a little bit. Below, I present a comparison between the confirmed case trends in the US, China, and Italy, as of March 15th.</p>
 <p>Before I share the trends, a bit of background. A question that&rsquo;s on the mind of everyone following the news right now is: &ldquo;How will the outbreak unfold in my community?&rdquo; People want to know what they can expect, how well is the virus being contained and mitigated &ndash; ultimately, how much worse can they expect it to get before it starts to get better.</p>
 <p>Predicting the future isn&rsquo;t easy, but one approach to estimating how the virus will spread in our own community is to look at how the virus has spread in other communities that are further along in the spread of the virus.</p>
 <p>So here&rsquo;s how I approached it: Let&rsquo;s assume that the coronavirus spread in the US might mirror the spread of the virus in China or Italy. The confirmed cases data in China begins at a count of roughly 500, so we&rsquo;ll align the data in US and Italy to that. In other words, we&rsquo;ll make the (admittedly somewhat clumsy) assumption that &ldquo;Day 1&rdquo; of the outbreak is when a community reaches 500 cases, and look at how the virus spreads beyond that point.</p>
 <p>The figure below illustrates these trends. We can make a few observations. First, in Mainland China the trend begins to flatten at around Day 25. Second, Italy is seeing a flatter growth trend than China, but at Day ~17 it&rsquo;s still increasing. Third, the US is at Day ~7 now, and the growth trend so far is a perfect match to the trend in Italy.</p>
 <p>Can we expect the next 10 days of coronavirus spread in the US to look like Italy? Maybe. It&rsquo;s complicated and there are lots of other factors at play, but that&rsquo;s one crude prediction we could make given the data.</p>
-<!-- raw HTML omitted -->
-<p>For more detail including the python code used to generate this figure, see my <!-- raw HTML omitted -->Kaggle notebook (&ldquo;Tracking US cases against Mainland China trend&rdquo;)<!-- raw HTML omitted -->.</p>
+<img src="/blog/coronavirus_trend.png">
+<p>For more detail including the python code used to generate this figure, see my <a href="https://www.kaggle.com/bluewizard/tracking-us-cases-against-mainland-china-trend">Kaggle notebook (&ldquo;Tracking US cases against Mainland China trend&rdquo;)</a>.</p>
 
     </div>
     <div class="article-footer">

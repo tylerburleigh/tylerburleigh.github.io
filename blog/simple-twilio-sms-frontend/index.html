@@ -41,7 +41,7 @@
 <meta itemprop="description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.">
 <meta itemprop="datePublished" content="2020-01-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1312">
+<meta itemprop="wordCount" content="1317">
 
 
 
@@ -318,9 +318,9 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>I really like <!-- raw HTML omitted -->Twilio<!-- raw HTML omitted --> as a service for programmatically sending and receiving SMS messages. The API has solid documentation for a number of programming languages, which makes it easy to develop with.</p>
+      <p>I really like <a href="https://www.twilio.com">Twilio</a> as a service for programmatically sending and receiving SMS messages. The API has solid documentation for a number of programming languages, which makes it easy to develop with.</p>
 <p>We&rsquo;re starting to use Twilio at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we&rsquo;re sending from. With that in mind, I made a simple frontend to the Twilio API.</p>
-<p>I decided to use <!-- raw HTML omitted -->Express<!-- raw HTML omitted --> for <!-- raw HTML omitted -->Node.js<!-- raw HTML omitted -->.</p>
+<p>I decided to use <a href="https://expressjs.com">Express</a> for <a href="https://nodejs.org/en/">Node.js</a>.</p>
 <p>The end result is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</p>
 <p><img src="/blog/nodejstwilio/2020-01-04_16-34-18.gif" alt="A simple Twilio SMS frontend using Node.js"></p>
 <p>First I installed <code>express</code> and <code>express-generator</code> and used it to generate an app skeleton.</p>
@@ -398,7 +398,7 @@ app.post('/fetch-calls', (req, res) =&gt; {
 
 #[...]
 </code></pre>
-<p>Then I wrote the <code>index.ejs</code> page. I used <!-- raw HTML omitted -->Bootstrap<!-- raw HTML omitted --> to make it less ugly, I used <!-- raw HTML omitted -->Datatables<!-- raw HTML omitted --> to add functionality to the tables that displayed SMS and calls, and I used <!-- raw HTML omitted -->jQuery<!-- raw HTML omitted --> to make some of the frontend stuff like aJax and DOM-manipulation easier.</p>
+<p>Then I wrote the <code>index.ejs</code> page. I used <a href="https://getbootstrap.com">Bootstrap</a> to make it less ugly, I used <a href="https://datatables.net/">Datatables</a> to add functionality to the tables that displayed SMS and calls, and I used <a href="https://jquery.com/">jQuery</a> to make some of the frontend stuff like aJax and DOM-manipulation easier.</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;

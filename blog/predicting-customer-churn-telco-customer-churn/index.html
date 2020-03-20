@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.">
 <meta itemprop="datePublished" content="2020-01-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2463">
+<meta itemprop="wordCount" content="2713">
 
 
 
@@ -318,7 +318,7 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <p>Let&rsquo;s analyze the <!-- raw HTML omitted -->Telco Customer Churn<!-- raw HTML omitted --> from Kaggle. This data originally comes from <!-- raw HTML omitted -->IBM Sample Data Sets<!-- raw HTML omitted -->.</p>
+      <p>Let&rsquo;s analyze the <a href="https://www.kaggle.com/blastchar/telco-customer-churn/kernels">Telco Customer Churn</a> from Kaggle. This data originally comes from <a href="https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113">IBM Sample Data Sets</a>.</p>
 <p>If you don&rsquo;t already know, churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</p>
 <p>I decided to use this dataset to practice some of my newfound python skills. Plus, I&rsquo;ve been working with churn at work recently, so I thought it might be interesting to work on a different dataset &ndash; one with an analysis that I can share publicly!</p>
 <p>I set out to find a parsimonious model that would predict churn with a high level of accuracy. I used a random forest model and performed a feature selection procedure to reduce the model&rsquo;s complexity.</p>
@@ -381,7 +381,11 @@ Name: Churn, dtype: int64
 </code></pre>
 <pre><code class="language-python">X_train.head()
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -390,8 +394,159 @@ Name: Churn, dtype: int64
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>customerID</th>
+      <th>gender</th>
+      <th>SeniorCitizen</th>
+      <th>Partner</th>
+      <th>Dependents</th>
+      <th>tenure</th>
+      <th>PhoneService</th>
+      <th>MultipleLines</th>
+      <th>InternetService</th>
+      <th>OnlineSecurity</th>
+      <th>...</th>
+      <th>DeviceProtection</th>
+      <th>TechSupport</th>
+      <th>StreamingTV</th>
+      <th>StreamingMovies</th>
+      <th>Contract</th>
+      <th>PaperlessBilling</th>
+      <th>PaymentMethod</th>
+      <th>MonthlyCharges</th>
+      <th>TotalCharges</th>
+      <th>Churn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3738</th>
+      <td>4950-BDEUX</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>No</td>
+      <td>No</td>
+      <td>35</td>
+      <td>No</td>
+      <td>No phone service</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Electronic check</td>
+      <td>49.20</td>
+      <td>1701.65</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3151</th>
+      <td>7993-NQLJE</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>15</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Fiber optic</td>
+      <td>Yes</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Mailed check</td>
+      <td>75.10</td>
+      <td>1151.55</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>4860</th>
+      <td>7321-ZNSLA</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>13</td>
+      <td>No</td>
+      <td>No phone service</td>
+      <td>DSL</td>
+      <td>Yes</td>
+      <td>...</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Two year</td>
+      <td>No</td>
+      <td>Mailed check</td>
+      <td>40.55</td>
+      <td>590.35</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3867</th>
+      <td>4922-CVPDX</td>
+      <td>Female</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>26</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Two year</td>
+      <td>Yes</td>
+      <td>Credit card (automatic)</td>
+      <td>73.50</td>
+      <td>1905.70</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>3810</th>
+      <td>2903-YYTBW</td>
+      <td>Male</td>
+      <td>0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>1</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>DSL</td>
+      <td>No</td>
+      <td>...</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Month-to-month</td>
+      <td>No</td>
+      <td>Electronic check</td>
+      <td>44.55</td>
+      <td>44.55</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div>
 <p>What are the values for each of the columns (other than <code>customerID</code>)?</p>
 <pre><code class="language-python">for c in X_train.drop(['customerID'], axis=1).columns:
     print(&quot;---- %s ---&quot; % c)
@@ -914,7 +1069,11 @@ features_imp
 <pre><code class="language-python">fpd = pd.DataFrame(features_imp)
 fpd
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -923,11 +1082,121 @@ fpd
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tenure</td>
+      <td>0.174803</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MonthlyCharges</td>
+      <td>0.168599</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TotalCharges</td>
+      <td>0.162183</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Contract</td>
+      <td>0.146069</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>InternetService</td>
+      <td>0.076455</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>PaymentMethod</td>
+      <td>0.041984</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>OnlineSecurity</td>
+      <td>0.038104</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>PaperlessBilling</td>
+      <td>0.036662</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>TechSupport</td>
+      <td>0.022116</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>OnlineBackup</td>
+      <td>0.016840</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>MultipleLines</td>
+      <td>0.016371</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>DeviceProtection</td>
+      <td>0.016030</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>StreamingTV</td>
+      <td>0.015846</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>gender</td>
+      <td>0.014675</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Dependents</td>
+      <td>0.014407</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>SeniorCitizen</td>
+      <td>0.011962</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Partner</td>
+      <td>0.011186</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>StreamingMovies</td>
+      <td>0.010687</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>PhoneService</td>
+      <td>0.005021</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <pre><code class="language-python">fpd[fpd[1] &gt; np.mean(fpd[1])]
 </code></pre>
-<!-- raw HTML omitted -->
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 <pre><code>.dataframe tbody tr th {
     vertical-align: top;
 }
@@ -936,8 +1205,44 @@ fpd
     text-align: right;
 }
 </code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tenure</td>
+      <td>0.174803</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>MonthlyCharges</td>
+      <td>0.168599</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TotalCharges</td>
+      <td>0.162183</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Contract</td>
+      <td>0.146069</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>InternetService</td>
+      <td>0.076455</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 <p>Using the mean as a threshold, the model would be reduced from 19 to 5 features.</p>
 <pre><code class="language-python">features = X_train[fpd[fpd[1] &gt; np.mean(fpd[1])][0].tolist()]
 rf_random.fit(features, y_train)

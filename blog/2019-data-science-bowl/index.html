@@ -41,7 +41,7 @@
 <meta itemprop="description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.">
 <meta itemprop="datePublished" content="2019-11-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="364">
+<meta itemprop="wordCount" content="371">
 
 
 
@@ -320,28 +320,28 @@
 <p>I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.</p>
 <ul>
 <li>
-<p><!-- raw HTML omitted -->Part 1<!-- raw HTML omitted --> - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</p>
+<p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-1-reading-in-the-data.html">Part 1</a> - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->Part 2<!-- raw HTML omitted --> - I discover that the dataframe contains unstructured text in the form of JSON. I proceed to devise a solution to extracting this data in a way that will make it easier to explore.</p>
+<p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-2-handling-the-json.html">Part 2</a> - I discover that the dataframe contains unstructured text in the form of JSON. I proceed to devise a solution to extracting this data in a way that will make it easier to explore.</p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->Part 3<!-- raw HTML omitted --> - I begin to explore the data, focusing on the &ldquo;Game&rdquo; session type, with the goal of trying to understand what exactly constitutes a game. In doing this, I discover an edge case with my JSON extraction function developed in the last part, and spend time fixing this.</p>
+<p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html">Part 3</a> - I begin to explore the data, focusing on the &ldquo;Game&rdquo; session type, with the goal of trying to understand what exactly constitutes a game. In doing this, I discover an edge case with my JSON extraction function developed in the last part, and spend time fixing this.</p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->Part 4<!-- raw HTML omitted --> - I continue to explore the Game data. I try to questions about levels, level progression (are higher levels more difficult, and does difficulty climb indefinitely?), and basic game events (e.g., what determines when a game session is “finished”?).</p>
+<p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html">Part 4</a> - I continue to explore the Game data. I try to questions about levels, level progression (are higher levels more difficult, and does difficulty climb indefinitely?), and basic game events (e.g., what determines when a game session is “finished”?).</p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->Part 5<!-- raw HTML omitted --> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p>
+<p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth">Part 5</a> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p>
 </li>
 </ul>
 <p>At this point I realize that I will need to start working on Kaggle itself because the competition submissions require notebook-based submissions. So I start to write some Kaggle notebooks. These were some of the notebooks I created:</p>
 <ul>
 <li>
-<p><!-- raw HTML omitted -->Simple R median baseline model<!-- raw HTML omitted --> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p>
+<p><a href="https://www.kaggle.com/bluewizard/basic-median-model">Simple R median baseline model</a> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p>
 </li>
 <li>
-<p><!-- raw HTML omitted -->Random forest with performance history<!-- raw HTML omitted --> - I take what I&rsquo;ve learned so far and apply it to predicting test performance. This model is a Random Forest that includes game performance. This model is a slight improvement over the baseline model.</p>
+<p><a href="https://www.kaggle.com/bluewizard/random-forest-with-performance-history">Random forest with performance history</a> - I take what I&rsquo;ve learned so far and apply it to predicting test performance. This model is a Random Forest that includes game performance. This model is a slight improvement over the baseline model.</p>
 </li>
 </ul>
 

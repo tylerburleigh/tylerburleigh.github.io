@@ -41,7 +41,7 @@
 <meta itemprop="description" content="I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.">
 <meta itemprop="datePublished" content="2019-09-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-09-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="234">
+<meta itemprop="wordCount" content="235">
 
 
 
@@ -315,9 +315,9 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <!-- raw HTML omitted -->
+      <div style="display: flex; flex-direction: column; align-items: center;"><div class="github-card" data-github="tylerburleigh/nutritionR" data-width="400" data-height="" data-theme="default"></div><script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script></div>
 <p>I&rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&rsquo;m curious. So in order to move in that direction, I decided to write a package, <code>nutritionR</code>, that can perform a nutritional analysis of foods and recipes expressed in natural language.</p>
-<p><code>nutritionR</code> is a wrapper for the <!-- raw HTML omitted -->Nutritionix<!-- raw HTML omitted --> <!-- raw HTML omitted -->API<!-- raw HTML omitted -->. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&rsquo;ve seen by supporting lots of micronutrients. Using <code>nutritionR</code>, it&rsquo;s possible to check 68 different nutrients, including the usual suspects: fats, carbs, protein, calories &ndash; but also things like choline, lycopene, vitamin d, vitamin b12, etc&hellip;</p>
+<p><code>nutritionR</code> is a wrapper for the <a href="https://www.nutritionix.com">Nutritionix</a> <a href="https://developer.nutritionix.com">API</a>. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&rsquo;ve seen by supporting lots of micronutrients. Using <code>nutritionR</code>, it&rsquo;s possible to check 68 different nutrients, including the usual suspects: fats, carbs, protein, calories &ndash; but also things like choline, lycopene, vitamin d, vitamin b12, etc&hellip;</p>
 <p>I wrote this package to support nutrition analysis of meals. You can enter one or more ingredients or food items and then search for a specific nutrient like this:</p>
 <pre><code>obj &lt;- nutritionix_lookup(&quot;I had eggs and toast for breakfast, and a burrito for lunch.&quot;)
 nutrient(obj, &quot;calories&quot;)
