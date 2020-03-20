@@ -538,17 +538,8 @@ mark,
   text-transform: capitalize;
 }
 
-.article-entry.text-muted, .category-list {
-  font-size: 16px !important;
-}
-
 .text-muted {
   color: #777777 !important;
-}
-
-.article-meta {
-  color: #777777 !important;
-  padding-top: 20px;
 }
 
 .text-primary {
@@ -2949,7 +2940,8 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: "PingHei", "PingFang SC", Helvetica Neue, "Work Sans",
+    "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3266,7 +3258,8 @@ body {
 
 body {
   padding-right: 0 !important;
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: "PingHei", "PingFang SC", Helvetica Neue, "Work Sans",
+    "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   font-size: 14px;
   line-height: 1.57143;
   color: #333333;
@@ -5083,8 +5076,6 @@ a.label:focus {
 
 table {
   border: 1px solid #f2f2f2;
-  display: block;
-  overflow-x: auto;
 }
 
 table > thead > tr > th,
@@ -6676,7 +6667,7 @@ body.okayNav-loaded {
 
 .okayNav__nav--visible {
   overflow: hidden;
-  white-space: wrap;
+  white-space: nowrap;
 }
 
 .okayNav__nav--visible li {

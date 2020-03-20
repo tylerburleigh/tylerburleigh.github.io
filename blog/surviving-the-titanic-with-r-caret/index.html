@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Surviving the Titanic with R caret - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="Taking on Kaggle&#39;s Titanic prediction challenge" />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Surviving the Titanic with R caret - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Surviving the Titanic with R caret" />
 <meta property="og:description" content="Taking on Kaggle&#39;s Titanic prediction challenge" />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2019-01-21T00:00:00+00:00" />
 <meta itemprop="name" content="Surviving the Titanic with R caret">
 <meta itemprop="description" content="Taking on Kaggle&#39;s Titanic prediction challenge">
-
-
 <meta itemprop="datePublished" content="2019-01-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2769">
+<meta itemprop="wordCount" content="2740">
 
 
 
-<meta itemprop="keywords" content="R,Kaggle,machine learning,random forest,EDA,Titanic," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="R,Kaggle,machine learning,random forest,EDA,Titanic," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Surviving the Titanic with R caret"/>
 <meta name="twitter:description" content="Taking on Kaggle&#39;s Titanic prediction challenge"/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-surviving-the-titanic-with-r-caret" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/surviving-the-titanic-with-r-caret/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/" class="article-date">
-  <time datetime="2019-01-21">2019-01-21</time>
+  <time datetime="2019-01-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-01-21</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -307,25 +317,15 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      
-
-<p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png" /></p>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p><img src="/blog/2019-01-21-titanic/the-titanic.jpg" alt="png"></p>
 <h1 id="introduction">Introduction</h1>
-
 <p>I&rsquo;ve been meaning to &ldquo;upskill&rdquo; into the world of machine learning for some time. I&rsquo;m no stranger to statistics. I was trained as a behavioral scientist; I know my way around a linear regression! But at the same time, I tend to use statistics to test formal hypotheses, and this seems (at least to an outsider like me) pretty different from machine learning. I want to learn new skills that will help me be a better data scientist, and machine learning seemes like a good place to start.</p>
-
-<p>So I decided to try <a href="https://www.kaggle.com/c/titanic">Kaggle&rsquo;s Titanic competition</a>.</p>
-
+<p>So I decided to try <!-- raw HTML omitted -->Kaggle&rsquo;s Titanic competition<!-- raw HTML omitted -->.</p>
 <p>In this competition, the goal is to predict the survival of Titanic passengers whose fates are unknown, using what is known about some of the passengers who are known to have survived or perished. You get &ldquo;training&rdquo; and &ldquo;test&rdquo; data. Your goal is to train a statistical model on traing data so that it can generate accurate predictions on the outcome of interest when applied to test data.</p>
-
 <p>For this competition I created a model trained on 9 features of Titanic passengers. These features involved transformations (e.g., binning) and &ldquo;engineering&rdquo; of existing variables (e.g., string extraction and manipulation).</p>
-
 <h2 id="features">Features</h2>
-
 <p>The following features were used in the model.</p>
-
 <table>
 <thead>
 <tr>
@@ -333,57 +333,46 @@
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Titles</td>
 <td>Honorifics (e.g., &ldquo;Mr.&rdquo; or &ldquo;Master&rdquo;), extracted from <code>Name</code> strings</td>
 </tr>
-
 <tr>
 <td>Sex</td>
 <td>Sex (male or female)</td>
 </tr>
-
 <tr>
 <td>Embarked</td>
 <td>Port of embarkment</td>
 </tr>
-
 <tr>
 <td>Family size, binned</td>
 <td>Sum of <code>Parch</code> and <code>SibSp</code>, binned</td>
 </tr>
-
 <tr>
 <td>Fare, binned</td>
 <td>Binned <code>Fare</code> values</td>
 </tr>
-
 <tr>
 <td>Passenger class</td>
 <td><code>Pclass</code> without transformation</td>
 </tr>
-
 <tr>
 <td>Age, binned</td>
 <td>Binned <code>Age</code> values</td>
 </tr>
-
 <tr>
 <td>Ticket prefixes</td>
 <td>Grouped ticket prefixes (e.g., &ldquo;SOTONO&rdquo;), which presumably represent passengers&rsquo; destination</td>
 </tr>
-
 <tr>
 <td>Race / ethnicity</td>
 <td>Bayesian prediction of race/ethnicity using passenger surname</td>
 </tr>
 </tbody>
 </table>
-
 <p>In addition, although these features were not used to train the model <em>per se</em>, they were used later to adjust the predictions:</p>
-
 <table>
 <thead>
 <tr>
@@ -391,85 +380,51 @@
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td># family members</td>
 <td>How many family members a passenger has</td>
 </tr>
-
 <tr>
 <td># dead family</td>
 <td>How many family members died</td>
 </tr>
-
 <tr>
 <td>All died (boolean)</td>
 <td>If all family members died</td>
 </tr>
 </tbody>
 </table>
-
 <h2 id="lessons-learned">Lessons learned</h2>
-
 <p>I learned a lot by tackling this challenge. More than I can possibly list, but here are some of Here are some of the major lessons.</p>
-
 <h3 id="1-the-illusion-of-predictive-power">1. The illusion of (predictive) power</h3>
-
 <p>There were a few times where I encountered overfitting. I thought I&rsquo;d found a significant new feature in the data. When I added it to the model, it increased the in-sample prediction accuracy by several percentage points. But when I applied this model to the test data, the out-of-sample prediction accuracy actually DECREASED. What happened? Well, as it turns out, it&rsquo;s easy to find features that soak up variance in a training set, but those features might not be useful beyond the data they were trained on. Put simply: they don&rsquo;t generalize.</p>
-
 <p>Their power is an illusion.</p>
-
-<p><img src="/blog/2019-01-21-titanic/illusion.gif" alt="gif" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/illusion.gif" alt="gif"></p>
 <p>One example that kind of took me by surprise was that continuous variables like <code>Age</code>, and <code>Fare</code>, and <code>Family Size</code> performed really well on the training set, but they did not perform so well on the test data. When I <em>binned</em> these variables, they performed slightly worse on the training data, but they performed MUCH better on the test data.</p>
-
-<h3 id="2-what-s-in-a-name-anyway">2. What&rsquo;s in a name, anyway?</h3>
-
+<h3 id="2-whats-in-a-name-anyway">2. What&rsquo;s in a name, anyway?</h3>
 <p>Feature engineering was one of my favorite parts of the process. It was there that I could draw on the knowledge I&rsquo;ve gained as a student of human behavior and psychology. The most trivial-seeming piece of data is in fact a proxy for something incredibly meaningful. You just need to know where to look, and how to manipulate and organize the data.</p>
-
 <p>As it turns out, one of the most interesting variables was <code>Name</code>. From that variable I was able to extract a Bayesian prediction of the passenger&rsquo;s race/ethnicity, family relationships (which told me if they had relatives who had also died aboard the ship), and social class (from titles like &ldquo;Dr&rdquo;, &ldquo;Lady&rdquo;, and &ldquo;the Countess.</p>
-
-<p><img src="/blog/2019-01-21-titanic/pompous.gif" alt="gif" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/pompous.gif" alt="gif"></p>
 <h3 id="3-a-picture-is-worth-a-thousand-words">3. A picture is worth a thousand words</h3>
-
 <p>As I was engineering features, I found that data visualization was vital. While I was considering different ways of slicing up the data, visualizations like histograms and bar plots were key to determining if a particular demarcation might be fruitful &ndash; if it was giving me any new signals about survival.</p>
-
 <p>During this process, I found that my ability to quickly spin up different kinds visualizations was also important. Exploratory data analysis is a bit of a stream-of-consciousness, moving from one shallow thread of thought to another until something seems to <em>click</em> or <em>pop out</em> at you.</p>
-
-<p><img src="/blog/2019-01-21-titanic/flight.gif" alt="gif" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/flight.gif" alt="gif"></p>
 <h3 id="4-unconventional-is-sometimes-better">4. Unconventional is sometimes better</h3>
-
 <p>I learned that it&rsquo;s important to experiment with approaches that make logical sense, but from a tooling or procedural standpoint seem unconventional.</p>
-
 <p>One of the most interesting variables was the number of family members who died. If a passenger had family members who died, they were more likely to die themselves. Although it was clear from the data visualizations that this feature was significant, I couldn&rsquo;t improve the model&rsquo;s predictive accuracy by simply plugging it into the model like all of the other variables. (In fact, doing so was detrimental &ndash; in one model variant, out-of-sample accuracy was reduced to ~40% &ndash; ouch!)</p>
-
-<p><img src="/blog/2019-01-21-titanic/unconventional.gif" alt="gif" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/unconventional.gif" alt="gif"></p>
 <p>But I persisted. Rather than train a model on this feature like I did for all the other features, I added a post-processing step in which the feature was used flip the bits on some of the passengers who were predicted to survive. Namely, if a passenger was predicted to survive, and if they had more than one family member, and if all of their family members died, then it seemed reasonable to predict that they also died.</p>
-
 <p>This turned out to be a useful application of the feature, boosting the model&rsquo;s out-of-sample accuracy by ~1%.</p>
-
 <h2 id="model-performance">Model performance</h2>
-
 <p>So how did I do?</p>
-
 <p>Using the <code>random forest</code> method, I achieved an in-sample prediction accuracy of 83% (kappa = 0.63) and an out-of-sample prediction accuracy of 82%. At the time of this writing, that puts my model in the <strong>top 6%</strong> of all Kaggle submissions.</p>
-
 <p>Not bad! I think I&rsquo;m getting the hang of this. 😁🤝🎉</p>
-
-<p><img src="/blog/2019-01-21-titanic/kaggle-rank.png" alt="png" /></p>
-
-<hr />
-
-<hr />
-
+<p><img src="/blog/2019-01-21-titanic/kaggle-rank.png" alt="png"></p>
+<hr>
+<hr>
 <p>Below is the code for my model building procedures, and some of the visualizations that I examined along the way to check assumptions and generate insights. Enjoy!</p>
-
 <h1 id="loading-packages">Loading packages</h1>
-
 <pre><code class="language-R">library(&quot;tidyverse&quot;)
 library(&quot;caret&quot;)
 library(&quot;ranger&quot;) # Faster RF modeling
@@ -490,7 +445,6 @@ set.seed(43287)
 # Figure height
 options(repr.plot.width=6, repr.plot.height=4)
 </code></pre>
-
 <pre><code class="language-R"># Load data
 test.csv &lt;- read.csv('test.csv', stringsAsFactors = FALSE)
 train.csv &lt;- read.csv('train.csv', stringsAsFactors = FALSE)
@@ -510,22 +464,16 @@ pre.proc &lt;- preProcess(train.ages, method = &quot;bagImpute&quot;)
 train.ages &lt;- predict(pre.proc, train.ages)
 train$Age &lt;- train.ages$Age
 </code></pre>
-
 <h1 id="features-1">Features</h1>
-
 <h2 id="honorifics-titles">Honorifics (titles)</h2>
-
 <pre><code class="language-R">train %&gt;%
   rowwise %&gt;%
   mutate(title = gsub('(.*, )|(\\..*)', '', Name)) -&gt; train
 </code></pre>
-
 <pre><code>Warning message:
 &quot;package 'bindrcpp' was built under R version 3.4.4&quot;
 </code></pre>
-
 <p>Give unusual titles (e.g., &ldquo;the Countess&rdquo; or &ldquo;Capt&rdquo;) a special status. These titles are associated with survival among women. I think this suggests we&rsquo;re on the right track.</p>
-
 <pre><code class="language-R"># Titles
 train %&gt;%
   ggplot(., aes(title, fill=Survived)) + 
@@ -541,13 +489,9 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by special titles by sex&quot;) + facet_wrap(~ Sex)
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_6_0.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_6_1.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_6_0.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_6_1.png" alt="png"></p>
 <p>As I understand &ldquo;Master&rdquo; is a title given to young boys, while young girls are also often called &ldquo;Miss&rdquo;. One person with a &ldquo;Dr&rdquo; title is a woman, and so has a higher likelihood of survival than her male counterparts, so we&rsquo;ll reclassify her.</p>
-
 <pre><code class="language-R">train %&gt;%
   mutate(child = ifelse(Age &lt; 15, 1, 0),
          title.class = case_when(
@@ -575,27 +519,11 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by title and Pclass&quot;) + facet_wrap(~ Pclass)
 </code></pre>
-
-<table>
-<thead><tr><th scope=col>title.class</th><th scope=col>n</th></tr></thead>
-<tbody>
-    <tr><td>Boy    </td><td> 40    </td></tr>
-    <tr><td>Girl   </td><td> 44    </td></tr>
-    <tr><td>Lady   </td><td>142    </td></tr>
-    <tr><td>Man    </td><td>517    </td></tr>
-    <tr><td>Special</td><td> 22    </td></tr>
-    <tr><td>Woman  </td><td>126    </td></tr>
-</tbody>
-</table>
-
-<p><img src="/blog/2019-01-21-titanic/output_8_1.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_8_2.png" alt="png" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="/blog/2019-01-21-titanic/output_8_1.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_8_2.png" alt="png"></p>
 <h2 id="family-size">Family size</h2>
-
 <p>Combine <code>SibSp</code> and <code>Parch</code> into a single &ldquo;family size&rdquo; variable.</p>
-
 <pre><code class="language-R">train %&gt;%
   mutate(family.size = SibSp + Parch,
          family.size.simple = case_when(
@@ -603,7 +531,6 @@ train %&gt;%
             between(family.size, 1, 3) ~ &quot;1-3&quot;,
             family.size &gt; 3 ~ &quot;&gt;3&quot;)) -&gt; train
 </code></pre>
-
 <pre><code class="language-R">train %&gt;%
   ggplot(., aes(family.size)) +
   geom_histogram(bins=30)
@@ -628,28 +555,13 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by family size and Pclass&quot;) + facet_wrap(~ Pclass)
 </code></pre>
-
-<table>
-<thead><tr><th scope=col>family.size.simple</th><th scope=col>n</th></tr></thead>
-<tbody>
-    <tr><td>&gt;3 </td><td> 62   </td></tr>
-    <tr><td>0  </td><td>537</td></tr>
-    <tr><td>1-3</td><td>292</td></tr>
-</tbody>
-</table>
-
-<p><img src="/blog/2019-01-21-titanic/output_11_1.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_11_2.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_11_3.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_11_4.png" alt="png" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="/blog/2019-01-21-titanic/output_11_1.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_11_2.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_11_3.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_11_4.png" alt="png"></p>
 <h2 id="fare">Fare</h2>
-
 <p>Group fares into reasonably small buckets.</p>
-
 <pre><code class="language-R">train %&gt;%
   ggplot(., aes(Fare)) +
   geom_histogram(bins=30)
@@ -668,34 +580,19 @@ train %&gt;%
 
 train %&gt;% ungroup %&gt;% count(Fare.grps)
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_13_0.png" alt="png" /></p>
-
-<table>
-<thead><tr><th scope=col>Fare.grps</th><th scope=col>n</th></tr></thead>
-<tbody>
-    <tr><td>&gt;100 </td><td> 53     </td></tr>
-    <tr><td>0-100</td><td>838  </td></tr>
-</tbody>
-</table>
-
-<p><img src="/blog/2019-01-21-titanic/output_13_2.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_13_0.png" alt="png"></p>
+<!-- raw HTML omitted -->
+<p><img src="/blog/2019-01-21-titanic/output_13_2.png" alt="png"></p>
 <h2 id="passenger-class">Passenger class</h2>
-
 <pre><code class="language-R">train %&gt;%
   ggplot(., aes(Pclass, fill=Survived)) + 
   geom_bar() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by passenger class&quot;)
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_15_0.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_15_0.png" alt="png"></p>
 <h2 id="age">Age</h2>
-
 <p>Group ages into reasonably small buckets.</p>
-
 <pre><code class="language-R">train %&gt;%
   ggplot(., aes(Age)) +
   geom_histogram(bins=30)
@@ -726,28 +623,13 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Age groups survival by Sex and Pclass&quot;) + facet_wrap(~ Sex*Pclass)
 </code></pre>
-
-<table>
-<thead><tr><th scope=col>Age.grps</th><th scope=col>n</th></tr></thead>
-<tbody>
-    <tr><td>middle</td><td>744   </td></tr>
-    <tr><td>old   </td><td> 65   </td></tr>
-    <tr><td>young </td><td> 82   </td></tr>
-</tbody>
-</table>
-
-<p><img src="/blog/2019-01-21-titanic/output_17_1.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_17_2.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_17_3.png" alt="png" /></p>
-
-<p><img src="/blog/2019-01-21-titanic/output_17_4.png" alt="png" /></p>
-
+<!-- raw HTML omitted -->
+<p><img src="/blog/2019-01-21-titanic/output_17_1.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_17_2.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_17_3.png" alt="png"></p>
+<p><img src="/blog/2019-01-21-titanic/output_17_4.png" alt="png"></p>
 <h2 id="ticket-prefix">Ticket prefix</h2>
-
 <p>Extract the prefix from the ticket, since this seems to represent the passenger&rsquo;s final destination. Combine codes that are similar or seem to have a typo.</p>
-
 <pre><code class="language-R">train %&gt;%
     rowwise %&gt;%
     mutate(ticket.prefix = ifelse(grepl(&quot; &quot;, Ticket), sub(&quot; .*&quot;, &quot;&quot;, Ticket), &quot;&quot;),
@@ -776,13 +658,9 @@ train %&gt;%
   ggtitle(&quot;Survival by ticket prefix&quot;) +
   coord_flip()
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_19_0.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_19_0.png" alt="png"></p>
 <h2 id="race-from-surname">Race from surname</h2>
-
 <p>Predict the passenger&rsquo;s race/ethnicity using their surname. Since there wasn&rsquo;t a lot of diversity on the Titanic, we&rsquo;ll combine into &ldquo;White&rdquo; and &ldquo;Non-white&rdquo; categories.</p>
-
 <pre><code class="language-R">train %&gt;%
     rowwise %&gt;%
     mutate(surname = gsub('( .*)|(*,*)', '', Name)) -&gt; train
@@ -802,20 +680,15 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by race and sex&quot;) + facet_wrap(~ Sex)
 </code></pre>
-
 <pre><code>[1] &quot;Proceeding with surname-only predictions...&quot;
 
 
 Warning message in merge_surnames(voter.file):
 &quot;Probabilities were imputed for 183 surnames that could not be matched to Census list.&quot;
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_21_2.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_21_2.png" alt="png"></p>
 <h2 id="dead-relatives">Dead relatives</h2>
-
 <p>You are more likely to die if you&rsquo;ve had other relatives who have died. It looks like some passengers have the same surname but embarked at different locations. It seems reasonable to assume that they were not actually family if they embarked from different places, so we&rsquo;ll tag their surnames with the location of embarkment before calculating the number of dead family members.</p>
-
 <pre><code class="language-R">train %&gt;%
   select(-Embarked) %&gt;%
   rowwise %&gt;%
@@ -832,7 +705,6 @@ train %&gt;%
 train %&gt;%
   left_join(., dead.family.df, by = 'surname.E') -&gt; train
 </code></pre>
-
 <pre><code class="language-R">train %&gt;%
   ggplot(., aes(factor(all.died), fill=Survived)) + 
   geom_bar() +
@@ -845,14 +717,10 @@ train %&gt;%
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
   ggtitle(&quot;Survival by dead relatives (boolean)&quot;) + facet_wrap(~ Sex*Pclass)
 </code></pre>
-
-<p><img src="/blog/2019-01-21-titanic/output_24_0a.png" alt="png" />
-<img src="/blog/2019-01-21-titanic/output_24_0b.png" alt="png" /></p>
-
+<p><img src="/blog/2019-01-21-titanic/output_24_0a.png" alt="png">
+<img src="/blog/2019-01-21-titanic/output_24_0b.png" alt="png"></p>
 <h1 id="models">Models</h1>
-
 <h2 id="random-forest">Random forest</h2>
-
 <pre><code class="language-R">trctrl &lt;- trainControl(
   method = &quot;repeatedcv&quot;,
   number = 10,
@@ -883,7 +751,6 @@ fit.rf &lt;- train(Survived ~
              method = &quot;ranger&quot;)
 fit.rf
 </code></pre>
-
 <pre><code>Random Forest 
 
 891 samples
@@ -904,11 +771,8 @@ Tuning
 Tuning
  parameter 'min.node.size' was held constant at a value of 10
 </code></pre>
-
 <h1 id="predict">Predict!</h1>
-
 <h2 id="apply-transforms-to-test-data">Apply transforms to test data</h2>
-
 <pre><code class="language-R">test %&gt;% 
   mutate(Fare = ifelse(PassengerId == 1044, 
                        median((test %&gt;% filter(!is.na(Fare), 
@@ -983,9 +847,7 @@ test.final %&gt;%
 test.final %&gt;%
   left_join(., dead.family.df, by = 'surname.E') -&gt; test.final
 </code></pre>
-
 <h2 id="predict-using-random-forest">Predict using random forest</h2>
-
 <pre><code class="language-R">Survived &lt;- predict(fit.rf, test.final)
 Survived &lt;- as.numeric(as.character(Survived))
 
@@ -1051,13 +913,13 @@ write_csv(pred.rf, 'rf.output.csv')
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://tylerburleigh.com/blog/2020-01-20-working-with-categorical-features-in-ml/" title=""><i
+                <a href="https://tylerburleigh.com/page/about/" title="About Me"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/"
-                    title="What is fair payment on MTurk?"><span>Newer&nbsp;&nbsp;</span><i
+                <a href="https://tylerburleigh.com/blog/emoji-support/"
+                    title="Emoji Support"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
@@ -1085,7 +947,7 @@ write_csv(pred.rf, 'rf.output.csv')
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -1109,13 +971,13 @@ write_csv(pred.rf, 'rf.output.csv')
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -1123,8 +985,8 @@ write_csv(pred.rf, 'rf.output.csv')
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -1141,7 +1003,7 @@ write_csv(pred.rf, 'rf.output.csv')
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

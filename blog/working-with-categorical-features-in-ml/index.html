@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Categorical features: cardinality and sparsity - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="Some observations about high-cardinality features and sparsity." />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Categorical features: cardinality and sparsity - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Categorical features: cardinality and sparsity" />
 <meta property="og:description" content="Some observations about high-cardinality features and sparsity." />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2020-01-20T00:00:00+00:00" />
 <meta itemprop="name" content="Categorical features: cardinality and sparsity">
 <meta itemprop="description" content="Some observations about high-cardinality features and sparsity.">
-
-
 <meta itemprop="datePublished" content="2020-01-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="693">
+<meta itemprop="wordCount" content="690">
 
 
 
-<meta itemprop="keywords" content="python,machine learning,regression,boosting,encoding,categorical," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="python,machine learning,regression,boosting,encoding,categorical," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Categorical features: cardinality and sparsity"/>
 <meta name="twitter:description" content="Some observations about high-cardinality features and sparsity."/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-working-with-categorical-features-in-ml" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/working-with-categorical-features-in-ml/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" class="article-date">
-  <time datetime="2020-01-20">2020-01-20</time>
+  <time datetime="2020-01-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-20</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -307,53 +317,37 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      
-
-<p>This weekend I decided to dive into the <a href="https://www.kaggle.com/c/cat-in-the-dat-ii">Categorical Feature Encoding Challenge II</a> that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.</p>
-
-<p>For this challenge, the dataset contained <strong>only categorical features</strong> and also different <strong>kinds</strong> of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.</p>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>This weekend I decided to dive into the <!-- raw HTML omitted -->Categorical Feature Encoding Challenge II<!-- raw HTML omitted --> that Kaggle is hosting so I could learn some things about using categorical features in machine learning models.</p>
+<p>For this challenge, the dataset contained <!-- raw HTML omitted -->only categorical features<!-- raw HTML omitted --> and also different <!-- raw HTML omitted -->kinds<!-- raw HTML omitted --> of categorical features: Binary, nominal, and ordinal. On top of that, some of the features had low cardinality, while other features had high cardinality.</p>
 <h2 id="cardinality">Cardinality</h2>
-
 <p>In the context of machine learning, &ldquo;cardinality&rdquo; refers to the number of possible values that a feature can assume. For example, the variable &ldquo;US State&rdquo; is one that has 50 possible values. Dealing with high cardinality turned out to be one of the most interesting parts of the challenge. It&rsquo;s a problem that I haven&rsquo;t encountered much before, certainly not to this extent.</p>
-
 <p>There was a wide range of cardinality. The binary features, of course, could only assume one of two values (0 or 1). One of the ordinal features was uppercase letters of the alphabet, so it had 26 possible values. A feature that really took the cake had more than 1000 possible alpha-numeric strings like <code>de4c57ee2</code>. And not only that, but some of the values were unique &ndash; only appearing once in the training set. Improper encoding of high-cardinality features can lead to poor model performance, and memory issues when trying to fit the model because encoding can result in extremely large matrices of values.</p>
-
-<h2 id="dummy-one-hot-encoding">Dummy / one-hot encoding</h2>
-
+<h2 id="dummy--one-hot-encoding">Dummy / one-hot encoding</h2>
 <p>A common strategy for encoding categorical variables is &ldquo;one-hot&rdquo; or &ldquo;dummy&rdquo; encoding, where a new column is created for every N (or N-1) of the possible values, and those columns are given a value of 1 or 0 depending on whether the feature had that value. Below is an example of dummy encoding for 4 hair colors:</p>
-
 <p>Original variable:</p>
-
 <table>
 <thead>
 <tr>
 <th>hair_color</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>red</td>
 </tr>
-
 <tr>
 <td>black</td>
 </tr>
-
 <tr>
 <td>brown</td>
 </tr>
-
 <tr>
 <td>blonde</td>
 </tr>
 </tbody>
 </table>
-
 <p>Dummy / one-hot encoded variable with N columns:</p>
-
 <table>
 <thead>
 <tr>
@@ -363,7 +357,6 @@
 <th>hair_color_blonde</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>1</td>
@@ -371,21 +364,18 @@
 <td>0</td>
 <td>0</td>
 </tr>
-
 <tr>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 </tr>
-
 <tr>
 <td>0</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 </tr>
-
 <tr>
 <td>0</td>
 <td>0</td>
@@ -394,19 +384,12 @@
 </tr>
 </tbody>
 </table>
-
 <h2 id="sparse-matrices">Sparse matrices</h2>
-
 <p>You can imagine how dummy-coding 1000s of possible values might get out of hand, especially when some of them are very rare. This leads to the problem of &ldquo;sparsity&rdquo; where you end up with a huge matrix and almost every value is zero. In this dataset, one of my models was running over essentially 600000 X 5000 (rows X columns).</p>
-
-<p>Fortunately there is a &ldquo;compressed sparse row&rdquo; matrix representation that solves this problem, which is part of the <code>scikit</code> library of methods. The graphic below (<a href="https://www.geeksforgeeks.org/sparse-matrix-representation/">source</a>) illustrates how the sparse data is encoded into the matrix.</p>
-
-<p><img src="/blog/catindat/Sparse-Matrix-Array-Representation1.png" alt="" /></p>
-
+<p>Fortunately there is a &ldquo;compressed sparse row&rdquo; matrix representation that solves this problem, which is part of the <code>scikit</code> library of methods. The graphic below (<!-- raw HTML omitted -->source<!-- raw HTML omitted -->) illustrates how the sparse data is encoded into the matrix.</p>
+<p><img src="/blog/catindat/Sparse-Matrix-Array-Representation1.png" alt=""></p>
 <h2 id="target-mean-encoding">Target (mean) encoding</h2>
-
 <p>The other approach side-steps this problem entirely using a process called &ldquo;target encoding&rdquo;. Target encoding is when you calculate the mean of the target variable (in the training dataset) and use that in place of the categorical variable. Take the table below for example. The mean of the target variable for <code>hair_color</code> = <code>red</code> is <code>0.5</code>. We could substitute this mean for every time we see <code>hair_color</code> = <code>red</code>, and use this target-encoded variable as a predictor of the target (in the test set).</p>
-
 <table>
 <thead>
 <tr>
@@ -414,32 +397,28 @@
 <th>target</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>red</td>
 <td>0</td>
 </tr>
-
 <tr>
 <td>red</td>
 <td>1</td>
 </tr>
 </tbody>
 </table>
-
 <p>However, when you use target encoding you run the risk of &ldquo;target leakage&rdquo; because your model might then be using information about the target to predict the target. It&rsquo;s similar to how your model might be overfit if you trained and validated a model using the same data (instead of using the conventional &ldquo;train set&rdquo; / &ldquo;test set&rdquo; split). This can ultimately result in an overfit model that performs poorly out-of-sample. Leakage can be avoided by using a &ldquo;leave one out&rdquo; target encoder, which encodes the target value while excluding the current row that it&rsquo;s looking at.</p>
-
 <h2 id="model-selection">Model selection</h2>
-
 <p>The other challenge is finding the right model given how the data is encoded. I built a Logistic Regression model using a sparse one-hot encoded matrix for the high-cardinality features, and a CatBoost model using target encoding for the high-cardinality features.</p>
-
 <ul>
-<li><p><a href="https://www.kaggle.com/bluewizard/logistic-regression-w-onehot-catboost-encoders">Logistic Regression w/ OneHot &amp; Catboost Encoders</a></p></li>
-
-<li><p><a href="https://www.kaggle.com/bluewizard/catboost-model-w-dummy-target-encoders">CatBoost Model w/ Dummy &amp; Target Encoders</a></p></li>
+<li>
+<p><!-- raw HTML omitted -->Logistic Regression w/ OneHot &amp; Catboost Encoders<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->CatBoost Model w/ Dummy &amp; Target Encoders<!-- raw HTML omitted --></p>
+</li>
 </ul>
-
 <p>My best model scored <code>0.78577</code> which is not far off from the #1 score of <code>0.78664</code>.</p>
 
     </div>
@@ -517,7 +496,7 @@
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -541,13 +520,13 @@
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -555,8 +534,8 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -573,7 +552,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

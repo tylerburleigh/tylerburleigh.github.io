@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?" />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator" />
 <meta property="og:description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?" />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2020-03-17T00:00:00+00:00" />
 <meta itemprop="name" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator">
 <meta itemprop="description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?">
-
-
 <meta itemprop="datePublished" content="2020-03-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="607">
+<meta itemprop="wordCount" content="606">
 
 
 
-<meta itemprop="keywords" content="python,data visualization," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="python,data visualization," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator"/>
 <meta name="twitter:description" content="There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?"/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/" class="article-date">
-  <time datetime="2020-03-17">2020-03-17</time>
+  <time datetime="2020-03-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-17</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -303,36 +313,23 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      
-
-<p>One of the best behavioral strategies for mitigating the risk of coronavirus infection is &ldquo;social distancing&rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.</p>
-
-<p>But for most individuals staying at home isn&rsquo;t possible <sup>24</sup>&frasl;<sub>7</sub>, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce. As individuals make the decision to venture outside to run these errands, they can minimize their risk of exposure (maximize their social distance) by visiting places at &ldquo;off-peak&rdquo; hours.</p>
-
-<p>For a while now, Google Maps has been displaying the &ldquo;popular times&rdquo; for places like stores, restaurants, etc. And although the data isn&rsquo;t accessible from the Google Maps API yet, for the time being it can be scraped using the <a href="https://github.com/m-wrzr/populartimes">populartimes</a> python library.</p>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>One of the best behavioral strategies for mitigating the risk of coronavirus infection is &ldquo;social distancing&rdquo;. On the personal level, this means keeping a distance between yourself and others, ideally by staying at home.</p>
+<p>But for most individuals staying at home isn&rsquo;t possible 24/7, even if you have the luxury of working from home, sometimes you gotta go outside to do stuff. There are times when you must go outside, such as going to the grocery store to buy fresh produce. As individuals make the decision to venture outside to run these errands, they can minimize their risk of exposure (maximize their social distance) by visiting places at &ldquo;off-peak&rdquo; hours.</p>
+<p>For a while now, Google Maps has been displaying the &ldquo;popular times&rdquo; for places like stores, restaurants, etc. And although the data isn&rsquo;t accessible from the Google Maps API yet, for the time being it can be scraped using the <!-- raw HTML omitted -->populartimes<!-- raw HTML omitted --> python library.</p>
 <p>So imagine you had a tool where, you could enter the name of a place (&ldquo;Library in Hoboken, NJ&rdquo;), and it would tell you whether it&rsquo;s safe to visit using an algorithm like the following:</p>
-
 <ul>
 <li>Take all the popularity values on this day (e.g., &ldquo;Tuesdays&rdquo;)</li>
 <li>Calculate the mean (or median) popularity value</li>
 <li>Take the current popularity value (the value for the current hour)</li>
 <li>If the current popularity value is less than the average, then it&rsquo;s &ldquo;off-peak&rdquo; and safe, otherwise it&rsquo;s &ldquo;on-peak&rdquo; and unsafe</li>
 </ul>
-
 <p>Something like the following:</p>
-
-<p><img src="/blog/is_it_safe.png" alt="png" /></p>
-
+<p><img src="/blog/is_it_safe.png" alt="png"></p>
 <p>Here I&rsquo;ve drawn bars for the popularity for each hour in the current day. The current hour of the current day is highlighted in red, and a horizontal bar is drawn to indicate the on-peak/off-peak threshold (in this case, based on the mean). When the current hour bar is above the red line, then it&rsquo;s on-peak and unsafe; when it&rsquo;s below it&rsquo;s off-peak and safe.</p>
-
 <p>For full python code implementing this algorithm, see below.</p>
-
 <h1 id="python-code">Python code</h1>
-
 <h2 id="imports">Imports</h2>
-
 <pre><code class="language-python">import ipywidgets as widgets
 import populartimes # https://github.com/m-wrzr/populartimes
 import googlemaps
@@ -348,9 +345,7 @@ api_key = 'API_KEY_GOES_HERE'
 place_widget = widgets.Text(value='Library in Hoboken, NJ')
 gmaps = googlemaps.Client(key=api_key)
 </code></pre>
-
 <h2 id="functions">Functions</h2>
-
 <pre><code class="language-python"># Take place name as text input, return place_id
 def place_name_to_id(x):
     result = gmaps.find_place(input = x, 
@@ -405,20 +400,15 @@ def plot_gen():
     plot.axhline(np.mean(p['pop_data']['popularity']), ls='-', color='#FF0000')
     plot.set_title(&quot;Is it safe to go to\n&quot; + place_widget.value + &quot;?\n&quot; + off_peak_label)
 </code></pre>
-
 <h2 id="is-it-safe-to-go-outside">Is it safe to go outside?</h2>
-
 <p>Here the user would be presented with a text input where they could enter the name of a place. Then they could run this code chunk to generate output like the graph at the bottom.</p>
-
 <pre><code class="language-python">display(place_widget) # Type place name in input box below
 place_name_to_id(place_widget.value)
 plot_gen()
 </code></pre>
-
 <pre><code>Text(value='Library in Hoboken, NJ')
 </code></pre>
-
-<p><img src="/blog/is_it_safe.png" alt="png" /></p>
+<p><img src="/blog/is_it_safe.png" alt="png"></p>
 
     </div>
     <div class="article-footer">
@@ -495,7 +485,7 @@ plot_gen()
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -519,13 +509,13 @@ plot_gen()
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -533,8 +523,8 @@ plot_gen()
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -551,7 +541,7 @@ plot_gen()
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

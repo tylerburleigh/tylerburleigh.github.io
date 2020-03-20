@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         2019 Data Science Bowl - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="I was inspired to participate in Kaggle&amp;rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models." />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>2019 Data Science Bowl - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="2019 Data Science Bowl" />
 <meta property="og:description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models." />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2019-11-16T00:00:00+00:00" />
 <meta itemprop="name" content="2019 Data Science Bowl">
 <meta itemprop="description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.">
-
-
 <meta itemprop="datePublished" content="2019-11-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="371">
+<meta itemprop="wordCount" content="364">
 
 
 
-<meta itemprop="keywords" content="R,machine learning,EDA,Kaggle," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="R,machine learning,EDA,Kaggle," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2019 Data Science Bowl"/>
 <meta name="twitter:description" content="I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models."/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-2019-data-science-bowl" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/2019-data-science-bowl/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/2019-data-science-bowl/" class="article-date">
-  <time datetime="2019-11-16">2019-11-16</time>
+  <time datetime="2019-11-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-11-16</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -305,29 +315,34 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <p>When Kaggle announced its 2019 Data Science Bowl and I saw the headline: “Uncover the factors to help measure how young children learn”, I knew I had to participate.</p>
-
 <p>I&rsquo;ve been working through this competition in stages which I&rsquo;ll list below.</p>
-
 <ul>
-<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-1-reading-in-the-data.html">Part 1</a> - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</p></li>
-
-<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-2-handling-the-json.html">Part 2</a> - I discover that the dataframe contains unstructured text in the form of JSON. I proceed to devise a solution to extracting this data in a way that will make it easier to explore.</p></li>
-
-<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-3-exploring-game-data.html">Part 3</a> - I begin to explore the data, focusing on the &ldquo;Game&rdquo; session type, with the goal of trying to understand what exactly constitutes a game. In doing this, I discover an edge case with my JSON extraction function developed in the last part, and spend time fixing this.</p></li>
-
-<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-4-more-on-game-sessions.html">Part 4</a> - I continue to explore the Game data. I try to questions about levels, level progression (are higher levels more difficult, and does difficulty climb indefinitely?), and basic game events (e.g., what determines when a game session is “finished”?).</p></li>
-
-<li><p><a href="https://tylerburleigh.com/data-science-bowl-2019/part-5-scoring-and-ground-truth">Part 5</a> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p></li>
+<li>
+<p><!-- raw HTML omitted -->Part 1<!-- raw HTML omitted --> - I begin by examining the data at a basic level and dealing with some of the challenges of the fact that it is “big data” which means that if I want to explore it on my local machine (which doesn&rsquo;t have a lot of compute power) then I will have to wrangle it into a special format (a Spark dataframe).</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Part 2<!-- raw HTML omitted --> - I discover that the dataframe contains unstructured text in the form of JSON. I proceed to devise a solution to extracting this data in a way that will make it easier to explore.</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Part 3<!-- raw HTML omitted --> - I begin to explore the data, focusing on the &ldquo;Game&rdquo; session type, with the goal of trying to understand what exactly constitutes a game. In doing this, I discover an edge case with my JSON extraction function developed in the last part, and spend time fixing this.</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Part 4<!-- raw HTML omitted --> - I continue to explore the Game data. I try to questions about levels, level progression (are higher levels more difficult, and does difficulty climb indefinitely?), and basic game events (e.g., what determines when a game session is “finished”?).</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Part 5<!-- raw HTML omitted --> - I start to look at the &ldquo;Assessment&rdquo; type of game session. I write an algorithm to score Assessments and check my scores against the &ldquo;ground truth&rdquo; provided in the competition documents.</p>
+</li>
 </ul>
-
 <p>At this point I realize that I will need to start working on Kaggle itself because the competition submissions require notebook-based submissions. So I start to write some Kaggle notebooks. These were some of the notebooks I created:</p>
-
 <ul>
-<li><p><a href="https://www.kaggle.com/bluewizard/basic-median-model">Simple R median baseline model</a> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p></li>
-
-<li><p><a href="https://www.kaggle.com/bluewizard/random-forest-with-performance-history">Random forest with performance history</a> - I take what I&rsquo;ve learned so far and apply it to predicting test performance. This model is a Random Forest that includes game performance. This model is a slight improvement over the baseline model.</p></li>
+<li>
+<p><!-- raw HTML omitted -->Simple R median baseline model<!-- raw HTML omitted --> - I start with a simple model that predicts Assessment performance in the test set using median assessment scores in the training set</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->Random forest with performance history<!-- raw HTML omitted --> - I take what I&rsquo;ve learned so far and apply it to predicting test performance. This model is a Random Forest that includes game performance. This model is a slight improvement over the baseline model.</p>
+</li>
 </ul>
 
     </div>
@@ -405,7 +420,7 @@
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -429,13 +444,13 @@
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -443,8 +458,8 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -461,7 +476,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

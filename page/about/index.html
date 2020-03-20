@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         About Me - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place." />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>About Me - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="About Me" />
 <meta property="og:description" content="For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place." />
@@ -32,14 +39,11 @@
 <meta itemprop="name" content="About Me">
 <meta itemprop="description" content="For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.">
 
-
-
 <meta itemprop="wordCount" content="223">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About Me"/>
 <meta name="twitter:description" content="For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place."/>
 
@@ -52,6 +56,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -59,8 +64,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -78,7 +83,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -96,7 +102,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -166,6 +172,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -268,12 +278,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/page/about/"
@@ -285,7 +295,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/page/about/" class="article-date">
-  <time datetime="0001-01-01">0001-01-01</time>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
 </a>
 </span>
 
@@ -293,7 +303,7 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <link href="/rmarkdown-libs/vis/vis.min.css" rel="stylesheet" />
@@ -397,8 +407,8 @@ timevis(data, groups = data.frame(id = 1:2, content = c(&quot;G1&quot;, &quot;G2
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
             </li>
             <li class="next">
-                <a href="https://tylerburleigh.com/blog/2020-01-20-working-with-categorical-features-in-ml/"
-                    title=""><span>Newer&nbsp;&nbsp;</span><i
+                <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/"
+                    title="Surviving the Titanic with R caret"><span>Newer&nbsp;&nbsp;</span><i
                         class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
@@ -426,7 +436,7 @@ timevis(data, groups = data.frame(id = 1:2, content = c(&quot;G1&quot;, &quot;G2
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -450,13 +460,13 @@ timevis(data, groups = data.frame(id = 1:2, content = c(&quot;G1&quot;, &quot;G2
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -464,8 +474,8 @@ timevis(data, groups = data.frame(id = 1:2, content = c(&quot;G1&quot;, &quot;G2
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -482,7 +492,7 @@ timevis(data, groups = data.frame(id = 1:2, content = c(&quot;G1&quot;, &quot;G2
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

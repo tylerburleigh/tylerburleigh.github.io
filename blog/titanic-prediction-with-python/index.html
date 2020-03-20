@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Predicting survival on the Titanic (with Python!) - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="I wanted to try out some of what I&amp;rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?" />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Predicting survival on the Titanic (with Python!) - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Predicting survival on the Titanic (with Python!)" />
 <meta property="og:description" content="I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?" />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2019-12-30T00:00:00+00:00" />
 <meta itemprop="name" content="Predicting survival on the Titanic (with Python!)">
 <meta itemprop="description" content="I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?">
-
-
 <meta itemprop="datePublished" content="2019-12-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-12-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3214">
+<meta itemprop="wordCount" content="2555">
 
 
 
-<meta itemprop="keywords" content="python,machine learning,random forest,logistic regression,Kaggle,Titanic," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="python,machine learning,random forest,logistic regression,Kaggle,Titanic," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Predicting survival on the Titanic (with Python!)"/>
 <meta name="twitter:description" content="I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?"/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-titanic-prediction-with-python" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/titanic-prediction-with-python/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/" class="article-date">
-  <time datetime="2019-12-30">2019-12-30</time>
+  <time datetime="2019-12-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-12-30</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -307,13 +317,9 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      
-
-<p>I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge? Previously, I <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/">tackled this challenge using R</a>. Here I build logistic regression and random forest models, after doing some wrangling and feature engineering.</p>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge? Previously, I <!-- raw HTML omitted -->tackled this challenge using R<!-- raw HTML omitted -->. Here I build logistic regression and random forest models, after doing some wrangling and feature engineering.</p>
 <h2 id="load-data">Load data</h2>
-
 <pre><code class="language-python">import pandas as pd
 import numpy as np
 import zipfile
@@ -322,252 +328,42 @@ z = zipfile.ZipFile('titanic.zip')
 train = pd.read_csv(z.open('train.csv'))
 test = pd.read_csv(z.open('test.csv'))
 </code></pre>
-
 <pre><code class="language-python">train.describe()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>714.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>446.000000</td>
-      <td>0.383838</td>
-      <td>2.308642</td>
-      <td>29.699118</td>
-      <td>0.523008</td>
-      <td>0.381594</td>
-      <td>32.204208</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>257.353842</td>
-      <td>0.486592</td>
-      <td>0.836071</td>
-      <td>14.526497</td>
-      <td>1.102743</td>
-      <td>0.806057</td>
-      <td>49.693429</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>0.420000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>223.500000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>20.125000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>7.910400</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>446.000000</td>
-      <td>0.000000</td>
-      <td>3.000000</td>
-      <td>28.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>14.454200</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>668.500000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>38.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>31.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>891.000000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>80.000000</td>
-      <td>8.000000</td>
-      <td>6.000000</td>
-      <td>512.329200</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">train.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>A/5 21171</td>
-      <td>7.2500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>PC 17599</td>
-      <td>71.2833</td>
-      <td>C85</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>STON/O2. 3101282</td>
-      <td>7.9250</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>C123</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>The Survived classes are unbalanced, so I should use stratification for the split later.</p>
-
 <pre><code class="language-python">train['Survived'].value_counts()
 </code></pre>
-
 <pre><code>0    549
 1    342
 Name: Survived, dtype: int64
 </code></pre>
-
 <p>Some of the columns have many missing values.</p>
-
 <pre><code class="language-python">891 - (train.count())
 </code></pre>
-
 <pre><code>PassengerId      0
 Survived         0
 Pclass           0
@@ -582,114 +378,31 @@ Cabin          687
 Embarked         2
 dtype: int64
 </code></pre>
-
 <h1 id="logistic-regression-classifier">Logistic regression classifier</h1>
-
 <p>When modeling, it&rsquo;s best to keep things simple: fewer features, less pre-processing, and a simpler model. For the first classifier type I will use a logistic regression.</p>
-
 <h3 id="model-1">Model 1</h3>
-
 <h4 id="subset-the-data">Subset the data</h4>
-
 <p>Make a dataset containing the columns that need the least pre-processing.</p>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Age', 'Name', 'Ticket'], axis=1)
 </code></pre>
-
 <p>Make dummy variables, dropping the first to avoid redundancy.</p>
-
 <pre><code class="language-python">df = pd.get_dummies(df, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">df.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-      <th>Sex_male</th>
-      <th>Embarked_Q</th>
-      <th>Embarked_S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <h4 id="train-test-split">Train-test split</h4>
-
-<p>Make an <sup>80</sup>&frasl;<sub>20</sub> train-test split with stratification.</p>
-
+<p>Make an 80/20 train-test split with stratification.</p>
 <pre><code class="language-python">from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(df, 
@@ -698,18 +411,13 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">print (X_train.shape, X_test.shape, 
        y_train.shape, y_test.shape)
 </code></pre>
-
 <pre><code>(712, 7) (179, 7) (712,) (179,)
 </code></pre>
-
 <h4 id="logistic-regression-pipeline">Logistic regression pipeline</h4>
-
 <p>Logistic regression pipeline with the StandardScaler as a pre-processing step.</p>
-
 <pre><code class="language-python">from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -717,18 +425,13 @@ from sklearn.preprocessing import StandardScaler
 pipe = Pipeline(steps=[('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <p>Fit and score</p>
-
 <pre><code class="language-python">fit = pipe.fit(X_train, y_train)
 fit.score(X_test, y_test)
 </code></pre>
-
 <pre><code>0.8044692737430168
 </code></pre>
-
 <p>Score with cross-validation</p>
-
 <pre><code class="language-python">from sklearn.model_selection import cross_val_score
 
 cv_results = cross_val_score(pipe,
@@ -739,17 +442,12 @@ cv_results = cross_val_score(pipe,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.776984126984127
 </code></pre>
-
 <h4 id="coefficient-performance">Coefficient performance</h4>
-
 <p>Not all predictors performed equally well. <code>Embarked_Q</code> and <code>Parch</code> were relatively poor predictors.</p>
-
 <pre><code class="language-python">list(zip(df.columns, fit.named_steps['logistic'].coef_[0]))
 </code></pre>
-
 <pre><code>[('Pclass', -0.7255791345702128),
  ('SibSp', -0.1629967238390473),
  ('Parch', -0.06060899725052046),
@@ -758,21 +456,15 @@ cv_results.mean()
  ('Embarked_Q', 0.03622955414064328),
  ('Embarked_S', -0.20179422191456092)]
 </code></pre>
-
-<h3 id="model-2-adding-age">Model 2 - Adding age</h3>
-
+<h3 id="model-2---adding-age">Model 2 - Adding age</h3>
 <p>Next let&rsquo;s try adding <code>Age</code>. Because <code>Age</code> contains missing values, the feature will need to be transformed or imputed.</p>
-
 <h4 id="age-with-median-imputation">Age with median imputation</h4>
-
 <p>Start with a simple imputer.</p>
-
 <pre><code class="language-python">from sklearn.impute import SimpleImputer
 pipe = Pipeline(steps=[('imputer', SimpleImputer(strategy = 'median')),
                        ('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 df = pd.get_dummies(df, drop_first=True)
 
@@ -782,7 +474,6 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -791,22 +482,16 @@ X_train, X_test, y_train, y_test = train_test_split(df,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7660317460317461
 </code></pre>
-
 <p>The model performed about the same, maybe a little worse in CV scoring.</p>
-
 <h4 id="age-with-knn-imputation">Age with KNN imputation</h4>
-
 <p>Maybe median imputation was too simple. Let&rsquo;s try a more complex imputer &ndash; K Nearest Neighbors imputation.</p>
-
 <pre><code class="language-python">from sklearn.impute import KNNImputer
 pipe = Pipeline(steps=[('imputer', KNNImputer()),
                        ('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -815,16 +500,11 @@ pipe = Pipeline(steps=[('imputer', KNNImputer()),
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7660317460317461
 </code></pre>
-
 <p>The CV results are the same.</p>
-
 <h4 id="age-as-age-missing-ness">Age as age missing-ness</h4>
-
 <p>Maybe what&rsquo;s useful about <code>Age</code> is not its value but its missing-ness. I&rsquo;ll try encoding this and seeing if it adds predictive value.</p>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['Age'] = 1 * np.isnan(df['Age'])
@@ -836,21 +516,16 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">df['Age'].value_counts()
 </code></pre>
-
 <pre><code>0    714
 1    177
 Name: Age, dtype: int64
 </code></pre>
-
 <p>Remove imputation from the pipeline.</p>
-
 <pre><code class="language-python">pipe = Pipeline(steps=[('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -859,16 +534,11 @@ Name: Age, dtype: int64
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7715873015873015
 </code></pre>
-
 <p>Better than imputation, but worse than the first model without <code>Age</code>.</p>
-
 <h4 id="age-as-adult-vs-child">Age as adult vs. child</h4>
-
 <p>Maybe coding for under-21 years of age is useful. It could be useful because of the way &ldquo;women and children&rdquo; (and particularly &ldquo;marriage-able&rdquo; women) were treated in this time period.</p>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['Age'] = 1 * (df['Age'] &lt;= 21)
@@ -880,19 +550,15 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">df['Age'].value_counts()
 </code></pre>
-
 <pre><code>0    687
 1    204
 Name: Age, dtype: int64
 </code></pre>
-
 <pre><code class="language-python">pipe = Pipeline(steps=[('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -901,18 +567,12 @@ Name: Age, dtype: int64
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7826984126984127
 </code></pre>
-
 <p>Now we&rsquo;re seeing some improvement, suggesting <code>Age</code> is worth keeping in the model.</p>
-
-<h3 id="model-3-family">Model 3 - Family</h3>
-
+<h3 id="model-3---family">Model 3 - Family</h3>
 <p>The current model contains <code>Parch</code> (number of parents on board) and <code>SibSp</code> (number of siblings on board). But it&rsquo;s not clear if these are useful to maintain as separate precictors or if they can be combined into a single &ldquo;number of family on board&rdquo; variable.</p>
-
 <h4 id="combined-family">Combined family</h4>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['Age'] = 1 * (df['Age'] &lt;= 21)
@@ -926,7 +586,6 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -935,30 +594,21 @@ X_train, X_test, y_train, y_test = train_test_split(df,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7882539682539683
 </code></pre>
-
 <p>This improved the model slightly.</p>
-
 <pre><code class="language-python">pipe.fit(X_train, y_train)
 pred = pipe.predict(X_test)
 errors = abs(pred - y_test)
 1 - (sum(errors) / 179)
 </code></pre>
-
 <pre><code>0.7877094972067039
 </code></pre>
-
 <p>Out-of-sample error was similar.</p>
-
 <h4 id="family-vs-no-family">Family vs. no family</h4>
-
 <p>Interestingly, if I look at the counts, I can see that there was a majority of passengers with no family on board. I wonder if family is more useful as a boolean &ldquo;has family vs. doesn&rsquo;t have family&rdquo;.</p>
-
 <pre><code class="language-python">df['Family'].value_counts()
 </code></pre>
-
 <pre><code>0     537
 1     161
 2     102
@@ -970,7 +620,6 @@ errors = abs(pred - y_test)
 7       6
 Name: Family, dtype: int64
 </code></pre>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['Age'] = 1 * (df['Age'] &lt;= 21)
@@ -984,7 +633,6 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <pre><code class="language-python">cv_results = cross_val_score(pipe,
                              X_test,
                              y_test,
@@ -993,21 +641,14 @@ X_train, X_test, y_train, y_test = train_test_split(df,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7492063492063492
 </code></pre>
-
 <p>This made the model much worse, so I guess not.</p>
-
-<h3 id="model-3-adding-name-features">Model 3 - Adding name features</h3>
-
+<h3 id="model-3---adding-name-features">Model 3 - Adding name features</h3>
 <p>Next we&rsquo;ll try extracting information from passenger names.</p>
-
 <h4 id="special-persons">Special persons</h4>
-
 <pre><code class="language-python">train.Name.head()
 </code></pre>
-
 <pre><code>0                              Braund, Mr. Owen Harris
 1    Cumings, Mrs. John Bradley (Florence Briggs Th...
 2                               Heikkinen, Miss. Laina
@@ -1015,129 +656,41 @@ cv_results.mean()
 4                             Allen, Mr. William Henry
 Name: Name, dtype: object
 </code></pre>
-
 <p>Let&rsquo;s extract the last names and honorifics.</p>
-
 <pre><code class="language-python">split1 = train[&quot;Name&quot;].str.split(', ', n = 1, expand = True)
 split1.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Braund</td>
-      <td>Mr. Owen Harris</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Cumings</td>
-      <td>Mrs. John Bradley (Florence Briggs Thayer)</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Heikkinen</td>
-      <td>Miss. Laina</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Futrelle</td>
-      <td>Mrs. Jacques Heath (Lily May Peel)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Allen</td>
-      <td>Mr. William Henry</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">split2 = split1[1].str.split('.', n = 1, expand = True)
 split2.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Mr</td>
-      <td>Owen Harris</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Mrs</td>
-      <td>John Bradley (Florence Briggs Thayer)</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Miss</td>
-      <td>Laina</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Mrs</td>
-      <td>Jacques Heath (Lily May Peel)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Mr</td>
-      <td>William Henry</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">train['LastName'] = split1[0]
 train['Honorific'] = split2[0]
 train['OtherNames'] = split2[1]
 </code></pre>
-
 <pre><code class="language-python">train.Honorific.value_counts()
 </code></pre>
-
 <pre><code>Mr              517
 Miss            182
 Mrs             125
@@ -1157,9 +710,7 @@ Ms                1
 Lady              1
 Name: Honorific, dtype: int64
 </code></pre>
-
 <p>Some of these are &ldquo;special classes&rdquo; of people. We&rsquo;ll classify anyone other than Mr, Miss, Mrs, Master, and Ms. as a special person.</p>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['SpecialPerson'] = 1 * df['Honorific'].isin(['Dr', 'Rev', 'Mlle', 'Major', 'Col', 'Don', 'Jonkheer', 'Lady', 'the Countess', 'Sir', 'Mme', 'Capt'])
@@ -1169,15 +720,12 @@ df['Family'] = 1 * ((df['SibSp'] + df['Parch']) == 0)
 df = df.drop(['SibSp', 'Parch', 'LastName', 'OtherNames', 'Honorific'], axis=1)
 df = pd.get_dummies(df, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">df['SpecialPerson'].value_counts()
 </code></pre>
-
 <pre><code>0    865
 1     26
 Name: SpecialPerson, dtype: int64
 </code></pre>
-
 <pre><code class="language-python">X_train, X_test, y_train, y_test = train_test_split(df, 
                                                     train.Survived, 
                                                     test_size=0.2, 
@@ -1192,14 +740,10 @@ cv_results = cross_val_score(pipe,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7379365079365079
 </code></pre>
-
 <p>Much worse. It could be because the base-rate is so low.</p>
-
 <h4 id="single-woman">Single woman</h4>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 df['SingleWoman'] = 1 * df['Honorific'].isin(['Miss', 'Mlle'])
@@ -1209,7 +753,6 @@ df['Family'] = 1 * ((df['SibSp'] + df['Parch']) == 0)
 df = df.drop(['SibSp', 'Parch', 'LastName', 'OtherNames', 'Honorific'], axis=1)
 df = pd.get_dummies(df, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">X_train, X_test, y_train, y_test = train_test_split(df, 
                                                     train.Survived, 
                                                     test_size=0.2, 
@@ -1224,21 +767,14 @@ cv_results = cross_val_score(pipe,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7547619047619049
 </code></pre>
-
 <p>This also made the model worse.</p>
-
-<h3 id="model-4-cabin">Model 4 - Cabin</h3>
-
+<h3 id="model-4---cabin">Model 4 - Cabin</h3>
 <h4 id="cabin-letter">Cabin letter</h4>
-
 <p>As I understand, <code>Cabin</code> contains a letter that corresponds with how many levels below-deck the passenger&rsquo;s room was. Cabin <code>A</code> was closest to the surface, while cabin <code>G</code> was the lowest level. This variable also has many missing values, which also might be informative. We&rsquo;ll assign <code>U</code> to these missing values.</p>
-
 <pre><code class="language-python">train.Cabin.value_counts().head()
 </code></pre>
-
 <pre><code>G6             4
 C23 C25 C27    4
 B96 B98        4
@@ -1246,10 +782,8 @@ D              3
 E101           3
 Name: Cabin, dtype: int64
 </code></pre>
-
 <pre><code class="language-python">train.Cabin.str[:1].fillna('U').value_counts()
 </code></pre>
-
 <pre><code>U    687
 C     59
 B     47
@@ -1261,7 +795,6 @@ G      4
 T      1
 Name: Cabin, dtype: int64
 </code></pre>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Name', 'Ticket', 'LastName', 'OtherNames', 'Honorific'], axis=1)
 
 df['Age'] = 1 * (df['Age'] &lt;= 21)
@@ -1271,140 +804,19 @@ df['CabinLetter'] = df['Cabin'].str[:1].fillna('U')
 df = df.drop(['SibSp', 'Parch', 'Cabin'], axis=1)
 df = pd.get_dummies(df, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">df.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Family</th>
-      <th>Sex_male</th>
-      <th>Embarked_Q</th>
-      <th>Embarked_S</th>
-      <th>CabinLetter_B</th>
-      <th>CabinLetter_C</th>
-      <th>CabinLetter_D</th>
-      <th>CabinLetter_E</th>
-      <th>CabinLetter_F</th>
-      <th>CabinLetter_G</th>
-      <th>CabinLetter_T</th>
-      <th>CabinLetter_U</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">X_train, X_test, y_train, y_test = train_test_split(df, 
                                                     train.Survived, 
                                                     test_size=0.2, 
@@ -1419,16 +831,11 @@ cv_results = cross_val_score(pipe,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7320634920634921
 </code></pre>
-
 <p>This made the model worse.</p>
-
 <h4 id="cabin-as-cabin-missing-ness">Cabin as cabin missing-ness</h4>
-
 <p>I&rsquo;ll try a simpler version that only encodes the missing <code>Cabin</code> values.</p>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Name', 'Ticket', 'LastName', 'OtherNames', 'Honorific'], axis=1)
 
 df['Age'] = 1 * (df['Age'] &lt;= 21)
@@ -1438,7 +845,6 @@ df['CabinMissing'] = 1 * (df['Cabin'].str[:1].fillna('U') == 'U')
 df = df.drop(['SibSp', 'Parch', 'Cabin'], axis=1)
 df = pd.get_dummies(df, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">X_train, X_test, y_train, y_test = train_test_split(df, 
                                                     train.Survived, 
                                                     test_size=0.2, 
@@ -1453,16 +859,11 @@ cv_results = cross_val_score(pipe,
 
 cv_results.mean()
 </code></pre>
-
 <pre><code>0.7434920634920635
 </code></pre>
-
 <p>The model is still worse.</p>
-
 <h2 id="final-model">Final model</h2>
-
 <p>Now to train a predictor using all of the training data, before applying it to the test set.</p>
-
 <pre><code class="language-python">train_features = train.drop(['PassengerId', 'Survived', 'Cabin', 'Name', 'Ticket', 'Honorific', 'LastName', 'OtherNames'], axis=1)
 
 train_features['Age'] = 1 * (train_features['Age'] &lt;= 21)
@@ -1470,14 +871,11 @@ train_features['Family'] = train_features['SibSp'] + train_features['Parch']
 train_features = train_features.drop(['SibSp', 'Parch'], axis=1)
 train_features = pd.get_dummies(train_features, drop_first=True)
 </code></pre>
-
 <pre><code class="language-python">pipe = Pipeline(steps=[('scaler', StandardScaler()),
                        ('logistic', LogisticRegression())])
 </code></pre>
-
 <pre><code class="language-python">pipe.fit(train_features, train.Survived)
 </code></pre>
-
 <pre><code>Pipeline(memory=None,
          steps=[('scaler',
                  StandardScaler(copy=True, with_mean=True, with_std=True)),
@@ -1491,153 +889,19 @@ train_features = pd.get_dummies(train_features, drop_first=True)
                                     warm_start=False))],
          verbose=False)
 </code></pre>
-
 <pre><code class="language-python">train_features
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Family</th>
-      <th>Sex_male</th>
-      <th>Embarked_Q</th>
-      <th>Embarked_S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>886</th>
-      <td>2</td>
-      <td>0</td>
-      <td>13.0000</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>887</th>
-      <td>1</td>
-      <td>1</td>
-      <td>30.0000</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>888</th>
-      <td>3</td>
-      <td>0</td>
-      <td>23.4500</td>
-      <td>3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>889</th>
-      <td>1</td>
-      <td>0</td>
-      <td>30.0000</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>890</th>
-      <td>3</td>
-      <td>0</td>
-      <td>7.7500</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>891 rows × 7 columns</p>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">test_features = test.drop(['PassengerId', 'Cabin', 'Name', 'Ticket'], axis=1)
 
 test_features['Age'] = 1 * (test_features['Age'] &lt;= 21)
@@ -1645,112 +909,49 @@ test_features['Family'] = test_features['SibSp'] + test_features['Parch']
 test_features = test_features.drop(['SibSp', 'Parch'], axis=1)
 test_features = pd.get_dummies(test_features, drop_first=True)
 </code></pre>
-
 <p>Check for NaN values.</p>
-
 <pre><code class="language-python">test_features[test_features.isna().any(axis=1)]
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Family</th>
-      <th>Sex_male</th>
-      <th>Embarked_Q</th>
-      <th>Embarked_S</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>152</th>
-      <td>3</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Fill in NaN value with median.</p>
-
 <pre><code class="language-python">test_features.Fare = test_features.Fare.fillna(np.nanmedian(test_features.Fare))
 test_features[test_features.isna().any(axis=1)]
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Age</th>
-      <th>Fare</th>
-      <th>Family</th>
-      <th>Sex_male</th>
-      <th>Embarked_Q</th>
-      <th>Embarked_S</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">d = {'PassengerId': test.PassengerId, 'Survived': preds}
 submission = pd.DataFrame(data=d)
 submission.to_csv(&quot;submission_lr.csv&quot;, index=False)
 </code></pre>
-
 <h1 id="decision-tree-classifier">Decision tree classifier</h1>
-
 <p>I have a feeling that some of the features I tested using the logistic regression classifier did not add predictive power to the model because the interactions between terms were not accounted for. If I use a decision tree classifier, then some of these interactions may be accounted for, and this may improve the accuracy of the model. Another advantage of the decision tree classifier is that it can use categorical features without one-hot / dummy encoding. This means I can simplify the model by doing less feature-engineering guess-work.</p>
-
 <h4 id="features">Features</h4>
-
 <p>I&rsquo;ll start by collecting together all of the features that intuition tells me might be of some use.</p>
-
 <pre><code class="language-python">split1 = train[&quot;Name&quot;].str.split(', ', n = 1, expand = True)
 split1.head()
 split2 = split1[1].str.split('.', n = 1, expand = True)
 split2.head()
 train['Honorific'] = split2[0]
 </code></pre>
-
 <pre><code class="language-python">df = train.drop(['PassengerId', 'Survived', 'Ticket', 'Name'], axis=1)
 
 df['Child'] = 1 * (df['Age'] &lt;= 21)
@@ -1758,15 +959,11 @@ df['CabinLetter'] = df['Cabin'].str[:1].fillna('U')
 
 df = df.drop(['SibSp', 'Parch', 'Cabin', 'Age'], axis=1)
 </code></pre>
-
 <h4 id="label-encoding">Label encoding</h4>
-
 <p>I&rsquo;ll need to encode the string features to integers using LabelEncoder.</p>
-
 <pre><code class="language-python">from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
 </code></pre>
-
 <pre><code class="language-python">le.fit(df.CabinLetter)
 df['CabinLetterLE'] = le.transform(df.CabinLetter)
 
@@ -1782,92 +979,19 @@ df['EmbarkedLE'] = le.transform(df.Embarked)
 
 df = df.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked'], axis=1)
 </code></pre>
-
 <pre><code class="language-python">df.head()
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Fare</th>
-      <th>Child</th>
-      <th>CabinLetterLE</th>
-      <th>SexLE</th>
-      <th>HonorificLE</th>
-      <th>EmbarkedLE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3</td>
-      <td>7.2500</td>
-      <td>0</td>
-      <td>8</td>
-      <td>1</td>
-      <td>11</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>71.2833</td>
-      <td>0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>12</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>7.9250</td>
-      <td>0</td>
-      <td>8</td>
-      <td>0</td>
-      <td>8</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>53.1000</td>
-      <td>0</td>
-      <td>2</td>
-      <td>0</td>
-      <td>12</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>8.0500</td>
-      <td>0</td>
-      <td>8</td>
-      <td>1</td>
-      <td>11</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(df, 
@@ -1876,15 +1000,11 @@ X_train, X_test, y_train, y_test = train_test_split(df,
                                                     random_state=42,
                                                     stratify=train.Survived)
 </code></pre>
-
 <h4 id="model-tuning">Model tuning</h4>
-
 <p>I&rsquo;ll prepare a RandomizedSearchCV to find the best set of model parameters.</p>
-
 <pre><code class="language-python">from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RandomizedSearchCV
 </code></pre>
-
 <pre><code class="language-python">random_grid = {'n_estimators': [int(x) for x in np.linspace(10, 50, num = 5)],
                'max_features': ['auto','sqrt'],
                'max_depth': [int(x) for x in np.linspace(10, 50, num = 10)],
@@ -1893,7 +1013,6 @@ from sklearn.model_selection import RandomizedSearchCV
                'bootstrap': [True, False]}
 random_grid
 </code></pre>
-
 <pre><code>{'n_estimators': [10, 20, 30, 40, 50],
  'max_features': ['auto', 'sqrt'],
  'max_depth': [10, 14, 18, 23, 27, 32, 36, 41, 45, 50],
@@ -1901,7 +1020,6 @@ random_grid
  'min_samples_leaf': [2, 3, 4, 5, 6, 7, 8, 9, 11],
  'bootstrap': [True, False]}
 </code></pre>
-
 <pre><code class="language-python">rf_random = RandomizedSearchCV(estimator = RandomForestClassifier(), 
                                param_distributions = random_grid, 
                                n_iter = 1000, 
@@ -1914,7 +1032,6 @@ random_grid
 
 rf_random.fit(X_train, y_train)
 </code></pre>
-
 <pre><code>Fitting 3 folds for each of 1000 candidates, totalling 3000 fits
 
 
@@ -1959,18 +1076,13 @@ RandomizedSearchCV(cv=3, error_score=nan,
                    pre_dispatch='2*n_jobs', random_state=42, refit=True,
                    return_train_score=False, scoring='accuracy', verbose=2)
 </code></pre>
-
 <pre><code class="language-python">rf_random.best_score_
 </code></pre>
-
 <pre><code>0.8286707087898452
 </code></pre>
-
 <p>The best score here is better than it was with the logistic regression classifier.</p>
-
 <pre><code class="language-python">list(zip(df.columns, rf_random.best_estimator_.feature_importances_))
 </code></pre>
-
 <pre><code>[('Pclass', 0.12286637673196617),
  ('Fare', 0.2619939060630186),
  ('Child', 0.020292294810431686),
@@ -1979,23 +1091,16 @@ RandomizedSearchCV(cv=3, error_score=nan,
  ('HonorificLE', 0.1126016235990436),
  ('EmbarkedLE', 0.0438424083124526)]
 </code></pre>
-
 <p>All of the features were at least a little important.</p>
-
 <pre><code class="language-python">pred = rf_random.predict(X_test)
 errors = abs(pred - y_test)
 1 - (sum(errors) / 179)
 </code></pre>
-
 <pre><code>0.782122905027933
 </code></pre>
-
 <p>The out-of-sample prediction is about the same as the Logistic Regression model 3.</p>
-
 <h2 id="final-model-1">Final model</h2>
-
 <p>Now to train a predictor using all of the training data, before applying it to the test set.</p>
-
 <pre><code class="language-python">train_features = train.drop(['PassengerId', 'Survived', 'Ticket', 'Name'], axis=1)
 train_labels = train.Survived
 
@@ -2020,7 +1125,6 @@ train_features['EmbarkedLE'] = le.transform(train_features.Embarked)
 
 train_features = train_features.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked'], axis=1)
 </code></pre>
-
 <pre><code class="language-python">rf_random = RandomizedSearchCV(estimator = RandomForestClassifier(), 
                                param_distributions = random_grid, 
                                n_iter = 1000, 
@@ -2032,7 +1136,6 @@ train_features = train_features.drop(['CabinLetter', 'Sex', 'Honorific', 'Embark
 
 rf_random.fit(train_features, train_labels)
 </code></pre>
-
 <pre><code class="language-python">test_features = test
 
 ## Generate Honorific feature
@@ -2063,99 +1166,40 @@ test_features['EmbarkedLE'] = le.transform(test_features.Embarked)
 
 test_features = test_features.drop(['CabinLetter', 'Sex', 'Honorific', 'Embarked'], axis=1)
 </code></pre>
-
 <p>Check for NaN values.</p>
-
 <pre><code class="language-python">test_features[test_features.isna().any(axis=1)]
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Fare</th>
-      <th>Child</th>
-      <th>CabinLetterLE</th>
-      <th>SexLE</th>
-      <th>HonorificLE</th>
-      <th>EmbarkedLE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>152</th>
-      <td>3</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>7</td>
-      <td>1</td>
-      <td>5</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>Fill in NaN value with median.</p>
-
 <pre><code class="language-python">test_features.Fare = test_features.Fare.fillna(np.nanmedian(test_features.Fare))
 test_features[test_features.isna().any(axis=1)]
 </code></pre>
+<!-- raw HTML omitted -->
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Pclass</th>
-      <th>Fare</th>
-      <th>Child</th>
-      <th>CabinLetterLE</th>
-      <th>SexLE</th>
-      <th>HonorificLE</th>
-      <th>EmbarkedLE</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <pre><code class="language-python">preds = rf_random.predict(test_features)
 </code></pre>
-
 <pre><code class="language-python">d = {'PassengerId': test.PassengerId, 'Survived': preds}
 submission = pd.DataFrame(data=d)
 </code></pre>
-
 <pre><code class="language-python">submission.to_csv(&quot;submission_rf.csv&quot;, index=False)
 </code></pre>
 
@@ -2234,7 +1278,7 @@ submission = pd.DataFrame(data=d)
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -2258,13 +1302,13 @@ submission = pd.DataFrame(data=d)
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -2272,8 +1316,8 @@ submission = pd.DataFrame(data=d)
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -2290,7 +1334,7 @@ submission = pd.DataFrame(data=d)
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

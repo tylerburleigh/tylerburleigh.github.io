@@ -2,38 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Tyler Burleigh</title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
   
   
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Tyler Burleigh</title>
   
 
   <link rel="alternate" type="application/rss+xml" href="https://tylerburleigh.com/index.xml" title="Tyler Burleigh" />
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Home" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tylerburleigh.com/" />
-
 <meta property="og:updated_time" content="2020-03-17T00:00:00+00:00" />
 <meta itemprop="name" content="Home">
-<meta itemprop="description" content="">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Home"/>
 <meta name="twitter:description" content=""/>
 
@@ -46,6 +50,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -53,8 +58,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -72,7 +77,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -90,7 +96,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -160,6 +166,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -255,7 +265,7 @@
     
     
 
-<main class="main">
+<main class="main" role="main">
   
   <div class="content article-list">
     
@@ -267,7 +277,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/comparing-coronavirus-trends-in-us-italy-and-china/"
@@ -276,11 +286,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >A simple prediction of coronavirus spread in the US, using case trends in China and Italy.</div>
+      <div class="article-entry text-muted" itemprop="description">A simple prediction of coronavirus spread in the US, using case trends in China and Italy.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/" class="">
-  <time datetime="2020-03-17">2020-03-17</time>
+  <time datetime="2020-03-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-17</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -301,7 +311,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/"
@@ -310,11 +320,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?</div>
+      <div class="article-entry text-muted" itemprop="description">There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/" class="">
-  <time datetime="2020-03-17">2020-03-17</time>
+  <time datetime="2020-03-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-17</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -335,7 +345,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/working-with-categorical-features-in-ml/"
@@ -344,11 +354,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >Some observations about high-cardinality features and sparsity.</div>
+      <div class="article-entry text-muted" itemprop="description">Some observations about high-cardinality features and sparsity.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/" class="">
-  <time datetime="2020-01-20">2020-01-20</time>
+  <time datetime="2020-01-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-20</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -373,7 +383,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/simple-twilio-sms-frontend/"
@@ -382,11 +392,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</div>
+      <div class="article-entry text-muted" itemprop="description">We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" class="">
-  <time datetime="2020-01-04">2020-01-04</time>
+  <time datetime="2020-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-04</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -411,7 +421,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/predicting-customer-churn-telco-customer-churn/"
@@ -420,11 +430,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</div>
+      <div class="article-entry text-muted" itemprop="description">Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/" class="">
-  <time datetime="2020-01-01">2020-01-01</time>
+  <time datetime="2020-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-01</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -449,7 +459,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/titanic-prediction-with-python/"
@@ -458,11 +468,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?</div>
+      <div class="article-entry text-muted" itemprop="description">I wanted to try out some of what I&rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/titanic-prediction-with-python/" class="">
-  <time datetime="2019-12-30">2019-12-30</time>
+  <time datetime="2019-12-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-12-30</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -487,7 +497,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/2019-data-science-bowl/"
@@ -496,11 +506,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.</div>
+      <div class="article-entry text-muted" itemprop="description">I was inspired to participate in Kaggle&rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/2019-data-science-bowl/" class="">
-  <time datetime="2019-11-16">2019-11-16</time>
+  <time datetime="2019-11-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-11-16</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -523,7 +533,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/simple-moving-average-algorithmic-backtest/"
@@ -532,11 +542,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I made an algorithmic trader in R based on the &ldquo;moving average crossover&rdquo; technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.</div>
+      <div class="article-entry text-muted" itemprop="description">I made an algorithmic trader in R based on the &ldquo;moving average crossover&rdquo; technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/" class="">
-  <time datetime="2019-10-12">2019-10-12</time>
+  <time datetime="2019-10-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-10-12</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -558,7 +568,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/predicting-t-shirt-size-from-height-and-weight/"
@@ -567,11 +577,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.</div>
+      <div class="article-entry text-muted" itemprop="description">Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/" class="">
-  <time datetime="2019-09-27">2019-09-27</time>
+  <time datetime="2019-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-27</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -593,7 +603,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/exploring-philly-s-world-of-murals-pt1/"
@@ -602,11 +612,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >A mini-tutorial on web scraping with R.</div>
+      <div class="article-entry text-muted" itemprop="description">A mini-tutorial on web scraping with R.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/" class="">
-  <time datetime="2019-09-22">2019-09-22</time>
+  <time datetime="2019-09-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-22</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -646,7 +656,7 @@
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -670,13 +680,13 @@
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -684,8 +694,8 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -702,7 +712,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

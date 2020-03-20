@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         A simple Twilio SMS frontend using Nodejs - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="We&amp;rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log." />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>A simple Twilio SMS frontend using Nodejs - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="A simple Twilio SMS frontend using Nodejs" />
 <meta property="og:description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log." />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2020-01-04T00:00:00+00:00" />
 <meta itemprop="name" content="A simple Twilio SMS frontend using Nodejs">
 <meta itemprop="description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.">
-
-
 <meta itemprop="datePublished" content="2020-01-04T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1317">
+<meta itemprop="wordCount" content="1312">
 
 
 
-<meta itemprop="keywords" content="Nodejs,JavaScript,software,frontend,SMS,Twilio," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="Nodejs,JavaScript,software,frontend,SMS,Twilio," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A simple Twilio SMS frontend using Nodejs"/>
 <meta name="twitter:description" content="We&rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log."/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-simple-twilio-sms-frontend" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/simple-twilio-sms-frontend/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/simple-twilio-sms-frontend/" class="article-date">
-  <time datetime="2020-01-04">2020-01-04</time>
+  <time datetime="2020-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-01-04</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -307,26 +317,18 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      <p>I really like <a href="https://www.twilio.com">Twilio</a> as a service for programmatically sending and receiving SMS messages. The API has solid documentation for a number of programming languages, which makes it easy to develop with.</p>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>I really like <!-- raw HTML omitted -->Twilio<!-- raw HTML omitted --> as a service for programmatically sending and receiving SMS messages. The API has solid documentation for a number of programming languages, which makes it easy to develop with.</p>
 <p>We&rsquo;re starting to use Twilio at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we&rsquo;re sending from. With that in mind, I made a simple frontend to the Twilio API.</p>
-
-<p>I decided to use <a href="https://expressjs.com">Express</a> for <a href="https://nodejs.org/en/">Node.js</a>.</p>
-
+<p>I decided to use <!-- raw HTML omitted -->Express<!-- raw HTML omitted --> for <!-- raw HTML omitted -->Node.js<!-- raw HTML omitted -->.</p>
 <p>The end result is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</p>
-
-<p><img src="/blog/nodejstwilio/2020-01-04_16-34-18.gif" alt="A simple Twilio SMS frontend using Node.js" /></p>
-
+<p><img src="/blog/nodejstwilio/2020-01-04_16-34-18.gif" alt="A simple Twilio SMS frontend using Node.js"></p>
 <p>First I installed <code>express</code> and <code>express-generator</code> and used it to generate an app skeleton.</p>
-
 <pre><code class="language-bash">npm install express --save
 npm install -g express-generator
 express
 </code></pre>
-
 <p>Next, I modified <code>app.js</code> in the root of the app folder to add my Twilio API credentials, and routes to the API client. I created routes for sending an SMS message, and for fetching inbound/outbound communications.</p>
-
 <pre><code class="language-javascript">
 #[...]
 
@@ -396,9 +398,7 @@ app.post('/fetch-calls', (req, res) =&gt; {
 
 #[...]
 </code></pre>
-
-<p>Then I wrote the <code>index.ejs</code> page. I used <a href="https://getbootstrap.com">Bootstrap</a> to make it less ugly, I used <a href="https://datatables.net/">Datatables</a> to add functionality to the tables that displayed SMS and calls, and I used <a href="https://jquery.com/">jQuery</a> to make some of the frontend stuff like aJax and DOM-manipulation easier.</p>
-
+<p>Then I wrote the <code>index.ejs</code> page. I used <!-- raw HTML omitted -->Bootstrap<!-- raw HTML omitted --> to make it less ugly, I used <!-- raw HTML omitted -->Datatables<!-- raw HTML omitted --> to add functionality to the tables that displayed SMS and calls, and I used <!-- raw HTML omitted -->jQuery<!-- raw HTML omitted --> to make some of the frontend stuff like aJax and DOM-manipulation easier.</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -528,9 +528,7 @@ app.post('/fetch-calls', (req, res) =&gt; {
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-
 <p>Finally, I wrote the jQuery scripts in <code>/public/js/fetch_call_log.js</code>, <code>/public/js/fetch_messages.js</code> and <code>/public/js/sms_forms.js</code>:</p>
-
 <pre><code class="language-javascript">
 // fetch_call_log.js
 $( document ).ready(function() {
@@ -808,7 +806,6 @@ $( document ).ready(function() {
 
 
 </code></pre>
-
 <p>I wrote the SMS form processor to allow sending SMS messages one-at-a-time or in bulk using newline delimited phone numbers.</p>
 
     </div>
@@ -886,7 +883,7 @@ $( document ).ready(function() {
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -910,13 +907,13 @@ $( document ).ready(function() {
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -924,8 +921,8 @@ $( document ).ready(function() {
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -942,7 +939,7 @@ $( document ).ready(function() {
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

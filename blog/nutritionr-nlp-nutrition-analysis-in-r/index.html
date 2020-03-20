@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         nutritionR: NLP nutrition analysis in R - Tyler Burleigh
       </title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
+  
   
   <meta name="description" content="I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes." />
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>nutritionR: NLP nutrition analysis in R - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="nutritionR: NLP nutrition analysis in R" />
 <meta property="og:description" content="I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes." />
@@ -32,16 +39,13 @@
 <meta property="article:modified_time" content="2019-09-21T00:00:00+00:00" />
 <meta itemprop="name" content="nutritionR: NLP nutrition analysis in R">
 <meta itemprop="description" content="I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.">
-
-
 <meta itemprop="datePublished" content="2019-09-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-09-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="235">
+<meta itemprop="wordCount" content="234">
 
 
 
-<meta itemprop="keywords" content="R,software,nutrition," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="R,software,nutrition," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="nutritionR: NLP nutrition analysis in R"/>
 <meta name="twitter:description" content="I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes."/>
 
@@ -54,6 +58,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -61,8 +66,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -80,7 +85,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -98,7 +104,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -168,6 +174,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -270,12 +280,12 @@
     </nav>
   </div>
 </aside>
-<main class="main"><div class="content">
+<main class="main" role="main"><div class="content">
   <article id="-nutritionr-nlp-nutrition-analysis-in-r" class="article article-type-" itemscope
     itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
-      <h1 >
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/nutritionr-nlp-nutrition-analysis-in-r/"
@@ -287,7 +297,7 @@
         <span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/" class="article-date">
-  <time datetime="2019-09-21">2019-09-21</time>
+  <time datetime="2019-09-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-21</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -304,15 +314,11 @@
             class="article-comment-link">Comments</a></span>
       </div>
     </div>
-    <div class="article-entry marked-body js-toc-content">
-      <div style="display: flex; flex-direction: column; align-items: center;"><div class="github-card" data-github="tylerburleigh/nutritionR" data-width="400" data-height="" data-theme="default"></div><script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script></div>
-
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <!-- raw HTML omitted -->
 <p>I&rsquo;m a bit of a nutrition nerd. I wanted to analyze some recipes that I cook a lot just because I&rsquo;m curious. So in order to move in that direction, I decided to write a package, <code>nutritionR</code>, that can perform a nutritional analysis of foods and recipes expressed in natural language.</p>
-
-<p><code>nutritionR</code> is a wrapper for the <a href="https://www.nutritionix.com">Nutritionix</a> <a href="https://developer.nutritionix.com">API</a>. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&rsquo;ve seen by supporting lots of micronutrients. Using <code>nutritionR</code>, it&rsquo;s possible to check 68 different nutrients, including the usual suspects: fats, carbs, protein, calories &ndash; but also things like choline, lycopene, vitamin d, vitamin b12, etc&hellip;</p>
-
+<p><code>nutritionR</code> is a wrapper for the <!-- raw HTML omitted -->Nutritionix<!-- raw HTML omitted --> <!-- raw HTML omitted -->API<!-- raw HTML omitted -->. Nutritionix caught my attention because it goes beyond a lot of the free nutritional analysis tools that I&rsquo;ve seen by supporting lots of micronutrients. Using <code>nutritionR</code>, it&rsquo;s possible to check 68 different nutrients, including the usual suspects: fats, carbs, protein, calories &ndash; but also things like choline, lycopene, vitamin d, vitamin b12, etc&hellip;</p>
 <p>I wrote this package to support nutrition analysis of meals. You can enter one or more ingredients or food items and then search for a specific nutrient like this:</p>
-
 <pre><code>obj &lt;- nutritionix_lookup(&quot;I had eggs and toast for breakfast, and a burrito for lunch.&quot;)
 nutrient(obj, &quot;calories&quot;)
 
@@ -325,9 +331,7 @@ $amount
 $unit
 [1] &quot;kcal&quot;
 </code></pre>
-
 <p>It can also be used to analyze recipes, by entering a comma-separated ingredients list like this:</p>
-
 <pre><code>obj &lt;- nutritionix_lookup(&quot;2 cups red lentils, 
                            2 tsps turmeric, 
                            4 tbsp olive oil, 
@@ -426,7 +430,7 @@ $unit
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -450,13 +454,13 @@ $unit
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -464,8 +468,8 @@ $unit
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -482,7 +486,7 @@ $unit
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({

@@ -2,38 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
         Tyler Burleigh</title>
-    
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no,email=no,adress=no">
   
   <meta name="theme-color" content="#000000" />
   
+  <meta http-equiv="window-target" content="_top" />
   
   
-  <meta name="generator" content="Hugo 0.56.1 with theme pure" />
+  
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Tyler Burleigh</title>
   
 
   <link rel="alternate" type="application/rss+xml" href="https://tylerburleigh.com/index.xml" title="Tyler Burleigh" />
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="Home" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://tylerburleigh.com/" />
-
 <meta property="og:updated_time" content="2020-03-17T00:00:00+00:00" />
 <meta itemprop="name" content="Home">
-<meta itemprop="description" content="">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Home"/>
 <meta name="twitter:description" content=""/>
 
@@ -46,6 +50,7 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 
+</head>
   </head>
   
 
@@ -53,8 +58,8 @@
     <div class="slimContent">
       <div class="navbar-header">
         <div class="profile-block text-center">
-          <a id="avatar" href="https://tylerburleigh.com">
-            <img class="img-circle img-rotate" alt="" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
@@ -72,7 +77,8 @@
             <div class="ins-search-mask"></div>
             <div class="ins-search-container">
                 <div class="ins-input-wrapper">
-                    <input type="text" class="ins-search-input" placeholder="Type something..."/>
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
                     <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
                         aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
@@ -90,7 +96,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
         <ul class="nav navbar-nav main-nav">
             <li class="menu-item menu-item-blog">
                 <a href="/">
@@ -160,6 +166,10 @@
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
                     class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/emoji/" class="tag-list-link">emoji</a><span
+                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
@@ -255,7 +265,7 @@
     
     
 
-<main class="main">
+<main class="main" role="main">
   
   <div class="content article-list">
     
@@ -267,7 +277,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/nutritionr-nlp-nutrition-analysis-in-r/"
@@ -276,11 +286,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.</div>
+      <div class="article-entry text-muted" itemprop="description">I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/" class="">
-  <time datetime="2019-09-21">2019-09-21</time>
+  <time datetime="2019-09-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-21</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -302,7 +312,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/yadsjma/"
@@ -311,11 +321,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >An analysis of the data science job market from scraped LinkedIn data</div>
+      <div class="article-entry text-muted" itemprop="description">An analysis of the data science job market from scraped LinkedIn data</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/yadsjma/" class="">
-  <time datetime="2019-09-14">2019-09-14</time>
+  <time datetime="2019-09-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-14</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -337,7 +347,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/mturk-qualification-tests/"
@@ -346,11 +356,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</div>
+      <div class="article-entry text-muted" itemprop="description">A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/mturk-qualification-tests/" class="">
-  <time datetime="2019-09-13">2019-09-13</time>
+  <time datetime="2019-09-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-13</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -372,7 +382,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/introducing-pymturkr/"
@@ -381,11 +391,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &ldquo;pyMTurkR&rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</div>
+      <div class="article-entry text-muted" itemprop="description">I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &ldquo;pyMTurkR&rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/introducing-pymturkr/" class="">
-  <time datetime="2019-09-05">2019-09-05</time>
+  <time datetime="2019-09-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-09-05</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -407,7 +417,7 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/what-is-fair-payment-on-mturk/"
@@ -416,11 +426,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</div>
+      <div class="article-entry text-muted" itemprop="description">A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/" class="">
-  <time datetime="2019-08-04">2019-08-04</time>
+  <time datetime="2019-08-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-08-04</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -441,7 +451,37 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/emoji-support/"
+    >Emoji Support</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description"><p>Emoji can be enabled in a Hugo project in a number of ways.</p></div>
+      <p class="article-meta"><span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/emoji-support/" class="">
+  <time datetime="2019-03-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-03-05</time>
+</a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/emoji/"> emoji </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/emoji-support/#comments" class="article-comment-link">Comments</a></span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
   <a
     class="article-title"
     href="/blog/surviving-the-titanic-with-r-caret/"
@@ -450,11 +490,11 @@
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >I use R to tackle the Kaggle Titanic data science competition.</div>
+      <div class="article-entry text-muted" itemprop="description">I use R to tackle the Kaggle Titanic data science competition.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
 <a href="https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/" class="">
-  <time datetime="2019-01-21">2019-01-21</time>
+  <time datetime="2019-01-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2019-01-21</time>
 </a>
 </span><span class="article-category">
   <i class="icon icon-folder"></i>
@@ -479,24 +519,83 @@
       itemtype="http://schema.org/BlogPosting"
     >
       <div class="article-header">
-        <h1 >
+        <h1 itemprop="name">
   <a
     class="article-title"
-    href="/blog/2020-01-20-working-with-categorical-features-in-ml/"
-    ></a
+    href="/page/about/"
+    >About Me</a
   >
 </h1>
 
       </div>
-      <div class="article-entry text-muted" >Working with categorical features in ML/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */!function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&&bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.</div>
+      <div class="article-entry text-muted" itemprop="description">For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.</div>
       <p class="article-meta"><span class="article-date">
   <i class="icon icon-calendar-check"></i>
-<a href="https://tylerburleigh.com/blog/2020-01-20-working-with-categorical-features-in-ml/" class="">
-  <time datetime="0001-01-01">0001-01-01</time>
+<a href="https://tylerburleigh.com/page/about/" class="article-date">
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
 </a>
 </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/2020-01-20-working-with-categorical-features-in-ml/#comments" class="article-comment-link">Comments</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/page/about/#comments" class="article-comment-link">Comments</a></span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/page/writings/"
+    >Publications</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">I’ve written things about science and some were peer-reviewed and published.
+As of 2020-03-20, my papers were cited 368 times and my h-index was 8. (source: Google Scholar)
+Peer-Reviewed PublicationsUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
+Ferrey, A., Burleigh, T. J., &amp; Fenske, M.</div>
+      <p class="article-meta"><span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/page/writings/" class="">
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
+</a>
+</span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/page/writings/#comments" class="article-comment-link">Comments</a></span>
+      </p>
+    </article>
+    <article
+      class="article article-type-page"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <div class="article-header">
+        <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/page/teachings/"
+    >Teaching</a
+  >
+</h1>
+
+      </div>
+      <div class="article-entry text-muted" itemprop="description">I’ve given educational talks and lectures from time to time. Here are some of the talks I’ve given in industry settings for non-academic audiences.
+Research2020/02 - Control in research design
+I talk about what “control” means in research design, and what some basic controlled research designs look like.
+Psychology2019/04 - A whirlwind tour of persuasion psychology
+I talk about the foundations of persuasion psychology. Covers human evolution, irrationality, heuristics and biases, cognitive dissonance, and social norms.</div>
+      <p class="article-meta"><span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/page/teachings/" class="">
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">0001-01-01</time>
+</a>
+</span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/page/teachings/#comments" class="article-comment-link">Comments</a></span>
       </p>
     </article></div>
   
@@ -524,7 +623,7 @@
     <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
             <i class="icon icon-twitter"></i></a></li>
 </ul>
-  <div class="copyright" style="display:none">
+  <div class="copyright">
     &copy;2018  -
     2020
     <div class="publishby">
@@ -548,13 +647,13 @@
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
-<script src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
     hljs.configure({
         tabReplace: '    ', 
         classPrefix: ''     
@@ -562,8 +661,8 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
-<script src="https://tylerburleigh.com/js/application.js"></script>
-<script src="https://tylerburleigh.com/js/plugin.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
@@ -580,7 +679,7 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
-<script src="https://tylerburleigh.com/js/insight.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
 <script>
     tocbot.init({
