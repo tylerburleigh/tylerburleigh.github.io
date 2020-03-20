@@ -5,10 +5,19 @@
     <link>https://tylerburleigh.com/tags/machine-learning/</link>
     <description>Recent content in machine learning on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modeling the UCI Heart Disease dataset</title>
+      <link>https://tylerburleigh.com/blog/modeling-the-heart-disease-uci-dataset/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/modeling-the-heart-disease-uci-dataset/</guid>
+      <description>Using logistic regression, I trained a machine learning model to predict heart disease, using 14 attributes and 303 observations (e.g., age, sex, chest pain, resting ECG).</description>
+    </item>
     
     <item>
       <title>Comparing coronavirus trends in US, Italy, and China</title>
@@ -143,15 +152,6 @@
       
       <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
       <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
-    </item>
-    
-    <item>
-      <title>Emoji Support</title>
-      <link>https://tylerburleigh.com/blog/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     
     <item>
