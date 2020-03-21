@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        COVID-19 and the Big 5 Personality Test - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &amp;ldquo;growth&amp;rdquo; over time in coronavirus cases, using data current as of March 20, 2020." />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>COVID-19 and the Big 5 Personality Test - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="COVID-19 and the Big 5 Personality Test" />
+<meta property="og:description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases, using data current as of March 20, 2020." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/" />
+<meta property="article:published_time" content="2020-03-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-21T00:00:00+00:00" />
+<meta itemprop="name" content="COVID-19 and the Big 5 Personality Test">
+<meta itemprop="description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases, using data current as of March 20, 2020.">
+<meta itemprop="datePublished" content="2020-03-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1886">
+
+
+
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="COVID-19 and the Big 5 Personality Test"/>
+<meta name="twitter:description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases, using data current as of March 20, 2020."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">10</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">4</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">8</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">7</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-covid-19-and-the-big-5-personality-test" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/covid-19-and-the-big-5-personality-test/"
+    >COVID-19 and the Big 5 Personality Test</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/" class="article-date">
+  <time datetime="2020-03-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-21</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/covid-19-and-the-big-5-personality-test/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="covid-19-and-the-big-5-personality-test">COVID-19 and the Big 5 Personality Test</h1>
+<p>Here I pose the following question:</p>
+<blockquote>
+<p>Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits?</p>
+</blockquote>
+<p>To answer this question, I will need country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases.</p>
+<p>Here&rsquo;s how I operationalize it: I take all the countries that reached at least 50 &ldquo;confirmed cases&rdquo; of the coronavirus, using data that&rsquo;s up to date as of March 20, 2020. Then I take the number of cases those countries had 14-days after reaching 50 confirmed cases. This gives an estimate of growth within a country that can be compared across countries, because it puts them all on a level playing-field.</p>
+<p>Next, I compute country-level averages on the Big 5 Personality Test using data from the Open Source Psychometrics Project, and I only include countries with at least 1000 observations.</p>
+<p>Finally, I look at the correlation between Confirmed Cases at Day 14 and average scores on each of the Big 5 personality traits (openness, conscientiousness, extraversion, agreeableness, neuroticism [a.k.a. emotional stability]).</p>
+<p>For easy reference, the following datasets are used:</p>
+<ul>
+<li><a href="https://www.kaggle.com/c/covid19-global-forecasting-week-1/data">COVID19 Global Forecasting (Week 1)</a></li>
+<li><a href="https://www.kaggle.com/tunguz/big-five-personality-test">Big Five Personality Test</a></li>
+<li><a href="https://www.kaggle.com/juanumusic/countries-iso-codes">Countries ISO Codes</a></li>
+</ul>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import seaborn as sns
+from matplotlib import pyplot as plt
+from scipy.stats import pearsonr
+import kaggle
+</code></pre>
+<h1 id="covid-19-data">COVID-19 Data</h1>
+<p>For the COVID-19 data, we&rsquo;ll get the number of cases at 2-weeks after the first 50 confirmed cases.</p>
+<pre><code class="language-python"># Download data from kaggle
+# !kaggle competitions download -f train.csv covid19-global-forecasting-week-1
+# !kaggle competitions download -f test.csv covid19-global-forecasting-week-1
+
+# Join the training and test sets
+covid19 = pd.concat([pd.read_csv('train.csv'), pd.read_csv('test.csv')])
+# Sort by date
+covid19.sort_values('Date')
+# Filter to the columns we need
+covid19 = covid19.loc[:, ['Country/Region', 'Date', 'ConfirmedCases']]
+
+covid19.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>2020-01-22</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>2020-01-23</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>2020-01-24</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>2020-01-25</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>2020-01-26</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="filter">Filter</h2>
+<p>Next we&rsquo;ll filter to countries that reached at least 50 confirmed cases, and had at least 14 days of data beyond reaching that point.</p>
+<pre><code class="language-python">covid19 = covid19[covid19.ConfirmedCases &gt; 50]
+covid19_numdays = covid19.loc[:, ['Country/Region', 'Date']]\
+    .drop_duplicates()\
+    .groupby('Country/Region')\
+    .count()\
+    .rename_axis('country')\
+    .reset_index()
+print(covid19_numdays.head())
+
+covid19_mindays = covid19_numdays[covid19_numdays.Date &gt;= 14]
+covid19 = covid19[covid19['Country/Region'].isin(covid19_mindays.country)]
+</code></pre>
+<pre><code>     country  Date
+0    Albania     5
+1    Algeria     5
+2    Andorra     2
+3  Argentina     5
+4    Armenia     5
+</code></pre>
+<p>What/how many countries does that leave us with?</p>
+<pre><code class="language-python">print(len(list(set(covid19['Country/Region'].values))))
+print(set(covid19['Country/Region'].values))
+</code></pre>
+<pre><code>21
+{'Cruise Ship', 'Spain', 'United Kingdom', 'Singapore', 'Sweden', 'Kuwait', 'Bahrain', 'Germany', 'Iraq', 'Austria', 'Korea, South', 'Norway', 'China', 'Netherlands', 'Belgium', 'France', 'Malaysia', 'Switzerland', 'Iran', 'Japan', 'Italy'}
+</code></pre>
+<p>Obviously &ldquo;Cruise Ship&rdquo; isn&rsquo;t a country. I won&rsquo;t worry about it at this point, since it will get filtered out in later steps.</p>
+<h2 id="compute-growth-over-14-days">Compute growth over 14 days</h2>
+<p>Next, we&rsquo;ll compute the growth in cases for each country, from the date they reached 50 Confirmed Cases to the 14th day following that date. This is simply the number of cases on Day 14.</p>
+<pre><code class="language-python">covid19 = covid19\
+    .groupby('Country/Region')\
+    .head(14)\
+    .groupby('Country/Region')\
+    .tail(1)
+
+covid19
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1060</th>
+      <td>Austria</td>
+      <td>2020-03-19</td>
+      <td>2013.0</td>
+    </tr>
+    <tr>
+      <th>1176</th>
+      <td>Bahrain</td>
+      <td>2020-03-17</td>
+      <td>228.0</td>
+    </tr>
+    <tr>
+      <th>1414</th>
+      <td>Belgium</td>
+      <td>2020-03-19</td>
+      <td>1795.0</td>
+    </tr>
+    <tr>
+      <th>2790</th>
+      <td>China</td>
+      <td>2020-02-08</td>
+      <td>733.0</td>
+    </tr>
+    <tr>
+      <th>5103</th>
+      <td>Cruise Ship</td>
+      <td>2020-02-20</td>
+      <td>634.0</td>
+    </tr>
+    <tr>
+      <th>6009</th>
+      <td>France</td>
+      <td>2020-03-12</td>
+      <td>2281.0</td>
+    </tr>
+    <tr>
+      <th>6718</th>
+      <td>Germany</td>
+      <td>2020-03-13</td>
+      <td>3675.0</td>
+    </tr>
+    <tr>
+      <th>7657</th>
+      <td>Iran</td>
+      <td>2020-03-08</td>
+      <td>6566.0</td>
+    </tr>
+    <tr>
+      <th>7728</th>
+      <td>Iraq</td>
+      <td>2020-03-20</td>
+      <td>208.0</td>
+    </tr>
+    <tr>
+      <th>7891</th>
+      <td>Italy</td>
+      <td>2020-03-06</td>
+      <td>4636.0</td>
+    </tr>
+    <tr>
+      <th>8003</th>
+      <td>Japan</td>
+      <td>2020-02-29</td>
+      <td>241.0</td>
+    </tr>
+    <tr>
+      <th>8302</th>
+      <td>Korea, South</td>
+      <td>2020-03-04</td>
+      <td>5621.0</td>
+    </tr>
+    <tr>
+      <th>8431</th>
+      <td>Kuwait</td>
+      <td>2020-03-15</td>
+      <td>112.0</td>
+    </tr>
+    <tr>
+      <th>8907</th>
+      <td>Malaysia</td>
+      <td>2020-03-19</td>
+      <td>900.0</td>
+    </tr>
+    <tr>
+      <th>9909</th>
+      <td>Netherlands</td>
+      <td>2020-03-18</td>
+      <td>2051.0</td>
+    </tr>
+    <tr>
+      <th>10144</th>
+      <td>Norway</td>
+      <td>2020-03-17</td>
+      <td>1463.0</td>
+    </tr>
+    <tr>
+      <th>11481</th>
+      <td>Singapore</td>
+      <td>2020-02-26</td>
+      <td>93.0</td>
+    </tr>
+    <tr>
+      <th>11793</th>
+      <td>Spain</td>
+      <td>2020-03-14</td>
+      <td>6391.0</td>
+    </tr>
+    <tr>
+      <th>12033</th>
+      <td>Sweden</td>
+      <td>2020-03-18</td>
+      <td>1279.0</td>
+    </tr>
+    <tr>
+      <th>12090</th>
+      <td>Switzerland</td>
+      <td>2020-03-16</td>
+      <td>2200.0</td>
+    </tr>
+    <tr>
+      <th>16456</th>
+      <td>United Kingdom</td>
+      <td>2020-03-16</td>
+      <td>1543.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Just to confirm that we&rsquo;ve done this correctly, let&rsquo;s check a test case.</p>
+<pre><code class="language-python">df = pd.read_csv('train.csv')
+df[(df['Country/Region'] == 'United Kingdom') &amp; (df.ConfirmedCases &gt;= 50)].head(14)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>Province/State</th>
+      <th>Country/Region</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+      <th>Fatalities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16443</th>
+      <td>25896</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-03</td>
+      <td>51.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>16444</th>
+      <td>25897</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-04</td>
+      <td>85.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>16445</th>
+      <td>25898</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-05</td>
+      <td>115.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>16446</th>
+      <td>25899</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-06</td>
+      <td>163.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>16447</th>
+      <td>25900</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-07</td>
+      <td>206.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>16448</th>
+      <td>25901</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-08</td>
+      <td>273.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>16449</th>
+      <td>25902</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-09</td>
+      <td>321.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>16450</th>
+      <td>25903</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-10</td>
+      <td>382.0</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>16451</th>
+      <td>25904</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-11</td>
+      <td>456.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>16452</th>
+      <td>25905</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-12</td>
+      <td>456.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>16453</th>
+      <td>25906</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-13</td>
+      <td>798.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>16454</th>
+      <td>25907</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-14</td>
+      <td>1140.0</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>16455</th>
+      <td>25908</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-15</td>
+      <td>1140.0</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>16456</th>
+      <td>25909</td>
+      <td>United Kingdom</td>
+      <td>United Kingdom</td>
+      <td>55.3781</td>
+      <td>-3.436</td>
+      <td>2020-03-16</td>
+      <td>1543.0</td>
+      <td>55.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1 id="country-abbreviations">Country Abbreviations</h1>
+<p>Next we&rsquo;ll join in the country abbreviation codes. The source data here comes from the Kaggle <a href="https://www.kaggle.com/juanumusic/countries-iso-codes">Countries ISO Codes dataset</a>, and the original source is Wikipedia. This will allow us to join to the Big 5 dataset later.</p>
+<pre><code class="language-python"># !kaggle datasets download juanumusic/countries-iso-codes -f wikipedia-iso-country-codes.csv
+country_isos = pd.read_csv('wikipedia-iso-country-codes.csv')
+country_isos = country_isos.rename(columns={&quot;English short name lower case&quot;: &quot;Country/Region&quot;, 
+                                            &quot;Alpha-2 code&quot;: &quot;country_abbr&quot;})
+country_isos = country_isos.loc[:, ['Country/Region', 'country_abbr']]
+country_isos.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>country_abbr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>AF</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Åland Islands</td>
+      <td>AX</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Albania</td>
+      <td>AL</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Algeria</td>
+      <td>DZ</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>American Samoa</td>
+      <td>AS</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">covid19 = covid19.merge(country_isos, left_on='Country/Region', right_on='Country/Region')
+covid19 = covid19.dropna()
+covid19.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+      <th>country_abbr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Austria</td>
+      <td>2020-03-19</td>
+      <td>2013.0</td>
+      <td>AT</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bahrain</td>
+      <td>2020-03-17</td>
+      <td>228.0</td>
+      <td>BH</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Belgium</td>
+      <td>2020-03-19</td>
+      <td>1795.0</td>
+      <td>BE</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>China</td>
+      <td>2020-02-08</td>
+      <td>733.0</td>
+      <td>CN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>France</td>
+      <td>2020-03-12</td>
+      <td>2281.0</td>
+      <td>FR</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1 id="big-five-personality-data">Big Five Personality Data</h1>
+<p>Next, we&rsquo;ll fetch the <a href="https://www.kaggle.com/tunguz/big-five-personality-test">Big Five Personality Test data from Kaggle</a>. This dataset contains ~1M answers collected online by <a href="https://openpsychometrics.org/tests/IPIP-BFFM">Open Psychometrics</a>. I&rsquo;m interested in this dataset because it also labels the country in which the respondant is located. We can use this dataset to get country-level aggregate data on personality traits, and then see if those traits map onto the COVID-19 outcomes that we&rsquo;re seeing.</p>
+<pre><code class="language-python"># Download data from Kaggle
+# !kaggle datasets download tunguz/big-five-personality-test -f IPIP-FFM-data-8Nov2018/data-final.csv
+
+# The file was zipped because it was so big, so unzip it
+# import zipfile
+# with zipfile.ZipFile('data-final.csv.zip', 'r') as zip_ref:
+#     zip_ref.extractall()
+
+big5 = pd.read_csv('data-final.csv', sep='\t')
+</code></pre>
+<h2 id="scoring-the-big-five-personality-test-items">Scoring the Big Five Personality Test items</h2>
+<p>The Big 5 personality inventory contains 5 factors. Like most personality scales, the Big 5 has a mix of items that positively and negatively load onto these personality factors. For example, the factor Extraversion describes someone who is outgoing, energetic, talkative, and enjoys human interaction. The first Extraversion item [<code>EXT1</code>] is &ldquo;I am the life of the party.&quot;, a positively-keyed item; whereas the second item [<code>EXT2</code>] is &ldquo;I don&rsquo;t talk a lot.&quot;, a negatively-keyed item.</p>
+<p>To find out which items are positively or negatively keyed, we can look at the scale documentation on the IPIP website: <a href="https://ipip.ori.org/newBigFive5broadKey.htm">https://ipip.ori.org/newBigFive5broadKey.htm</a></p>
+<h2 id="reverse-coding">Reverse-coding</h2>
+<p>Before analyzing the data from a personality test, a psychologist will generally &ldquo;reverse-code&rdquo; the items that are negatively-keyed. This results in a dataset where the item values all have a common direction and interpretetion (i.e., a higher value corresponds with more of that trait). Mathematically, it allows you to then compute sums and averages for each of the factors. For example, after scoring the test items, we could compute an individual&rsquo;s average for Extraversion items to get their Extraversion score.</p>
+<p>This version of the Big 5 scale asks individuals to rate their level of agreement from 1 to 5, where 1 is strong disagreement and 5 is strong agreement. Reverse-coding is as simple as subtracting 6 from every reverse-keyed item.</p>
+<p>The code below will accomplish this task.</p>
+<pre><code class="language-python">positively_keyed = ['EXT1', 'EXT3', 'EXT5', 'EXT7', 'EXT9',
+                    'EST1', 'EST3', 'EST5', 'EST6', 'EST7', 'EST8', 'EST9', 'EST10',
+                    'AGR2', 'AGR4', 'AGR6', 'AGR8', 'AGR9', 'AGR10',
+                    'CSN1', 'CSN3', 'CSN5', 'CSN7', 'CSN9', 'CSN10', 
+                    'OPN1', 'OPN3', 'OPN5', 'OPN7', 'OPN8', 'OPN9', 'OPN10']
+
+negatively_keyed = ['EXT2', 'EXT4', 'EXT6', 'EXT8', 'EXT10',
+                    'EST2', 'EST4',
+                    'AGR1', 'AGR3', 'AGR5', 'AGR7', 
+                    'CSN2', 'CSN4', 'CSN6', 'CSN8', 
+                    'OPN2', 'OPN4', 'OPN6']
+</code></pre>
+<pre><code class="language-python">big5.loc[:, negatively_keyed] = 6 - big5.loc[:, negatively_keyed]
+</code></pre>
+<h2 id="country-level-big-5-aggregates">Country-Level Big 5 Aggregates</h2>
+<p>First, we should eliminate any country that doesn&rsquo;t have very many observations. Somewhat arbitrarily, we&rsquo;ll draw a line at N = 1000.</p>
+<pre><code class="language-python">big5_country_count = big5.country\
+    .value_counts()\
+    .rename_axis('country')\
+    .reset_index(name='counts')
+
+print(len(big5_country_count[big5_country_count.counts &gt; 1000]))
+print(big5_country_count[big5_country_count.counts &gt; 1000].country.values)
+</code></pre>
+<pre><code>58
+['US' 'GB' 'CA' 'AU' 'PH' 'IN' 'DE' 'NONE' 'NZ' 'NO' 'MY' 'MX' 'SE' 'NL'
+ 'SG' 'ID' 'BR' 'FR' 'DK' 'IE' 'IT' 'ES' 'PL' 'FI' 'RO' 'BE' 'ZA' 'CO'
+ 'HK' 'PK' 'RU' 'AR' 'CH' 'AE' 'TR' 'PT' 'GR' 'VN' 'HR' 'AT' 'CL' 'RS'
+ 'CZ' 'TH' 'JP' 'PE' 'KR' 'HU' 'IL' 'KE' 'CN' 'BG' 'VE' 'EC' 'LT' 'SA'
+ 'EG' 'EE']
+</code></pre>
+<p>There are 58 countries with at least 1000 observations. Let&rsquo;s go with these.</p>
+<pre><code class="language-python">big5 = big5[big5.country.isin(big5_country_count[big5_country_count.counts &gt; 1000].country.values)]
+
+# Filter on the columns we're going to use
+big5 = big5.loc[:,['country'] + positively_keyed + negatively_keyed]
+</code></pre>
+<h3 id="factor-aggregation">Factor aggregation</h3>
+<p>Next, we&rsquo;ll compute averages for each of the five factors at the level of the individual.</p>
+<pre><code class="language-python">EXT = ['EXT' + str(i) for i in range(1,11)]
+EST = ['EST' + str(i) for i in range(1,11)]
+AGR = ['AGR' + str(i) for i in range(1,11)]
+CSN = ['CSN' + str(i) for i in range(1,11)]
+OPN = ['OPN' + str(i) for i in range(1,11)]
+</code></pre>
+<pre><code class="language-python">big5['EXT'] = big5.loc[:, EXT].mean(axis=1)
+big5['EST'] = big5.loc[:, EST].mean(axis=1)
+big5['AGR'] = big5.loc[:, AGR].mean(axis=1)
+big5['CSN'] = big5.loc[:, CSN].mean(axis=1)
+big5['OPN'] = big5.loc[:, OPN].mean(axis=1)
+big5 = big5.loc[:, ['country', 'EXT', 'EST', 'AGR', 'CSN', 'OPN']]
+</code></pre>
+<p>Drop NAs, and any with country = &lsquo;NONE&rsquo;</p>
+<pre><code class="language-python">big5 = big5.dropna()
+big5 = big5[big5.country != 'NONE']
+</code></pre>
+<h3 id="country-level-averages">Country-level averages</h3>
+<p>Now we can calculate the country-level averages.</p>
+<pre><code class="language-python">big5_cavgs = big5.groupby('country')\
+                    .mean()\
+                    .rename_axis('country')\
+                    .reset_index()
+</code></pre>
+<p>Just to illustrate, these are the top 5 countries by country-level Extraversion scores.</p>
+<pre><code class="language-python">big5_cavgs.loc[:, ['country', 'EXT']]\
+    .sort_values(by=['EXT'])\
+    .tail()\
+    .plot(x = 'country', 
+          y = 'EXT', 
+          kind='barh', 
+          legend=False)
+
+plt.show()
+</code></pre>
+<p><img src="output_35_0.png" alt="png"></p>
+<h1 id="joining-big-5-country-data-to-covid-19-data">Joining Big 5 Country Data to COVID-19 Data</h1>
+<p>Next we&rsquo;ll merge the COVID-19 dataset to the Big 5, country-level dataset.</p>
+<pre><code class="language-python">covid19_big5 = covid19.merge(big5_cavgs, left_on='country_abbr', right_on='country')
+covid19_big5.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+      <th>country_abbr</th>
+      <th>country</th>
+      <th>EXT</th>
+      <th>EST</th>
+      <th>AGR</th>
+      <th>CSN</th>
+      <th>OPN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Austria</td>
+      <td>2020-03-19</td>
+      <td>2013.0</td>
+      <td>AT</td>
+      <td>AT</td>
+      <td>2.992051</td>
+      <td>2.985863</td>
+      <td>3.678952</td>
+      <td>3.238528</td>
+      <td>4.056052</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Belgium</td>
+      <td>2020-03-19</td>
+      <td>1795.0</td>
+      <td>BE</td>
+      <td>BE</td>
+      <td>3.002726</td>
+      <td>3.049043</td>
+      <td>3.761206</td>
+      <td>3.197772</td>
+      <td>3.906212</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>China</td>
+      <td>2020-02-08</td>
+      <td>733.0</td>
+      <td>CN</td>
+      <td>CN</td>
+      <td>3.025746</td>
+      <td>2.947836</td>
+      <td>3.725448</td>
+      <td>3.310373</td>
+      <td>3.590299</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>France</td>
+      <td>2020-03-12</td>
+      <td>2281.0</td>
+      <td>FR</td>
+      <td>FR</td>
+      <td>2.885782</td>
+      <td>3.126319</td>
+      <td>3.688029</td>
+      <td>3.193485</td>
+      <td>4.066059</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Germany</td>
+      <td>2020-03-13</td>
+      <td>3675.0</td>
+      <td>DE</td>
+      <td>DE</td>
+      <td>2.874198</td>
+      <td>3.007398</td>
+      <td>3.616373</td>
+      <td>3.220910</td>
+      <td>4.089598</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">factors = ['EXT', 'EST', 'AGR', 'CSN', 'OPN']
+factor_names = ['Extraversion', 'Emotional Stability', 'Agreeableness', 'Conscientiousness', 'Openness']
+
+for i, factor in enumerate(['EXT', 'EST', 'AGR', 'CSN', 'OPN']):
+    # Compute the correlation coefficient
+    corr = pearsonr(covid19_big5[factor], covid19_big5.ConfirmedCases)
+    corr = [np.round(c, 2) for c in corr]
+    text = 'r=%s, p=%s' % (corr[0], corr[1])
+    
+    ax = sns.regplot(x=factor, 
+                y=&quot;ConfirmedCases&quot;, 
+                data=covid19_big5)
+    
+    ax.set_title(&quot;Confirmed cases at 14 days after first 50 cases &quot; + 
+                 &quot;\n by average score on Big 5 factor &quot; + factor_names[i] + 
+                 &quot;\n&quot; + text)
+    plt.show()
+</code></pre>
+<p><img src="output_38_0.png" alt="png"></p>
+<p><img src="output_38_1.png" alt="png"></p>
+<p><img src="output_38_2.png" alt="png"></p>
+<p><img src="output_38_3.png" alt="png"></p>
+<p><img src="output_38_4.png" alt="png"></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/" title="COVID-19 and the Big 5 Personality Test" target="_blank" rel="external">https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Data Scientist</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/modeling-the-heart-disease-uci-dataset/" title="Modeling the UCI Heart Disease dataset"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>
