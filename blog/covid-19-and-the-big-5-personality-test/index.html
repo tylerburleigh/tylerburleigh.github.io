@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases, using data current as of March 20, 2020.">
 <meta itemprop="datePublished" content="2020-03-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1886">
+<meta itemprop="wordCount" content="2009">
 
 
 
@@ -309,8 +309,7 @@
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      <h1 id="covid-19-and-the-big-5-personality-test">COVID-19 and the Big 5 Personality Test</h1>
-<p>Here I pose the following question:</p>
+      <p>Here I pose the following question:</p>
 <blockquote>
 <p>Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits?</p>
 </blockquote>
@@ -1133,6 +1132,132 @@ for i, factor in enumerate(['EXT', 'EST', 'AGR', 'CSN', 'OPN']):
 <p><img src="output_38_2.png" alt="png"></p>
 <p><img src="output_38_3.png" alt="png"></p>
 <p><img src="output_38_4.png" alt="png"></p>
+<p>As we see here, the only Big 5 factor that seems to show a pattern was Openness: Countries with higher levels of openness saw more growth over the 14-day period.</p>
+<pre><code class="language-python">covid19_big5\
+    .loc[:, ['country', 'OPN', 'ConfirmedCases']]\
+    .sort_values('OPN', ascending=False)\
+    .merge(country_isos, 
+           left_on='country', 
+           right_on='country_abbr')\
+    .drop(['country_abbr', 'country'], axis=1)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OPN</th>
+      <th>ConfirmedCases</th>
+      <th>Country/Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4.089598</td>
+      <td>3675.0</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.066059</td>
+      <td>2281.0</td>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.056052</td>
+      <td>2013.0</td>
+      <td>Austria</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.015059</td>
+      <td>2200.0</td>
+      <td>Switzerland</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.991518</td>
+      <td>4636.0</td>
+      <td>Italy</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3.974855</td>
+      <td>6391.0</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3.965763</td>
+      <td>1279.0</td>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3.942170</td>
+      <td>2051.0</td>
+      <td>Netherlands</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>3.916673</td>
+      <td>1463.0</td>
+      <td>Norway</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>3.906212</td>
+      <td>1795.0</td>
+      <td>Belgium</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>3.901462</td>
+      <td>1543.0</td>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>3.794982</td>
+      <td>241.0</td>
+      <td>Japan</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>3.643089</td>
+      <td>93.0</td>
+      <td>Singapore</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>3.590299</td>
+      <td>733.0</td>
+      <td>China</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>3.422120</td>
+      <td>900.0</td>
+      <td>Malaysia</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
     </div>
     <div class="article-footer">
