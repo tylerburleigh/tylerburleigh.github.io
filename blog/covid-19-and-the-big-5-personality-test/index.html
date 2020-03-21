@@ -41,7 +41,7 @@
 <meta itemprop="description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &ldquo;growth&rdquo; over time in coronavirus cases, using data current as of March 20, 2020.">
 <meta itemprop="datePublished" content="2020-03-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2009">
+<meta itemprop="wordCount" content="2103">
 
 
 
@@ -413,8 +413,8 @@ covid19_numdays = covid19.loc[:, ['Country/Region', 'Date']]\
     .reset_index()
 print(covid19_numdays.head())
 
-covid19_mindays = covid19_numdays[covid19_numdays.Date &gt;= 14]
-covid19 = covid19[covid19['Country/Region'].isin(covid19_mindays.country)]
+covid19_mindays = covid19_numdays[covid19_numdays.Date &gt;= 14].reset_index()
+covid19 = covid19[covid19['Country/Region'].isin(covid19_mindays.country)].reset_index()
 </code></pre>
 <pre><code>     country  Date
 0    Albania     5
@@ -432,8 +432,142 @@ print(set(covid19['Country/Region'].values))
 </code></pre>
 <p>Obviously &ldquo;Cruise Ship&rdquo; isn&rsquo;t a country. I won&rsquo;t worry about it at this point, since it will get filtered out in later steps.</p>
 <h2 id="compute-growth-over-14-days">Compute growth over 14 days</h2>
-<p>Next, we&rsquo;ll compute the growth in cases for each country, from the date they reached 50 Confirmed Cases to the 14th day following that date. This is simply the number of cases on Day 14.</p>
-<pre><code class="language-python">covid19 = covid19\
+<p>Next, we&rsquo;ll compute the growth in cases for each country, from the date they reached 50 Confirmed Cases to the 14th day following that date. First we&rsquo;ll need to collapse over province, since some countries are represented multiple times under different provinces.</p>
+<pre><code class="language-python">covid19[covid19['Country/Region'] == 'China'].head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>ConfirmedCases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>47</th>
+      <td>2777</td>
+      <td>China</td>
+      <td>2020-01-26</td>
+      <td>60.0</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>2778</td>
+      <td>China</td>
+      <td>2020-01-27</td>
+      <td>70.0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>2779</td>
+      <td>China</td>
+      <td>2020-01-28</td>
+      <td>106.0</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>2780</td>
+      <td>China</td>
+      <td>2020-01-29</td>
+      <td>152.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>2781</td>
+      <td>China</td>
+      <td>2020-01-30</td>
+      <td>200.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">covid19_collapse_province = covid19\
+    .groupby(['Country/Region', 'Date'])\
+    .sum()\
+    .reset_index()
+covid19_collapse_province[covid19_collapse_province['Country/Region'] == 'China'].head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>Date</th>
+      <th>index</th>
+      <th>ConfirmedCases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>47</th>
+      <td>China</td>
+      <td>2020-01-22</td>
+      <td>3540</td>
+      <td>444.0</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>China</td>
+      <td>2020-01-23</td>
+      <td>3541</td>
+      <td>444.0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>China</td>
+      <td>2020-01-24</td>
+      <td>6612</td>
+      <td>602.0</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>China</td>
+      <td>2020-01-25</td>
+      <td>14172</td>
+      <td>958.0</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>China</td>
+      <td>2020-01-26</td>
+      <td>26818</td>
+      <td>1628.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">covid19 = covid19_collapse_province\
     .groupby('Country/Region')\
     .head(14)\
     .groupby('Country/Region')\
@@ -461,325 +595,157 @@ covid19
       <th></th>
       <th>Country/Region</th>
       <th>Date</th>
+      <th>index</th>
       <th>ConfirmedCases</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1060</th>
+      <th>13</th>
       <td>Austria</td>
       <td>2020-03-19</td>
+      <td>1060</td>
       <td>2013.0</td>
     </tr>
     <tr>
-      <th>1176</th>
+      <th>28</th>
       <td>Bahrain</td>
       <td>2020-03-17</td>
+      <td>1176</td>
       <td>228.0</td>
     </tr>
     <tr>
-      <th>1414</th>
+      <th>45</th>
       <td>Belgium</td>
       <td>2020-03-19</td>
+      <td>1414</td>
       <td>1795.0</td>
     </tr>
     <tr>
-      <th>2790</th>
+      <th>60</th>
       <td>China</td>
-      <td>2020-02-08</td>
-      <td>733.0</td>
+      <td>2020-02-04</td>
+      <td>90949</td>
+      <td>23524.0</td>
     </tr>
     <tr>
-      <th>5103</th>
+      <th>119</th>
       <td>Cruise Ship</td>
       <td>2020-02-20</td>
+      <td>5103</td>
       <td>634.0</td>
     </tr>
     <tr>
-      <th>6009</th>
+      <th>162</th>
       <td>France</td>
       <td>2020-03-12</td>
+      <td>6009</td>
       <td>2281.0</td>
     </tr>
     <tr>
-      <th>6718</th>
+      <th>184</th>
       <td>Germany</td>
       <td>2020-03-13</td>
+      <td>6718</td>
       <td>3675.0</td>
     </tr>
     <tr>
-      <th>7657</th>
+      <th>205</th>
       <td>Iran</td>
       <td>2020-03-08</td>
+      <td>7657</td>
       <td>6566.0</td>
     </tr>
     <tr>
-      <th>7728</th>
+      <th>231</th>
       <td>Iraq</td>
       <td>2020-03-20</td>
+      <td>7728</td>
       <td>208.0</td>
     </tr>
     <tr>
-      <th>7891</th>
+      <th>245</th>
       <td>Italy</td>
       <td>2020-03-06</td>
+      <td>7891</td>
       <td>4636.0</td>
     </tr>
     <tr>
-      <th>8003</th>
+      <th>273</th>
       <td>Japan</td>
       <td>2020-02-29</td>
+      <td>8003</td>
       <td>241.0</td>
     </tr>
     <tr>
-      <th>8302</th>
+      <th>307</th>
       <td>Korea, South</td>
       <td>2020-03-04</td>
+      <td>8302</td>
       <td>5621.0</td>
     </tr>
     <tr>
-      <th>8431</th>
+      <th>337</th>
       <td>Kuwait</td>
       <td>2020-03-15</td>
+      <td>8431</td>
       <td>112.0</td>
     </tr>
     <tr>
-      <th>8907</th>
+      <th>356</th>
       <td>Malaysia</td>
       <td>2020-03-19</td>
+      <td>8907</td>
       <td>900.0</td>
     </tr>
     <tr>
-      <th>9909</th>
+      <th>371</th>
       <td>Netherlands</td>
       <td>2020-03-18</td>
+      <td>9909</td>
       <td>2051.0</td>
     </tr>
     <tr>
-      <th>10144</th>
+      <th>387</th>
       <td>Norway</td>
       <td>2020-03-17</td>
+      <td>10144</td>
       <td>1463.0</td>
     </tr>
     <tr>
-      <th>11481</th>
+      <th>404</th>
       <td>Singapore</td>
       <td>2020-02-26</td>
+      <td>11481</td>
       <td>93.0</td>
     </tr>
     <tr>
-      <th>11793</th>
+      <th>441</th>
       <td>Spain</td>
       <td>2020-03-14</td>
+      <td>11793</td>
       <td>6391.0</td>
     </tr>
     <tr>
-      <th>12033</th>
+      <th>461</th>
       <td>Sweden</td>
       <td>2020-03-18</td>
+      <td>12033</td>
       <td>1279.0</td>
     </tr>
     <tr>
-      <th>12090</th>
+      <th>477</th>
       <td>Switzerland</td>
       <td>2020-03-16</td>
+      <td>12090</td>
       <td>2200.0</td>
     </tr>
     <tr>
-      <th>16456</th>
+      <th>495</th>
       <td>United Kingdom</td>
       <td>2020-03-16</td>
+      <td>16456</td>
       <td>1543.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<p>Just to confirm that we&rsquo;ve done this correctly, let&rsquo;s check a test case.</p>
-<pre><code class="language-python">df = pd.read_csv('train.csv')
-df[(df['Country/Region'] == 'United Kingdom') &amp; (df.ConfirmedCases &gt;= 50)].head(14)
-</code></pre>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
-
-.dataframe thead th {
-    text-align: right;
-}
-</code></pre>
-<p></style></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Id</th>
-      <th>Province/State</th>
-      <th>Country/Region</th>
-      <th>Lat</th>
-      <th>Long</th>
-      <th>Date</th>
-      <th>ConfirmedCases</th>
-      <th>Fatalities</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>16443</th>
-      <td>25896</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-03</td>
-      <td>51.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>16444</th>
-      <td>25897</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-04</td>
-      <td>85.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>16445</th>
-      <td>25898</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-05</td>
-      <td>115.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>16446</th>
-      <td>25899</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-06</td>
-      <td>163.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>16447</th>
-      <td>25900</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-07</td>
-      <td>206.0</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <th>16448</th>
-      <td>25901</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-08</td>
-      <td>273.0</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>16449</th>
-      <td>25902</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-09</td>
-      <td>321.0</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>16450</th>
-      <td>25903</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-10</td>
-      <td>382.0</td>
-      <td>6.0</td>
-    </tr>
-    <tr>
-      <th>16451</th>
-      <td>25904</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-11</td>
-      <td>456.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>16452</th>
-      <td>25905</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-12</td>
-      <td>456.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>16453</th>
-      <td>25906</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-13</td>
-      <td>798.0</td>
-      <td>8.0</td>
-    </tr>
-    <tr>
-      <th>16454</th>
-      <td>25907</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-14</td>
-      <td>1140.0</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>16455</th>
-      <td>25908</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-15</td>
-      <td>1140.0</td>
-      <td>21.0</td>
-    </tr>
-    <tr>
-      <th>16456</th>
-      <td>25909</td>
-      <td>United Kingdom</td>
-      <td>United Kingdom</td>
-      <td>55.3781</td>
-      <td>-3.436</td>
-      <td>2020-03-16</td>
-      <td>1543.0</td>
-      <td>55.0</td>
     </tr>
   </tbody>
 </table>
@@ -868,6 +834,7 @@ covid19.head()
       <th></th>
       <th>Country/Region</th>
       <th>Date</th>
+      <th>index</th>
       <th>ConfirmedCases</th>
       <th>country_abbr</th>
     </tr>
@@ -877,6 +844,7 @@ covid19.head()
       <th>0</th>
       <td>Austria</td>
       <td>2020-03-19</td>
+      <td>1060</td>
       <td>2013.0</td>
       <td>AT</td>
     </tr>
@@ -884,6 +852,7 @@ covid19.head()
       <th>1</th>
       <td>Bahrain</td>
       <td>2020-03-17</td>
+      <td>1176</td>
       <td>228.0</td>
       <td>BH</td>
     </tr>
@@ -891,20 +860,23 @@ covid19.head()
       <th>2</th>
       <td>Belgium</td>
       <td>2020-03-19</td>
+      <td>1414</td>
       <td>1795.0</td>
       <td>BE</td>
     </tr>
     <tr>
       <th>3</th>
       <td>China</td>
-      <td>2020-02-08</td>
-      <td>733.0</td>
+      <td>2020-02-04</td>
+      <td>90949</td>
+      <td>23524.0</td>
       <td>CN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>France</td>
       <td>2020-03-12</td>
+      <td>6009</td>
       <td>2281.0</td>
       <td>FR</td>
     </tr>
@@ -1030,6 +1002,7 @@ covid19_big5.head()
       <th></th>
       <th>Country/Region</th>
       <th>Date</th>
+      <th>index</th>
       <th>ConfirmedCases</th>
       <th>country_abbr</th>
       <th>country</th>
@@ -1045,6 +1018,7 @@ covid19_big5.head()
       <th>0</th>
       <td>Austria</td>
       <td>2020-03-19</td>
+      <td>1060</td>
       <td>2013.0</td>
       <td>AT</td>
       <td>AT</td>
@@ -1058,6 +1032,7 @@ covid19_big5.head()
       <th>1</th>
       <td>Belgium</td>
       <td>2020-03-19</td>
+      <td>1414</td>
       <td>1795.0</td>
       <td>BE</td>
       <td>BE</td>
@@ -1070,8 +1045,9 @@ covid19_big5.head()
     <tr>
       <th>2</th>
       <td>China</td>
-      <td>2020-02-08</td>
-      <td>733.0</td>
+      <td>2020-02-04</td>
+      <td>90949</td>
+      <td>23524.0</td>
       <td>CN</td>
       <td>CN</td>
       <td>3.025746</td>
@@ -1084,6 +1060,7 @@ covid19_big5.head()
       <th>3</th>
       <td>France</td>
       <td>2020-03-12</td>
+      <td>6009</td>
       <td>2281.0</td>
       <td>FR</td>
       <td>FR</td>
@@ -1097,6 +1074,7 @@ covid19_big5.head()
       <th>4</th>
       <td>Germany</td>
       <td>2020-03-13</td>
+      <td>6718</td>
       <td>3675.0</td>
       <td>DE</td>
       <td>DE</td>
@@ -1132,7 +1110,34 @@ for i, factor in enumerate(['EXT', 'EST', 'AGR', 'CSN', 'OPN']):
 <p><img src="output_38_2.png" alt="png"></p>
 <p><img src="output_38_3.png" alt="png"></p>
 <p><img src="output_38_4.png" alt="png"></p>
+<p>China is perhaps an atypical outlier here because it was where the outbreak started.</p>
+<p>Let&rsquo;s see the plots again without China.</p>
+<pre><code class="language-python">factors = ['EXT', 'EST', 'AGR', 'CSN', 'OPN']
+factor_names = ['Extraversion', 'Emotional Stability', 'Agreeableness', 'Conscientiousness', 'Openness']
+
+for i, factor in enumerate(['EXT', 'EST', 'AGR', 'CSN', 'OPN']):
+    # Compute the correlation coefficient
+    corr = pearsonr(covid19_big5[covid19_big5.country != 'CN'][factor], 
+                    covid19_big5[covid19_big5.country != 'CN'].ConfirmedCases)
+    corr = [np.round(c, 2) for c in corr]
+    text = 'r=%s, p=%s' % (corr[0], corr[1])
+    
+    ax = sns.regplot(x=factor, 
+                y=&quot;ConfirmedCases&quot;, 
+                data=covid19_big5[covid19_big5.country != 'CN'])
+    
+    ax.set_title(&quot;Confirmed cases at 14 days after first 50 cases &quot; + 
+                 &quot;\n by average score on Big 5 factor &quot; + factor_names[i] + 
+                 &quot;\n&quot; + text)
+    plt.show()
+</code></pre>
+<p><img src="output_40_0.png" alt="png"></p>
+<p><img src="output_40_1.png" alt="png"></p>
+<p><img src="output_40_2.png" alt="png"></p>
+<p><img src="output_40_3.png" alt="png"></p>
+<p><img src="output_40_4.png" alt="png"></p>
 <p>As we see here, the only Big 5 factor that seems to show a pattern was Openness: Countries with higher levels of openness saw more growth over the 14-day period.</p>
+<p>Although a skeptic might point out that the countries lower on OPN had too much influence in the model, given how far they are set apart from the other data points, they artificially inflate the degree of fit.</p>
 <pre><code class="language-python">covid19_big5\
     .loc[:, ['country', 'OPN', 'ConfirmedCases']]\
     .sort_values('OPN', ascending=False)\
@@ -1246,7 +1251,7 @@ for i, factor in enumerate(['EXT', 'EST', 'AGR', 'CSN', 'OPN']):
     <tr>
       <th>13</th>
       <td>3.590299</td>
-      <td>733.0</td>
+      <td>23524.0</td>
       <td>China</td>
     </tr>
     <tr>
