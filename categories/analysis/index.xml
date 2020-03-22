@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>A simple prediction tool for the Heart Disease data</title>
-      <link>https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/</link>
+      <title>An interactive ML tool for predicting heart disease</title>
+      <link>https://tylerburleigh.com/blog/interactive-ml-heart-disease-tool/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/</guid>
+      <guid>https://tylerburleigh.com/blog/interactive-ml-heart-disease-tool/</guid>
       <description>In a previous blog (&amp;quot;Modeling the UCI Heart Disease dataset&amp;quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
 Machine learning models like this can be put to work generating predictions on new inputs, and they&amp;rsquo;re great for simulations as well. Let&amp;rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88.</description>
     </item>
