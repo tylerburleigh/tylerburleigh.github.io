@@ -44,7 +44,7 @@ Machine learning models like this can be put to work generating predictions on n
 Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88.">
 <meta itemprop="datePublished" content="2020-03-22T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-22T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="801">
+<meta itemprop="wordCount" content="753">
 
 
 
@@ -325,11 +325,10 @@ Machine learning models like this can be put to work generating predictions on n
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <p>In a previous blog (&quot;<a href="/blog/modeling-the-heart-disease-uci-dataset">Modeling the UCI Heart Disease dataset</a>&quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?</p>
-<p>Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88. Or the likelihood for a 44 year-old female who is reporting atypical chest pain.</p>
-<p>These are the kinds of &ldquo;what if&rdquo; questions someone might ask of a machine learning model, because they create an intuition for how inputs map to outputs, and they can be used to create hypothetical scenarios. For example, how do incremental changes in cholesterol change the likelihood of heart disease? If I wanted to lower my heart disease risk, what biomarkers would be the best to focus on and what changes in risk can I expect to see?</p>
-<p>In this post, I created a live interactive web tool that accepts user input on all of the features the model was trained on. Using the trained model, probability predictions are generated reflecting the likelihood of heart disease. Dynamically, these probabilities update in real-time as the inputs are change.</p>
-<img src="a-simple-prediction-tool-for-the-heart-disease-data/tool_ui.png">
-<p>Try it out by clicking the button below to launch a live instance of the code.</p>
+<p>Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88. Or the likelihood for a 44 year-old female  reporting atypical chest pain. We might want to know how incremental changes in cholesterol change the likelihood of heart disease. Maybe I&rsquo;m interested in lowering my my heart disease risk, and I want to know specifically what areas or biomarkers to focus on improving.</p>
+<p>For this post, I created a live web tool that accepts user input on any of the features the model was trained on. Using the trained model, the tool generates probability predictions reflecting the likelihood of heart disease. As the inputs are changed, probabilities update in real-time.</p>
+<img src="/blog/a-simple-prediction-tool-for-the-heart-disease-data/tool_ui.png">
+<p>Try it out live by clicking the &ldquo;launch binder&rdquo; button.</p>
 <p><a href="https://mybinder.org/v2/gh/tylerburleigh/heart-uci-toy/master?urlpath=voila%2Frender%2Findex.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></p>
 <p>The code follows.</p>
 <h2 id="initialize-the-model">Initialize the model</h2>
