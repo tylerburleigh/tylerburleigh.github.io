@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        A simple prediction tool for the Heart Disease data - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="In a previous blog (&amp;quot;Modeling the UCI Heart Disease dataset&amp;quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
+Machine learning models like this can be put to work generating predictions on new inputs, and they&amp;rsquo;re great for simulations as well. Let&amp;rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88." />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>A simple prediction tool for the Heart Disease data - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="A simple prediction tool for the Heart Disease data" />
+<meta property="og:description" content="In a previous blog (&quot;Modeling the UCI Heart Disease dataset&quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
+Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/" />
+<meta property="article:published_time" content="2020-03-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-22T00:00:00+00:00" />
+<meta itemprop="name" content="A simple prediction tool for the Heart Disease data">
+<meta itemprop="description" content="In a previous blog (&quot;Modeling the UCI Heart Disease dataset&quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
+Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88.">
+<meta itemprop="datePublished" content="2020-03-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="801">
+
+
+
+<meta itemprop="keywords" content="python,interactive,machine learning,voila," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A simple prediction tool for the Heart Disease data"/>
+<meta name="twitter:description" content="In a previous blog (&quot;Modeling the UCI Heart Disease dataset&quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
+Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">10</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/interactive/" class="tag-list-link">interactive</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">8</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/voila/" class="tag-list-link">voila</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-a-simple-prediction-tool-for-the-heart-disease-data" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/a-simple-prediction-tool-for-the-heart-disease-data/"
+    >A simple prediction tool for the Heart Disease data</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/" class="article-date">
+  <time datetime="2020-03-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-22</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/software/"> Software </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/interactive/"> interactive </a>
+    <a class="article-tag-link" href="/tags/machine-learning/"> machine learning </a>
+    <a class="article-tag-link" href="/tags/voila/"> voila </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/a-simple-prediction-tool-for-the-heart-disease-data/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>In a previous blog (&quot;<a href="/blog/modeling-the-heart-disease-uci-dataset">Modeling the UCI Heart Disease dataset</a>&quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?</p>
+<p>Machine learning models like this can be put to work generating predictions on new inputs, and they&rsquo;re great for simulations as well. Let&rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88. Or the likelihood for a 44 year-old female who is reporting atypical chest pain.</p>
+<p>These are the kinds of &ldquo;what if&rdquo; questions someone might ask of a machine learning model, because they create an intuition for how inputs map to outputs, and they can be used to create hypothetical scenarios. For example, how do incremental changes in cholesterol change the likelihood of heart disease? If I wanted to lower my heart disease risk, what biomarkers would be the best to focus on and what changes in risk can I expect to see?</p>
+<p>In this post, I created a live interactive web tool that accepts user input on all of the features the model was trained on. Using the trained model, probability predictions are generated reflecting the likelihood of heart disease. Dynamically, these probabilities update in real-time as the inputs are change.</p>
+<img src="a-simple-prediction-tool-for-the-heart-disease-data/tool_ui.png">
+<p>Try it out by clicking the button below to launch a live instance of the code.</p>
+<p><a href="https://mybinder.org/v2/gh/tylerburleigh/heart-uci-toy/master?urlpath=voila%2Frender%2Findex.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder"></a></p>
+<p>The code follows.</p>
+<h2 id="initialize-the-model">Initialize the model</h2>
+<p>First we initialize the model that we trained in a previous blog post.</p>
+<pre><code class="language-python"># Imports
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import make_column_transformer
+from sklearn.linear_model import LogisticRegression
+
+# Read data
+df = pd.read_csv('heart.csv')
+
+# Make lists of variables
+bins = ['sex', 'fbs', 'exang', 'thal', 'restecg']
+cats = ['cp', 'slope']
+ords = ['ca']
+nums = ['age', 'oldpeak', 'trestbps', 'chol', 'thalach']
+target = ['target']
+
+# Recoding
+df.target = df.target.replace({0:1, 1:0})
+df.cp = df.cp.replace({0:'Asympt.', 1:'Atypical', 2:'Non', 3:'Typical'})
+df.restecg = df.restecg.replace({0:'LV hyper', 1:'Normal', 2:'ST-T wave'})
+df.slope = df.slope.replace({0:'down', 1:'up', 2:'flat'})
+df.thal = df.thal.replace({0:'NA', 1:'Fixed', 2:'Normal', 3:'Revers.'})
+
+# Collapse sparse classes
+df.restecg = df.restecg.replace({'Normal':'Normal', 'LV hyper':'Abnormal', 'ST-T wave':'Abnormal'})
+df.thal = df.thal.replace({'NA':'Normal', 'Normal':'Normal', 'Fixed': 'Abnormal', 'Revers.': 'Abnormal'})
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(df, 
+                                                    df.target, 
+                                                    test_size = 0.2, 
+                                                    random_state = 42,
+                                                    stratify = df.target)
+
+# Feature encoding
+clt = make_column_transformer(
+    (StandardScaler(), nums),
+    (OneHotEncoder(), cats)
+)
+
+clt.fit(X_train)
+X_train_transformed = clt.transform(X_train)
+X_test_transformed = clt.transform(X_test)
+
+# Fit model
+lr = LogisticRegression()
+lr.fit(X_train_transformed, y_train)
+</code></pre>
+<pre><code>LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=100,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=None, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+</code></pre>
+<h2 id="interactive-model-predictions">Interactive model predictions</h2>
+<p>Then, using <code>ipywidgets</code>, we can build a user interface that takes user inputs, and sends these inputs to the <code>lr.predict_proba()</code> function to generate a probability estimate of heart disease.</p>
+<pre><code class="language-python"># Initialize a dataframe containing &quot;average&quot; default values for the starting model/inputs
+
+init = {
+    'age': [X_train['age'].median()], 
+    'sex': [X_train['sex'].mode()[0]],
+    'cp': [X_train['cp'].mode()[0]],
+    'trestbps': [X_train['trestbps'].median()],
+    'chol': [X_train['chol'].median()],
+    'fbs': [X_train['fbs'].mode()[0]],
+    'restecg': [X_train['restecg'].mode()[0]],
+    'thalach': [X_train['thalach'].mode()[0]],
+    'exang': [X_train['exang'].mode()[0]],
+    'oldpeak': [X_train['oldpeak'].median()],
+    'slope': [X_train['slope'].mode()[0]],
+    'ca': [X_train['ca'].mode()[0]],
+    'thal': [X_train['thal'].mode()[0]],
+    'target': [np.nan]
+    }
+init_df = pd.DataFrame(data=init)
+</code></pre>
+<pre><code class="language-python"># Define the user widgets
+
+import ipywidgets as widgets
+
+age = widgets.IntSlider(
+    value=init_df['age'], 
+    description='Age:'
+)
+sex = widgets.Dropdown(
+    options=[('Female', 0), ('Male', 1)],
+    value=init_df['sex'][0],
+    description='Sex:'
+)
+cp = widgets.Dropdown(
+    options=['Asympt.', 'Atypical', 'Non', 'Typical'],
+    value=init_df['cp'][0],
+    description='Chest pain:'
+)
+trestbps = widgets.FloatSlider(
+    value=init_df['trestbps'],
+    description='Resting BP:',
+    min=60,
+    max=240,
+    step=0.5,
+)
+chol = widgets.IntSlider(
+    value=init_df['chol'],
+    description='Cholesterol:',
+    min=50,
+    max=600
+)
+fbs = widgets.Dropdown(
+    options=[('&lt;= 120 mg/dl', 0), ('&gt; 120 mg/dl', 1)],
+    value=init_df['fbs'][0],
+    description='Fasting BS:'
+)
+restecg = widgets.Dropdown(
+    options=['Normal', 'Abnormal'],
+    value=init_df['restecg'][0],
+    description='Resting ECG:'
+)
+thalach = widgets.IntSlider(
+    value=init_df['thalach'],
+    description='Max HR:',
+    min=60,
+    max=220
+)
+exang = widgets.Dropdown(
+    options=[('No', 0), ('Yes', 1)],
+    value=init_df['exang'][0],
+    description='Ex. angina:'
+)
+oldpeak = widgets.FloatSlider(
+    value=init_df['oldpeak'],
+    description='Old peak:',
+    min=0,
+    max=10,
+    step=0.1,
+)
+slope = widgets.Dropdown(
+    options=['down', 'up', 'flat'],
+    value=init_df['slope'][0],
+    description='ST slope:'
+)
+ca = widgets.Dropdown(
+    options=[0, 1, 2, 3],
+    value=init_df['ca'][0],
+    description='# vessels:'
+)
+thal = widgets.Dropdown(
+    options=['Normal', 'Abnormal'],
+    value=init_df['thal'][0],
+    description='Thalium test:'
+)
+</code></pre>
+<pre><code class="language-python"># Define the update/output function
+
+from IPython.display import clear_output, display, HTML
+out = widgets.Output()
+
+def on_update(_):
+    with out:
+        # Generate prediction from inputs
+        inputs = {
+            'age': [age.value], 
+            'sex': [sex.value],
+            'cp': [cp.value],
+            'trestbps': [trestbps.value],
+            'chol': [chol.value],
+            'fbs': [fbs.value],
+            'restecg': [restecg.value],
+            'thalach': [thalach.value],
+            'exang': [exang.value],
+            'oldpeak': [oldpeak.value],
+            'slope': [slope.value],
+            'ca': [ca.value],
+            'thal': [thal.value],
+            'target': [np.nan]
+            }
+        inputs_df = pd.DataFrame(data=inputs)
+        inputs_transform = clt.transform(inputs_df)
+        pred = lr.predict_proba(inputs_transform)
+        
+        clear_output()        
+        result = 'inputs: '\
+                + str(inputs)\
+                + '\n\n\nprobability of heart disease: '\
+                + str(round(pred[0][1]*100))\
+                + '%\n\n'        
+        print(result)
+
+inputs = [age, sex, cp, trestbps, chol, fbs, 
+          restecg, thalach, exang, oldpeak, slope,
+          ca, thal]
+
+for input in inputs:
+    input.observe(on_update)
+    
+# Run once
+on_update('')
+</code></pre>
+<pre><code class="language-python">%%HTML
+&lt;!-- Use HTML to set a minimum height --&gt;
+&lt;style&gt;
+    .widget-output {
+        min-height: 120px
+    }
+&lt;/style&gt;
+</code></pre>
+<!-- Use HTML to set a minimum height -->
+<style>
+    .widget-output {
+        min-height: 120px
+    }
+</style>
+<pre><code class="language-python"># Display widgets
+widgets.VBox([
+    out,
+    age, 
+    sex, 
+    cp, 
+    trestbps, 
+    chol, 
+    fbs,
+    restecg,
+    thalach,
+    exang,
+    oldpeak,
+    slope,
+    ca,
+    thal
+])
+</code></pre>
+<pre><code>VBox(children=(Output(outputs=({'name': 'stdout', 'text': &quot;inputs: {'age': [55], 'sex': [1], 'cp': ['Asympt.']…
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/" title="A simple prediction tool for the Heart Disease data" target="_blank" rel="external">https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Data Scientist</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/" title="COVID-19 and the Big 5 Personality Test"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="Catalogue" role="button">
+                    <span>[&nbsp;</span><span>Catalogue</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

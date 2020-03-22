@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>voila on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/voila/</link>
+    <description>Recent content in voila on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://tylerburleigh.com/tags/voila/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A simple prediction tool for the Heart Disease data</title>
+      <link>https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/a-simple-prediction-tool-for-the-heart-disease-data/</guid>
+      <description>In a previous blog (&amp;quot;Modeling the UCI Heart Disease dataset&amp;quot;) I trained a model to predict the presence of heart disease. So I have a model, now what?
+Machine learning models like this can be put to work generating predictions on new inputs, and they&amp;rsquo;re great for simulations as well. Let&amp;rsquo;s say we wanted to know the likelihood of heart disease for a 60 year-old male with a cholesterol value of 244, and a resting blood pressure value of 88.</description>
+    </item>
+    
+    <item>
+      <title>COVID-19 and the Big 5 Personality Test</title>
+      <link>https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/covid-19-and-the-big-5-personality-test/</guid>
+      <description>Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for &amp;ldquo;growth&amp;rdquo; over time in coronavirus cases, using data current as of March 20, 2020.</description>
+    </item>
+    
+    <item>
+      <title>Modeling the UCI Heart Disease dataset</title>
+      <link>https://tylerburleigh.com/blog/modeling-the-heart-disease-uci-dataset/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/modeling-the-heart-disease-uci-dataset/</guid>
+      <description>Using logistic regression, I trained a machine learning model to predict heart disease, using 14 attributes and 303 observations (e.g., age, sex, chest pain, resting ECG).</description>
+    </item>
+    
+    <item>
+      <title>Comparing coronavirus trends in US, Italy, and China</title>
+      <link>https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/</guid>
+      <description>A simple prediction of coronavirus spread in the US, using case trends in China and Italy.</description>
+    </item>
+    
+    <item>
+      <title>Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator</title>
+      <link>https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/</guid>
+      <description>There are times when you must go outside, even during the coronavirus pandemic. What if you had a tool that could tell you if a place, like the grocery store, was off-peak and safe to visit, or off-peak and not safe to visit?</description>
+    </item>
+    
+    <item>
+      <title>Categorical features: cardinality and sparsity</title>
+      <link>https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/working-with-categorical-features-in-ml/</guid>
+      <description>Some observations about high-cardinality features and sparsity.</description>
+    </item>
+    
+    <item>
+      <title>A simple Twilio SMS frontend using Nodejs</title>
+      <link>https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-twilio-sms-frontend/</guid>
+      <description>We&amp;rsquo;re  starting to use SMS at work for communicating with customers, and there was a need for a tool that would allow us to send SMS messages and check the history of calls and messages to the phone number we are sending from. With that in mind, I coded a simple frontend to the Twilio API. The frontend is a page with 4 navigation tabs that allow sending a single SMS, sending SMS in bulk, seeing the status of sent SMS messages, and fetching the inbound call/SMS log.</description>
+    </item>
+    
+    <item>
+      <title>Predicting customer churn</title>
+      <link>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-customer-churn-telco-customer-churn/</guid>
+      <description>Continuing to practice my python skills. I decided to try modeling the Telco Customer Churn dataset from Kaggle. Churn is when customers end their relationship with a company (e.g., by cancelling their subscription to a service). Companies want to retain customers, so understanding and preventing churn is naturally an important goal.</description>
+    </item>
+    
+    <item>
+      <title>Predicting survival on the Titanic (with Python!)</title>
+      <link>https://tylerburleigh.com/blog/titanic-prediction-with-python/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/titanic-prediction-with-python/</guid>
+      <description>I wanted to try out some of what I&amp;rsquo;ve learned with python for data science. I thought: Why not try it on the Kaggle Titanic challenge?</description>
+    </item>
+    
+    <item>
+      <title>2019 Data Science Bowl</title>
+      <link>https://tylerburleigh.com/blog/2019-data-science-bowl/</link>
+      <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/2019-data-science-bowl/</guid>
+      <description>I was inspired to participate in Kaggle&amp;rsquo;s 2019 Data Science Bowl. In this post I link to some of my exploratory analysis and predictive models.</description>
+    </item>
+    
+    <item>
+      <title>Simple Moving Average algorithm &amp; backtest</title>
+      <link>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/simple-moving-average-algorithmic-backtest/</guid>
+      <description>I made an algorithmic trader in R based on the &amp;ldquo;moving average crossover&amp;rdquo; technical indicator and performed a backtest using the TSLA stock. It did not perform well, but it was an interesting challenge that involved some timeseries analysis.</description>
+    </item>
+    
+    <item>
+      <title>Predicting t-shirt size from height and weight</title>
+      <link>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-t-shirt-size-from-height-and-weight/</guid>
+      <description>Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.</description>
+    </item>
+    
+    <item>
+      <title>Scraping the Mural Arts Philadephia website</title>
+      <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
+      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</guid>
+      <description>A mini-tutorial on web scraping with R.</description>
+    </item>
+    
+    <item>
+      <title>nutritionR: NLP nutrition analysis in R</title>
+      <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</guid>
+      <description>I wrote an R package for the Nutritionix API to do nutrition analysis on foods and recipes.</description>
+    </item>
+    
+    <item>
+      <title>Yet Another Data Science Job Market Analysis</title>
+      <link>https://tylerburleigh.com/blog/yadsjma/</link>
+      <pubDate>Sat, 14 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/yadsjma/</guid>
+      <description>An analysis of the data science job market from scraped LinkedIn data</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
+      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
+      <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
+    </item>
+    
+    <item>
+      <title>What is fair payment on MTurk?</title>
+      <link>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
+      <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
+    </item>
+    
+    <item>
+      <title>Surviving the Titanic with R caret</title>
+      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
+      <description>I use R to tackle the Kaggle Titanic data science competition.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://tylerburleigh.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/about/</guid>
+      <description>For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.</description>
+    </item>
+    
+  </channel>
+</rss>
