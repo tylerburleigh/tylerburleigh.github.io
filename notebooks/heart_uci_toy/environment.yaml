@@ -1,0 +1,8 @@
+name: heart-uci-toy
+channels:
+- conda-forge
+dependencies:
+- ipywidgets=7.5.0
+- pandas=0.25.1
+- voila=0.1.16
+- scikit-learn=0.22.2
