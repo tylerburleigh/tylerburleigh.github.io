@@ -3,28 +3,105 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tylerburleigh.com/blog/interactive-ml-heart-disease-tool/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <loc>https://tylerburleigh.com/categories/analysis/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/blog/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/categories/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tylerburleigh.com/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/image-recognition/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/keras/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/neural-networks/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/python/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/tensorflow/</loc>
+    <lastmod>2020-03-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/tags/equity/</loc>
+    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/categories/research/</loc>
+    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/blog/why-white-men-win-at-work/</loc>
+    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tylerburleigh.com/blog/interactive-ml-heart-disease-tool/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -45,21 +122,7 @@
   </url>
   
   <url>
-    <loc>https://tylerburleigh.com/tags/python/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://tylerburleigh.com/categories/software/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/tags/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -68,13 +131,6 @@
   <url>
     <loc>https://tylerburleigh.com/tags/voila/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/analysis/</loc>
-    <lastmod>2020-03-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -362,13 +418,6 @@
   <url>
     <loc>https://tylerburleigh.com/blog/introducing-pymturkr/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tylerburleigh.com/categories/research/</loc>
-    <lastmod>2019-08-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

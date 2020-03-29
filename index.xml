@@ -5,10 +5,29 @@
     <link>https://tylerburleigh.com/</link>
     <description>Recent content in Home on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MNIST digit recognition using a convoluted neural net (CNN)</title>
+      <link>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/</guid>
+      <description>I&amp;rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&amp;rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&amp;rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition.</description>
+    </item>
+    
+    <item>
+      <title>Why White Men win at work</title>
+      <link>https://tylerburleigh.com/blog/why-white-men-win-at-work/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/why-white-men-win-at-work/</guid>
+      <description>I&amp;rsquo;ve been collaborating on a mini research study in collaboration with Matt Wallaert (@mattwallaert) to better understand why White Men win at work.
+Past research has found that White Men are more likely to take risks and at work and reap the rewards of &amp;ldquo;failing upward,&amp;rdquo; compared to Women and People of Color. But they&amp;rsquo;re not more talented — they&amp;rsquo;re just more confident. What responsibility do organizations and leaders have to make everyone feel safe to take risks and feel that it&amp;rsquo;s OK to fail sometimes?</description>
+    </item>
     
     <item>
       <title>An interactive ML tool for predicting heart disease</title>
@@ -171,24 +190,6 @@ Machine learning models like this can be put to work generating predictions on n
       
       <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
       <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
-    </item>
-    
-    <item>
-      <title>Surviving the Titanic with R caret</title>
-      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
-      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
-      <description>I use R to tackle the Kaggle Titanic data science competition.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://tylerburleigh.com/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/page/about/</guid>
-      <description>For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.</description>
     </item>
     
   </channel>
