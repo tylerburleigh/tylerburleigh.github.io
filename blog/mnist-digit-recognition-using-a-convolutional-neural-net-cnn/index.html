@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        MNIST digit recognition using a convolutional neural net (CNN) - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="I&amp;rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&amp;rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&amp;rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition." />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>MNIST digit recognition using a convolutional neural net (CNN) - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="MNIST digit recognition using a convolutional neural net (CNN)" />
+<meta property="og:description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/" />
+<meta property="article:published_time" content="2020-03-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-29T00:00:00+00:00" />
+<meta itemprop="name" content="MNIST digit recognition using a convolutional neural net (CNN)">
+<meta itemprop="description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition.">
+<meta itemprop="datePublished" content="2020-03-29T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-29T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1266">
+
+
+
+<meta itemprop="keywords" content="python,keras,tensorflow,image recognition,neural networks," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MNIST digit recognition using a convolutional neural net (CNN)"/>
+<meta name="twitter:description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">12</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/equity/" class="tag-list-link">equity</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/image-recognition/" class="tag-list-link">image-recognition</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/interactive/" class="tag-list-link">interactive</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/keras/" class="tag-list-link">keras</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/neural-networks/" class="tag-list-link">neural-networks</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">11</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tensorflow/" class="tag-list-link">tensorflow</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/transfer-learning/" class="tag-list-link">transfer-learning</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/voila/" class="tag-list-link">voila</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-mnist-digit-recognition-using-a-convolutional-neural-net-cnn" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/"
+    >MNIST digit recognition using a convolutional neural net (CNN)</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/" class="article-date">
+  <time datetime="2020-03-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-03-29</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/keras/"> keras </a>
+    <a class="article-tag-link" href="/tags/tensorflow/"> tensorflow </a>
+    <a class="article-tag-link" href="/tags/image-recognition/"> image recognition </a>
+    <a class="article-tag-link" href="/tags/neural-networks/"> neural networks </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>I&rsquo;ve been working my way through the <a href="https://www.coursera.org/specializations/tensorflow-in-practice">TensorFlow in Practice Specialization</a> on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition.</p>
+<p>Solving this problem is something of a rite of passage for a data scientist, so I figured I&rsquo;d take a crack at it, applying what I&rsquo;ve learned about Convolutional Neural Networks (CNN). <strong>TL;DR</strong>: I was able to achieve 99% out-of-sample prediction accuracy.</p>
+<p>The code below implements the neural net, using python and keras/tensorflow.</p>
+<h1 id="import--read-the-data-in">Import / read the data in</h1>
+<pre><code class="language-python"># Download data from Kaggle
+#!kaggle competitions download digit-recognizer -f test.csv
+#!kaggle competitions download digit-recognizer -f train.csv
+
+# Unzip the files
+#import zipfile
+#with zipfile.ZipFile('train.csv.zip', 'r') as zip_ref:
+#    zip_ref.extractall()
+#with zipfile.ZipFile('test.csv.zip', 'r') as zip_ref:
+#    zip_ref.extractall()
+</code></pre>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.model_selection import train_test_split
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+train = pd.read_csv('train.csv')
+test = pd.read_csv('test.csv')
+</code></pre>
+<h1 id="preprocessing">Preprocessing</h1>
+<p>First we&rsquo;ll split the training data into <code>training</code> and <code>validation</code> sets, while stratifying on the label.</p>
+<pre><code class="language-python">x_train, x_validation, y_train, y_validation = train_test_split(train, 
+    train['label'], 
+    test_size=0.2, 
+    random_state=42,
+    stratify=train['label'])
+</code></pre>
+<h2 id="convert-image-data-to-28x28-arrays">Convert image data to 28x28 arrays</h2>
+<p>First we&rsquo;ll convert the dataframe to a format that can be used in keras/tensorflow. Currently the data is in a pandas dataframe, which is common for Kaggle datasets. We can see, for example, that the training dataset contains 42,000 rows of 785 columns. The first column contains the label, and the 784 columns after that contain the pixel values.</p>
+<p>We want to put the label in a one array, and then take the pixel data and put it in a separate array of 28x28 arrays, and that image data should have this shape in the end: <code>(42000, 28, 28)</code>. We&rsquo;ll apply the same image data transformation to the test data.</p>
+<pre><code class="language-python">print(train.shape)
+train.head()
+</code></pre>
+<pre><code>(42000, 785)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>label</th>
+      <th>pixel0</th>
+      <th>pixel1</th>
+      <th>pixel2</th>
+      <th>pixel3</th>
+      <th>pixel4</th>
+      <th>pixel5</th>
+      <th>pixel6</th>
+      <th>pixel7</th>
+      <th>pixel8</th>
+      <th>...</th>
+      <th>pixel774</th>
+      <th>pixel775</th>
+      <th>pixel776</th>
+      <th>pixel777</th>
+      <th>pixel778</th>
+      <th>pixel779</th>
+      <th>pixel780</th>
+      <th>pixel781</th>
+      <th>pixel782</th>
+      <th>pixel783</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 785 columns</p>
+</div>
+<pre><code class="language-python"># We'll create a &quot;split&quot; of training, for cross-validation
+train_images_split = []
+train_labels_split = []
+validation_images = []
+validation_labels = []
+
+# We'll create a full training set
+train_images_full = []
+train_labels_full = []
+
+# And the test set
+test_images = []
+
+for index, row in x_train.iterrows():
+    train_images_split.append(row.values[1 : ].reshape((28, 28)))
+    train_labels_split.append(row['label'])
+    train_images_full.append(row.values[1 : ].reshape((28, 28)))
+    train_labels_full.append(row['label'])
+    
+for index, row in x_validation.iterrows():
+    validation_images.append(row.values[1 : ].reshape((28, 28)))
+    validation_labels.append(row['label'])
+    train_images_full.append(row.values[1 : ].reshape((28, 28)))
+    train_labels_full.append(row['label'])
+
+for index, row in test.iterrows():
+    test_images.append(row.values.reshape((28, 28)))
+    
+# Convert numpy array, while normalizing the image data
+train_labels_split = np.array(train_labels_split)
+train_images_split = np.array(train_images_split) / 255.
+validation_labels = np.array(validation_labels)
+validation_images = np.array(validation_images) / 255.
+train_labels_full = np.array(train_labels_full)
+train_images_full = np.array(train_images_full) / 255.
+test_images = np.array(test_images) / 255.
+
+print(train_labels_full.shape)
+print(train_images_full.shape)
+print(train_labels_split.shape)
+print(train_images_split.shape)
+print(validation_labels.shape)
+print(validation_images.shape)
+print(test_images.shape)
+</code></pre>
+<pre><code>(42000,)
+(42000, 28, 28)
+(33600,)
+(33600, 28, 28)
+(8400,)
+(8400, 28, 28)
+(28000, 28, 28)
+</code></pre>
+<p>Let&rsquo;s plot some digits to make sure we did that correctly.</p>
+<pre><code class="language-python">fig, axs = plt.subplots(2, 2)
+axs[0, 0].imshow(train_images_full[42], cmap='gray')
+axs[0, 1].imshow(train_images_full[7], cmap='gray')
+axs[1, 0].imshow(train_images_full[2020], cmap='gray')
+axs[1, 1].imshow(train_images_full[0], cmap='gray')
+</code></pre>
+<pre><code>&lt;matplotlib.image.AxesImage at 0x7f9d45ee63c8&gt;
+</code></pre>
+<img src="/blog/mnist_digits.png">
+<h1 id="convolutional-neural-network-cnn-with-kerastf">Convolutional Neural Network (CNN) with keras/tf</h1>
+<p>Finally, we&rsquo;ll train a simple Convolutional Neural Network (CNN) using keras/tensorflow. We&rsquo;ll set it up to do early stopping once the training accuracy reaches 99.5%, then we&rsquo;ll look at validation accuracy at that point.</p>
+<pre><code class="language-python"># Callback function so we can stop training once we've reached a desired level of accuracy.
+class myCallback(tf.keras.callbacks.Callback):
+  def on_epoch_end(self, epoch, logs={}):
+    if(logs.get('accuracy')&gt;=0.995):
+      print(&quot;\n99.5% accuracy reached, stopping!&quot;)
+      self.model.stop_training = True
+</code></pre>
+<pre><code class="language-python"># Add an extra dimension
+train_images = np.expand_dims(train_images_split, axis=3)
+validation_images = np.expand_dims(validation_images, axis=3)
+</code></pre>
+<pre><code class="language-python"># Model definition
+model = tf.keras.models.Sequential([
+    # Convolutional layer 1
+    tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+    tf.keras.layers.MaxPooling2D(2, 2),
+    # Convolutional layer 2
+    tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+    tf.keras.layers.MaxPooling2D(2, 2),
+    # Final layers
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(512, activation=tf.nn.relu),
+    tf.keras.layers.Dense(10, activation=tf.nn.softmax)
+])
+
+# Model compiler
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+# Generators
+train_gen = ImageDataGenerator().flow(train_images, train_labels_split, batch_size=32)
+validation_gen = ImageDataGenerator().flow(validation_images, validation_labels, batch_size=32)
+
+# Model fit
+history = model.fit(train_gen,
+                    validation_data = validation_gen,
+                    steps_per_epoch = len(train_images) / 32,
+                    validation_steps = len(validation_images) / 32,    
+                    epochs=10, 
+                    callbacks=[myCallback()])
+</code></pre>
+<pre><code>WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to  
+  ['...']
+WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to  
+  ['...']
+Train for 1050.0 steps, validate for 262.5 steps
+Epoch 1/10
+1050/1050 [==============================] - 19s 18ms/step - loss: 0.1458 - accuracy: 0.9563 - val_loss: 0.0502 - val_accuracy: 0.9851
+Epoch 2/10
+1050/1050 [==============================] - 26s 24ms/step - loss: 0.0422 - accuracy: 0.9873 - val_loss: 0.0560 - val_accuracy: 0.9829
+Epoch 3/10
+1050/1050 [==============================] - 28s 27ms/step - loss: 0.0314 - accuracy: 0.9894 - val_loss: 0.0478 - val_accuracy: 0.9869
+Epoch 4/10
+1050/1050 [==============================] - 27s 26ms/step - loss: 0.0197 - accuracy: 0.9926 - val_loss: 0.0482 - val_accuracy: 0.9862
+Epoch 5/10
+1050/1050 [==============================] - 21s 20ms/step - loss: 0.0173 - accuracy: 0.9942 - val_loss: 0.0440 - val_accuracy: 0.9876
+Epoch 6/10
+1048/1050 [============================&gt;.] - ETA: 0s - loss: 0.0108 - accuracy: 0.9967
+99.5% accuracy reached, stopping!
+1050/1050 [==============================] - 24s 23ms/step - loss: 0.0108 - accuracy: 0.9967 - val_loss: 0.0494 - val_accuracy: 0.9880
+</code></pre>
+<p>We reached 99.5% training accuracy and the validation accuracy was very close!</p>
+<p>We can visualize the performance of the model (training vs. validation) over the epochs.</p>
+<pre><code class="language-python">acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, acc, 'r', label='Training accuracy')
+plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
+plt.title('Training and validation accuracy')
+plt.legend()
+plt.figure()
+</code></pre>
+<pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<img src="/blog/mnist_model_eval.png">
+<pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<p>As we see, the validation accuracy sort of peaked after the second epoch, after which there was marginal improvement, but by epoch 3 we begin to see some overfitting (i.e., improvement in model fit to the training data without much improvement on the validation set) before our callback method eventually stopped the training.</p>
+<h1 id="re-train-with-all-data">Re-train with all data</h1>
+<p>Now that we&rsquo;re sure our approach works, we&rsquo;ll re-train the model using all of the training data available.</p>
+<pre><code class="language-python"># Redefine training images and labels, using full sets
+train_images = np.expand_dims(train_images_full, axis=3)
+train_labels = train_labels_full
+
+# Re-define generator
+train_gen = ImageDataGenerator().flow(train_images, train_labels, batch_size=32)
+
+# Model fit
+history = model.fit(train_gen,
+                    steps_per_epoch = len(train_images) / 32,  
+                    epochs=10, 
+                    callbacks=[myCallback()])
+</code></pre>
+<pre><code>WARNING:tensorflow:sample_weight modes were coerced from
+  ...
+    to  
+  ['...']
+Train for 1312.5 steps
+Epoch 1/10
+1313/1312 [==============================] - 28s 21ms/step - loss: 0.0183 - accuracy: 0.9946
+Epoch 2/10
+1310/1312 [============================&gt;.] - ETA: 0s - loss: 0.0101 - accuracy: 0.9969
+99.5% accuracy reached, stopping!
+1313/1312 [==============================] - 24s 18ms/step - loss: 0.0101 - accuracy: 0.9969
+</code></pre>
+<h1 id="submission">Submission</h1>
+<p>Now that we have our model finished, we can generate predictions on the test set and prepare our submission.</p>
+<pre><code class="language-python">test_images = np.expand_dims(test_images, axis=3)
+preds = model.predict_classes(test_images)
+</code></pre>
+<pre><code class="language-python">my_submission = pd.concat([pd.Series(range(1,28001), name = &quot;ImageId&quot;)],axis = 1)
+my_submission['Label'] = preds
+my_submission.to_csv(&quot;my_submission.csv&quot;, index=False)
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/" title="MNIST digit recognition using a convolutional neural net (CNN)" target="_blank" rel="external">https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Data Scientist</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/why-white-men-win-at-work/" title="Why White Men win at work"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/"
+                    title="Predicting plant diseases with EfficientNet"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

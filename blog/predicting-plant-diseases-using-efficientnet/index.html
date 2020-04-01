@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Predicting plant diseases with EfficientNet - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &amp;ldquo;fine-grained&amp;rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
+I ran into a few challenges here because the task was so compute intensive." />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>Predicting plant diseases with EfficientNet - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="Predicting plant diseases with EfficientNet" />
+<meta property="og:description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
+I ran into a few challenges here because the task was so compute intensive." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" />
+<meta property="article:published_time" content="2020-04-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-01T00:00:00+00:00" />
+<meta itemprop="name" content="Predicting plant diseases with EfficientNet">
+<meta itemprop="description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
+I ran into a few challenges here because the task was so compute intensive.">
+<meta itemprop="datePublished" content="2020-04-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1044">
+
+
+
+<meta itemprop="keywords" content="python,keras,tensorflow,image recognition,neural networks,transfer learning," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Predicting plant diseases with EfficientNet"/>
+<meta name="twitter:description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
+I ran into a few challenges here because the task was so compute intensive."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-teaching">
+                <a href="/page/teachings/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">Teaching</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">12</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/equity/" class="tag-list-link">equity</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/image-recognition/" class="tag-list-link">image-recognition</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/interactive/" class="tag-list-link">interactive</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/keras/" class="tag-list-link">keras</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/neural-networks/" class="tag-list-link">neural-networks</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">11</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tensorflow/" class="tag-list-link">tensorflow</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/transfer-learning/" class="tag-list-link">transfer-learning</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/voila/" class="tag-list-link">voila</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-predicting-plant-diseases-using-efficientnet" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/predicting-plant-diseases-using-efficientnet/"
+    >Predicting plant diseases with EfficientNet</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" class="article-date">
+  <time datetime="2020-04-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-04-01</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/analysis/"> Analysis </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/keras/"> keras </a>
+    <a class="article-tag-link" href="/tags/tensorflow/"> tensorflow </a>
+    <a class="article-tag-link" href="/tags/image-recognition/"> image recognition </a>
+    <a class="article-tag-link" href="/tags/neural-networks/"> neural networks </a>
+    <a class="article-tag-link" href="/tags/transfer-learning/"> transfer learning </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/predicting-plant-diseases-using-efficientnet/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the <a href="https://www.kaggle.com/c/plant-pathology-2020-fgvc7">Plant Pathology</a> dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.</p>
+<p>I ran into a few challenges here because the task was so compute intensive. The first challenge was getting tensorflow setup and working with my ultrabook&rsquo;s GPU instead of the CPU. This was an important step to speed up how quickly I could iterate on models. The second challenge was getting past the initial poor performance of a custom convolutional neural network. I noticed after studying the notebooks of other Kagglers that <a href="https://github.com/qubvel/efficientnet#about-efficientnet-models">EfficientNet</a> was a popular starting point for transfer learning. EfficientNet is a derivative of ImageNet, a large pre-trained model for visual image recognition, but has fewer parameters. Once I added this as a base model, I quickly reached high validation accuracy in relatively few epochs.</p>
+<p>I&rsquo;m starting to understand better the value of training these models with lots of compute power. My ultrabook&rsquo;s GPU only has 4GB memory, which imposed a significantl limitation on the batch size and image size that I could train the model with. In comparison to this, when I used a GPU-powered notebook on Kaggle that has 15GB of GPU memory, I was able to train on batch sizes and image sizes almost twice as large, which allowed the model to reach higher validation accuracy.</p>
+<p>Using the code below, I was able to reach 91% validation accuracy. With large batch and image size settings on Kaggle, this model reached 94% test accuracy (<a href="https://www.kaggle.com/bluewizard/plant-pathology-prediction-with-efficientnet">see here</a>).</p>
+<h1 id="read-in-datalibraries">Read in data/libraries</h1>
+<pre><code class="language-python"># Download data from Kaggle
+#!kaggle competitions download -c plant-pathology-2020-fgvc7
+</code></pre>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+train = pd.read_csv('train.csv')
+test = pd.read_csv('test.csv')
+
+# Append &quot;.jpg&quot; to make things easier later
+train['image_id'] = train['image_id'] + '.jpg'
+test['image_id'] = test['image_id'] + '.jpg'
+</code></pre>
+<p>Check devices available. Hopefully we see a GPU :)</p>
+<pre><code class="language-python">import tensorflow as tf
+
+# Check devices
+tf.config.list_physical_devices(None)
+</code></pre>
+<pre><code>[PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'),
+ PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+</code></pre>
+<pre><code class="language-python">train.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>image_id</th>
+      <th>healthy</th>
+      <th>multiple_diseases</th>
+      <th>rust</th>
+      <th>scab</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Train_0.jpg</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Train_1.jpg</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Train_2.jpg</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Train_3.jpg</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Train_4.jpg</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Let&rsquo;s take a look at some of these images.</p>
+<pre><code class="language-python">from matplotlib import pyplot as plt
+from matplotlib import image as mpimg
+
+IMG_PATH = 'images/'
+
+for i in range(5):
+    plt.imshow(mpimg.imread(IMG_PATH + train.iloc[i,:]['image_id']))
+    if train.iloc[i,:]['healthy'] == 1:
+        plt.title('healthy')
+    elif train.iloc[i,:]['multiple_diseases'] == 1:
+        plt.title('multiple_diseases')
+    elif train.iloc[i,:]['rust'] == 1:
+        plt.title('rust')
+    else:
+        plt.title('scab')
+    plt.show()
+
+</code></pre>
+<p><img src="output_7_0.png" alt="png"></p>
+<p><img src="output_7_1.png" alt="png"></p>
+<p><img src="output_7_2.png" alt="png"></p>
+<p><img src="output_7_3.png" alt="png"></p>
+<p><img src="output_7_4.png" alt="png"></p>
+<h1 id="model-with-efficientnet-transfer-learning">Model with EfficientNet Transfer Learning</h1>
+<p>Now we&rsquo;ll train a model using EfficientNet transfer learning.</p>
+<p>For this model, we will use the following:</p>
+<ul>
+<li>A variety of image augmentations</li>
+<li>A ModelCheckpoint callback, so we can load the best model at the end</li>
+<li>ReduceLROnPlateau to reduce the learning rate when the training gets stuck</li>
+<li>SigmoidFocalCrossEntropy loss function, which is good for imbalanced classes</li>
+<li>128x128 image sizes, because my GPU only has 4GB of memory :)</li>
+</ul>
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+
+# Training-validation split
+training, validation = train_test_split(train, 
+                                        test_size = 0.2,
+                                        random_state = 42)
+</code></pre>
+<pre><code class="language-python">from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+SIZE = 128
+BATCH = 16
+TARGETS = ['healthy','multiple_diseases','rust','scab']
+
+# image augmentations
+image_gen = ImageDataGenerator(rescale=1./255,
+                                rotation_range=20,
+                                width_shift_range=0.2,
+                                height_shift_range=0.2,
+                                zoom_range=0.2,
+                                brightness_range=[0.5, 1.5],
+                                horizontal_flip=True,
+                                vertical_flip=True)
+
+# flow_from_dataframe generators
+train_generator = image_gen\
+    .flow_from_dataframe(train,
+                        directory=IMG_PATH,
+                        target_size=(SIZE, SIZE),
+                        x_col=&quot;image_id&quot;,
+                        y_col=TARGETS,
+                        class_mode='raw',
+                        shuffle=False,
+                        batch_size=BATCH)
+
+validation_generator = image_gen\
+    .flow_from_dataframe(validation,
+                        directory=IMG_PATH,
+                        target_size=(SIZE, SIZE),
+                        x_col=&quot;image_id&quot;,
+                        y_col=TARGETS,
+                        class_mode='raw',
+                        shuffle=False,
+                        batch_size=BATCH)
+
+test_generator = image_gen\
+    .flow_from_dataframe(test,
+                        directory=IMG_PATH,
+                        target_size=(SIZE, SIZE),
+                        x_col=&quot;image_id&quot;,
+                        y_col=None,
+                        class_mode=None,
+                        shuffle=False,
+                        batch_size=BATCH)
+</code></pre>
+<pre><code>Found 1821 validated image filenames.
+Found 365 validated image filenames.
+Found 1821 validated image filenames.
+</code></pre>
+<pre><code class="language-python">import efficientnet.keras as efn 
+import tensorflow_addons as tfa
+from tensorflow.keras.callbacks import Callback
+from keras.models import Model
+from keras.layers import Dense, GlobalAveragePooling2D
+from keras.callbacks import ReduceLROnPlateau, ModelCheckpoint
+from keras.optimizers import Adadelta
+
+# Callbacks
+## Keep the best model
+mc = ModelCheckpoint('model.hdf5', save_best_only=True, verbose=0, monitor='val_loss', mode='min')
+
+## Reduce learning rate if it gets stuck in a plateau
+rlr = ReduceLROnPlateau(monitor='val_loss', factor=0.3, patience=3, min_lr=0.000001, verbose=1)
+
+# Model
+## Define the base model with EfficientNet weights
+model = efn.EfficientNetB4(weights = 'imagenet', 
+                           include_top = False, 
+                           input_shape = (SIZE, SIZE, 3))
+
+## Output layer
+x = model.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(128, activation=&quot;relu&quot;)(x)
+x = Dense(64, activation=&quot;relu&quot;)(x)
+predictions = Dense(4, activation=&quot;softmax&quot;)(x)
+
+## Compile and run
+model = Model(inputs=model.input, outputs=predictions)
+
+model.compile(optimizer='adam',
+              loss=tfa.losses.SigmoidFocalCrossEntropy(), 
+              metrics=['accuracy'])
+
+model_history = model.fit(train_generator,
+                            validation_data=validation_generator,
+                            steps_per_epoch=train_generator.n/BATCH,
+                            validation_steps=validation_generator.n/BATCH,
+                            epochs=7,
+                            verbose=1,
+                            callbacks = [rlr, mc])
+</code></pre>
+<pre><code>Epoch 1/7
+114/113 [==============================] - 96s 844ms/step - loss: 0.1770 - accuracy: 0.6425 - val_loss: 0.2638 - val_accuracy: 0.7589
+Epoch 2/7
+114/113 [==============================] - 68s 595ms/step - loss: 0.1193 - accuracy: 0.8034 - val_loss: 0.1677 - val_accuracy: 0.7890
+Epoch 3/7
+114/113 [==============================] - 68s 597ms/step - loss: 0.1116 - accuracy: 0.8276 - val_loss: 0.1171 - val_accuracy: 0.8137
+Epoch 4/7
+114/113 [==============================] - 68s 597ms/step - loss: 0.0851 - accuracy: 0.8655 - val_loss: 0.1628 - val_accuracy: 0.8630
+Epoch 5/7
+114/113 [==============================] - 69s 601ms/step - loss: 0.0758 - accuracy: 0.8836 - val_loss: 0.0551 - val_accuracy: 0.9068
+Epoch 6/7
+114/113 [==============================] - 68s 600ms/step - loss: 0.0724 - accuracy: 0.8984 - val_loss: 0.0455 - val_accuracy: 0.9096
+Epoch 7/7
+114/113 [==============================] - 69s 602ms/step - loss: 0.0714 - accuracy: 0.8874 - val_loss: 0.0827 - val_accuracy: 0.8959
+</code></pre>
+<pre><code class="language-python"># Load best model
+#model.load_weights(&quot;model.hdf5&quot;)
+</code></pre>
+<pre><code class="language-python"># Plot training and validation accuracy
+acc = model_history.history['accuracy']
+val_acc = model_history.history['val_accuracy']
+loss = model_history.history['loss']
+val_loss = model_history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, acc, 'r', label='Training accuracy')
+plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
+plt.title('Training and validation accuracy')
+plt.legend()
+plt.figure()
+</code></pre>
+<pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<p><img src="output_13_1.png" alt="png"></p>
+<pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<h1 id="make-predictions">Make predictions</h1>
+<pre><code class="language-python"># Make predictions
+preds = model.predict(test_generator, steps=test_generator.n/BATCH)
+</code></pre>
+<h1 id="prepare-submission">Prepare submission</h1>
+<pre><code class="language-python"># Make submission
+sample_sub = pd.read_csv('sample_submission.csv')
+
+submission = pd.DataFrame({'image_id': sample_sub['image_id'],
+                           'healthy': preds[:,0],
+                           'multiple_diseases': preds[:,1],
+                           'rust': preds[:,2],
+                           'scab': preds[:,3]
+                         })
+submission.to_csv(&quot;submission.csv&quot;, index=False)
+submission.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>image_id</th>
+      <th>healthy</th>
+      <th>multiple_diseases</th>
+      <th>rust</th>
+      <th>scab</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Test_0</td>
+      <td>0.092860</td>
+      <td>0.169678</td>
+      <td>0.656923</td>
+      <td>0.080539</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Test_1</td>
+      <td>0.111859</td>
+      <td>0.198063</td>
+      <td>0.606325</td>
+      <td>0.083752</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Test_2</td>
+      <td>0.026520</td>
+      <td>0.044308</td>
+      <td>0.003016</td>
+      <td>0.926157</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Test_3</td>
+      <td>0.604854</td>
+      <td>0.147050</td>
+      <td>0.111277</td>
+      <td>0.136820</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Test_4</td>
+      <td>0.078862</td>
+      <td>0.118420</td>
+      <td>0.750966</td>
+      <td>0.051751</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" title="Predicting plant diseases with EfficientNet" target="_blank" rel="external">https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Data Scientist</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/" title="MNIST digit recognition using a convolutional neural net (CNN)"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2018  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

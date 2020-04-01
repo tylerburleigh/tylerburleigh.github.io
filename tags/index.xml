@@ -5,17 +5,27 @@
     <link>https://tylerburleigh.com/tags/</link>
     <description>Recent content in Tags on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>MNIST digit recognition using a convoluted neural net (CNN)</title>
-      <link>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/</link>
+      <title>Predicting plant diseases with EfficientNet</title>
+      <link>https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</guid>
+      <description>As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &amp;ldquo;fine-grained&amp;rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
+I ran into a few challenges here because the task was so compute intensive.</description>
+    </item>
+    
+    <item>
+      <title>MNIST digit recognition using a convolutional neural net (CNN)</title>
+      <link>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/</guid>
+      <guid>https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/</guid>
       <description>I&amp;rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&amp;rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&amp;rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition.</description>
     </item>
     
@@ -181,15 +191,6 @@ Machine learning models like this can be put to work generating predictions on n
       
       <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
       <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
-    </item>
-    
-    <item>
-      <title>What is fair payment on MTurk?</title>
-      <link>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</link>
-      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
-      <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
     </item>
     
   </channel>

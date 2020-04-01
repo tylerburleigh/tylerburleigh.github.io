@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        MNIST digit recognition using a convolutional neural net (CNN) - Tyler Burleigh
+        MNIST digit recognition using a convoluted neural net (CNN) - Tyler Burleigh
       </title>
     <head>
   <meta charset="utf-8">
@@ -25,19 +25,19 @@
   
   <meta name="description" content="I&amp;rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&amp;rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&amp;rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition." />
   <meta name="generator" content="Hugo 0.67.1 with theme pure" />
-  <title>MNIST digit recognition using a convolutional neural net (CNN) - Tyler Burleigh</title>
+  <title>MNIST digit recognition using a convoluted neural net (CNN) - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-  <meta property="og:title" content="MNIST digit recognition using a convolutional neural net (CNN)" />
+  <meta property="og:title" content="MNIST digit recognition using a convoluted neural net (CNN)" />
 <meta property="og:description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/" />
 <meta property="article:published_time" content="2020-03-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-03-29T00:00:00+00:00" />
-<meta itemprop="name" content="MNIST digit recognition using a convolutional neural net (CNN)">
+<meta itemprop="name" content="MNIST digit recognition using a convoluted neural net (CNN)">
 <meta itemprop="description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition.">
 <meta itemprop="datePublished" content="2020-03-29T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-03-29T00:00:00&#43;00:00" />
@@ -46,7 +46,7 @@
 
 
 <meta itemprop="keywords" content="python,keras,tensorflow,image recognition,neural networks," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MNIST digit recognition using a convolutional neural net (CNN)"/>
+<meta name="twitter:title" content="MNIST digit recognition using a convoluted neural net (CNN)"/>
 <meta name="twitter:description" content="I&rsquo;ve been working my way through the TensorFlow in Practice Specialization on Coursera. I&rsquo;m learning how to use neural networks to solve problems like image recognition. I decided to take a break from the course and try applying what I&rsquo;ve learned so far to one of the Kaggle competitions. The MNIST is a database of more than 50,000 handwritten numbers. The goal, usually, is to train a model that can be used for digit recognition."/>
 
   <!--[if lte IE 9]>
@@ -313,7 +313,7 @@
   <a
     class="article-title"
     href="/blog/mnist-digit-recognition-using-a-convoluted-neural-net-cnn/"
-    >MNIST digit recognition using a convolutional neural net (CNN)</a
+    >MNIST digit recognition using a convoluted neural net (CNN)</a
   >
 </h1>
 
@@ -610,9 +610,9 @@ axs[1, 1].imshow(train_images_full[0], cmap='gray')
 </code></pre>
 <pre><code>&lt;matplotlib.image.AxesImage at 0x7f9d45ee63c8&gt;
 </code></pre>
-<img src="/blog/mnist_digits.png">
+<img src="/blog/mnist-digits.png">
 <h1 id="convolutional-neural-network-cnn-with-kerastf">Convolutional Neural Network (CNN) with keras/tf</h1>
-<p>Finally, we&rsquo;ll train a simple Convolutional Neural Network (CNN) using keras/tensorflow. We&rsquo;ll set it up to do early stopping once the training accuracy reaches 99.5%, then we&rsquo;ll look at validation accuracy at that point.</p>
+<p>Finally, we&rsquo;ll train a simple Convoluted Neural Network (CNN) using keras/tensorflow. We&rsquo;ll set it up to do early stopping once the training accuracy reaches 99.5%, then we&rsquo;ll look at validation accuracy at that point.</p>
 <pre><code class="language-python"># Callback function so we can stop training once we've reached a desired level of accuracy.
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
@@ -696,7 +696,7 @@ plt.figure()
 </code></pre>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
 </code></pre>
-<p><img src="/blog/mnist_model_eval.png"></p>
+<p><img src="output_15_1.png" alt="png"></p>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
 </code></pre>
 <p>As we see, the validation accuracy sort of peaked after the second epoch, after which there was marginal improvement, but by epoch 3 we begin to see some overfitting (i.e., improvement in model fit to the training data without much improvement on the validation set) before our callback method eventually stopped the training.</p>
