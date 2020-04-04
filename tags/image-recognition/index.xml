@@ -5,13 +5,22 @@
     <link>https://tylerburleigh.com/tags/image-recognition/</link>
     <description>Recent content in image recognition on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/image-recognition/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Predicting plant diseases with EfficientNet</title>
+      <title>Identifying pneumonia from chest x-rays using EfficientNet</title>
+      <link>https://tylerburleigh.com/blog/predicting-pneumonia-from-chest-x-rays-using-efficientnet/</link>
+      <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/predicting-pneumonia-from-chest-x-rays-using-efficientnet/</guid>
+      <description>In my last post I used EfficientNet to identify plant diseases. I was surprised at how well this pre-trained model worked, with so few modifications, and I was curious how an approach like this might generalize to other visual image detection problems. In this post I use a similar approach to identify childhood pneumonia from chest x-ray images, using the Chest X-Ray Images (Pneumonia) dataset on Kaggle. Using this approach, I was able to achieve 97% accuracy, 97% precision, and 97% recall.</description>
+    </item>
+    
+    <item>
+      <title>Identifying plant diseases with EfficientNet</title>
       <link>https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -182,15 +191,6 @@ Machine learning models like this can be put to work generating predictions on n
       
       <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
       <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
-    </item>
-    
-    <item>
-      <title>pyMTurkR: An R package for MTurk Requesters</title>
-      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
-      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
-      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
     </item>
     
   </channel>

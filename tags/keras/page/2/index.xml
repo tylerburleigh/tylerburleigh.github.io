@@ -5,10 +5,19 @@
     <link>https://tylerburleigh.com/tags/keras/</link>
     <description>Recent content in keras on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/keras/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
+    </item>
     
     <item>
       <title>What is fair payment on MTurk?</title>
@@ -44,7 +53,7 @@
       
       <guid>https://tylerburleigh.com/page/writings/</guid>
       <description>I’ve written things about science and some were peer-reviewed and published.
-As of 2020-04-01, my papers were cited 370 times and my h-index was 8. (source: Google Scholar)
+As of 2020-04-04, my papers were cited 374 times and my h-index was 8. (source: Google Scholar)
 Peer-Reviewed PublicationsUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
 Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M.</description>
     </item>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Predicting plant diseases with EfficientNet - Tyler Burleigh
+        Identifying plant diseases with EfficientNet - Tyler Burleigh
       </title>
     <head>
   <meta charset="utf-8">
@@ -26,20 +26,20 @@
   <meta name="description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &amp;ldquo;fine-grained&amp;rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
 I ran into a few challenges here because the task was so compute intensive." />
   <meta name="generator" content="Hugo 0.67.1 with theme pure" />
-  <title>Predicting plant diseases with EfficientNet - Tyler Burleigh</title>
+  <title>Identifying plant diseases with EfficientNet - Tyler Burleigh</title>
   
 
   <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
   <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-  <meta property="og:title" content="Predicting plant diseases with EfficientNet" />
+  <meta property="og:title" content="Identifying plant diseases with EfficientNet" />
 <meta property="og:description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
 I ran into a few challenges here because the task was so compute intensive." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" />
 <meta property="article:published_time" content="2020-04-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-01T00:00:00+00:00" />
-<meta itemprop="name" content="Predicting plant diseases with EfficientNet">
+<meta itemprop="name" content="Identifying plant diseases with EfficientNet">
 <meta itemprop="description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
 I ran into a few challenges here because the task was so compute intensive.">
 <meta itemprop="datePublished" content="2020-04-01T00:00:00&#43;00:00" />
@@ -48,8 +48,8 @@ I ran into a few challenges here because the task was so compute intensive.">
 
 
 
-<meta itemprop="keywords" content="python,keras,tensorflow,image recognition,neural networks,transfer learning," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Predicting plant diseases with EfficientNet"/>
+<meta itemprop="keywords" content="python,keras,tensorflow,image recognition,neural networks,efficientnet,imagenet," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Identifying plant diseases with EfficientNet"/>
 <meta name="twitter:description" content="As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the Plant Pathology dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making &ldquo;fine-grained&rdquo; visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.
 I ran into a few challenges here because the task was so compute intensive."/>
 
@@ -146,7 +146,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
     <h3 class="widget-title"> Categories</h3>
     <div class="widget-body">
         <ul class="category-list">
-            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">12</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">13</span></li>
             <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
             <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">2</span></li>
             <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">5</span></li>
@@ -180,6 +180,10 @@ I ran into a few challenges here because the task was so compute intensive."/>
                     class="tag-list-count">3</span></li>
             
             
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/efficientnet/" class="tag-list-link">efficientnet</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
                     class="tag-list-count">1</span></li>
             
@@ -197,6 +201,10 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/image-recognition/" class="tag-list-link">image-recognition</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/imagenet/" class="tag-list-link">imagenet</a><span
                     class="tag-list-count">2</span></li>
             
             
@@ -213,7 +221,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/keras/" class="tag-list-link">keras</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
@@ -229,7 +237,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/neural-networks/" class="tag-list-link">neural-networks</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
@@ -241,7 +249,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
-                    class="tag-list-count">11</span></li>
+                    class="tag-list-count">12</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
@@ -273,7 +281,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tensorflow/" class="tag-list-link">tensorflow</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">3</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
@@ -282,10 +290,6 @@ I ran into a few challenges here because the task was so compute intensive."/>
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
                     class="tag-list-count">2</span></li>
-            
-            
-            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/transfer-learning/" class="tag-list-link">transfer-learning</a><span
-                    class="tag-list-count">1</span></li>
             
             
             <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
@@ -321,7 +325,7 @@ I ran into a few challenges here because the task was so compute intensive."/>
   <a
     class="article-title"
     href="/blog/predicting-plant-diseases-using-efficientnet/"
-    >Predicting plant diseases with EfficientNet</a
+    >Identifying plant diseases with EfficientNet</a
   >
 </h1>
 
@@ -342,7 +346,8 @@ I ran into a few challenges here because the task was so compute intensive."/>
     <a class="article-tag-link" href="/tags/tensorflow/"> tensorflow </a>
     <a class="article-tag-link" href="/tags/image-recognition/"> image recognition </a>
     <a class="article-tag-link" href="/tags/neural-networks/"> neural networks </a>
-    <a class="article-tag-link" href="/tags/transfer-learning/"> transfer learning </a>
+    <a class="article-tag-link" href="/tags/efficientnet/"> efficientnet </a>
+    <a class="article-tag-link" href="/tags/imagenet/"> imagenet </a>
   </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/predicting-plant-diseases-using-efficientnet/#comments"
@@ -713,7 +718,7 @@ submission.head()
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>Permalink: </strong>
-      <a href="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" title="Predicting plant diseases with EfficientNet" target="_blank" rel="external">https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</a>
+      <a href="https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/" title="Identifying plant diseases with EfficientNet" target="_blank" rel="external">https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -751,6 +756,11 @@ submission.head()
                 <a href="https://tylerburleigh.com/blog/mnist-digit-recognition-using-a-convolutional-neural-net-cnn/" title="MNIST digit recognition using a convolutional neural net (CNN)"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+            <li class="next">
+                <a href="https://tylerburleigh.com/blog/predicting-pneumonia-from-chest-x-rays-using-efficientnet/"
+                    title="Identifying pneumonia from chest x-rays using EfficientNet"><span>Newer&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
         </ul>
         <div class="bar-right">
