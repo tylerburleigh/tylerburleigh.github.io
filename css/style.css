@@ -9273,6 +9273,11 @@ body.okayNav-loaded {
   .social-links li:after {
     clear: both;
   }
+
+  .social-links .tooltip {
+    display: none !important;
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
