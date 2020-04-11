@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        How many people live near a landmark / point-of-interest? - Tyler Burleigh
+      </title>
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  
+  <meta name="theme-color" content="#000000" />
+  
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <meta name="description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &amp;ldquo;walkable&amp;rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
+In this post, I start with a point-of-interest, &amp;ldquo;Times Square, NYC&amp;rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)." />
+  <meta name="generator" content="Hugo 0.67.1 with theme pure" />
+  <title>How many people live near a landmark / point-of-interest? - Tyler Burleigh</title>
+  
+
+  <link rel="stylesheet" href="https://tylerburleigh.com/css/style.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <meta property="og:title" content="How many people live near a landmark / point-of-interest?" />
+<meta property="og:description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tylerburleigh.com/blog/people-near-point-of-interest/" />
+<meta property="article:published_time" content="2020-04-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-11T00:00:00+00:00" />
+<meta itemprop="name" content="How many people live near a landmark / point-of-interest?">
+<meta itemprop="description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates).">
+<meta itemprop="datePublished" content="2020-04-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="719">
+
+
+
+<meta itemprop="keywords" content="python,GIS,Census,folium,mapping," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How many people live near a landmark / point-of-interest?"/>
+<meta name="twitter:description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)."/>
+
+  <!--[if lte IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+  </head>
+  
+
+  <body class="main-center" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://tylerburleigh.com" target="_blank">
+            <img class="img-circle img-rotate" src="https://tylerburleigh.com/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Tyler Burleigh</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Data Scientist</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>NYC</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="Type something..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-blog">
+                <a href="/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">Blog</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/page/about">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">About</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-publications">
+                <a href="/page/writings/">
+                    <i class="icon icon-book-fill"></i>
+                  <span class="menu-title">Publications</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title"> Categories</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/analysis/" class="category-list-link">analysis</a><span class="category-list-count">13</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/dataviz/" class="category-list-link">dataviz</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/misc/" class="category-list-link">misc</a><span class="category-list-count">1</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/research/" class="category-list-link">research</a><span class="category-list-count">2</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/software/" class="category-list-link">software</a><span class="category-list-count">5</span></li>
+            <li class="category-list-item"><a href="https://tylerburleigh.com/categories/tutorial/" class="category-list-link">tutorial</a><span class="category-list-count">2</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> Tags</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/boosting/" class="tag-list-link">boosting</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/categorical/" class="tag-list-link">categorical</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/census/" class="tag-list-link">census</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/churn/" class="tag-list-link">churn</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/data-visualization/" class="tag-list-link">data-visualization</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/eda/" class="tag-list-link">eda</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/efficientnet/" class="tag-list-link">efficientnet</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/encoding/" class="tag-list-link">encoding</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/equity/" class="tag-list-link">equity</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/feature-selection/" class="tag-list-link">feature-selection</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/folium/" class="tag-list-link">folium</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/frontend/" class="tag-list-link">frontend</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/gis/" class="tag-list-link">gis</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/image-recognition/" class="tag-list-link">image-recognition</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/imagenet/" class="tag-list-link">imagenet</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/interactive/" class="tag-list-link">interactive</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/javascript/" class="tag-list-link">javascript</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/kaggle/" class="tag-list-link">kaggle</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/keras/" class="tag-list-link">keras</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/logistic-regression/" class="tag-list-link">logistic-regression</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/machine-learning/" class="tag-list-link">machine-learning</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mapping/" class="tag-list-link">mapping</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/mturk/" class="tag-list-link">mturk</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/neural-networks/" class="tag-list-link">neural-networks</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nodejs/" class="tag-list-link">nodejs</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/nutrition/" class="tag-list-link">nutrition</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/python/" class="tag-list-link">python</a><span
+                    class="tag-list-count">13</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/r/" class="tag-list-link">r</a><span
+                    class="tag-list-count">9</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/random-forest/" class="tag-list-link">random-forest</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/regression/" class="tag-list-link">regression</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/research/" class="tag-list-link">research</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/scraping/" class="tag-list-link">scraping</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/sms/" class="tag-list-link">sms</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/software/" class="tag-list-link">software</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/tensorflow/" class="tag-list-link">tensorflow</a><span
+                    class="tag-list-count">3</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/timeseries/" class="tag-list-link">timeseries</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/titanic/" class="tag-list-link">titanic</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/twilio/" class="tag-list-link">twilio</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://tylerburleigh.com/tags/voila/" class="tag-list-link">voila</a><span
+                    class="tag-list-count">1</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">Catalogue</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-people-near-point-of-interest" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/blog/people-near-point-of-interest/"
+    >How many people live near a landmark / point-of-interest?</a
+  >
+</h1>
+
+      <div class="article-meta">
+        <span class="article-date">
+  <i class="icon icon-calendar-check"></i>
+<a href="https://tylerburleigh.com/blog/people-near-point-of-interest/" class="article-date">
+  <time datetime="2020-04-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2020-04-11</time>
+</a>
+</span><span class="article-category">
+  <i class="icon icon-folder"></i>
+  <a class="article-category-link" href="/categories/misc/"> Misc </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+    <a class="article-tag-link" href="/tags/python/"> python </a>
+    <a class="article-tag-link" href="/tags/gis/"> GIS </a>
+    <a class="article-tag-link" href="/tags/census/"> Census </a>
+    <a class="article-tag-link" href="/tags/folium/"> folium </a>
+    <a class="article-tag-link" href="/tags/mapping/"> mapping </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/blog/people-near-point-of-interest/#comments"
+            class="article-comment-link">Comments</a></span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <p>It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.</p>
+<p>In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates).</p>
+<p>If we wanted to go a bit further down this path of estimating &ldquo;population within walking distance&rdquo; we could take this approach and expand it to include all census tracts within a certain distance of our POI census tract. I used this approach one time to understand the potential &ldquo;reach&rdquo; of outdoor neighborhood advertising.</p>
+<pre><code class="language-python">from census import Census
+from us import states
+import censusgeocode as cg
+import folium
+import geocoder
+import pprint
+import wget
+import zipfile
+import shapefile as shp
+import pandas as pd
+from shapely.geometry import Polygon
+import numpy as np
+
+c = Census(&quot;MY_API_KEY&quot;)
+</code></pre>
+<h1 id="geocoding-the-point-of-interest">Geocoding the point-of-interest</h1>
+<p>First we&rsquo;ll geocode our point-of-interest (POI) using <code>geocoder</code>. This will give us the latitude and longitude coordinates, among other things.</p>
+<pre><code class="language-python">poi = geocoder.osm('Times Square').json
+
+# Print keys
+pprint.pprint(poi.keys())
+
+print(&quot;\n&quot; + poi['address'])
+</code></pre>
+<pre><code>dict_keys(['accuracy', 'address', 'bbox', 'city', 'confidence', 'country', 'country_code', 'county', 'icon', 'importance', 'lat', 'lng', 'ok', 'osm_id', 'osm_type', 'place_id', 'place_rank', 'postal', 'quality', 'raw', 'region', 'state', 'status', 'street', 'suburb', 'type'])
+
+Times Square, West 45th Street, Times Square, Theater District, Manhattan Community Board 5, Manhattan, New York County, New York, 10036, United States of America
+</code></pre>
+<p>Next, we&rsquo;ll use <code>censusgeocode</code> to get the geo IDs used by the census. As input, we&rsquo;ll use the latitude and longitude from the previous geocoding.</p>
+<pre><code class="language-python">poi_cg = cg.coordinates(y = poi['lat'], x = poi['lng'])
+
+# Print top-level keys
+pprint.pprint(poi_cg.keys())
+
+# Print Census Tract keys
+pprint.pprint(poi_cg['Census Tracts'][0].keys())
+</code></pre>
+<pre><code>dict_keys(['2010 Census Blocks', 'States', 'Counties', 'Census Tracts'])
+dict_keys(['GEOID', 'CENTLAT', 'AREAWATER', 'STATE', 'BASENAME', 'OID', 'LSADC', 'FUNCSTAT', 'INTPTLAT', 'NAME', 'OBJECTID', 'TRACT', 'CENTLON', 'AREALAND', 'INTPTLON', 'MTFCC', 'COUNTY', 'CENT', 'INTPT'])
+</code></pre>
+<h1 id="mapping-the-tract">Mapping the tract</h1>
+<p>First we&rsquo;ll find the shapefiles for NY state tracts using the <code>us</code> library.</p>
+<h2 id="getting-shapefiles">Getting shapefiles</h2>
+<pre><code class="language-python">shpurls = states.NY.shapefile_urls()
+for region, url in shpurls.items():
+    print(region, url)
+</code></pre>
+<pre><code>tract https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_36_tract10.zip
+cd https://www2.census.gov/geo/tiger/TIGER2010/CD/111/tl_2010_36_cd111.zip
+county https://www2.census.gov/geo/tiger/TIGER2010/COUNTY/2010/tl_2010_36_county10.zip
+state https://www2.census.gov/geo/tiger/TIGER2010/STATE/2010/tl_2010_36_state10.zip
+zcta https://www2.census.gov/geo/tiger/TIGER2010/ZCTA5/2010/tl_2010_36_zcta510.zip
+block https://www2.census.gov/geo/tiger/TIGER2010/TABBLOCK/2010/tl_2010_36_tabblock10.zip
+blockgroup https://www2.census.gov/geo/tiger/TIGER2010/BG/2010/tl_2010_36_bg10.zip
+</code></pre>
+<p>Now we&rsquo;ll download and unzip the shapefiles for the tract zip.</p>
+<pre><code class="language-python">wget.download('https://www2.census.gov/geo/tiger/TIGER2010/TRACT/2010/tl_2010_36_tract10.zip')
+with zipfile.ZipFile('tl_2010_36_tract10.zip', 'r') as zip_ref:
+    zip_ref.extractall()
+</code></pre>
+<pre><code>-1 / unknown
+</code></pre>
+<h2 id="converting-shapefile-to-lnglat-coords">Converting shapefile to LNG/LAT coords</h2>
+<p>Next, we&rsquo;ll read the shape files into a dataframe, giving us a &ldquo;coords&rdquo; column, using the <code>shapefile</code> library. Note that these will be in LNG, LAT (not LAT, LNG).</p>
+<pre><code class="language-python">def read_shapefile(sf):
+    &quot;&quot;&quot;
+    Read a shapefile into a Pandas dataframe with a 'coords' 
+    column holding the geometry information. This uses the pyshp
+    package
+    &quot;&quot;&quot;
+    fields = [x[0] for x in sf.fields][1:]
+    records = sf.records()
+    shps = [s.points for s in sf.shapes()]    
+    df = pd.DataFrame(columns=fields, data=records)
+    df = df.assign(coords=shps)
+    return df
+
+shp_path = 'tl_2010_36_tract10.shp'
+sf = shp.Reader(shp_path)
+df = read_shapefile(sf)
+</code></pre>
+<p>This is the tract we&rsquo;re interested in:</p>
+<pre><code class="language-python">poi_tract = df[df['GEOID10'] == poi_cg['Census Tracts'][0]['GEOID']].reset_index()
+poi_tract['coords']
+</code></pre>
+<pre><code>0    [(-73.985085, 40.758589), (-73.98225599999999,...
+Name: coords, dtype: object
+</code></pre>
+<h2 id="map-the-poi-marker-and-tract-polygon">Map the POI marker and tract polygon</h2>
+<p>Finally, we&rsquo;re ready to map the POI and the tract polygon in which it is located. We&rsquo;ll use <code>shapely</code> to get the polygon and <code>folium</code> to do the mapping.</p>
+<pre><code class="language-python"># Convert to Polygon
+poi_poly = Polygon(poi_tract['coords'][0])
+
+# Initialize map with zoom and custom tileset, centered on POI
+m = folium.Map(location=[poi['lat'], poi['lng']],
+               zoom_start=16,
+               tiles='cartodbpositron')
+
+# Add a map pin
+folium.Marker([poi['lat'], poi['lng']]).add_to(m)
+
+# Add the polygon
+folium.GeoJson(poi_poly).add_to(m)
+
+m
+</code></pre>
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="about:blank" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" data-html=PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgCiAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgTF9OT19UT1VDSCA9IGZhbHNlOwogICAgICAgICAgICBMX0RJU0FCTEVfM0QgPSBmYWxzZTsKICAgICAgICA8L3NjcmlwdD4KICAgIAogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuanMiPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0xLjEyLjQubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9qcy9ib290c3RyYXAubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzMuMi4wL2Nzcy9ib290c3RyYXAubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLXRoZW1lLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9mb250LWF3ZXNvbWUvNC42LjMvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL0xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLzIuMC4yL2xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL3Jhd2Nkbi5naXRoYWNrLmNvbS9weXRob24tdmlzdWFsaXphdGlvbi9mb2xpdW0vbWFzdGVyL2ZvbGl1bS90ZW1wbGF0ZXMvbGVhZmxldC5hd2Vzb21lLnJvdGF0ZS5jc3MiLz4KICAgIDxzdHlsZT5odG1sLCBib2R5IHt3aWR0aDogMTAwJTtoZWlnaHQ6IDEwMCU7bWFyZ2luOiAwO3BhZGRpbmc6IDA7fTwvc3R5bGU+CiAgICA8c3R5bGU+I21hcCB7cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7Ym90dG9tOjA7cmlnaHQ6MDtsZWZ0OjA7fTwvc3R5bGU+CiAgICAKICAgICAgICAgICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwKICAgICAgICAgICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgICAgICAgICAgPHN0eWxlPgogICAgICAgICAgICAgICAgI21hcF9kMjlmZWY4ZWIxOTc0YzRlOGJlMzRmMDNhNWNlY2Q4MyB7CiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgbGVmdDogMC4wJTsKICAgICAgICAgICAgICAgICAgICB0b3A6IDAuMCU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIDwvc3R5bGU+CiAgICAgICAgCjwvaGVhZD4KPGJvZHk+ICAgIAogICAgCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImZvbGl1bS1tYXAiIGlkPSJtYXBfZDI5ZmVmOGViMTk3NGM0ZThiZTM0ZjAzYTVjZWNkODMiID48L2Rpdj4KICAgICAgICAKPC9ib2R5Pgo8c2NyaXB0PiAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzID0gTC5tYXAoCiAgICAgICAgICAgICAgICAibWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzIiwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjZW50ZXI6IFs0MC43NTcyODA1NTAwMDAwMDQsIC03My45ODU4NTUwMzU0NTkxN10sCiAgICAgICAgICAgICAgICAgICAgY3JzOiBMLkNSUy5FUFNHMzg1NywKICAgICAgICAgICAgICAgICAgICB6b29tOiAxNiwKICAgICAgICAgICAgICAgICAgICB6b29tQ29udHJvbDogdHJ1ZSwKICAgICAgICAgICAgICAgICAgICBwcmVmZXJDYW52YXM6IGZhbHNlLAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApOwoKICAgICAgICAgICAgCgogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciB0aWxlX2xheWVyX2I5MTc0ZWE0MTBkNjRhMzQ4NWU0MzkxY2U3YzA3MTVjID0gTC50aWxlTGF5ZXIoCiAgICAgICAgICAgICAgICAiaHR0cHM6Ly9jYXJ0b2RiLWJhc2VtYXBzLXtzfS5nbG9iYWwuc3NsLmZhc3RseS5uZXQvbGlnaHRfYWxsL3t6fS97eH0ve3l9LnBuZyIsCiAgICAgICAgICAgICAgICB7ImF0dHJpYnV0aW9uIjogIlx1MDAyNmNvcHk7IFx1MDAzY2EgaHJlZj1cImh0dHA6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0XCJcdTAwM2VPcGVuU3RyZWV0TWFwXHUwMDNjL2FcdTAwM2UgY29udHJpYnV0b3JzIFx1MDAyNmNvcHk7IFx1MDAzY2EgaHJlZj1cImh0dHA6Ly9jYXJ0b2RiLmNvbS9hdHRyaWJ1dGlvbnNcIlx1MDAzZUNhcnRvREJcdTAwM2MvYVx1MDAzZSwgQ2FydG9EQiBcdTAwM2NhIGhyZWYgPVwiaHR0cDovL2NhcnRvZGIuY29tL2F0dHJpYnV0aW9uc1wiXHUwMDNlYXR0cmlidXRpb25zXHUwMDNjL2FcdTAwM2UiLCAiZGV0ZWN0UmV0aW5hIjogZmFsc2UsICJtYXhOYXRpdmVab29tIjogMTgsICJtYXhab29tIjogMTgsICJtaW5ab29tIjogMCwgIm5vV3JhcCI6IGZhbHNlLCAib3BhY2l0eSI6IDEsICJzdWJkb21haW5zIjogImFiYyIsICJ0bXMiOiBmYWxzZX0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfZDI5ZmVmOGViMTk3NGM0ZThiZTM0ZjAzYTVjZWNkODMpOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfZDI4YzFkZDMwYmM2NDc0YjljOTFiYTc0ZGY3NDgzOTcgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0MC43NTcyODA1NTAwMDAwMDQsIC03My45ODU4NTUwMzU0NTkxN10sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9kMjlmZWY4ZWIxOTc0YzRlOGJlMzRmMDNhNWNlY2Q4Myk7CiAgICAgICAgCiAgICAKICAgICAgICBmdW5jdGlvbiBnZW9fanNvbl9hOTcyNzZjOTdkYTk0YmM3YTBjYTQ1YWM1ODY0N2JiZF9vbkVhY2hGZWF0dXJlKGZlYXR1cmUsIGxheWVyKSB7CiAgICAgICAgICAgIGxheWVyLm9uKHsKICAgICAgICAgICAgICAgIGNsaWNrOiBmdW5jdGlvbihlKSB7CiAgICAgICAgICAgICAgICAgICAgbWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzLmZpdEJvdW5kcyhlLnRhcmdldC5nZXRCb3VuZHMoKSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwogICAgICAgIH07CiAgICAgICAgdmFyIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkID0gTC5nZW9Kc29uKG51bGwsIHsKICAgICAgICAgICAgICAgIG9uRWFjaEZlYXR1cmU6IGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX29uRWFjaEZlYXR1cmUsCiAgICAgICAgICAgIAogICAgICAgIH0pOwogICAgICAgIGZ1bmN0aW9uIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX2FkZCAoZGF0YSkgewogICAgICAgICAgICBnZW9fanNvbl9hOTcyNzZjOTdkYTk0YmM3YTBjYTQ1YWM1ODY0N2JiZC5hZGREYXRhKGRhdGEpCiAgICAgICAgICAgICAgICAuYWRkVG8obWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzKTsKICAgICAgICB9CiAgICAgICAgICAgIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX2FkZCh7ImNvb3JkaW5hdGVzIjogW1tbLTczLjk4NTA4NSwgNDAuNzU4NTg5XSwgWy03My45ODIyNTU5OTk5OTk5OSwgNDAuNzU3Mzg3XSwgWy03My45ODI3MTE5OTk5OTk5OSwgNDAuNzU2NzcxXSwgWy03My45ODMxNjc5OTk5OTk5OSwgNDAuNzU2MTM5OTk5OTk5OTk1XSwgWy03My45ODM2MjM5OTk5OTk5OSwgNDAuNzU1NTE2XSwgWy03My45ODQxMTgsIDQwLjc1NDg0Ml0sIFstNzMuOTg2Mzk4LCA0MC43NTU4MDRdLCBbLTczLjk4Njk0OSwgNDAuNzU2MDM2XSwgWy03My45ODk3OTEsIDQwLjc1NzIzNF0sIFstNzMuOTg5Mjk3LCA0MC43NTc5MDY5OTk5OTk5OTZdLCBbLTczLjk4ODg0MTk5OTk5OTk5LCA0MC43NTg1MzNdLCBbLTczLjk4ODM5MSwgNDAuNzU5MTY0XSwgWy03My45ODc5MjcsIDQwLjc1OTc5MV0sIFstNzMuOTg1MzIyLCA0MC43NTg2ODY5OTk5OTk5OTVdLCBbLTczLjk4NTA4NSwgNDAuNzU4NTg5XV1dLCAidHlwZSI6ICJQb2x5Z29uIn0pOwogICAgICAgIAo8L3NjcmlwdD4= onload="this.contentDocument.open();this.contentDocument.write(atob(this.getAttribute('data-html')));this.contentDocument.close();" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+<h1 id="population-for-census-tract">Population for census tract</h1>
+<p>Now, the last step is finding the population for this census tract.</p>
+<p>The variable we are interested in is <code>B01003_001E</code>, an estimate of the total population. A full list of the variable codes and definitions can be found at the <a href="https://www.census.gov/data/developers/data-sets/acs-5year.html">ACS developer page</a> (see the &ldquo;2018 ACS Detailed Tables Variables&rdquo;).</p>
+<pre><code class="language-python">poi_pop = c.acs5.state_county_tract(('NAME', 'B01003_001E'),
+                                     poi_cg['Census Tracts'][0]['STATE'], 
+                                     poi_cg['Census Tracts'][0]['COUNTY'], 
+                                     poi_cg['Census Tracts'][0]['TRACT'])
+
+poi_pop_str = str(round(poi_pop[0]['B01003_001E']))
+
+poi_pop_str
+</code></pre>
+<pre><code>'1027'
+</code></pre>
+<pre><code class="language-python">folium.Marker(
+    [poi['lat'], poi['lng']],
+    icon=folium.DivIcon(
+        icon_size=(150, 36),
+        icon_anchor=(0, 0),
+        html='&lt;div style=&quot;font-size: 10pt;\
+                          background:white;\
+                          padding:5px;\
+                          border:1px solid red&quot;&gt;\
+                          The population in the census tract\
+                          containing Times Square is ' + poi_pop_str + '\
+              &lt;/div&gt;',
+        )
+    ).add_to(m)
+
+m
+</code></pre>
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="about:blank" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" data-html=PCFET0NUWVBFIGh0bWw+CjxoZWFkPiAgICAKICAgIDxtZXRhIGh0dHAtZXF1aXY9ImNvbnRlbnQtdHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04IiAvPgogICAgCiAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgTF9OT19UT1VDSCA9IGZhbHNlOwogICAgICAgICAgICBMX0RJU0FCTEVfM0QgPSBmYWxzZTsKICAgICAgICA8L3NjcmlwdD4KICAgIAogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuanMiPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vY29kZS5qcXVlcnkuY29tL2pxdWVyeS0xLjEyLjQubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9qcy9ib290c3RyYXAubWluLmpzIj48L3NjcmlwdD4KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2NkbmpzLmNsb3VkZmxhcmUuY29tL2FqYXgvbGlicy9MZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy8yLjAuMi9sZWFmbGV0LmF3ZXNvbWUtbWFya2Vycy5qcyI+PC9zY3JpcHQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vbGVhZmxldEAxLjUuMS9kaXN0L2xlYWZsZXQuY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vbWF4Y2RuLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzMuMi4wL2Nzcy9ib290c3RyYXAubWluLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL21heGNkbi5ib290c3RyYXBjZG4uY29tL2Jvb3RzdHJhcC8zLjIuMC9jc3MvYm9vdHN0cmFwLXRoZW1lLm1pbi5jc3MiLz4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9tYXhjZG4uYm9vdHN0cmFwY2RuLmNvbS9mb250LWF3ZXNvbWUvNC42LjMvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzIi8+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL0xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLzIuMC4yL2xlYWZsZXQuYXdlc29tZS1tYXJrZXJzLmNzcyIvPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL3Jhd2Nkbi5naXRoYWNrLmNvbS9weXRob24tdmlzdWFsaXphdGlvbi9mb2xpdW0vbWFzdGVyL2ZvbGl1bS90ZW1wbGF0ZXMvbGVhZmxldC5hd2Vzb21lLnJvdGF0ZS5jc3MiLz4KICAgIDxzdHlsZT5odG1sLCBib2R5IHt3aWR0aDogMTAwJTtoZWlnaHQ6IDEwMCU7bWFyZ2luOiAwO3BhZGRpbmc6IDA7fTwvc3R5bGU+CiAgICA8c3R5bGU+I21hcCB7cG9zaXRpb246YWJzb2x1dGU7dG9wOjA7Ym90dG9tOjA7cmlnaHQ6MDtsZWZ0OjA7fTwvc3R5bGU+CiAgICAKICAgICAgICAgICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwKICAgICAgICAgICAgICAgIGluaXRpYWwtc2NhbGU9MS4wLCBtYXhpbXVtLXNjYWxlPTEuMCwgdXNlci1zY2FsYWJsZT1ubyIgLz4KICAgICAgICAgICAgPHN0eWxlPgogICAgICAgICAgICAgICAgI21hcF9kMjlmZWY4ZWIxOTc0YzRlOGJlMzRmMDNhNWNlY2Q4MyB7CiAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlOwogICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAuMCU7CiAgICAgICAgICAgICAgICAgICAgbGVmdDogMC4wJTsKICAgICAgICAgICAgICAgICAgICB0b3A6IDAuMCU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIDwvc3R5bGU+CiAgICAgICAgCjwvaGVhZD4KPGJvZHk+ICAgIAogICAgCiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImZvbGl1bS1tYXAiIGlkPSJtYXBfZDI5ZmVmOGViMTk3NGM0ZThiZTM0ZjAzYTVjZWNkODMiID48L2Rpdj4KICAgICAgICAKPC9ib2R5Pgo8c2NyaXB0PiAgICAKICAgIAogICAgICAgICAgICB2YXIgbWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzID0gTC5tYXAoCiAgICAgICAgICAgICAgICAibWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzIiwKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjZW50ZXI6IFs0MC43NTcyODA1NTAwMDAwMDQsIC03My45ODU4NTUwMzU0NTkxN10sCiAgICAgICAgICAgICAgICAgICAgY3JzOiBMLkNSUy5FUFNHMzg1NywKICAgICAgICAgICAgICAgICAgICB6b29tOiAxNiwKICAgICAgICAgICAgICAgICAgICB6b29tQ29udHJvbDogdHJ1ZSwKICAgICAgICAgICAgICAgICAgICBwcmVmZXJDYW52YXM6IGZhbHNlLAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICApOwoKICAgICAgICAgICAgCgogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciB0aWxlX2xheWVyX2I5MTc0ZWE0MTBkNjRhMzQ4NWU0MzkxY2U3YzA3MTVjID0gTC50aWxlTGF5ZXIoCiAgICAgICAgICAgICAgICAiaHR0cHM6Ly9jYXJ0b2RiLWJhc2VtYXBzLXtzfS5nbG9iYWwuc3NsLmZhc3RseS5uZXQvbGlnaHRfYWxsL3t6fS97eH0ve3l9LnBuZyIsCiAgICAgICAgICAgICAgICB7ImF0dHJpYnV0aW9uIjogIlx1MDAyNmNvcHk7IFx1MDAzY2EgaHJlZj1cImh0dHA6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0XCJcdTAwM2VPcGVuU3RyZWV0TWFwXHUwMDNjL2FcdTAwM2UgY29udHJpYnV0b3JzIFx1MDAyNmNvcHk7IFx1MDAzY2EgaHJlZj1cImh0dHA6Ly9jYXJ0b2RiLmNvbS9hdHRyaWJ1dGlvbnNcIlx1MDAzZUNhcnRvREJcdTAwM2MvYVx1MDAzZSwgQ2FydG9EQiBcdTAwM2NhIGhyZWYgPVwiaHR0cDovL2NhcnRvZGIuY29tL2F0dHJpYnV0aW9uc1wiXHUwMDNlYXR0cmlidXRpb25zXHUwMDNjL2FcdTAwM2UiLCAiZGV0ZWN0UmV0aW5hIjogZmFsc2UsICJtYXhOYXRpdmVab29tIjogMTgsICJtYXhab29tIjogMTgsICJtaW5ab29tIjogMCwgIm5vV3JhcCI6IGZhbHNlLCAib3BhY2l0eSI6IDEsICJzdWJkb21haW5zIjogImFiYyIsICJ0bXMiOiBmYWxzZX0KICAgICAgICAgICAgKS5hZGRUbyhtYXBfZDI5ZmVmOGViMTk3NGM0ZThiZTM0ZjAzYTVjZWNkODMpOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfZDI4YzFkZDMwYmM2NDc0YjljOTFiYTc0ZGY3NDgzOTcgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0MC43NTcyODA1NTAwMDAwMDQsIC03My45ODU4NTUwMzU0NTkxN10sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9kMjlmZWY4ZWIxOTc0YzRlOGJlMzRmMDNhNWNlY2Q4Myk7CiAgICAgICAgCiAgICAKICAgICAgICBmdW5jdGlvbiBnZW9fanNvbl9hOTcyNzZjOTdkYTk0YmM3YTBjYTQ1YWM1ODY0N2JiZF9vbkVhY2hGZWF0dXJlKGZlYXR1cmUsIGxheWVyKSB7CiAgICAgICAgICAgIGxheWVyLm9uKHsKICAgICAgICAgICAgICAgIGNsaWNrOiBmdW5jdGlvbihlKSB7CiAgICAgICAgICAgICAgICAgICAgbWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzLmZpdEJvdW5kcyhlLnRhcmdldC5nZXRCb3VuZHMoKSk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwogICAgICAgIH07CiAgICAgICAgdmFyIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkID0gTC5nZW9Kc29uKG51bGwsIHsKICAgICAgICAgICAgICAgIG9uRWFjaEZlYXR1cmU6IGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX29uRWFjaEZlYXR1cmUsCiAgICAgICAgICAgIAogICAgICAgIH0pOwogICAgICAgIGZ1bmN0aW9uIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX2FkZCAoZGF0YSkgewogICAgICAgICAgICBnZW9fanNvbl9hOTcyNzZjOTdkYTk0YmM3YTBjYTQ1YWM1ODY0N2JiZC5hZGREYXRhKGRhdGEpCiAgICAgICAgICAgICAgICAuYWRkVG8obWFwX2QyOWZlZjhlYjE5NzRjNGU4YmUzNGYwM2E1Y2VjZDgzKTsKICAgICAgICB9CiAgICAgICAgICAgIGdlb19qc29uX2E5NzI3NmM5N2RhOTRiYzdhMGNhNDVhYzU4NjQ3YmJkX2FkZCh7ImNvb3JkaW5hdGVzIjogW1tbLTczLjk4NTA4NSwgNDAuNzU4NTg5XSwgWy03My45ODIyNTU5OTk5OTk5OSwgNDAuNzU3Mzg3XSwgWy03My45ODI3MTE5OTk5OTk5OSwgNDAuNzU2NzcxXSwgWy03My45ODMxNjc5OTk5OTk5OSwgNDAuNzU2MTM5OTk5OTk5OTk1XSwgWy03My45ODM2MjM5OTk5OTk5OSwgNDAuNzU1NTE2XSwgWy03My45ODQxMTgsIDQwLjc1NDg0Ml0sIFstNzMuOTg2Mzk4LCA0MC43NTU4MDRdLCBbLTczLjk4Njk0OSwgNDAuNzU2MDM2XSwgWy03My45ODk3OTEsIDQwLjc1NzIzNF0sIFstNzMuOTg5Mjk3LCA0MC43NTc5MDY5OTk5OTk5OTZdLCBbLTczLjk4ODg0MTk5OTk5OTk5LCA0MC43NTg1MzNdLCBbLTczLjk4ODM5MSwgNDAuNzU5MTY0XSwgWy03My45ODc5MjcsIDQwLjc1OTc5MV0sIFstNzMuOTg1MzIyLCA0MC43NTg2ODY5OTk5OTk5OTVdLCBbLTczLjk4NTA4NSwgNDAuNzU4NTg5XV1dLCAidHlwZSI6ICJQb2x5Z29uIn0pOwogICAgICAgIAogICAgCiAgICAgICAgICAgIHZhciBtYXJrZXJfZTI1NTgyYjE1ZDY2NDZkY2E1OGNlMWI3YTQ4N2Q4ZTEgPSBMLm1hcmtlcigKICAgICAgICAgICAgICAgIFs0MC43NTcyODA1NTAwMDAwMDQsIC03My45ODU4NTUwMzU0NTkxN10sCiAgICAgICAgICAgICAgICB7fQogICAgICAgICAgICApLmFkZFRvKG1hcF9kMjlmZWY4ZWIxOTc0YzRlOGJlMzRmMDNhNWNlY2Q4Myk7CiAgICAgICAgCiAgICAKICAgICAgICAgICAgdmFyIGRpdl9pY29uX2Y5MDY3OTYyN2VlYzRhYzg5ZmZmMTYyODhhNzAzYWQ1ID0gTC5kaXZJY29uKHsiY2xhc3NOYW1lIjogImVtcHR5IiwgImh0bWwiOiAiXHUwMDNjZGl2IHN0eWxlPVwiZm9udC1zaXplOiAxMHB0OyAgICAgICAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDp3aGl0ZTsgICAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6NXB4OyAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyOjFweCBzb2xpZCByZWRcIlx1MDAzZSAgICAgICAgICAgICAgICAgICAgICAgICAgVGhlIHBvcHVsYXRpb24gaW4gdGhlIGNlbnN1cyB0cmFjdCAgICAgICAgICAgICAgICAgICAgICAgICAgY29udGFpbmluZyBUaW1lcyBTcXVhcmUgaXMgMTAyNyAgICAgICAgICAgICAgXHUwMDNjL2Rpdlx1MDAzZSIsICJpY29uQW5jaG9yIjogWzAsIDBdLCAiaWNvblNpemUiOiBbMTUwLCAzNl19KTsKICAgICAgICAgICAgbWFya2VyX2UyNTU4MmIxNWQ2NjQ2ZGNhNThjZTFiN2E0ODdkOGUxLnNldEljb24oZGl2X2ljb25fZjkwNjc5NjI3ZWVjNGFjODlmZmYxNjI4OGE3MDNhZDUpOwogICAgICAgIAo8L3NjcmlwdD4= onload="this.contentDocument.open();this.contentDocument.write(atob(this.getAttribute('data-html')));this.contentDocument.close();" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>Permalink: </strong>
+      <a href="https://tylerburleigh.com/blog/people-near-point-of-interest/" title="How many people live near a landmark / point-of-interest?" target="_blank" rel="external">https://tylerburleigh.com/blog/people-near-point-of-interest/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://tylerburleigh.com" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://tylerburleigh.com/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://tylerburleigh.com" target="_blank"><span class="text-dark">Tyler Burleigh</span><small class="ml-1x">Data Scientist</small></a></h3>
+        <div></div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://tylerburleigh.com/blog/predicting-pneumonia-from-chest-x-rays-using-efficientnet/" title="Identifying pneumonia from chest x-rays using EfficientNet"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;Older</span></a>
+            </li>
+        </ul>
+        <div class="bar-right">
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/tylerburleigh" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tylerburleigh" target="_blank" title="linkedin" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-linkedin"></i></a></li>
+    <li><a href="https://twitter.com/tylerburleigh" target="_blank" title="twitter" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-twitter"></i></a></li>
+</ul>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/r.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/html.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/css.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/bash.min.js"></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/application.js"></script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/plugin.js"></script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            ROOT_URL: 'https:\/\/tylerburleigh.com\/',
+            CONTENT_URL: 'https:\/\/tylerburleigh.com\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://tylerburleigh.com/js/insight.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-40957506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>
