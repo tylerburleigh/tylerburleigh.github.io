@@ -24,7 +24,7 @@
   
   
   <meta name="description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &amp;ldquo;walkable&amp;rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
-In this post, I start with a point-of-interest, &amp;ldquo;Times Square, NYC&amp;rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)." />
+In this post, I start with a point-of-interest, &amp;ldquo;Times Square, NYC&amp;rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates)." />
   <meta name="generator" content="Hugo 0.67.1 with theme pure" />
   <title>How many people live near a landmark / point-of-interest? - Tyler Burleigh</title>
   
@@ -34,24 +34,24 @@ In this post, I start with a point-of-interest, &amp;ldquo;Times Square, NYC&amp
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
   <meta property="og:title" content="How many people live near a landmark / point-of-interest?" />
 <meta property="og:description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
-In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)." />
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tylerburleigh.com/blog/people-near-point-of-interest/" />
 <meta property="article:published_time" content="2020-04-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-11T00:00:00+00:00" />
 <meta itemprop="name" content="How many people live near a landmark / point-of-interest?">
 <meta itemprop="description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
-In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates).">
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates).">
 <meta itemprop="datePublished" content="2020-04-11T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="719">
+<meta itemprop="wordCount" content="720">
 
 
 
 <meta itemprop="keywords" content="python,GIS,Census,folium,mapping," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How many people live near a landmark / point-of-interest?"/>
 <meta name="twitter:description" content="It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.
-In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates)."/>
+In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates)."/>
 
   <!--[if lte IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -365,7 +365,7 @@ In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;,
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
       <p>It can be useful to know how many people live near a landmark / point-of-interest (POI). For example, a location is often considered &ldquo;walkable&rdquo; if you can walk to it in 10 minutes or less. Understanding how many people live near a POI is one way of estimating how many people are within walking distance of a POI, if they were to walk from their home to the POI.</p>
-<p>In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract one of the smallest sub-divisions for which the Census provides population estimates).</p>
+<p>In this post, I start with a point-of-interest, &ldquo;Times Square, NYC&rdquo;, and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates).</p>
 <p>If we wanted to go a bit further down this path of estimating &ldquo;population within walking distance&rdquo; we could take this approach and expand it to include all census tracts within a certain distance of our POI census tract. I used this approach one time to understand the potential &ldquo;reach&rdquo; of outdoor neighborhood advertising.</p>
 <pre><code class="language-python">from census import Census
 from us import states
