@@ -5,10 +5,19 @@
     <link>https://tylerburleigh.com/categories/misc/</link>
     <description>Recent content in Misc on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/categories/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Use the Pareto principle to watch TV more efficiently</title>
+      <link>https://tylerburleigh.com/blog/use-the-pareto-principle-to-watch-tv-more-efficiently/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/use-the-pareto-principle-to-watch-tv-more-efficiently/</guid>
+      <description>The Pareto Principle says that &amp;ldquo;for many events, roughly 80% of the effects come from 20% of the causes&amp;rdquo;. What if you could get 80% of the enjoyment from a TV show by watching only the top 20% of its episodes?</description>
+    </item>
     
     <item>
       <title>How many people live near a landmark / point-of-interest?</title>
@@ -87,15 +96,6 @@ Machine learning models like this can be put to work generating predictions on n
     </item>
     
     <item>
-      <title>Comparing coronavirus trends in US, Italy, and China</title>
-      <link>https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/</link>
-      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/comparing-coronavirus-trends-in-us-italy-and-china/</guid>
-      <description>A simple prediction of coronavirus spread in the US, using case trends in China and Italy.</description>
-    </item>
-    
-    <item>
       <title>Is it safe to go outside?: Coronavirus on-peak/off-peak place indicator</title>
       <link>https://tylerburleigh.com/blog/is-it-safe-to-go-outside-coronavirus-on-peak-off-peak-place-indicator/</link>
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
@@ -168,15 +168,6 @@ Machine learning models like this can be put to work generating predictions on n
     </item>
     
     <item>
-      <title>Scraping the Mural Arts Philadephia website</title>
-      <link>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</link>
-      <pubDate>Sun, 22 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/exploring-philly-s-world-of-murals-pt1/</guid>
-      <description>A mini-tutorial on web scraping with R.</description>
-    </item>
-    
-    <item>
       <title>nutritionR: NLP nutrition analysis in R</title>
       <link>https://tylerburleigh.com/blog/nutritionr-nlp-nutrition-analysis-in-r/</link>
       <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
@@ -192,6 +183,15 @@ Machine learning models like this can be put to work generating predictions on n
       
       <guid>https://tylerburleigh.com/blog/yadsjma/</guid>
       <description>An analysis of the data science job market from scraped LinkedIn data</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
+      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
+      <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
     </item>
     
   </channel>
