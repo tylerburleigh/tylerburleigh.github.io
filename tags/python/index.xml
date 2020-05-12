@@ -5,10 +5,20 @@
     <link>https://tylerburleigh.com/tags/python/</link>
     <description>Recent content in python on Tyler Burleigh</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://tylerburleigh.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modeling cognitive impairment using NHANES data</title>
+      <link>https://tylerburleigh.com/blog/modeling-cognitive-impairment-using-nhanes-data/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/modeling-cognitive-impairment-using-nhanes-data/</guid>
+      <description>In this blog post, I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.
+As an outcome measure, I&amp;rsquo;ll create a composite index of cognition by combining data from the Animal Fluency and Digit Symbol Substitution tasks.</description>
+    </item>
     
     <item>
       <title>Use the Pareto principle to watch TV more efficiently</title>
@@ -183,15 +193,6 @@ Machine learning models like this can be put to work generating predictions on n
       
       <guid>https://tylerburleigh.com/blog/yadsjma/</guid>
       <description>An analysis of the data science job market from scraped LinkedIn data</description>
-    </item>
-    
-    <item>
-      <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
-      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
-      <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
     </item>
     
   </channel>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cognition on Tyler Burleigh</title>
+    <link>https://tylerburleigh.com/tags/cognition/</link>
+    <description>Recent content in cognition on Tyler Burleigh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://tylerburleigh.com/tags/cognition/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pyMTurkR (vignette): A HIT with a Qualification Test</title>
+      <link>https://tylerburleigh.com/blog/mturk-qualification-tests/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/mturk-qualification-tests/</guid>
+      <description>A tutorial on using pyMTurkR to create a HIT with a Qualification Test.</description>
+    </item>
+    
+    <item>
+      <title>pyMTurkR: An R package for MTurk Requesters</title>
+      <link>https://tylerburleigh.com/blog/introducing-pymturkr/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/introducing-pymturkr/</guid>
+      <description>I wrote an R package for the MTurk Requester API because MTurkR was being deprecated. I call it &amp;ldquo;pyMTurkR&amp;rdquo; because it uses R reticulate to interact with the python boto3 library for API access.</description>
+    </item>
+    
+    <item>
+      <title>What is fair payment on MTurk?</title>
+      <link>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</link>
+      <pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/what-is-fair-payment-on-mturk/</guid>
+      <description>A mini research study on what MTUrk workers consider to be fair compensation. I have used MTurk a lot in the past, so I wanted to know if what I was paying was fair.</description>
+    </item>
+    
+    <item>
+      <title>Surviving the Titanic with R caret</title>
+      <link>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</link>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/blog/surviving-the-titanic-with-r-caret/</guid>
+      <description>I use R to tackle the Kaggle Titanic data science competition.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://tylerburleigh.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/about/</guid>
+      <description>For more than ten years, I’ve been working at the intersection of behavior change and data science. From academia to healthcare tech startups to being a part of the industry’s first Behavioral Science team, I’ve been applying rigorous scientific methods and data analytics to improve decision-making in business, always with the goal of driving towards decisions that make the world a better place.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://tylerburleigh.com/page/writings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/writings/</guid>
+      <description>I’ve written things about science and some were peer-reviewed and published.
+As of 2020-05-12, my papers were cited 387 times and my h-index was 8. (source: Google Scholar)
+Peer-Reviewed PublicationsUncanny ValleyBurleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity: The importance of looking at individual-level response patterns. Interaction Studies, 16(2). [PDF]
+Ferrey, A., Burleigh, T. J., &amp;amp; Fenske, M.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://tylerburleigh.com/page/teachings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tylerburleigh.com/page/teachings/</guid>
+      <description>I’ve given educational talks and lectures from time to time. Here are some of the talks I’ve given in industry settings for non-academic audiences.
+Research2020/02 - Control in research design
+I talk about what “control” means in research design, and what some basic controlled research designs look like.
+Psychology2019/04 - A whirlwind tour of persuasion psychology
+I talk about the foundations of persuasion psychology. Covers human evolution, irrationality, heuristics and biases, cognitive dissonance, and social norms.</description>
+    </item>
+    
+  </channel>
+</rss>
