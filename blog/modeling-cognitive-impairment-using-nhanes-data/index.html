@@ -712,7 +712,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_arr, y2,
                                                     stratify=y2)
 </code></pre>
 <h2 id="baseline-model">Baseline model</h2>
-<p>I&rsquo;ll train a baseline xgboost model, without any pre-processing or parameter tuning. This will give me a general sense of the model&rsquo;s performance.</p>
+<p>I&rsquo;ll train a baseline xgboost model, without any parameter tuning. This will give me a general sense of the model&rsquo;s performance.</p>
 <pre><code class="language-python">model = XGBClassifier()
 model.fit(X_train, y_train)
 </code></pre>
