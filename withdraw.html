@@ -17,15 +17,15 @@ This dilemma can be avoided by adding a withdraw button in the survey that, once
  	<li>Add a new element nested under this Branch element, set it to <strong>End of Survey</strong>.</li>
  	<li>Then <strong>Move</strong> the branch element to the top of the Survey Flow.</li>
 </ul>
-It should look like this in the end:
+It should look like this in the end:<br><br>
 
-<img src="https://i.imgur.com/NoQmx10.jpg" alt="https://i.imgur.com/NoQmx10.jpg" />
+<img src="https://i.imgur.com/NoQmx10.jpg" alt="https://i.imgur.com/NoQmx10.jpg" /><br><br>
 
 Here's what this element does. It says: "If someone navigates to the survey using a link that contains 'withdraw=true' as embedded data, then go to the end of the survey". In this case, embedded data refers to a URL parameter. This could be done by you navigating to <strong>https://yoursurveylink.com?withdraw=true </strong>(which is exactly what we will program the withdraw button to do in a subsequent step!).
 <h1>2.</h1>
-Change the theme of your Qualtrics survey to "Qualtrics 2014" (it is one of the default themes). To do this, go to <strong>Look &amp; Feel</strong> click <strong>Change Theme</strong> and locate Qualtrics 2014.
+Change the theme of your Qualtrics survey to "Qualtrics 2014" (it is one of the default themes). To do this, go to <strong>Look &amp; Feel</strong> click <strong>Change Theme</strong> and locate Qualtrics 2014.<br><br>
 
-<img src="https://i.imgur.com/z348I6H.jpg" alt="https://i.imgur.com/z348I6H.jpg" />
+<img src="https://i.imgur.com/z348I6H.jpg" alt="https://i.imgur.com/z348I6H.jpg" /><br><br>
 
 This theme must be used because the withdraw button inject code and style code is dependent on this theme's existing style elements.
 <h1>2.</h1>
@@ -102,7 +102,3 @@ This code will style the withdraw button that gets injected so that it looks lik
 That's it!
 
 <strong>Note: </strong>The withdraw button <strong>does not work </strong>in survey <strong>Preview</strong> mode. In order to test that it's working, you should use your survey's live link (the one created through the "Distributions" page).
-
-----
-
-Please see the <a href="httpss://tylerburleigh.com/mturk/survey-completion-codes-in-qualtrics/">Survey Completion Codes in Qualtrics</a> tutorial for instructions on how to configure an End of Survey message to present a unique completion code.
