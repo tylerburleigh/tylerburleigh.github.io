@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tyler Burleigh">
+<meta name="description" content="Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.">
+
+<title>Predicting t-shirt size from height and weight | Tyler Burleigh</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../..//files/favicon-512.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
+</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #170C3A;
+      }
+</style>
+
+
+<meta property="og:title" content="Predicting t-shirt size from height and weight | Tyler Burleigh">
+<meta property="og:description" content="Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.">
+<meta property="og:image" content="https://www.tylerburleigh.com/blog/2019/09/27/gildan_unisex_size_chart.png">
+<meta property="og:site-name" content="Tyler Burleigh">
+<meta property="og:image:height" content="341">
+<meta property="og:image:width" content="480">
+<meta name="twitter:title" content="Predicting t-shirt size from height and weight | Tyler Burleigh">
+<meta name="twitter:description" content="Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.">
+<meta name="twitter:image" content="https://www.tylerburleigh.com/blog/2019/09/27/gildan_unisex_size_chart.png">
+<meta name="twitter:image-height" content="341">
+<meta name="twitter:image-width" content="480">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Tyler Burleigh</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../cv/index.html" rel="" target="">
+ <span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../research/index.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/(tylerburleigh?)" rel="me" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tylerburleigh" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tylerburleigh" rel="me" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Predicting t-shirt size from height and weight</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">statistical-modeling</div>
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">prediction</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://www.tylerburleigh.com/">Tyler Burleigh</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Friday, September 27, 2019</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#the-model-and-the-data" id="toc-the-model-and-the-data" class="nav-link active" data-scroll-target="#the-model-and-the-data">The model and the data</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data wrangling</a>
+  <ul class="collapse">
+  <li><a href="#read-in-the-data" id="toc-read-in-the-data" class="nav-link" data-scroll-target="#read-in-the-data">Read in the data</a></li>
+  </ul></li>
+  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
+  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building">Model building</a>
+  <ul class="collapse">
+  <li><a href="#height-and-weight-model" id="toc-height-and-weight-model" class="nav-link" data-scroll-target="#height-and-weight-model">Height and weight model</a></li>
+  <li><a href="#body-mass-index-bmi-model" id="toc-body-mass-index-bmi-model" class="nav-link" data-scroll-target="#body-mass-index-bmi-model">Body Mass Index (BMI) model</a></li>
+  </ul></li>
+  <li><a href="#predicting-chest-size-from-height-weight-bmi-and-gender" id="toc-predicting-chest-size-from-height-weight-bmi-and-gender" class="nav-link" data-scroll-target="#predicting-chest-size-from-height-weight-bmi-and-gender">Predicting chest size from height, weight, BMI, and gender</a>
+  <ul class="collapse">
+  <li><a href="#predict-chest-size-given-height-weight-and-gender" id="toc-predict-chest-size-given-height-weight-and-gender" class="nav-link" data-scroll-target="#predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</a>
+  <ul class="collapse">
+  <li><a href="#height-weight-and-gender" id="toc-height-weight-and-gender" class="nav-link" data-scroll-target="#height-weight-and-gender">Height, weight, and gender</a></li>
+  <li><a href="#bmi-and-gender" id="toc-bmi-and-gender" class="nav-link" data-scroll-target="#bmi-and-gender">BMI and gender</a></li>
+  </ul></li>
+  <li><a href="#chest-size-to-shirt-size" id="toc-chest-size-to-shirt-size" class="nav-link" data-scroll-target="#chest-size-to-shirt-size">Chest size to shirt size</a></li>
+  </ul></li>
+  <li><a href="#wrapping-it-up-in-a-function" id="toc-wrapping-it-up-in-a-function" class="nav-link" data-scroll-target="#wrapping-it-up-in-a-function">Wrapping it up in a function</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
+<p>In fact, it seemed <em>so straight-forward</em> that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something! To my surprise, there wasn’t any, not that I could find anyway.</p>
+<p>I guess this is a problem that hasn’t received a lot of attention. Or at least, it’s not the sort of problem that someone in the open source / open science community has tackled.</p>
+<p>So I set out to build my own predictive algorithm.</p>
+<section id="the-model-and-the-data" class="level1">
+<h1>The model and the data</h1>
+<p>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</p>
+<p>I knew that the only information I’d have to predict shirt sizes from was: gender, height and weight. Sometimes I’d have body mass index (BMI) instead of height and weight.</p>
+<p>I also knew that I’d be sending “unisex” t-shirts. I’ve done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem – enter the “size chart”. Okay, so now I’d found a measurement that could be used to classify shirt sizes: <strong>chest size</strong>.</p>
+<p><img src="../../../../blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png" class="img-fluid"></p>
+<p>So now I just had to find a way to get from gender, height, and weight to chest size.</p>
+<p>I know from experience that there are several large public datasets that contain health and health-related measurements. One of these is the <a href="https://www.cdc.gov/nchs/nhanes">The National Health and Nutrition Examination Survey (NHANES)</a>, which is run by the CDC. I decided to poke around there and see what I could find. I found the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/default.aspx">variable search tool</a> and started keying in some of these variables: “height”, “weight”, “chest”, “bmi”, “gender”.</p>
+<p>Of course they would have gender, height, weight and BMI. It would be a pretty odd health and nutrition study if they didn’t have basic demographics and measurements. But chest measurement? The context seemed a bit odd. What does chest circumference have to do with health and nutrition?</p>
+<p>Maybe chest circumference is important if we’re talking about breathing? Eureka! NHANES does have chest measurements for inhalation and exhalation as part of the arthritis datasets!</p>
+<p>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009">2009-2010 cohort</a>, so I downloaded the dataset files for that cohort.</p>
+<p><img src="../../../../blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png" class="img-fluid"></p>
+<p>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</p>
+</section>
+<section id="data-wrangling" class="level1">
+<h1>Data wrangling</h1>
+<section id="read-in-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="read-in-the-data">Read in the data</h2>
+<p>Of course the data had to be in a SAS format. 🙄</p>
+<p>Luckily there’s an R package for reading SAS data files.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"ARX_F.XPT"</span>) <span class="co"># Arthritis data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"BMX_F.XPT"</span>) <span class="co"># Body measurements</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"DEMO_F.XPT"</span>) <span class="co"># Demographics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>These are the variables I’ll pull out from the different dataframes.</p>
+<ul>
+<li>SEQN - Participant ID</li>
+<li>ARXCCIN - Inhale chest circumference in CM</li>
+<li>BMXWT - Weight in KG</li>
+<li>BMXHT - Height in CM</li>
+<li>BMXBMI - Body Mass Index (BMI)</li>
+<li>DMDHRGND - Gender of participant (1 = Male, 2 = Female)</li>
+</ul>
+<p>I’m using the inhale chest circumference because I found in some exploratory analyses (not reported here) that it has a stronger correlation to the other measurements. I guess the exhale circumference was more noisy for some reason?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">chest_in_cm =</span> ARXCCIN) <span class="ot">-&gt;</span> chest_measures</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">weight_kg =</span> BMXWT, <span class="at">height_cm =</span> BMXHT, <span class="at">bmi =</span> BMXBMI) <span class="ot">-&gt;</span> height_weight</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">gender =</span> DMDHRGND) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gender =</span> <span class="fu">case_when</span>(gender <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"M"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"F"</span>)) <span class="ot">-&gt;</span> gender</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Join datasets and select only the rows that have all measurements</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>chest_measures <span class="sc">%&gt;%</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., height_weight, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., gender, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(chest_in_cm),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(height_cm), </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(weight_kg),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(gender), </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(bmi)) <span class="ot">-&gt;</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="correlations" class="level1">
+<h1>Correlations</h1>
+<p>I’ll check some basic correlations and descriptives. I see that men have larger chests than women, on average. And importantly, BMI does not correlate with chest size as well as weight.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>weight_kg, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9006851</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>height_cm, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4174028</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>bmi, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7850526</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(chest_in_cm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  gender  mean
+  &lt;chr&gt;  &lt;dbl&gt;
+1 F       95.1
+2 M       98.0</code></pre>
+</div>
+</div>
+</section>
+<section id="model-building" class="level1">
+<h1>Model building</h1>
+<p>I decided to build two models because sometimes I know a person’s height and weight but not their BMI, and other times I know their BMI but not their height and weight.</p>
+<p>Although I could take all of the heights and weights and convert them into BMIs, I’m guessing this could lead a loss of information. The correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it might be better to use height and weight when it’s available, but use BMI as a fallback when height and weight are not available.</p>
+<section id="height-and-weight-model" class="level2">
+<h2 class="anchored" data-anchor-id="height-and-weight-model">Height and weight model</h2>
+<p>To build a model, I’ll run a stepwise linear regression to determine the model of best fit. I’ll enter height, weight, and gender as predictors and allow interaction terms. I’ll use AIC (Akaike’s Information Criterion) for model selection, since it penalizes models with added complexity and I want a parsimonious model that doesn’t overfit the data.</p>
+<p>I see that the best model includes all terms, including <code>weight*height</code> and <code>weight*gender</code> interaction terms.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, height_cm, weight_kg, gender)), </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>   chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Start:  AIC=14857.43
+chest_in_cm ~ height_cm + weight_kg + gender
+
+                      Df Sum of Sq    RSS   AIC
++ height_cm:weight_kg  1       220 115291 14851
+- height_cm            1         2 115513 14856
++ weight_kg:gender     1        89 115421 14856
+&lt;none&gt;                             115510 14857
++ height_cm:gender     1         7 115503 14859
+- gender               1      2052 117563 14937
+- weight_kg            1    397116 512627 21725
+
+Step:  AIC=14850.64
+chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg
+
+                      Df Sum of Sq    RSS   AIC
++ weight_kg:gender     1    144.02 115147 14847
+&lt;none&gt;                             115291 14851
++ height_cm:gender     1     13.37 115277 14852
+- height_cm:weight_kg  1    219.87 115510 14857
+- gender               1   2064.63 117355 14930
+
+Step:  AIC=14846.88
+chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg + 
+    weight_kg:gender
+
+                      Df Sum of Sq    RSS   AIC
+&lt;none&gt;                             115147 14847
++ height_cm:gender     1     3.499 115143 14849
+- weight_kg:gender     1   144.020 115291 14851
+- height_cm:weight_kg  1   274.743 115421 14856</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg + 
+    weight_kg:gender, data = subset(df, select = c(chest_in_cm, 
+    height_cm, weight_kg, gender)))
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-21.3179  -3.2347   0.2087   3.4462  15.4911 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         41.491415   4.708485   8.812  &lt; 2e-16 ***
+height_cm            0.086786   0.028263   3.071 0.002148 ** 
+weight_kg            0.666925   0.055507  12.015  &lt; 2e-16 ***
+genderM             -0.030639   0.599462  -0.051 0.959239    
+height_cm:weight_kg -0.001087   0.000328  -3.314 0.000925 ***
+weight_kg:genderM    0.016955   0.007065   2.400 0.016449 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 5.001 on 4604 degrees of freedom
+Multiple R-squared:  0.8152,    Adjusted R-squared:  0.815 
+F-statistic:  4061 on 5 and 4604 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>height_weight_model <span class="ot">&lt;-</span> step.model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="body-mass-index-bmi-model" class="level2">
+<h2 class="anchored" data-anchor-id="body-mass-index-bmi-model">Body Mass Index (BMI) model</h2>
+<p>Now I’ll do the same with BMI and gender.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, bmi, gender)), chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Start:  AIC=17986.13
+chest_in_cm ~ bmi + gender
+
+             Df Sum of Sq    RSS   AIC
++ bmi:gender  1       725 227076 17973
+&lt;none&gt;                    227801 17986
+- gender      1     11229 239030 18206
+- bmi         1    385144 612946 22547
+
+Step:  AIC=17973.44
+chest_in_cm ~ bmi + gender + bmi:gender
+
+             Df Sum of Sq    RSS   AIC
+&lt;none&gt;                    227076 17973
+- bmi:gender  1    724.73 227801 17986</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = chest_in_cm ~ bmi + gender + bmi:gender, data = subset(df, 
+    select = c(chest_in_cm, bmi, gender)))
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-26.7682  -5.0630   0.2613   5.2463  23.2969 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 56.77733    0.66042  85.971  &lt; 2e-16 ***
+bmi          1.31235    0.02203  59.573  &lt; 2e-16 ***
+genderM     -0.34122    0.92789  -0.368 0.713084    
+bmi:genderM  0.11906    0.03105   3.834 0.000128 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 7.021 on 4606 degrees of freedom
+Multiple R-squared:  0.6355,    Adjusted R-squared:  0.6353 
+F-statistic:  2677 on 3 and 4606 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>bmi_model <span class="ot">&lt;-</span> step.model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="predicting-chest-size-from-height-weight-bmi-and-gender" class="level1">
+<h1>Predicting chest size from height, weight, BMI, and gender</h1>
+<p>Now that I have the models, I can use them to generate chest size predictions.</p>
+<section id="predict-chest-size-given-height-weight-and-gender" class="level2">
+<h2 class="anchored" data-anchor-id="predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</h2>
+<p>Next we’ll take the final model selected from the above procedure and use it to predict chest circumference, in inches, given height, weight, and gender.</p>
+<p>To test the model, I’ll use average values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 82.48026</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>height_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 168.0299</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>bmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 29.12334</code></pre>
+</div>
+</div>
+<section id="height-weight-and-gender" class="level3">
+<h3 class="anchored" data-anchor-id="height-weight-and-gender">Height, weight, and gender</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 cm = 0.393701 inches</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(height_weight_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+37.90109 </code></pre>
+</div>
+</div>
+</section>
+<section id="bmi-and-gender" class="level3">
+<h3 class="anchored" data-anchor-id="bmi-and-gender">BMI and gender</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> <span class="dv">29</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(bmi_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+37.33684 </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="chest-size-to-shirt-size" class="level2">
+<h2 class="anchored" data-anchor-id="chest-size-to-shirt-size">Chest size to shirt size</h2>
+<p>Finally, I’ll need to take the chest size prediction and convert it to a shirt size. Remember the size chart?</p>
+<p><img src="gildan_unisex_size_chart.png" class="img-fluid"></p>
+<p>For some reason the chart leaves out “XS” and the ranges lso don’t provide full coverage of the possible chest size values (34-36” and then 38-40”???). So I’ll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">chest =</span> <span class="fu">predict</span>(height_weight_model,input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">shirt_size =</span> <span class="fu">case_when</span>(</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&lt;</span> <span class="dv">32</span> <span class="sc">~</span> <span class="st">"XS"</span>,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     chest shirt_size
+1 37.90109          M</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="wrapping-it-up-in-a-function" class="level1">
+<h1>Wrapping it up in a function</h1>
+<p>And finally, I can put it in a function that will select the model to use for me, based on the information it’s been given.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>predict_shirt_size <span class="ot">&lt;-</span> <span class="cf">function</span>(height_cm, weight_kg, bmi, gender){</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(height_cm) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(weight_kg)){</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> height_cm, <span class="at">weight_kg =</span> weight_kg, <span class="at">gender =</span> gender)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(height_weight_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(bmi)){</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> bmi, <span class="at">gender =</span> gender)</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(bmi_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Just in case height, weight, and BMI are all missing</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span> <span class="co"># A value that gets ignored below</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  shirt_size <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">0</span>, <span class="dv">32</span>) <span class="sc">~</span> <span class="st">"XS"</span>,</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>              chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span>,</span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Defaults in case height, weight, BMI are missing</span></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>              <span class="co"># but gender is not</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"M"</span> <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Last resort</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>              <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"L"</span></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(shirt_size)</span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_shirt_size</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "M"</code></pre>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="tylerburleigh/tylerburleigh-com-quarto" data-repo-id="" data-category="Blog comments" data-category-id="DIC_kwDOIg6EJc4CSz92" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb36" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Predicting t-shirt size from height and weight'</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2019-09-27</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight."</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> gildan_unisex_size_chart.png</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "gildan_unisex_size_chart.png"</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="an">open-graph:</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "gildan_unisex_size_chart.png"</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - statistical-modeling</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - prediction</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender? </span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>In fact, it seemed *so straight-forward* that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post -- there had to be something! To my surprise, there wasn't any, not that I could find anyway. </span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>I guess this is a problem that hasn't received a lot of attention. Or at least, it's not the sort of problem that someone in the open source / open science community has tackled.</span>
+<span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-22"><a href="#cb36-22" aria-hidden="true" tabindex="-1"></a>So I set out to build my own predictive algorithm. </span>
+<span id="cb36-23"><a href="#cb36-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-24"><a href="#cb36-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># The model and the data</span></span>
+<span id="cb36-25"><a href="#cb36-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-26"><a href="#cb36-26" aria-hidden="true" tabindex="-1"></a>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</span>
+<span id="cb36-27"><a href="#cb36-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-28"><a href="#cb36-28" aria-hidden="true" tabindex="-1"></a>I knew that the only information I'd have to predict shirt sizes from was: gender, height and weight. Sometimes I'd have body mass index (BMI) instead of height and weight.</span>
+<span id="cb36-29"><a href="#cb36-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a>I also knew that I'd be sending "unisex" t-shirts. I've done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem -- enter the "size chart". Okay, so now I'd found a measurement that could be used to classify shirt sizes: **chest size**.</span>
+<span id="cb36-31"><a href="#cb36-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a><span class="al">![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png)</span></span>
+<span id="cb36-33"><a href="#cb36-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-34"><a href="#cb36-34" aria-hidden="true" tabindex="-1"></a>So now I just had to find a way to get from gender, height, and weight to chest size.</span>
+<span id="cb36-35"><a href="#cb36-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-36"><a href="#cb36-36" aria-hidden="true" tabindex="-1"></a>I know from experience that there are several large public datasets that contain health and health-related measurements. One of these is the <span class="co">[</span><span class="ot">The National Health and Nutrition Examination Survey (NHANES)</span><span class="co">](https://www.cdc.gov/nchs/nhanes)</span>, which is run by the CDC. I decided to poke around there and see what I could find. I found the <span class="co">[</span><span class="ot">variable search tool</span><span class="co">](https://wwwn.cdc.gov/nchs/nhanes/Search/default.aspx)</span> and started keying in some of these variables: "height", "weight", "chest", "bmi", "gender".</span>
+<span id="cb36-37"><a href="#cb36-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-38"><a href="#cb36-38" aria-hidden="true" tabindex="-1"></a>Of course they would have gender, height, weight and BMI. It would be a pretty odd health and nutrition study if they didn't have basic demographics and measurements. But chest measurement? The context seemed a bit odd. What does chest circumference have to do with health and nutrition?</span>
+<span id="cb36-39"><a href="#cb36-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-40"><a href="#cb36-40" aria-hidden="true" tabindex="-1"></a>Maybe chest circumference is important if we're talking about breathing? Eureka! NHANES does have chest measurements for inhalation and exhalation as part of the arthritis datasets!</span>
+<span id="cb36-41"><a href="#cb36-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-42"><a href="#cb36-42" aria-hidden="true" tabindex="-1"></a>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <span class="co">[</span><span class="ot">2009-2010 cohort</span><span class="co">](https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009)</span>, so I downloaded the dataset files for that cohort.</span>
+<span id="cb36-43"><a href="#cb36-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="al">![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png)</span></span>
+<span id="cb36-45"><a href="#cb36-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-46"><a href="#cb36-46" aria-hidden="true" tabindex="-1"></a>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</span>
+<span id="cb36-47"><a href="#cb36-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-48"><a href="#cb36-48" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data wrangling</span></span>
+<span id="cb36-49"><a href="#cb36-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-50"><a href="#cb36-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Read in the data</span></span>
+<span id="cb36-51"><a href="#cb36-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-52"><a href="#cb36-52" aria-hidden="true" tabindex="-1"></a>Of course the data had to be in a SAS format. 🙄</span>
+<span id="cb36-53"><a href="#cb36-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-54"><a href="#cb36-54" aria-hidden="true" tabindex="-1"></a>Luckily there's an R package for reading SAS data files.</span>
+<span id="cb36-55"><a href="#cb36-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-56"><a href="#cb36-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, warning = FALSE, message = FALSE}</span></span>
+<span id="cb36-57"><a href="#cb36-57" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
+<span id="cb36-58"><a href="#cb36-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb36-59"><a href="#cb36-59" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb36-60"><a href="#cb36-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-61"><a href="#cb36-61" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"ARX_F.XPT"</span>) <span class="co"># Arthritis data</span></span>
+<span id="cb36-62"><a href="#cb36-62" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"BMX_F.XPT"</span>) <span class="co"># Body measurements</span></span>
+<span id="cb36-63"><a href="#cb36-63" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"DEMO_F.XPT"</span>) <span class="co"># Demographics</span></span>
+<span id="cb36-64"><a href="#cb36-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-65"><a href="#cb36-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-66"><a href="#cb36-66" aria-hidden="true" tabindex="-1"></a>These are the variables I'll pull out from the different dataframes.</span>
+<span id="cb36-67"><a href="#cb36-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-68"><a href="#cb36-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>SEQN - Participant ID</span>
+<span id="cb36-69"><a href="#cb36-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ARXCCIN - Inhale chest circumference in CM</span>
+<span id="cb36-70"><a href="#cb36-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BMXWT - Weight in KG</span>
+<span id="cb36-71"><a href="#cb36-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BMXHT - Height in CM</span>
+<span id="cb36-72"><a href="#cb36-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BMXBMI - Body Mass Index (BMI)</span>
+<span id="cb36-73"><a href="#cb36-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>DMDHRGND - Gender of participant (1 = Male, 2 = Female)</span>
+<span id="cb36-74"><a href="#cb36-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-75"><a href="#cb36-75" aria-hidden="true" tabindex="-1"></a>I'm using the inhale chest circumference because I found in some exploratory analyses (not reported here) that it has a stronger correlation to the other measurements. I guess the exhale circumference was more noisy for some reason?</span>
+<span id="cb36-76"><a href="#cb36-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-79"><a href="#cb36-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-80"><a href="#cb36-80" aria-hidden="true" tabindex="-1"></a>a <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">chest_in_cm =</span> ARXCCIN) <span class="ot">-&gt;</span> chest_measures</span>
+<span id="cb36-81"><a href="#cb36-81" aria-hidden="true" tabindex="-1"></a>b <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">weight_kg =</span> BMXWT, <span class="at">height_cm =</span> BMXHT, <span class="at">bmi =</span> BMXBMI) <span class="ot">-&gt;</span> height_weight</span>
+<span id="cb36-82"><a href="#cb36-82" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">gender =</span> DMDHRGND) <span class="sc">%&gt;%</span></span>
+<span id="cb36-83"><a href="#cb36-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gender =</span> <span class="fu">case_when</span>(gender <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"M"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"F"</span>)) <span class="ot">-&gt;</span> gender</span>
+<span id="cb36-84"><a href="#cb36-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-85"><a href="#cb36-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Join datasets and select only the rows that have all measurements</span></span>
+<span id="cb36-86"><a href="#cb36-86" aria-hidden="true" tabindex="-1"></a>chest_measures <span class="sc">%&gt;%</span></span>
+<span id="cb36-87"><a href="#cb36-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., height_weight, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb36-88"><a href="#cb36-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., gender, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb36-89"><a href="#cb36-89" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(chest_in_cm),</span>
+<span id="cb36-90"><a href="#cb36-90" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(height_cm), </span>
+<span id="cb36-91"><a href="#cb36-91" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(weight_kg),</span>
+<span id="cb36-92"><a href="#cb36-92" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(gender), </span>
+<span id="cb36-93"><a href="#cb36-93" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(bmi)) <span class="ot">-&gt;</span> df</span>
+<span id="cb36-94"><a href="#cb36-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-95"><a href="#cb36-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-96"><a href="#cb36-96" aria-hidden="true" tabindex="-1"></a><span class="fu"># Correlations</span></span>
+<span id="cb36-97"><a href="#cb36-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-98"><a href="#cb36-98" aria-hidden="true" tabindex="-1"></a>I'll check some basic correlations and descriptives. I see that men have larger chests than women, on average. And importantly, BMI does not correlate with chest size as well as weight.</span>
+<span id="cb36-99"><a href="#cb36-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-102"><a href="#cb36-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-103"><a href="#cb36-103" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>weight_kg, df<span class="sc">$</span>chest_in_cm)</span>
+<span id="cb36-104"><a href="#cb36-104" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>height_cm, df<span class="sc">$</span>chest_in_cm)</span>
+<span id="cb36-105"><a href="#cb36-105" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>bmi, df<span class="sc">$</span>chest_in_cm)</span>
+<span id="cb36-106"><a href="#cb36-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-107"><a href="#cb36-107" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb36-108"><a href="#cb36-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb36-109"><a href="#cb36-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(chest_in_cm))</span>
+<span id="cb36-110"><a href="#cb36-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-111"><a href="#cb36-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-112"><a href="#cb36-112" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model building</span></span>
+<span id="cb36-113"><a href="#cb36-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-114"><a href="#cb36-114" aria-hidden="true" tabindex="-1"></a>I decided to build two models because sometimes I know a person's height and weight but not their BMI, and other times I know their BMI but not their height and weight. </span>
+<span id="cb36-115"><a href="#cb36-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-116"><a href="#cb36-116" aria-hidden="true" tabindex="-1"></a>Although I could take all of the heights and weights and convert them into BMIs, I'm guessing this could lead a loss of information. The correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it might be better to use height and weight when it's available, but use BMI as a fallback when height and weight are not available.</span>
+<span id="cb36-117"><a href="#cb36-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-118"><a href="#cb36-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## Height and weight model</span></span>
+<span id="cb36-119"><a href="#cb36-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-120"><a href="#cb36-120" aria-hidden="true" tabindex="-1"></a>To build a model, I'll run a stepwise linear regression to determine the model of best fit. I'll enter height, weight, and gender as predictors and allow interaction terms. I'll use AIC (Akaike's Information Criterion) for model selection, since it penalizes models with added complexity and I want a parsimonious model that doesn't overfit the data. </span>
+<span id="cb36-121"><a href="#cb36-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-122"><a href="#cb36-122" aria-hidden="true" tabindex="-1"></a>I see that the best model includes all terms, including <span class="in">`weight*height`</span> and <span class="in">`weight*gender`</span> interaction terms.</span>
+<span id="cb36-123"><a href="#cb36-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-126"><a href="#cb36-126" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-127"><a href="#cb36-127" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, height_cm, weight_kg, gender)), </span>
+<span id="cb36-128"><a href="#cb36-128" aria-hidden="true" tabindex="-1"></a>   chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
+<span id="cb36-129"><a href="#cb36-129" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb36-130"><a href="#cb36-130" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span>
+<span id="cb36-131"><a href="#cb36-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-132"><a href="#cb36-132" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
+<span id="cb36-133"><a href="#cb36-133" aria-hidden="true" tabindex="-1"></a>height_weight_model <span class="ot">&lt;-</span> step.model</span>
+<span id="cb36-134"><a href="#cb36-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-135"><a href="#cb36-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-136"><a href="#cb36-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Body Mass Index (BMI) model</span></span>
+<span id="cb36-137"><a href="#cb36-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-138"><a href="#cb36-138" aria-hidden="true" tabindex="-1"></a>Now I'll do the same with BMI and gender.</span>
+<span id="cb36-139"><a href="#cb36-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-142"><a href="#cb36-142" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-143"><a href="#cb36-143" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, bmi, gender)), chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
+<span id="cb36-144"><a href="#cb36-144" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb36-145"><a href="#cb36-145" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span>
+<span id="cb36-146"><a href="#cb36-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-147"><a href="#cb36-147" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
+<span id="cb36-148"><a href="#cb36-148" aria-hidden="true" tabindex="-1"></a>bmi_model <span class="ot">&lt;-</span> step.model</span>
+<span id="cb36-149"><a href="#cb36-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-150"><a href="#cb36-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-151"><a href="#cb36-151" aria-hidden="true" tabindex="-1"></a><span class="fu"># Predicting chest size from height, weight, BMI, and gender</span></span>
+<span id="cb36-152"><a href="#cb36-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-153"><a href="#cb36-153" aria-hidden="true" tabindex="-1"></a>Now that I have the models, I can use them to generate chest size predictions.</span>
+<span id="cb36-154"><a href="#cb36-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-155"><a href="#cb36-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-156"><a href="#cb36-156" aria-hidden="true" tabindex="-1"></a><span class="fu">## Predict chest size given height, weight, and gender</span></span>
+<span id="cb36-157"><a href="#cb36-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-158"><a href="#cb36-158" aria-hidden="true" tabindex="-1"></a>Next we'll take the final model selected from the above procedure and use it to predict chest circumference, in inches, given height, weight, and gender.</span>
+<span id="cb36-159"><a href="#cb36-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-160"><a href="#cb36-160" aria-hidden="true" tabindex="-1"></a>To test the model, I'll use average values.</span>
+<span id="cb36-161"><a href="#cb36-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-164"><a href="#cb36-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-165"><a href="#cb36-165" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>weight_kg)</span>
+<span id="cb36-166"><a href="#cb36-166" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>height_cm)</span>
+<span id="cb36-167"><a href="#cb36-167" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>bmi)</span>
+<span id="cb36-168"><a href="#cb36-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-169"><a href="#cb36-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-170"><a href="#cb36-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-171"><a href="#cb36-171" aria-hidden="true" tabindex="-1"></a><span class="fu">### Height, weight, and gender</span></span>
+<span id="cb36-172"><a href="#cb36-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-175"><a href="#cb36-175" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-176"><a href="#cb36-176" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb36-177"><a href="#cb36-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-178"><a href="#cb36-178" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 cm = 0.393701 inches</span></span>
+<span id="cb36-179"><a href="#cb36-179" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(height_weight_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb36-180"><a href="#cb36-180" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-181"><a href="#cb36-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-182"><a href="#cb36-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### BMI and gender</span></span>
+<span id="cb36-183"><a href="#cb36-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-186"><a href="#cb36-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-187"><a href="#cb36-187" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> <span class="dv">29</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb36-188"><a href="#cb36-188" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(bmi_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb36-189"><a href="#cb36-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-190"><a href="#cb36-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-191"><a href="#cb36-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-192"><a href="#cb36-192" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chest size to shirt size</span></span>
+<span id="cb36-193"><a href="#cb36-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-194"><a href="#cb36-194" aria-hidden="true" tabindex="-1"></a>Finally, I'll need to take the chest size prediction and convert it to a shirt size. Remember the size chart? </span>
+<span id="cb36-195"><a href="#cb36-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-196"><a href="#cb36-196" aria-hidden="true" tabindex="-1"></a><span class="al">![](gildan_unisex_size_chart.png)</span></span>
+<span id="cb36-197"><a href="#cb36-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-198"><a href="#cb36-198" aria-hidden="true" tabindex="-1"></a>For some reason the chart leaves out "XS" and the ranges lso don't provide full coverage of the possible chest size values (34-36" and then 38-40"???). So I'll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!</span>
+<span id="cb36-199"><a href="#cb36-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-202"><a href="#cb36-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-203"><a href="#cb36-203" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb36-204"><a href="#cb36-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-205"><a href="#cb36-205" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">chest =</span> <span class="fu">predict</span>(height_weight_model,input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-206"><a href="#cb36-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">shirt_size =</span> <span class="fu">case_when</span>(</span>
+<span id="cb36-207"><a href="#cb36-207" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&lt;</span> <span class="dv">32</span> <span class="sc">~</span> <span class="st">"XS"</span>,</span>
+<span id="cb36-208"><a href="#cb36-208" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
+<span id="cb36-209"><a href="#cb36-209" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb36-210"><a href="#cb36-210" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb36-211"><a href="#cb36-211" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
+<span id="cb36-212"><a href="#cb36-212" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
+<span id="cb36-213"><a href="#cb36-213" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
+<span id="cb36-214"><a href="#cb36-214" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
+<span id="cb36-215"><a href="#cb36-215" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span></span>
+<span id="cb36-216"><a href="#cb36-216" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb36-217"><a href="#cb36-217" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb36-218"><a href="#cb36-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-219"><a href="#cb36-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-220"><a href="#cb36-220" aria-hidden="true" tabindex="-1"></a><span class="fu"># Wrapping it up in a function</span></span>
+<span id="cb36-221"><a href="#cb36-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-222"><a href="#cb36-222" aria-hidden="true" tabindex="-1"></a>And finally, I can put it in a function that will select the model to use for me, based on the information it's been given.</span>
+<span id="cb36-223"><a href="#cb36-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-226"><a href="#cb36-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-227"><a href="#cb36-227" aria-hidden="true" tabindex="-1"></a>predict_shirt_size <span class="ot">&lt;-</span> <span class="cf">function</span>(height_cm, weight_kg, bmi, gender){</span>
+<span id="cb36-228"><a href="#cb36-228" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb36-229"><a href="#cb36-229" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(height_cm) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(weight_kg)){</span>
+<span id="cb36-230"><a href="#cb36-230" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> height_cm, <span class="at">weight_kg =</span> weight_kg, <span class="at">gender =</span> gender)</span>
+<span id="cb36-231"><a href="#cb36-231" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(height_weight_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb36-232"><a href="#cb36-232" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(bmi)){</span>
+<span id="cb36-233"><a href="#cb36-233" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> bmi, <span class="at">gender =</span> gender)</span>
+<span id="cb36-234"><a href="#cb36-234" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(bmi_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
+<span id="cb36-235"><a href="#cb36-235" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb36-236"><a href="#cb36-236" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Just in case height, weight, and BMI are all missing</span></span>
+<span id="cb36-237"><a href="#cb36-237" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span> <span class="co"># A value that gets ignored below</span></span>
+<span id="cb36-238"><a href="#cb36-238" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb36-239"><a href="#cb36-239" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb36-240"><a href="#cb36-240" aria-hidden="true" tabindex="-1"></a>  shirt_size <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb36-241"><a href="#cb36-241" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">0</span>, <span class="dv">32</span>) <span class="sc">~</span> <span class="st">"XS"</span>,</span>
+<span id="cb36-242"><a href="#cb36-242" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
+<span id="cb36-243"><a href="#cb36-243" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb36-244"><a href="#cb36-244" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb36-245"><a href="#cb36-245" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
+<span id="cb36-246"><a href="#cb36-246" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
+<span id="cb36-247"><a href="#cb36-247" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
+<span id="cb36-248"><a href="#cb36-248" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
+<span id="cb36-249"><a href="#cb36-249" aria-hidden="true" tabindex="-1"></a>              chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span>,</span>
+<span id="cb36-250"><a href="#cb36-250" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb36-251"><a href="#cb36-251" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Defaults in case height, weight, BMI are missing</span></span>
+<span id="cb36-252"><a href="#cb36-252" aria-hidden="true" tabindex="-1"></a>              <span class="co"># but gender is not</span></span>
+<span id="cb36-253"><a href="#cb36-253" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="st">"M"</span>,</span>
+<span id="cb36-254"><a href="#cb36-254" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"M"</span> <span class="sc">~</span> <span class="st">"L"</span>,</span>
+<span id="cb36-255"><a href="#cb36-255" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb36-256"><a href="#cb36-256" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Last resort</span></span>
+<span id="cb36-257"><a href="#cb36-257" aria-hidden="true" tabindex="-1"></a>              <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"L"</span></span>
+<span id="cb36-258"><a href="#cb36-258" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb36-259"><a href="#cb36-259" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb36-260"><a href="#cb36-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(shirt_size)</span>
+<span id="cb36-261"><a href="#cb36-261" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb36-262"><a href="#cb36-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-263"><a href="#cb36-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-266"><a href="#cb36-266" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb36-267"><a href="#cb36-267" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_shirt_size</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
+<span id="cb36-268"><a href="#cb36-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb36-269"><a href="#cb36-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-270"><a href="#cb36-270" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2014–2022 Tyler Burleigh</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> Creative Commons CC BY 4.0</a></span><br>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block">Based on <a href="https://github.com/andrewheiss/ath-quarto">ath-quarto</a> by <a href="https://www.andrewheiss.com">Andrew Heiss</a></span></div>
+  </div>
+</footer>
+
+
+
+</body></html>
