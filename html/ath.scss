@@ -15,20 +15,27 @@ $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #373a3c !default;
-$gray-900: #212529 !default;
+//$gray-900: #212529 !default;
 $black:    #000000 !default;
 
 $blue:    #2780e3 !default;
 $indigo:  #6610f2 !default;
-$purple:  #170C3A !default;
+//$purple:  #170C3A !default;
 $pink:    #A52C60 !default;
-$red:     #CF4446 !default;
-$orange:  #EE6A24 !default;
-$light-orange:  #FB9E07 !default;
+//$red:     #CF4446 !default;
+//$orange:  #EE6A24 !default;
+//$light-orange:  #FB9E07 !default;
 $yellow:  #F6D645 !default;
 $green:   #118230 !default;
 $teal:    #20c997 !default;
 $cyan:    #3093CF !default;
+
+// My colour overrides
+$purple:   #5A4E7C !default;
+$orange:   #FF9500 !default;
+$red: #8950F7 !default;
+$light-orange:  #fff !default;
+$gray-900: #490A3D !default;
 
 $primary:   $pink !default;
 $secondary: $gray-700 !default;
@@ -44,14 +51,14 @@ $dark:      $black !default;
 // Fonts
 
 
-$font-family-sans-serif: "Libre Franklin" !default;
+$font-family-sans-serif: "Lato" !default;
 
-$headings-font-family: "Jost" !default;
+$headings-font-family: "Lato" !default;
 $headings-font-weight: 600 !default;
 
-$navbar-font-family: "Jost" !default;
-$toc-font-family: "Jost" !default;
-$footer-font-family: "Jost" !default;
+$navbar-font-family: "Lato" !default;
+$toc-font-family: "Lato" !default;
+$footer-font-family: "Lato" !default;
 
 // $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
 // $font-size-sm: $font-size-base * .875 !default;

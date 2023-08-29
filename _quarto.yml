@@ -18,10 +18,6 @@ project:
 
     # Things that need to be at the site root
     - ".htaccess"
-    - "LiveSearchSiteAuth.xml"
-    - "keybase.txt"
-    - "y_key_31e0c4105fc75710.html"
-    - "pgp_ath.asc.txt"
 
 freeze: true
 
@@ -29,30 +25,18 @@ bibliography: files/bib/references.bib
 csl: files/bib/chicago-author-date.csl
 
 # Metadata stuff
-pagetitle: "{{< meta title >}} | Andrew Heiss"
-description-meta: "Andrew Heiss is an assistant professor at Georgia State University, researching international NGOs and teaching data science & economics."
-author-meta: "Andrew Heiss"
+pagetitle: "{{< meta title >}} | Tyler Burleigh"
+description-meta: "Tyler Burleigh is a Senior Data Scientist at Prodigy education trying to make math education more fun."
+author-meta: "Tyler Burleigh"
 
 website:
-  title: "Andrew Heiss"
+  title: "Tyler Burleigh"
   description: "{{< meta description-meta >}}"
   favicon: "/files/favicon-512.png"
-  site-url: "https://www.andrewheiss.com"
-  repo-url: "https://github.com/andrewheiss/ath-quarto"
+  site-url: "https://www.tylerburleigh.com"
+  repo-url: "https://github.com/tylerburleigh/tylerburleigh-ath-quarto"
 
-  google-analytics: "UA-527449-5"
-
-  twitter-card: 
-    image: "/files/profiles/twitter-card-large.png"
-    description: "{{< meta description-meta >}}"
-    card-style: summary_large_image
-    creator: "@andrewheiss"
-    site: "@andrewheiss"
-
-  open-graph: 
-    image: "/files/profiles/twitter-card-large.png"
-    description: "{{< meta description-meta >}}"
-    locale: en_US
+  google-analytics: "G-PRHQZ8HPLB"
   
   navbar:
     pinned: true
@@ -66,56 +50,29 @@ website:
         file: blog/index.qmd
       - text: "Research"
         file: research/index.qmd
-      - text: "Teaching"
-        href: "teaching/index.qmd"
-      - text: "Talks"
-        href: "talks/index.qmd"
-      - text: "Now"
-        href: now/index.qmd
-      - text: "Uses"
-        file: uses/index.qmd
     
     right:
-      - icon: rss
-        aria-label: rss
-        href: atom.xml
-      - icon: envelope
-        aria-label: email
-        href: "mailto:aheiss@gsu.edu"
-      - icon: twitter
-        aria-label: twitter
-        href: https://twitter.com/andrewheiss
-        rel: me
       - icon: mastodon
         aria-label: mastodon
-        href: https://fediscience.org/users/andrew/
+        href: https://fosstodon.org/@tylerburleigh
         rel: me
       - icon: github
         aria-label: github
-        href: https://github.com/andrewheiss
+        href: https://github.com/tylerburleigh
         rel: me
-      - icon: youtube
-        aria-label: youtube
-        href: https://www.youtube.com/andrewheiss
-        rel: me
-      - icon: postage-heart-fill
-        aria-label: family
-        href: https://www.heissatopia.com/
       - icon: linkedin
         aria-label: linkedin
-        href: https://www.linkedin.com/in/andrewheiss
+        href: https://www.linkedin.com/in/tylerburleigh
         rel: me
   
   page-footer:
     left: |
-      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Andrew Heiss</span>
+      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Tyler Burleigh</span>
       <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>      
     center: |
-      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
-      <span class="faux-block">{{< fa key >}} [PGP public key]({{< var pgp.key >}}) &emsp; {{< fa fingerprint >}} Fingerprint:</strong><br><span class="fingerprint">{{< var pgp.fingerprint >}}</span></span>
     right: |
       <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
-      <span class="faux-block">[View the source at {{< fa brands github >}} GitHub]({{< var github-url >}})</span>
+      <span class="faux-block">Based on [ath-quarto](https://github.com/andrewheiss/ath-quarto) by [Andrew Heiss](https://www.andrewheiss.com)</span>
 
 format:
   html:
