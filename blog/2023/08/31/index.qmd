@@ -41,7 +41,7 @@ glimpse(fair_use_cases)
 glimpse(fair_use_findings)
 ```
 
-# Approach 0: bind_cols()
+# Approach 0: column binding
 
 I wonder if a simple `bind_cols()` could work?
 
@@ -64,10 +64,12 @@ bind_cols_join %>%
   tail(3) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "bind_cols() results")
+  tab_header(title = "bind_cols() results") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 ```
 
-# Approach 1: Fuzzy matching
+# Approach 1: Fuzzy joining
 
 I noticed that `title` tends to be a substring of `case`. Given this, I can try "fuzzy matching" I'll use the `fuzzyjoin` library. I'll also join with year, just in case there are multiple substring matches this should help to better resolve them to their correct match.
 
@@ -103,14 +105,18 @@ cases_without_match %>%
   arrange(case, year) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "Cases without a match in Findings")
+  tab_header(title = "Cases without a match in Findings") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 
 findings_without_match %>%
   select(title, case_number, year) %>%
   arrange(title, year) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "Findings without a match in Cases")
+  tab_header(title = "Findings without a match in Cases") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 ```
 
 Some observations about these examples that may have caused mis-matching:
@@ -133,7 +139,7 @@ These steps could improve the match rate:
 
 I'll perform these standardizations and try joining again.
 
-# Approach 2: Fuzzy matching + string cleaning
+# Approach 2: Fuzzy joining + string cleaning
 
 ```{r}
 # Mutate a standardized variable: case_std
@@ -170,19 +176,23 @@ fair_use_cases_remainder %>%
   arrange(case, year) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "Cases without a match in Findings")
+  tab_header(title = "Cases without a match in Findings") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 
 fair_use_findings_remainder %>%
   select(title, case_number, year) %>%
   arrange(title, year) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "Findings without a match in Cases")
+  tab_header(title = "Findings without a match in Cases") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 ```
 
 I can see that 16 are missing in each case, and what's interesting about these two sets is they appear to be the same items, in the same order. This means we can simply do a `bind_cols()` operation to join them together.
 
-# Final solution: Fuzzy matching + string cleaning + bind_cols
+# Final solution: Fuzzy joining + string cleaning + column binding
 
 Here I put all of the lessons learned so far in fuzzy joining together into one final chunk of code.
 
@@ -255,7 +265,9 @@ final_join %>%
   tail(3) %>%
   gt() %>%
   opt_interactive() %>%
-  tab_header(title = "Rows that were previously misaligned with bind_cols() are now aligned")
+  tab_header(title = "Rows that were previously misaligned with bind_cols() are now aligned") %>%
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 ```
 
 And here is the full table.
@@ -266,7 +278,8 @@ final_join %>%
   gt() %>%
   opt_interactive() %>%
   tab_header(title = "Final results table (case, title, case_number)") %>%
-  tab_options(ihtml.page_size_default = 3)
+  tab_options(table.background.color = '#f1f3f5',
+              ihtml.page_size_default = 3)
 ```
 
 It looks like the matches are now correct.
@@ -276,10 +289,11 @@ It looks like the matches are now correct.
 And now for a quick data viz showing the journey towards achieving 100% matches between the two data frames.
 
 ```{r}
-data.frame("method" = c("fuzzy join", "fuzzy join + \nstring cleaning", 
-                                "fuzzy join + \nstring cleaning + \nbind cols"),
-                   "match_rate" = c((251-37)/251*100, (251-16)/251*100, 100),
-                   "class" = c(FALSE, FALSE, TRUE)) %>%
+data.frame("method" = c("fuzzy joining", 
+                        "fuzzy joining + \nstring cleaning", 
+                        "fuzzy joining + \nstring cleaning + \ncolumn binding"),
+           "match_rate" = c((251-37)/251*100, (251-16)/251*100, 100),
+           "class" = c(FALSE, FALSE, TRUE)) %>%
   ggplot(aes(x = method, y = match_rate, fill=class)) +
     geom_bar(stat="identity", colour="black") +
     geom_text(aes(label = paste0(round(match_rate), "%")), colour="black", vjust=-.2) +
@@ -291,6 +305,7 @@ data.frame("method" = c("fuzzy join", "fuzzy join + \nstring cleaning",
     theme(plot.title = ggtext::element_markdown(),
           plot.caption = ggtext::element_markdown())
 ```
+
 ```{r}
 ggsave('social-image.png', height=5, width=10)
 ```
