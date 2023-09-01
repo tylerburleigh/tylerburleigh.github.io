@@ -1,7 +1,7 @@
 ---
-title: 'Joining messy dataframes using fuzzy joins and string cleaning'
+title: 'Joining messy dataframes using fuzzy joins, string cleaning, and column binding'
 date: 2023-08-31
-description: 'Tidy Tuesday this week presented a challenge: "There are two datasets this week for which the rows align, but the values might not precisely line up for a clean join." In this post I walk through how I approached solving this using fuzzy joins and targeted string cleaning.'
+description: 'Tidy Tuesday this week presented a challenge: "There are two datasets this week for which the rows align, but the values might not precisely line up for a clean join." In this post I walkthrough my solution that uses a combination of fuzzy joining, string cleaning, and column binding.'
 image: social-image.png
 twitter-card:
   image: "social-image.png"
