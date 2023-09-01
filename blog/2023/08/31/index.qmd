@@ -25,9 +25,6 @@ This last point is what I'll be focusing on in this post: The challenge of joini
 
 ```{r, message=FALSE}
 library(tidyverse)
-library(tidymodels)
-library(DescTools) # for %like%
-library(stringr)
 library(fuzzyjoin)
 library(gt)
 fair_use_cases <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-29/fair_use_cases.csv')
