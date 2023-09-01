@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Tyler Burleigh">
 <meta name="description" content="Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.">
-
 <title>Predicting t-shirt size from height and weight | Tyler Burleigh</title>
 <style>
 code{white-space: pre-wrap;}
@@ -58,14 +55,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../../">
-<link href="../../../..//files/favicon-512.png" rel="icon" type="image/png">
+<link href="../../../..//files/favico.png" rel="icon" type="image/png">
 <script src="../../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,8 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -95,24 +90,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
-</script>
-<style>
+</script><style>
 
       .quarto-title-block .quarto-title-banner {
         background: #170C3A;
       }
 </style>
-
-
 <meta property="og:title" content="Predicting t-shirt size from height and weight | Tyler Burleigh">
 <meta property="og:description" content="Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight.">
 <meta property="og:image" content="https://tylerburleigh.com/blog/2019/09/27/gildan_unisex_size_chart.png">
@@ -126,13 +115,10 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <meta name="twitter:image-width" content="480">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Tyler Burleigh</span>
@@ -144,7 +130,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../../index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
@@ -161,8 +147,8 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
  <span class="menu-text">Research</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://fosstodon.org/(tylerburleigh?)" rel="me" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
 </i> 
  <span class="menu-text"></span></a>
@@ -178,15 +164,11 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+<div class="quarto-navbar-tools">
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title">Predicting t-shirt size from height and weight</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                   <div>
@@ -225,51 +207,49 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#the-model-and-the-data" id="toc-the-model-and-the-data" class="nav-link active" data-scroll-target="#the-model-and-the-data">The model and the data</a></li>
-  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data wrangling</a>
+<li><a href="#the-model-and-the-data" id="toc-the-model-and-the-data" class="nav-link active" data-scroll-target="#the-model-and-the-data">The model and the data</a></li>
+  <li>
+<a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data wrangling</a>
   <ul class="collapse">
-  <li><a href="#read-in-the-data" id="toc-read-in-the-data" class="nav-link" data-scroll-target="#read-in-the-data">Read in the data</a></li>
-  </ul></li>
-  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
-  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building">Model building</a>
-  <ul class="collapse">
-  <li><a href="#height-and-weight-model" id="toc-height-and-weight-model" class="nav-link" data-scroll-target="#height-and-weight-model">Height and weight model</a></li>
-  <li><a href="#body-mass-index-bmi-model" id="toc-body-mass-index-bmi-model" class="nav-link" data-scroll-target="#body-mass-index-bmi-model">Body Mass Index (BMI) model</a></li>
-  </ul></li>
-  <li><a href="#predicting-chest-size-from-height-weight-bmi-and-gender" id="toc-predicting-chest-size-from-height-weight-bmi-and-gender" class="nav-link" data-scroll-target="#predicting-chest-size-from-height-weight-bmi-and-gender">Predicting chest size from height, weight, BMI, and gender</a>
-  <ul class="collapse">
-  <li><a href="#predict-chest-size-given-height-weight-and-gender" id="toc-predict-chest-size-given-height-weight-and-gender" class="nav-link" data-scroll-target="#predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</a>
-  <ul class="collapse">
-  <li><a href="#height-weight-and-gender" id="toc-height-weight-and-gender" class="nav-link" data-scroll-target="#height-weight-and-gender">Height, weight, and gender</a></li>
-  <li><a href="#bmi-and-gender" id="toc-bmi-and-gender" class="nav-link" data-scroll-target="#bmi-and-gender">BMI and gender</a></li>
-  </ul></li>
-  <li><a href="#chest-size-to-shirt-size" id="toc-chest-size-to-shirt-size" class="nav-link" data-scroll-target="#chest-size-to-shirt-size">Chest size to shirt size</a></li>
-  </ul></li>
-  <li><a href="#wrapping-it-up-in-a-function" id="toc-wrapping-it-up-in-a-function" class="nav-link" data-scroll-target="#wrapping-it-up-in-a-function">Wrapping it up in a function</a></li>
+<li><a href="#read-in-the-data" id="toc-read-in-the-data" class="nav-link" data-scroll-target="#read-in-the-data">Read in the data</a></li>
   </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</li>
+  <li><a href="#correlations" id="toc-correlations" class="nav-link" data-scroll-target="#correlations">Correlations</a></li>
+  <li>
+<a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building">Model building</a>
+  <ul class="collapse">
+<li><a href="#height-and-weight-model" id="toc-height-and-weight-model" class="nav-link" data-scroll-target="#height-and-weight-model">Height and weight model</a></li>
+  <li><a href="#body-mass-index-bmi-model" id="toc-body-mass-index-bmi-model" class="nav-link" data-scroll-target="#body-mass-index-bmi-model">Body Mass Index (BMI) model</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#predicting-chest-size-from-height-weight-bmi-and-gender" id="toc-predicting-chest-size-from-height-weight-bmi-and-gender" class="nav-link" data-scroll-target="#predicting-chest-size-from-height-weight-bmi-and-gender">Predicting chest size from height, weight, BMI, and gender</a>
+  <ul class="collapse">
+<li>
+<a href="#predict-chest-size-given-height-weight-and-gender" id="toc-predict-chest-size-given-height-weight-and-gender" class="nav-link" data-scroll-target="#predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</a>
+  <ul class="collapse">
+<li><a href="#height-weight-and-gender" id="toc-height-weight-and-gender" class="nav-link" data-scroll-target="#height-weight-and-gender">Height, weight, and gender</a></li>
+  <li><a href="#bmi-and-gender" id="toc-bmi-and-gender" class="nav-link" data-scroll-target="#bmi-and-gender">BMI and gender</a></li>
+  </ul>
+</li>
+  <li><a href="#chest-size-to-shirt-size" id="toc-chest-size-to-shirt-size" class="nav-link" data-scroll-target="#chest-size-to-shirt-size">Chest size to shirt size</a></li>
+  </ul>
+</li>
+  <li><a href="#wrapping-it-up-in-a-function" id="toc-wrapping-it-up-in-a-function" class="nav-link" data-scroll-target="#wrapping-it-up-in-a-function">Wrapping it up in a function</a></li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don’t know their shirt size, but instead you know their height, weight, and gender?</p>
 <p>In fact, it seemed <em>so straight-forward</em> that I was sure there must be prior art out there that I could re-use. A StackOverflow, a mathematical formula, a GitHub repo, a blog post – there had to be something! To my surprise, there wasn’t any, not that I could find anyway.</p>
 <p>I guess this is a problem that hasn’t received a lot of attention. Or at least, it’s not the sort of problem that someone in the open source / open science community has tackled.</p>
 <p>So I set out to build my own predictive algorithm.</p>
-<section id="the-model-and-the-data" class="level1">
-<h1>The model and the data</h1>
+<section id="the-model-and-the-data" class="level1"><h1>The model and the data</h1>
 <p>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</p>
 <p>I knew that the only information I’d have to predict shirt sizes from was: gender, height and weight. Sometimes I’d have body mass index (BMI) instead of height and weight.</p>
 <p>I also knew that I’d be sending “unisex” t-shirts. I’ve done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem – enter the “size chart”. Okay, so now I’d found a measurement that could be used to classify shirt sizes: <strong>chest size</strong>.</p>
@@ -281,21 +261,18 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009">2009-2010 cohort</a>, so I downloaded the dataset files for that cohort.</p>
 <p><img src="../../../../blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png" class="img-fluid"></p>
 <p>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</p>
-</section>
-<section id="data-wrangling" class="level1">
-<h1>Data wrangling</h1>
-<section id="read-in-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="read-in-the-data">Read in the data</h2>
+</section><section id="data-wrangling" class="level1"><h1>Data wrangling</h1>
+<section id="read-in-the-data" class="level2"><h2 class="anchored" data-anchor-id="read-in-the-data">Read in the data</h2>
 <p>Of course the data had to be in a SAS format. 🙄</p>
 <p>Luckily there’s an R package for reading SAS data files.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(foreign)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"ARX_F.XPT"</span>) <span class="co"># Arthritis data</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"BMX_F.XPT"</span>) <span class="co"># Body measurements</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">read.xport</span>(<span class="st">"DEMO_F.XPT"</span>) <span class="co"># Demographics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svn.r-project.org/R-packages/trunk/foreign/">foreign</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreign/man/read.xport.html">read.xport</a></span><span class="op">(</span><span class="st">"ARX_F.XPT"</span><span class="op">)</span> <span class="co"># Arthritis data</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreign/man/read.xport.html">read.xport</a></span><span class="op">(</span><span class="st">"BMX_F.XPT"</span><span class="op">)</span> <span class="co"># Body measurements</span></span>
+<span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreign/man/read.xport.html">read.xport</a></span><span class="op">(</span><span class="st">"DEMO_F.XPT"</span><span class="op">)</span> <span class="co"># Demographics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>These are the variables I’ll pull out from the different dataframes.</p>
 <ul>
@@ -308,42 +285,39 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </ul>
 <p>I’m using the inhale chest circumference because I found in some exploratory analyses (not reported here) that it has a stronger correlation to the other measurements. I guess the exhale circumference was more noisy for some reason?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">chest_in_cm =</span> ARXCCIN) <span class="ot">-&gt;</span> chest_measures</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">weight_kg =</span> BMXWT, <span class="at">height_cm =</span> BMXHT, <span class="at">bmi =</span> BMXBMI) <span class="ot">-&gt;</span> height_weight</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">id =</span> SEQN, <span class="at">gender =</span> DMDHRGND) <span class="sc">%&gt;%</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gender =</span> <span class="fu">case_when</span>(gender <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"M"</span>, <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"F"</span>)) <span class="ot">-&gt;</span> gender</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Join datasets and select only the rows that have all measurements</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>chest_measures <span class="sc">%&gt;%</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., height_weight, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(., gender, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'id'</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(chest_in_cm),</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(height_cm), </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(weight_kg),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(gender), </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         <span class="sc">!</span><span class="fu">is.na</span>(bmi)) <span class="ot">-&gt;</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">a</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>id <span class="op">=</span> <span class="va">SEQN</span>, chest_in_cm <span class="op">=</span> <span class="va">ARXCCIN</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">chest_measures</span></span>
+<span><span class="va">b</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>id <span class="op">=</span> <span class="va">SEQN</span>, weight_kg <span class="op">=</span> <span class="va">BMXWT</span>, height_cm <span class="op">=</span> <span class="va">BMXHT</span>, bmi <span class="op">=</span> <span class="va">BMXBMI</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">height_weight</span></span>
+<span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span>id <span class="op">=</span> <span class="va">SEQN</span>, gender <span class="op">=</span> <span class="va">DMDHRGND</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>gender <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span><span class="va">gender</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">~</span> <span class="st">"M"</span>, <span class="cn">TRUE</span> <span class="op">~</span> <span class="st">"F"</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">gender</span></span>
+<span></span>
+<span><span class="co"># Join datasets and select only the rows that have all measurements</span></span>
+<span><span class="va">chest_measures</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">height_weight</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'id'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">.</span>, <span class="va">gender</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'id'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">chest_in_cm</span><span class="op">)</span>,</span>
+<span>         <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">height_cm</span><span class="op">)</span>, </span>
+<span>         <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">weight_kg</span><span class="op">)</span>,</span>
+<span>         <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span>, </span>
+<span>         <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">bmi</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="correlations" class="level1">
-<h1>Correlations</h1>
+</section></section><section id="correlations" class="level1"><h1>Correlations</h1>
 <p>I’ll check some basic correlations and descriptives. I see that men have larger chests than women, on average. And importantly, BMI does not correlate with chest size as well as weight.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>weight_kg, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">weight_kg</span>, <span class="va">df</span><span class="op">$</span><span class="va">chest_in_cm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9006851</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>height_cm, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">height_cm</span>, <span class="va">df</span><span class="op">$</span><span class="va">chest_in_cm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4174028</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(df<span class="sc">$</span>bmi, df<span class="sc">$</span>chest_in_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">bmi</span>, <span class="va">df</span><span class="op">$</span><span class="va">chest_in_cm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7850526</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(chest_in_cm))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">gender</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">chest_in_cm</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   gender  mean
@@ -352,19 +326,16 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 2 M       98.0</code></pre>
 </div>
 </div>
-</section>
-<section id="model-building" class="level1">
-<h1>Model building</h1>
+</section><section id="model-building" class="level1"><h1>Model building</h1>
 <p>I decided to build two models because sometimes I know a person’s height and weight but not their BMI, and other times I know their BMI but not their height and weight.</p>
 <p>Although I could take all of the heights and weights and convert them into BMIs, I’m guessing this could lead a loss of information. The correlation above suggests that weight is the best predictor of chest size (better than BMI), so that tells me it might be better to use height and weight when it’s available, but use BMI as a fallback when height and weight are not available.</p>
-<section id="height-and-weight-model" class="level2">
-<h2 class="anchored" data-anchor-id="height-and-weight-model">Height and weight model</h2>
+<section id="height-and-weight-model" class="level2"><h2 class="anchored" data-anchor-id="height-and-weight-model">Height and weight model</h2>
 <p>To build a model, I’ll run a stepwise linear regression to determine the model of best fit. I’ll enter height, weight, and gender as predictors and allow interaction terms. I’ll use AIC (Akaike’s Information Criterion) for model selection, since it penalizes models with added complexity and I want a parsimonious model that doesn’t overfit the data.</p>
 <p>I see that the best model includes all terms, including <code>weight*height</code> and <code>weight*gender</code> interaction terms.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, height_cm, weight_kg, gender)), </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>   chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">df</span>, select<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">chest_in_cm</span>, <span class="va">height_cm</span>, <span class="va">weight_kg</span>, <span class="va">gender</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>   <span class="va">chest_in_cm</span> <span class="op">~</span> <span class="va">.</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">mod</span></span>
+<span><span class="va">step.model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MASS/man/stepAIC.html">stepAIC</a></span><span class="op">(</span><span class="va">mod</span>, direction <span class="op">=</span> <span class="st">"both"</span>, trace <span class="op">=</span> <span class="cn">TRUE</span>, scope <span class="op">=</span> <span class="va">.</span> <span class="op">~</span> <span class="va">.</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=14857.43
 chest_in_cm ~ height_cm + weight_kg + gender
@@ -398,7 +369,7 @@ chest_in_cm ~ height_cm + weight_kg + gender + height_cm:weight_kg +
 - weight_kg:gender     1   144.020 115291 14851
 - height_cm:weight_kg  1   274.743 115421 14856</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">step.model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -425,16 +396,14 @@ Residual standard error: 5.001 on 4604 degrees of freedom
 Multiple R-squared:  0.8152,    Adjusted R-squared:  0.815 
 F-statistic:  4061 on 5 and 4604 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>height_weight_model <span class="ot">&lt;-</span> step.model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Save the model for later</span></span>
+<span><span class="va">height_weight_model</span> <span class="op">&lt;-</span> <span class="va">step.model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="body-mass-index-bmi-model" class="level2">
-<h2 class="anchored" data-anchor-id="body-mass-index-bmi-model">Body Mass Index (BMI) model</h2>
+</section><section id="body-mass-index-bmi-model" class="level2"><h2 class="anchored" data-anchor-id="body-mass-index-bmi-model">Body Mass Index (BMI) model</h2>
 <p>Now I’ll do the same with BMI and gender.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(<span class="at">data =</span> <span class="fu">subset</span>(df, <span class="at">select=</span> <span class="fu">c</span>(chest_in_cm, bmi, gender)), chest_in_cm <span class="sc">~</span> .) <span class="ot">-&gt;</span> mod</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>step.model <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(mod, <span class="at">direction =</span> <span class="st">"both"</span>, <span class="at">trace =</span> <span class="cn">TRUE</span>, <span class="at">scope =</span> . <span class="sc">~</span> .<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">df</span>, select<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">chest_in_cm</span>, <span class="va">bmi</span>, <span class="va">gender</span><span class="op">)</span><span class="op">)</span>, <span class="va">chest_in_cm</span> <span class="op">~</span> <span class="va">.</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">mod</span></span>
+<span><span class="va">step.model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MASS/man/stepAIC.html">stepAIC</a></span><span class="op">(</span><span class="va">mod</span>, direction <span class="op">=</span> <span class="st">"both"</span>, trace <span class="op">=</span> <span class="cn">TRUE</span>, scope <span class="op">=</span> <span class="va">.</span> <span class="op">~</span> <span class="va">.</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=17986.13
 chest_in_cm ~ bmi + gender
@@ -452,7 +421,7 @@ chest_in_cm ~ bmi + gender + bmi:gender
 &lt;none&gt;                    227076 17973
 - bmi:gender  1    724.73 227801 17986</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(step.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">step.model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -476,127 +445,114 @@ Residual standard error: 7.021 on 4606 degrees of freedom
 Multiple R-squared:  0.6355,    Adjusted R-squared:  0.6353 
 F-statistic:  2677 on 3 and 4606 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the model for later</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>bmi_model <span class="ot">&lt;-</span> step.model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Save the model for later</span></span>
+<span><span class="va">bmi_model</span> <span class="op">&lt;-</span> <span class="va">step.model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-</section>
-<section id="predicting-chest-size-from-height-weight-bmi-and-gender" class="level1">
-<h1>Predicting chest size from height, weight, BMI, and gender</h1>
+</section></section><section id="predicting-chest-size-from-height-weight-bmi-and-gender" class="level1"><h1>Predicting chest size from height, weight, BMI, and gender</h1>
 <p>Now that I have the models, I can use them to generate chest size predictions.</p>
-<section id="predict-chest-size-given-height-weight-and-gender" class="level2">
-<h2 class="anchored" data-anchor-id="predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</h2>
+<section id="predict-chest-size-given-height-weight-and-gender" class="level2"><h2 class="anchored" data-anchor-id="predict-chest-size-given-height-weight-and-gender">Predict chest size given height, weight, and gender</h2>
 <p>Next we’ll take the final model selected from the above procedure and use it to predict chest circumference, in inches, given height, weight, and gender.</p>
 <p>To test the model, I’ll use average values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">weight_kg</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 82.48026</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>height_cm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">height_cm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 168.0299</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>bmi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">bmi</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 29.12334</code></pre>
 </div>
 </div>
-<section id="height-weight-and-gender" class="level3">
-<h3 class="anchored" data-anchor-id="height-weight-and-gender">Height, weight, and gender</h3>
+<section id="height-weight-and-gender" class="level3"><h3 class="anchored" data-anchor-id="height-weight-and-gender">Height, weight, and gender</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 cm = 0.393701 inches</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(height_weight_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">input</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>height_cm <span class="op">=</span> <span class="fl">168</span>, weight_kg <span class="op">=</span> <span class="fl">83</span>, gender <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 1 cm = 0.393701 inches</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">height_weight_model</span>, <span class="va">input</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       1 
 37.90109 </code></pre>
 </div>
 </div>
-</section>
-<section id="bmi-and-gender" class="level3">
-<h3 class="anchored" data-anchor-id="bmi-and-gender">BMI and gender</h3>
+</section><section id="bmi-and-gender" class="level3"><h3 class="anchored" data-anchor-id="bmi-and-gender">BMI and gender</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> <span class="dv">29</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(bmi_model, input) <span class="sc">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">input</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>bmi <span class="op">=</span> <span class="fl">29</span>, gender <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">bmi_model</span>, <span class="va">input</span><span class="op">)</span> <span class="op">*</span> <span class="fl">0.393701</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       1 
 37.33684 </code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="chest-size-to-shirt-size" class="level2">
-<h2 class="anchored" data-anchor-id="chest-size-to-shirt-size">Chest size to shirt size</h2>
+</section></section><section id="chest-size-to-shirt-size" class="level2"><h2 class="anchored" data-anchor-id="chest-size-to-shirt-size">Chest size to shirt size</h2>
 <p>Finally, I’ll need to take the chest size prediction and convert it to a shirt size. Remember the size chart?</p>
 <p><img src="gildan_unisex_size_chart.png" class="img-fluid"></p>
 <p>For some reason the chart leaves out “XS” and the ranges lso don’t provide full coverage of the possible chest size values (34-36” and then 38-40”???). So I’ll extend the upper bound of each range to meet the lower bound of each size above it. This will cause the predictions to err on the size of larger sizes rather than smaller sizes, which I think is better because if a shirt is too big, at least you can still wear it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">chest =</span> <span class="fu">predict</span>(height_weight_model,input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">shirt_size =</span> <span class="fu">case_when</span>(</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&lt;</span> <span class="dv">32</span> <span class="sc">~</span> <span class="st">"XS"</span>,</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>          <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>          chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span></span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">input</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>height_cm <span class="op">=</span> <span class="fl">168</span>, weight_kg <span class="op">=</span> <span class="fl">83</span>, gender <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>chest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">height_weight_model</span>,<span class="va">input</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">*</span> <span class="fl">0.393701</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>shirt_size <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>          <span class="va">chest</span> <span class="op">&lt;</span> <span class="fl">32</span> <span class="op">~</span> <span class="st">"XS"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">32</span>, <span class="fl">36</span><span class="op">)</span> <span class="op">~</span> <span class="st">"S"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">36</span>, <span class="fl">40</span><span class="op">)</span> <span class="op">~</span> <span class="st">"M"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">40</span>, <span class="fl">44</span><span class="op">)</span> <span class="op">~</span> <span class="st">"L"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">44</span>, <span class="fl">48</span><span class="op">)</span> <span class="op">~</span> <span class="st">"XL"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">48</span>, <span class="fl">52</span><span class="op">)</span> <span class="op">~</span> <span class="st">"2XL"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">52</span>, <span class="fl">56</span><span class="op">)</span> <span class="op">~</span> <span class="st">"3XL"</span>,</span>
+<span>          <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">56</span>, <span class="fl">64</span><span class="op">)</span> <span class="op">~</span> <span class="st">"4XL"</span>,</span>
+<span>          <span class="va">chest</span> <span class="op">&gt;</span> <span class="fl">64</span> <span class="op">~</span> <span class="st">"5XL"</span></span>
+<span>    <span class="op">)</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     chest shirt_size
 1 37.90109          M</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="wrapping-it-up-in-a-function" class="level1">
-<h1>Wrapping it up in a function</h1>
+</section></section><section id="wrapping-it-up-in-a-function" class="level1"><h1>Wrapping it up in a function</h1>
 <p>And finally, I can put it in a function that will select the model to use for me, based on the information it’s been given.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>predict_shirt_size <span class="ot">&lt;-</span> <span class="cf">function</span>(height_cm, weight_kg, bmi, gender){</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(height_cm) <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(weight_kg)){</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height_cm =</span> height_cm, <span class="at">weight_kg =</span> weight_kg, <span class="at">gender =</span> gender)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(height_weight_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(bmi)){</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    input <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bmi =</span> bmi, <span class="at">gender =</span> gender)</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="fu">predict</span>(bmi_model, input)[[<span class="dv">1</span>]] <span class="sc">*</span> <span class="fl">0.393701</span></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Just in case height, weight, and BMI are all missing</span></span>
-<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    chest <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span> <span class="co"># A value that gets ignored below</span></span>
-<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  shirt_size <span class="ot">=</span> <span class="fu">case_when</span>(</span>
-<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">0</span>, <span class="dv">32</span>) <span class="sc">~</span> <span class="st">"XS"</span>,</span>
-<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">32</span>, <span class="dv">36</span>) <span class="sc">~</span> <span class="st">"S"</span>,</span>
-<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">36</span>, <span class="dv">40</span>) <span class="sc">~</span> <span class="st">"M"</span>,</span>
-<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">40</span>, <span class="dv">44</span>) <span class="sc">~</span> <span class="st">"L"</span>,</span>
-<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">44</span>, <span class="dv">48</span>) <span class="sc">~</span> <span class="st">"XL"</span>,</span>
-<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">48</span>, <span class="dv">52</span>) <span class="sc">~</span> <span class="st">"2XL"</span>,</span>
-<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">52</span>, <span class="dv">56</span>) <span class="sc">~</span> <span class="st">"3XL"</span>,</span>
-<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>              <span class="fu">between</span>(chest, <span class="dv">56</span>, <span class="dv">64</span>) <span class="sc">~</span> <span class="st">"4XL"</span>,</span>
-<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>              chest <span class="sc">&gt;</span> <span class="dv">64</span> <span class="sc">~</span> <span class="st">"5XL"</span>,</span>
-<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>              </span>
-<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Defaults in case height, weight, BMI are missing</span></span>
-<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>              <span class="co"># but gender is not</span></span>
-<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"F"</span> <span class="sc">~</span> <span class="st">"M"</span>,</span>
-<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>              gender <span class="sc">==</span> <span class="st">"M"</span> <span class="sc">~</span> <span class="st">"L"</span>,</span>
-<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>              </span>
-<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>              <span class="co"># Last resort</span></span>
-<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>              <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"L"</span></span>
-<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(shirt_size)</span>
-<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">predict_shirt_size</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">height_cm</span>, <span class="va">weight_kg</span>, <span class="va">bmi</span>, <span class="va">gender</span><span class="op">)</span><span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">height_cm</span><span class="op">)</span> <span class="op">&amp;</span> <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">weight_kg</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="va">input</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>height_cm <span class="op">=</span> <span class="va">height_cm</span>, weight_kg <span class="op">=</span> <span class="va">weight_kg</span>, gender <span class="op">=</span> <span class="va">gender</span><span class="op">)</span></span>
+<span>    <span class="va">chest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">height_weight_model</span>, <span class="va">input</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">*</span> <span class="fl">0.393701</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">bmi</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="va">input</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>bmi <span class="op">=</span> <span class="va">bmi</span>, gender <span class="op">=</span> <span class="va">gender</span><span class="op">)</span></span>
+<span>    <span class="va">chest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">bmi_model</span>, <span class="va">input</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span> <span class="op">*</span> <span class="fl">0.393701</span></span>
+<span>  <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="co"># Just in case height, weight, and BMI are all missing</span></span>
+<span>    <span class="va">chest</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">99</span> <span class="co"># A value that gets ignored below</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="va">shirt_size</span> <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">0</span>, <span class="fl">32</span><span class="op">)</span> <span class="op">~</span> <span class="st">"XS"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">32</span>, <span class="fl">36</span><span class="op">)</span> <span class="op">~</span> <span class="st">"S"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">36</span>, <span class="fl">40</span><span class="op">)</span> <span class="op">~</span> <span class="st">"M"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">40</span>, <span class="fl">44</span><span class="op">)</span> <span class="op">~</span> <span class="st">"L"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">44</span>, <span class="fl">48</span><span class="op">)</span> <span class="op">~</span> <span class="st">"XL"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">48</span>, <span class="fl">52</span><span class="op">)</span> <span class="op">~</span> <span class="st">"2XL"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">52</span>, <span class="fl">56</span><span class="op">)</span> <span class="op">~</span> <span class="st">"3XL"</span>,</span>
+<span>              <span class="fu"><a href="https://dplyr.tidyverse.org/reference/between.html">between</a></span><span class="op">(</span><span class="va">chest</span>, <span class="fl">56</span>, <span class="fl">64</span><span class="op">)</span> <span class="op">~</span> <span class="st">"4XL"</span>,</span>
+<span>              <span class="va">chest</span> <span class="op">&gt;</span> <span class="fl">64</span> <span class="op">~</span> <span class="st">"5XL"</span>,</span>
+<span>              </span>
+<span>              <span class="co"># Defaults in case height, weight, BMI are missing</span></span>
+<span>              <span class="co"># but gender is not</span></span>
+<span>              <span class="va">gender</span> <span class="op">==</span> <span class="st">"F"</span> <span class="op">~</span> <span class="st">"M"</span>,</span>
+<span>              <span class="va">gender</span> <span class="op">==</span> <span class="st">"M"</span> <span class="op">~</span> <span class="st">"L"</span>,</span>
+<span>              </span>
+<span>              <span class="co"># Last resort</span></span>
+<span>              <span class="cn">TRUE</span> <span class="op">~</span> <span class="st">"L"</span></span>
+<span>            <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">shirt_size</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict_shirt_size</span>(<span class="at">height_cm =</span> <span class="dv">168</span>, <span class="at">weight_kg =</span> <span class="dv">83</span>, <span class="at">gender =</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">predict_shirt_size</span><span class="op">(</span>height_cm <span class="op">=</span> <span class="fl">168</span>, weight_kg <span class="op">=</span> <span class="fl">83</span>, gender <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "M"</code></pre>
 </div>
@@ -605,10 +561,7 @@ F-statistic:  2677 on 3 and 4606 DF,  p-value: &lt; 2.2e-16</code></pre>
 
 <!-- -->
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -891,8 +844,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="tylerburleigh/tylerburleigh.github.io" data-repo-id="R_kgDOKMo8ww" data-category="Blog comments" data-category-id="DIC_kwDOIg6EJc4CSz92" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="tylerburleigh/tylerburleigh.github.io" data-repo-id="R_kgDOKMo8ww" data-category="Blog comments" data-category-id="DIC_kwDOIg6EJc4CSz92" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb36" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Predicting t-shirt size from height and weight'</span></span>
@@ -1147,17 +1099,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2014–2022 Tyler Burleigh</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> Creative Commons CC BY 4.0</a></span><br>
-</div>   
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2014–2022 Tyler Burleigh</span> <span class="faux-block">All content licensed under<br><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> Creative Commons CC BY 4.0</a></span><br></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span> <span class="faux-block">Based on <a href="https://github.com/andrewheiss/ath-quarto">ath-quarto</a> by <a href="https://www.andrewheiss.com">Andrew Heiss</a></span></div>
   </div>
 </footer>
-
 
 
 </body></html>
