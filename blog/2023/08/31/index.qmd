@@ -1,5 +1,5 @@
 ---
-title: 'Joining messy dataframes using fuzzy joins, string cleaning, and column binding'
+title: 'Joining messy dataframes using fuzzy joining, string cleaning, and column binding'
 date: 2023-08-31
 description: 'Tidy Tuesday this week presented a challenge: "There are two datasets this week for which the rows align, but the values might not precisely line up for a clean join." In this post I walkthrough my solution that uses a combination of fuzzy joining, string cleaning, and column binding.'
 image: social-image.png
@@ -43,7 +43,7 @@ glimpse(fair_use_findings)
 
 # Approach 0: column binding
 
-I wonder if a simple `bind_cols()` could work?
+I'll start with the simplest approach: Could a `bind_cols()` work?
 
 ```{r}
 fair_use_cases %>% 
@@ -55,7 +55,7 @@ fair_use_sorted %>%
   bind_cols(fair_use_findings_sorted) -> bind_cols_join
 ```
 
-No, as we can see there is some mis-alignment with this approach: `case` and `title` do not match.
+No, there is mis-alignment as we can see in the table of results: `case` and `title` do not match.
 
 ```{r}
 bind_cols_join %>%
@@ -71,7 +71,7 @@ bind_cols_join %>%
 
 # Approach 1: Fuzzy joining
 
-I noticed that `title` tends to be a substring of `case`. Given this, I can try "fuzzy matching" I'll use the `fuzzyjoin` library. I'll also join with year, just in case there are multiple substring matches this should help to better resolve them to their correct match.
+I noticed that `title` tends to be a substring of `case`. Given this, I can try "fuzzy joining" using the `fuzzyjoin` library. I'll also join with year, just in case there are multiple substring matches this should help to better resolve them to their correct match.
 
 ```{r}
 fair_use_cases %>% 

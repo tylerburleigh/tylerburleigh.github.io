@@ -50,15 +50,14 @@ $dark:      $black !default;
 
 // Fonts
 
+$font-family-sans-serif: "Libre Franklin" !default;
 
-$font-family-sans-serif: "Lato" !default;
-
-$headings-font-family: "Lato" !default;
+$headings-font-family: "Jost" !default;
 $headings-font-weight: 600 !default;
 
-$navbar-font-family: "Lato" !default;
-$toc-font-family: "Lato" !default;
-$footer-font-family: "Lato" !default;
+$navbar-font-family: "Jost" !default;
+$toc-font-family: "Jost" !default;
+$footer-font-family: "Jost" !default;
 
 // $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
 // $font-size-sm: $font-size-base * .875 !default;
@@ -291,7 +290,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
             img {
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 max-height: 120px;
             }
         }

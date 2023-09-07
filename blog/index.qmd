@@ -9,6 +9,10 @@ listing:
     sort: "date desc"
     template: ../html/blog/listing.ejs
     categories: true
+  - id: posts_2020
+    contents: "2020/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
   - id: posts_2019
     contents: "2019/**/index.qmd"
     sort: "date desc"
@@ -24,6 +28,11 @@ comments: false
 ## 2023
 
 :::{#posts_2023}
+:::
+
+## 2020
+
+:::{#posts_2020}
 :::
 
 ## 2019

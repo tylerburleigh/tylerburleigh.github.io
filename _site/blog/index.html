@@ -95,6 +95,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts_2020 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-freeze','listing-bibliography','listing-csl','listing-pagetitle','listing-description-meta','listing-author-meta','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-execute','listing-author','listing-title','listing-date','listing-description','listing-image','listing-twitter-card','listing-open-graph','listing-categories','listing-path','listing-outputHref','listing-date-modified','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      
+      searchColumns: ["listing-project","listing-freeze","listing-bibliography","listing-csl","listing-pagetitle","listing-description-meta","listing-author-meta","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-execute","listing-author","listing-title","listing-date","listing-description","listing-image","listing-twitter-card","listing-open-graph","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts_2020'] = new List('listing-posts_2020', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-posts_2019 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -225,10 +253,11 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
    
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2023</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2019</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2020</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2019</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="data-cleaning">data-cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-normalization">data-normalization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-visualization">data-visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fuzzy">fuzzy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="prediction">prediction <span class="quarto-category-count">(2)</span></div><div class="category" data-category="statistical-modeling">statistical-modeling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="tidy-tuesday">tidy-tuesday <span class="quarto-category-count">(3)</span></div><div class="category" data-category="web-scraping">web-scraping <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="data-cleaning">data-cleaning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-normalization">data-normalization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data-visualization">data-visualization <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fuzzy">fuzzy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="geocoding">geocoding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="image-classification">image-classification <span class="quarto-category-count">(2)</span></div><div class="category" data-category="kaggle">kaggle <span class="quarto-category-count">(2)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(6)</span></div><div class="category" data-category="personality">personality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="prediction">prediction <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistical-modeling">statistical-modeling <span class="quarto-category-count">(6)</span></div><div class="category" data-category="tensorflow">tensorflow <span class="quarto-category-count">(2)</span></div><div class="category" data-category="tidy-tuesday">tidy-tuesday <span class="quarto-category-count">(3)</span></div><div class="category" data-category="transfer-learning">transfer-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="web-scraping">web-scraping <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -239,12 +268,12 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="section">2023</h2>
 <div id="listing-posts_2023" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
-    <div class="blog-entry" data-index="0" data-categories="tidy-tuesday,data-cleaning,fuzzy" data-listing-date-sort="1693454400000" data-listing-file-modified-sort="1693602896708" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+    <div class="blog-entry" data-index="0" data-categories="tidy-tuesday,data-cleaning,fuzzy" data-listing-date-sort="1693454400000" data-listing-file-modified-sort="1693660905138" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
         <div class="metadata">          
             <p class="date listing-date">August 31, 2023</p>
         </div>
         <div class="body">
-            <p class="title listing-title"><a href="../blog/2023/08/31/index.html">Joining messy dataframes using fuzzy joins, string cleaning, and column binding</a></p>
+            <p class="title listing-title"><a href="../blog/2023/08/31/index.html">Joining messy dataframes using fuzzy joining, string cleaning, and column binding</a></p>
             <div class="post-categories listing-categories">
                 <div class="post-category listing-category" onclick="window.quartoListingCategory('tidy-tuesday'); return false;">
                     tidy-tuesday
@@ -259,7 +288,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
             <p class="description listing-description">Tidy Tuesday this week presented a challenge: "There are two datasets this week for which the rows align, but the values might not precisely line up for a clean join." In this post I walkthrough my solution that uses a combination of fuzzy joining, string cleaning, and column binding.</p>
         </div>
         <div class="thumbnail">
-            <img src="../blog/2023/08/31/social-image.png" alt="Joining messy dataframes using fuzzy joins, string cleaning, and column binding" title="Joining messy dataframes using fuzzy joins, string cleaning, and column binding">
+            <img src="../blog/2023/08/31/social-image.png" alt="Joining messy dataframes using fuzzy joining, string cleaning, and column binding" title="Joining messy dataframes using fuzzy joining, string cleaning, and column binding">
         </div>
     </div>
     <div class="blog-entry" data-index="1" data-categories="tidy-tuesday,data-visualization,data-normalization" data-listing-date-sort="1692936000000" data-listing-file-modified-sort="1693601162377" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
@@ -318,7 +347,158 @@ No matching items
 </div>
 </section>
 <section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2019</h2>
+<h2 class="anchored" data-anchor-id="section-1">2020</h2>
+<div id="listing-posts_2020" class="quarto-listing quarto-listing-container-custom">
+<div class="list blog">
+    <div class="blog-entry" data-index="0" data-categories="machine-learning,statistical-modeling" data-listing-date-sort="1589256000000" data-listing-file-modified-sort="1694123266517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20">
+        <div class="metadata">          
+            <p class="date listing-date">May 12, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/05/12/index.html">Modeling cognitive impairment using NHANES data</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
+                    machine-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('statistical-modeling'); return false;">
+                    statistical-modeling
+                </div>
+            </div>
+            <p class="description listing-description">I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/05/12/social-image.png" alt="Modeling cognitive impairment using NHANES data" title="Modeling cognitive impairment using NHANES data">
+        </div>
+    </div>
+    <div class="blog-entry" data-index="1" data-categories="kaggle,machine-learning,statistical-modeling,tensorflow,transfer-learning,image-classification" data-listing-date-sort="1586577600000" data-listing-file-modified-sort="1694122344818" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+        <div class="metadata">          
+            <p class="date listing-date">April 11, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/04/04/index.html">Identifying pneumonia from chest x-rays using EfficientNet</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('kaggle'); return false;">
+                    kaggle
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
+                    machine-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('statistical-modeling'); return false;">
+                    statistical-modeling
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('tensorflow'); return false;">
+                    tensorflow
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('transfer-learning'); return false;">
+                    transfer-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('image-classification'); return false;">
+                    image-classification
+                </div>
+            </div>
+            <p class="description listing-description">I was interested in trying tensorflow + EfficientNet on another image classification task. This time, I used it to predict pneumonia on chest x-ray images. Using this model, I achieved 97% out of sample accuracy.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/04/04/social-image.png" alt="Identifying pneumonia from chest x-rays using EfficientNet" title="Identifying pneumonia from chest x-rays using EfficientNet">
+        </div>
+    </div>
+    <div class="blog-entry" data-index="2" data-categories="geocoding" data-listing-date-sort="1586577600000" data-listing-file-modified-sort="1694122941215" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+        <div class="metadata">          
+            <p class="date listing-date">April 11, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/04/11/index.html">Estimating how many people live near a landmark / point-of-interest</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('geocoding'); return false;">
+                    geocoding
+                </div>
+            </div>
+            <p class="description listing-description">In this post, I start with a point-of-interest, "Times Square, NYC", and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates).</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/04/11/social-image.png" alt="Estimating how many people live near a landmark / point-of-interest" title="Estimating how many people live near a landmark / point-of-interest">
+        </div>
+    </div>
+    <div class="blog-entry" data-index="3" data-categories="kaggle,machine-learning,statistical-modeling,tensorflow,transfer-learning,image-classification" data-listing-date-sort="1585713600000" data-listing-file-modified-sort="1694122419145" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15">
+        <div class="metadata">          
+            <p class="date listing-date">April 1, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/04/01/index.html">Using tensorflow with EfficientNet to predict plant diseases</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('kaggle'); return false;">
+                    kaggle
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
+                    machine-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('statistical-modeling'); return false;">
+                    statistical-modeling
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('tensorflow'); return false;">
+                    tensorflow
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('transfer-learning'); return false;">
+                    transfer-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('image-classification'); return false;">
+                    image-classification
+                </div>
+            </div>
+            <p class="description listing-description">I use tensorflow with an EfficientNet base model (via transfer learning) to predict plant diseases for the Plant Pathology 2020 Kaggle challenge. Using this model, I achieved 94% out of sample accuracy.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/04/01/social-image.png" alt="Using tensorflow with EfficientNet to predict plant diseases" title="Using tensorflow with EfficientNet to predict plant diseases">
+        </div>
+    </div>
+    <div class="blog-entry" data-index="4" data-categories="personality" data-listing-date-sort="1584763200000" data-listing-file-modified-sort="1694122519440" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="29">
+        <div class="metadata">          
+            <p class="date listing-date">March 21, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/03/21/index.html">COVID-19 case growth and the Big 5 Personality traits</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('personality'); return false;">
+                    personality
+                </div>
+            </div>
+            <p class="description listing-description">Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for "growth" over time in coronavirus cases, using data current as of March 20, 2020.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/03/21/social-image.png" alt="COVID-19 case growth and the Big 5 Personality traits" title="COVID-19 case growth and the Big 5 Personality traits">
+        </div>
+    </div>
+    <div class="blog-entry" data-index="5" data-categories="machine-learning,statistical-modeling,prediction" data-listing-date-sort="1584676800000" data-listing-file-modified-sort="1694123085119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="16">
+        <div class="metadata">          
+            <p class="date listing-date">March 20, 2020</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2020/03/20/index.html">Using a logistic regression model to predict heart disease</a></p>
+            <div class="post-categories listing-categories">
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
+                    machine-learning
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('statistical-modeling'); return false;">
+                    statistical-modeling
+                </div>
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('prediction'); return false;">
+                    prediction
+                </div>
+            </div>
+            <p class="description listing-description">I trained a logistic regression model to predict heart disease, using 14 attributes and 303 observations (e.g., age, sex, chest pain, resting ECG). Then I evaluated its performance.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="../blog/2020/03/20/social-image.png" alt="Using a logistic regression model to predict heart disease" title="Using a logistic regression model to predict heart disease">
+        </div>
+    </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2019</h2>
 <div id="listing-posts_2019" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     <div class="blog-entry" data-index="0" data-categories="statistical-modeling,machine-learning,prediction" data-listing-date-sort="1569556800000" data-listing-file-modified-sort="1693601162377" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
