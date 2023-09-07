@@ -1,6 +1,6 @@
 ---
 title: Identifying pneumonia from chest x-rays using EfficientNet
-date: '2020-04-11'
+date: '2020-04-04'
 description: 'I was interested in trying tensorflow + EfficientNet on another image classification task. This time, I used it to predict pneumonia on chest x-ray images. Using this model, I achieved 97% out of sample accuracy.'
 image: social-image.png
 twitter-card:
