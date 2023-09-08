@@ -29,7 +29,7 @@ I knew that the only information I'd have to predict shirt sizes from was: gende
 
 I also knew that I'd be sending "unisex" t-shirts. I've done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem -- enter the "size chart". Okay, so now I'd found a measurement that could be used to classify shirt sizes: **chest size**.
 
-![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png)
+![](gildan_unisex_size_chart.png)
 
 So now I just had to find a way to get from gender, height, and weight to chest size.
 
@@ -41,7 +41,7 @@ Maybe chest circumference is important if we're talking about breathing? Eureka!
 
 The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the [2009-2010 cohort](https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&CycleBeginYear=2009), so I downloaded the dataset files for that cohort.
 
-![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png)
+![](nhanes_chest.png)
 
 Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.
 

@@ -149,7 +149,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </ul>
 <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/(tylerburleigh?)" rel="me" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
+    <a class="nav-link" href="https://fosstodon.org/users/tylerburleigh" rel="me" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -253,13 +253,13 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p>First I would need to model the problem and identify data to build the model. What are the inputs and the outputs? How do the inputs map onto the outputs?</p>
 <p>I knew that the only information I’d have to predict shirt sizes from was: gender, height and weight. Sometimes I’d have body mass index (BMI) instead of height and weight.</p>
 <p>I also knew that I’d be sending “unisex” t-shirts. I’ve done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem – enter the “size chart”. Okay, so now I’d found a measurement that could be used to classify shirt sizes: <strong>chest size</strong>.</p>
-<p><img src="../../../../blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png" class="img-fluid"></p>
+<p><img src="gildan_unisex_size_chart.png" class="img-fluid"></p>
 <p>So now I just had to find a way to get from gender, height, and weight to chest size.</p>
 <p>I know from experience that there are several large public datasets that contain health and health-related measurements. One of these is the <a href="https://www.cdc.gov/nchs/nhanes">The National Health and Nutrition Examination Survey (NHANES)</a>, which is run by the CDC. I decided to poke around there and see what I could find. I found the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/default.aspx">variable search tool</a> and started keying in some of these variables: “height”, “weight”, “chest”, “bmi”, “gender”.</p>
 <p>Of course they would have gender, height, weight and BMI. It would be a pretty odd health and nutrition study if they didn’t have basic demographics and measurements. But chest measurement? The context seemed a bit odd. What does chest circumference have to do with health and nutrition?</p>
 <p>Maybe chest circumference is important if we’re talking about breathing? Eureka! NHANES does have chest measurements for inhalation and exhalation as part of the arthritis datasets!</p>
 <p>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <a href="https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009">2009-2010 cohort</a>, so I downloaded the dataset files for that cohort.</p>
-<p><img src="../../../../blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png" class="img-fluid"></p>
+<p><img src="nhanes_chest.png" class="img-fluid"></p>
 <p>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</p>
 </section><section id="data-wrangling" class="level1"><h1>Data wrangling</h1>
 <section id="read-in-the-data" class="level2"><h2 class="anchored" data-anchor-id="read-in-the-data">Read in the data</h2>
@@ -877,7 +877,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-29"><a href="#cb36-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-30"><a href="#cb36-30" aria-hidden="true" tabindex="-1"></a>I also knew that I'd be sending "unisex" t-shirts. I've done my share of online t-shirt shopping, so it occurred to me to look at how online clothing stores solve this problem -- enter the "size chart". Okay, so now I'd found a measurement that could be used to classify shirt sizes: **chest size**.</span>
 <span id="cb36-31"><a href="#cb36-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a><span class="al">![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/gildan_unisex_size_chart.png)</span></span>
+<span id="cb36-32"><a href="#cb36-32" aria-hidden="true" tabindex="-1"></a><span class="al">![](gildan_unisex_size_chart.png)</span></span>
 <span id="cb36-33"><a href="#cb36-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-34"><a href="#cb36-34" aria-hidden="true" tabindex="-1"></a>So now I just had to find a way to get from gender, height, and weight to chest size.</span>
 <span id="cb36-35"><a href="#cb36-35" aria-hidden="true" tabindex="-1"></a></span>
@@ -889,7 +889,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb36-41"><a href="#cb36-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-42"><a href="#cb36-42" aria-hidden="true" tabindex="-1"></a>The final piece of the puzzle was identifying a single year cohort that contained all of these measures together, because I would want the data to be at the level of individual persons. I found all of these measurements were contained in the <span class="co">[</span><span class="ot">2009-2010 cohort</span><span class="co">](https://wwwn.cdc.gov/nchs/nhanes/Search/DataPage.aspx?Component=Examination&amp;CycleBeginYear=2009)</span>, so I downloaded the dataset files for that cohort.</span>
 <span id="cb36-43"><a href="#cb36-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="al">![](/blog/2019-09-27-predicting-t-shirt-size-from-height-and-weight_files/nhanes_chest.png)</span></span>
+<span id="cb36-44"><a href="#cb36-44" aria-hidden="true" tabindex="-1"></a><span class="al">![](nhanes_chest.png)</span></span>
 <span id="cb36-45"><a href="#cb36-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb36-46"><a href="#cb36-46" aria-hidden="true" tabindex="-1"></a>Now my model was complete. I would run a linear regression that predicts chest circumference from gender, height and weight (or bmi). I would train this model on the NHANES data, and I would then use the predicted chest circumference to determine shirt size.</span>
 <span id="cb36-47"><a href="#cb36-47" aria-hidden="true" tabindex="-1"></a></span>
