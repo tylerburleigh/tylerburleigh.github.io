@@ -26,7 +26,7 @@ csl: files/bib/chicago-author-date.csl
 
 # Metadata stuff
 pagetitle: "{{< meta title >}} | Tyler Burleigh"
-description-meta: "Tyler Burleigh is a Senior Data Scientist at Prodigy education trying to make math education more fun."
+description-meta: "I'm a data scientist and this is my blog."
 author-meta: "Tyler Burleigh"
 
 website:
@@ -67,12 +67,10 @@ website:
   
   page-footer:
     left: |
-      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Tyler Burleigh</span>
-      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>      
+      <span class="faux-block">[{{< fa brands creative-commons >}}](https://creativecommons.org/licenses/by/4.0/) {{< var years >}} Tyler Burleigh</span>
     center: |
     right: |
-      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
-      <span class="faux-block">Based on [ath-quarto](https://github.com/andrewheiss/ath-quarto) by [Andrew Heiss](https://www.andrewheiss.com)</span>
+      <span class="faux-block">Made with {{< fa brands r-project >}}, [Quarto](https://quarto.org/), and the [ath-quarto](https://github.com/andrewheiss/ath-quarto) theme</span>
 
 format:
   html:

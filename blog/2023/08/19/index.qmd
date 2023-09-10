@@ -9,9 +9,8 @@ open-graph:
   image: "social-image.png"
 categories:
   - tidy-tuesday
-  - statistical-modeling
   - machine-learning
-  - prediction
+freeze: true
 ---
 
 Getting back into the swing of things. This is my first blog post in more than 3 years!

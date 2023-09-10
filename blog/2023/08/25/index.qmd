@@ -9,8 +9,8 @@ open-graph:
   image: "social-image.png"
 categories:
   - tidy-tuesday
-  - data-visualization
   - data-normalization
+freeze: true
 ---
 
 For this post, I'll be using the Week 34 [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) dataset, which contains data on refugee movement around the world. I want to look at the change in refugee outflows over time in different nations, and see if I can identify countries with meaningfully large increases in refugee outflows.

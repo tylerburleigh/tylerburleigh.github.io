@@ -10,10 +10,9 @@ open-graph:
 categories:
   - kaggle
   - machine-learning
-  - statistical-modeling
   - tensorflow
-  - transfer-learning
   - image-classification
+freeze: true
 ---
 
 As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the <a href="https://www.kaggle.com/c/plant-pathology-2020-fgvc7">Plant Pathology</a> dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making "fine-grained" visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.

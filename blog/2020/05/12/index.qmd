@@ -8,8 +8,8 @@ twitter-card:
 open-graph:
   image: "social-image.png"
 categories:
-  - machine-learning
   - statistical-modeling
+freeze: true
 ---
 
 In this blog post, I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.
