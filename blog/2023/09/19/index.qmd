@@ -1,0 +1,463 @@
+---
+title: 'Five methods of categorical encoding: one-hot, frequency, label, target, and embedding'
+date: 2023-09-08
+description: "In this post, I explore whether a random forest model can be improved by using random forest based multivariate outlier detection and imputation methods, and by reducing feature multicollinearity. Supporting the common wisdom that random forest models are robust to outliers and multicollinearity, these data cleaning steps led to only marginal improvements in out-of-sample model performance."
+image: social-image.png
+twitter-card:
+  image: "social-image.png"
+open-graph:
+  image: "social-image.png"
+categories:
+  - kaggle
+  - machine-learning
+  - anomaly-detection
+  - data-cleaning
+freeze: true
+---
+
+
+
+# Load libraries
+
+```{r, message=F, echo=F}
+library(tidyverse)
+library(tidymodels)
+library(lares)
+library(ranger)
+library(themis)
+```
+
+# Load the data
+
+```{r}
+df <- read_csv('data/playground-series-s3e22/train.csv', show_col_types = F)
+holdout <- read_csv('data/playground-series-s3e22/test.csv', show_col_types = F)
+sample_submission <- read_csv('data/playground-series-s3e22/sample_submission.csv', show_col_types = F)
+```
+
+# Explore the dataset
+
+The training dataset contains character and numeric columns. There are no missing values.
+
+```{r, message=F}
+df %>% lares::df_str(return = "plot")
+```
+
+Looking at the character columns, I do see possible missing values. For example, it seems like a "None" for `temp_of_extremities` could be a missing value. Also I see some opportunities for data cleaning: Some columns have both "None" and "none". Converting all strings to lowercase would help to at least combine the "none" types.
+
+```{r}
+char_cols <- colnames(df %>% select(is.character))
+for(col in char_cols){
+  print(paste0(toupper(col), ': ', paste0(distinct(df[col])[[1]], collapse=', ')))
+}
+```
+
+There is some degree of class imbalance.
+
+```{r}
+df %>%
+  group_by(outcome) %>%
+  count() %>%
+  mutate(pct = round(n/nrow(df)*100))
+```
+A few features have strong correlations.
+
+```{r, message=F}
+df %>% lares::corr_cross()
+```
+
+# Train/test split
+
+```{r}
+set.seed(42)
+
+df %>% mutate_if(is.character, .funs=tolower) %>%
+  mutate(outcome = as.factor(outcome)) %>%
+  mutate(across(where(is.character), factor)) -> df
+
+split <- initial_split(df)
+train <- training(split)
+test <- testing(split)
+```
+
+# Categorical encoding
+
+## One-hot encoding
+
+```{r}
+recipe_1hot_with_novel <- 
+  recipe(outcome ~ ., data = train %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors()) %>%
+  step_novel(all_nominal_predictors(), new_level = "NA") %>%
+  step_dummy(all_nominal_predictors(), one_hot=T)
+```
+
+The first -- and most popular -- type of categorical encoding is one-hot encoding. One-hot encoding transforms a single categorical variable with N levels into binary variables encoding each of the N levels.
+
+For example, `age` is a categorical variable with 2 levels.
+
+```{r}
+levels(train$age)
+length(levels(train$age))
+```
+
+When `age` is one-hot encoded, a column is created for each level to encode the value (e.g., if the original value was `adult`, then the `age_adult` column gets a 1 and the other columns get a 0). And since I've also included a step to encode novel levels as `NA`, there is also a third column for that.
+
+```{r}
+recipe_1hot_with_novel %>%
+  prep() %>%
+  bake(new_data = NULL) %>%
+  select(starts_with('age')) %>%
+  head(3)
+```
+## Label encoding
+
+```{r}
+recipe_label <- 
+  recipe(outcome ~ ., data = train %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors()) %>%
+  step_integer(all_nominal_predictors())
+```
+
+With label encoding, each level of the categorical variable is given an (arbitrary) number. In the `tidymodels` framework, `step_integer` works like scikit's `LabelEncoder`, and encodes new values as zero. Here we see that one level of `age` was encoded as "1" and the other was encoded as "2".
+
+```{r}
+recipe_label %>%
+  prep() %>%
+  bake(new_data = NULL) %>%
+  select(age) %>%
+  distinct
+```
+
+## Frequency encoding
+
+```{r, message=F}
+freq_encoding <- encodeR::frequency_encoder(
+  X_train = train,
+  X_test = test, 
+  cat_columns = colnames(df %>% select(is.factor, -outcome))
+)
+
+train_freq <- my_encodings$train
+test_freq <- my_encodings$test
+```
+
+With frequency encoding, levels of the categorical variable are replaced with their frequency. Here, we can see how the levels of `age` have been replaced with their frequency in the training set. (When this is applied to the test set, these same training frequencies will be used.)
+
+```{r}
+train_freq %>%
+  select(age) %>%
+  distinct()
+```
+
+```{r}
+recipe_freq <- 
+  recipe(outcome ~ ., data = train_freq %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors())
+```
+
+
+## Target encoding
+
+For target encoding (also called "effect encoding", "likelihood encoding", or "bayesian encoding"), I'll be using the `h2o` package because it supports multi-class targets. The `embed` package can also do target encoding and integrates better with a tidymodels workflow, but at the moment it only supports binary targets.
+
+Using `h2o` requires some additional setup.
+
+```{r}
+library(h2o)
+h2o.init()
+
+# Convert to h2o format
+df_h2o <- as.h2o(df)
+
+# Split the dataset into train and test
+splits_h2o <- h2o.splitFrame(data = df_h2o, ratios = .8, seed = 42)
+train_h2o <- splits_h2o[[1]]
+test_h2o <- splits_h2o[[2]]
+```
+
+With target encoding, the levels of the categorical variable are replaced with the mean on the target, when grouped by that level. Because the outcome is being used for encoding, care needs to be taken when using this method to avoid leakage and overfitting. In this case, I'll use the "Leave One Out" method: for each row, the mean is calculated over all rows excluding that row. (And, of course, I'll train the encoder on the training set and not the test set.)
+
+```{r, message=F}
+# Choose which columns to encode
+encode_columns <- colnames(df %>% select(is.factor, -outcome)) # All categorical variables
+
+# Train a TE model
+te_model <- h2o.targetencoder(x = encode_columns,
+                              y = 'outcome', 
+                              keep_original_categorical_columns=T,
+                              training_frame = train_h2o,
+                              noise=0,
+                              seed=100,
+                              blending = T, # Blending helps with levels that are more rare
+                              data_leakage_handling = "LeaveOneOut")
+
+# New target encoded training and test datasets
+train_te <- h2o.transform(te_model, train_h2o)
+test_te <- h2o.transform(te_model, test_h2o)
+```
+
+Here we can see how the target encoding strategy encoded `age`: Two new variables are created, `age_euthanized_te` and `age_lived_te`. The encoded values represent the proportion of cases that were euthanized, or lived, for each level of `age`. (Note: The "died" level of the outcome variable is missing. This is because if we know the proportion that were euthanized and lived, we also know the proportion that died.)
+
+```{r}
+train_te %>%
+  as.data.frame() %>%
+  select(starts_with('age') & ends_with('te'), age) %>%
+  distinct()
+```
+
+```{r}
+# Drop the unencoded columns
+train_te %>% 
+  as.data.frame() %>%
+  select(-all_of(encode_columns)) %>%
+  as.h2o() -> train_te
+test_te %>% 
+  as.data.frame() %>%
+  select(-all_of(encode_columns)) %>%
+  as.h2o() -> test_te
+```
+
+
+```{r}
+recipe_target <- 
+  recipe(outcome ~ ., data = train_te %>% as.data.frame() %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors())
+```
+
+
+# Embedding encoding
+
+Embedding encoding is a new technique inspired by deep learning that converts categorical variables into numeric vectors. It uses deep learning to learn the vector representation, and it can be used to do dimensionality reduction on categorical variables.
+
+For example, the variable `pain` has 7 levels.
+
+```{r}
+levels(train$pain)
+```
+
+But using embeddings, I can "project" these 7 levels onto a smaller set of dimensions -- say 3.
+
+```{r}
+pain_embedding <- 
+  recipe(outcome ~ ., data = train %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors()) %>%
+  embed::step_embed(pain, 
+                    outcome = vars(outcome),
+                    predictors = all_numeric_predictors(),
+                    hidden_units = 2,
+                    num_terms = 3,
+                    keep_original_cols = T)
+
+tensorflow::set_random_seed(42)
+pain_embedding %>%
+  prep() %>%
+  bake(new_data = NULL) %>%
+  select(starts_with('pain')) %>%
+  distinct()
+```
+
+Since embeddings are useful for dimensionality reduction, this means it's going to be most useful for categorical variables with more levels. So I don't want to apply embeddings to variables with few levels to begin with: I'll one-hot encode all variables with 3 or fewer levels, and then apply embeddings to variables with more than 3, and project them down to only 3 levels.
+
+```{r}
+char_cols <- colnames(train %>% select(is.factor, -outcome))
+cols_for_onehot <- c()
+cols_for_embdding <- c()
+for(col in char_cols){
+  if(nrow(distinct(train[col])) <= 3){
+    cols_for_onehot = append(cols_for_onehot, col)
+  }
+  else {
+    cols_for_embdding = append(cols_for_embdding, col)
+  }
+}
+
+recipe_embedding <- 
+  recipe(outcome ~ ., data = train %>% select(-id)) %>%
+  step_normalize(all_numeric_predictors()) %>%
+  step_novel(all_of(cols_for_onehot), new_level = "NA") %>%
+  step_dummy(all_of(cols_for_onehot), one_hot=T) %>%
+  embed::step_embed(all_of(cols_for_embdding), 
+                    outcome = vars(outcome),
+                    predictors = all_numeric_predictors(),
+                    hidden_units = 2,
+                    num_terms = 3,
+                    keep_original_cols = F)
+```
+
+# Modeling
+
+Now onto some modeling.
+
+'ll define three models to evaluate: multinomial logistic regression, random forest, and xgboost.
+
+```{r}
+multinom_mod <-
+  multinom_reg() %>%
+  set_engine("nnet") %>% 
+  set_mode("classification")
+
+ranger_mod <-
+  rand_forest() %>% 
+  set_engine("ranger") %>% 
+  set_mode("classification")
+
+xgboost_mod <-
+  boost_tree() %>%
+  set_engine("xgboost") %>%
+  set_mode("classification")
+```
+
+## Model fit function
+
+With 3 models and 5 categorical encodings, I'll need to fit 15 models. To streamline this process, I'll define two functions:
+
+- `fit_model()`: Given training and test datasets, a workflow containing a recipe for the categorical encoding, a model type, and an encoding type, this function will evaluate the model in-sample using cross-validation, then evaluate it out-of-sample, and then return a dataframe containing the results
+- `fit_encodings()`: Given a model and model type, this function will generate recipes for each of the 5 categorical encodings, fit the 5 encodings using the model, and then return a dataframe with the results
+
+```{r}
+fit_model <- function(train, test, workflow, model_type, encoding_type){
+  
+  set.seed(42)
+  folds <- vfold_cv(train, v = 5)
+  
+  resampled_fit <- 
+    workflow %>% 
+    fit_resamples(folds,
+                  metrics = metric_set(f_meas))
+  
+  # Get in-sample F1
+  (resampled_fit %>%
+    collect_metrics())$mean -> train_perf
+  
+  # Get out-of-sample F1
+  fit <- 
+    workflow %>%
+    fit(train)
+  
+  test$pred <- predict(fit, test)$.pred_class
+  (f_meas(test, outcome, pred, estimator='micro'))$.estimate -> test_perf
+  
+  # Combine in-sample and out-of-sample into a dataframe
+  df_perf <- data.frame(model_type = model_type,
+                        encoding_type = encoding_type,
+                        train_perf = train_perf,
+                        test_perf = test_perf)
+  return(df_perf)
+}
+
+
+# Given a model, run it across the 4 encodings and return a dataframe that summarizes the results
+fit_encodings <- function(model, model_type){
+  
+  set.seed(42)
+  tensorflow::set_random_seed(42)
+  
+  # One-hot encoded model
+  wflow_1hot <- 
+    workflow() %>% 
+    add_model(model) %>%
+    add_recipe(recipe_1hot_with_novel)
+  
+  fit_model(train %>% select(-id), 
+            test %>% select(-id), 
+            wflow_1hot, 
+            model_type,
+            'onehot') -> onehot_model_results
+  
+  # Label encoded model
+  wflow_label <- 
+    workflow() %>% 
+    add_model(model) %>%
+    add_recipe(recipe_label)
+  
+  fit_model(train %>% select(-id), 
+            test %>% select(-id), 
+            wflow_label, 
+            model_type,
+            'label') -> label_model_results
+  
+  # Frequency encoded model
+  wflow_freq <- 
+    workflow() %>% 
+    add_model(model) %>%
+    add_recipe(recipe_freq)
+  
+  fit_model(train_freq %>% select(-id), 
+            test_freq %>% select(-id), 
+            wflow_freq, 
+            model_type,
+            'frequency') -> freq_model_results
+  
+  # Target encoded model
+  wflow_target <- 
+    workflow() %>% 
+    add_model(model) %>%
+    add_recipe(recipe_target)
+  
+  fit_model(train_te %>% as.data.frame() %>% select(-id), 
+            test_te %>% as.data.frame() %>% select(-id), 
+            wflow_target, 
+            model_type,
+            'target') -> target_model_results
+  
+  
+  # Embedding encoded model
+  wflow_embedding <- 
+    workflow() %>% 
+    add_model(model) %>%
+    add_recipe(recipe_embedding)
+  
+  fit_model(train %>% as.data.frame() %>% select(-id), 
+            test %>% as.data.frame() %>% select(-id), 
+            wflow_embedding, 
+            model_type,
+            'onehot + embedding') -> embedding_model_results
+  
+  # Compile results into a dataframe
+  onehot_model_results %>%
+    bind_rows(label_model_results) %>%
+    bind_rows(freq_model_results) %>%
+    bind_rows(target_model_results) %>%
+    bind_rows(embedding_model_results) -> results
+  
+  results
+}
+```
+
+I'll run each of the models using the `fit_encodings()` and `fit_model()` functions that I defined earlier.
+
+```{r}
+fit_encodings(multinom_mod, 'multinomial logistic') -> multinom_results
+fit_encodings(ranger_mod, 'random forest') -> rf_results
+fit_encodings(xgboost_mod, 'xgboost') -> xgb_results
+```
+
+# Model results
+
+And finally I can summarize the results. 
+
+From this summary, I can see that among the categorical encodings: target performed best on average, frequency performed worst on average, but the best models used the onehot or onehot + embedding encoding strategies. And in terms of ML algorithm, the two tree-based models performed better, on average, as compared to the logistic model.
+
+```{r}
+multinom_results %>%
+  bind_rows(rf_results) %>%
+  bind_rows(xgb_results) -> model_results
+
+model_results %>%
+  arrange(desc(test_perf))
+
+model_results %>%
+  ggplot() +
+    geom_col(aes(x = encoding_type, group = model_type, fill = model_type, y = test_perf), position='dodge') +
+    scale_y_continuous(limits=c(0.6,0.75),oob = rescale_none)
+
+model_results %>%
+  ggplot() +
+    geom_col(aes(x = model_type, group = encoding_type, fill = encoding_type, y = test_perf), position='dodge') +
+    scale_y_continuous(limits=c(0.6,0.75),oob = rescale_none)
+```
+
+
+
+
