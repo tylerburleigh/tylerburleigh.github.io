@@ -1,7 +1,7 @@
 ---
-title: 'Five methods of categorical encoding: one-hot, frequency, label, target, and embedding'
-date: 2023-09-08
-description: "In this post, I explore whether a random forest model can be improved by using random forest based multivariate outlier detection and imputation methods, and by reducing feature multicollinearity. Supporting the common wisdom that random forest models are robust to outliers and multicollinearity, these data cleaning steps led to only marginal improvements in out-of-sample model performance."
+title: 'Five methods of categorical encoding: one-hot, label, frequency, target, and embedding'
+date: 2023-09-19
+description: "In this post I take a recent playground dataset from kaggle that contains categorical variables and apply five methods of categorical encoding: one-hot, label, frequency, target, and embedding. Then I fit logistic, random forest, and xgboost models using each of the five encoding methods and evaluate the impact on model performance."
 image: social-image.png
 twitter-card:
   image: "social-image.png"
@@ -9,69 +9,70 @@ open-graph:
   image: "social-image.png"
 categories:
   - kaggle
+  - categorical-encoding
   - machine-learning
-  - anomaly-detection
-  - data-cleaning
 freeze: true
 ---
 
+In this post I'll be using the dataset from [Kaggle's Playground Series S3E22: Predict Health Outcomes of Horses](https://www.kaggle.com/competitions/playground-series-s3e22/data) to examine 5 categorical encoding methods. 
 
+Here's a list of the encoding methods that I'll be using:
+- One-hot encoding
+- Label encoding
+- Frequency encoding
+- Target encoding
+- Embedding encoding
+
+First I'll walk through and demonstrate each of the encoding methods, then I'll create recipes and workflows for tidymodels. Then I'll fit each of the 5 encodings using logistic, random forest, and xgboost models, and finally I'll evaluate and compare the performance of the 3 models with each of the 5 encodings.
 
 # Load libraries
 
-```{r, message=F, echo=F}
+```{r, message=F}
 library(tidyverse)
 library(tidymodels)
 library(lares)
 library(ranger)
-library(themis)
+library(xgboost)
+library(tensorflow)
+library(keras)
+library(h2o)
+library(encodeR)
+
+h2o.init()
+h2o.no_progress()
 ```
 
 # Load the data
 
 ```{r}
 df <- read_csv('data/playground-series-s3e22/train.csv', show_col_types = F)
-holdout <- read_csv('data/playground-series-s3e22/test.csv', show_col_types = F)
-sample_submission <- read_csv('data/playground-series-s3e22/sample_submission.csv', show_col_types = F)
 ```
 
-# Explore the dataset
+# Categorical variables
 
-The training dataset contains character and numeric columns. There are no missing values.
+This dataset contains 17 categorical (character) columns. It's also worth noting that there are no missing values.
 
 ```{r, message=F}
 df %>% lares::df_str(return = "plot")
 ```
 
-Looking at the character columns, I do see possible missing values. For example, it seems like a "None" for `temp_of_extremities` could be a missing value. Also I see some opportunities for data cleaning: Some columns have both "None" and "none". Converting all strings to lowercase would help to at least combine the "none" types.
+Looking at the character columns, I see that some of the variables have as many as 7 levels. These aren't exactly high cardinality variables, but it'll be enough to experiment with the encoding methods. I also noticed some case inconsistency (i.e., some columns have both "None" and "none"). Converting all strings to lowercase would help to at least combine the "none" types.
 
 ```{r}
-char_cols <- colnames(df %>% select(is.character))
+char_cols <- colnames(df %>% select(where(is.character)))
 for(col in char_cols){
   print(paste0(toupper(col), ': ', paste0(distinct(df[col])[[1]], collapse=', ')))
 }
 ```
 
-There is some degree of class imbalance.
-
-```{r}
-df %>%
-  group_by(outcome) %>%
-  count() %>%
-  mutate(pct = round(n/nrow(df)*100))
-```
-A few features have strong correlations.
-
-```{r, message=F}
-df %>% lares::corr_cross()
-```
-
 # Train/test split
+
+Before diving into categorical encoding methods, I'll do a train/test split. I'l also convert the character columns to lowercase to address the problem I mentioned above ("None" vs. "none").
 
 ```{r}
 set.seed(42)
 
-df %>% mutate_if(is.character, .funs=tolower) %>%
+df %>% mutate_if(where(is.character), .funs=tolower) %>%
   mutate(outcome = as.factor(outcome)) %>%
   mutate(across(where(is.character), factor)) -> df
 
@@ -92,7 +93,7 @@ recipe_1hot_with_novel <-
   step_dummy(all_nominal_predictors(), one_hot=T)
 ```
 
-The first -- and most popular -- type of categorical encoding is one-hot encoding. One-hot encoding transforms a single categorical variable with N levels into binary variables encoding each of the N levels.
+The first -- and probably most popular -- type of categorical encoding is one-hot encoding. One-hot encoding transforms a single categorical variable with N levels into binary variables encoding each of the N levels.
 
 For example, `age` is a categorical variable with 2 levels.
 
@@ -135,11 +136,11 @@ recipe_label %>%
 freq_encoding <- encodeR::frequency_encoder(
   X_train = train,
   X_test = test, 
-  cat_columns = colnames(df %>% select(is.factor, -outcome))
+  cat_columns = colnames(df %>% select(where(is.factor), -outcome))
 )
 
-train_freq <- my_encodings$train
-test_freq <- my_encodings$test
+train_freq <- freq_encoding$train
+test_freq <- freq_encoding$test
 ```
 
 With frequency encoding, levels of the categorical variable are replaced with their frequency. Here, we can see how the levels of `age` have been replaced with their frequency in the training set. (When this is applied to the test set, these same training frequencies will be used.)
@@ -156,17 +157,13 @@ recipe_freq <-
   step_normalize(all_numeric_predictors())
 ```
 
-
 ## Target encoding
 
-For target encoding (also called "effect encoding", "likelihood encoding", or "bayesian encoding"), I'll be using the `h2o` package because it supports multi-class targets. The `embed` package can also do target encoding and integrates better with a tidymodels workflow, but at the moment it only supports binary targets.
+For target encoding (also called "effect encoding" or "likelihood encoding"), I'll be using the `h2o` package because it supports multi-class targets. (The `embed` package can also do target encoding and integrates better with a tidymodels workflow, but at the moment it only supports binary targets.)
 
 Using `h2o` requires some additional setup.
 
 ```{r}
-library(h2o)
-h2o.init()
-
 # Convert to h2o format
 df_h2o <- as.h2o(df)
 
@@ -176,11 +173,13 @@ train_h2o <- splits_h2o[[1]]
 test_h2o <- splits_h2o[[2]]
 ```
 
-With target encoding, the levels of the categorical variable are replaced with the mean on the target, when grouped by that level. Because the outcome is being used for encoding, care needs to be taken when using this method to avoid leakage and overfitting. In this case, I'll use the "Leave One Out" method: for each row, the mean is calculated over all rows excluding that row. (And, of course, I'll train the encoder on the training set and not the test set.)
+With target encoding, the levels of the categorical variable are replaced with their mean value on the target. For example, if the level "young" was associated with a mean target value of 0.75, then this is the value with which that level would be replaced. 
+
+Because the outcome is being used for encoding, care needs to be taken when using this method to avoid leakage and overfitting. In this case, I'll use the "Leave One Out" method: for each row, the mean is calculated over all rows excluding that row.
 
 ```{r, message=F}
 # Choose which columns to encode
-encode_columns <- colnames(df %>% select(is.factor, -outcome)) # All categorical variables
+encode_columns <- colnames(df %>% select(where(is.factor), -outcome)) # All categorical variables
 
 # Train a TE model
 te_model <- h2o.targetencoder(x = encode_columns,
@@ -220,11 +219,11 @@ test_te %>%
 
 
 ```{r}
+# Create a recipe to use later
 recipe_target <- 
   recipe(outcome ~ ., data = train_te %>% as.data.frame() %>% select(-id)) %>%
   step_normalize(all_numeric_predictors())
 ```
-
 
 # Embedding encoding
 
@@ -260,7 +259,7 @@ pain_embedding %>%
 Since embeddings are useful for dimensionality reduction, this means it's going to be most useful for categorical variables with more levels. So I don't want to apply embeddings to variables with few levels to begin with: I'll one-hot encode all variables with 3 or fewer levels, and then apply embeddings to variables with more than 3, and project them down to only 3 levels.
 
 ```{r}
-char_cols <- colnames(train %>% select(is.factor, -outcome))
+char_cols <- colnames(train %>% select(where(is.factor), -outcome))
 cols_for_onehot <- c()
 cols_for_embdding <- c()
 for(col in char_cols){
@@ -289,7 +288,7 @@ recipe_embedding <-
 
 Now onto some modeling.
 
-'ll define three models to evaluate: multinomial logistic regression, random forest, and xgboost.
+I'll define 3 models to evaluate: multinomial logistic regression, random forest, and xgboost.
 
 ```{r}
 multinom_mod <-
@@ -425,7 +424,7 @@ fit_encodings <- function(model, model_type){
 }
 ```
 
-I'll run each of the models using the `fit_encodings()` and `fit_model()` functions that I defined earlier.
+I'll run each of the models using the `fit_encodings()` and `fit_model()` functions that I just earlier.
 
 ```{r}
 fit_encodings(multinom_mod, 'multinomial logistic') -> multinom_results
@@ -437,7 +436,7 @@ fit_encodings(xgboost_mod, 'xgboost') -> xgb_results
 
 And finally I can summarize the results. 
 
-From this summary, I can see that among the categorical encodings: target performed best on average, frequency performed worst on average, but the best models used the onehot or onehot + embedding encoding strategies. And in terms of ML algorithm, the two tree-based models performed better, on average, as compared to the logistic model.
+From this summary, I can see that among the categorical encoding methods target performed best on average, frequency performed worst on average, but the best models used the one-hot or one-hot + embedding encoding strategies. And in terms of ML algorithm, the two tree-based models performed better, on average, as compared to the logistic model.
 
 ```{r}
 multinom_results %>%
@@ -457,7 +456,3 @@ model_results %>%
     geom_col(aes(x = model_type, group = encoding_type, fill = encoding_type, y = test_perf), position='dodge') +
     scale_y_continuous(limits=c(0.6,0.75),oob = rescale_none)
 ```
-
-
-
-
