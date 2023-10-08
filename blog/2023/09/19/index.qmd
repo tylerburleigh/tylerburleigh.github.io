@@ -1,7 +1,7 @@
 ---
-title: 'Five methods of categorical encoding: one-hot, label, frequency, target, and embedding'
+title: 'Encoding high cardinality features with "embeddings"'
 date: 2023-09-19
-description: "In this post I take a recent playground dataset from kaggle that contains categorical variables and apply five methods of categorical encoding: one-hot, label, frequency, target, and embedding. Then I fit logistic, random forest, and xgboost models using each of the five encoding methods and evaluate the impact on model performance."
+description: "In this post I show how the performance of an ML model can be improved by encoding high cardinality features using \"embeddings\", a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding."
 image: social-image.png
 twitter-card:
   image: "social-image.png"
@@ -14,16 +14,10 @@ categories:
 freeze: true
 ---
 
-In this post I'll be using the dataset from [Kaggle's Playground Series S3E22: Predict Health Outcomes of Horses](https://www.kaggle.com/competitions/playground-series-s3e22/data) to examine 5 categorical encoding methods. 
 
-Here's a list of the encoding methods that I'll be using:
-- One-hot encoding
-- Label encoding
-- Frequency encoding
-- Target encoding
-- Embedding encoding
+Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It's particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.
 
-First I'll walk through and demonstrate each of the encoding methods, then I'll create recipes and workflows for tidymodels. Then I'll fit each of the 5 encodings using logistic, random forest, and xgboost models, and finally I'll evaluate and compare the performance of the 3 models with each of the 5 encodings.
+In this blog post, I'll show how ML models with embedding encoding outperform models with other common categorical encoding methods (frequency, label, one-hot, and target). For this demonstration, I'll be using the dataset from [Kaggle's Playground Series S3E22: Predict Health Outcomes of Horses](https://www.kaggle.com/competitions/playground-series-s3e22/data).
 
 # Load libraries
 
@@ -50,13 +44,30 @@ df <- read_csv('data/playground-series-s3e22/train.csv', show_col_types = F)
 
 # Categorical variables
 
-This dataset contains 17 categorical (character) columns. It's also worth noting that there are no missing values.
+This dataset contains 17 character columns.
 
 ```{r, message=F}
-df %>% lares::df_str(return = "plot")
+colnames(df[, sapply(df, class) == 'character'])
 ```
 
-Looking at the character columns, I see that some of the variables have as many as 7 levels. These aren't exactly high cardinality variables, but it'll be enough to experiment with the encoding methods. I also noticed some case inconsistency (i.e., some columns have both "None" and "none"). Converting all strings to lowercase would help to at least combine the "none" types.
+However, there are also several numeric categorical columns: `hospital_number`, `lesion_1`, `lesion_2`, and `lesion_3`. 
+
+```{r}
+df %>%
+  select(hospital_number, lesion_1, lesion_2, lesion_3) %>%
+  head()
+```
+
+`hospital_number` and `lesion_1` are of particular interest because they have so many levels.
+
+```{r}
+length(unique(df$hospital_number))
+length(unique(df$lesion_1))
+length(unique(df$lesion_2))
+length(unique(df$lesion_3))
+```
+
+Looking at the character columns, I see some case inconsistency (i.e., some columns have both "None" and "none"). Converting all strings to lowercase would help to at least combine the "none" types.
 
 ```{r}
 char_cols <- colnames(df %>% select(where(is.character)))
@@ -67,14 +78,18 @@ for(col in char_cols){
 
 # Train/test split
 
-Before diving into categorical encoding methods, I'll do a train/test split. I'l also convert the character columns to lowercase to address the problem I mentioned above ("None" vs. "none").
+Before diving into categorical encoding methods, I'll do a train/test split. I'll also convert the character columns to lowercase to address the problem I mentioned above ("None" vs. "none"), and I'll convert `hospital_number` to categorical.
 
 ```{r}
 set.seed(42)
 
 df %>% mutate_if(where(is.character), .funs=tolower) %>%
   mutate(outcome = as.factor(outcome)) %>%
-  mutate(across(where(is.character), factor)) -> df
+  mutate(across(where(is.character), factor),
+         hospital_number = as.factor(hospital_number),
+         lesion_1 = as.factor(lesion_1),
+         lesion_2 = as.factor(lesion_2),
+         lesion_3 = as.factor(lesion_3)) -> df
 
 split <- initial_split(df)
 train <- training(split)
@@ -111,6 +126,7 @@ recipe_1hot_with_novel %>%
   select(starts_with('age')) %>%
   head(3)
 ```
+
 ## Label encoding
 
 ```{r}
@@ -227,7 +243,7 @@ recipe_target <-
 
 # Embedding encoding
 
-Embedding encoding is a new technique inspired by deep learning that converts categorical variables into numeric vectors. It uses deep learning to learn the vector representation, and it can be used to do dimensionality reduction on categorical variables.
+Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It's particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.
 
 For example, the variable `pain` has 7 levels.
 
@@ -256,18 +272,24 @@ pain_embedding %>%
   distinct()
 ```
 
-Since embeddings are useful for dimensionality reduction, this means it's going to be most useful for categorical variables with more levels. So I don't want to apply embeddings to variables with few levels to begin with: I'll one-hot encode all variables with 3 or fewer levels, and then apply embeddings to variables with more than 3, and project them down to only 3 levels.
+I want to use embedding strategically. Since embeddings are particularly useful to project into lower-dimensional space, this means it's going to be most useful for categorical variables that have many levels. For variables with fewer than 3 levels, I'll use one-hot encoding. For variables with more than 3 levels, I'll use embeddings and project them onto 3 levels. I'll project `hospital_number` onto 50 levels, and `lesion_1` onto 25 levels. (This is somewhat arbitrary; I did a quick few tests -- not shown here -- to arrive at these numbers.)
 
 ```{r}
-char_cols <- colnames(train %>% select(where(is.factor), -outcome))
+length(levels(df$hospital_number))
+```
+
+```{r}
+cat_cols <- colnames(train %>% select(where(is.factor), -outcome, -hospital_number))
 cols_for_onehot <- c()
-cols_for_embdding <- c()
-for(col in char_cols){
+cols_for_embedding <- c()
+cols_embedding_special <- c('lesion_1', 'hospital_number')
+for(col in cat_cols){
   if(nrow(distinct(train[col])) <= 3){
     cols_for_onehot = append(cols_for_onehot, col)
   }
   else {
-    cols_for_embdding = append(cols_for_embdding, col)
+    cols_for_embedding = append(cols_for_embedding, col)
+    cols_for_embedding = cols_for_embedding[!cols_for_embedding %in% cols_embedding_special]
   }
 }
 
@@ -276,11 +298,23 @@ recipe_embedding <-
   step_normalize(all_numeric_predictors()) %>%
   step_novel(all_of(cols_for_onehot), new_level = "NA") %>%
   step_dummy(all_of(cols_for_onehot), one_hot=T) %>%
-  embed::step_embed(all_of(cols_for_embdding), 
+  embed::step_embed(all_of(cols_for_embedding), 
                     outcome = vars(outcome),
                     predictors = all_numeric_predictors(),
                     hidden_units = 2,
                     num_terms = 3,
+                    keep_original_cols = F) %>%
+  embed::step_embed(hospital_number, 
+                    outcome = vars(outcome),
+                    predictors = all_numeric_predictors(),
+                    hidden_units = 2,
+                    num_terms = 50,
+                    keep_original_cols = F) %>%
+  embed::step_embed(lesion_1, 
+                    outcome = vars(outcome),
+                    predictors = all_numeric_predictors(),
+                    hidden_units = 2,
+                    num_terms = 25,
                     keep_original_cols = F)
 ```
 
@@ -293,16 +327,17 @@ I'll define 3 models to evaluate: multinomial logistic regression, random forest
 ```{r}
 multinom_mod <-
   multinom_reg() %>%
-  set_engine("nnet") %>% 
+  # Need to bump the max weights, otherwise it won't run
+  set_engine("nnet", MaxNWts = 10000) %>% 
   set_mode("classification")
 
 ranger_mod <-
-  rand_forest() %>% 
+  rand_forest(trees=1000) %>% 
   set_engine("ranger") %>% 
   set_mode("classification")
 
 xgboost_mod <-
-  boost_tree() %>%
+  boost_tree(trees=50) %>%
   set_engine("xgboost") %>%
   set_mode("classification")
 ```
@@ -411,7 +446,7 @@ fit_encodings <- function(model, model_type){
             test %>% as.data.frame() %>% select(-id), 
             wflow_embedding, 
             model_type,
-            'onehot + embedding') -> embedding_model_results
+            'embedding') -> embedding_model_results
   
   # Compile results into a dataframe
   onehot_model_results %>%
@@ -424,7 +459,7 @@ fit_encodings <- function(model, model_type){
 }
 ```
 
-I'll run each of the models using the `fit_encodings()` and `fit_model()` functions that I just earlier.
+I'll run each of the models using the `fit_encodings()` and `fit_model()` functions that I just defined.
 
 ```{r}
 fit_encodings(multinom_mod, 'multinomial logistic') -> multinom_results
@@ -434,9 +469,7 @@ fit_encodings(xgboost_mod, 'xgboost') -> xgb_results
 
 # Model results
 
-And finally I can summarize the results. 
-
-From this summary, I can see that among the categorical encoding methods target performed best on average, frequency performed worst on average, but the best models used the one-hot or one-hot + embedding encoding strategies. And in terms of ML algorithm, the two tree-based models performed better, on average, as compared to the logistic model.
+Looking at the results, I can see that best models used embedding encoding.
 
 ```{r}
 multinom_results %>%
@@ -447,12 +480,24 @@ model_results %>%
   arrange(desc(test_perf))
 
 model_results %>%
+  mutate(colors = ifelse(encoding_type == 'embedding', '1', '0')) %>%
   ggplot() +
-    geom_col(aes(x = encoding_type, group = model_type, fill = model_type, y = test_perf), position='dodge') +
-    scale_y_continuous(limits=c(0.6,0.75),oob = rescale_none)
-
-model_results %>%
-  ggplot() +
-    geom_col(aes(x = model_type, group = encoding_type, fill = encoding_type, y = test_perf), position='dodge') +
-    scale_y_continuous(limits=c(0.6,0.75),oob = rescale_none)
+    geom_col(aes(x = model_type, 
+                 group = encoding_type, 
+                 fill = encoding_type, 
+                 y = test_perf,
+                 color = colors), position='dodge') +
+    scale_y_continuous(limits=c(0.60, 0.75), oob = rescale_none, breaks = seq(0.60, 0.75, 0.01)) +
+    labs(title = 'F1 score by model type and categorical encoding method', 
+         subtitle = 'The best models used embedding encoding',
+         fill = 'Encoding', y = 'F1 score', x = 'Model') +
+    scale_color_manual(values=c("white", "black")) + 
+    guides(colour = "none") +
+    theme_minimal()
 ```
+
+```{r}
+#ggsave <- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)
+#ggsave('social-image.png', width=1600, height=900, units='px')
+```
+
