@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -93,8 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script>
@@ -199,6 +198,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
                 <div class="quarto-category">machine-learning</div>
                 <div class="quarto-category">statistical-modeling</div>
                 <div class="quarto-category">prediction</div>
+                <div class="quarto-category">python</div>
               </div>
                   </div>
   </div>
@@ -1250,549 +1250,550 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - statistical-modeling</span></span>
 <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - prediction</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - python</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>I decided to explore and model the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://www.kaggle.com/ronitf/heart-disease-uci"</span><span class="kw">&gt;</span>Heart Disease UCI dataset<span class="kw">&lt;/a&gt;</span> from Kaggle. The original source can be found at the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://archive.ics.uci.edu/ml/datasets/Heart+Disease"</span><span class="kw">&gt;</span>UCI Machine Learning Repository<span class="kw">&lt;/a&gt;</span>. The dataset contains 303 individuals and 14 attribute observations (the original source data contains additional features). The features included various heart disease-related measurements, like chest pain and resting ECG, as well as age and sex, and represented a mix of binary, categorical, ordinal, and numeric data. The outcome variable represented the presence or absence of heart disease.</span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>I applied a fairly standard machine learning process, beginning with understanding what the data represented -- this involved looking at the raw data and reading the data dictionary and other documentation -- followed by splitting the data into training and test sets, Exploratory Data Analysis to understand how the features relate to the outcome, feature encoding, model fitting (logistic regression), and model evaluation.</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>Ultimately, the model was 75% accurate in predicting heart disease. It correctly predicted 46 out of the 61 test cases. Of the errors it made, 5 were false-positive errors and 10 were false-negative errors.</span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>I decided to explore and model the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://www.kaggle.com/ronitf/heart-disease-uci"</span><span class="kw">&gt;</span>Heart Disease UCI dataset<span class="kw">&lt;/a&gt;</span> from Kaggle. The original source can be found at the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://archive.ics.uci.edu/ml/datasets/Heart+Disease"</span><span class="kw">&gt;</span>UCI Machine Learning Repository<span class="kw">&lt;/a&gt;</span>. The dataset contains 303 individuals and 14 attribute observations (the original source data contains additional features). The features included various heart disease-related measurements, like chest pain and resting ECG, as well as age and sex, and represented a mix of binary, categorical, ordinal, and numeric data. The outcome variable represented the presence or absence of heart disease.</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>I applied a fairly standard machine learning process, beginning with understanding what the data represented -- this involved looking at the raw data and reading the data dictionary and other documentation -- followed by splitting the data into training and test sets, Exploratory Data Analysis to understand how the features relate to the outcome, feature encoding, model fitting (logistic regression), and model evaluation.</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>Ultimately, the model was 75% accurate in predicting heart disease. It correctly predicted 46 out of the 61 test cases. Of the errors it made, 5 were false-positive errors and 10 were false-negative errors.</span>
 <span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Imports</span></span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="fu"># Imports</span></span>
 <span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> kaggle</span>
-<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Download data from Kaggle</span></span>
-<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="co"># !kaggle datasets download ronitf/heart-disease-uci -f heart.csv -p heart_uci</span></span>
-<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> kaggle</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Download data from Kaggle</span></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a><span class="co"># !kaggle datasets download ronitf/heart-disease-uci -f heart.csv -p heart_uci</span></span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'heart.csv'</span>)</span>
-<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>df.head()</span>
-<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'heart.csv'</span>)</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
-<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
-<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
-<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
-<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
-<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
-<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
-<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
-<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
-<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>sex<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>cp<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>fbs<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>restecg<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>exang<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>slope<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thal<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>target<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
-<span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>0<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>63<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>3<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>145<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>233<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>150<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2.3<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
+<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
+<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
+<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
+<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
+<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
+<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>sex<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>cp<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>fbs<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>restecg<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>exang<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>slope<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thal<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>target<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
+<span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
+<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>0<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>63<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>3<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>145<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>233<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>150<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2.3<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-98"><a href="#cb22-98" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-99"><a href="#cb22-99" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-99"><a href="#cb22-99" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-100"><a href="#cb22-100" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-101"><a href="#cb22-101" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>1<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>37<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>130<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>250<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>187<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-112"><a href="#cb22-112" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-113"><a href="#cb22-113" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>3.5<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-101"><a href="#cb22-101" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>1<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>37<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-108"><a href="#cb22-108" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>130<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-109"><a href="#cb22-109" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>250<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-110"><a href="#cb22-110" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-111"><a href="#cb22-111" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-112"><a href="#cb22-112" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>187<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-113"><a href="#cb22-113" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-114"><a href="#cb22-114" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>3.5<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-115"><a href="#cb22-115" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>2<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>41<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>130<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>204<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-116"><a href="#cb22-116" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-117"><a href="#cb22-117" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-118"><a href="#cb22-118" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-119"><a href="#cb22-119" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-120"><a href="#cb22-120" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-121"><a href="#cb22-121" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>2<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-122"><a href="#cb22-122" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>41<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-123"><a href="#cb22-123" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-124"><a href="#cb22-124" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-125"><a href="#cb22-125" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>130<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-126"><a href="#cb22-126" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>204<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-127"><a href="#cb22-127" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>172<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.4<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-132"><a href="#cb22-132" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-136"><a href="#cb22-136" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-137"><a href="#cb22-137" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>3<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-128"><a href="#cb22-128" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-129"><a href="#cb22-129" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>172<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-130"><a href="#cb22-130" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-131"><a href="#cb22-131" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.4<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-132"><a href="#cb22-132" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-133"><a href="#cb22-133" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-134"><a href="#cb22-134" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-135"><a href="#cb22-135" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-136"><a href="#cb22-136" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-137"><a href="#cb22-137" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-138"><a href="#cb22-138" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>3<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-139"><a href="#cb22-139" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-140"><a href="#cb22-140" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>120<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>236<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>178<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.8<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>4<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>57<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-141"><a href="#cb22-141" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-142"><a href="#cb22-142" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>120<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-143"><a href="#cb22-143" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>236<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-144"><a href="#cb22-144" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-145"><a href="#cb22-145" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-146"><a href="#cb22-146" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>178<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-147"><a href="#cb22-147" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-148"><a href="#cb22-148" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.8<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-149"><a href="#cb22-149" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-150"><a href="#cb22-150" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-151"><a href="#cb22-151" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-152"><a href="#cb22-152" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-153"><a href="#cb22-153" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-154"><a href="#cb22-154" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-155"><a href="#cb22-155" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>4<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-156"><a href="#cb22-156" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>57<span class="kw">&lt;/td&gt;</span></span>
 <span id="cb22-157"><a href="#cb22-157" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>120<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>354<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>163<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.6<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
-<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
-<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-158"><a href="#cb22-158" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-159"><a href="#cb22-159" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>120<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-160"><a href="#cb22-160" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>354<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-161"><a href="#cb22-161" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-162"><a href="#cb22-162" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-163"><a href="#cb22-163" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>163<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-164"><a href="#cb22-164" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-165"><a href="#cb22-165" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.6<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-166"><a href="#cb22-166" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-167"><a href="#cb22-167" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-168"><a href="#cb22-168" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>2<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-169"><a href="#cb22-169" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-170"><a href="#cb22-170" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-171"><a href="#cb22-171" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
+<span id="cb22-172"><a href="#cb22-172" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
+<span id="cb22-173"><a href="#cb22-173" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
 <span id="cb22-174"><a href="#cb22-174" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-175"><a href="#cb22-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a>When I started to explore the data, I noticed that many of the parameters that I would expect from my lay knowledge of heart disease to be positively correlated, were actually pointed in the opposite direction. After reading through some comments in the Kaggle discussion forum, I discovered that others had come to a similar conclusion: the target variable was reversed.</span>
-<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a>So here I flip it back to how it should be (1 = heart disease; 0 = no heart disease).</span>
-<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-176"><a href="#cb22-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-177"><a href="#cb22-177" aria-hidden="true" tabindex="-1"></a>When I started to explore the data, I noticed that many of the parameters that I would expect from my lay knowledge of heart disease to be positively correlated, were actually pointed in the opposite direction. After reading through some comments in the Kaggle discussion forum, I discovered that others had come to a similar conclusion: the target variable was reversed.</span>
+<span id="cb22-178"><a href="#cb22-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-179"><a href="#cb22-179" aria-hidden="true" tabindex="-1"></a>So here I flip it back to how it should be (1 = heart disease; 0 = no heart disease).</span>
 <span id="cb22-180"><a href="#cb22-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a>df.target <span class="op">=</span> df.target.replace({<span class="dv">0</span>:<span class="dv">1</span>, <span class="dv">1</span>:<span class="dv">0</span>})</span>
-<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a>I'll check the target classes to see how balanced they are.</span>
-<span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-181"><a href="#cb22-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-182"><a href="#cb22-182" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-183"><a href="#cb22-183" aria-hidden="true" tabindex="-1"></a>df.target <span class="op">=</span> df.target.replace({<span class="dv">0</span>:<span class="dv">1</span>, <span class="dv">1</span>:<span class="dv">0</span>})</span>
+<span id="cb22-184"><a href="#cb22-184" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-185"><a href="#cb22-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-186"><a href="#cb22-186" aria-hidden="true" tabindex="-1"></a>I'll check the target classes to see how balanced they are.</span>
 <span id="cb22-187"><a href="#cb22-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a>df.target.value_counts()</span>
-<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-188"><a href="#cb22-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-189"><a href="#cb22-189" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-190"><a href="#cb22-190" aria-hidden="true" tabindex="-1"></a>df.target.value_counts()</span>
+<span id="cb22-191"><a href="#cb22-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-192"><a href="#cb22-192" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-193"><a href="#cb22-193" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-194"><a href="#cb22-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a><span class="in">    0    165</span></span>
-<span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a><span class="in">    1    138</span></span>
-<span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a><span class="in">    Name: target, dtype: int64</span></span>
-<span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-195"><a href="#cb22-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-196"><a href="#cb22-196" aria-hidden="true" tabindex="-1"></a><span class="in">    0    165</span></span>
+<span id="cb22-197"><a href="#cb22-197" aria-hidden="true" tabindex="-1"></a><span class="in">    1    138</span></span>
+<span id="cb22-198"><a href="#cb22-198" aria-hidden="true" tabindex="-1"></a><span class="in">    Name: target, dtype: int64</span></span>
 <span id="cb22-199"><a href="#cb22-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-200"><a href="#cb22-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-201"><a href="#cb22-201" aria-hidden="true" tabindex="-1"></a>Not particularly unbalanced, but we'll stratify in the train-test split later anyway.</span>
-<span id="cb22-202"><a href="#cb22-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-203"><a href="#cb22-203" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature descriptions</span></span>
-<span id="cb22-204"><a href="#cb22-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-205"><a href="#cb22-205" aria-hidden="true" tabindex="-1"></a>First I'll put the features into groups based on the type of data contained. In order to make these groupings, I've used the data dictionary, as well as some helpful comments on Kaggle notebooks and discussion. Some of the documentation turned out to be incorrect, as I learned in my own examination of the data dictionary and confirmed by reading discussions on Kaggle. For example, the target was coded incorrectly (originally, 0 was "had heart disease"), and many of the categorical variable labels were missing.</span>
-<span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a><span class="fu">## Binary</span></span>
-<span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`sex`</span> (0 = female; 1 = male)</span>
-<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`fbs`</span>: Fasting blood sugar &gt; 120 mg/dl</span>
-<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`exang`</span>: Exercise induced angina (0 = no; 1 = yes)</span>
-<span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Categorical</span></span>
-<span id="cb22-213"><a href="#cb22-213" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`cp`</span>: Chest pain type (0 = Asymptomatic angina; 1 = Atypical angina; 2 = Non-angina; 3 = Typical angina)</span>
-<span id="cb22-214"><a href="#cb22-214" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`restecg`</span>: Resting ECG (0 = Left ventricular hypertrophy; 1 = Normal; 2 = ST-T wave abnormality)</span>
-<span id="cb22-215"><a href="#cb22-215" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`slope`</span>: Slope of the peak exercise ST segment (0 = downsloping; 1 = upsloping; 2 = flat)</span>
-<span id="cb22-216"><a href="#cb22-216" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`thal`</span>: Thalium stress test result (0 = NA; 1 = Fixed defect; 2 = Normal; 3 = Reversible defect)</span>
-<span id="cb22-217"><a href="#cb22-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-218"><a href="#cb22-218" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ordinal</span></span>
-<span id="cb22-219"><a href="#cb22-219" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`ca`</span>: number of major vessels (0-3) colored by flourosopy</span>
-<span id="cb22-220"><a href="#cb22-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-221"><a href="#cb22-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## Numeric</span></span>
-<span id="cb22-222"><a href="#cb22-222" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`age`</span></span>
-<span id="cb22-223"><a href="#cb22-223" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`oldpeak`</span>: ST depression induced by exercise relative to rest</span>
-<span id="cb22-224"><a href="#cb22-224" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`trestbps`</span>: Resting blood pressure</span>
-<span id="cb22-225"><a href="#cb22-225" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`chol`</span>: Serum cholestoral in mg/dl</span>
-<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`thalach`</span>: Maximum heart rate achieved during thalium stress test</span>
-<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-228"><a href="#cb22-228" aria-hidden="true" tabindex="-1"></a><span class="fu">## Target</span></span>
-<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`target`</span>: 1 = heart disease; 0 = no heart disease</span>
-<span id="cb22-230"><a href="#cb22-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-231"><a href="#cb22-231" aria-hidden="true" tabindex="-1"></a>I'll create arrays so the features are easier to access later by type.</span>
-<span id="cb22-232"><a href="#cb22-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-201"><a href="#cb22-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-202"><a href="#cb22-202" aria-hidden="true" tabindex="-1"></a>Not particularly unbalanced, but we'll stratify in the train-test split later anyway.</span>
+<span id="cb22-203"><a href="#cb22-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-204"><a href="#cb22-204" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature descriptions</span></span>
+<span id="cb22-205"><a href="#cb22-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-206"><a href="#cb22-206" aria-hidden="true" tabindex="-1"></a>First I'll put the features into groups based on the type of data contained. In order to make these groupings, I've used the data dictionary, as well as some helpful comments on Kaggle notebooks and discussion. Some of the documentation turned out to be incorrect, as I learned in my own examination of the data dictionary and confirmed by reading discussions on Kaggle. For example, the target was coded incorrectly (originally, 0 was "had heart disease"), and many of the categorical variable labels were missing.</span>
+<span id="cb22-207"><a href="#cb22-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-208"><a href="#cb22-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## Binary</span></span>
+<span id="cb22-209"><a href="#cb22-209" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`sex`</span> (0 = female; 1 = male)</span>
+<span id="cb22-210"><a href="#cb22-210" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`fbs`</span>: Fasting blood sugar &gt; 120 mg/dl</span>
+<span id="cb22-211"><a href="#cb22-211" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`exang`</span>: Exercise induced angina (0 = no; 1 = yes)</span>
+<span id="cb22-212"><a href="#cb22-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-213"><a href="#cb22-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## Categorical</span></span>
+<span id="cb22-214"><a href="#cb22-214" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`cp`</span>: Chest pain type (0 = Asymptomatic angina; 1 = Atypical angina; 2 = Non-angina; 3 = Typical angina)</span>
+<span id="cb22-215"><a href="#cb22-215" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`restecg`</span>: Resting ECG (0 = Left ventricular hypertrophy; 1 = Normal; 2 = ST-T wave abnormality)</span>
+<span id="cb22-216"><a href="#cb22-216" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`slope`</span>: Slope of the peak exercise ST segment (0 = downsloping; 1 = upsloping; 2 = flat)</span>
+<span id="cb22-217"><a href="#cb22-217" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`thal`</span>: Thalium stress test result (0 = NA; 1 = Fixed defect; 2 = Normal; 3 = Reversible defect)</span>
+<span id="cb22-218"><a href="#cb22-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-219"><a href="#cb22-219" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ordinal</span></span>
+<span id="cb22-220"><a href="#cb22-220" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`ca`</span>: number of major vessels (0-3) colored by flourosopy</span>
+<span id="cb22-221"><a href="#cb22-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-222"><a href="#cb22-222" aria-hidden="true" tabindex="-1"></a><span class="fu">## Numeric</span></span>
+<span id="cb22-223"><a href="#cb22-223" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`age`</span></span>
+<span id="cb22-224"><a href="#cb22-224" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`oldpeak`</span>: ST depression induced by exercise relative to rest</span>
+<span id="cb22-225"><a href="#cb22-225" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`trestbps`</span>: Resting blood pressure</span>
+<span id="cb22-226"><a href="#cb22-226" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`chol`</span>: Serum cholestoral in mg/dl</span>
+<span id="cb22-227"><a href="#cb22-227" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`thalach`</span>: Maximum heart rate achieved during thalium stress test</span>
+<span id="cb22-228"><a href="#cb22-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-229"><a href="#cb22-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## Target</span></span>
+<span id="cb22-230"><a href="#cb22-230" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`target`</span>: 1 = heart disease; 0 = no heart disease</span>
+<span id="cb22-231"><a href="#cb22-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-232"><a href="#cb22-232" aria-hidden="true" tabindex="-1"></a>I'll create arrays so the features are easier to access later by type.</span>
 <span id="cb22-233"><a href="#cb22-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="st">'sex'</span>, <span class="st">'fbs'</span>, <span class="st">'exang'</span>]</span>
-<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'cp'</span>, <span class="st">'restecg'</span>, <span class="st">'slope'</span>, <span class="st">'thal'</span>]</span>
-<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a>ords <span class="op">=</span> [<span class="st">'ca'</span>]</span>
-<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'oldpeak'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'thalach'</span>]</span>
-<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> [<span class="st">'target'</span>]</span>
-<span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-241"><a href="#cb22-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-242"><a href="#cb22-242" aria-hidden="true" tabindex="-1"></a>I'll recode the categorical variables so the data exploration is easier.</span>
-<span id="cb22-243"><a href="#cb22-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-234"><a href="#cb22-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-235"><a href="#cb22-235" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-236"><a href="#cb22-236" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="st">'sex'</span>, <span class="st">'fbs'</span>, <span class="st">'exang'</span>]</span>
+<span id="cb22-237"><a href="#cb22-237" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'cp'</span>, <span class="st">'restecg'</span>, <span class="st">'slope'</span>, <span class="st">'thal'</span>]</span>
+<span id="cb22-238"><a href="#cb22-238" aria-hidden="true" tabindex="-1"></a>ords <span class="op">=</span> [<span class="st">'ca'</span>]</span>
+<span id="cb22-239"><a href="#cb22-239" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'oldpeak'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'thalach'</span>]</span>
+<span id="cb22-240"><a href="#cb22-240" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> [<span class="st">'target'</span>]</span>
+<span id="cb22-241"><a href="#cb22-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-242"><a href="#cb22-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-243"><a href="#cb22-243" aria-hidden="true" tabindex="-1"></a>I'll recode the categorical variables so the data exploration is easier.</span>
 <span id="cb22-244"><a href="#cb22-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-245"><a href="#cb22-245" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-246"><a href="#cb22-246" aria-hidden="true" tabindex="-1"></a>df.cp <span class="op">=</span> df.cp.replace({<span class="dv">0</span>:<span class="st">'Asympt.'</span>, <span class="dv">1</span>:<span class="st">'Atypical'</span>, <span class="dv">2</span>:<span class="st">'Non'</span>, <span class="dv">3</span>:<span class="st">'Typical'</span>})</span>
-<span id="cb22-247"><a href="#cb22-247" aria-hidden="true" tabindex="-1"></a>df.restecg <span class="op">=</span> df.restecg.replace({<span class="dv">0</span>:<span class="st">'LV hyper'</span>, <span class="dv">1</span>:<span class="st">'Normal'</span>, <span class="dv">2</span>:<span class="st">'ST-T wave'</span>})</span>
-<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a>df.slope <span class="op">=</span> df.slope.replace({<span class="dv">0</span>:<span class="st">'down'</span>, <span class="dv">1</span>:<span class="st">'up'</span>, <span class="dv">2</span>:<span class="st">'flat'</span>})</span>
-<span id="cb22-249"><a href="#cb22-249" aria-hidden="true" tabindex="-1"></a>df.thal <span class="op">=</span> df.thal.replace({<span class="dv">0</span>:<span class="st">'NA'</span>, <span class="dv">1</span>:<span class="st">'Fixed'</span>, <span class="dv">2</span>:<span class="st">'Normal'</span>, <span class="dv">3</span>:<span class="st">'Revers.'</span>})</span>
-<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-251"><a href="#cb22-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a><span class="fu"># Train-test split</span></span>
-<span id="cb22-253"><a href="#cb22-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-254"><a href="#cb22-254" aria-hidden="true" tabindex="-1"></a>Before exploring the data, I'll split them into train and test sets.</span>
-<span id="cb22-255"><a href="#cb22-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-245"><a href="#cb22-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-246"><a href="#cb22-246" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-247"><a href="#cb22-247" aria-hidden="true" tabindex="-1"></a>df.cp <span class="op">=</span> df.cp.replace({<span class="dv">0</span>:<span class="st">'Asympt.'</span>, <span class="dv">1</span>:<span class="st">'Atypical'</span>, <span class="dv">2</span>:<span class="st">'Non'</span>, <span class="dv">3</span>:<span class="st">'Typical'</span>})</span>
+<span id="cb22-248"><a href="#cb22-248" aria-hidden="true" tabindex="-1"></a>df.restecg <span class="op">=</span> df.restecg.replace({<span class="dv">0</span>:<span class="st">'LV hyper'</span>, <span class="dv">1</span>:<span class="st">'Normal'</span>, <span class="dv">2</span>:<span class="st">'ST-T wave'</span>})</span>
+<span id="cb22-249"><a href="#cb22-249" aria-hidden="true" tabindex="-1"></a>df.slope <span class="op">=</span> df.slope.replace({<span class="dv">0</span>:<span class="st">'down'</span>, <span class="dv">1</span>:<span class="st">'up'</span>, <span class="dv">2</span>:<span class="st">'flat'</span>})</span>
+<span id="cb22-250"><a href="#cb22-250" aria-hidden="true" tabindex="-1"></a>df.thal <span class="op">=</span> df.thal.replace({<span class="dv">0</span>:<span class="st">'NA'</span>, <span class="dv">1</span>:<span class="st">'Fixed'</span>, <span class="dv">2</span>:<span class="st">'Normal'</span>, <span class="dv">3</span>:<span class="st">'Revers.'</span>})</span>
+<span id="cb22-251"><a href="#cb22-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-252"><a href="#cb22-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-253"><a href="#cb22-253" aria-hidden="true" tabindex="-1"></a><span class="fu"># Train-test split</span></span>
+<span id="cb22-254"><a href="#cb22-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-255"><a href="#cb22-255" aria-hidden="true" tabindex="-1"></a>Before exploring the data, I'll split them into train and test sets.</span>
 <span id="cb22-256"><a href="#cb22-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-257"><a href="#cb22-257" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-258"><a href="#cb22-258" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(df, </span>
-<span id="cb22-259"><a href="#cb22-259" aria-hidden="true" tabindex="-1"></a>                                                    df.target, </span>
-<span id="cb22-260"><a href="#cb22-260" aria-hidden="true" tabindex="-1"></a>                                                    test_size <span class="op">=</span> <span class="fl">0.2</span>, </span>
-<span id="cb22-261"><a href="#cb22-261" aria-hidden="true" tabindex="-1"></a>                                                    random_state <span class="op">=</span> <span class="dv">42</span>,</span>
-<span id="cb22-262"><a href="#cb22-262" aria-hidden="true" tabindex="-1"></a>                                                    stratify <span class="op">=</span> df.target)</span>
-<span id="cb22-263"><a href="#cb22-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-264"><a href="#cb22-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-265"><a href="#cb22-265" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exploratory data analysis</span></span>
-<span id="cb22-266"><a href="#cb22-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-267"><a href="#cb22-267" aria-hidden="true" tabindex="-1"></a><span class="fu">## Numeric and ordinal descriptives</span></span>
-<span id="cb22-268"><a href="#cb22-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-257"><a href="#cb22-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-258"><a href="#cb22-258" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-259"><a href="#cb22-259" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(df, </span>
+<span id="cb22-260"><a href="#cb22-260" aria-hidden="true" tabindex="-1"></a>                                                    df.target, </span>
+<span id="cb22-261"><a href="#cb22-261" aria-hidden="true" tabindex="-1"></a>                                                    test_size <span class="op">=</span> <span class="fl">0.2</span>, </span>
+<span id="cb22-262"><a href="#cb22-262" aria-hidden="true" tabindex="-1"></a>                                                    random_state <span class="op">=</span> <span class="dv">42</span>,</span>
+<span id="cb22-263"><a href="#cb22-263" aria-hidden="true" tabindex="-1"></a>                                                    stratify <span class="op">=</span> df.target)</span>
+<span id="cb22-264"><a href="#cb22-264" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-265"><a href="#cb22-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-266"><a href="#cb22-266" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exploratory data analysis</span></span>
+<span id="cb22-267"><a href="#cb22-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-268"><a href="#cb22-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## Numeric and ordinal descriptives</span></span>
 <span id="cb22-269"><a href="#cb22-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-270"><a href="#cb22-270" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-271"><a href="#cb22-271" aria-hidden="true" tabindex="-1"></a>X_train[X_train.target <span class="op">==</span> <span class="dv">0</span>].drop(cats <span class="op">+</span> bins <span class="op">+</span> target, </span>
-<span id="cb22-272"><a href="#cb22-272" aria-hidden="true" tabindex="-1"></a>                                  axis<span class="op">=</span><span class="dv">1</span>).describe().loc[[<span class="st">'mean'</span>, <span class="st">'std'</span>]]</span>
-<span id="cb22-273"><a href="#cb22-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-274"><a href="#cb22-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-270"><a href="#cb22-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-271"><a href="#cb22-271" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-272"><a href="#cb22-272" aria-hidden="true" tabindex="-1"></a>X_train[X_train.target <span class="op">==</span> <span class="dv">0</span>].drop(cats <span class="op">+</span> bins <span class="op">+</span> target, </span>
+<span id="cb22-273"><a href="#cb22-273" aria-hidden="true" tabindex="-1"></a>                                  axis<span class="op">=</span><span class="dv">1</span>).describe().loc[[<span class="st">'mean'</span>, <span class="st">'std'</span>]]</span>
+<span id="cb22-274"><a href="#cb22-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-275"><a href="#cb22-275" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-276"><a href="#cb22-276" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-277"><a href="#cb22-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-278"><a href="#cb22-278" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
-<span id="cb22-279"><a href="#cb22-279" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
-<span id="cb22-280"><a href="#cb22-280" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb22-281"><a href="#cb22-281" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
-<span id="cb22-282"><a href="#cb22-282" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-283"><a href="#cb22-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-284"><a href="#cb22-284" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb22-285"><a href="#cb22-285" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
-<span id="cb22-286"><a href="#cb22-286" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-287"><a href="#cb22-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb22-290"><a href="#cb22-290" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-291"><a href="#cb22-291" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
-<span id="cb22-292"><a href="#cb22-292" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
-<span id="cb22-293"><a href="#cb22-293" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
-<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
-<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
-<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-297"><a href="#cb22-297" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
-<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-306"><a href="#cb22-306" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>mean<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-307"><a href="#cb22-307" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>52.598485<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-308"><a href="#cb22-308" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>129.000000<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-309"><a href="#cb22-309" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>247.340909<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-310"><a href="#cb22-310" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>158.280303<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-311"><a href="#cb22-311" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.585606<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.30303<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-315"><a href="#cb22-315" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>std<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-316"><a href="#cb22-316" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>9.366058<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-317"><a href="#cb22-317" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>16.414944<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56.661824<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>18.929082<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.759282<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.73036<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-322"><a href="#cb22-322" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
-<span id="cb22-325"><a href="#cb22-325" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
-<span id="cb22-326"><a href="#cb22-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-278"><a href="#cb22-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-279"><a href="#cb22-279" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb22-280"><a href="#cb22-280" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
+<span id="cb22-281"><a href="#cb22-281" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
+<span id="cb22-282"><a href="#cb22-282" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb22-283"><a href="#cb22-283" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-284"><a href="#cb22-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-285"><a href="#cb22-285" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
+<span id="cb22-286"><a href="#cb22-286" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb22-287"><a href="#cb22-287" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-288"><a href="#cb22-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-289"><a href="#cb22-289" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
+<span id="cb22-290"><a href="#cb22-290" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb22-291"><a href="#cb22-291" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-292"><a href="#cb22-292" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
+<span id="cb22-293"><a href="#cb22-293" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
+<span id="cb22-294"><a href="#cb22-294" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
+<span id="cb22-295"><a href="#cb22-295" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
+<span id="cb22-296"><a href="#cb22-296" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
+<span id="cb22-297"><a href="#cb22-297" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-298"><a href="#cb22-298" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-299"><a href="#cb22-299" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-300"><a href="#cb22-300" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-301"><a href="#cb22-301" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-302"><a href="#cb22-302" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-303"><a href="#cb22-303" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-304"><a href="#cb22-304" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
+<span id="cb22-305"><a href="#cb22-305" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
+<span id="cb22-306"><a href="#cb22-306" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-307"><a href="#cb22-307" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>mean<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-308"><a href="#cb22-308" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>52.598485<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-309"><a href="#cb22-309" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>129.000000<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-310"><a href="#cb22-310" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>247.340909<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-311"><a href="#cb22-311" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>158.280303<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-312"><a href="#cb22-312" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.585606<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-313"><a href="#cb22-313" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.30303<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-314"><a href="#cb22-314" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-315"><a href="#cb22-315" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-316"><a href="#cb22-316" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>std<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-317"><a href="#cb22-317" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>9.366058<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-318"><a href="#cb22-318" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>16.414944<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-319"><a href="#cb22-319" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56.661824<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-320"><a href="#cb22-320" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>18.929082<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-321"><a href="#cb22-321" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.759282<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-322"><a href="#cb22-322" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>0.73036<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-323"><a href="#cb22-323" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-324"><a href="#cb22-324" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
+<span id="cb22-325"><a href="#cb22-325" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
+<span id="cb22-326"><a href="#cb22-326" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
 <span id="cb22-327"><a href="#cb22-327" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-328"><a href="#cb22-328" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-329"><a href="#cb22-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-330"><a href="#cb22-330" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-331"><a href="#cb22-331" aria-hidden="true" tabindex="-1"></a>X_train[X_train.target <span class="op">==</span> <span class="dv">1</span>].drop(cats <span class="op">+</span> bins <span class="op">+</span> target, </span>
-<span id="cb22-332"><a href="#cb22-332" aria-hidden="true" tabindex="-1"></a>                                  axis<span class="op">=</span><span class="dv">1</span>).describe().loc[[<span class="st">'mean'</span>, <span class="st">'std'</span>]]</span>
-<span id="cb22-333"><a href="#cb22-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-334"><a href="#cb22-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-330"><a href="#cb22-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-331"><a href="#cb22-331" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-332"><a href="#cb22-332" aria-hidden="true" tabindex="-1"></a>X_train[X_train.target <span class="op">==</span> <span class="dv">1</span>].drop(cats <span class="op">+</span> bins <span class="op">+</span> target, </span>
+<span id="cb22-333"><a href="#cb22-333" aria-hidden="true" tabindex="-1"></a>                                  axis<span class="op">=</span><span class="dv">1</span>).describe().loc[[<span class="st">'mean'</span>, <span class="st">'std'</span>]]</span>
+<span id="cb22-334"><a href="#cb22-334" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-335"><a href="#cb22-335" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-336"><a href="#cb22-336" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-337"><a href="#cb22-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-338"><a href="#cb22-338" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
-<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
-<span id="cb22-340"><a href="#cb22-340" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
-<span id="cb22-342"><a href="#cb22-342" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
-<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb22-350"><a href="#cb22-350" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb22-351"><a href="#cb22-351" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
-<span id="cb22-352"><a href="#cb22-352" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
-<span id="cb22-353"><a href="#cb22-353" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
-<span id="cb22-354"><a href="#cb22-354" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
-<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
-<span id="cb22-356"><a href="#cb22-356" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-357"><a href="#cb22-357" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-358"><a href="#cb22-358" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-359"><a href="#cb22-359" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-360"><a href="#cb22-360" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-361"><a href="#cb22-361" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-362"><a href="#cb22-362" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-363"><a href="#cb22-363" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
-<span id="cb22-364"><a href="#cb22-364" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
-<span id="cb22-365"><a href="#cb22-365" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-366"><a href="#cb22-366" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>mean<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-367"><a href="#cb22-367" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56.554545<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-368"><a href="#cb22-368" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>134.236364<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>252.190909<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>139.718182<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.616364<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.090909<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
-<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>std<span class="kw">&lt;/th&gt;</span></span>
-<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>8.085082<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>18.436067<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>49.041547<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>21.377400<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-380"><a href="#cb22-380" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.314669<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.018593<span class="kw">&lt;/td&gt;</span></span>
-<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
-<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
-<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
-<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
-<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-338"><a href="#cb22-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-339"><a href="#cb22-339" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div&gt;</span></span>
+<span id="cb22-340"><a href="#cb22-340" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style</span> <span class="er">scoped</span><span class="kw">&gt;</span></span>
+<span id="cb22-341"><a href="#cb22-341" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
+<span id="cb22-342"><a href="#cb22-342" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb22-343"><a href="#cb22-343" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-344"><a href="#cb22-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-345"><a href="#cb22-345" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
+<span id="cb22-346"><a href="#cb22-346" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb22-347"><a href="#cb22-347" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-348"><a href="#cb22-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-349"><a href="#cb22-349" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
+<span id="cb22-350"><a href="#cb22-350" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb22-351"><a href="#cb22-351" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb22-352"><a href="#cb22-352" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span>
+<span id="cb22-353"><a href="#cb22-353" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">border</span><span class="ot">=</span><span class="st">"1"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"dataframe"</span><span class="kw">&gt;</span></span>
+<span id="cb22-354"><a href="#cb22-354" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
+<span id="cb22-355"><a href="#cb22-355" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">style</span><span class="ot">=</span><span class="st">"text-align: right;"</span><span class="kw">&gt;</span></span>
+<span id="cb22-356"><a href="#cb22-356" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;&lt;/th&gt;</span></span>
+<span id="cb22-357"><a href="#cb22-357" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>age<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-358"><a href="#cb22-358" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>trestbps<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-359"><a href="#cb22-359" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>chol<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-360"><a href="#cb22-360" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>thalach<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-361"><a href="#cb22-361" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>oldpeak<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-362"><a href="#cb22-362" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>ca<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-363"><a href="#cb22-363" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-364"><a href="#cb22-364" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
+<span id="cb22-365"><a href="#cb22-365" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
+<span id="cb22-366"><a href="#cb22-366" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-367"><a href="#cb22-367" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>mean<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-368"><a href="#cb22-368" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>56.554545<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-369"><a href="#cb22-369" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>134.236364<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-370"><a href="#cb22-370" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>252.190909<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-371"><a href="#cb22-371" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>139.718182<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-372"><a href="#cb22-372" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.616364<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-373"><a href="#cb22-373" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.090909<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-374"><a href="#cb22-374" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-375"><a href="#cb22-375" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb22-376"><a href="#cb22-376" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>std<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb22-377"><a href="#cb22-377" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>8.085082<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-378"><a href="#cb22-378" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>18.436067<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-379"><a href="#cb22-379" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>49.041547<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-380"><a href="#cb22-380" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>21.377400<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-381"><a href="#cb22-381" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.314669<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-382"><a href="#cb22-382" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;td&gt;</span>1.018593<span class="kw">&lt;/td&gt;</span></span>
+<span id="cb22-383"><a href="#cb22-383" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb22-384"><a href="#cb22-384" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
+<span id="cb22-385"><a href="#cb22-385" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span>
+<span id="cb22-386"><a href="#cb22-386" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
 <span id="cb22-387"><a href="#cb22-387" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-388"><a href="#cb22-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-389"><a href="#cb22-389" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
-<span id="cb22-390"><a href="#cb22-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-391"><a href="#cb22-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Older <span class="co">[</span><span class="ot">`age`</span><span class="co">]</span></span>
-<span id="cb22-392"><a href="#cb22-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher resting blood pressure <span class="co">[</span><span class="ot">`trestbps`</span><span class="co">]</span></span>
-<span id="cb22-393"><a href="#cb22-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher cholesterol <span class="co">[</span><span class="ot">`chol`</span><span class="co">]</span></span>
-<span id="cb22-394"><a href="#cb22-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lower maximum heart rate <span class="co">[</span><span class="ot">`thalach`</span><span class="co">]</span></span>
-<span id="cb22-395"><a href="#cb22-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher exercise-induced ST depression <span class="co">[</span><span class="ot">`oldpeak`</span><span class="co">]</span></span>
-<span id="cb22-396"><a href="#cb22-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More vessels colored by fluoroscopy <span class="co">[</span><span class="ot">`ca`</span><span class="co">]</span></span>
-<span id="cb22-397"><a href="#cb22-397" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-398"><a href="#cb22-398" aria-hidden="true" tabindex="-1"></a><span class="fu">## Categorical and boolean counts</span></span>
-<span id="cb22-399"><a href="#cb22-399" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a><span class="fu">### Categorical</span></span>
-<span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-389"><a href="#cb22-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-390"><a href="#cb22-390" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
+<span id="cb22-391"><a href="#cb22-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-392"><a href="#cb22-392" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Older <span class="co">[</span><span class="ot">`age`</span><span class="co">]</span></span>
+<span id="cb22-393"><a href="#cb22-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher resting blood pressure <span class="co">[</span><span class="ot">`trestbps`</span><span class="co">]</span></span>
+<span id="cb22-394"><a href="#cb22-394" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher cholesterol <span class="co">[</span><span class="ot">`chol`</span><span class="co">]</span></span>
+<span id="cb22-395"><a href="#cb22-395" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Lower maximum heart rate <span class="co">[</span><span class="ot">`thalach`</span><span class="co">]</span></span>
+<span id="cb22-396"><a href="#cb22-396" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Higher exercise-induced ST depression <span class="co">[</span><span class="ot">`oldpeak`</span><span class="co">]</span></span>
+<span id="cb22-397"><a href="#cb22-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More vessels colored by fluoroscopy <span class="co">[</span><span class="ot">`ca`</span><span class="co">]</span></span>
+<span id="cb22-398"><a href="#cb22-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-399"><a href="#cb22-399" aria-hidden="true" tabindex="-1"></a><span class="fu">## Categorical and boolean counts</span></span>
+<span id="cb22-400"><a href="#cb22-400" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-401"><a href="#cb22-401" aria-hidden="true" tabindex="-1"></a><span class="fu">### Categorical</span></span>
 <span id="cb22-402"><a href="#cb22-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>, bottom<span class="op">=</span><span class="fl">0.01</span>, top<span class="op">=</span><span class="fl">0.95</span>)</span>
-<span id="cb22-406"><a href="#cb22-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-407"><a href="#cb22-407" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(cats):</span>
-<span id="cb22-408"><a href="#cb22-408" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb22-409"><a href="#cb22-409" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, i)</span>
-<span id="cb22-410"><a href="#cb22-410" aria-hidden="true" tabindex="-1"></a>    ax.set_xticklabels(ax.get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb22-411"><a href="#cb22-411" aria-hidden="true" tabindex="-1"></a>    sns.countplot(data <span class="op">=</span> X_train, x <span class="op">=</span> var, hue <span class="op">=</span> <span class="st">'target'</span>, ax <span class="op">=</span> ax)</span>
-<span id="cb22-412"><a href="#cb22-412" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-413"><a href="#cb22-413" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb22-414"><a href="#cb22-414" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-415"><a href="#cb22-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-403"><a href="#cb22-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-404"><a href="#cb22-404" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-405"><a href="#cb22-405" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb22-406"><a href="#cb22-406" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>, bottom<span class="op">=</span><span class="fl">0.01</span>, top<span class="op">=</span><span class="fl">0.95</span>)</span>
+<span id="cb22-407"><a href="#cb22-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-408"><a href="#cb22-408" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(cats):</span>
+<span id="cb22-409"><a href="#cb22-409" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb22-410"><a href="#cb22-410" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">2</span>, i)</span>
+<span id="cb22-411"><a href="#cb22-411" aria-hidden="true" tabindex="-1"></a>    ax.set_xticklabels(ax.get_xticklabels(), rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb22-412"><a href="#cb22-412" aria-hidden="true" tabindex="-1"></a>    sns.countplot(data <span class="op">=</span> X_train, x <span class="op">=</span> var, hue <span class="op">=</span> <span class="st">'target'</span>, ax <span class="op">=</span> ax)</span>
+<span id="cb22-413"><a href="#cb22-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-414"><a href="#cb22-414" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb22-415"><a href="#cb22-415" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-416"><a href="#cb22-416" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-417"><a href="#cb22-417" aria-hidden="true" tabindex="-1"></a><span class="al">![Relationship between categorical variables and outcome.](output_23_0.png)</span></span>
-<span id="cb22-418"><a href="#cb22-418" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-417"><a href="#cb22-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-418"><a href="#cb22-418" aria-hidden="true" tabindex="-1"></a><span class="al">![Relationship between categorical variables and outcome.](output_23_0.png)</span></span>
 <span id="cb22-419"><a href="#cb22-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-420"><a href="#cb22-420" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
-<span id="cb22-421"><a href="#cb22-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-422"><a href="#cb22-422" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to present with asymptomatic angina <span class="co">[</span><span class="ot">`cp`</span><span class="co">]</span></span>
-<span id="cb22-423"><a href="#cb22-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with atypical or no angina <span class="co">[</span><span class="ot">`cp`</span><span class="co">]</span></span>
-<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with normal resting ECG <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span></span>
-<span id="cb22-425"><a href="#cb22-425" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to present with an up slope <span class="co">[</span><span class="ot">`slope`</span><span class="co">]</span></span>
-<span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with a flat slope <span class="co">[</span><span class="ot">`slope`</span><span class="co">]</span></span>
-<span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to preset with a reversible defect <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
-<span id="cb22-428"><a href="#cb22-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with a normal result on the thalium test <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
-<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Combining sparse classes</span></span>
-<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a>Some of the categorical feature classes are sparse. There are instances where it might also make conceptual sense to collapse them. For example, the resting ECG test <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span> has values that essentially correspond with "normal" and "abnormal". The "ST-T wave" class is relatively rare, but it behaves similar to "LV hyper". So this is a case where it might make sense to collapse the two abnormal classes.</span>
-<span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-420"><a href="#cb22-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-421"><a href="#cb22-421" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
+<span id="cb22-422"><a href="#cb22-422" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-423"><a href="#cb22-423" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to present with asymptomatic angina <span class="co">[</span><span class="ot">`cp`</span><span class="co">]</span></span>
+<span id="cb22-424"><a href="#cb22-424" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with atypical or no angina <span class="co">[</span><span class="ot">`cp`</span><span class="co">]</span></span>
+<span id="cb22-425"><a href="#cb22-425" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with normal resting ECG <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span></span>
+<span id="cb22-426"><a href="#cb22-426" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to present with an up slope <span class="co">[</span><span class="ot">`slope`</span><span class="co">]</span></span>
+<span id="cb22-427"><a href="#cb22-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with a flat slope <span class="co">[</span><span class="ot">`slope`</span><span class="co">]</span></span>
+<span id="cb22-428"><a href="#cb22-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to preset with a reversible defect <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
+<span id="cb22-429"><a href="#cb22-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with a normal result on the thalium test <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
+<span id="cb22-430"><a href="#cb22-430" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-431"><a href="#cb22-431" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Combining sparse classes</span></span>
+<span id="cb22-432"><a href="#cb22-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-433"><a href="#cb22-433" aria-hidden="true" tabindex="-1"></a>Some of the categorical feature classes are sparse. There are instances where it might also make conceptual sense to collapse them. For example, the resting ECG test <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span> has values that essentially correspond with "normal" and "abnormal". The "ST-T wave" class is relatively rare, but it behaves similar to "LV hyper". So this is a case where it might make sense to collapse the two abnormal classes.</span>
 <span id="cb22-434"><a href="#cb22-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-436"><a href="#cb22-436" aria-hidden="true" tabindex="-1"></a>df.restecg <span class="op">=</span> df.restecg.replace({<span class="st">'Normal'</span>:<span class="dv">0</span>, <span class="st">'LV hyper'</span>:<span class="dv">1</span>, <span class="st">'ST-T wave'</span>:<span class="dv">1</span>})</span>
-<span id="cb22-437"><a href="#cb22-437" aria-hidden="true" tabindex="-1"></a>df.thal <span class="op">=</span> df.thal.replace({<span class="st">'NA'</span>:<span class="dv">0</span>, <span class="st">'Normal'</span>:<span class="dv">0</span>, <span class="st">'Fixed'</span>: <span class="dv">1</span>, <span class="st">'Revers.'</span>: <span class="dv">1</span>})</span>
-<span id="cb22-438"><a href="#cb22-438" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(df, </span>
-<span id="cb22-439"><a href="#cb22-439" aria-hidden="true" tabindex="-1"></a>                                                    df.target, </span>
-<span id="cb22-440"><a href="#cb22-440" aria-hidden="true" tabindex="-1"></a>                                                    test_size <span class="op">=</span> <span class="fl">0.2</span>, </span>
-<span id="cb22-441"><a href="#cb22-441" aria-hidden="true" tabindex="-1"></a>                                                    random_state <span class="op">=</span> <span class="dv">42</span>,</span>
-<span id="cb22-442"><a href="#cb22-442" aria-hidden="true" tabindex="-1"></a>                                                    stratify <span class="op">=</span> df.target)</span>
-<span id="cb22-443"><a href="#cb22-443" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-444"><a href="#cb22-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a>We'll also re-classify the features for which we just now collapsed classes to binary, and remove them from the categorical feature list.</span>
-<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-435"><a href="#cb22-435" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-436"><a href="#cb22-436" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-437"><a href="#cb22-437" aria-hidden="true" tabindex="-1"></a>df.restecg <span class="op">=</span> df.restecg.replace({<span class="st">'Normal'</span>:<span class="dv">0</span>, <span class="st">'LV hyper'</span>:<span class="dv">1</span>, <span class="st">'ST-T wave'</span>:<span class="dv">1</span>})</span>
+<span id="cb22-438"><a href="#cb22-438" aria-hidden="true" tabindex="-1"></a>df.thal <span class="op">=</span> df.thal.replace({<span class="st">'NA'</span>:<span class="dv">0</span>, <span class="st">'Normal'</span>:<span class="dv">0</span>, <span class="st">'Fixed'</span>: <span class="dv">1</span>, <span class="st">'Revers.'</span>: <span class="dv">1</span>})</span>
+<span id="cb22-439"><a href="#cb22-439" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(df, </span>
+<span id="cb22-440"><a href="#cb22-440" aria-hidden="true" tabindex="-1"></a>                                                    df.target, </span>
+<span id="cb22-441"><a href="#cb22-441" aria-hidden="true" tabindex="-1"></a>                                                    test_size <span class="op">=</span> <span class="fl">0.2</span>, </span>
+<span id="cb22-442"><a href="#cb22-442" aria-hidden="true" tabindex="-1"></a>                                                    random_state <span class="op">=</span> <span class="dv">42</span>,</span>
+<span id="cb22-443"><a href="#cb22-443" aria-hidden="true" tabindex="-1"></a>                                                    stratify <span class="op">=</span> df.target)</span>
+<span id="cb22-444"><a href="#cb22-444" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-445"><a href="#cb22-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-446"><a href="#cb22-446" aria-hidden="true" tabindex="-1"></a>We'll also re-classify the features for which we just now collapsed classes to binary, and remove them from the categorical feature list.</span>
 <span id="cb22-447"><a href="#cb22-447" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="st">'sex'</span>, <span class="st">'fbs'</span>, <span class="st">'exang'</span>, <span class="st">'thal'</span>, <span class="st">'restecg'</span>]</span>
-<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'cp'</span>, <span class="st">'slope'</span>]</span>
-<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a><span class="fu">### Binary</span></span>
-<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-448"><a href="#cb22-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-449"><a href="#cb22-449" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-450"><a href="#cb22-450" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="st">'sex'</span>, <span class="st">'fbs'</span>, <span class="st">'exang'</span>, <span class="st">'thal'</span>, <span class="st">'restecg'</span>]</span>
+<span id="cb22-451"><a href="#cb22-451" aria-hidden="true" tabindex="-1"></a>cats <span class="op">=</span> [<span class="st">'cp'</span>, <span class="st">'slope'</span>]</span>
+<span id="cb22-452"><a href="#cb22-452" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-453"><a href="#cb22-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-454"><a href="#cb22-454" aria-hidden="true" tabindex="-1"></a><span class="fu">### Binary</span></span>
 <span id="cb22-455"><a href="#cb22-455" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>, bottom<span class="op">=</span><span class="fl">0.01</span>, top<span class="op">=</span><span class="fl">0.95</span>)</span>
-<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(bins):</span>
-<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">3</span>, i)</span>
-<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a>    sns.countplot(data <span class="op">=</span> X_train, x <span class="op">=</span> var, hue <span class="op">=</span> <span class="st">'target'</span>, ax <span class="op">=</span> ax)</span>
-<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-456"><a href="#cb22-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-457"><a href="#cb22-457" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-458"><a href="#cb22-458" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb22-459"><a href="#cb22-459" aria-hidden="true" tabindex="-1"></a>fig.subplots_adjust(hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>, bottom<span class="op">=</span><span class="fl">0.01</span>, top<span class="op">=</span><span class="fl">0.95</span>)</span>
+<span id="cb22-460"><a href="#cb22-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-461"><a href="#cb22-461" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(bins):</span>
+<span id="cb22-462"><a href="#cb22-462" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb22-463"><a href="#cb22-463" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">2</span>, <span class="dv">3</span>, i)</span>
+<span id="cb22-464"><a href="#cb22-464" aria-hidden="true" tabindex="-1"></a>    sns.countplot(data <span class="op">=</span> X_train, x <span class="op">=</span> var, hue <span class="op">=</span> <span class="st">'target'</span>, ax <span class="op">=</span> ax)</span>
+<span id="cb22-465"><a href="#cb22-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-466"><a href="#cb22-466" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb22-467"><a href="#cb22-467" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-468"><a href="#cb22-468" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a><span class="al">![Relationship between binary variables and outcome.](output_30_0.png)</span></span>
-<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-469"><a href="#cb22-469" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-470"><a href="#cb22-470" aria-hidden="true" tabindex="-1"></a><span class="al">![Relationship between binary variables and outcome.](output_30_0.png)</span></span>
 <span id="cb22-471"><a href="#cb22-471" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
-<span id="cb22-473"><a href="#cb22-473" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to be male <span class="co">[</span><span class="ot">`sex`</span><span class="co">]</span></span>
-<span id="cb22-475"><a href="#cb22-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with fbs &lt;= 120 mg/dl <span class="co">[</span><span class="ot">`fbs`</span><span class="co">]</span></span>
-<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to experience exercise-induced angina <span class="co">[</span><span class="ot">`exang`</span><span class="co">]</span></span>
-<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to have an abnormal reading on the thalium test <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
-<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to have a normal reading on the resting ECG test <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span></span>
-<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature encoding</span></span>
-<span id="cb22-481"><a href="#cb22-481" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a>Next, we'll need to encode the variables. For the numeric variables <span class="co">[</span><span class="ot">`nums`</span><span class="co">]</span> we'll use a StandardScaler. This will "mean center" the variable such that it has a mean of 0 and an SD of 1. Each value will then represent a stnadardized difference from the mean. For the categorical variables <span class="co">[</span><span class="ot">`cats`</span><span class="co">]</span>, we'll use one-hot encoding. This creates N-1 new columns for each of the values represented in a feature, and those new columns contain binary values to encode presence or absence of the feature-value.</span>
-<span id="cb22-483"><a href="#cb22-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-472"><a href="#cb22-472" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-473"><a href="#cb22-473" aria-hidden="true" tabindex="-1"></a>Here we see that individuals with heart disease are/have...</span>
+<span id="cb22-474"><a href="#cb22-474" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-475"><a href="#cb22-475" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to be male <span class="co">[</span><span class="ot">`sex`</span><span class="co">]</span></span>
+<span id="cb22-476"><a href="#cb22-476" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to present with fbs &lt;= 120 mg/dl <span class="co">[</span><span class="ot">`fbs`</span><span class="co">]</span></span>
+<span id="cb22-477"><a href="#cb22-477" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to experience exercise-induced angina <span class="co">[</span><span class="ot">`exang`</span><span class="co">]</span></span>
+<span id="cb22-478"><a href="#cb22-478" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>More likely to have an abnormal reading on the thalium test <span class="co">[</span><span class="ot">`thal`</span><span class="co">]</span></span>
+<span id="cb22-479"><a href="#cb22-479" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Less likely to have a normal reading on the resting ECG test <span class="co">[</span><span class="ot">`restecg`</span><span class="co">]</span></span>
+<span id="cb22-480"><a href="#cb22-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-481"><a href="#cb22-481" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature encoding</span></span>
+<span id="cb22-482"><a href="#cb22-482" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-483"><a href="#cb22-483" aria-hidden="true" tabindex="-1"></a>Next, we'll need to encode the variables. For the numeric variables <span class="co">[</span><span class="ot">`nums`</span><span class="co">]</span> we'll use a StandardScaler. This will "mean center" the variable such that it has a mean of 0 and an SD of 1. Each value will then represent a stnadardized difference from the mean. For the categorical variables <span class="co">[</span><span class="ot">`cats`</span><span class="co">]</span>, we'll use one-hot encoding. This creates N-1 new columns for each of the values represented in a feature, and those new columns contain binary values to encode presence or absence of the feature-value.</span>
 <span id="cb22-484"><a href="#cb22-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-485"><a href="#cb22-485" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler, OneHotEncoder</span>
-<span id="cb22-487"><a href="#cb22-487" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> make_column_transformer</span>
-<span id="cb22-488"><a href="#cb22-488" aria-hidden="true" tabindex="-1"></a>clt <span class="op">=</span> make_column_transformer(</span>
-<span id="cb22-489"><a href="#cb22-489" aria-hidden="true" tabindex="-1"></a>    (StandardScaler(), nums),</span>
-<span id="cb22-490"><a href="#cb22-490" aria-hidden="true" tabindex="-1"></a>    (OneHotEncoder(), cats)</span>
-<span id="cb22-491"><a href="#cb22-491" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb22-492"><a href="#cb22-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-493"><a href="#cb22-493" aria-hidden="true" tabindex="-1"></a>clt.fit(X_train)</span>
-<span id="cb22-494"><a href="#cb22-494" aria-hidden="true" tabindex="-1"></a>X_train_transformed <span class="op">=</span> clt.transform(X_train)</span>
-<span id="cb22-495"><a href="#cb22-495" aria-hidden="true" tabindex="-1"></a>X_test_transformed <span class="op">=</span> clt.transform(X_test)</span>
-<span id="cb22-496"><a href="#cb22-496" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-497"><a href="#cb22-497" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-498"><a href="#cb22-498" aria-hidden="true" tabindex="-1"></a><span class="fu"># Logistic regression</span></span>
-<span id="cb22-499"><a href="#cb22-499" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-500"><a href="#cb22-500" aria-hidden="true" tabindex="-1"></a>Side-note: When I tried fitting a Logistic Regression model to the data before standardizing the numeric variables in the previous step, it would not converge. If it had converged, it probably would have given too much weight to those variables.</span>
-<span id="cb22-501"><a href="#cb22-501" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-502"><a href="#cb22-502" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fit the model</span></span>
-<span id="cb22-503"><a href="#cb22-503" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-485"><a href="#cb22-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-486"><a href="#cb22-486" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-487"><a href="#cb22-487" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler, OneHotEncoder</span>
+<span id="cb22-488"><a href="#cb22-488" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> make_column_transformer</span>
+<span id="cb22-489"><a href="#cb22-489" aria-hidden="true" tabindex="-1"></a>clt <span class="op">=</span> make_column_transformer(</span>
+<span id="cb22-490"><a href="#cb22-490" aria-hidden="true" tabindex="-1"></a>    (StandardScaler(), nums),</span>
+<span id="cb22-491"><a href="#cb22-491" aria-hidden="true" tabindex="-1"></a>    (OneHotEncoder(), cats)</span>
+<span id="cb22-492"><a href="#cb22-492" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-493"><a href="#cb22-493" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-494"><a href="#cb22-494" aria-hidden="true" tabindex="-1"></a>clt.fit(X_train)</span>
+<span id="cb22-495"><a href="#cb22-495" aria-hidden="true" tabindex="-1"></a>X_train_transformed <span class="op">=</span> clt.transform(X_train)</span>
+<span id="cb22-496"><a href="#cb22-496" aria-hidden="true" tabindex="-1"></a>X_test_transformed <span class="op">=</span> clt.transform(X_test)</span>
+<span id="cb22-497"><a href="#cb22-497" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb22-498"><a href="#cb22-498" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-499"><a href="#cb22-499" aria-hidden="true" tabindex="-1"></a><span class="fu"># Logistic regression</span></span>
+<span id="cb22-500"><a href="#cb22-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-501"><a href="#cb22-501" aria-hidden="true" tabindex="-1"></a>Side-note: When I tried fitting a Logistic Regression model to the data before standardizing the numeric variables in the previous step, it would not converge. If it had converged, it probably would have given too much weight to those variables.</span>
+<span id="cb22-502"><a href="#cb22-502" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-503"><a href="#cb22-503" aria-hidden="true" tabindex="-1"></a><span class="fu">## Fit the model</span></span>
 <span id="cb22-504"><a href="#cb22-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-505"><a href="#cb22-505" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-506"><a href="#cb22-506" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
-<span id="cb22-507"><a href="#cb22-507" aria-hidden="true" tabindex="-1"></a>lr <span class="op">=</span> LogisticRegression()</span>
-<span id="cb22-508"><a href="#cb22-508" aria-hidden="true" tabindex="-1"></a>lr.fit(X_train_transformed, y_train)</span>
-<span id="cb22-509"><a href="#cb22-509" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-510"><a href="#cb22-510" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-505"><a href="#cb22-505" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-506"><a href="#cb22-506" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-507"><a href="#cb22-507" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb22-508"><a href="#cb22-508" aria-hidden="true" tabindex="-1"></a>lr <span class="op">=</span> LogisticRegression()</span>
+<span id="cb22-509"><a href="#cb22-509" aria-hidden="true" tabindex="-1"></a>lr.fit(X_train_transformed, y_train)</span>
+<span id="cb22-510"><a href="#cb22-510" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-511"><a href="#cb22-511" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-512"><a href="#cb22-512" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-513"><a href="#cb22-513" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-514"><a href="#cb22-514" aria-hidden="true" tabindex="-1"></a><span class="in">    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,</span></span>
-<span id="cb22-515"><a href="#cb22-515" aria-hidden="true" tabindex="-1"></a><span class="in">                       intercept_scaling=1, l1_ratio=None, max_iter=100,</span></span>
-<span id="cb22-516"><a href="#cb22-516" aria-hidden="true" tabindex="-1"></a><span class="in">                       multi_class='auto', n_jobs=None, penalty='l2',</span></span>
-<span id="cb22-517"><a href="#cb22-517" aria-hidden="true" tabindex="-1"></a><span class="in">                       random_state=None, solver='lbfgs', tol=0.0001, verbose=0,</span></span>
-<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a><span class="in">                       warm_start=False)</span></span>
-<span id="cb22-519"><a href="#cb22-519" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-514"><a href="#cb22-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-515"><a href="#cb22-515" aria-hidden="true" tabindex="-1"></a><span class="in">    LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,</span></span>
+<span id="cb22-516"><a href="#cb22-516" aria-hidden="true" tabindex="-1"></a><span class="in">                       intercept_scaling=1, l1_ratio=None, max_iter=100,</span></span>
+<span id="cb22-517"><a href="#cb22-517" aria-hidden="true" tabindex="-1"></a><span class="in">                       multi_class='auto', n_jobs=None, penalty='l2',</span></span>
+<span id="cb22-518"><a href="#cb22-518" aria-hidden="true" tabindex="-1"></a><span class="in">                       random_state=None, solver='lbfgs', tol=0.0001, verbose=0,</span></span>
+<span id="cb22-519"><a href="#cb22-519" aria-hidden="true" tabindex="-1"></a><span class="in">                       warm_start=False)</span></span>
 <span id="cb22-520"><a href="#cb22-520" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-521"><a href="#cb22-521" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-522"><a href="#cb22-522" aria-hidden="true" tabindex="-1"></a><span class="fu">## Score the model</span></span>
-<span id="cb22-523"><a href="#cb22-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-522"><a href="#cb22-522" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-523"><a href="#cb22-523" aria-hidden="true" tabindex="-1"></a><span class="fu">## Score the model</span></span>
 <span id="cb22-524"><a href="#cb22-524" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-525"><a href="#cb22-525" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a>lr.score(X_test_transformed, y_test)</span>
-<span id="cb22-527"><a href="#cb22-527" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-528"><a href="#cb22-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-525"><a href="#cb22-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-526"><a href="#cb22-526" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-527"><a href="#cb22-527" aria-hidden="true" tabindex="-1"></a>lr.score(X_test_transformed, y_test)</span>
+<span id="cb22-528"><a href="#cb22-528" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-529"><a href="#cb22-529" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-530"><a href="#cb22-530" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-531"><a href="#cb22-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-532"><a href="#cb22-532" aria-hidden="true" tabindex="-1"></a><span class="in">    0.7540983606557377</span></span>
-<span id="cb22-533"><a href="#cb22-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-532"><a href="#cb22-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-533"><a href="#cb22-533" aria-hidden="true" tabindex="-1"></a><span class="in">    0.7540983606557377</span></span>
 <span id="cb22-534"><a href="#cb22-534" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-535"><a href="#cb22-535" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-536"><a href="#cb22-536" aria-hidden="true" tabindex="-1"></a>75% is not terrible, but not terribly great either. Generally 80% and above is considered acceptable, though of course it depends on the application, and specific kinds of errors might be important here. We fell short of this rule of thumb but not by a huge margin.</span>
-<span id="cb22-537"><a href="#cb22-537" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-538"><a href="#cb22-538" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confusion matrix</span></span>
-<span id="cb22-539"><a href="#cb22-539" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-536"><a href="#cb22-536" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-537"><a href="#cb22-537" aria-hidden="true" tabindex="-1"></a>75% is not terrible, but not terribly great either. Generally 80% and above is considered acceptable, though of course it depends on the application, and specific kinds of errors might be important here. We fell short of this rule of thumb but not by a huge margin.</span>
+<span id="cb22-538"><a href="#cb22-538" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-539"><a href="#cb22-539" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confusion matrix</span></span>
 <span id="cb22-540"><a href="#cb22-540" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-541"><a href="#cb22-541" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb22-542"><a href="#cb22-542" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
-<span id="cb22-543"><a href="#cb22-543" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> lr.predict(X_test_transformed)</span>
-<span id="cb22-544"><a href="#cb22-544" aria-hidden="true" tabindex="-1"></a>confusion_matrix <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
-<span id="cb22-545"><a href="#cb22-545" aria-hidden="true" tabindex="-1"></a>confusion_matrix</span>
-<span id="cb22-546"><a href="#cb22-546" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb22-547"><a href="#cb22-547" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-541"><a href="#cb22-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-542"><a href="#cb22-542" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb22-543"><a href="#cb22-543" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb22-544"><a href="#cb22-544" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> lr.predict(X_test_transformed)</span>
+<span id="cb22-545"><a href="#cb22-545" aria-hidden="true" tabindex="-1"></a>confusion_matrix <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
+<span id="cb22-546"><a href="#cb22-546" aria-hidden="true" tabindex="-1"></a>confusion_matrix</span>
+<span id="cb22-547"><a href="#cb22-547" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb22-548"><a href="#cb22-548" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-549"><a href="#cb22-549" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-550"><a href="#cb22-550" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-551"><a href="#cb22-551" aria-hidden="true" tabindex="-1"></a><span class="in">    array([[28,  5],</span></span>
-<span id="cb22-552"><a href="#cb22-552" aria-hidden="true" tabindex="-1"></a><span class="in">           [10, 18]])</span></span>
-<span id="cb22-553"><a href="#cb22-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-551"><a href="#cb22-551" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-552"><a href="#cb22-552" aria-hidden="true" tabindex="-1"></a><span class="in">    array([[28,  5],</span></span>
+<span id="cb22-553"><a href="#cb22-553" aria-hidden="true" tabindex="-1"></a><span class="in">           [10, 18]])</span></span>
 <span id="cb22-554"><a href="#cb22-554" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-555"><a href="#cb22-555" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-556"><a href="#cb22-556" aria-hidden="true" tabindex="-1"></a>Here we can see where the mistakes were made. We made 46 (28+18) correct predictions and 15 (10+5) incorrect predictions. 5 errors were false-positive errors and 10 were false-negative errors. Depending on how we plan to use this data, one of these types of errors might be more important than the other. For example, maybe we want to minimize false-negatives, because we don't want to run the risk of missing a diagnosis and taking proactive measures to treat it.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-556"><a href="#cb22-556" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-557"><a href="#cb22-557" aria-hidden="true" tabindex="-1"></a>Here we can see where the mistakes were made. We made 46 (28+18) correct predictions and 15 (10+5) incorrect predictions. 5 errors were false-positive errors and 10 were false-negative errors. Depending on how we plan to use this data, one of these types of errors might be more important than the other. For example, maybe we want to minimize false-negatives, because we don't want to run the risk of missing a diagnosis and taking proactive measures to treat it.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

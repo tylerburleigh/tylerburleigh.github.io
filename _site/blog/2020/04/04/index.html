@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -93,8 +93,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-submit-button-title": "Submit"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script>
@@ -202,6 +201,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
                 <div class="quarto-category">tensorflow</div>
                 <div class="quarto-category">transfer-learning</div>
                 <div class="quarto-category">image-classification</div>
+                <div class="quarto-category">python</div>
               </div>
                   </div>
   </div>
@@ -840,342 +840,343 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - tensorflow</span></span>
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - transfer-learning</span></span>
 <span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">  - image-classification</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>In my last post I used EfficientNet to <span class="co">[</span><span class="ot">identify plant diseases</span><span class="co">](https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/)</span>. I was surprised at how well this pre-trained model worked, with so few modifications, and I was curious how an approach like this might generalize to other visual image detection problems. In this post I use a similar approach to identify childhood pneumonia from chest x-ray images, using the <span class="co">[</span><span class="ot">Chest X-Ray Images (Pneumonia)</span><span class="co">](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)</span> dataset on Kaggle. Using this approach, I was able to achieve 97% accuracy, 97% precision, and 97% recall.</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>The code below implements this model. See also <span class="co">[</span><span class="ot">my notebook on Kaggle</span><span class="co">](https://www.kaggle.com/bluewizard/predict-pneumonia-keras-efficientnet-98-acc)</span>.</span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="co">  - python</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>In my last post I used EfficientNet to <span class="co">[</span><span class="ot">identify plant diseases</span><span class="co">](https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/)</span>. I was surprised at how well this pre-trained model worked, with so few modifications, and I was curious how an approach like this might generalize to other visual image detection problems. In this post I use a similar approach to identify childhood pneumonia from chest x-ray images, using the <span class="co">[</span><span class="ot">Chest X-Ray Images (Pneumonia)</span><span class="co">](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)</span> dataset on Kaggle. Using this approach, I was able to achieve 97% accuracy, 97% precision, and 97% recall.</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>The code below implements this model. See also <span class="co">[</span><span class="ot">my notebook on Kaggle</span><span class="co">](https://www.kaggle.com/bluewizard/predict-pneumonia-keras-efficientnet-98-acc)</span>.</span>
 <span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data from Kaggle</span></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="co">#!kaggle datasets download paultimothymooney/chest-xray-pneumonia</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># Addressing some issues with the original dataset</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>We'll start by addressing two major issues with the dataset. </span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>I discovered these issues after exploring the data and after my first attempt at validating a trained model:</span>
-<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The original validation set was WAY too small (only 8 items in each class). This is insufficient, so we need to create our own train-validation split.</span>
-<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The test set appears to be incorrectly labeled. After my first attempt at training a model I was able to achieve ~99% accuracy on both the training and validation sets, but only ~87% accuracy on the test set. After reading through some of the comments on Kaggle, it seems others have come to a similar conclusion: Some of the test set data is not correctly labeled (e.g., <span class="co">[</span><span class="ot">see here</span><span class="co">](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/discussion/56672)</span>). To address this, we'll create our own train-test split as well.</span>
-<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>The first thing I'll do is remove the existing train/validation/test labels by combining the images into directories for each class, and then I'll do my own train/test split. Later, I'll use a parameter in the <span class="in">`flow_from_directory`</span> function to split the training set into training and validation sets for model training.</span>
-<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data from Kaggle</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="co">#!kaggle datasets download paultimothymooney/chest-xray-pneumonia</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># Addressing some issues with the original dataset</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>We'll start by addressing two major issues with the dataset. </span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>I discovered these issues after exploring the data and after my first attempt at validating a trained model:</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The original validation set was WAY too small (only 8 items in each class). This is insufficient, so we need to create our own train-validation split.</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The test set appears to be incorrectly labeled. After my first attempt at training a model I was able to achieve ~99% accuracy on both the training and validation sets, but only ~87% accuracy on the test set. After reading through some of the comments on Kaggle, it seems others have come to a similar conclusion: Some of the test set data is not correctly labeled (e.g., <span class="co">[</span><span class="ot">see here</span><span class="co">](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/discussion/56672)</span>). To address this, we'll create our own train-test split as well.</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>The first thing I'll do is remove the existing train/validation/test labels by combining the images into directories for each class, and then I'll do my own train/test split. Later, I'll use a parameter in the <span class="in">`flow_from_directory`</span> function to split the training set into training and validation sets for model training.</span>
 <span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shutil <span class="im">import</span> copyfile</span>
-<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'images/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'images/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'chest_xray'</span>):</span>
-<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, <span class="bu">file</span> <span class="kw">in</span> <span class="bu">enumerate</span>(filenames):</span>
-<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>        img_class <span class="op">=</span> dirname.split(<span class="st">'</span><span class="ch">\\</span><span class="st">'</span>)[<span class="dv">2</span>]</span>
-<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>        copyfile(os.path.join(dirname, <span class="bu">file</span>), <span class="st">'images/'</span> <span class="op">+</span> img_class <span class="op">+</span> <span class="st">'/'</span> <span class="op">+</span> <span class="bu">file</span>)</span>
-<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>Let's check how many images are in each class, now that we've combined them. </span>
-<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>It appears we have imbalanced data -- i.e., a disproportionate number of items belong to the <span class="in">`PNEUMONIA`</span> class. When it comes time to evaluate the model it will be important to look at more than just accuracy.</span>
-<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shutil <span class="im">import</span> copyfile</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'images/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'images/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'chest_xray'</span>):</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, <span class="bu">file</span> <span class="kw">in</span> <span class="bu">enumerate</span>(filenames):</span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>        img_class <span class="op">=</span> dirname.split(<span class="st">'</span><span class="ch">\\</span><span class="st">'</span>)[<span class="dv">2</span>]</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>        copyfile(os.path.join(dirname, <span class="bu">file</span>), <span class="st">'images/'</span> <span class="op">+</span> img_class <span class="op">+</span> <span class="st">'/'</span> <span class="op">+</span> <span class="bu">file</span>)</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>Let's check how many images are in each class, now that we've combined them. </span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>It appears we have imbalanced data -- i.e., a disproportionate number of items belong to the <span class="in">`PNEUMONIA`</span> class. When it comes time to evaluate the model it will be important to look at more than just accuracy.</span>
 <span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'images'</span>):</span>
-<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="bu">len</span>(dirname.split(<span class="st">"</span><span class="ch">\\</span><span class="st">"</span>)) <span class="op">&gt;</span> <span class="dv">1</span>):</span>
-<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(dirname <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(filenames)) <span class="op">+</span> <span class="st">" files"</span>)</span>
-<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a><span class="in">    images\NORMAL has 1583 files</span></span>
-<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a><span class="in">    images\PNEUMONIA has 4273 files</span></span>
-<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>Next, let's split the new image set into training and test sets.</span>
-<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'images'</span>):</span>
+<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="bu">len</span>(dirname.split(<span class="st">"</span><span class="ch">\\</span><span class="st">"</span>)) <span class="op">&gt;</span> <span class="dv">1</span>):</span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(dirname <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">len</span>(filenames)) <span class="op">+</span> <span class="st">" files"</span>)</span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a><span class="in">    images\NORMAL has 1583 files</span></span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a><span class="in">    images\PNEUMONIA has 4273 files</span></span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>Next, let's split the new image set into training and test sets.</span>
 <span id="cb19-71"><a href="#cb19-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shutil <span class="im">import</span> rmtree</span>
-<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a>rmtree(<span class="st">'train'</span>) <span class="co"># Remove existing, if re-run</span></span>
-<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>rmtree(<span class="st">'test'</span>) <span class="co"># Remove existing, if re-run</span></span>
-<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'train/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'train/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'test/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'test/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-85"><a href="#cb19-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Split NORMAL</span></span>
-<span id="cb19-86"><a href="#cb19-86" aria-hidden="true" tabindex="-1"></a>train, test <span class="op">=</span> train_test_split(os.listdir(<span class="st">'images/NORMAL'</span>), </span>
-<span id="cb19-87"><a href="#cb19-87" aria-hidden="true" tabindex="-1"></a>                               test_size<span class="op">=</span><span class="fl">0.2</span>, </span>
-<span id="cb19-88"><a href="#cb19-88" aria-hidden="true" tabindex="-1"></a>                               random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb19-89"><a href="#cb19-89" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> train:</span>
-<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/NORMAL/'</span>, img), </span>
-<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'train/NORMAL/'</span>, img))</span>
-<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> test:</span>
-<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/NORMAL/'</span>, img), </span>
-<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'test/NORMAL/'</span>, img))</span>
-<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a><span class="co"># Split PNEUMONIA</span></span>
-<span id="cb19-97"><a href="#cb19-97" aria-hidden="true" tabindex="-1"></a>train, test <span class="op">=</span> train_test_split(os.listdir(<span class="st">'images/PNEUMONIA'</span>), </span>
-<span id="cb19-98"><a href="#cb19-98" aria-hidden="true" tabindex="-1"></a>                               test_size<span class="op">=</span><span class="fl">0.2</span>, </span>
-<span id="cb19-99"><a href="#cb19-99" aria-hidden="true" tabindex="-1"></a>                               random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> train:</span>
-<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/PNEUMONIA/'</span>, img), </span>
-<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'train/PNEUMONIA/'</span>, img))</span>
-<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> test:</span>
-<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/PNEUMONIA/'</span>, img), </span>
-<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'test/PNEUMONIA/'</span>, img))</span>
-<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a>Let's look at some of the images, so we know what we're dealing with.</span>
-<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-72"><a href="#cb19-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-73"><a href="#cb19-73" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-74"><a href="#cb19-74" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-75"><a href="#cb19-75" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb19-76"><a href="#cb19-76" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shutil <span class="im">import</span> rmtree</span>
+<span id="cb19-77"><a href="#cb19-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-78"><a href="#cb19-78" aria-hidden="true" tabindex="-1"></a>rmtree(<span class="st">'train'</span>) <span class="co"># Remove existing, if re-run</span></span>
+<span id="cb19-79"><a href="#cb19-79" aria-hidden="true" tabindex="-1"></a>rmtree(<span class="st">'test'</span>) <span class="co"># Remove existing, if re-run</span></span>
+<span id="cb19-80"><a href="#cb19-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-81"><a href="#cb19-81" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'train/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-82"><a href="#cb19-82" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'train/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-83"><a href="#cb19-83" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'test/NORMAL'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-84"><a href="#cb19-84" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">'test/PNEUMONIA'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-85"><a href="#cb19-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-86"><a href="#cb19-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Split NORMAL</span></span>
+<span id="cb19-87"><a href="#cb19-87" aria-hidden="true" tabindex="-1"></a>train, test <span class="op">=</span> train_test_split(os.listdir(<span class="st">'images/NORMAL'</span>), </span>
+<span id="cb19-88"><a href="#cb19-88" aria-hidden="true" tabindex="-1"></a>                               test_size<span class="op">=</span><span class="fl">0.2</span>, </span>
+<span id="cb19-89"><a href="#cb19-89" aria-hidden="true" tabindex="-1"></a>                               random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb19-90"><a href="#cb19-90" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> train:</span>
+<span id="cb19-91"><a href="#cb19-91" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/NORMAL/'</span>, img), </span>
+<span id="cb19-92"><a href="#cb19-92" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'train/NORMAL/'</span>, img))</span>
+<span id="cb19-93"><a href="#cb19-93" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> test:</span>
+<span id="cb19-94"><a href="#cb19-94" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/NORMAL/'</span>, img), </span>
+<span id="cb19-95"><a href="#cb19-95" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'test/NORMAL/'</span>, img))</span>
+<span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-97"><a href="#cb19-97" aria-hidden="true" tabindex="-1"></a><span class="co"># Split PNEUMONIA</span></span>
+<span id="cb19-98"><a href="#cb19-98" aria-hidden="true" tabindex="-1"></a>train, test <span class="op">=</span> train_test_split(os.listdir(<span class="st">'images/PNEUMONIA'</span>), </span>
+<span id="cb19-99"><a href="#cb19-99" aria-hidden="true" tabindex="-1"></a>                               test_size<span class="op">=</span><span class="fl">0.2</span>, </span>
+<span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a>                               random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> train:</span>
+<span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/PNEUMONIA/'</span>, img), </span>
+<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'train/PNEUMONIA/'</span>, img))</span>
+<span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> img <span class="kw">in</span> test:</span>
+<span id="cb19-105"><a href="#cb19-105" aria-hidden="true" tabindex="-1"></a>    copyfile(os.path.join(<span class="st">'images/PNEUMONIA/'</span>, img), </span>
+<span id="cb19-106"><a href="#cb19-106" aria-hidden="true" tabindex="-1"></a>             os.path.join(<span class="st">'test/PNEUMONIA/'</span>, img))</span>
+<span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a>Let's look at some of the images, so we know what we're dealing with.</span>
 <span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> image <span class="im">as</span> mpimg</span>
-<span id="cb19-114"><a href="#cb19-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-115"><a href="#cb19-115" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'train'</span>):</span>
-<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, <span class="bu">file</span> <span class="kw">in</span> <span class="bu">enumerate</span>(filenames):</span>
-<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(i <span class="op">&gt;</span> <span class="dv">1</span>):</span>
-<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a>        plt.imshow(mpimg.imread(os.path.join(dirname, <span class="bu">file</span>)), cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
-<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a>        plt.title(dirname.split(<span class="st">'</span><span class="ch">\\</span><span class="st">'</span>)[<span class="dv">1</span>])</span>
-<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
-<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb19-114"><a href="#cb19-114" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> image <span class="im">as</span> mpimg</span>
+<span id="cb19-115"><a href="#cb19-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-116"><a href="#cb19-116" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dirname, _, filenames <span class="kw">in</span> os.walk(<span class="st">'train'</span>):</span>
+<span id="cb19-117"><a href="#cb19-117" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, <span class="bu">file</span> <span class="kw">in</span> <span class="bu">enumerate</span>(filenames):</span>
+<span id="cb19-118"><a href="#cb19-118" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(i <span class="op">&gt;</span> <span class="dv">1</span>):</span>
+<span id="cb19-119"><a href="#cb19-119" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb19-120"><a href="#cb19-120" aria-hidden="true" tabindex="-1"></a>        plt.imshow(mpimg.imread(os.path.join(dirname, <span class="bu">file</span>)), cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb19-121"><a href="#cb19-121" aria-hidden="true" tabindex="-1"></a>        plt.title(dirname.split(<span class="st">'</span><span class="ch">\\</span><span class="st">'</span>)[<span class="dv">1</span>])</span>
+<span id="cb19-122"><a href="#cb19-122" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb19-123"><a href="#cb19-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-124"><a href="#cb19-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_0.png)</span></span>
-<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-125"><a href="#cb19-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-126"><a href="#cb19-126" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_0.png)</span></span>
 <span id="cb19-127"><a href="#cb19-127" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-128"><a href="#cb19-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_1.png)</span></span>
-<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-129"><a href="#cb19-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-130"><a href="#cb19-130" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_1.png)</span></span>
 <span id="cb19-131"><a href="#cb19-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-132"><a href="#cb19-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_2.png)</span></span>
-<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-133"><a href="#cb19-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-134"><a href="#cb19-134" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_2.png)</span></span>
 <span id="cb19-135"><a href="#cb19-135" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-136"><a href="#cb19-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-137"><a href="#cb19-137" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_3.png)</span></span>
-<span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-137"><a href="#cb19-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-138"><a href="#cb19-138" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_9_3.png)</span></span>
 <span id="cb19-139"><a href="#cb19-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a>To the eye of a layman like myself, it's hard to tell what distinguishes the classes. Maybe the chest area of the pneumonia images are "cloudier"?</span>
-<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model</span></span>
-<span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-144"><a href="#cb19-144" aria-hidden="true" tabindex="-1"></a>We'll train a model using EfficientNet as a base.</span>
-<span id="cb19-145"><a href="#cb19-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-146"><a href="#cb19-146" aria-hidden="true" tabindex="-1"></a>When setting up the <span class="in">`flow_from_directory`</span> we'll define a <span class="in">`validation_split`</span>.</span>
-<span id="cb19-147"><a href="#cb19-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-148"><a href="#cb19-148" aria-hidden="true" tabindex="-1"></a>We'll also add precision and recall to the model metrics.</span>
-<span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-140"><a href="#cb19-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-141"><a href="#cb19-141" aria-hidden="true" tabindex="-1"></a>To the eye of a layman like myself, it's hard to tell what distinguishes the classes. Maybe the chest area of the pneumonia images are "cloudier"?</span>
+<span id="cb19-142"><a href="#cb19-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-143"><a href="#cb19-143" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model</span></span>
+<span id="cb19-144"><a href="#cb19-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-145"><a href="#cb19-145" aria-hidden="true" tabindex="-1"></a>We'll train a model using EfficientNet as a base.</span>
+<span id="cb19-146"><a href="#cb19-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-147"><a href="#cb19-147" aria-hidden="true" tabindex="-1"></a>When setting up the <span class="in">`flow_from_directory`</span> we'll define a <span class="in">`validation_split`</span>.</span>
+<span id="cb19-148"><a href="#cb19-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-149"><a href="#cb19-149" aria-hidden="true" tabindex="-1"></a>We'll also add precision and recall to the model metrics.</span>
 <span id="cb19-150"><a href="#cb19-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.preprocessing.image <span class="im">import</span> ImageDataGenerator</span>
-<span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a>SIZE <span class="op">=</span> <span class="dv">128</span></span>
-<span id="cb19-155"><a href="#cb19-155" aria-hidden="true" tabindex="-1"></a>BATCH <span class="op">=</span> <span class="dv">16</span></span>
-<span id="cb19-156"><a href="#cb19-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-157"><a href="#cb19-157" aria-hidden="true" tabindex="-1"></a><span class="co"># image augmentations</span></span>
-<span id="cb19-158"><a href="#cb19-158" aria-hidden="true" tabindex="-1"></a>image_gen <span class="op">=</span> ImageDataGenerator(rescale<span class="op">=</span><span class="fl">1.</span><span class="op">/</span><span class="dv">255</span>,</span>
-<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a>                                rotation_range<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a>                                width_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
-<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a>                                height_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
-<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a>                                validation_split<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a><span class="co"># flow_from_directory generators</span></span>
-<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a>train_generator <span class="op">=</span> image_gen<span class="op">\</span></span>
-<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a>    .flow_from_directory(<span class="st">'train'</span>,</span>
-<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a>                        target_size<span class="op">=</span>(SIZE, SIZE),</span>
-<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a>                        class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
-<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a>                        batch_size<span class="op">=</span>BATCH,</span>
-<span id="cb19-170"><a href="#cb19-170" aria-hidden="true" tabindex="-1"></a>                        subset<span class="op">=</span><span class="st">'training'</span>)</span>
-<span id="cb19-171"><a href="#cb19-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a>validation_generator <span class="op">=</span> image_gen<span class="op">\</span></span>
-<span id="cb19-173"><a href="#cb19-173" aria-hidden="true" tabindex="-1"></a>    .flow_from_directory(<span class="st">'train'</span>,</span>
-<span id="cb19-174"><a href="#cb19-174" aria-hidden="true" tabindex="-1"></a>                        target_size<span class="op">=</span>(SIZE, SIZE),</span>
-<span id="cb19-175"><a href="#cb19-175" aria-hidden="true" tabindex="-1"></a>                        class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
-<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a>                        batch_size<span class="op">=</span>BATCH,</span>
-<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a>                        subset<span class="op">=</span><span class="st">'validation'</span>)</span>
-<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 3748 images belonging to 2 classes.</span></span>
-<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 936 images belonging to 2 classes.</span></span>
-<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-151"><a href="#cb19-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-152"><a href="#cb19-152" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-153"><a href="#cb19-153" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.preprocessing.image <span class="im">import</span> ImageDataGenerator</span>
+<span id="cb19-154"><a href="#cb19-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-155"><a href="#cb19-155" aria-hidden="true" tabindex="-1"></a>SIZE <span class="op">=</span> <span class="dv">128</span></span>
+<span id="cb19-156"><a href="#cb19-156" aria-hidden="true" tabindex="-1"></a>BATCH <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb19-157"><a href="#cb19-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-158"><a href="#cb19-158" aria-hidden="true" tabindex="-1"></a><span class="co"># image augmentations</span></span>
+<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a>image_gen <span class="op">=</span> ImageDataGenerator(rescale<span class="op">=</span><span class="fl">1.</span><span class="op">/</span><span class="dv">255</span>,</span>
+<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a>                                rotation_range<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a>                                width_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
+<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a>                                height_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
+<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a>                                validation_split<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a><span class="co"># flow_from_directory generators</span></span>
+<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a>train_generator <span class="op">=</span> image_gen<span class="op">\</span></span>
+<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a>    .flow_from_directory(<span class="st">'train'</span>,</span>
+<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a>                        target_size<span class="op">=</span>(SIZE, SIZE),</span>
+<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a>                        class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
+<span id="cb19-170"><a href="#cb19-170" aria-hidden="true" tabindex="-1"></a>                        batch_size<span class="op">=</span>BATCH,</span>
+<span id="cb19-171"><a href="#cb19-171" aria-hidden="true" tabindex="-1"></a>                        subset<span class="op">=</span><span class="st">'training'</span>)</span>
+<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-173"><a href="#cb19-173" aria-hidden="true" tabindex="-1"></a>validation_generator <span class="op">=</span> image_gen<span class="op">\</span></span>
+<span id="cb19-174"><a href="#cb19-174" aria-hidden="true" tabindex="-1"></a>    .flow_from_directory(<span class="st">'train'</span>,</span>
+<span id="cb19-175"><a href="#cb19-175" aria-hidden="true" tabindex="-1"></a>                        target_size<span class="op">=</span>(SIZE, SIZE),</span>
+<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a>                        class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
+<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a>                        batch_size<span class="op">=</span>BATCH,</span>
+<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a>                        subset<span class="op">=</span><span class="st">'validation'</span>)</span>
+<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 3748 images belonging to 2 classes.</span></span>
+<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 936 images belonging to 2 classes.</span></span>
+<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
 <span id="cb19-184"><a href="#cb19-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-185"><a href="#cb19-185" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-186"><a href="#cb19-186" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> efficientnet.keras <span class="im">as</span> efn</span>
-<span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.callbacks <span class="im">import</span> Callback</span>
-<span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.models <span class="im">import</span> Model</span>
-<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.layers <span class="im">import</span> Dense, GlobalAveragePooling2D</span>
-<span id="cb19-190"><a href="#cb19-190" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.callbacks <span class="im">import</span> ReduceLROnPlateau, ModelCheckpoint</span>
-<span id="cb19-191"><a href="#cb19-191" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.metrics <span class="im">import</span> Recall, Precision</span>
-<span id="cb19-192"><a href="#cb19-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-193"><a href="#cb19-193" aria-hidden="true" tabindex="-1"></a><span class="co"># Callbacks</span></span>
-<span id="cb19-194"><a href="#cb19-194" aria-hidden="true" tabindex="-1"></a><span class="co">## Keep the best model</span></span>
-<span id="cb19-195"><a href="#cb19-195" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> ModelCheckpoint(<span class="st">'model.hdf5'</span>, </span>
-<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a>                     save_best_only<span class="op">=</span><span class="va">True</span>, </span>
-<span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a>                     verbose<span class="op">=</span><span class="dv">0</span>, </span>
-<span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a>                     monitor<span class="op">=</span><span class="st">'val_loss'</span>, </span>
-<span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a>                     mode<span class="op">=</span><span class="st">'min'</span>)</span>
-<span id="cb19-200"><a href="#cb19-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-201"><a href="#cb19-201" aria-hidden="true" tabindex="-1"></a><span class="co">## Reduce learning rate if it gets stuck in a plateau</span></span>
-<span id="cb19-202"><a href="#cb19-202" aria-hidden="true" tabindex="-1"></a>rlr <span class="op">=</span> ReduceLROnPlateau(monitor<span class="op">=</span><span class="st">'val_loss'</span>, </span>
-<span id="cb19-203"><a href="#cb19-203" aria-hidden="true" tabindex="-1"></a>                        factor<span class="op">=</span><span class="fl">0.3</span>, </span>
-<span id="cb19-204"><a href="#cb19-204" aria-hidden="true" tabindex="-1"></a>                        patience<span class="op">=</span><span class="dv">3</span>, </span>
-<span id="cb19-205"><a href="#cb19-205" aria-hidden="true" tabindex="-1"></a>                        min_lr<span class="op">=</span><span class="fl">0.000001</span>, </span>
-<span id="cb19-206"><a href="#cb19-206" aria-hidden="true" tabindex="-1"></a>                        verbose<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb19-207"><a href="#cb19-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-208"><a href="#cb19-208" aria-hidden="true" tabindex="-1"></a><span class="co"># Model</span></span>
-<span id="cb19-209"><a href="#cb19-209" aria-hidden="true" tabindex="-1"></a><span class="co">## Define the base model with EfficientNet weights</span></span>
-<span id="cb19-210"><a href="#cb19-210" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> efn.EfficientNetB4(weights <span class="op">=</span> <span class="st">'imagenet'</span>, </span>
-<span id="cb19-211"><a href="#cb19-211" aria-hidden="true" tabindex="-1"></a>                           include_top <span class="op">=</span> <span class="va">False</span>, </span>
-<span id="cb19-212"><a href="#cb19-212" aria-hidden="true" tabindex="-1"></a>                           input_shape <span class="op">=</span> (SIZE, SIZE, <span class="dv">3</span>))</span>
-<span id="cb19-213"><a href="#cb19-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-214"><a href="#cb19-214" aria-hidden="true" tabindex="-1"></a><span class="co">## Output layer</span></span>
-<span id="cb19-215"><a href="#cb19-215" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> model.output</span>
-<span id="cb19-216"><a href="#cb19-216" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> GlobalAveragePooling2D()(x)</span>
-<span id="cb19-217"><a href="#cb19-217" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">"relu"</span>)(x)</span>
-<span id="cb19-218"><a href="#cb19-218" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Dense(<span class="dv">32</span>, activation<span class="op">=</span><span class="st">"relu"</span>)(x)</span>
-<span id="cb19-219"><a href="#cb19-219" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> Dense(<span class="dv">1</span>, activation<span class="op">=</span><span class="st">"sigmoid"</span>)(x)</span>
-<span id="cb19-220"><a href="#cb19-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-221"><a href="#cb19-221" aria-hidden="true" tabindex="-1"></a><span class="co">## Compile and run</span></span>
-<span id="cb19-222"><a href="#cb19-222" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Model(inputs<span class="op">=</span>model.<span class="bu">input</span>, outputs<span class="op">=</span>predictions)</span>
-<span id="cb19-223"><a href="#cb19-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-224"><a href="#cb19-224" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,</span>
-<span id="cb19-225"><a href="#cb19-225" aria-hidden="true" tabindex="-1"></a>              loss<span class="op">=</span><span class="st">'binary_crossentropy'</span>, </span>
-<span id="cb19-226"><a href="#cb19-226" aria-hidden="true" tabindex="-1"></a>              metrics<span class="op">=</span>[<span class="st">'accuracy'</span>, Recall(), Precision()])</span>
-<span id="cb19-227"><a href="#cb19-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-228"><a href="#cb19-228" aria-hidden="true" tabindex="-1"></a>model_history <span class="op">=</span> model.fit(train_generator,</span>
-<span id="cb19-229"><a href="#cb19-229" aria-hidden="true" tabindex="-1"></a>                            validation_data<span class="op">=</span>validation_generator,</span>
-<span id="cb19-230"><a href="#cb19-230" aria-hidden="true" tabindex="-1"></a>                            steps_per_epoch<span class="op">=</span>train_generator.n<span class="op">/</span>BATCH,</span>
-<span id="cb19-231"><a href="#cb19-231" aria-hidden="true" tabindex="-1"></a>                            validation_steps<span class="op">=</span>validation_generator.n<span class="op">/</span>BATCH,</span>
-<span id="cb19-232"><a href="#cb19-232" aria-hidden="true" tabindex="-1"></a>                            epochs<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb19-233"><a href="#cb19-233" aria-hidden="true" tabindex="-1"></a>                            verbose<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb19-234"><a href="#cb19-234" aria-hidden="true" tabindex="-1"></a>                            callbacks<span class="op">=</span>[mc, rlr])</span>
-<span id="cb19-235"><a href="#cb19-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-236"><a href="#cb19-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-237"><a href="#cb19-237" aria-hidden="true" tabindex="-1"></a><span class="in">    Using TensorFlow backend.</span></span>
-<span id="cb19-238"><a href="#cb19-238" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-239"><a href="#cb19-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-240"><a href="#cb19-240" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 1/10</span></span>
-<span id="cb19-241"><a href="#cb19-241" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 177s 754ms/step - loss: 0.2632 - accuracy: 0.9015 - recall: 0.9207 - precision: 0.9174 - val_loss: 0.1176 - val_accuracy: 0.8686 - val_recall: 0.9424 - val_precision: 0.9198</span></span>
-<span id="cb19-242"><a href="#cb19-242" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 2/10</span></span>
-<span id="cb19-243"><a href="#cb19-243" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.1449 - accuracy: 0.9472 - recall: 0.9519 - precision: 0.9236 - val_loss: 0.1220 - val_accuracy: 0.9402 - val_recall: 0.9589 - val_precision: 0.9328</span></span>
-<span id="cb19-244"><a href="#cb19-244" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 3/10</span></span>
-<span id="cb19-245"><a href="#cb19-245" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.1388 - accuracy: 0.9493 - recall: 0.9614 - precision: 0.9368 - val_loss: 0.0892 - val_accuracy: 0.9733 - val_recall: 0.9636 - val_precision: 0.9421</span></span>
-<span id="cb19-246"><a href="#cb19-246" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 4/10</span></span>
-<span id="cb19-247"><a href="#cb19-247" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 143s 608ms/step - loss: 0.1263 - accuracy: 0.9626 - recall: 0.9658 - precision: 0.9462 - val_loss: 0.2923 - val_accuracy: 0.9498 - val_recall: 0.9670 - val_precision: 0.9495</span></span>
-<span id="cb19-248"><a href="#cb19-248" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 5/10</span></span>
-<span id="cb19-249"><a href="#cb19-249" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.1078 - accuracy: 0.9664 - recall: 0.9680 - precision: 0.9522 - val_loss: 1.9153 - val_accuracy: 0.7938 - val_recall: 0.9639 - val_precision: 0.9547</span></span>
-<span id="cb19-250"><a href="#cb19-250" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 6/10</span></span>
-<span id="cb19-251"><a href="#cb19-251" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0930 - accuracy: 0.9685 - recall: 0.9602 - precision: 0.9567 - val_loss: 0.0131 - val_accuracy: 0.9712 - val_recall: 0.9621 - val_precision: 0.9588</span></span>
-<span id="cb19-252"><a href="#cb19-252" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 7/10</span></span>
-<span id="cb19-253"><a href="#cb19-253" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.0762 - accuracy: 0.9760 - recall: 0.9635 - precision: 0.9608 - val_loss: 0.0028 - val_accuracy: 0.9348 - val_recall: 0.9639 - val_precision: 0.9625</span></span>
-<span id="cb19-254"><a href="#cb19-254" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 8/10</span></span>
-<span id="cb19-255"><a href="#cb19-255" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0817 - accuracy: 0.9728 - recall: 0.9646 - precision: 0.9636 - val_loss: 0.0415 - val_accuracy: 0.9562 - val_recall: 0.9659 - val_precision: 0.9644</span></span>
-<span id="cb19-256"><a href="#cb19-256" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 9/10</span></span>
-<span id="cb19-257"><a href="#cb19-257" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0833 - accuracy: 0.9731 - recall: 0.9668 - precision: 0.9651 - val_loss: 0.2688 - val_accuracy: 0.9466 - val_recall: 0.9679 - val_precision: 0.9654</span></span>
-<span id="cb19-258"><a href="#cb19-258" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 10/10</span></span>
-<span id="cb19-259"><a href="#cb19-259" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0750 - accuracy: 0.9747 - recall: 0.9689 - precision: 0.9657 - val_loss: 0.1207 - val_accuracy: 0.9615 - val_recall: 0.9697 - val_precision: 0.9663</span></span>
-<span id="cb19-260"><a href="#cb19-260" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-261"><a href="#cb19-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-262"><a href="#cb19-262" aria-hidden="true" tabindex="-1"></a><span class="fu">## Training performance</span></span>
-<span id="cb19-263"><a href="#cb19-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-185"><a href="#cb19-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-186"><a href="#cb19-186" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-187"><a href="#cb19-187" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> efficientnet.keras <span class="im">as</span> efn</span>
+<span id="cb19-188"><a href="#cb19-188" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.callbacks <span class="im">import</span> Callback</span>
+<span id="cb19-189"><a href="#cb19-189" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.models <span class="im">import</span> Model</span>
+<span id="cb19-190"><a href="#cb19-190" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.layers <span class="im">import</span> Dense, GlobalAveragePooling2D</span>
+<span id="cb19-191"><a href="#cb19-191" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.callbacks <span class="im">import</span> ReduceLROnPlateau, ModelCheckpoint</span>
+<span id="cb19-192"><a href="#cb19-192" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.metrics <span class="im">import</span> Recall, Precision</span>
+<span id="cb19-193"><a href="#cb19-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-194"><a href="#cb19-194" aria-hidden="true" tabindex="-1"></a><span class="co"># Callbacks</span></span>
+<span id="cb19-195"><a href="#cb19-195" aria-hidden="true" tabindex="-1"></a><span class="co">## Keep the best model</span></span>
+<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a>mc <span class="op">=</span> ModelCheckpoint(<span class="st">'model.hdf5'</span>, </span>
+<span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a>                     save_best_only<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a>                     verbose<span class="op">=</span><span class="dv">0</span>, </span>
+<span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a>                     monitor<span class="op">=</span><span class="st">'val_loss'</span>, </span>
+<span id="cb19-200"><a href="#cb19-200" aria-hidden="true" tabindex="-1"></a>                     mode<span class="op">=</span><span class="st">'min'</span>)</span>
+<span id="cb19-201"><a href="#cb19-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-202"><a href="#cb19-202" aria-hidden="true" tabindex="-1"></a><span class="co">## Reduce learning rate if it gets stuck in a plateau</span></span>
+<span id="cb19-203"><a href="#cb19-203" aria-hidden="true" tabindex="-1"></a>rlr <span class="op">=</span> ReduceLROnPlateau(monitor<span class="op">=</span><span class="st">'val_loss'</span>, </span>
+<span id="cb19-204"><a href="#cb19-204" aria-hidden="true" tabindex="-1"></a>                        factor<span class="op">=</span><span class="fl">0.3</span>, </span>
+<span id="cb19-205"><a href="#cb19-205" aria-hidden="true" tabindex="-1"></a>                        patience<span class="op">=</span><span class="dv">3</span>, </span>
+<span id="cb19-206"><a href="#cb19-206" aria-hidden="true" tabindex="-1"></a>                        min_lr<span class="op">=</span><span class="fl">0.000001</span>, </span>
+<span id="cb19-207"><a href="#cb19-207" aria-hidden="true" tabindex="-1"></a>                        verbose<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-208"><a href="#cb19-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-209"><a href="#cb19-209" aria-hidden="true" tabindex="-1"></a><span class="co"># Model</span></span>
+<span id="cb19-210"><a href="#cb19-210" aria-hidden="true" tabindex="-1"></a><span class="co">## Define the base model with EfficientNet weights</span></span>
+<span id="cb19-211"><a href="#cb19-211" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> efn.EfficientNetB4(weights <span class="op">=</span> <span class="st">'imagenet'</span>, </span>
+<span id="cb19-212"><a href="#cb19-212" aria-hidden="true" tabindex="-1"></a>                           include_top <span class="op">=</span> <span class="va">False</span>, </span>
+<span id="cb19-213"><a href="#cb19-213" aria-hidden="true" tabindex="-1"></a>                           input_shape <span class="op">=</span> (SIZE, SIZE, <span class="dv">3</span>))</span>
+<span id="cb19-214"><a href="#cb19-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-215"><a href="#cb19-215" aria-hidden="true" tabindex="-1"></a><span class="co">## Output layer</span></span>
+<span id="cb19-216"><a href="#cb19-216" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> model.output</span>
+<span id="cb19-217"><a href="#cb19-217" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> GlobalAveragePooling2D()(x)</span>
+<span id="cb19-218"><a href="#cb19-218" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Dense(<span class="dv">64</span>, activation<span class="op">=</span><span class="st">"relu"</span>)(x)</span>
+<span id="cb19-219"><a href="#cb19-219" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> Dense(<span class="dv">32</span>, activation<span class="op">=</span><span class="st">"relu"</span>)(x)</span>
+<span id="cb19-220"><a href="#cb19-220" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> Dense(<span class="dv">1</span>, activation<span class="op">=</span><span class="st">"sigmoid"</span>)(x)</span>
+<span id="cb19-221"><a href="#cb19-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-222"><a href="#cb19-222" aria-hidden="true" tabindex="-1"></a><span class="co">## Compile and run</span></span>
+<span id="cb19-223"><a href="#cb19-223" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Model(inputs<span class="op">=</span>model.<span class="bu">input</span>, outputs<span class="op">=</span>predictions)</span>
+<span id="cb19-224"><a href="#cb19-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-225"><a href="#cb19-225" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">'adam'</span>,</span>
+<span id="cb19-226"><a href="#cb19-226" aria-hidden="true" tabindex="-1"></a>              loss<span class="op">=</span><span class="st">'binary_crossentropy'</span>, </span>
+<span id="cb19-227"><a href="#cb19-227" aria-hidden="true" tabindex="-1"></a>              metrics<span class="op">=</span>[<span class="st">'accuracy'</span>, Recall(), Precision()])</span>
+<span id="cb19-228"><a href="#cb19-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-229"><a href="#cb19-229" aria-hidden="true" tabindex="-1"></a>model_history <span class="op">=</span> model.fit(train_generator,</span>
+<span id="cb19-230"><a href="#cb19-230" aria-hidden="true" tabindex="-1"></a>                            validation_data<span class="op">=</span>validation_generator,</span>
+<span id="cb19-231"><a href="#cb19-231" aria-hidden="true" tabindex="-1"></a>                            steps_per_epoch<span class="op">=</span>train_generator.n<span class="op">/</span>BATCH,</span>
+<span id="cb19-232"><a href="#cb19-232" aria-hidden="true" tabindex="-1"></a>                            validation_steps<span class="op">=</span>validation_generator.n<span class="op">/</span>BATCH,</span>
+<span id="cb19-233"><a href="#cb19-233" aria-hidden="true" tabindex="-1"></a>                            epochs<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb19-234"><a href="#cb19-234" aria-hidden="true" tabindex="-1"></a>                            verbose<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb19-235"><a href="#cb19-235" aria-hidden="true" tabindex="-1"></a>                            callbacks<span class="op">=</span>[mc, rlr])</span>
+<span id="cb19-236"><a href="#cb19-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-237"><a href="#cb19-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-238"><a href="#cb19-238" aria-hidden="true" tabindex="-1"></a><span class="in">    Using TensorFlow backend.</span></span>
+<span id="cb19-239"><a href="#cb19-239" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-240"><a href="#cb19-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-241"><a href="#cb19-241" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 1/10</span></span>
+<span id="cb19-242"><a href="#cb19-242" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 177s 754ms/step - loss: 0.2632 - accuracy: 0.9015 - recall: 0.9207 - precision: 0.9174 - val_loss: 0.1176 - val_accuracy: 0.8686 - val_recall: 0.9424 - val_precision: 0.9198</span></span>
+<span id="cb19-243"><a href="#cb19-243" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 2/10</span></span>
+<span id="cb19-244"><a href="#cb19-244" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.1449 - accuracy: 0.9472 - recall: 0.9519 - precision: 0.9236 - val_loss: 0.1220 - val_accuracy: 0.9402 - val_recall: 0.9589 - val_precision: 0.9328</span></span>
+<span id="cb19-245"><a href="#cb19-245" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 3/10</span></span>
+<span id="cb19-246"><a href="#cb19-246" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.1388 - accuracy: 0.9493 - recall: 0.9614 - precision: 0.9368 - val_loss: 0.0892 - val_accuracy: 0.9733 - val_recall: 0.9636 - val_precision: 0.9421</span></span>
+<span id="cb19-247"><a href="#cb19-247" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 4/10</span></span>
+<span id="cb19-248"><a href="#cb19-248" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 143s 608ms/step - loss: 0.1263 - accuracy: 0.9626 - recall: 0.9658 - precision: 0.9462 - val_loss: 0.2923 - val_accuracy: 0.9498 - val_recall: 0.9670 - val_precision: 0.9495</span></span>
+<span id="cb19-249"><a href="#cb19-249" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 5/10</span></span>
+<span id="cb19-250"><a href="#cb19-250" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.1078 - accuracy: 0.9664 - recall: 0.9680 - precision: 0.9522 - val_loss: 1.9153 - val_accuracy: 0.7938 - val_recall: 0.9639 - val_precision: 0.9547</span></span>
+<span id="cb19-251"><a href="#cb19-251" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 6/10</span></span>
+<span id="cb19-252"><a href="#cb19-252" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0930 - accuracy: 0.9685 - recall: 0.9602 - precision: 0.9567 - val_loss: 0.0131 - val_accuracy: 0.9712 - val_recall: 0.9621 - val_precision: 0.9588</span></span>
+<span id="cb19-253"><a href="#cb19-253" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 7/10</span></span>
+<span id="cb19-254"><a href="#cb19-254" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 604ms/step - loss: 0.0762 - accuracy: 0.9760 - recall: 0.9635 - precision: 0.9608 - val_loss: 0.0028 - val_accuracy: 0.9348 - val_recall: 0.9639 - val_precision: 0.9625</span></span>
+<span id="cb19-255"><a href="#cb19-255" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 8/10</span></span>
+<span id="cb19-256"><a href="#cb19-256" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0817 - accuracy: 0.9728 - recall: 0.9646 - precision: 0.9636 - val_loss: 0.0415 - val_accuracy: 0.9562 - val_recall: 0.9659 - val_precision: 0.9644</span></span>
+<span id="cb19-257"><a href="#cb19-257" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 9/10</span></span>
+<span id="cb19-258"><a href="#cb19-258" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0833 - accuracy: 0.9731 - recall: 0.9668 - precision: 0.9651 - val_loss: 0.2688 - val_accuracy: 0.9466 - val_recall: 0.9679 - val_precision: 0.9654</span></span>
+<span id="cb19-259"><a href="#cb19-259" aria-hidden="true" tabindex="-1"></a><span class="in">    Epoch 10/10</span></span>
+<span id="cb19-260"><a href="#cb19-260" aria-hidden="true" tabindex="-1"></a><span class="in">    235/234 [==============================] - 142s 603ms/step - loss: 0.0750 - accuracy: 0.9747 - recall: 0.9689 - precision: 0.9657 - val_loss: 0.1207 - val_accuracy: 0.9615 - val_recall: 0.9697 - val_precision: 0.9663</span></span>
+<span id="cb19-261"><a href="#cb19-261" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-262"><a href="#cb19-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-263"><a href="#cb19-263" aria-hidden="true" tabindex="-1"></a><span class="fu">## Training performance</span></span>
 <span id="cb19-264"><a href="#cb19-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-265"><a href="#cb19-265" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-266"><a href="#cb19-266" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot training and validation accuracy by epoch</span></span>
-<span id="cb19-267"><a href="#cb19-267" aria-hidden="true" tabindex="-1"></a>acc <span class="op">=</span> model_history.history[<span class="st">'accuracy'</span>]</span>
-<span id="cb19-268"><a href="#cb19-268" aria-hidden="true" tabindex="-1"></a>val_acc <span class="op">=</span> model_history.history[<span class="st">'val_accuracy'</span>]</span>
-<span id="cb19-269"><a href="#cb19-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-270"><a href="#cb19-270" aria-hidden="true" tabindex="-1"></a>epochs <span class="op">=</span> <span class="bu">range</span>(<span class="bu">len</span>(acc))</span>
-<span id="cb19-271"><a href="#cb19-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-272"><a href="#cb19-272" aria-hidden="true" tabindex="-1"></a>plt.plot(epochs, acc, <span class="st">'r'</span>, label<span class="op">=</span><span class="st">'Training accuracy'</span>)</span>
-<span id="cb19-273"><a href="#cb19-273" aria-hidden="true" tabindex="-1"></a>plt.plot(epochs, val_acc, <span class="st">'b'</span>, label<span class="op">=</span><span class="st">'Validation accuracy'</span>)</span>
-<span id="cb19-274"><a href="#cb19-274" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Training and validation accuracy'</span>)</span>
-<span id="cb19-275"><a href="#cb19-275" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb19-276"><a href="#cb19-276" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb19-277"><a href="#cb19-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-278"><a href="#cb19-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-265"><a href="#cb19-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-266"><a href="#cb19-266" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-267"><a href="#cb19-267" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot training and validation accuracy by epoch</span></span>
+<span id="cb19-268"><a href="#cb19-268" aria-hidden="true" tabindex="-1"></a>acc <span class="op">=</span> model_history.history[<span class="st">'accuracy'</span>]</span>
+<span id="cb19-269"><a href="#cb19-269" aria-hidden="true" tabindex="-1"></a>val_acc <span class="op">=</span> model_history.history[<span class="st">'val_accuracy'</span>]</span>
+<span id="cb19-270"><a href="#cb19-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-271"><a href="#cb19-271" aria-hidden="true" tabindex="-1"></a>epochs <span class="op">=</span> <span class="bu">range</span>(<span class="bu">len</span>(acc))</span>
+<span id="cb19-272"><a href="#cb19-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-273"><a href="#cb19-273" aria-hidden="true" tabindex="-1"></a>plt.plot(epochs, acc, <span class="st">'r'</span>, label<span class="op">=</span><span class="st">'Training accuracy'</span>)</span>
+<span id="cb19-274"><a href="#cb19-274" aria-hidden="true" tabindex="-1"></a>plt.plot(epochs, val_acc, <span class="st">'b'</span>, label<span class="op">=</span><span class="st">'Validation accuracy'</span>)</span>
+<span id="cb19-275"><a href="#cb19-275" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Training and validation accuracy'</span>)</span>
+<span id="cb19-276"><a href="#cb19-276" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb19-277"><a href="#cb19-277" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb19-278"><a href="#cb19-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-279"><a href="#cb19-279" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-280"><a href="#cb19-280" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-281"><a href="#cb19-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-282"><a href="#cb19-282" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;Figure size 432x288 with 0 Axes&gt;</span></span>
-<span id="cb19-283"><a href="#cb19-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-282"><a href="#cb19-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-283"><a href="#cb19-283" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;Figure size 432x288 with 0 Axes&gt;</span></span>
 <span id="cb19-284"><a href="#cb19-284" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-285"><a href="#cb19-285" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-286"><a href="#cb19-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-287"><a href="#cb19-287" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_16_1.png)</span></span>
-<span id="cb19-288"><a href="#cb19-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-287"><a href="#cb19-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-288"><a href="#cb19-288" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_16_1.png)</span></span>
 <span id="cb19-289"><a href="#cb19-289" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-290"><a href="#cb19-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-291"><a href="#cb19-291" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;Figure size 432x288 with 0 Axes&gt;</span></span>
-<span id="cb19-292"><a href="#cb19-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-291"><a href="#cb19-291" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-292"><a href="#cb19-292" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;Figure size 432x288 with 0 Axes&gt;</span></span>
 <span id="cb19-293"><a href="#cb19-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-294"><a href="#cb19-294" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model evaluation</span></span>
-<span id="cb19-295"><a href="#cb19-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-296"><a href="#cb19-296" aria-hidden="true" tabindex="-1"></a>Now we'll evaluate the model using the test set.</span>
-<span id="cb19-297"><a href="#cb19-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-294"><a href="#cb19-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-295"><a href="#cb19-295" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model evaluation</span></span>
+<span id="cb19-296"><a href="#cb19-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-297"><a href="#cb19-297" aria-hidden="true" tabindex="-1"></a>Now we'll evaluate the model using the test set.</span>
 <span id="cb19-298"><a href="#cb19-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-299"><a href="#cb19-299" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-300"><a href="#cb19-300" aria-hidden="true" tabindex="-1"></a>test_datagen <span class="op">=</span> ImageDataGenerator(rescale<span class="op">=</span><span class="fl">1.</span><span class="op">/</span><span class="dv">255</span>,</span>
-<span id="cb19-301"><a href="#cb19-301" aria-hidden="true" tabindex="-1"></a>                                    rotation_range<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb19-302"><a href="#cb19-302" aria-hidden="true" tabindex="-1"></a>                                    width_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
-<span id="cb19-303"><a href="#cb19-303" aria-hidden="true" tabindex="-1"></a>                                    height_shift_range<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb19-304"><a href="#cb19-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-305"><a href="#cb19-305" aria-hidden="true" tabindex="-1"></a>test_generator <span class="op">=</span> test_datagen.flow_from_directory(</span>
-<span id="cb19-306"><a href="#cb19-306" aria-hidden="true" tabindex="-1"></a>    directory<span class="op">=</span><span class="st">"test"</span>,</span>
-<span id="cb19-307"><a href="#cb19-307" aria-hidden="true" tabindex="-1"></a>    target_size<span class="op">=</span>(SIZE, SIZE),</span>
-<span id="cb19-308"><a href="#cb19-308" aria-hidden="true" tabindex="-1"></a>    class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
-<span id="cb19-309"><a href="#cb19-309" aria-hidden="true" tabindex="-1"></a>    shuffle<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb19-310"><a href="#cb19-310" aria-hidden="true" tabindex="-1"></a>    batch_size<span class="op">=</span>BATCH</span>
-<span id="cb19-311"><a href="#cb19-311" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-312"><a href="#cb19-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-313"><a href="#cb19-313" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> model.predict_generator(generator<span class="op">=</span>test_generator) <span class="co"># get proba predictions</span></span>
-<span id="cb19-314"><a href="#cb19-314" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> <span class="dv">1</span><span class="op">*</span>(preds <span class="op">&gt;</span> <span class="fl">0.5</span>) <span class="co"># convert proba to classes</span></span>
-<span id="cb19-315"><a href="#cb19-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-316"><a href="#cb19-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-317"><a href="#cb19-317" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 1172 images belonging to 2 classes.</span></span>
-<span id="cb19-318"><a href="#cb19-318" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-319"><a href="#cb19-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-320"><a href="#cb19-320" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confusion matrix</span></span>
-<span id="cb19-321"><a href="#cb19-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-299"><a href="#cb19-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-300"><a href="#cb19-300" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-301"><a href="#cb19-301" aria-hidden="true" tabindex="-1"></a>test_datagen <span class="op">=</span> ImageDataGenerator(rescale<span class="op">=</span><span class="fl">1.</span><span class="op">/</span><span class="dv">255</span>,</span>
+<span id="cb19-302"><a href="#cb19-302" aria-hidden="true" tabindex="-1"></a>                                    rotation_range<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb19-303"><a href="#cb19-303" aria-hidden="true" tabindex="-1"></a>                                    width_shift_range<span class="op">=</span><span class="fl">0.1</span>,</span>
+<span id="cb19-304"><a href="#cb19-304" aria-hidden="true" tabindex="-1"></a>                                    height_shift_range<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb19-305"><a href="#cb19-305" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-306"><a href="#cb19-306" aria-hidden="true" tabindex="-1"></a>test_generator <span class="op">=</span> test_datagen.flow_from_directory(</span>
+<span id="cb19-307"><a href="#cb19-307" aria-hidden="true" tabindex="-1"></a>    directory<span class="op">=</span><span class="st">"test"</span>,</span>
+<span id="cb19-308"><a href="#cb19-308" aria-hidden="true" tabindex="-1"></a>    target_size<span class="op">=</span>(SIZE, SIZE),</span>
+<span id="cb19-309"><a href="#cb19-309" aria-hidden="true" tabindex="-1"></a>    class_mode<span class="op">=</span><span class="st">"binary"</span>,</span>
+<span id="cb19-310"><a href="#cb19-310" aria-hidden="true" tabindex="-1"></a>    shuffle<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb19-311"><a href="#cb19-311" aria-hidden="true" tabindex="-1"></a>    batch_size<span class="op">=</span>BATCH</span>
+<span id="cb19-312"><a href="#cb19-312" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-313"><a href="#cb19-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-314"><a href="#cb19-314" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> model.predict_generator(generator<span class="op">=</span>test_generator) <span class="co"># get proba predictions</span></span>
+<span id="cb19-315"><a href="#cb19-315" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> <span class="dv">1</span><span class="op">*</span>(preds <span class="op">&gt;</span> <span class="fl">0.5</span>) <span class="co"># convert proba to classes</span></span>
+<span id="cb19-316"><a href="#cb19-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-317"><a href="#cb19-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-318"><a href="#cb19-318" aria-hidden="true" tabindex="-1"></a><span class="in">    Found 1172 images belonging to 2 classes.</span></span>
+<span id="cb19-319"><a href="#cb19-319" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-320"><a href="#cb19-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-321"><a href="#cb19-321" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confusion matrix</span></span>
 <span id="cb19-322"><a href="#cb19-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-323"><a href="#cb19-323" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-324"><a href="#cb19-324" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
-<span id="cb19-325"><a href="#cb19-325" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mlxtend.plotting <span class="im">import</span> plot_confusion_matrix</span>
-<span id="cb19-326"><a href="#cb19-326" aria-hidden="true" tabindex="-1"></a>CM <span class="op">=</span> confusion_matrix(test_generator.classes, labels)</span>
-<span id="cb19-327"><a href="#cb19-327" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_confusion_matrix(conf_mat<span class="op">=</span>CM ,  figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
-<span id="cb19-328"><a href="#cb19-328" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb19-329"><a href="#cb19-329" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-330"><a href="#cb19-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-323"><a href="#cb19-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-324"><a href="#cb19-324" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-325"><a href="#cb19-325" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb19-326"><a href="#cb19-326" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mlxtend.plotting <span class="im">import</span> plot_confusion_matrix</span>
+<span id="cb19-327"><a href="#cb19-327" aria-hidden="true" tabindex="-1"></a>CM <span class="op">=</span> confusion_matrix(test_generator.classes, labels)</span>
+<span id="cb19-328"><a href="#cb19-328" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_confusion_matrix(conf_mat<span class="op">=</span>CM ,  figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
+<span id="cb19-329"><a href="#cb19-329" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb19-330"><a href="#cb19-330" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-331"><a href="#cb19-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-332"><a href="#cb19-332" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_21_0.png)</span></span>
-<span id="cb19-333"><a href="#cb19-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-332"><a href="#cb19-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-333"><a href="#cb19-333" aria-hidden="true" tabindex="-1"></a><span class="al">![png](output_21_0.png)</span></span>
 <span id="cb19-334"><a href="#cb19-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-335"><a href="#cb19-335" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classification report</span></span>
-<span id="cb19-336"><a href="#cb19-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-335"><a href="#cb19-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-336"><a href="#cb19-336" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classification report</span></span>
 <span id="cb19-337"><a href="#cb19-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-338"><a href="#cb19-338" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
-<span id="cb19-339"><a href="#cb19-339" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report</span>
-<span id="cb19-340"><a href="#cb19-340" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(test_generator.classes, labels))</span>
-<span id="cb19-341"><a href="#cb19-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb19-342"><a href="#cb19-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-343"><a href="#cb19-343" aria-hidden="true" tabindex="-1"></a><span class="in">                  precision    recall  f1-score   support</span></span>
-<span id="cb19-344"><a href="#cb19-344" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-345"><a href="#cb19-345" aria-hidden="true" tabindex="-1"></a><span class="in">               0       0.95      0.92      0.94       317</span></span>
-<span id="cb19-346"><a href="#cb19-346" aria-hidden="true" tabindex="-1"></a><span class="in">               1       0.97      0.98      0.98       855</span></span>
-<span id="cb19-347"><a href="#cb19-347" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-348"><a href="#cb19-348" aria-hidden="true" tabindex="-1"></a><span class="in">        accuracy                           0.97      1172</span></span>
-<span id="cb19-349"><a href="#cb19-349" aria-hidden="true" tabindex="-1"></a><span class="in">       macro avg       0.96      0.95      0.96      1172</span></span>
-<span id="cb19-350"><a href="#cb19-350" aria-hidden="true" tabindex="-1"></a><span class="in">    weighted avg       0.97      0.97      0.97      1172</span></span>
-<span id="cb19-351"><a href="#cb19-351" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-352"><a href="#cb19-352" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-338"><a href="#cb19-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-339"><a href="#cb19-339" aria-hidden="true" tabindex="-1"></a><span class="in">```python</span></span>
+<span id="cb19-340"><a href="#cb19-340" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report</span>
+<span id="cb19-341"><a href="#cb19-341" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification_report(test_generator.classes, labels))</span>
+<span id="cb19-342"><a href="#cb19-342" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-343"><a href="#cb19-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-344"><a href="#cb19-344" aria-hidden="true" tabindex="-1"></a><span class="in">                  precision    recall  f1-score   support</span></span>
+<span id="cb19-345"><a href="#cb19-345" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-346"><a href="#cb19-346" aria-hidden="true" tabindex="-1"></a><span class="in">               0       0.95      0.92      0.94       317</span></span>
+<span id="cb19-347"><a href="#cb19-347" aria-hidden="true" tabindex="-1"></a><span class="in">               1       0.97      0.98      0.98       855</span></span>
+<span id="cb19-348"><a href="#cb19-348" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-349"><a href="#cb19-349" aria-hidden="true" tabindex="-1"></a><span class="in">        accuracy                           0.97      1172</span></span>
+<span id="cb19-350"><a href="#cb19-350" aria-hidden="true" tabindex="-1"></a><span class="in">       macro avg       0.96      0.95      0.96      1172</span></span>
+<span id="cb19-351"><a href="#cb19-351" aria-hidden="true" tabindex="-1"></a><span class="in">    weighted avg       0.97      0.97      0.97      1172</span></span>
+<span id="cb19-352"><a href="#cb19-352" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
+<span id="cb19-353"><a href="#cb19-353" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

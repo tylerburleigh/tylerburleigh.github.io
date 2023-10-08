@@ -14,6 +14,7 @@ categories:
   - tensorflow
   - transfer-learning
   - image-classification
+  - python
 ---
 
 In my last post I used EfficientNet to [identify plant diseases](https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/). I was surprised at how well this pre-trained model worked, with so few modifications, and I was curious how an approach like this might generalize to other visual image detection problems. In this post I use a similar approach to identify childhood pneumonia from chest x-ray images, using the [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) dataset on Kaggle. Using this approach, I was able to achieve 97% accuracy, 97% precision, and 97% recall.
