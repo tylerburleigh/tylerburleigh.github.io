@@ -103,13 +103,13 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
       }
 </style>
 <meta property="og:title" content="AI Math Tutoring: Using GPT to generate “step-by-step guidance” | Tyler Burleigh">
-<meta property="og:description" content="In this post, I show how an AI Math Tutor feature like “step-by-step guidance” can be generated using GPT and prompt engineering. Validating the step-by-step guidance, I find that GPT’s accuracy increased from 39% to 77% when solving the problem using its own step-by-step instructions.">
+<meta property="og:description" content="In this post, I show how an AI Tutor feature like “step-by-step guidance” can be built to help students on multi-step math problems, and how this guidance can be validated.">
 <meta property="og:image" content="https://tylerburleigh.com/blog/2023/12/09/social-image.png">
 <meta property="og:site-name" content="Tyler Burleigh">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
 <meta name="twitter:title" content="AI Math Tutoring: Using GPT to generate “step-by-step guidance” | Tyler Burleigh">
-<meta name="twitter:description" content="In this post, I show how an AI Math Tutor feature like “step-by-step guidance” can be generated using GPT and prompt engineering. Validating the step-by-step guidance, I find that GPT’s accuracy increased from 39% to 77% when solving the problem using its own step-by-step instructions.">
+<meta name="twitter:description" content="In this post, I show how an AI Tutor feature like “step-by-step guidance” can be built to help students on multi-step math problems, and how this guidance can be validated.">
 <meta name="twitter:image" content="https://tylerburleigh.com/blog/2023/12/09/social-image.png">
 <meta name="twitter:image-height" content="960">
 <meta name="twitter:image-width" content="1344">
@@ -790,7 +790,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <div class="sourceCode" id="cb19" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'AI Math Tutoring: Using GPT to generate "step-by-step guidance"'</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-12-09</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "In this post, I show how an AI Math Tutor feature like \"step-by-step guidance\" can be generated using GPT and prompt engineering. Validating the step-by-step guidance, I find that GPT's accuracy increased from 39% to 77% when solving the problem using its own step-by-step instructions."</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "In this post, I show how an AI Tutor feature like \"step-by-step guidance\" can be built to help students on multi-step math problems, and how this guidance can be validated."</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> social-image.png</span></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span></span>
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
@@ -804,11 +804,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
 <span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to ask the AI tutor for help. One AI Tutoring interaction that can be helpful in such a situation is to provide students with step-by-step guidance.</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to be able to ask an AI tutor for help. An AI Tutoring interaction that can be helpful is one where a student asks the tutor for step-by-step guidance.</span>
 <span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="al">![Simple AI Math Tutor mock-up (mouse cursor is from kindpng.com)](mockup.png)</span></span>
 <span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>In this blog post, I show how a "step-by-step guidance" feature could be developed using GPT, some prompt engineering, and a multi-step math problem that GPT-3.5 struggles to answer. I also show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its "stepwise" performance against a baseline model.</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>In this blog post, I show how a "step-by-step guidance" feature could be developed using GPT and prompt engineering, and how this guidance can be validated. As a demonstration, I use a multi-step math problem that I've found GPT-3.5 often struggles to answer. I show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its "stepwise" performance against the performance of a baseline model.</span>
 <span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Imports and setup</span></span>
 <span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
@@ -945,7 +945,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-156"><a href="#cb19-156" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave("social-image.png", height=960, width=1344, units = 'px', dpi=150)</span></span>
 <span id="cb19-157"><a href="#cb19-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb19-158"><a href="#cb19-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-159"><a href="#cb19-159" aria-hidden="true" tabindex="-1"></a><span class="fu"># AI Tutor interaction</span></span>
+<span id="cb19-160"><a href="#cb19-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-161"><a href="#cb19-161" aria-hidden="true" tabindex="-1"></a>Having generated and validated the step-by-step guidance, we can now begin to imagine what the user interaction would look like. It could take the form of a single interaction, where a student asks for help and the AI Tutor provides all of the steps at once.</span>
+<span id="cb19-162"><a href="#cb19-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-163"><a href="#cb19-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{python, filename="python"}</span></span>
+<span id="cb19-164"><a href="#cb19-164" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(steps)</span>
+<span id="cb19-165"><a href="#cb19-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-166"><a href="#cb19-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-167"><a href="#cb19-167" aria-hidden="true" tabindex="-1"></a>Or the AI Tutor could provide the steps one at a time, each time the student asks for help.</span>
+<span id="cb19-168"><a href="#cb19-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-169"><a href="#cb19-169" aria-hidden="true" tabindex="-1"></a><span class="in">```{python, filename="python"}</span></span>
+<span id="cb19-170"><a href="#cb19-170" aria-hidden="true" tabindex="-1"></a><span class="co"># Print step 1</span></span>
+<span id="cb19-171"><a href="#cb19-171" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(steps.split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)[<span class="dv">2</span>])</span>
+<span id="cb19-172"><a href="#cb19-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-173"><a href="#cb19-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-174"><a href="#cb19-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{python, filename="python"}</span></span>
+<span id="cb19-175"><a href="#cb19-175" aria-hidden="true" tabindex="-1"></a><span class="co"># Print step 2</span></span>
+<span id="cb19-176"><a href="#cb19-176" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(steps.split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)[<span class="dv">3</span>])</span>
+<span id="cb19-177"><a href="#cb19-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb19-178"><a href="#cb19-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-179"><a href="#cb19-179" aria-hidden="true" tabindex="-1"></a>Providing steps one-at-a-time could be implemented as part of a "progressive" hint system. In context of an educational math game, for example, the student could receive full points for a correct answer with zero assistance, and points could be subtracted for each time they request assistance.</span>
+<span id="cb19-180"><a href="#cb19-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-181"><a href="#cb19-181" aria-hidden="true" tabindex="-1"></a>In this implementation I've deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This would help the student figure out at which step they're making a mistake.</span>
+<span id="cb19-182"><a href="#cb19-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-183"><a href="#cb19-183" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
