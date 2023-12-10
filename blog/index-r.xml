@@ -15,12 +15,12 @@
   <title>AI Math Tutoring: Using GPT to generate “step-by-step guidance”</title>
   <dc:creator>Tyler Burleigh</dc:creator>
   <link>https://tylerburleigh.com/blog/2023/12/09/index.html</link>
-  <description><![CDATA[ <p>Imagine you’re developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to ask the AI tutor for help. One AI Tutoring interaction that can be helpful in such a situation is to provide students with step-by-step guidance.</p>
+  <description><![CDATA[ <p>Imagine you’re developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to be able to ask an AI tutor for help. An AI Tutoring interaction that can be helpful is one where a student asks the tutor for step-by-step guidance.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full"><p><img src="https://tylerburleigh.com/blog/2023/12/09/mockup.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption margin-caption">Simple AI Math Tutor mock-up (mouse cursor is from kindpng.com)</figcaption></figure>
 </div>
-<p>In this blog post, I show how a “step-by-step guidance” feature could be developed using GPT, some prompt engineering, and a multi-step math problem that GPT-3.5 struggles to answer. I also show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its “stepwise” performance against a baseline model.</p>
+<p>In this blog post, I show how a “step-by-step guidance” feature could be developed using GPT and prompt engineering, and how this guidance can be validated. As a demonstration, I use a multi-step math problem that I’ve found GPT-3.5 often struggles to answer. I show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its “stepwise” performance against the performance of a baseline model.</p>
 <section id="imports-and-setup" class="level1"><h1>Imports and setup</h1>
 <div class="cell">
 <div class="code-with-filename">
@@ -653,7 +653,7 @@ font-style: inherit;">'% correct (out of 100)'</span>,</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'Validating the step-by-step guidance, performance of the Stepwise Solver was\nroughly double performance of the Baseline Solver.'</span></span>
+font-style: inherit;">'Validating the step-by-step guidance, performance of the\nStepwise Solver was roughly double the Baseline Solver.'</span></span>
 <span>    <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
@@ -756,6 +756,80 @@ font-style: inherit;">)</span></span></code></pre></div>
 <div class="cell">
 
 </div>
+</section><section id="ai-tutor-interaction" class="level1"><h1>AI Tutor interaction</h1>
+<p>Having generated and validated the step-by-step guidance, we can now begin to imagine what the user interaction would look like. It could take the form of a single interaction, where a student asks for help and the AI Tutor provides all of the steps at once.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(steps)</span></code></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>To solve the problem, follow these steps:
+
+1. Find the size of the second tank by dividing the size of the first tank by 2.
+2. Determine the number of fish that can be kept in each tank based on the rule of one gallon of water per inch of fish.
+3. Calculate the number of fish that can be kept in the second tank by dividing the size of the second tank by 2.
+4. Calculate the number of fish that can be kept in the first tank by dividing the size of the first tank by 3.
+5. Subtract 1 from the number of fish in the first tank to account for one fish eating another.
+6. Subtract the number of fish in the second tank from the number of fish in the first tank to find the difference.
+7. Determine the final answer, which is the difference in the number of fish between the two tanks.</code></pre>
+</div>
+</div>
+<p>Or the AI Tutor could provide the steps one at a time, each time the student asks for help.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Print step 1</span></span>
+<span id="cb21-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(steps.split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>])</span></code></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1. Find the size of the second tank by dividing the size of the first tank by 2.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>python</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Print step 2</span></span>
+<span id="cb23-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(steps.split(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>])</span></code></pre></div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2. Determine the number of fish that can be kept in each tank based on the rule of one gallon of water per inch of fish.</code></pre>
+</div>
+</div>
+<p>Providing steps one-at-a-time could be implemented as part of a “progressive” hint system. In context of an educational math game, for example, the student could receive full points for a correct answer with zero assistance, and points could be subtracted for each time they request assistance.</p>
+<p>In this implementation I’ve deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This would help the student figure out at which step they’re making a mistake.</p>
 
 
 <!-- -->
