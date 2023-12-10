@@ -1,7 +1,7 @@
 ---
 title: 'AI Math Tutoring: Using GPT to generate "step-by-step guidance"'
 date: 2023-12-09
-description: "In this post, I show how an AI Math Tutor feature like \"step-by-step guidance\" can be generated using GPT and prompt engineering. Validating the step-by-step guidance, I find that GPT's accuracy increased from 39% to 77% when solving the problem using its own step-by-step instructions."
+description: "In this post, I show how an AI Tutor feature like \"step-by-step guidance\" can be built to help students on multi-step math problems, and how this guidance can be validated."
 image: social-image.png
 twitter-card:
   image: "social-image.png"
@@ -15,11 +15,11 @@ categories:
 freeze: true
 ---
 
-Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to ask the AI tutor for help. One AI Tutoring interaction that can be helpful in such a situation is to provide students with step-by-step guidance.
+Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to be able to ask an AI tutor for help. An AI Tutoring interaction that can be helpful is one where a student asks the tutor for step-by-step guidance.
 
 ![Simple AI Math Tutor mock-up (mouse cursor is from kindpng.com)](mockup.png)
 
-In this blog post, I show how a "step-by-step guidance" feature could be developed using GPT, some prompt engineering, and a multi-step math problem that GPT-3.5 struggles to answer. I also show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its "stepwise" performance against a baseline model.
+In this blog post, I show how a "step-by-step guidance" feature could be developed using GPT and prompt engineering, and how this guidance can be validated. As a demonstration, I use a multi-step math problem that I've found GPT-3.5 often struggles to answer. I show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its "stepwise" performance against the performance of a baseline model.
 
 # Imports and setup
 
@@ -141,7 +141,7 @@ tibble(`Baseline Solver` = 39, `Stepwise Solver` = 77)%>%
     labs(
       x = '',
       y = '% correct (out of 100)',
-      title = 'Validating the step-by-step guidance, performance of the Stepwise Solver was\nroughly double performance of the Baseline Solver.'
+      title = 'Validating the step-by-step guidance, performance of the\nStepwise Solver was roughly double the Baseline Solver.'
     ) +
     ylim(0, 100) +
     theme(legend.position = "none",
@@ -155,6 +155,30 @@ tibble(`Baseline Solver` = 39, `Stepwise Solver` = 77)%>%
 ```{r, echo=F}
 #ggsave("social-image.png", height=960, width=1344, units = 'px', dpi=150)
 ```
+
+# AI Tutor interaction
+
+Having generated and validated the step-by-step guidance, we can now begin to imagine what the user interaction would look like. It could take the form of a single interaction, where a student asks for help and the AI Tutor provides all of the steps at once.
+
+```{python, filename="python"}
+print(steps)
+```
+
+Or the AI Tutor could provide the steps one at a time, each time the student asks for help.
+
+```{python, filename="python"}
+# Print step 1
+print(steps.split('\n')[2])
+```
+
+```{python, filename="python"}
+# Print step 2
+print(steps.split('\n')[3])
+```
+
+Providing steps one-at-a-time could be implemented as part of a "progressive" hint system. In context of an educational math game, for example, the student could receive full points for a correct answer with zero assistance, and points could be subtracted for each time they request assistance.
+
+In this implementation I've deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This would help the student figure out at which step they're making a mistake.
 
 
 
