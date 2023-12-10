@@ -154,12 +154,22 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/tylerburleigh.bsky.social" rel="me" target=""><i class="bi bi-square" role="img" aria-label="bluesky">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/tylerburleigh" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/tylerburleigh" rel="me" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:tylerburleigh@gmail.com" rel="me" target=""><i class="bi bi-envelope" role="img" aria-label="email">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -835,300 +845,297 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="an">open-graph:</span></span>
 <span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
 <span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - kaggle</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - anomaly-detection</span></span>
-<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co">  - data-cleaning</span></span>
-<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
-<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
-<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Challenge</span></span>
-<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>For this blog post, I will be tackling the Kaggle compettition <span class="co">[</span><span class="ot">Improve a Fixed Model the Data-Centric Way!</span><span class="co">](https://www.kaggle.com/competitions/playground-series-s3e21/overview)</span></span>
-<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>This is the challenge of the competition: Improve a dataset that is being used to train a random forest model. The model is fixed, so model performance can only be improved by modifying the dataset. In terms of dataset modifications, there are some additional limitations:</span>
-<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rows can be removed, but not added</span>
-<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Columns cannot be removed or added</span>
-<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Values in the dataset that are used to train the model can be transformed, but those transformations will not be applied to the validation dataset (which is held out until the challenge comes to an end)</span>
-<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>This means that many of the tools available to a data scientist for improving an ML model, such as hyperparameter tuning, or data pre-processing applied to both training and test/validation datasets, are not available. The best options, therefore, will be to find ways to clean the training dataset that will yield better performance in the untouched validation dataset.</span>
-<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>In this post, I will explore whether the training data can be improved using multivariate outlier imputation and by reducing feature multicollinearity. </span>
-<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load libraries</span></span>
-<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
-<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ranger)</span>
-<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Metrics)</span>
-<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Parallel backend</span></span>
-<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r,message=F}</span></span>
-<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(doFuture)</span>
-<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a><span class="fu">registerDoFuture</span>()</span>
-<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers=</span><span class="dv">4</span>)</span>
-<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-49"><a href="#cb31-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-50"><a href="#cb31-50" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load the data</span></span>
-<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-54"><a href="#cb31-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-55"><a href="#cb31-55" aria-hidden="true" tabindex="-1"></a>sample_submission <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'sample_submission.csv'</span>, <span class="at">show_col_types =</span> F)</span>
-<span id="cb31-56"><a href="#cb31-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-57"><a href="#cb31-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-58"><a href="#cb31-58" aria-hidden="true" tabindex="-1"></a><span class="fu"># Train/test split</span></span>
-<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-63"><a href="#cb31-63" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb31-64"><a href="#cb31-64" aria-hidden="true" tabindex="-1"></a>train_ids <span class="ot">&lt;-</span> (sample_submission <span class="sc">%&gt;%</span> <span class="fu">sample_frac</span>(<span class="fl">0.75</span>))<span class="sc">$</span>id</span>
-<span id="cb31-65"><a href="#cb31-65" aria-hidden="true" tabindex="-1"></a>test_ids <span class="ot">&lt;-</span> (sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>id <span class="sc">%in%</span> train_ids))<span class="sc">$</span>id</span>
-<span id="cb31-66"><a href="#cb31-66" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> train_ids)</span>
-<span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> test_ids)</span>
-<span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model pipeline and baseline</span></span>
-<span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## Model pipeline</span></span>
-<span id="cb31-73"><a href="#cb31-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-74"><a href="#cb31-74" aria-hidden="true" tabindex="-1"></a>Before doing anything else, I want to create a model pipeline function and establish a baseline of model performance. This pipeline and baseline model will allow me to quickly iterate, test, and benchmark changes to the training dataset.</span>
-<span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-78"><a href="#cb31-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-79"><a href="#cb31-79" aria-hidden="true" tabindex="-1"></a>fit_ranger_cv <span class="ot">&lt;-</span> <span class="cf">function</span>(train, test, model_name){</span>
-<span id="cb31-80"><a href="#cb31-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb31-81"><a href="#cb31-81" aria-hidden="true" tabindex="-1"></a>  model_ranger <span class="ot">&lt;-</span></span>
-<span id="cb31-82"><a href="#cb31-82" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The parameters here mirror those that</span></span>
-<span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a>    <span class="co"># will be used in the competition model</span></span>
-<span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">1000</span>, </span>
-<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a>                <span class="at">min_n =</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">"regression"</span>)</span>
-<span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a>  workflow_ranger <span class="ot">&lt;-</span> </span>
-<span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_formula</span>(target <span class="sc">~</span> .) <span class="sc">%&gt;%</span> </span>
-<span id="cb31-92"><a href="#cb31-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model_ranger)</span>
-<span id="cb31-93"><a href="#cb31-93" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-94"><a href="#cb31-94" aria-hidden="true" tabindex="-1"></a>  folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(train, <span class="at">v =</span> <span class="dv">5</span>)</span>
-<span id="cb31-95"><a href="#cb31-95" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-96"><a href="#cb31-96" aria-hidden="true" tabindex="-1"></a>  fit_ranger <span class="ot">&lt;-</span> </span>
-<span id="cb31-97"><a href="#cb31-97" aria-hidden="true" tabindex="-1"></a>    workflow_ranger <span class="sc">%&gt;%</span> </span>
-<span id="cb31-98"><a href="#cb31-98" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit_resamples</span>(folds)</span>
-<span id="cb31-99"><a href="#cb31-99" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-100"><a href="#cb31-100" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get in-sample performance over resamples</span></span>
-<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>((fit_ranger <span class="sc">%&gt;%</span></span>
-<span id="cb31-102"><a href="#cb31-102" aria-hidden="true" tabindex="-1"></a>    <span class="fu">collect_metrics</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb31-103"><a href="#cb31-103" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(.metric <span class="sc">==</span> <span class="st">'rmse'</span>))<span class="sc">$</span>mean, <span class="dv">3</span>) <span class="ot">-&gt;</span> train_perf</span>
-<span id="cb31-104"><a href="#cb31-104" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-105"><a href="#cb31-105" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Evaluate performance on out-of-sample (test) data</span></span>
-<span id="cb31-106"><a href="#cb31-106" aria-hidden="true" tabindex="-1"></a>  ranger_fit <span class="ot">&lt;-</span> </span>
-<span id="cb31-107"><a href="#cb31-107" aria-hidden="true" tabindex="-1"></a>    workflow_ranger <span class="sc">%&gt;%</span></span>
-<span id="cb31-108"><a href="#cb31-108" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit</span>(train)</span>
-<span id="cb31-109"><a href="#cb31-109" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-110"><a href="#cb31-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="fu">rmse</span>(test<span class="sc">$</span>target, <span class="fu">predict</span>(ranger_fit, test)<span class="sc">$</span>.pred), <span class="dv">3</span>) <span class="ot">-&gt;</span> test_perf</span>
-<span id="cb31-111"><a href="#cb31-111" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb31-112"><a href="#cb31-112" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Combine in-sample and out-of-sample into a dataframe</span></span>
-<span id="cb31-113"><a href="#cb31-113" aria-hidden="true" tabindex="-1"></a>  df_perf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">model =</span> model_name,</span>
-<span id="cb31-114"><a href="#cb31-114" aria-hidden="true" tabindex="-1"></a>                        <span class="at">train_perf =</span> train_perf,</span>
-<span id="cb31-115"><a href="#cb31-115" aria-hidden="true" tabindex="-1"></a>                        <span class="at">test_perf =</span> test_perf)</span>
-<span id="cb31-116"><a href="#cb31-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df_perf)</span>
-<span id="cb31-117"><a href="#cb31-117" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb31-118"><a href="#cb31-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-119"><a href="#cb31-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-120"><a href="#cb31-120" aria-hidden="true" tabindex="-1"></a><span class="fu">## Baseline performance</span></span>
-<span id="cb31-121"><a href="#cb31-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-124"><a href="#cb31-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-125"><a href="#cb31-125" aria-hidden="true" tabindex="-1"></a>baseline_fit <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'baseline'</span>)</span>
-<span id="cb31-126"><a href="#cb31-126" aria-hidden="true" tabindex="-1"></a>baseline_fit</span>
-<span id="cb31-127"><a href="#cb31-127" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-128"><a href="#cb31-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-129"><a href="#cb31-129" aria-hidden="true" tabindex="-1"></a>I'm going to run that again so I can be sure the RNG seed is set properly and the results are reproducible -- otherwise I'll be chasing a moving target!</span>
-<span id="cb31-130"><a href="#cb31-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-133"><a href="#cb31-133" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-134"><a href="#cb31-134" aria-hidden="true" tabindex="-1"></a>baseline_fit <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'baseline'</span>)</span>
-<span id="cb31-135"><a href="#cb31-135" aria-hidden="true" tabindex="-1"></a>baseline_fit</span>
-<span id="cb31-136"><a href="#cb31-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-137"><a href="#cb31-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-138"><a href="#cb31-138" aria-hidden="true" tabindex="-1"></a><span class="fu"># Outlier detection and removal / imputation</span></span>
-<span id="cb31-139"><a href="#cb31-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-140"><a href="#cb31-140" aria-hidden="true" tabindex="-1"></a>Outlier detection, sometimes called anomaly detection, involves identifying values that are "extreme" in relation to other records in the dataset. For example, a value might be considered an outlier if it deviates from the mean by more than 3 standard deviations. The impact of outliers on model performance will depend on the model. Linear regressions are fairly sensitive to outliers, whereas random forest models tend to be fairly robust to them. Nevertheless, multivariate outliers can still be a source of noise in training datasets, particularly smaller datasets.</span>
-<span id="cb31-141"><a href="#cb31-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-142"><a href="#cb31-142" aria-hidden="true" tabindex="-1"></a>Here I will consider several methods of outlier detection, pick one, and then proceed to consider removal/imputation.</span>
-<span id="cb31-143"><a href="#cb31-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-144"><a href="#cb31-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Outlier detection</span></span>
-<span id="cb31-145"><a href="#cb31-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-146"><a href="#cb31-146" aria-hidden="true" tabindex="-1"></a><span class="fu">### Univariate outlier detection</span></span>
-<span id="cb31-147"><a href="#cb31-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-148"><a href="#cb31-148" aria-hidden="true" tabindex="-1"></a>One simple univariate outlier detection method involves a "Z-score threshold". In a normally distributed dataset, 99% of values will tend to fall between a Z-score of -3 to +3. This is why a Z-score threshold of +/- 3 is often used to identify outliers in practice.</span>
-<span id="cb31-149"><a href="#cb31-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-150"><a href="#cb31-150" aria-hidden="true" tabindex="-1"></a>For example, here's a plot of the percentage of outliers found for each variable. I can see that some variables contained more outliers than others. In particular, there were 6 features with more than 3% extreme values.</span>
-<span id="cb31-151"><a href="#cb31-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-154"><a href="#cb31-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-155"><a href="#cb31-155" aria-hidden="true" tabindex="-1"></a>train <span class="sc">%&gt;%</span></span>
-<span id="cb31-156"><a href="#cb31-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">%&gt;%</span></span>
-<span id="cb31-157"><a href="#cb31-157" aria-hidden="true" tabindex="-1"></a>  outliers<span class="sc">::</span><span class="fu">scores</span>(<span class="at">type=</span><span class="st">"z"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-158"><a href="#cb31-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">everything</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb31-159"><a href="#cb31-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span></span>
-<span id="cb31-160"><a href="#cb31-160" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_outlier =</span> <span class="fu">sum</span>(<span class="fu">abs</span>(value) <span class="sc">&gt;</span> <span class="dv">3</span>),</span>
-<span id="cb31-161"><a href="#cb31-161" aria-hidden="true" tabindex="-1"></a>            <span class="at">pct_outlier =</span> <span class="fu">round</span>(<span class="fu">sum</span>(<span class="fu">abs</span>(value) <span class="sc">&gt;</span> <span class="dv">3</span>)<span class="sc">/</span><span class="fu">n</span>()<span class="sc">*</span><span class="dv">100</span>,<span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb31-162"><a href="#cb31-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_outlier) <span class="ot">-&gt;</span> train_pct_outlier</span>
-<span id="cb31-163"><a href="#cb31-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-164"><a href="#cb31-164" aria-hidden="true" tabindex="-1"></a>train_pct_outlier <span class="sc">%&gt;%</span></span>
-<span id="cb31-165"><a href="#cb31-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_inorder</span>(name), <span class="at">y =</span> pct_outlier)) <span class="sc">+</span></span>
-<span id="cb31-166"><a href="#cb31-166" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">'identity'</span>) <span class="sc">+</span></span>
-<span id="cb31-167"><a href="#cb31-167" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb31-168"><a href="#cb31-168" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Feature"</span>) <span class="sc">+</span></span>
-<span id="cb31-169"><a href="#cb31-169" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"% values exceeding 3 z-score threshold"</span>) <span class="sc">+</span></span>
-<span id="cb31-170"><a href="#cb31-170" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">3</span>)</span>
-<span id="cb31-171"><a href="#cb31-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-172"><a href="#cb31-172" aria-hidden="true" tabindex="-1"></a>train_pct_outlier <span class="sc">%&gt;%</span></span>
-<span id="cb31-173"><a href="#cb31-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pct_outlier <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-174"><a href="#cb31-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_outlier))</span>
-<span id="cb31-175"><a href="#cb31-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-176"><a href="#cb31-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-177"><a href="#cb31-177" aria-hidden="true" tabindex="-1"></a>Other options for univariate outlier detection include using the inter-quartile range (IQR) or percentile-based thresholds.</span>
-<span id="cb31-178"><a href="#cb31-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-179"><a href="#cb31-179" aria-hidden="true" tabindex="-1"></a><span class="fu">### Multivariate outlier detection</span></span>
-<span id="cb31-180"><a href="#cb31-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-181"><a href="#cb31-181" aria-hidden="true" tabindex="-1"></a>Another option is multivariate outlier detection. For multivariate outlier detection, random forest based methods have been growing in popularity within the data science community. There are two methods that I'll consider here.</span>
-<span id="cb31-182"><a href="#cb31-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-183"><a href="#cb31-183" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Isolation forest</span></span>
-<span id="cb31-184"><a href="#cb31-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-185"><a href="#cb31-185" aria-hidden="true" tabindex="-1"></a>The "isolation forest" works by trying to identify variables that can be isolated in branches when randomly splitting the data. From the <span class="in">`isotree`</span> <span class="co">[</span><span class="ot">package documentation</span><span class="co">](https://search.r-project.org/CRAN/refmans/isotree/html/isolation.forest.html)</span>:</span>
-<span id="cb31-186"><a href="#cb31-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-187"><a href="#cb31-187" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Isolation Forest is an algorithm originally developed for outlier detection that consists in splitting sub-samples of the data according to some attribute/feature/column at random. The idea is that, the rarer the observation, the more likely it is that a random uniform split on some feature would put outliers alone in one branch, and the fewer splits it will take to isolate an outlier observation like this.</span></span>
-<span id="cb31-188"><a href="#cb31-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-189"><a href="#cb31-189" aria-hidden="true" tabindex="-1"></a>Importantly, this method operates at the row level, allowing us to identify anomalous records, but not pinpoint specifically which features on which those records may have been outliers.</span>
-<span id="cb31-190"><a href="#cb31-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-193"><a href="#cb31-193" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-194"><a href="#cb31-194" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(isotree)</span>
-<span id="cb31-195"><a href="#cb31-195" aria-hidden="true" tabindex="-1"></a>isofor <span class="ot">&lt;-</span> <span class="fu">isolation.forest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="at">ntrees =</span> <span class="dv">500</span>, <span class="at">nthreads =</span> <span class="dv">4</span>)</span>
-<span id="cb31-196"><a href="#cb31-196" aria-hidden="true" tabindex="-1"></a>iso_preds <span class="ot">&lt;-</span> <span class="fu">predict</span>(isofor, train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id))</span>
-<span id="cb31-197"><a href="#cb31-197" aria-hidden="true" tabindex="-1"></a>train[<span class="fu">which.max</span>(iso_preds), ]</span>
-<span id="cb31-198"><a href="#cb31-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-199"><a href="#cb31-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-200"><a href="#cb31-200" aria-hidden="true" tabindex="-1"></a><span class="fu">#### outForest</span></span>
-<span id="cb31-201"><a href="#cb31-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-202"><a href="#cb31-202" aria-hidden="true" tabindex="-1"></a>The <span class="in">`outForest`</span> package implements a different random forest method of outlier detection in which each variable is regressed onto all others, and outliers are detected based on the difference between the observed value and the out-of-bag predicted value. This has the advantage of identifying outliers on both a row and column basis, providing more flexibility in terms of how outliers can be dealt with.</span>
-<span id="cb31-203"><a href="#cb31-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-204"><a href="#cb31-204" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
-<span id="cb31-205"><a href="#cb31-205" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(outForest)</span>
-<span id="cb31-206"><a href="#cb31-206" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb31-207"><a href="#cb31-207" aria-hidden="true" tabindex="-1"></a>outfor <span class="ot">&lt;-</span> <span class="fu">outForest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
-<span id="cb31-208"><a href="#cb31-208" aria-hidden="true" tabindex="-1"></a>                    <span class="at">verbose =</span> <span class="dv">0</span>)</span>
-<span id="cb31-209"><a href="#cb31-209" aria-hidden="true" tabindex="-1"></a>outForest<span class="sc">::</span><span class="fu">outliers</span>(outfor) <span class="sc">%&gt;%</span></span>
-<span id="cb31-210"><a href="#cb31-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>rmse, <span class="sc">-</span>threshold) <span class="sc">%&gt;%</span></span>
-<span id="cb31-211"><a href="#cb31-211" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
-<span id="cb31-212"><a href="#cb31-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-213"><a href="#cb31-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-214"><a href="#cb31-214" aria-hidden="true" tabindex="-1"></a>Below we can see the outliers identified for each variable and how anomalous those outliers were. Using this data, I can then choose a threshold and replace anomalous values by imputation. The <span class="in">`outForest`</span> package provides different methods of imputation out of the box, defaulting to predictive mean matching.</span>
-<span id="cb31-215"><a href="#cb31-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-216"><a href="#cb31-216" aria-hidden="true" tabindex="-1"></a>I'll use this method for detection because it's multivariate, intuitive, and flexible.</span>
-<span id="cb31-217"><a href="#cb31-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-220"><a href="#cb31-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-221"><a href="#cb31-221" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(outfor, <span class="at">what =</span> <span class="st">"scores"</span>)</span>
-<span id="cb31-222"><a href="#cb31-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-223"><a href="#cb31-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-224"><a href="#cb31-224" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Outlier removal or imputation</span></span>
-<span id="cb31-225"><a href="#cb31-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-226"><a href="#cb31-226" aria-hidden="true" tabindex="-1"></a>Now that I've decided on an outlier detection method, the next step is to decide what to do about the outliers. There's two main ways outliers can be handled: Removal or imputation. Removal is often an extreme measure that can lead to information loss, so I tend to prefer imputation over removal.</span>
-<span id="cb31-227"><a href="#cb31-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-228"><a href="#cb31-228" aria-hidden="true" tabindex="-1"></a>Since I've decided to use <span class="in">`outForest`</span>, I can also use its out-of-the-box imputation methods.</span>
-<span id="cb31-229"><a href="#cb31-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-230"><a href="#cb31-230" aria-hidden="true" tabindex="-1"></a>First, I'll go back to the dataframe containing the outliers that it had detected and try to refine the threshold. By default, it was using a score threshold of 3. But I'm not comfortable with imputing so many values. My gut tells me that if I'm identifying more than 3-5% of the records as outliers, then my threshold is too low and I'm catching too many potentially legitimate values.</span>
-<span id="cb31-231"><a href="#cb31-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-232"><a href="#cb31-232" aria-hidden="true" tabindex="-1"></a>Here I can see that a score threshold of 8 yields around 2% outliers on a row-basis. That seems more reasonable</span>
-<span id="cb31-233"><a href="#cb31-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-236"><a href="#cb31-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-237"><a href="#cb31-237" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>((<span class="fu">nrow</span>(outForest<span class="sc">::</span><span class="fu">outliers</span>(outfor) <span class="sc">%&gt;%</span></span>
-<span id="cb31-238"><a href="#cb31-238" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="sc">-</span>replacement, <span class="sc">-</span>rmse, <span class="sc">-</span>threshold) <span class="sc">%&gt;%</span></span>
-<span id="cb31-239"><a href="#cb31-239" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(<span class="fu">abs</span>(score) <span class="sc">&gt;</span> <span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb31-240"><a href="#cb31-240" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(row))<span class="sc">/</span><span class="fu">nrow</span>(sample_submission)<span class="sc">*</span><span class="dv">100</span>), <span class="dv">1</span>)</span>
-<span id="cb31-241"><a href="#cb31-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-242"><a href="#cb31-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-243"><a href="#cb31-243" aria-hidden="true" tabindex="-1"></a>Using this threshold, I will now impute the values.</span>
-<span id="cb31-244"><a href="#cb31-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-247"><a href="#cb31-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-248"><a href="#cb31-248" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb31-249"><a href="#cb31-249" aria-hidden="true" tabindex="-1"></a>outfor2 <span class="ot">&lt;-</span> <span class="fu">outForest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
-<span id="cb31-250"><a href="#cb31-250" aria-hidden="true" tabindex="-1"></a>                      <span class="at">verbose =</span> <span class="dv">0</span>, </span>
-<span id="cb31-251"><a href="#cb31-251" aria-hidden="true" tabindex="-1"></a>                      <span class="at">replace =</span> <span class="st">"pmm"</span>,</span>
-<span id="cb31-252"><a href="#cb31-252" aria-hidden="true" tabindex="-1"></a>                      <span class="at">threshold =</span> <span class="dv">8</span>)</span>
-<span id="cb31-253"><a href="#cb31-253" aria-hidden="true" tabindex="-1"></a>train_outlier_adjusted <span class="ot">&lt;-</span> outfor2<span class="sc">$</span>Data</span>
-<span id="cb31-254"><a href="#cb31-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-255"><a href="#cb31-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-256"><a href="#cb31-256" aria-hidden="true" tabindex="-1"></a>Here I can see one of the outliers previously identified, and the value that was imputed for it.</span>
-<span id="cb31-257"><a href="#cb31-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-260"><a href="#cb31-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-261"><a href="#cb31-261" aria-hidden="true" tabindex="-1"></a>train[<span class="dv">1021</span>,]<span class="sc">$</span>NO2_3</span>
-<span id="cb31-262"><a href="#cb31-262" aria-hidden="true" tabindex="-1"></a>train_outlier_adjusted[<span class="dv">1021</span>,]<span class="sc">$</span>NO2_3</span>
-<span id="cb31-263"><a href="#cb31-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-264"><a href="#cb31-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-265"><a href="#cb31-265" aria-hidden="true" tabindex="-1"></a>And now I can quickly run the random forest model again, with the new imputed training dataset, and compare it against the baseline model.</span>
-<span id="cb31-266"><a href="#cb31-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-267"><a href="#cb31-267" aria-hidden="true" tabindex="-1"></a>I see that outlier imputation has improved in-sample performance considerably (which is to be expected since the training dataset on which the cross-validation was performed is now much cleaner!), but it actually had a fairly marginal impact on out-of-sample performance.</span>
-<span id="cb31-268"><a href="#cb31-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-271"><a href="#cb31-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-272"><a href="#cb31-272" aria-hidden="true" tabindex="-1"></a>ranger_fit_1 <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train_outlier_adjusted, test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'outliers imputed'</span>)</span>
-<span id="cb31-273"><a href="#cb31-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-274"><a href="#cb31-274" aria-hidden="true" tabindex="-1"></a>ranger_fit_1 <span class="sc">%&gt;%</span></span>
-<span id="cb31-275"><a href="#cb31-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>train_perf<span class="sc">-</span>train_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>train_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>),</span>
-<span id="cb31-276"><a href="#cb31-276" aria-hidden="true" tabindex="-1"></a>         <span class="at">test_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>test_perf<span class="sc">-</span>test_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>test_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb31-277"><a href="#cb31-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(baseline_fit) <span class="ot">-&gt;</span> ranger_fit_1</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># The Challenge</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>For this blog post, I will be tackling the Kaggle compettition <span class="co">[</span><span class="ot">Improve a Fixed Model the Data-Centric Way!</span><span class="co">](https://www.kaggle.com/competitions/playground-series-s3e21/overview)</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>This is the challenge of the competition: Improve a dataset that is being used to train a random forest model. The model is fixed, so model performance can only be improved by modifying the dataset. In terms of dataset modifications, there are some additional limitations:</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rows can be removed, but not added</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Columns cannot be removed or added</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Values in the dataset that are used to train the model can be transformed, but those transformations will not be applied to the validation dataset (which is held out until the challenge comes to an end)</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>This means that many of the tools available to a data scientist for improving an ML model, such as hyperparameter tuning, or data pre-processing applied to both training and test/validation datasets, are not available. The best options, therefore, will be to find ways to clean the training dataset that will yield better performance in the untouched validation dataset.</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>In this post, I will explore whether the training data can be improved using multivariate outlier imputation and by reducing feature multicollinearity. </span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load libraries</span></span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ranger)</span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Metrics)</span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a><span class="fu"># Parallel backend</span></span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a><span class="in">```{r,message=F}</span></span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(doFuture)</span>
+<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a><span class="fu">registerDoFuture</span>()</span>
+<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession, <span class="at">workers=</span><span class="dv">4</span>)</span>
+<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load the data</span></span>
+<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-51"><a href="#cb31-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-52"><a href="#cb31-52" aria-hidden="true" tabindex="-1"></a>sample_submission <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'sample_submission.csv'</span>, <span class="at">show_col_types =</span> F)</span>
+<span id="cb31-53"><a href="#cb31-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-54"><a href="#cb31-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-55"><a href="#cb31-55" aria-hidden="true" tabindex="-1"></a><span class="fu"># Train/test split</span></span>
+<span id="cb31-56"><a href="#cb31-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-59"><a href="#cb31-59" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-60"><a href="#cb31-60" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb31-61"><a href="#cb31-61" aria-hidden="true" tabindex="-1"></a>train_ids <span class="ot">&lt;-</span> (sample_submission <span class="sc">%&gt;%</span> <span class="fu">sample_frac</span>(<span class="fl">0.75</span>))<span class="sc">$</span>id</span>
+<span id="cb31-62"><a href="#cb31-62" aria-hidden="true" tabindex="-1"></a>test_ids <span class="ot">&lt;-</span> (sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span>id <span class="sc">%in%</span> train_ids))<span class="sc">$</span>id</span>
+<span id="cb31-63"><a href="#cb31-63" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> train_ids)</span>
+<span id="cb31-64"><a href="#cb31-64" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> sample_submission <span class="sc">%&gt;%</span> <span class="fu">filter</span>(id <span class="sc">%in%</span> test_ids)</span>
+<span id="cb31-65"><a href="#cb31-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-66"><a href="#cb31-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-67"><a href="#cb31-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model pipeline and baseline</span></span>
+<span id="cb31-68"><a href="#cb31-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-69"><a href="#cb31-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Model pipeline</span></span>
+<span id="cb31-70"><a href="#cb31-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-71"><a href="#cb31-71" aria-hidden="true" tabindex="-1"></a>Before doing anything else, I want to create a model pipeline function and establish a baseline of model performance. This pipeline and baseline model will allow me to quickly iterate, test, and benchmark changes to the training dataset.</span>
+<span id="cb31-72"><a href="#cb31-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-75"><a href="#cb31-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-76"><a href="#cb31-76" aria-hidden="true" tabindex="-1"></a>fit_ranger_cv <span class="ot">&lt;-</span> <span class="cf">function</span>(train, test, model_name){</span>
+<span id="cb31-77"><a href="#cb31-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb31-78"><a href="#cb31-78" aria-hidden="true" tabindex="-1"></a>  model_ranger <span class="ot">&lt;-</span></span>
+<span id="cb31-79"><a href="#cb31-79" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The parameters here mirror those that</span></span>
+<span id="cb31-80"><a href="#cb31-80" aria-hidden="true" tabindex="-1"></a>    <span class="co"># will be used in the competition model</span></span>
+<span id="cb31-81"><a href="#cb31-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">1000</span>, </span>
+<span id="cb31-82"><a href="#cb31-82" aria-hidden="true" tabindex="-1"></a>                <span class="at">min_n =</span> <span class="dv">7</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">set_mode</span>(<span class="st">"regression"</span>)</span>
+<span id="cb31-85"><a href="#cb31-85" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-86"><a href="#cb31-86" aria-hidden="true" tabindex="-1"></a>  workflow_ranger <span class="ot">&lt;-</span> </span>
+<span id="cb31-87"><a href="#cb31-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb31-88"><a href="#cb31-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_formula</span>(target <span class="sc">~</span> .) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-89"><a href="#cb31-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model_ranger)</span>
+<span id="cb31-90"><a href="#cb31-90" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-91"><a href="#cb31-91" aria-hidden="true" tabindex="-1"></a>  folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(train, <span class="at">v =</span> <span class="dv">5</span>)</span>
+<span id="cb31-92"><a href="#cb31-92" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-93"><a href="#cb31-93" aria-hidden="true" tabindex="-1"></a>  fit_ranger <span class="ot">&lt;-</span> </span>
+<span id="cb31-94"><a href="#cb31-94" aria-hidden="true" tabindex="-1"></a>    workflow_ranger <span class="sc">%&gt;%</span> </span>
+<span id="cb31-95"><a href="#cb31-95" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit_resamples</span>(folds)</span>
+<span id="cb31-96"><a href="#cb31-96" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-97"><a href="#cb31-97" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get in-sample performance over resamples</span></span>
+<span id="cb31-98"><a href="#cb31-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>((fit_ranger <span class="sc">%&gt;%</span></span>
+<span id="cb31-99"><a href="#cb31-99" aria-hidden="true" tabindex="-1"></a>    <span class="fu">collect_metrics</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb31-100"><a href="#cb31-100" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(.metric <span class="sc">==</span> <span class="st">'rmse'</span>))<span class="sc">$</span>mean, <span class="dv">3</span>) <span class="ot">-&gt;</span> train_perf</span>
+<span id="cb31-101"><a href="#cb31-101" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-102"><a href="#cb31-102" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Evaluate performance on out-of-sample (test) data</span></span>
+<span id="cb31-103"><a href="#cb31-103" aria-hidden="true" tabindex="-1"></a>  ranger_fit <span class="ot">&lt;-</span> </span>
+<span id="cb31-104"><a href="#cb31-104" aria-hidden="true" tabindex="-1"></a>    workflow_ranger <span class="sc">%&gt;%</span></span>
+<span id="cb31-105"><a href="#cb31-105" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit</span>(train)</span>
+<span id="cb31-106"><a href="#cb31-106" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-107"><a href="#cb31-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="fu">rmse</span>(test<span class="sc">$</span>target, <span class="fu">predict</span>(ranger_fit, test)<span class="sc">$</span>.pred), <span class="dv">3</span>) <span class="ot">-&gt;</span> test_perf</span>
+<span id="cb31-108"><a href="#cb31-108" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-109"><a href="#cb31-109" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Combine in-sample and out-of-sample into a dataframe</span></span>
+<span id="cb31-110"><a href="#cb31-110" aria-hidden="true" tabindex="-1"></a>  df_perf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">model =</span> model_name,</span>
+<span id="cb31-111"><a href="#cb31-111" aria-hidden="true" tabindex="-1"></a>                        <span class="at">train_perf =</span> train_perf,</span>
+<span id="cb31-112"><a href="#cb31-112" aria-hidden="true" tabindex="-1"></a>                        <span class="at">test_perf =</span> test_perf)</span>
+<span id="cb31-113"><a href="#cb31-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df_perf)</span>
+<span id="cb31-114"><a href="#cb31-114" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb31-115"><a href="#cb31-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-116"><a href="#cb31-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-117"><a href="#cb31-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Baseline performance</span></span>
+<span id="cb31-118"><a href="#cb31-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-121"><a href="#cb31-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-122"><a href="#cb31-122" aria-hidden="true" tabindex="-1"></a>baseline_fit <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'baseline'</span>)</span>
+<span id="cb31-123"><a href="#cb31-123" aria-hidden="true" tabindex="-1"></a>baseline_fit</span>
+<span id="cb31-124"><a href="#cb31-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-125"><a href="#cb31-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-126"><a href="#cb31-126" aria-hidden="true" tabindex="-1"></a>I'm going to run that again so I can be sure the RNG seed is set properly and the results are reproducible -- otherwise I'll be chasing a moving target!</span>
+<span id="cb31-127"><a href="#cb31-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-130"><a href="#cb31-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-131"><a href="#cb31-131" aria-hidden="true" tabindex="-1"></a>baseline_fit <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'baseline'</span>)</span>
+<span id="cb31-132"><a href="#cb31-132" aria-hidden="true" tabindex="-1"></a>baseline_fit</span>
+<span id="cb31-133"><a href="#cb31-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-134"><a href="#cb31-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-135"><a href="#cb31-135" aria-hidden="true" tabindex="-1"></a><span class="fu"># Outlier detection and removal / imputation</span></span>
+<span id="cb31-136"><a href="#cb31-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-137"><a href="#cb31-137" aria-hidden="true" tabindex="-1"></a>Outlier detection, sometimes called anomaly detection, involves identifying values that are "extreme" in relation to other records in the dataset. For example, a value might be considered an outlier if it deviates from the mean by more than 3 standard deviations. The impact of outliers on model performance will depend on the model. Linear regressions are fairly sensitive to outliers, whereas random forest models tend to be fairly robust to them. Nevertheless, multivariate outliers can still be a source of noise in training datasets, particularly smaller datasets.</span>
+<span id="cb31-138"><a href="#cb31-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-139"><a href="#cb31-139" aria-hidden="true" tabindex="-1"></a>Here I will consider several methods of outlier detection, pick one, and then proceed to consider removal/imputation.</span>
+<span id="cb31-140"><a href="#cb31-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-141"><a href="#cb31-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Outlier detection</span></span>
+<span id="cb31-142"><a href="#cb31-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-143"><a href="#cb31-143" aria-hidden="true" tabindex="-1"></a><span class="fu">### Univariate outlier detection</span></span>
+<span id="cb31-144"><a href="#cb31-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-145"><a href="#cb31-145" aria-hidden="true" tabindex="-1"></a>One simple univariate outlier detection method involves a "Z-score threshold". In a normally distributed dataset, 99% of values will tend to fall between a Z-score of -3 to +3. This is why a Z-score threshold of +/- 3 is often used to identify outliers in practice.</span>
+<span id="cb31-146"><a href="#cb31-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-147"><a href="#cb31-147" aria-hidden="true" tabindex="-1"></a>For example, here's a plot of the percentage of outliers found for each variable. I can see that some variables contained more outliers than others. In particular, there were 6 features with more than 3% extreme values.</span>
+<span id="cb31-148"><a href="#cb31-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-151"><a href="#cb31-151" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-152"><a href="#cb31-152" aria-hidden="true" tabindex="-1"></a>train <span class="sc">%&gt;%</span></span>
+<span id="cb31-153"><a href="#cb31-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>id) <span class="sc">%&gt;%</span></span>
+<span id="cb31-154"><a href="#cb31-154" aria-hidden="true" tabindex="-1"></a>  outliers<span class="sc">::</span><span class="fu">scores</span>(<span class="at">type=</span><span class="st">"z"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-155"><a href="#cb31-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="fu">everything</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb31-156"><a href="#cb31-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name) <span class="sc">%&gt;%</span></span>
+<span id="cb31-157"><a href="#cb31-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n_outlier =</span> <span class="fu">sum</span>(<span class="fu">abs</span>(value) <span class="sc">&gt;</span> <span class="dv">3</span>),</span>
+<span id="cb31-158"><a href="#cb31-158" aria-hidden="true" tabindex="-1"></a>            <span class="at">pct_outlier =</span> <span class="fu">round</span>(<span class="fu">sum</span>(<span class="fu">abs</span>(value) <span class="sc">&gt;</span> <span class="dv">3</span>)<span class="sc">/</span><span class="fu">n</span>()<span class="sc">*</span><span class="dv">100</span>,<span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb31-159"><a href="#cb31-159" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(pct_outlier) <span class="ot">-&gt;</span> train_pct_outlier</span>
+<span id="cb31-160"><a href="#cb31-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-161"><a href="#cb31-161" aria-hidden="true" tabindex="-1"></a>train_pct_outlier <span class="sc">%&gt;%</span></span>
+<span id="cb31-162"><a href="#cb31-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_inorder</span>(name), <span class="at">y =</span> pct_outlier)) <span class="sc">+</span></span>
+<span id="cb31-163"><a href="#cb31-163" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">'identity'</span>) <span class="sc">+</span></span>
+<span id="cb31-164"><a href="#cb31-164" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb31-165"><a href="#cb31-165" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Feature"</span>) <span class="sc">+</span></span>
+<span id="cb31-166"><a href="#cb31-166" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"% values exceeding 3 z-score threshold"</span>) <span class="sc">+</span></span>
+<span id="cb31-167"><a href="#cb31-167" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">3</span>)</span>
+<span id="cb31-168"><a href="#cb31-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-169"><a href="#cb31-169" aria-hidden="true" tabindex="-1"></a>train_pct_outlier <span class="sc">%&gt;%</span></span>
+<span id="cb31-170"><a href="#cb31-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pct_outlier <span class="sc">&gt;</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-171"><a href="#cb31-171" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pct_outlier))</span>
+<span id="cb31-172"><a href="#cb31-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-173"><a href="#cb31-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-174"><a href="#cb31-174" aria-hidden="true" tabindex="-1"></a>Other options for univariate outlier detection include using the inter-quartile range (IQR) or percentile-based thresholds.</span>
+<span id="cb31-175"><a href="#cb31-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-176"><a href="#cb31-176" aria-hidden="true" tabindex="-1"></a><span class="fu">### Multivariate outlier detection</span></span>
+<span id="cb31-177"><a href="#cb31-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-178"><a href="#cb31-178" aria-hidden="true" tabindex="-1"></a>Another option is multivariate outlier detection. For multivariate outlier detection, random forest based methods have been growing in popularity within the data science community. There are two methods that I'll consider here.</span>
+<span id="cb31-179"><a href="#cb31-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-180"><a href="#cb31-180" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Isolation forest</span></span>
+<span id="cb31-181"><a href="#cb31-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-182"><a href="#cb31-182" aria-hidden="true" tabindex="-1"></a>The "isolation forest" works by trying to identify variables that can be isolated in branches when randomly splitting the data. From the <span class="in">`isotree`</span> <span class="co">[</span><span class="ot">package documentation</span><span class="co">](https://search.r-project.org/CRAN/refmans/isotree/html/isolation.forest.html)</span>:</span>
+<span id="cb31-183"><a href="#cb31-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-184"><a href="#cb31-184" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Isolation Forest is an algorithm originally developed for outlier detection that consists in splitting sub-samples of the data according to some attribute/feature/column at random. The idea is that, the rarer the observation, the more likely it is that a random uniform split on some feature would put outliers alone in one branch, and the fewer splits it will take to isolate an outlier observation like this.</span></span>
+<span id="cb31-185"><a href="#cb31-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-186"><a href="#cb31-186" aria-hidden="true" tabindex="-1"></a>Importantly, this method operates at the row level, allowing us to identify anomalous records, but not pinpoint specifically which features on which those records may have been outliers.</span>
+<span id="cb31-187"><a href="#cb31-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-190"><a href="#cb31-190" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-191"><a href="#cb31-191" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(isotree)</span>
+<span id="cb31-192"><a href="#cb31-192" aria-hidden="true" tabindex="-1"></a>isofor <span class="ot">&lt;-</span> <span class="fu">isolation.forest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="at">ntrees =</span> <span class="dv">500</span>, <span class="at">nthreads =</span> <span class="dv">4</span>)</span>
+<span id="cb31-193"><a href="#cb31-193" aria-hidden="true" tabindex="-1"></a>iso_preds <span class="ot">&lt;-</span> <span class="fu">predict</span>(isofor, train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id))</span>
+<span id="cb31-194"><a href="#cb31-194" aria-hidden="true" tabindex="-1"></a>train[<span class="fu">which.max</span>(iso_preds), ]</span>
+<span id="cb31-195"><a href="#cb31-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-196"><a href="#cb31-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-197"><a href="#cb31-197" aria-hidden="true" tabindex="-1"></a><span class="fu">#### outForest</span></span>
+<span id="cb31-198"><a href="#cb31-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-199"><a href="#cb31-199" aria-hidden="true" tabindex="-1"></a>The <span class="in">`outForest`</span> package implements a different random forest method of outlier detection in which each variable is regressed onto all others, and outliers are detected based on the difference between the observed value and the out-of-bag predicted value. This has the advantage of identifying outliers on both a row and column basis, providing more flexibility in terms of how outliers can be dealt with.</span>
+<span id="cb31-200"><a href="#cb31-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-201"><a href="#cb31-201" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb31-202"><a href="#cb31-202" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(outForest)</span>
+<span id="cb31-203"><a href="#cb31-203" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb31-204"><a href="#cb31-204" aria-hidden="true" tabindex="-1"></a>outfor <span class="ot">&lt;-</span> <span class="fu">outForest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb31-205"><a href="#cb31-205" aria-hidden="true" tabindex="-1"></a>                    <span class="at">verbose =</span> <span class="dv">0</span>)</span>
+<span id="cb31-206"><a href="#cb31-206" aria-hidden="true" tabindex="-1"></a>outForest<span class="sc">::</span><span class="fu">outliers</span>(outfor) <span class="sc">%&gt;%</span></span>
+<span id="cb31-207"><a href="#cb31-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>rmse, <span class="sc">-</span>threshold) <span class="sc">%&gt;%</span></span>
+<span id="cb31-208"><a href="#cb31-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
+<span id="cb31-209"><a href="#cb31-209" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-210"><a href="#cb31-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-211"><a href="#cb31-211" aria-hidden="true" tabindex="-1"></a>Below we can see the outliers identified for each variable and how anomalous those outliers were. Using this data, I can then choose a threshold and replace anomalous values by imputation. The <span class="in">`outForest`</span> package provides different methods of imputation out of the box, defaulting to predictive mean matching.</span>
+<span id="cb31-212"><a href="#cb31-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-213"><a href="#cb31-213" aria-hidden="true" tabindex="-1"></a>I'll use this method for detection because it's multivariate, intuitive, and flexible.</span>
+<span id="cb31-214"><a href="#cb31-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-217"><a href="#cb31-217" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-218"><a href="#cb31-218" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(outfor, <span class="at">what =</span> <span class="st">"scores"</span>)</span>
+<span id="cb31-219"><a href="#cb31-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-220"><a href="#cb31-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-221"><a href="#cb31-221" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Outlier removal or imputation</span></span>
+<span id="cb31-222"><a href="#cb31-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-223"><a href="#cb31-223" aria-hidden="true" tabindex="-1"></a>Now that I've decided on an outlier detection method, the next step is to decide what to do about the outliers. There's two main ways outliers can be handled: Removal or imputation. Removal is often an extreme measure that can lead to information loss, so I tend to prefer imputation over removal.</span>
+<span id="cb31-224"><a href="#cb31-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-225"><a href="#cb31-225" aria-hidden="true" tabindex="-1"></a>Since I've decided to use <span class="in">`outForest`</span>, I can also use its out-of-the-box imputation methods.</span>
+<span id="cb31-226"><a href="#cb31-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-227"><a href="#cb31-227" aria-hidden="true" tabindex="-1"></a>First, I'll go back to the dataframe containing the outliers that it had detected and try to refine the threshold. By default, it was using a score threshold of 3. But I'm not comfortable with imputing so many values. My gut tells me that if I'm identifying more than 3-5% of the records as outliers, then my threshold is too low and I'm catching too many potentially legitimate values.</span>
+<span id="cb31-228"><a href="#cb31-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-229"><a href="#cb31-229" aria-hidden="true" tabindex="-1"></a>Here I can see that a score threshold of 8 yields around 2% outliers on a row-basis. That seems more reasonable</span>
+<span id="cb31-230"><a href="#cb31-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-233"><a href="#cb31-233" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-234"><a href="#cb31-234" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>((<span class="fu">nrow</span>(outForest<span class="sc">::</span><span class="fu">outliers</span>(outfor) <span class="sc">%&gt;%</span></span>
+<span id="cb31-235"><a href="#cb31-235" aria-hidden="true" tabindex="-1"></a>        <span class="fu">select</span>(<span class="sc">-</span>replacement, <span class="sc">-</span>rmse, <span class="sc">-</span>threshold) <span class="sc">%&gt;%</span></span>
+<span id="cb31-236"><a href="#cb31-236" aria-hidden="true" tabindex="-1"></a>        <span class="fu">filter</span>(<span class="fu">abs</span>(score) <span class="sc">&gt;</span> <span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-237"><a href="#cb31-237" aria-hidden="true" tabindex="-1"></a>        <span class="fu">distinct</span>(row))<span class="sc">/</span><span class="fu">nrow</span>(sample_submission)<span class="sc">*</span><span class="dv">100</span>), <span class="dv">1</span>)</span>
+<span id="cb31-238"><a href="#cb31-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-239"><a href="#cb31-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-240"><a href="#cb31-240" aria-hidden="true" tabindex="-1"></a>Using this threshold, I will now impute the values.</span>
+<span id="cb31-241"><a href="#cb31-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-244"><a href="#cb31-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-245"><a href="#cb31-245" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb31-246"><a href="#cb31-246" aria-hidden="true" tabindex="-1"></a>outfor2 <span class="ot">&lt;-</span> <span class="fu">outForest</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb31-247"><a href="#cb31-247" aria-hidden="true" tabindex="-1"></a>                      <span class="at">verbose =</span> <span class="dv">0</span>, </span>
+<span id="cb31-248"><a href="#cb31-248" aria-hidden="true" tabindex="-1"></a>                      <span class="at">replace =</span> <span class="st">"pmm"</span>,</span>
+<span id="cb31-249"><a href="#cb31-249" aria-hidden="true" tabindex="-1"></a>                      <span class="at">threshold =</span> <span class="dv">8</span>)</span>
+<span id="cb31-250"><a href="#cb31-250" aria-hidden="true" tabindex="-1"></a>train_outlier_adjusted <span class="ot">&lt;-</span> outfor2<span class="sc">$</span>Data</span>
+<span id="cb31-251"><a href="#cb31-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-252"><a href="#cb31-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-253"><a href="#cb31-253" aria-hidden="true" tabindex="-1"></a>Here I can see one of the outliers previously identified, and the value that was imputed for it.</span>
+<span id="cb31-254"><a href="#cb31-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-257"><a href="#cb31-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-258"><a href="#cb31-258" aria-hidden="true" tabindex="-1"></a>train[<span class="dv">1021</span>,]<span class="sc">$</span>NO2_3</span>
+<span id="cb31-259"><a href="#cb31-259" aria-hidden="true" tabindex="-1"></a>train_outlier_adjusted[<span class="dv">1021</span>,]<span class="sc">$</span>NO2_3</span>
+<span id="cb31-260"><a href="#cb31-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-261"><a href="#cb31-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-262"><a href="#cb31-262" aria-hidden="true" tabindex="-1"></a>And now I can quickly run the random forest model again, with the new imputed training dataset, and compare it against the baseline model.</span>
+<span id="cb31-263"><a href="#cb31-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-264"><a href="#cb31-264" aria-hidden="true" tabindex="-1"></a>I see that outlier imputation has improved in-sample performance considerably (which is to be expected since the training dataset on which the cross-validation was performed is now much cleaner!), but it actually had a fairly marginal impact on out-of-sample performance.</span>
+<span id="cb31-265"><a href="#cb31-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-268"><a href="#cb31-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-269"><a href="#cb31-269" aria-hidden="true" tabindex="-1"></a>ranger_fit_1 <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train_outlier_adjusted, test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), <span class="st">'outliers imputed'</span>)</span>
+<span id="cb31-270"><a href="#cb31-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-271"><a href="#cb31-271" aria-hidden="true" tabindex="-1"></a>ranger_fit_1 <span class="sc">%&gt;%</span></span>
+<span id="cb31-272"><a href="#cb31-272" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>train_perf<span class="sc">-</span>train_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>train_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>),</span>
+<span id="cb31-273"><a href="#cb31-273" aria-hidden="true" tabindex="-1"></a>         <span class="at">test_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>test_perf<span class="sc">-</span>test_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>test_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb31-274"><a href="#cb31-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(baseline_fit) <span class="ot">-&gt;</span> ranger_fit_1</span>
+<span id="cb31-275"><a href="#cb31-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-276"><a href="#cb31-276" aria-hidden="true" tabindex="-1"></a>ranger_fit_1</span>
+<span id="cb31-277"><a href="#cb31-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-278"><a href="#cb31-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-279"><a href="#cb31-279" aria-hidden="true" tabindex="-1"></a>ranger_fit_1</span>
-<span id="cb31-280"><a href="#cb31-280" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-281"><a href="#cb31-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-282"><a href="#cb31-282" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature multicollinearity</span></span>
-<span id="cb31-283"><a href="#cb31-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-284"><a href="#cb31-284" aria-hidden="true" tabindex="-1"></a>Another option for data cleanup I can explore is addressing feature multicollinearity. This is when two or more features in the dataset are highly correlated. Like outliers, the impact of this will depend on the model. Random forest models are typically robust to multicollinearity when it comes to model performance, but it can severely impact the feature importances.</span>
-<span id="cb31-285"><a href="#cb31-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-286"><a href="#cb31-286" aria-hidden="true" tabindex="-1"></a>Nevertheless, I can explore whether addressing feature multicollinearity would improve model performance.</span>
-<span id="cb31-287"><a href="#cb31-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-288"><a href="#cb31-288" aria-hidden="true" tabindex="-1"></a>Some of the features are highly correlated (at r &gt; .6), namely:</span>
-<span id="cb31-289"><a href="#cb31-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-290"><a href="#cb31-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NH4_1`</span> with <span class="in">`NH4_2`</span></span>
-<span id="cb31-291"><a href="#cb31-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-292"><a href="#cb31-292" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_1`</span> with <span class="in">`NO3_2`</span></span>
-<span id="cb31-293"><a href="#cb31-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-294"><a href="#cb31-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_6`</span> with <span class="in">`NO3_7`</span></span>
-<span id="cb31-295"><a href="#cb31-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-296"><a href="#cb31-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_3`</span> with <span class="in">`NO3_6`</span></span>
-<span id="cb31-297"><a href="#cb31-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-298"><a href="#cb31-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`BOD5_1`</span> with <span class="in">`BOD5_7`</span></span>
-<span id="cb31-299"><a href="#cb31-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-300"><a href="#cb31-300" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
-<span id="cb31-301"><a href="#cb31-301" aria-hidden="true" tabindex="-1"></a>lares<span class="sc">::</span><span class="fu">corr_cross</span>(</span>
-<span id="cb31-302"><a href="#cb31-302" aria-hidden="true" tabindex="-1"></a>  train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>target, <span class="sc">-</span>id),</span>
-<span id="cb31-303"><a href="#cb31-303" aria-hidden="true" tabindex="-1"></a>  <span class="at">max_pvalue =</span> <span class="fl">0.05</span>,</span>
-<span id="cb31-304"><a href="#cb31-304" aria-hidden="true" tabindex="-1"></a>  <span class="at">top =</span> <span class="dv">10</span></span>
-<span id="cb31-305"><a href="#cb31-305" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb31-306"><a href="#cb31-306" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-307"><a href="#cb31-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-308"><a href="#cb31-308" aria-hidden="true" tabindex="-1"></a>A simple fix for collinearity here would be to remove one variable from each of these pairs. I'll remove the one with the larger numerical suffix. This is somewhat arbitrary. And fitting the model again, I see that removing collinear features improved in-sample and out-of-sample performance only marginally.</span>
-<span id="cb31-309"><a href="#cb31-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-312"><a href="#cb31-312" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb31-313"><a href="#cb31-313" aria-hidden="true" tabindex="-1"></a>train <span class="sc">%&gt;%</span></span>
-<span id="cb31-314"><a href="#cb31-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>NH4_2, <span class="sc">-</span>NO3_2, <span class="sc">-</span>NO3_7, <span class="sc">-</span>NO3_6, <span class="sc">-</span>BOD5_2) <span class="ot">-&gt;</span> train_with_collinearity_fix</span>
+<span id="cb31-279"><a href="#cb31-279" aria-hidden="true" tabindex="-1"></a><span class="fu"># Feature multicollinearity</span></span>
+<span id="cb31-280"><a href="#cb31-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-281"><a href="#cb31-281" aria-hidden="true" tabindex="-1"></a>Another option for data cleanup I can explore is addressing feature multicollinearity. This is when two or more features in the dataset are highly correlated. Like outliers, the impact of this will depend on the model. Random forest models are typically robust to multicollinearity when it comes to model performance, but it can severely impact the feature importances.</span>
+<span id="cb31-282"><a href="#cb31-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-283"><a href="#cb31-283" aria-hidden="true" tabindex="-1"></a>Nevertheless, I can explore whether addressing feature multicollinearity would improve model performance.</span>
+<span id="cb31-284"><a href="#cb31-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-285"><a href="#cb31-285" aria-hidden="true" tabindex="-1"></a>Some of the features are highly correlated (at r &gt; .6), namely:</span>
+<span id="cb31-286"><a href="#cb31-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-287"><a href="#cb31-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NH4_1`</span> with <span class="in">`NH4_2`</span></span>
+<span id="cb31-288"><a href="#cb31-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-289"><a href="#cb31-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_1`</span> with <span class="in">`NO3_2`</span></span>
+<span id="cb31-290"><a href="#cb31-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-291"><a href="#cb31-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_6`</span> with <span class="in">`NO3_7`</span></span>
+<span id="cb31-292"><a href="#cb31-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-293"><a href="#cb31-293" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`NO3_3`</span> with <span class="in">`NO3_6`</span></span>
+<span id="cb31-294"><a href="#cb31-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-295"><a href="#cb31-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`BOD5_1`</span> with <span class="in">`BOD5_7`</span></span>
+<span id="cb31-296"><a href="#cb31-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-297"><a href="#cb31-297" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb31-298"><a href="#cb31-298" aria-hidden="true" tabindex="-1"></a>lares<span class="sc">::</span><span class="fu">corr_cross</span>(</span>
+<span id="cb31-299"><a href="#cb31-299" aria-hidden="true" tabindex="-1"></a>  train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>target, <span class="sc">-</span>id),</span>
+<span id="cb31-300"><a href="#cb31-300" aria-hidden="true" tabindex="-1"></a>  <span class="at">max_pvalue =</span> <span class="fl">0.05</span>,</span>
+<span id="cb31-301"><a href="#cb31-301" aria-hidden="true" tabindex="-1"></a>  <span class="at">top =</span> <span class="dv">10</span></span>
+<span id="cb31-302"><a href="#cb31-302" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb31-303"><a href="#cb31-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb31-304"><a href="#cb31-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-305"><a href="#cb31-305" aria-hidden="true" tabindex="-1"></a>A simple fix for collinearity here would be to remove one variable from each of these pairs. I'll remove the one with the larger numerical suffix. This is somewhat arbitrary. And fitting the model again, I see that removing collinear features improved in-sample and out-of-sample performance only marginally.</span>
+<span id="cb31-306"><a href="#cb31-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-309"><a href="#cb31-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb31-310"><a href="#cb31-310" aria-hidden="true" tabindex="-1"></a>train <span class="sc">%&gt;%</span></span>
+<span id="cb31-311"><a href="#cb31-311" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>NH4_2, <span class="sc">-</span>NO3_2, <span class="sc">-</span>NO3_7, <span class="sc">-</span>NO3_6, <span class="sc">-</span>BOD5_2) <span class="ot">-&gt;</span> train_with_collinearity_fix</span>
+<span id="cb31-312"><a href="#cb31-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-313"><a href="#cb31-313" aria-hidden="true" tabindex="-1"></a>test <span class="sc">%&gt;%</span></span>
+<span id="cb31-314"><a href="#cb31-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>NH4_2, <span class="sc">-</span>NO3_2, <span class="sc">-</span>NO3_7, <span class="sc">-</span>NO3_6, <span class="sc">-</span>BOD5_2) <span class="ot">-&gt;</span> test_with_collinearity_fix</span>
 <span id="cb31-315"><a href="#cb31-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-316"><a href="#cb31-316" aria-hidden="true" tabindex="-1"></a>test <span class="sc">%&gt;%</span></span>
-<span id="cb31-317"><a href="#cb31-317" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>NH4_2, <span class="sc">-</span>NO3_2, <span class="sc">-</span>NO3_7, <span class="sc">-</span>NO3_6, <span class="sc">-</span>BOD5_2) <span class="ot">-&gt;</span> test_with_collinearity_fix</span>
-<span id="cb31-318"><a href="#cb31-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-319"><a href="#cb31-319" aria-hidden="true" tabindex="-1"></a>ranger_fit_2 <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train_with_collinearity_fix, test_with_collinearity_fix, <span class="st">'fix collinearity'</span>)</span>
-<span id="cb31-320"><a href="#cb31-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-321"><a href="#cb31-321" aria-hidden="true" tabindex="-1"></a>ranger_fit_2 <span class="sc">%&gt;%</span></span>
-<span id="cb31-322"><a href="#cb31-322" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>train_perf<span class="sc">-</span>train_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>train_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>),</span>
-<span id="cb31-323"><a href="#cb31-323" aria-hidden="true" tabindex="-1"></a>         <span class="at">test_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>test_perf<span class="sc">-</span>test_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>test_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb31-324"><a href="#cb31-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(ranger_fit_1) <span class="ot">-&gt;</span> ranger_fit_2</span>
+<span id="cb31-316"><a href="#cb31-316" aria-hidden="true" tabindex="-1"></a>ranger_fit_2 <span class="ot">&lt;-</span> <span class="fu">fit_ranger_cv</span>(train_with_collinearity_fix, test_with_collinearity_fix, <span class="st">'fix collinearity'</span>)</span>
+<span id="cb31-317"><a href="#cb31-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-318"><a href="#cb31-318" aria-hidden="true" tabindex="-1"></a>ranger_fit_2 <span class="sc">%&gt;%</span></span>
+<span id="cb31-319"><a href="#cb31-319" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">train_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>train_perf<span class="sc">-</span>train_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>train_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>),</span>
+<span id="cb31-320"><a href="#cb31-320" aria-hidden="true" tabindex="-1"></a>         <span class="at">test_pct_improved =</span> <span class="fu">round</span>((baseline_fit<span class="sc">$</span>test_perf<span class="sc">-</span>test_perf)<span class="sc">/</span>baseline_fit<span class="sc">$</span>test_perf<span class="sc">*</span><span class="dv">100</span>, <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb31-321"><a href="#cb31-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(ranger_fit_1) <span class="ot">-&gt;</span> ranger_fit_2</span>
+<span id="cb31-322"><a href="#cb31-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-323"><a href="#cb31-323" aria-hidden="true" tabindex="-1"></a>ranger_fit_2</span>
+<span id="cb31-324"><a href="#cb31-324" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb31-325"><a href="#cb31-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-326"><a href="#cb31-326" aria-hidden="true" tabindex="-1"></a>ranger_fit_2</span>
-<span id="cb31-327"><a href="#cb31-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb31-328"><a href="#cb31-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-329"><a href="#cb31-329" aria-hidden="true" tabindex="-1"></a>So to summarize: I've used two methods to clean the dataset: 1) random forest based multivariate outlier detection and imputation, and 2) removing multicollinear features. These cleanup techniques achieved only marginal gains in out-of-sample model performance with a random forest model, supporting the common wisdom that random forest models are robust to outliers and multicollinearity.</span>
-<span id="cb31-330"><a href="#cb31-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-326"><a href="#cb31-326" aria-hidden="true" tabindex="-1"></a>So to summarize: I've used two methods to clean the dataset: 1) random forest based multivariate outlier detection and imputation, and 2) removing multicollinear features. These cleanup techniques achieved only marginal gains in out-of-sample model performance with a random forest model, supporting the common wisdom that random forest models are robust to outliers and multicollinearity.</span>
+<span id="cb31-327"><a href="#cb31-327" aria-hidden="true" tabindex="-1"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

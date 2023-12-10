@@ -1,0 +1,160 @@
+---
+title: 'AI Math Tutoring: Using GPT to generate "step-by-step guidance"'
+date: 2023-12-09
+description: "In this post, I show how an AI Math Tutor feature like \"step-by-step guidance\" can be generated using GPT and prompt engineering. Validating the step-by-step guidance, I find that GPT's accuracy increased from 39% to 77% when solving the problem using its own step-by-step instructions."
+image: social-image.png
+twitter-card:
+  image: "social-image.png"
+open-graph:
+  image: "social-image.png"
+categories:
+  - GPT
+  - prompt-engineering
+  - python
+  - R
+freeze: true
+---
+
+Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to ask the AI tutor for help. One AI Tutoring interaction that can be helpful in such a situation is to provide students with step-by-step guidance.
+
+![Simple AI Math Tutor mock-up (mouse cursor is from kindpng.com)](mockup.png)
+
+In this blog post, I show how a "step-by-step guidance" feature could be developed using GPT, some prompt engineering, and a multi-step math problem that GPT-3.5 struggles to answer. I also show how this step-by-step guidance can be validated by asking GPT to solve the problem using its own instructions and then comparing its "stepwise" performance against a baseline model.
+
+# Imports and setup
+
+```{r, message=F, filename="R"}
+library(reticulate)
+library(tidyverse)
+# Add OpenAI key to environment
+py_run_string("import os")
+py_run_string(paste0("os.environ['OPENAI_API_KEY'] = '", Sys.getenv('OPENAI_API_KEY'), "'"))
+```
+
+```{python, filename="python"}
+import pandas as pd
+import numpy as np
+import ujson as json
+import inspect
+import textwrap
+from multiprocessing.pool import ThreadPool
+pool = ThreadPool()
+```
+
+# Import python prompting functions
+
+In order to use parallelization within an interactive notebook using the `multiprocessing` package, it's necessary to write the python functions to-be-parallelized to disk and import them. I'll import the functions here, and introduce these functions later in the post as I use them.
+
+```{python, filename="python"}
+from prompt_functions import get_response, baseline_solver, step_generator, stepwise_solver
+```
+
+# Test case
+
+As a test case, I'll use a math problem that I've found GPT has some difficulty solving. This problem comes from the [GSM8K](https://github.com/openai/grade-school-math) dataset. Although it's a grade school math problem which should be very easy, it requires multiple reasoning steps. If any one step is wrong, the final answer is likely to be incorrect.
+
+```{python, filename="python"}
+question = 'Gail has two fish tanks. The first tank is twice the size of the second tank. There are 48 gallons of water in the first tank. She follows the rule of one gallon of water per inch of fish. If she keeps two-inch fish in the second tank and three-inch fish in the first tank, how many more fish would Gail have in the first tank than the second tank if one of the first tank fish eats another?'
+print(textwrap.fill(question, width=80))
+```
+
+# Baseline solver
+
+In order to generate steps that an AI Tutor could suggest to a student, I'll first get GPT to "discover" how to correctly solve the problem on its own. I'll use the `baseline_solver()` function, which implements a simple chain-of-thought prompt.
+
+```{python, filename="python"}
+print(inspect.getsource(baseline_solver))
+```
+
+I'll give it 100 attempts to solve the problem.
+
+```{python, filename="python"}
+try: # Read from disk if I've done this already
+  df_baseline = pd.read_json('baseline_solver_results.ndjson')
+except:
+  baseline_results = pool.map(baseline_solver, 100*[question])
+  df_baseline = pd.DataFrame(baseline_results, columns=['is_correct', 'solution', 'question', 'answer'])
+  df_baseline.to_json('baseline_solver_results.ndjson', orient='records')
+```
+
+# Identify solution steps
+
+Using correct answers from the 100 attempts above, I'll pick a few examples and ask GPT to synthesize and generalize the steps. 
+
+For this task I'll use the `step_generator()` function, which asks GPT to synthesize the steps from three different solutions provided as input. It also asks GPT to remove any calculations from those steps, which is important for an AI Tutor -- after all, we don't want to give away the answer!
+
+```{python, filename="python"}
+print(inspect.getsource(step_generator))
+```
+Here's what the final set of steps looks like:
+
+```{python, filename="python"}
+try: # Read from disk if I've done this already
+  f = open("steps.txt", "r")
+  steps = f.read()
+  print(steps)
+except:
+  solutions = df_baseline[df_baseline['is_correct'] == True]['solution'].values[0:3]
+  steps = step_generator(solutions)
+  
+  f = open("steps.txt", "w")
+  f.write(steps)
+  f.close()
+  
+  print(steps)
+```
+
+# Stepwise solver
+
+Next, I'll validate the steps generated above using `stepwise_solver()`, a function that asks GPT to solve the problem using the steps provided. I expect that providing GPT with the steps above will improve its performance by a significant margin.
+
+```{python, filename="python"}
+print(inspect.getsource(stepwise_solver))
+```
+
+```{python, filename="python"}
+try: # Read from disk if I've done this already
+  df_stepwise = pd.read_json('stepwise_solver_results.ndjson')
+except:
+  stepwise_results = pool.starmap(stepwise_solver, zip(100*[question], 100*[steps]))
+  df_stepwise = pd.DataFrame(stepwise_results, columns=['is_correct', 'solution', 'question', 'steps', 'answer'])
+  df_stepwise.to_json('stepwise_solver_results.ndjson', orient='records')
+```
+
+Here we can see that by providing the GPT solver with steps derived from correct solutions, performance was almost doubled (from 39% to 77% correct responses). This provides important validation for an AI Tutor with "step-by-step guidance" functionality, because now we know that by following these steps the student would be likely to arrive at the correct answer.
+
+```{python, filename="python"}
+print(f'''
+Baseline solver: {round(np.mean(df_baseline['is_correct'])*100)}% correct
+Stepwise solver: {round(np.mean(df_stepwise['is_correct'])*100)}% correct
+''')
+```
+
+
+```{r, filename="R"}
+library(tidyverse)
+tibble(`Baseline Solver` = 39, `Stepwise Solver` = 77)%>% 
+  pivot_longer(everything()) %>%
+  ggplot(aes(x = name, y = value, fill = name)) + 
+    geom_col(width = 0.5) + 
+    geom_text(aes(x = name, y = value, label = paste0(round(value), '%')), vjust=-0.5) +
+    labs(
+      x = '',
+      y = '% correct (out of 100)',
+      title = 'Validating the step-by-step guidance, performance of the Stepwise Solver was\nroughly double performance of the Baseline Solver.'
+    ) +
+    ylim(0, 100) +
+    theme(legend.position = "none",
+          text = element_text(size=14),
+          axis.text.x = element_text(size=12),
+          axis.text.y = element_text(size=12),  
+          axis.title.x = element_text(size=12),
+          axis.title.y = element_text(size=12))
+```
+
+```{r, echo=F}
+#ggsave("social-image.png", height=960, width=1344, units = 'px', dpi=150)
+```
+
+
+

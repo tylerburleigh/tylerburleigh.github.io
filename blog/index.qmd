@@ -9,6 +9,9 @@ listing:
     sort: "date desc"
     template: ../html/blog/listing.ejs
     categories: true
+    feed: 
+      categories: 
+        - R
   - id: posts_2020
     contents: "2020/**/index.qmd"
     sort: "date desc"

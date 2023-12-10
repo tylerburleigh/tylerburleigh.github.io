@@ -1,0 +1,9 @@
+To solve the problem, follow these steps:
+
+1. Find the size of the second tank by dividing the size of the first tank by 2.
+2. Determine the number of fish that can be kept in each tank based on the rule of one gallon of water per inch of fish.
+3. Calculate the number of fish that can be kept in the second tank by dividing the size of the second tank by 2.
+4. Calculate the number of fish that can be kept in the first tank by dividing the size of the first tank by 3.
+5. Subtract 1 from the number of fish in the first tank to account for one fish eating another.
+6. Subtract the number of fish in the second tank from the number of fish in the first tank to find the difference.
+7. Determine the final answer, which is the difference in the number of fish between the two tanks.

@@ -1,7 +1,7 @@
 ---
 title: 'Using GPT-4 for classification'
 date: 2023-10-08
-description: "In this post I'll be tackling the Tidy Tuesday: US Government Grant Opportunities dataset. I'll use GPT-4 to classify US grant-funding agencies into categories using government agency names. Then I'll summarize how much agencies in each category are estimated to be giving out through grants."
+description: "In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category."
 image: social-image.png
 twitter-card:
   image: "social-image.png"
@@ -9,12 +9,11 @@ open-graph:
   image: "social-image.png"
 categories:
   - GPT
-  - classification
   - R
 freeze: true
 ---
 
-GPT is a powerful new tool in the Data Science toolkit. Used correctly, it can increase productivity while decreasing the "drudgery" of boring tasks like data cleaning. In this blog post, I use GPT to classify US grant-funding agencies into categories using government agency names. For this task I'll be using this week's Tidy Tuesday dataset: [US Government Grant Opportunities](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-03/readme.md).
+GPT is a powerful new tool in the Data Science toolkit. Used correctly, it can increase productivity while decreasing the "drudgery" of boring tasks like data cleaning. I've been trying to find ways to integrate GPT into my data science workflow, and I thought it might be fun to use it with the latest Tidy Tuesday. ([US Government Grant Opportunities](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-03/readme.md)). So in this blog post, I use GPT to classify US grant-funding agencies into categories using government agency names.
 
 # Load libraries and data
 
@@ -92,22 +91,22 @@ First I'll ask GPT to define a fixed number of categories. Somewhat arbitrarily,
 
 ```{r}
 if(!exists('categories')){
-  query1 <- 
+  query <- 
   paste0(
-  "I'm going to present a list of US agencies. 
-  Your task is to identify the 10 best categories 
-  to represent them. The categories should be based 
-  on activities they're involved with, such as Defense 
-  and Military, Science and Technology, Arts and Culture, 
-  Health and Medicine, Education, International Aid, 
-  etc... I want you to give me the list of categories 
-  as a comma-separated list.
-  
-  ```", agencies_str, "```"
+    "I'm going to present a list of US agencies. 
+    Your task is to identify the 10 best categories 
+    to represent them. The categories should be based 
+    on activities they're involved with, such as Defense 
+    and Military, Science and Technology, Arts and Culture, 
+    Health and Medicine, Education, International Aid, 
+    etc... I want you to give me the list of categories 
+    as a comma-separated list.
+    
+    ```", agencies_str, "```"
   )
-  gpt_categories <- chatGPT(query1)
+  results <- chatGPT(query)
   
-  categories <- trimws(strsplit(gpt_categories, ",")[[1]])
+  categories <- trimws(strsplit(results, ",")[[1]])
   
   # Save to disk
   save(categories, file = 'categories.Rdata')
@@ -122,19 +121,19 @@ Next, using the agency names and categories generated above I'll ask GPT to do c
 
 ```{r}
 get_agencies_in_category <- function(category) {
-  query2 <-paste0(
-  "I'm going to present a comma-separated list of US agencies,
-  delimited by triple backticks (```), and a single category to 
-  which some of the agencies belong, delimited by triple hashtags (###). 
-  Your task is to provide a comma-separated list of agency names that 
-  belong in the category provided.
-  ```", agencies_str,  "```
-  ###", category, "###"
+  query <-paste0(
+    "I'm going to present a comma-separated list of US agencies,
+    delimited by triple backticks (```), and a single category to 
+    which some of the agencies belong, delimited by triple hashtags (###). 
+    Your task is to provide a comma-separated list of agency names that 
+    belong in the category provided.
+    ```", agencies_str,  "```
+    ###", category, "###"
   )
-  gpt_query2_response <- chatGPT(query2)
+  results <- chatGPT(query)
   
   # Return as a vector
-  trimws(strsplit(gpt_query2_response, ",")[[1]])
+  trimws(strsplit(results, ",")[[1]])
 }
 ```
 

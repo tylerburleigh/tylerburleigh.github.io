@@ -154,12 +154,22 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/tylerburleigh.bsky.social" rel="me" target=""><i class="bi bi-square" role="img" aria-label="bluesky">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/tylerburleigh" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/tylerburleigh" rel="me" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:tylerburleigh@gmail.com" rel="me" target=""><i class="bi bi-envelope" role="img" aria-label="email">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -980,288 +990,287 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="an">open-graph:</span></span>
 <span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
 <span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - tidy-tuesday</span></span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>Getting back into the swing of things. This is my first blog post in more than 3 years!</span>
-<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>For this post, I'll be using the Week 33 <span class="co">[</span><span class="ot">Tidy Tuesday</span><span class="co">](https://github.com/rfordatascience/tidytuesday)</span> dataset. This one is all about spam email. </span>
-<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>From the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/spam7.html"</span><span class="kw">&gt;</span>dataset description<span class="kw">&lt;/a&gt;</span>:</span>
-<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The data consist of 4601 email items, of which 1813 items were identified as spam. This is a subset of the full dataset, with six only of the 57 explanatory variables in the complete dataset.</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>Getting back into the swing of things. This is my first blog post in more than 3 years!</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>For this post, I'll be using the Week 33 <span class="co">[</span><span class="ot">Tidy Tuesday</span><span class="co">](https://github.com/rfordatascience/tidytuesday)</span> dataset. This one is all about spam email. </span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>From the <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://vincentarelbundock.github.io/Rdatasets/doc/DAAG/spam7.html"</span><span class="kw">&gt;</span>dataset description<span class="kw">&lt;/a&gt;</span>:</span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The data consist of 4601 email items, of which 1813 items were identified as spam. This is a subset of the full dataset, with six only of the 57 explanatory variables in the complete dataset.</span></span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
-<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
-<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
-<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usemodels)</span>
-<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(future)</span>
-<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
-<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
-<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">fig.width =</span> <span class="fl">4.5</span>, <span class="at">fig.height =</span> <span class="fl">2.5</span>)</span>
-<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load data</span></span>
-<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-40"><a href="#cb42-40" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
-<span id="cb42-41"><a href="#cb42-41" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-15/spam.csv'</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">yesno =</span> <span class="fu">factor</span>(yesno <span class="sc">==</span> <span class="st">'y'</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)))</span>
-<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data dictionary</span></span>
-<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a><span class="in">variable    class         description</span></span>
-<span id="cb42-49"><a href="#cb42-49" aria-hidden="true" tabindex="-1"></a><span class="in">crl.tot     double        Total length of uninterrupted sequences of capitals</span></span>
-<span id="cb42-50"><a href="#cb42-50" aria-hidden="true" tabindex="-1"></a><span class="in">dollar      double        Occurrences of the dollar sign, as percent of total number of characters</span></span>
-<span id="cb42-51"><a href="#cb42-51" aria-hidden="true" tabindex="-1"></a><span class="in">bang        double        Occurrences of ‘!’, as percent of total number of characters</span></span>
-<span id="cb42-52"><a href="#cb42-52" aria-hidden="true" tabindex="-1"></a><span class="in">money       double        Occurrences of ‘money’, as percent of total number of characters</span></span>
-<span id="cb42-53"><a href="#cb42-53" aria-hidden="true" tabindex="-1"></a><span class="in">n000        double        Occurrences of the string ‘000’, as percent of total number of words</span></span>
-<span id="cb42-54"><a href="#cb42-54" aria-hidden="true" tabindex="-1"></a><span class="in">make        double        Occurrences of ‘make’, as a percent of total number of words</span></span>
-<span id="cb42-55"><a href="#cb42-55" aria-hidden="true" tabindex="-1"></a><span class="in">yesno       character     Outcome variable, a factor with levels 'n' not spam, 'y' spam</span></span>
-<span id="cb42-56"><a href="#cb42-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-57"><a href="#cb42-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-58"><a href="#cb42-58" aria-hidden="true" tabindex="-1"></a>The outcome variable is <span class="in">`yesno`</span>, a character type, and all of the other variables are of a numeric type.</span>
-<span id="cb42-59"><a href="#cb42-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-60"><a href="#cb42-60" aria-hidden="true" tabindex="-1"></a>We can see that a lot of the feature engineering has already been done. It seems that whoever prepared this dataset has determined that spam emails can be meaningfully identified by:</span>
-<span id="cb42-61"><a href="#cb42-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-62"><a href="#cb42-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>SHOUTING! (<span class="in">`crl.tot`</span>, <span class="in">`bang`</span>)</span>
-<span id="cb42-63"><a href="#cb42-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>and talk of making money (<span class="in">`make`</span>, <span class="in">`money`</span>, <span class="in">`dollar`</span>) at values of 1,000 or greater (<span class="in">`n000`</span>)</span>
-<span id="cb42-64"><a href="#cb42-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-65"><a href="#cb42-65" aria-hidden="true" tabindex="-1"></a>That definitely matches my experience reading spam!</span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
+<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usemodels)</span>
+<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(future)</span>
+<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>, <span class="at">fig.width =</span> <span class="fl">4.5</span>, <span class="at">fig.height =</span> <span class="fl">2.5</span>)</span>
+<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load data</span></span>
+<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE}</span></span>
+<span id="cb42-40"><a href="#cb42-40" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-08-15/spam.csv'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb42-41"><a href="#cb42-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">yesno =</span> <span class="fu">factor</span>(yesno <span class="sc">==</span> <span class="st">'y'</span>, <span class="at">levels=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)))</span>
+<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data dictionary</span></span>
+<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a><span class="in">variable    class         description</span></span>
+<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a><span class="in">crl.tot     double        Total length of uninterrupted sequences of capitals</span></span>
+<span id="cb42-49"><a href="#cb42-49" aria-hidden="true" tabindex="-1"></a><span class="in">dollar      double        Occurrences of the dollar sign, as percent of total number of characters</span></span>
+<span id="cb42-50"><a href="#cb42-50" aria-hidden="true" tabindex="-1"></a><span class="in">bang        double        Occurrences of ‘!’, as percent of total number of characters</span></span>
+<span id="cb42-51"><a href="#cb42-51" aria-hidden="true" tabindex="-1"></a><span class="in">money       double        Occurrences of ‘money’, as percent of total number of characters</span></span>
+<span id="cb42-52"><a href="#cb42-52" aria-hidden="true" tabindex="-1"></a><span class="in">n000        double        Occurrences of the string ‘000’, as percent of total number of words</span></span>
+<span id="cb42-53"><a href="#cb42-53" aria-hidden="true" tabindex="-1"></a><span class="in">make        double        Occurrences of ‘make’, as a percent of total number of words</span></span>
+<span id="cb42-54"><a href="#cb42-54" aria-hidden="true" tabindex="-1"></a><span class="in">yesno       character     Outcome variable, a factor with levels 'n' not spam, 'y' spam</span></span>
+<span id="cb42-55"><a href="#cb42-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-56"><a href="#cb42-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-57"><a href="#cb42-57" aria-hidden="true" tabindex="-1"></a>The outcome variable is <span class="in">`yesno`</span>, a character type, and all of the other variables are of a numeric type.</span>
+<span id="cb42-58"><a href="#cb42-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-59"><a href="#cb42-59" aria-hidden="true" tabindex="-1"></a>We can see that a lot of the feature engineering has already been done. It seems that whoever prepared this dataset has determined that spam emails can be meaningfully identified by:</span>
+<span id="cb42-60"><a href="#cb42-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-61"><a href="#cb42-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>SHOUTING! (<span class="in">`crl.tot`</span>, <span class="in">`bang`</span>)</span>
+<span id="cb42-62"><a href="#cb42-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>and talk of making money (<span class="in">`make`</span>, <span class="in">`money`</span>, <span class="in">`dollar`</span>) at values of 1,000 or greater (<span class="in">`n000`</span>)</span>
+<span id="cb42-63"><a href="#cb42-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-64"><a href="#cb42-64" aria-hidden="true" tabindex="-1"></a>That definitely matches my experience reading spam!</span>
+<span id="cb42-65"><a href="#cb42-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-66"><a href="#cb42-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-67"><a href="#cb42-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-68"><a href="#cb42-68" aria-hidden="true" tabindex="-1"></a><span class="fu"># What can we do with this data?</span></span>
-<span id="cb42-69"><a href="#cb42-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-70"><a href="#cb42-70" aria-hidden="true" tabindex="-1"></a>What can we do with this data? Because this data has "ground truth" labels that tell us which emails were spam or not (<span class="in">`yesno`</span>), and a list of features associated with each email, we can approach this as a supervised ML problem. We can use supervised ML to predict spam, to create a spam filter, for example.</span>
-<span id="cb42-71"><a href="#cb42-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-72"><a href="#cb42-72" aria-hidden="true" tabindex="-1"></a><span class="fu"># Supervised ML: Predicting spam / spam filter</span></span>
-<span id="cb42-73"><a href="#cb42-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-74"><a href="#cb42-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Average values, by spam</span></span>
-<span id="cb42-75"><a href="#cb42-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-76"><a href="#cb42-76" aria-hidden="true" tabindex="-1"></a>Let's start by looking at some averages (mean and median), split by the outcome variable.</span>
-<span id="cb42-77"><a href="#cb42-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-80"><a href="#cb42-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-81"><a href="#cb42-81" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb42-82"><a href="#cb42-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yesno) <span class="sc">%&gt;%</span></span>
-<span id="cb42-83"><a href="#cb42-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(mean)</span>
-<span id="cb42-84"><a href="#cb42-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-85"><a href="#cb42-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-86"><a href="#cb42-86" aria-hidden="true" tabindex="-1"></a>We can see that on average, spam emails have higher mean values for each of the predictors. No surprise there.</span>
-<span id="cb42-87"><a href="#cb42-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-88"><a href="#cb42-88" aria-hidden="true" tabindex="-1"></a>However, the medians of some variables are zero, which suggests those variables have heavily positively skewed distributions with many zero values (sometimes called "zero-inflation").</span>
-<span id="cb42-89"><a href="#cb42-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-92"><a href="#cb42-92" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-93"><a href="#cb42-93" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb42-94"><a href="#cb42-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yesno) <span class="sc">%&gt;%</span></span>
-<span id="cb42-95"><a href="#cb42-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(median)</span>
-<span id="cb42-96"><a href="#cb42-96" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-97"><a href="#cb42-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-98"><a href="#cb42-98" aria-hidden="true" tabindex="-1"></a>We can confirm this by looking at the counts of zero values, in relation to the total counts.</span>
-<span id="cb42-99"><a href="#cb42-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-100"><a href="#cb42-100" aria-hidden="true" tabindex="-1"></a>As we see, the vast majority of the spam emails had non-zero values on these variables, and non-spam emails had significantly fewer non-zero values, with the exception of <span class="in">`crl.tot`</span>. In particular, spam emails were MUCH more likely to contain "!", "$", "000", and "money".</span>
-<span id="cb42-101"><a href="#cb42-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-104"><a href="#cb42-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-105"><a href="#cb42-105" aria-hidden="true" tabindex="-1"></a>no <span class="ot">=</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(yesno <span class="sc">==</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>yesno)</span>
-<span id="cb42-106"><a href="#cb42-106" aria-hidden="true" tabindex="-1"></a>yes <span class="ot">=</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(yesno <span class="sc">==</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>yesno)</span>
-<span id="cb42-107"><a href="#cb42-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-108"><a href="#cb42-108" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">colSums</span>(no<span class="sc">&gt;</span><span class="dv">0</span>)<span class="sc">/</span><span class="fu">nrow</span>(no)<span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb42-109"><a href="#cb42-109" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">colSums</span>(yes<span class="sc">&gt;</span><span class="dv">0</span>)<span class="sc">/</span><span class="fu">nrow</span>(yes)<span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb42-110"><a href="#cb42-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-111"><a href="#cb42-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-112"><a href="#cb42-112" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distributions, by spam</span></span>
-<span id="cb42-113"><a href="#cb42-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-114"><a href="#cb42-114" aria-hidden="true" tabindex="-1"></a>Next, let's look at the distributions.</span>
-<span id="cb42-115"><a href="#cb42-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-116"><a href="#cb42-116" aria-hidden="true" tabindex="-1"></a>For these plots, since they all have extreme skew, I'm going to truncate them at the 90th percentile and look at the left side where most of the mass is.</span>
-<span id="cb42-117"><a href="#cb42-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-118"><a href="#cb42-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, fig.width=4.5, fig.height=2.5}</span></span>
-<span id="cb42-119"><a href="#cb42-119" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (c <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'crl.tot'</span>, <span class="st">'dollar'</span>, <span class="st">'bang'</span>, <span class="st">'money'</span>, <span class="st">'n000'</span>, <span class="st">'make'</span>)){</span>
-<span id="cb42-120"><a href="#cb42-120" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb42-121"><a href="#cb42-121" aria-hidden="true" tabindex="-1"></a>  qtile_90 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[c]], .<span class="dv">90</span>)</span>
-<span id="cb42-122"><a href="#cb42-122" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb42-123"><a href="#cb42-123" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
-<span id="cb42-124"><a href="#cb42-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!!</span><span class="fu">sym</span>(c) <span class="sc">&lt;</span> qtile_90) <span class="sc">%&gt;%</span></span>
-<span id="cb42-125"><a href="#cb42-125" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">!!</span><span class="fu">sym</span>(c), <span class="at">fill=</span>yesno)) <span class="sc">+</span></span>
-<span id="cb42-126"><a href="#cb42-126" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_density</span>(<span class="at">alpha=</span>.<span class="dv">7</span>) <span class="sc">+</span></span>
-<span id="cb42-127"><a href="#cb42-127" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(c) <span class="ot">-&gt;</span> plot</span>
-<span id="cb42-128"><a href="#cb42-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(plot)</span>
-<span id="cb42-129"><a href="#cb42-129" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb42-130"><a href="#cb42-130" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb42-131"><a href="#cb42-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-132"><a href="#cb42-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-133"><a href="#cb42-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## Feature correlations</span></span>
-<span id="cb42-134"><a href="#cb42-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-135"><a href="#cb42-135" aria-hidden="true" tabindex="-1"></a>It doesn't look like the features are very strongly correlated. The strongest correlation is between <span class="in">`n000`</span> and <span class="in">`dollar`</span>, which is not particularly surprising since I would expect that "000" would tend to appear in the context of a dollar value like "$1000".</span>
-<span id="cb42-136"><a href="#cb42-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-139"><a href="#cb42-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-140"><a href="#cb42-140" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb42-141"><a href="#cb42-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>yesno) <span class="sc">%&gt;%</span></span>
-<span id="cb42-142"><a href="#cb42-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(<span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
-<span id="cb42-143"><a href="#cb42-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-144"><a href="#cb42-144" aria-hidden="true" tabindex="-1"></a>If we convert the features to boolean, we can see that the presence of features have stronger correlations. The strongest correlation is again between <span class="in">`dollar`</span> and <span class="in">`n000`</span>, but <span class="in">`money`</span> and <span class="in">`dollar`</span> also occur together more often than not.</span>
-<span id="cb42-145"><a href="#cb42-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-148"><a href="#cb42-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-149"><a href="#cb42-149" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb42-150"><a href="#cb42-150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>yesno, <span class="sc">-</span>crl.tot) <span class="sc">%&gt;%</span></span>
-<span id="cb42-151"><a href="#cb42-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dollar =</span> dollar <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
-<span id="cb42-152"><a href="#cb42-152" aria-hidden="true" tabindex="-1"></a>         <span class="at">bang =</span> bang <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
-<span id="cb42-153"><a href="#cb42-153" aria-hidden="true" tabindex="-1"></a>         <span class="at">money =</span> money <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
-<span id="cb42-154"><a href="#cb42-154" aria-hidden="true" tabindex="-1"></a>         <span class="at">n000 =</span> n000 <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
-<span id="cb42-155"><a href="#cb42-155" aria-hidden="true" tabindex="-1"></a>         <span class="at">make =</span> make <span class="sc">&gt;</span> <span class="dv">0</span></span>
-<span id="cb42-156"><a href="#cb42-156" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb42-157"><a href="#cb42-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(<span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
-<span id="cb42-158"><a href="#cb42-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-159"><a href="#cb42-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-160"><a href="#cb42-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## Simple classification algorithm</span></span>
-<span id="cb42-161"><a href="#cb42-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-162"><a href="#cb42-162" aria-hidden="true" tabindex="-1"></a>Just for fun, let's see how well we can distinguish spam vs. not spam using a simple heuristic. </span>
-<span id="cb42-163"><a href="#cb42-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-164"><a href="#cb42-164" aria-hidden="true" tabindex="-1"></a>I'll label anything as spam if it contained at least 1 "money", "$", "000", and "!" OR if it contained more than 100 uninterrupted sequences of capital letters and at least 1 "!". This is just what comes to mind after looking at the frequency plots above.</span>
-<span id="cb42-165"><a href="#cb42-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-168"><a href="#cb42-168" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-169"><a href="#cb42-169" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb42-170"><a href="#cb42-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">simple_spam_flag =</span> <span class="fu">factor</span>((money <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> dollar <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> bang <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> n000 <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|</span> </span>
-<span id="cb42-171"><a href="#cb42-171" aria-hidden="true" tabindex="-1"></a>                                     (crl.tot <span class="sc">&gt;</span> <span class="dv">100</span> <span class="sc">&amp;</span> bang <span class="sc">&gt;</span> <span class="dv">0</span>), </span>
-<span id="cb42-172"><a href="#cb42-172" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">levels=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
-<span id="cb42-173"><a href="#cb42-173" aria-hidden="true" tabindex="-1"></a>         ) <span class="ot">-&gt;</span> df_flag</span>
-<span id="cb42-174"><a href="#cb42-174" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-175"><a href="#cb42-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-176"><a href="#cb42-176" aria-hidden="true" tabindex="-1"></a>This simple classification algorithm achieved an accuracy of 79%, with 64% sensitivity and 89% specificity. This doesn't seem too bad. But what is a good baseline of performance?</span>
-<span id="cb42-177"><a href="#cb42-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-180"><a href="#cb42-180" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-181"><a href="#cb42-181" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(df_flag<span class="sc">$</span>simple_spam_flag, df_flag<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
-<span id="cb42-182"><a href="#cb42-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-183"><a href="#cb42-183" aria-hidden="true" tabindex="-1"></a>We can see that the base rate of spam is 39%.</span>
-<span id="cb42-184"><a href="#cb42-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-187"><a href="#cb42-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-188"><a href="#cb42-188" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>yesno <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
-<span id="cb42-189"><a href="#cb42-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-190"><a href="#cb42-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-191"><a href="#cb42-191" aria-hidden="true" tabindex="-1"></a>A good baseline model might be to predict the majority class, which in this case is not-spam.</span>
-<span id="cb42-192"><a href="#cb42-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-193"><a href="#cb42-193" aria-hidden="true" tabindex="-1"></a>This "always predict FALSE" baseline model can be expected to achieve 1 minus the base rate of spam (i.e., 61%), and we can see that this is the case if we construct just such a model. This tells us that the heuristic model above is quite a bit better than a completely naive model.</span>
-<span id="cb42-194"><a href="#cb42-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-197"><a href="#cb42-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-198"><a href="#cb42-198" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(<span class="fu">rep</span>(<span class="st">'FALSE'</span>,<span class="fu">nrow</span>(df_flag))), df_flag<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
-<span id="cb42-199"><a href="#cb42-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-67"><a href="#cb42-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># What can we do with this data?</span></span>
+<span id="cb42-68"><a href="#cb42-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-69"><a href="#cb42-69" aria-hidden="true" tabindex="-1"></a>What can we do with this data? Because this data has "ground truth" labels that tell us which emails were spam or not (<span class="in">`yesno`</span>), and a list of features associated with each email, we can approach this as a supervised ML problem. We can use supervised ML to predict spam, to create a spam filter, for example.</span>
+<span id="cb42-70"><a href="#cb42-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-71"><a href="#cb42-71" aria-hidden="true" tabindex="-1"></a><span class="fu"># Supervised ML: Predicting spam / spam filter</span></span>
+<span id="cb42-72"><a href="#cb42-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-73"><a href="#cb42-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Average values, by spam</span></span>
+<span id="cb42-74"><a href="#cb42-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-75"><a href="#cb42-75" aria-hidden="true" tabindex="-1"></a>Let's start by looking at some averages (mean and median), split by the outcome variable.</span>
+<span id="cb42-76"><a href="#cb42-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-79"><a href="#cb42-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-80"><a href="#cb42-80" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb42-81"><a href="#cb42-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yesno) <span class="sc">%&gt;%</span></span>
+<span id="cb42-82"><a href="#cb42-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(mean)</span>
+<span id="cb42-83"><a href="#cb42-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-84"><a href="#cb42-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-85"><a href="#cb42-85" aria-hidden="true" tabindex="-1"></a>We can see that on average, spam emails have higher mean values for each of the predictors. No surprise there.</span>
+<span id="cb42-86"><a href="#cb42-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-87"><a href="#cb42-87" aria-hidden="true" tabindex="-1"></a>However, the medians of some variables are zero, which suggests those variables have heavily positively skewed distributions with many zero values (sometimes called "zero-inflation").</span>
+<span id="cb42-88"><a href="#cb42-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-91"><a href="#cb42-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-92"><a href="#cb42-92" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb42-93"><a href="#cb42-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(yesno) <span class="sc">%&gt;%</span></span>
+<span id="cb42-94"><a href="#cb42-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise_all</span>(median)</span>
+<span id="cb42-95"><a href="#cb42-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-96"><a href="#cb42-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-97"><a href="#cb42-97" aria-hidden="true" tabindex="-1"></a>We can confirm this by looking at the counts of zero values, in relation to the total counts.</span>
+<span id="cb42-98"><a href="#cb42-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-99"><a href="#cb42-99" aria-hidden="true" tabindex="-1"></a>As we see, the vast majority of the spam emails had non-zero values on these variables, and non-spam emails had significantly fewer non-zero values, with the exception of <span class="in">`crl.tot`</span>. In particular, spam emails were MUCH more likely to contain "!", "$", "000", and "money".</span>
+<span id="cb42-100"><a href="#cb42-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-103"><a href="#cb42-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-104"><a href="#cb42-104" aria-hidden="true" tabindex="-1"></a>no <span class="ot">=</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(yesno <span class="sc">==</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>yesno)</span>
+<span id="cb42-105"><a href="#cb42-105" aria-hidden="true" tabindex="-1"></a>yes <span class="ot">=</span> df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(yesno <span class="sc">==</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>yesno)</span>
+<span id="cb42-106"><a href="#cb42-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-107"><a href="#cb42-107" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">colSums</span>(no<span class="sc">&gt;</span><span class="dv">0</span>)<span class="sc">/</span><span class="fu">nrow</span>(no)<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb42-108"><a href="#cb42-108" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">colSums</span>(yes<span class="sc">&gt;</span><span class="dv">0</span>)<span class="sc">/</span><span class="fu">nrow</span>(yes)<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb42-109"><a href="#cb42-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-110"><a href="#cb42-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-111"><a href="#cb42-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distributions, by spam</span></span>
+<span id="cb42-112"><a href="#cb42-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-113"><a href="#cb42-113" aria-hidden="true" tabindex="-1"></a>Next, let's look at the distributions.</span>
+<span id="cb42-114"><a href="#cb42-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-115"><a href="#cb42-115" aria-hidden="true" tabindex="-1"></a>For these plots, since they all have extreme skew, I'm going to truncate them at the 90th percentile and look at the left side where most of the mass is.</span>
+<span id="cb42-116"><a href="#cb42-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-117"><a href="#cb42-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, fig.width=4.5, fig.height=2.5}</span></span>
+<span id="cb42-118"><a href="#cb42-118" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (c <span class="cf">in</span> <span class="fu">c</span>(<span class="st">'crl.tot'</span>, <span class="st">'dollar'</span>, <span class="st">'bang'</span>, <span class="st">'money'</span>, <span class="st">'n000'</span>, <span class="st">'make'</span>)){</span>
+<span id="cb42-119"><a href="#cb42-119" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-120"><a href="#cb42-120" aria-hidden="true" tabindex="-1"></a>  qtile_90 <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df[[c]], .<span class="dv">90</span>)</span>
+<span id="cb42-121"><a href="#cb42-121" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-122"><a href="#cb42-122" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span></span>
+<span id="cb42-123"><a href="#cb42-123" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!!</span><span class="fu">sym</span>(c) <span class="sc">&lt;</span> qtile_90) <span class="sc">%&gt;%</span></span>
+<span id="cb42-124"><a href="#cb42-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">!!</span><span class="fu">sym</span>(c), <span class="at">fill=</span>yesno)) <span class="sc">+</span></span>
+<span id="cb42-125"><a href="#cb42-125" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_density</span>(<span class="at">alpha=</span>.<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb42-126"><a href="#cb42-126" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(c) <span class="ot">-&gt;</span> plot</span>
+<span id="cb42-127"><a href="#cb42-127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(plot)</span>
+<span id="cb42-128"><a href="#cb42-128" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-129"><a href="#cb42-129" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-130"><a href="#cb42-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-131"><a href="#cb42-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-132"><a href="#cb42-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Feature correlations</span></span>
+<span id="cb42-133"><a href="#cb42-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-134"><a href="#cb42-134" aria-hidden="true" tabindex="-1"></a>It doesn't look like the features are very strongly correlated. The strongest correlation is between <span class="in">`n000`</span> and <span class="in">`dollar`</span>, which is not particularly surprising since I would expect that "000" would tend to appear in the context of a dollar value like "$1000".</span>
+<span id="cb42-135"><a href="#cb42-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-138"><a href="#cb42-138" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-139"><a href="#cb42-139" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb42-140"><a href="#cb42-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>yesno) <span class="sc">%&gt;%</span></span>
+<span id="cb42-141"><a href="#cb42-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(<span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb42-142"><a href="#cb42-142" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-143"><a href="#cb42-143" aria-hidden="true" tabindex="-1"></a>If we convert the features to boolean, we can see that the presence of features have stronger correlations. The strongest correlation is again between <span class="in">`dollar`</span> and <span class="in">`n000`</span>, but <span class="in">`money`</span> and <span class="in">`dollar`</span> also occur together more often than not.</span>
+<span id="cb42-144"><a href="#cb42-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-147"><a href="#cb42-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-148"><a href="#cb42-148" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb42-149"><a href="#cb42-149" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>yesno, <span class="sc">-</span>crl.tot) <span class="sc">%&gt;%</span></span>
+<span id="cb42-150"><a href="#cb42-150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dollar =</span> dollar <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb42-151"><a href="#cb42-151" aria-hidden="true" tabindex="-1"></a>         <span class="at">bang =</span> bang <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb42-152"><a href="#cb42-152" aria-hidden="true" tabindex="-1"></a>         <span class="at">money =</span> money <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb42-153"><a href="#cb42-153" aria-hidden="true" tabindex="-1"></a>         <span class="at">n000 =</span> n000 <span class="sc">&gt;</span> <span class="dv">0</span>,</span>
+<span id="cb42-154"><a href="#cb42-154" aria-hidden="true" tabindex="-1"></a>         <span class="at">make =</span> make <span class="sc">&gt;</span> <span class="dv">0</span></span>
+<span id="cb42-155"><a href="#cb42-155" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb42-156"><a href="#cb42-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(<span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb42-157"><a href="#cb42-157" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-158"><a href="#cb42-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-159"><a href="#cb42-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## Simple classification algorithm</span></span>
+<span id="cb42-160"><a href="#cb42-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-161"><a href="#cb42-161" aria-hidden="true" tabindex="-1"></a>Just for fun, let's see how well we can distinguish spam vs. not spam using a simple heuristic. </span>
+<span id="cb42-162"><a href="#cb42-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-163"><a href="#cb42-163" aria-hidden="true" tabindex="-1"></a>I'll label anything as spam if it contained at least 1 "money", "$", "000", and "!" OR if it contained more than 100 uninterrupted sequences of capital letters and at least 1 "!". This is just what comes to mind after looking at the frequency plots above.</span>
+<span id="cb42-164"><a href="#cb42-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-167"><a href="#cb42-167" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-168"><a href="#cb42-168" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb42-169"><a href="#cb42-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">simple_spam_flag =</span> <span class="fu">factor</span>((money <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> dollar <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> bang <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> n000 <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|</span> </span>
+<span id="cb42-170"><a href="#cb42-170" aria-hidden="true" tabindex="-1"></a>                                     (crl.tot <span class="sc">&gt;</span> <span class="dv">100</span> <span class="sc">&amp;</span> bang <span class="sc">&gt;</span> <span class="dv">0</span>), </span>
+<span id="cb42-171"><a href="#cb42-171" aria-hidden="true" tabindex="-1"></a>                                   <span class="at">levels=</span><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb42-172"><a href="#cb42-172" aria-hidden="true" tabindex="-1"></a>         ) <span class="ot">-&gt;</span> df_flag</span>
+<span id="cb42-173"><a href="#cb42-173" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-174"><a href="#cb42-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-175"><a href="#cb42-175" aria-hidden="true" tabindex="-1"></a>This simple classification algorithm achieved an accuracy of 79%, with 64% sensitivity and 89% specificity. This doesn't seem too bad. But what is a good baseline of performance?</span>
+<span id="cb42-176"><a href="#cb42-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-179"><a href="#cb42-179" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-180"><a href="#cb42-180" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(df_flag<span class="sc">$</span>simple_spam_flag, df_flag<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
+<span id="cb42-181"><a href="#cb42-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-182"><a href="#cb42-182" aria-hidden="true" tabindex="-1"></a>We can see that the base rate of spam is 39%.</span>
+<span id="cb42-183"><a href="#cb42-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-186"><a href="#cb42-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-187"><a href="#cb42-187" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>yesno <span class="sc">==</span> <span class="cn">TRUE</span>)</span>
+<span id="cb42-188"><a href="#cb42-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-189"><a href="#cb42-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-190"><a href="#cb42-190" aria-hidden="true" tabindex="-1"></a>A good baseline model might be to predict the majority class, which in this case is not-spam.</span>
+<span id="cb42-191"><a href="#cb42-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-192"><a href="#cb42-192" aria-hidden="true" tabindex="-1"></a>This "always predict FALSE" baseline model can be expected to achieve 1 minus the base rate of spam (i.e., 61%), and we can see that this is the case if we construct just such a model. This tells us that the heuristic model above is quite a bit better than a completely naive model.</span>
+<span id="cb42-193"><a href="#cb42-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-196"><a href="#cb42-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-197"><a href="#cb42-197" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">factor</span>(<span class="fu">rep</span>(<span class="st">'FALSE'</span>,<span class="fu">nrow</span>(df_flag))), df_flag<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
+<span id="cb42-198"><a href="#cb42-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-199"><a href="#cb42-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-200"><a href="#cb42-200" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-201"><a href="#cb42-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-202"><a href="#cb42-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-203"><a href="#cb42-203" aria-hidden="true" tabindex="-1"></a><span class="fu">## Decision Tree</span></span>
-<span id="cb42-204"><a href="#cb42-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-205"><a href="#cb42-205" aria-hidden="true" tabindex="-1"></a>Proceeding from simpler to more complex, we can go a step further and try fitting a decision tree model. The decision tree will help us to identify a more sophisticated rule set for classifying spam mail. Decision trees also have the advantage of being highly interpretable.</span>
-<span id="cb42-206"><a href="#cb42-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-207"><a href="#cb42-207" aria-hidden="true" tabindex="-1"></a>We'll start by splitting our data into training and test -- that way, we won't be testing performance on the same data that our model was trained on, and we can minimize the risk of overfitting.</span>
-<span id="cb42-208"><a href="#cb42-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-211"><a href="#cb42-211" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-212"><a href="#cb42-212" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">200</span>)</span>
-<span id="cb42-213"><a href="#cb42-213" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(df)</span>
-<span id="cb42-214"><a href="#cb42-214" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">training</span>(split)</span>
-<span id="cb42-215"><a href="#cb42-215" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">testing</span>(split)</span>
-<span id="cb42-216"><a href="#cb42-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-217"><a href="#cb42-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-218"><a href="#cb42-218" aria-hidden="true" tabindex="-1"></a>Next, we'll fit the model and then visualize its logic.</span>
-<span id="cb42-219"><a href="#cb42-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-220"><a href="#cb42-220" aria-hidden="true" tabindex="-1"></a>We can read this chart by starting at the root node and following the branches until we reach a terminal node. The predicted value at this terminal node will give us the prediction that the model has made, and the path that we followed to get there provides its reasoning for the prediction.</span>
-<span id="cb42-221"><a href="#cb42-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-222"><a href="#cb42-222" aria-hidden="true" tabindex="-1"></a>So for example, if we follow the tree to the left-most terminal node, we can see that it would predict that an email was spam if it contained <span class="in">`dollar &gt;= 0.056`</span>. If we follow the tree to the right-most terminal, we can see that it would predict that an email was not spam if it contained <span class="in">`dollar &lt; 0.056`</span> and <span class="in">`bang &gt;= 0.12`</span>. The percentage value in the node tells us what percentage of emails met these criteria. So 24% of emails met the former criteria, and 54% the latter.</span>
-<span id="cb42-223"><a href="#cb42-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-226"><a href="#cb42-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-227"><a href="#cb42-227" aria-hidden="true" tabindex="-1"></a>decision_tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(yesno <span class="sc">~</span> ., <span class="at">data=</span>train, <span class="at">method=</span><span class="st">'class'</span>)</span>
-<span id="cb42-228"><a href="#cb42-228" aria-hidden="true" tabindex="-1"></a>decision_tree</span>
-<span id="cb42-229"><a href="#cb42-229" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(decision_tree)</span>
-<span id="cb42-230"><a href="#cb42-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-231"><a href="#cb42-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-232"><a href="#cb42-232" aria-hidden="true" tabindex="-1"></a>Finally, we can test the model on the out-of-sample test dataset and see how it performs.</span>
-<span id="cb42-233"><a href="#cb42-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-234"><a href="#cb42-234" aria-hidden="true" tabindex="-1"></a>Overall it achieved an accuracy of 85%, with 78% sensitivity and 89% specificity. This model has similar specificity as the heuristic model, but better sensitivity, and therefore better overall accuracy.</span>
-<span id="cb42-235"><a href="#cb42-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-238"><a href="#cb42-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-239"><a href="#cb42-239" aria-hidden="true" tabindex="-1"></a>test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(decision_tree, test, <span class="at">type=</span><span class="st">'class'</span>)</span>
-<span id="cb42-240"><a href="#cb42-240" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(test_pred, test<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
-<span id="cb42-241"><a href="#cb42-241" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-242"><a href="#cb42-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-243"><a href="#cb42-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random forest</span></span>
-<span id="cb42-244"><a href="#cb42-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-245"><a href="#cb42-245" aria-hidden="true" tabindex="-1"></a>Next, we'll try a random forest model. Random forest models tend to perform better than decision trees, due to the fact that they are ensemble decision trees, meaning they group together the decisions of lots of decision trees. But as a result, they tend to be less interpretable. So if our goal was only to create the most accurate prediction model possible, then a random forest would be better suited to the task.</span>
-<span id="cb42-246"><a href="#cb42-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-249"><a href="#cb42-249" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-250"><a href="#cb42-250" aria-hidden="true" tabindex="-1"></a>cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(train)</span>
-<span id="cb42-251"><a href="#cb42-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-252"><a href="#cb42-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-253"><a href="#cb42-253" aria-hidden="true" tabindex="-1"></a>I'll use <span class="in">`usemodels::use_ranger`</span> to give me a starting template.</span>
-<span id="cb42-254"><a href="#cb42-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-257"><a href="#cb42-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-258"><a href="#cb42-258" aria-hidden="true" tabindex="-1"></a><span class="fu">use_ranger</span>(yesno <span class="sc">~</span> ., train)</span>
-<span id="cb42-259"><a href="#cb42-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-260"><a href="#cb42-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-261"><a href="#cb42-261" aria-hidden="true" tabindex="-1"></a>I'll remove the parameter tuning to keep things simple.</span>
-<span id="cb42-262"><a href="#cb42-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-265"><a href="#cb42-265" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-266"><a href="#cb42-266" aria-hidden="true" tabindex="-1"></a>ranger_recipe <span class="ot">&lt;-</span> </span>
-<span id="cb42-267"><a href="#cb42-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(<span class="at">formula =</span> yesno <span class="sc">~</span> ., <span class="at">data =</span> df)</span>
-<span id="cb42-268"><a href="#cb42-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-269"><a href="#cb42-269" aria-hidden="true" tabindex="-1"></a>ranger_spec <span class="ot">&lt;-</span> </span>
-<span id="cb42-270"><a href="#cb42-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-271"><a href="#cb42-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-272"><a href="#cb42-272" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) </span>
-<span id="cb42-273"><a href="#cb42-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-274"><a href="#cb42-274" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="ot">&lt;-</span> </span>
-<span id="cb42-275"><a href="#cb42-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb42-276"><a href="#cb42-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(ranger_recipe) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-277"><a href="#cb42-277" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(ranger_spec) </span>
-<span id="cb42-278"><a href="#cb42-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-279"><a href="#cb42-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-280"><a href="#cb42-280" aria-hidden="true" tabindex="-1"></a>Next, I'll fit the model using a resampling approach.</span>
-<span id="cb42-281"><a href="#cb42-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-282"><a href="#cb42-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE, results='hide'}</span></span>
-<span id="cb42-283"><a href="#cb42-283" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
-<span id="cb42-284"><a href="#cb42-284" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession)</span>
-<span id="cb42-285"><a href="#cb42-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-286"><a href="#cb42-286" aria-hidden="true" tabindex="-1"></a>fit_rf <span class="ot">&lt;-</span> <span class="fu">fit_resamples</span>(</span>
-<span id="cb42-287"><a href="#cb42-287" aria-hidden="true" tabindex="-1"></a>  ranger_workflow,</span>
-<span id="cb42-288"><a href="#cb42-288" aria-hidden="true" tabindex="-1"></a>  cv,</span>
-<span id="cb42-289"><a href="#cb42-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">metrics =</span> <span class="fu">metric_set</span>(accuracy, sens, spec),</span>
-<span id="cb42-290"><a href="#cb42-290" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">verbose =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb42-291"><a href="#cb42-291" aria-hidden="true" tabindex="-1"></a>                              <span class="at">save_pred =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb42-292"><a href="#cb42-292" aria-hidden="true" tabindex="-1"></a>                              <span class="at">extract =</span> <span class="cf">function</span>(x) x)</span>
-<span id="cb42-293"><a href="#cb42-293" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb42-294"><a href="#cb42-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-295"><a href="#cb42-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-296"><a href="#cb42-296" aria-hidden="true" tabindex="-1"></a>Overall, accuracy is pretty good: 89% accuracy, 79% sensitivity, and 95% specificity.</span>
-<span id="cb42-297"><a href="#cb42-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-300"><a href="#cb42-300" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-301"><a href="#cb42-301" aria-hidden="true" tabindex="-1"></a>fit_rf <span class="sc">%&gt;%</span></span>
-<span id="cb42-302"><a href="#cb42-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>()</span>
-<span id="cb42-303"><a href="#cb42-303" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-304"><a href="#cb42-304" aria-hidden="true" tabindex="-1"></a>Next, we can check the performance on the test set.</span>
-<span id="cb42-305"><a href="#cb42-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-306"><a href="#cb42-306" aria-hidden="true" tabindex="-1"></a>We can use <span class="in">`collect_metrics()`</span> function on the last fit.</span>
-<span id="cb42-307"><a href="#cb42-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-310"><a href="#cb42-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-311"><a href="#cb42-311" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="sc">%&gt;%</span></span>
-<span id="cb42-312"><a href="#cb42-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">last_fit</span>(split) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-313"><a href="#cb42-313" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>()</span>
-<span id="cb42-314"><a href="#cb42-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb42-315"><a href="#cb42-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-316"><a href="#cb42-316" aria-hidden="true" tabindex="-1"></a>Or we can use <span class="in">`confusionMatrix()`</span> to get a bit more information.</span>
-<span id="cb42-317"><a href="#cb42-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-318"><a href="#cb42-318" aria-hidden="true" tabindex="-1"></a>Performance on the test set is similar to the training performance. Overall, accuracy is pretty good -- and better than the decision tree. For a spam detection filter, we'd want to bias towards minimizing false positives (it would arguably be worse for people to lose legitimate mail to the filter, than to have spam mail slip through), and here we see that the specificity was quite good at ~95%.</span>
-<span id="cb42-319"><a href="#cb42-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-322"><a href="#cb42-322" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb42-323"><a href="#cb42-323" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="sc">%&gt;%</span></span>
-<span id="cb42-324"><a href="#cb42-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">last_fit</span>(split) <span class="sc">%&gt;%</span> </span>
-<span id="cb42-325"><a href="#cb42-325" aria-hidden="true" tabindex="-1"></a>  <span class="fu">extract_workflow</span>() <span class="ot">-&gt;</span> final_model</span>
-<span id="cb42-326"><a href="#cb42-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-327"><a href="#cb42-327" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">predict</span>(final_model, test)<span class="sc">$</span>.pred_class, test<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>, <span class="at">positive=</span><span class="st">'TRUE'</span>)</span>
-<span id="cb42-328"><a href="#cb42-328" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-202"><a href="#cb42-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## Decision Tree</span></span>
+<span id="cb42-203"><a href="#cb42-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-204"><a href="#cb42-204" aria-hidden="true" tabindex="-1"></a>Proceeding from simpler to more complex, we can go a step further and try fitting a decision tree model. The decision tree will help us to identify a more sophisticated rule set for classifying spam mail. Decision trees also have the advantage of being highly interpretable.</span>
+<span id="cb42-205"><a href="#cb42-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-206"><a href="#cb42-206" aria-hidden="true" tabindex="-1"></a>We'll start by splitting our data into training and test -- that way, we won't be testing performance on the same data that our model was trained on, and we can minimize the risk of overfitting.</span>
+<span id="cb42-207"><a href="#cb42-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-210"><a href="#cb42-210" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-211"><a href="#cb42-211" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">200</span>)</span>
+<span id="cb42-212"><a href="#cb42-212" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(df)</span>
+<span id="cb42-213"><a href="#cb42-213" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">training</span>(split)</span>
+<span id="cb42-214"><a href="#cb42-214" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">testing</span>(split)</span>
+<span id="cb42-215"><a href="#cb42-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-216"><a href="#cb42-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-217"><a href="#cb42-217" aria-hidden="true" tabindex="-1"></a>Next, we'll fit the model and then visualize its logic.</span>
+<span id="cb42-218"><a href="#cb42-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-219"><a href="#cb42-219" aria-hidden="true" tabindex="-1"></a>We can read this chart by starting at the root node and following the branches until we reach a terminal node. The predicted value at this terminal node will give us the prediction that the model has made, and the path that we followed to get there provides its reasoning for the prediction.</span>
+<span id="cb42-220"><a href="#cb42-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-221"><a href="#cb42-221" aria-hidden="true" tabindex="-1"></a>So for example, if we follow the tree to the left-most terminal node, we can see that it would predict that an email was spam if it contained <span class="in">`dollar &gt;= 0.056`</span>. If we follow the tree to the right-most terminal, we can see that it would predict that an email was not spam if it contained <span class="in">`dollar &lt; 0.056`</span> and <span class="in">`bang &gt;= 0.12`</span>. The percentage value in the node tells us what percentage of emails met these criteria. So 24% of emails met the former criteria, and 54% the latter.</span>
+<span id="cb42-222"><a href="#cb42-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-225"><a href="#cb42-225" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-226"><a href="#cb42-226" aria-hidden="true" tabindex="-1"></a>decision_tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(yesno <span class="sc">~</span> ., <span class="at">data=</span>train, <span class="at">method=</span><span class="st">'class'</span>)</span>
+<span id="cb42-227"><a href="#cb42-227" aria-hidden="true" tabindex="-1"></a>decision_tree</span>
+<span id="cb42-228"><a href="#cb42-228" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(decision_tree)</span>
+<span id="cb42-229"><a href="#cb42-229" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-230"><a href="#cb42-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-231"><a href="#cb42-231" aria-hidden="true" tabindex="-1"></a>Finally, we can test the model on the out-of-sample test dataset and see how it performs.</span>
+<span id="cb42-232"><a href="#cb42-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-233"><a href="#cb42-233" aria-hidden="true" tabindex="-1"></a>Overall it achieved an accuracy of 85%, with 78% sensitivity and 89% specificity. This model has similar specificity as the heuristic model, but better sensitivity, and therefore better overall accuracy.</span>
+<span id="cb42-234"><a href="#cb42-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-237"><a href="#cb42-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-238"><a href="#cb42-238" aria-hidden="true" tabindex="-1"></a>test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(decision_tree, test, <span class="at">type=</span><span class="st">'class'</span>)</span>
+<span id="cb42-239"><a href="#cb42-239" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(test_pred, test<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>)</span>
+<span id="cb42-240"><a href="#cb42-240" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-241"><a href="#cb42-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-242"><a href="#cb42-242" aria-hidden="true" tabindex="-1"></a><span class="fu">## Random forest</span></span>
+<span id="cb42-243"><a href="#cb42-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-244"><a href="#cb42-244" aria-hidden="true" tabindex="-1"></a>Next, we'll try a random forest model. Random forest models tend to perform better than decision trees, due to the fact that they are ensemble decision trees, meaning they group together the decisions of lots of decision trees. But as a result, they tend to be less interpretable. So if our goal was only to create the most accurate prediction model possible, then a random forest would be better suited to the task.</span>
+<span id="cb42-245"><a href="#cb42-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-248"><a href="#cb42-248" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-249"><a href="#cb42-249" aria-hidden="true" tabindex="-1"></a>cv <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(train)</span>
+<span id="cb42-250"><a href="#cb42-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-251"><a href="#cb42-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-252"><a href="#cb42-252" aria-hidden="true" tabindex="-1"></a>I'll use <span class="in">`usemodels::use_ranger`</span> to give me a starting template.</span>
+<span id="cb42-253"><a href="#cb42-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-256"><a href="#cb42-256" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-257"><a href="#cb42-257" aria-hidden="true" tabindex="-1"></a><span class="fu">use_ranger</span>(yesno <span class="sc">~</span> ., train)</span>
+<span id="cb42-258"><a href="#cb42-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-259"><a href="#cb42-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-260"><a href="#cb42-260" aria-hidden="true" tabindex="-1"></a>I'll remove the parameter tuning to keep things simple.</span>
+<span id="cb42-261"><a href="#cb42-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-264"><a href="#cb42-264" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-265"><a href="#cb42-265" aria-hidden="true" tabindex="-1"></a>ranger_recipe <span class="ot">&lt;-</span> </span>
+<span id="cb42-266"><a href="#cb42-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(<span class="at">formula =</span> yesno <span class="sc">~</span> ., <span class="at">data =</span> df)</span>
+<span id="cb42-267"><a href="#cb42-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-268"><a href="#cb42-268" aria-hidden="true" tabindex="-1"></a>ranger_spec <span class="ot">&lt;-</span> </span>
+<span id="cb42-269"><a href="#cb42-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rand_forest</span>(<span class="at">trees =</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-270"><a href="#cb42-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-271"><a href="#cb42-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) </span>
+<span id="cb42-272"><a href="#cb42-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-273"><a href="#cb42-273" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="ot">&lt;-</span> </span>
+<span id="cb42-274"><a href="#cb42-274" aria-hidden="true" tabindex="-1"></a>  <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb42-275"><a href="#cb42-275" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_recipe</span>(ranger_recipe) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-276"><a href="#cb42-276" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_model</span>(ranger_spec) </span>
+<span id="cb42-277"><a href="#cb42-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-278"><a href="#cb42-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-279"><a href="#cb42-279" aria-hidden="true" tabindex="-1"></a>Next, I'll fit the model using a resampling approach.</span>
+<span id="cb42-280"><a href="#cb42-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-281"><a href="#cb42-281" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=FALSE, results='hide'}</span></span>
+<span id="cb42-282"><a href="#cb42-282" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
+<span id="cb42-283"><a href="#cb42-283" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession)</span>
+<span id="cb42-284"><a href="#cb42-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-285"><a href="#cb42-285" aria-hidden="true" tabindex="-1"></a>fit_rf <span class="ot">&lt;-</span> <span class="fu">fit_resamples</span>(</span>
+<span id="cb42-286"><a href="#cb42-286" aria-hidden="true" tabindex="-1"></a>  ranger_workflow,</span>
+<span id="cb42-287"><a href="#cb42-287" aria-hidden="true" tabindex="-1"></a>  cv,</span>
+<span id="cb42-288"><a href="#cb42-288" aria-hidden="true" tabindex="-1"></a>  <span class="at">metrics =</span> <span class="fu">metric_set</span>(accuracy, sens, spec),</span>
+<span id="cb42-289"><a href="#cb42-289" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">control_resamples</span>(<span class="at">verbose =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb42-290"><a href="#cb42-290" aria-hidden="true" tabindex="-1"></a>                              <span class="at">save_pred =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb42-291"><a href="#cb42-291" aria-hidden="true" tabindex="-1"></a>                              <span class="at">extract =</span> <span class="cf">function</span>(x) x)</span>
+<span id="cb42-292"><a href="#cb42-292" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-293"><a href="#cb42-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-294"><a href="#cb42-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-295"><a href="#cb42-295" aria-hidden="true" tabindex="-1"></a>Overall, accuracy is pretty good: 89% accuracy, 79% sensitivity, and 95% specificity.</span>
+<span id="cb42-296"><a href="#cb42-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-299"><a href="#cb42-299" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-300"><a href="#cb42-300" aria-hidden="true" tabindex="-1"></a>fit_rf <span class="sc">%&gt;%</span></span>
+<span id="cb42-301"><a href="#cb42-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>()</span>
+<span id="cb42-302"><a href="#cb42-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-303"><a href="#cb42-303" aria-hidden="true" tabindex="-1"></a>Next, we can check the performance on the test set.</span>
+<span id="cb42-304"><a href="#cb42-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-305"><a href="#cb42-305" aria-hidden="true" tabindex="-1"></a>We can use <span class="in">`collect_metrics()`</span> function on the last fit.</span>
+<span id="cb42-306"><a href="#cb42-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-309"><a href="#cb42-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-310"><a href="#cb42-310" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb42-311"><a href="#cb42-311" aria-hidden="true" tabindex="-1"></a>  <span class="fu">last_fit</span>(split) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-312"><a href="#cb42-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect_metrics</span>()</span>
+<span id="cb42-313"><a href="#cb42-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb42-314"><a href="#cb42-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-315"><a href="#cb42-315" aria-hidden="true" tabindex="-1"></a>Or we can use <span class="in">`confusionMatrix()`</span> to get a bit more information.</span>
+<span id="cb42-316"><a href="#cb42-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-317"><a href="#cb42-317" aria-hidden="true" tabindex="-1"></a>Performance on the test set is similar to the training performance. Overall, accuracy is pretty good -- and better than the decision tree. For a spam detection filter, we'd want to bias towards minimizing false positives (it would arguably be worse for people to lose legitimate mail to the filter, than to have spam mail slip through), and here we see that the specificity was quite good at ~95%.</span>
+<span id="cb42-318"><a href="#cb42-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-321"><a href="#cb42-321" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb42-322"><a href="#cb42-322" aria-hidden="true" tabindex="-1"></a>ranger_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb42-323"><a href="#cb42-323" aria-hidden="true" tabindex="-1"></a>  <span class="fu">last_fit</span>(split) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-324"><a href="#cb42-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">extract_workflow</span>() <span class="ot">-&gt;</span> final_model</span>
+<span id="cb42-325"><a href="#cb42-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-326"><a href="#cb42-326" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(<span class="fu">predict</span>(final_model, test)<span class="sc">$</span>.pred_class, test<span class="sc">$</span>yesno, <span class="at">mode=</span><span class="st">'everything'</span>, <span class="at">positive=</span><span class="st">'TRUE'</span>)</span>
+<span id="cb42-327"><a href="#cb42-327" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

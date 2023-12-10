@@ -56,6 +56,10 @@ website:
         aria-label: mastodon
         href: https://fosstodon.org/users/tylerburleigh
         rel: me
+      - icon: square
+        aria-label: bluesky
+        href: https://bsky.app/profile/tylerburleigh.bsky.social
+        rel: me
       - icon: github
         aria-label: github
         href: https://github.com/tylerburleigh
@@ -63,6 +67,10 @@ website:
       - icon: linkedin
         aria-label: linkedin
         href: https://www.linkedin.com/in/tylerburleigh
+        rel: me
+      - icon: envelope
+        aria-label: email
+        href: mailto:tylerburleigh@gmail.com
         rel: me
   
   page-footer:

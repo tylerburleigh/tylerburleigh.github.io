@@ -4,6 +4,13 @@ pagetitle: "{{< meta website.title >}}"
 main-photo: /files/profiles/tyler-burleigh-2023.jpg
 main-photo-square: /files/profiles/tyler-burleigh-2023-square.jpg
 title-block-banner: "#FF9500"
+listing:
+  - id: posts_2023
+    contents: "2023/**/index.qmd"
+    sort: "date desc"
+    #template: ../html/blog/listing.ejs
+    categories: false
+    max-items: 3
 format:
   html:
     quarto-template-params:
@@ -32,10 +39,20 @@ format:
 
 ::: {.g-col-12 .g-col-sm-8}
 
-I'm a data scientist with a unique background in human psychology. I have extensive experience working with product teams to make better decisions through metrics, experiments, and quantitative user insights. I am proficient with statistical / ML modeling, causal inference, data visualization, and designing ETL pipelines. I like to work at organizations that are mission-driven and aim to make the world a better place.
+Welcome to my personal website and blog. In my blog I like to explore different data science techniques and problems. For example, in a recent post I experimented with [self-consistency prompting](/blog/2023/12/04/). Have a look around, and feel free to drop me a line on Mastodon, Bluesky, or email!
+
+## About me
+As a data scientist with a unique background in human psychology, I specialize in enhancing product development through data-driven insights. My expertise includes statistical/ML modeling, causal inference, data visualization, and ETL pipeline design. I'm proficient in Python, R, and SQL, and passionate about working with emerging technologies and applying my skills to drive positive societal impact.
 
 I currently work at [Prodigy Education](https://www.prodigygame.com/main-en/) where I use data science to make learning more fun for kids.
 
 :::
 
+:::
+
+<br><br><br><br>
+
+## My latest blog posts
+
+:::{#posts_2023}
 :::
