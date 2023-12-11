@@ -819,7 +819,7 @@ font-style: inherit;">3</span>])</span></code></pre></div>
 <pre><code>2. Determine the number of fish that can be kept in each tank based on the rule of one gallon of water per inch of fish.</code></pre>
 </div>
 </div>
-<p>Providing steps one-at-a-time could be implemented as part of a “progressive” hint system. In an educational math game, for example, the student could receive full points for giving a correct answer with zero assistance, and the number of points earned for a could be reduced every time they request assistance.</p>
+<p>Providing steps one-at-a-time could be implemented as part of a “progressive” hint system. In an educational math game, for example, the student could receive full points for giving a correct answer with zero assistance, and the number of points earned could be reduced every time they ask for a step hint.</p>
 <p>In this implementation I’ve deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This could help the student figure out at which step they’re making a mistake.</p>
 
 
