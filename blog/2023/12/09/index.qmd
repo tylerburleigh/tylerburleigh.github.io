@@ -132,8 +132,7 @@ Stepwise solver: {round(np.mean(df_stepwise['is_correct'])*100)}% correct
 
 
 ```{r, filename="R"}
-library(tidyverse)
-tibble(`Baseline Solver` = 39, `Stepwise Solver` = 77)%>% 
+tibble(`Baseline Solver` = 39, `Stepwise Solver` = 77) %>% 
   pivot_longer(everything()) %>%
   ggplot(aes(x = name, y = value, fill = name)) + 
     geom_col(width = 0.5) + 
@@ -164,7 +163,7 @@ Having generated and validated the step-by-step guidance, we can now begin to im
 print(steps)
 ```
 
-Or the AI Tutor could provide the steps one at a time, each time the student asks for help.
+Or the AI Tutor could provide the steps one at a time -- i.e., one step is given each time the student asks for help.
 
 ```{python, filename="python"}
 # Print step 1
@@ -176,9 +175,7 @@ print(steps.split('\n')[2])
 print(steps.split('\n')[3])
 ```
 
-Providing steps one-at-a-time could be implemented as part of a "progressive" hint system. In context of an educational math game, for example, the student could receive full points for a correct answer with zero assistance, and points could be subtracted for each time they request assistance.
+Providing steps one-at-a-time could be implemented as part of a "progressive" hint system. In an educational math game, for example, the student could receive full points for giving a correct answer with zero assistance, and the number of points earned could be reduced every time they ask for a step hint.
 
-In this implementation I've deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This would help the student figure out at which step they're making a mistake.
-
-
+In this implementation I've deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This could help the student figure out at which step they're making a mistake.
 
