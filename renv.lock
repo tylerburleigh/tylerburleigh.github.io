@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/latest"
+        "URL": "https://cloud.r-project.org"
       }
     ]
   },
@@ -27,6 +27,35 @@
       ],
       "Hash": "b2866e62bab9378c3cc9476a1954226b"
     },
+    "DescTools": {
+      "Package": "DescTools",
+      "Version": "0.99.52",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Exact",
+        "MASS",
+        "R",
+        "Rcpp",
+        "base",
+        "boot",
+        "cli",
+        "data.table",
+        "expm",
+        "gld",
+        "grDevices",
+        "graphics",
+        "httr",
+        "methods",
+        "mvtnorm",
+        "readxl",
+        "rstudioapi",
+        "stats",
+        "utils",
+        "withr"
+      ],
+      "Hash": "0d471f7afc7dc800ffe2db5c4f617e4a"
+    },
     "DiceDesign": {
       "Package": "DiceDesign",
       "Version": "1.9",
@@ -36,6 +65,20 @@
         "R"
       ],
       "Hash": "b7b812ae4484d4bbf0a0baac72e8fc01"
+    },
+    "Exact": {
+      "Package": "Exact",
+      "Version": "3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "graphics",
+        "rootSolve",
+        "stats",
+        "utils"
+      ],
+      "Hash": "1a43175d291899a4b2965b5d8db260e0"
     },
     "FNN": {
       "Package": "FNN",
@@ -130,13 +173,6 @@
       ],
       "Hash": "470851b6d5d0ac559e9d01bb352b4021"
     },
-    "RANN": {
-      "Package": "RANN",
-      "Version": "2.6.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "d128ea05a972d3e67c6f39de52c72bd7"
-    },
     "RColorBrewer": {
       "Package": "RColorBrewer",
       "Version": "1.1-3",
@@ -158,13 +194,6 @@
         "methods"
       ],
       "Hash": "1d6ed2d006d483f31c6d5531f3a39923"
-    },
-    "ROSE": {
-      "Package": "ROSE",
-      "Version": "0.0-4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "c6e79999925f0db3f2d88b187d014bf8"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -254,6 +283,16 @@
       ],
       "Hash": "e8a22846fff485f0be3770c2da758713"
     },
+    "assertthat": {
+      "Package": "assertthat",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "tools"
+      ],
+      "Hash": "50c838a310445e954bc13f26f26a6ecf"
+    },
     "backports": {
       "Package": "backports",
       "Version": "1.4.1",
@@ -326,6 +365,18 @@
         "vctrs"
       ],
       "Hash": "40415719b5a479b87949f3aa0aee737c"
+    },
+    "boot": {
+      "Package": "boot",
+      "Version": "1.3-28.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "9a052fbcbe97a98ceb18dbfd30ebd96e"
     },
     "broom": {
       "Package": "broom",
@@ -818,6 +869,17 @@
       ],
       "Hash": "d59f3b464e8da1aef82dc04b588b8dfb"
     },
+    "expm": {
+      "Package": "expm",
+      "Version": "0.999-8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "methods"
+      ],
+      "Hash": "153a99cdbe741f4c84416e35018977e8"
+    },
     "fansi": {
       "Package": "fansi",
       "Version": "1.0.4",
@@ -856,6 +918,16 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "f7736a18de97dea803bde0a2daaafb27"
+    },
+    "filelock": {
+      "Package": "filelock",
+      "Version": "1.0.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "192053c276525c8495ccfd523aa8f2d1"
     },
     "fontawesome": {
       "Package": "fontawesome",
@@ -1119,6 +1191,19 @@
         "tibble"
       ],
       "Hash": "617fb2c300f68e8b1ba21043fba88fd7"
+    },
+    "gld": {
+      "Package": "gld",
+      "Version": "2.6.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "e1071",
+        "graphics",
+        "lmom",
+        "stats"
+      ],
+      "Hash": "71173258033324618dc8a09b3e27269e"
     },
     "globals": {
       "Package": "globals",
@@ -1557,6 +1642,26 @@
       ],
       "Hash": "311b595378023f7db42eebb614cd7e75"
     },
+    "keyring": {
+      "Package": "keyring",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R6",
+        "askpass",
+        "assertthat",
+        "filelock",
+        "openssl",
+        "rappdirs",
+        "sodium",
+        "tools",
+        "utils",
+        "yaml"
+      ],
+      "Hash": "5cd8cfb2e90c57110b7dd1785c599aba"
+    },
     "knitr": {
       "Package": "knitr",
       "Version": "1.43",
@@ -1689,6 +1794,18 @@
         "R"
       ],
       "Hash": "4fbd3679ec8ee169ba28d4b1ea7d0e8f"
+    },
+    "lmom": {
+      "Package": "lmom",
+      "Version": "3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "a69348cee0766082223f1c7e2a545505"
     },
     "lubridate": {
       "Package": "lubridate",
@@ -1835,6 +1952,17 @@
       ],
       "Hash": "6dfe8bf774944bd5595785e3229d8771"
     },
+    "mvtnorm": {
+      "Package": "mvtnorm",
+      "Version": "1.2-4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "stats"
+      ],
+      "Hash": "17e96668f44a28aef0981d9e17c49b59"
+    },
     "nlme": {
       "Package": "nlme",
       "Version": "3.1-162",
@@ -1870,6 +1998,17 @@
         "R"
       ],
       "Hash": "df58958f293b166e4ab885ebcad90e02"
+    },
+    "numform": {
+      "Package": "numform",
+      "Version": "0.7.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "glue"
+      ],
+      "Hash": "80b007ed089c8d062c86b59d6c0107b3"
     },
     "openssl": {
       "Package": "openssl",
@@ -2323,13 +2462,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "4b22ac016fe54028b88d0c68badbd061"
+      "Hash": "41b847654f567341725473431dd0d5ab"
     },
     "reprex": {
       "Package": "reprex",
@@ -2422,6 +2561,19 @@
         "yaml"
       ],
       "Hash": "3854c37590717c08c32ec8542a2e0a35"
+    },
+    "rootSolve": {
+      "Package": "rootSolve",
+      "Version": "1.8.2.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "c6fa270a97604238a5ce5fe5d327fdad"
     },
     "rpart": {
       "Package": "rpart",
@@ -2625,6 +2777,25 @@
       ],
       "Hash": "c1c73df260af9e1e3692eb3b8e1ecb88"
     },
+    "snakecase": {
+      "Package": "snakecase",
+      "Version": "0.11.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "stringi",
+        "stringr"
+      ],
+      "Hash": "58767e44739b76965332e8a4fe3f91f1"
+    },
+    "sodium": {
+      "Package": "sodium",
+      "Version": "1.3.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "dd86d6fd2a01d4eb3777dfdee7076d56"
+    },
     "sp": {
       "Package": "sp",
       "Version": "2.0-0",
@@ -2780,30 +2951,6 @@
         "yaml"
       ],
       "Hash": "8bcc55965444ca8a44bdb8ba7505be51"
-    },
-    "themis": {
-      "Package": "themis",
-      "Version": "1.0.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "RANN",
-        "ROSE",
-        "dplyr",
-        "generics",
-        "glue",
-        "gower",
-        "hardhat",
-        "lifecycle",
-        "purrr",
-        "recipes",
-        "rlang",
-        "tibble",
-        "vctrs",
-        "withr"
-      ],
-      "Hash": "6e883e67bbc765e2dcdb9988f91f57ff"
     },
     "tibble": {
       "Package": "tibble",
@@ -3227,6 +3374,20 @@
         "tools"
       ],
       "Hash": "be07d23211245fc7d4209f54c4e4ffc8"
+    },
+    "xgboost": {
+      "Package": "xgboost",
+      "Version": "1.7.6.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "data.table",
+        "jsonlite",
+        "methods"
+      ],
+      "Hash": "ac985d74c033923a3e56c6deb500fca3"
     },
     "xml2": {
       "Package": "xml2",
