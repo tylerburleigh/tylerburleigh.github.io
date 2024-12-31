@@ -9,6 +9,7 @@ open-graph:
   image: "social-image.png"
 categories:
   - python
+freeze: true
 ---
 
 
