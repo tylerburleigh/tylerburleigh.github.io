@@ -1,6 +1,6 @@
 ---
 title: "Hello there!"
-pagetitle: "{{< meta website.title >}}"
+pagetitle: "Home | Tyler Burleigh"
 main-photo: /files/profiles/tyler-burleigh-2023.jpg
 main-photo-square: /files/profiles/tyler-burleigh-2023-square.jpg
 title-block-banner: "#FF9500"
@@ -39,12 +39,7 @@ format:
 
 ::: {.g-col-12 .g-col-sm-8}
 
-Welcome to my personal website and blog. In my blog I like to explore different data science techniques and problems. For example, in a recent post I experimented with [self-consistency prompting](/blog/2023/12/04/). Have a look around, and feel free to drop me a line on Mastodon, Bluesky, or email!
-
-## About me
-As a data scientist with a unique background in human psychology, I specialize in enhancing product development through data-driven insights. My expertise includes statistical/ML modeling, causal inference, data visualization, and ETL pipeline design. I'm proficient in Python, R, and SQL, and passionate about working with emerging technologies and applying my skills to drive positive societal impact.
-
-I currently work at [Prodigy Education](https://www.prodigygame.com/main-en/) where I use data science to make learning more fun for kids.
+Hi! I'm an AI engineer with a unique background in human psychology and data science. I currently work at [Khan Academy](https://www.khanacademy.org) where I develop AI systems and user experiences using Large Language Models with a focus on rigorous evaluation.
 
 :::
 
