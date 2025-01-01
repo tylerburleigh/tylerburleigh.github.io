@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.528">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Burleigh">
 <meta name="description" content="I was interested in trying tensorflow + EfficientNet on another image classification task. This time, I used it to predict pneumonia on chest x-ray images. Using this model, I achieved 97% out of sample accuracy.">
 
-<title>Identifying pneumonia from chest x-rays using EfficientNet | Tyler Burleigh</title>
+<title>Identifying pneumonia from chest x-rays using EfficientNet | Tyler Burleigh – Tyler Burleigh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9f5ddf0f04a2e96700b10066b57d40ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +135,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -147,7 +147,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -197,7 +197,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -262,10 +262,10 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -275,7 +275,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p>The code below implements this model. See also <a href="https://www.kaggle.com/bluewizard/predict-pneumonia-keras-efficientnet-98-acc">my notebook on Kaggle</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get data from Kaggle</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!kaggle datasets download paultimothymooney/chest-xray-pneumonia</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="addressing-some-issues-with-the-original-dataset" class="level1">
+<section id="addressing-some-issues-with-the-original-dataset" class="level1 page-columns page-full">
 <h1>Addressing some issues with the original dataset</h1>
 <p>We’ll start by addressing two major issues with the dataset.</p>
 <p>I discovered these issues after exploring the data and after my first attempt at validating a trained model:</p>
@@ -345,33 +345,33 @@ images\PNEUMONIA has 4273 files</code></pre>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        plt.imshow(mpimg.imread(os.path.join(dirname, <span class="bu">file</span>)), cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        plt.title(dirname.split(<span class="st">'</span><span class="ch">\\</span><span class="st">'</span>)[<span class="dv">1</span>])</span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_9_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_9_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_9_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_9_3.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <p>To the eye of a layman like myself, it’s hard to tell what distinguishes the classes. Maybe the chest area of the pneumonia images are “cloudier”?</p>
 </section>
-<section id="model" class="level1">
+<section id="model" class="level1 page-columns page-full">
 <h1>Model</h1>
 <p>We’ll train a model using EfficientNet as a base.</p>
 <p>When setting up the <code>flow_from_directory</code> we’ll define a <code>validation_split</code>.</p>
@@ -476,7 +476,7 @@ Epoch 9/10
 235/234 [==============================] - 142s 603ms/step - loss: 0.0833 - accuracy: 0.9731 - recall: 0.9668 - precision: 0.9651 - val_loss: 0.2688 - val_accuracy: 0.9466 - val_recall: 0.9679 - val_precision: 0.9654
 Epoch 10/10
 235/234 [==============================] - 142s 603ms/step - loss: 0.0750 - accuracy: 0.9747 - recall: 0.9689 - precision: 0.9657 - val_loss: 0.1207 - val_accuracy: 0.9615 - val_recall: 0.9697 - val_precision: 0.9663</code></pre>
-<section id="training-performance" class="level2">
+<section id="training-performance" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="training-performance">Training performance</h2>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot training and validation accuracy by epoch</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>acc <span class="op">=</span> model_history.history[<span class="st">'accuracy'</span>]</span>
@@ -490,16 +490,16 @@ Epoch 10/10
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.figure()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_16_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;</code></pre>
 </section>
 </section>
-<section id="model-evaluation" class="level1">
+<section id="model-evaluation" class="level1 page-columns page-full">
 <h1>Model evaluation</h1>
 <p>Now we’ll evaluate the model using the test set.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>test_datagen <span class="op">=</span> ImageDataGenerator(rescale<span class="op">=</span><span class="fl">1.</span><span class="op">/</span><span class="dv">255</span>,</span>
@@ -518,17 +518,17 @@ Epoch 10/10
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> model.predict_generator(generator<span class="op">=</span>test_generator) <span class="co"># get proba predictions</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> <span class="dv">1</span><span class="op">*</span>(preds <span class="op">&gt;</span> <span class="fl">0.5</span>) <span class="co"># convert proba to classes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>Found 1172 images belonging to 2 classes.</code></pre>
-<section id="confusion-matrix" class="level2">
+<section id="confusion-matrix" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="confusion-matrix">Confusion matrix</h2>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mlxtend.plotting <span class="im">import</span> plot_confusion_matrix</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>CM <span class="op">=</span> confusion_matrix(test_generator.classes, labels)</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plot_confusion_matrix(conf_mat<span class="op">=</span>CM ,  figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_21_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 </section>
@@ -587,18 +587,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -630,7 +619,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -682,6 +691,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -716,7 +743,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -764,7 +795,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1337,7 +1372,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb19-346"><a href="#cb19-346" aria-hidden="true" tabindex="-1"></a><span class="in">       macro avg       0.96      0.95      0.96      1172</span></span>
 <span id="cb19-347"><a href="#cb19-347" aria-hidden="true" tabindex="-1"></a><span class="in">    weighted avg       0.97      0.97      0.97      1172</span></span>
 <span id="cb19-348"><a href="#cb19-348" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span>
-<span id="cb19-349"><a href="#cb19-349" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-349"><a href="#cb19-349" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

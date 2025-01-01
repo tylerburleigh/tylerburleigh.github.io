@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.528">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Burleigh">
 <meta name="description" content="Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for “growth” over time in coronavirus cases, using data current as of March 20, 2020.">
 
-<title>COVID-19 case growth and the Big 5 Personality traits | Tyler Burleigh</title>
+<title>COVID-19 case growth and the Big 5 Personality traits | Tyler Burleigh – Tyler Burleigh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9f5ddf0f04a2e96700b10066b57d40ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +135,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -147,7 +147,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -197,7 +197,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -268,10 +268,10 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -1266,7 +1266,7 @@ FR
 </table>
 </div>
 </section>
-<section id="big-five-personality-data" class="level1">
+<section id="big-five-personality-data" class="level1 page-columns page-full">
 <h1>Big Five Personality Data</h1>
 <p>Next, we’ll fetch the <a href="https://www.kaggle.com/tunguz/big-five-personality-test">Big Five Personality Test data from Kaggle</a>. This dataset contains ~1M answers collected online by <a href="https://openpsychometrics.org/tests/IPIP-BFFM">Open Psychometrics</a>. I’m interested in this dataset because it also labels the country in which the respondant is located. We can use this dataset to get country-level aggregate data on personality traits, and then see if those traits map onto the COVID-19 outcomes that we’re seeing.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download data from Kaggle</span></span>
@@ -1301,7 +1301,7 @@ FR
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'OPN2'</span>, <span class="st">'OPN4'</span>, <span class="st">'OPN6'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>big5.loc[:, negatively_keyed] <span class="op">=</span> <span class="dv">6</span> <span class="op">-</span> big5.loc[:, negatively_keyed]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="country-level-big-5-aggregates" class="level2">
+<section id="country-level-big-5-aggregates" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="country-level-big-5-aggregates">Country-Level Big 5 Aggregates</h2>
 <p>First, we should eliminate any country that doesn’t have very many observations. Somewhat arbitrarily, we’ll draw a line at N = 1000.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>big5_country_count <span class="op">=</span> big5.country<span class="op">\</span></span>
@@ -1340,7 +1340,7 @@ FR
 <div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>big5 <span class="op">=</span> big5.dropna()</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>big5 <span class="op">=</span> big5[big5.country <span class="op">!=</span> <span class="st">'NONE'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="country-level-averages" class="level3">
+<section id="country-level-averages" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="country-level-averages">Country-level averages</h3>
 <p>Now we can calculate the country-level averages.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>big5_cavgs <span class="op">=</span> big5.groupby(<span class="st">'country'</span>)<span class="op">\</span></span>
@@ -1357,16 +1357,16 @@ FR
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>          legend<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_35_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 </section>
 </section>
 </section>
-<section id="joining-big-5-country-data-to-covid-19-data" class="level1">
+<section id="joining-big-5-country-data-to-covid-19-data" class="level1 page-columns page-full">
 <h1>Joining Big 5 Country Data to COVID-19 Data</h1>
 <p>Next we’ll merge the COVID-19 dataset to the Big 5, country-level dataset.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>covid19_big5 <span class="op">=</span> covid19.merge(big5_cavgs, left_on<span class="op">=</span><span class="st">'country_abbr'</span>, right_on<span class="op">=</span><span class="st">'country'</span>)</span>
@@ -1624,34 +1624,34 @@ DE
 <span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"</span><span class="ch">\n</span><span class="st"> by average score on Big 5 factor "</span> <span class="op">+</span> factor_names[i] <span class="op">+</span> </span>
 <span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> text)</span>
 <span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_38_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_38_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_38_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_38_3.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_38_4.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <p>China is perhaps an atypical outlier here because it was where the outbreak started.</p>
@@ -1674,34 +1674,34 @@ DE
 <span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"</span><span class="ch">\n</span><span class="st"> by average score on Big 5 factor "</span> <span class="op">+</span> factor_names[i] <span class="op">+</span> </span>
 <span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> text)</span>
 <span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_40_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_40_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_40_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_40_3.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_40_4.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <p>As we see here, the only Big 5 factor that seems to show a pattern was Openness: Countries with higher levels of openness saw more growth over the 14-day period.</p>
@@ -1987,18 +1987,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -2030,7 +2019,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -2082,6 +2091,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -2116,7 +2143,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -2164,7 +2195,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -2458,15 +2493,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-67"><a href="#cb27-67" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-68"><a href="#cb27-68" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-73"><a href="#cb27-73" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-75"><a href="#cb27-75" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-76"><a href="#cb27-76" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-77"><a href="#cb27-77" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-78"><a href="#cb27-78" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-78"><a href="#cb27-78" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-79"><a href="#cb27-79" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-80"><a href="#cb27-80" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-81"><a href="#cb27-81" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -2571,15 +2606,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-180"><a href="#cb27-180" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-181"><a href="#cb27-181" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-182"><a href="#cb27-182" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-183"><a href="#cb27-183" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-183"><a href="#cb27-183" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-184"><a href="#cb27-184" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-185"><a href="#cb27-185" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-186"><a href="#cb27-186" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-187"><a href="#cb27-187" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-187"><a href="#cb27-187" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-188"><a href="#cb27-188" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-189"><a href="#cb27-189" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-190"><a href="#cb27-190" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-191"><a href="#cb27-191" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-191"><a href="#cb27-191" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-192"><a href="#cb27-192" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-193"><a href="#cb27-193" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-194"><a href="#cb27-194" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -2649,15 +2684,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-258"><a href="#cb27-258" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-259"><a href="#cb27-259" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-260"><a href="#cb27-260" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-261"><a href="#cb27-261" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-261"><a href="#cb27-261" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-262"><a href="#cb27-262" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-263"><a href="#cb27-263" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-264"><a href="#cb27-264" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-265"><a href="#cb27-265" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-266"><a href="#cb27-266" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-267"><a href="#cb27-267" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-268"><a href="#cb27-268" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-269"><a href="#cb27-269" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-270"><a href="#cb27-270" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-271"><a href="#cb27-271" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-272"><a href="#cb27-272" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -2729,15 +2764,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-338"><a href="#cb27-338" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-339"><a href="#cb27-339" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-340"><a href="#cb27-340" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-341"><a href="#cb27-341" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-342"><a href="#cb27-342" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-343"><a href="#cb27-343" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-344"><a href="#cb27-344" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-345"><a href="#cb27-345" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-346"><a href="#cb27-346" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-347"><a href="#cb27-347" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-348"><a href="#cb27-348" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-349"><a href="#cb27-349" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-350"><a href="#cb27-350" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-351"><a href="#cb27-351" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-352"><a href="#cb27-352" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -2924,15 +2959,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-533"><a href="#cb27-533" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-534"><a href="#cb27-534" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-535"><a href="#cb27-535" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-536"><a href="#cb27-536" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-536"><a href="#cb27-536" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-537"><a href="#cb27-537" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-538"><a href="#cb27-538" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-539"><a href="#cb27-539" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-540"><a href="#cb27-540" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-540"><a href="#cb27-540" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-541"><a href="#cb27-541" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-542"><a href="#cb27-542" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-543"><a href="#cb27-543" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-544"><a href="#cb27-544" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-544"><a href="#cb27-544" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-545"><a href="#cb27-545" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-546"><a href="#cb27-546" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-547"><a href="#cb27-547" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -2988,15 +3023,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-597"><a href="#cb27-597" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-598"><a href="#cb27-598" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-599"><a href="#cb27-599" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-600"><a href="#cb27-600" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-600"><a href="#cb27-600" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-601"><a href="#cb27-601" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-602"><a href="#cb27-602" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-603"><a href="#cb27-603" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-604"><a href="#cb27-604" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-604"><a href="#cb27-604" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-605"><a href="#cb27-605" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-606"><a href="#cb27-606" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-607"><a href="#cb27-607" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-608"><a href="#cb27-608" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-608"><a href="#cb27-608" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-609"><a href="#cb27-609" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-610"><a href="#cb27-610" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-611"><a href="#cb27-611" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -3219,15 +3254,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-828"><a href="#cb27-828" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-829"><a href="#cb27-829" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-830"><a href="#cb27-830" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-831"><a href="#cb27-831" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-831"><a href="#cb27-831" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-832"><a href="#cb27-832" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-833"><a href="#cb27-833" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-834"><a href="#cb27-834" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-835"><a href="#cb27-835" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-835"><a href="#cb27-835" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-836"><a href="#cb27-836" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-837"><a href="#cb27-837" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-838"><a href="#cb27-838" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-839"><a href="#cb27-839" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-839"><a href="#cb27-839" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-840"><a href="#cb27-840" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-841"><a href="#cb27-841" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-842"><a href="#cb27-842" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -3432,15 +3467,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-1041"><a href="#cb27-1041" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb27-1042"><a href="#cb27-1042" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb27-1043"><a href="#cb27-1043" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb27-1044"><a href="#cb27-1044" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb27-1044"><a href="#cb27-1044" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb27-1045"><a href="#cb27-1045" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-1046"><a href="#cb27-1046" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-1047"><a href="#cb27-1047" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb27-1048"><a href="#cb27-1048" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb27-1048"><a href="#cb27-1048" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb27-1049"><a href="#cb27-1049" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-1050"><a href="#cb27-1050" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-1051"><a href="#cb27-1051" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb27-1052"><a href="#cb27-1052" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb27-1052"><a href="#cb27-1052" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb27-1053"><a href="#cb27-1053" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb27-1054"><a href="#cb27-1054" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb27-1055"><a href="#cb27-1055" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -3545,7 +3580,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-1154"><a href="#cb27-1154" aria-hidden="true" tabindex="-1"></a>    &lt;/tr&gt;</span>
 <span id="cb27-1155"><a href="#cb27-1155" aria-hidden="true" tabindex="-1"></a>  &lt;/tbody&gt;</span>
 <span id="cb27-1156"><a href="#cb27-1156" aria-hidden="true" tabindex="-1"></a>&lt;/table&gt;</span>
-<span id="cb27-1157"><a href="#cb27-1157" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-1157"><a href="#cb27-1157" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

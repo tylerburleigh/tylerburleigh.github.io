@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.528">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Burleigh">
 <meta name="description" content="I use tensorflow with an EfficientNet base model (via transfer learning) to predict plant diseases for the Plant Pathology 2020 Kaggle challenge. Using this model, I achieved 94% out of sample accuracy.">
 
-<title>Using tensorflow with EfficientNet to predict plant diseases | Tyler Burleigh</title>
+<title>Using tensorflow with EfficientNet to predict plant diseases | Tyler Burleigh – Tyler Burleigh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9f5ddf0f04a2e96700b10066b57d40ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +135,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -147,7 +147,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -197,7 +197,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -256,10 +256,10 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -270,7 +270,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p><a href="https://github.com/qubvel/efficientnet">EfficientNet</a> is a CNN derived from ImageNet with similar accuracy but “an order of magnitude fewer parameters and FLOPS”. In other words, it’s a really efficient drop-in replacement for ImageNet. Once I added this as a base model, I quickly reached high validation accuracy in relatively few epochs.</p>
 <p>I’m starting to understand better the value of training these models with lots of compute power. My ultrabook’s GPU only has 4GB memory, which imposed a significant limitation on the batch size and image size that I could train the model with. In comparison to this, when I used a GPU-powered notebook on Kaggle that has 15GB of GPU memory, I was able to train on batch sizes and image sizes almost twice as large, which allowed the model to reach higher validation accuracy.</p>
 <p>Using the code below, I was able to reach 91% validation accuracy. With large batch and image size settings on Kaggle, this model reached 94% test accuracy (<a href="https://www.kaggle.com/bluewizard/plant-pathology-prediction-with-efficientnet">see here</a>).</p>
-<section id="read-in-datalibraries" class="level1">
+<section id="read-in-datalibraries" class="level1 page-columns page-full">
 <h1>Read in data/libraries</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download data from Kaggle</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!kaggle competitions download -c plant-pathology-2020-fgvc7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -436,38 +436,38 @@ Train_4.jpg
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        plt.title(<span class="st">'scab'</span>)</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_7_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_7_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_7_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_7_3.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_7_4.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 </section>
-<section id="model-with-efficientnet-transfer-learning" class="level1">
+<section id="model-with-efficientnet-transfer-learning" class="level1 page-columns page-full">
 <h1>Model with EfficientNet Transfer Learning</h1>
 <p>Now we’ll train a model using EfficientNet transfer learning.</p>
 <p>For this model, we will use the following:</p>
@@ -605,10 +605,10 @@ Epoch 7/7
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.figure()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_13_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <pre><code>&lt;Figure size 432x288 with 0 Axes&gt;</code></pre>
@@ -801,18 +801,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -844,7 +833,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -896,6 +905,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -930,7 +957,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -978,7 +1009,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1279,15 +1314,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb18-74"><a href="#cb18-74" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb18-75"><a href="#cb18-75" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb18-76"><a href="#cb18-76" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb18-77"><a href="#cb18-77" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb18-78"><a href="#cb18-78" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-79"><a href="#cb18-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-80"><a href="#cb18-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb18-81"><a href="#cb18-81" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb18-82"><a href="#cb18-82" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-83"><a href="#cb18-83" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-84"><a href="#cb18-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb18-85"><a href="#cb18-85" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb18-86"><a href="#cb18-86" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-87"><a href="#cb18-87" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb18-88"><a href="#cb18-88" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -1599,15 +1634,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb18-394"><a href="#cb18-394" aria-hidden="true" tabindex="-1"></a>&lt;div&gt;</span>
 <span id="cb18-395"><a href="#cb18-395" aria-hidden="true" tabindex="-1"></a>&lt;style scoped&gt;</span>
 <span id="cb18-396"><a href="#cb18-396" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th<span class="in">:only-of-type</span> {</span>
-<span id="cb18-397"><a href="#cb18-397" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb18-397"><a href="#cb18-397" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
 <span id="cb18-398"><a href="#cb18-398" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-399"><a href="#cb18-399" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-400"><a href="#cb18-400" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> tbody tr th {</span>
-<span id="cb18-401"><a href="#cb18-401" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span>: <span class="dv">top</span><span class="op">;</span></span>
+<span id="cb18-401"><a href="#cb18-401" aria-hidden="true" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">top</span><span class="op">;</span></span>
 <span id="cb18-402"><a href="#cb18-402" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-403"><a href="#cb18-403" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-404"><a href="#cb18-404" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.dataframe</span> thead th {</span>
-<span id="cb18-405"><a href="#cb18-405" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb18-405"><a href="#cb18-405" aria-hidden="true" tabindex="-1"></a>        <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
 <span id="cb18-406"><a href="#cb18-406" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb18-407"><a href="#cb18-407" aria-hidden="true" tabindex="-1"></a>&lt;/style&gt;</span>
 <span id="cb18-408"><a href="#cb18-408" aria-hidden="true" tabindex="-1"></a>&lt;table border="1" class="dataframe"&gt;</span>
@@ -1665,7 +1700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb18-460"><a href="#cb18-460" aria-hidden="true" tabindex="-1"></a>  &lt;/tbody&gt;</span>
 <span id="cb18-461"><a href="#cb18-461" aria-hidden="true" tabindex="-1"></a>&lt;/table&gt;</span>
 <span id="cb18-462"><a href="#cb18-462" aria-hidden="true" tabindex="-1"></a>&lt;/div&gt;</span>
-<span id="cb18-463"><a href="#cb18-463" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-463"><a href="#cb18-463" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

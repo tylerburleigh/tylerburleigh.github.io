@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.528">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tyler Burleigh">
 <meta name="description" content="I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.">
 
-<title>Modeling cognitive impairment using NHANES data | Tyler Burleigh</title>
+<title>Modeling cognitive impairment using NHANES data | Tyler Burleigh – Tyler Burleigh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-9f5ddf0f04a2e96700b10066b57d40ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -135,7 +135,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -147,7 +147,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -197,7 +197,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -274,10 +274,10 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -344,7 +344,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 1661
 1592</code></pre>
 </section>
-<section id="score-distributions" class="level2">
+<section id="score-distributions" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="score-distributions">Score distributions</h2>
 <p>Below we can see that the distribution of scores on each task are approximately normal.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.hist(df2[<span class="st">'CFDAST'</span>], bins<span class="op">=</span><span class="dv">35</span>)</span>
@@ -352,21 +352,21 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.hist(df2[<span class="st">'CFDDS'</span>], bins<span class="op">=</span><span class="dv">35</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Digit Symbol Substitution Scores"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_13_0.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <pre><code>Text(0.5, 1.0, 'Digit Symbol Substitution Scores')</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_13_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 </section>
-<section id="composite-scoring" class="level2">
+<section id="composite-scoring" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="composite-scoring">Composite scoring</h2>
 <p>First I’ll standardize each of the test columns.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> zscore</span>
@@ -378,24 +378,24 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plt.hist(df2[<span class="st">'COG'</span>], bins<span class="op">=</span><span class="dv">35</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Composite Cognition"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>Text(0.5, 1.0, 'Composite Cognition')</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_20_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 </section>
-<section id="what-is-low-cognition" class="level2">
+<section id="what-is-low-cognition" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="what-is-low-cognition">What is “low” cognition?</h2>
 <p>Since these are standardized scores, we can say that low cognition represents 1 standardized unit below the mean.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>plt.hist(df2[<span class="st">'COG'</span>], bins<span class="op">=</span><span class="dv">35</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plt.axvline(x<span class="op">=-</span><span class="dv">1</span>, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Composite Cognition with Threshold"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>Text(0.5, 1.0, 'Composite Cognition with Threshold')</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_22_1.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <p>I’ll create a variable to track this classification.</p>
@@ -623,7 +623,7 @@ dtype: float64</code></pre>
 <span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>X_arr <span class="op">=</span> ct.fit_transform(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="xgboost-model" class="level1">
+<section id="xgboost-model" class="level1 page-columns page-full">
 <h1>XGBoost model</h1>
 <p>Next I’ll train a model to predict the composite cognition score using xgboost.</p>
 <p>I’ll stratify the train-test split on the classification of healthy/impaired cognition.</p>
@@ -636,7 +636,7 @@ dtype: float64</code></pre>
 <span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>                                                    test_size<span class="op">=</span><span class="fl">0.2</span>, </span>
 <span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>                                                    random_state<span class="op">=</span><span class="dv">42</span>,</span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>                                                    stratify<span class="op">=</span>y2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="baseline-model" class="level2">
+<section id="baseline-model" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="baseline-model">Baseline model</h2>
 <p>I’ll train a baseline xgboost model, without any parameter tuning. This will give me a general sense of the model’s performance.</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> XGBClassifier()</span>
@@ -652,7 +652,7 @@ dtype: float64</code></pre>
               validate_parameters=False, verbosity=None)</code></pre>
 <div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>model.score(X_test, y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>0.8571428571428571</code></pre>
-<section id="test-performance" class="level3">
+<section id="test-performance" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="test-performance">Test performance</h3>
 <p>How did the model perform on the test set?</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> model.predict(X_test)</span>
@@ -669,10 +669,10 @@ Recall: 21.95%
 
 
 &lt;sklearn.metrics._plot.roc_curve.RocCurveDisplay at 0x25115f7c7c8&gt;</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_45_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>tn, fp, fn, tp <span class="op">=</span> confusion_matrix(y_test, preds).ravel()</span>
@@ -682,7 +682,7 @@ False Neg: 32
 False Pos: 13</code></pre>
 </section>
 </section>
-<section id="biasing-the-model-towards-specificity" class="level2">
+<section id="biasing-the-model-towards-specificity" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="biasing-the-model-towards-specificity">Biasing the model towards specificity</h2>
 <p>The model didn’t perform very well on specificity (a.k.a. recall), meaning that among the 41 individuals with cognitive impairment, the model was only able to correctly identify 22% of them.</p>
 <p>Let’s imagine a scenario in which we might want to bias the model towards high specificity:</p>
@@ -712,10 +712,10 @@ Recall: 36.59%
 
 
 &lt;sklearn.metrics._plot.roc_curve.RocCurveDisplay at 0x25116152d08&gt;</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_50_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>tn, fp, fn, tp <span class="op">=</span> confusion_matrix(y_test, preds).ravel()</span>
@@ -724,7 +724,7 @@ Recall: 36.59%
 False Neg: 26 
 False Pos: 23</code></pre>
 </section>
-<section id="model-with-hyperparameter-tuning" class="level2">
+<section id="model-with-hyperparameter-tuning" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="model-with-hyperparameter-tuning">Model with hyperparameter tuning</h2>
 <p>I’ve managed to bias the model to improve its specificity. This has resulted in more true positives at the cost of more false positives. But I think I can improve this metric even further by searching through the “hyperparameter space” and considering alternative models that optimize for this metric. This is what I’ll do next using random search.</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameter grid</span></span>
@@ -763,7 +763,7 @@ Best parameters found:  {'scale_pos_weight': 6.720588235294118, 'n_estimators': 
 
 
 [Parallel(n_jobs=1)]: Done 2000 out of 2000 | elapsed:  2.1min finished</code></pre>
-<section id="test-performance-1" class="level3">
+<section id="test-performance-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="test-performance-1">Test performance</h3>
 <div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> randomized_mse.predict(X_test)</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy: </span><span class="sc">%.2f%%</span><span class="st">"</span> <span class="op">%</span> (accuracy_score(y_test, preds) <span class="op">*</span> <span class="fl">100.0</span>))</span>
@@ -779,10 +779,10 @@ Recall: 65.85%
 
 
 &lt;sklearn.metrics._plot.roc_curve.RocCurveDisplay at 0x251159b4a88&gt;</code></pre>
-<div class="img-fluid quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="output_55_2.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
+<figcaption class="margin-caption">png</figcaption>
 </figure>
 </div>
 <div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>tn, fp, fn, tp <span class="op">=</span> confusion_matrix(y_test, preds).ravel()</span>
@@ -834,18 +834,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -877,7 +866,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -929,6 +938,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -963,7 +990,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1011,7 +1042,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1944,7 +1979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb48-706"><a href="#cb48-706" aria-hidden="true" tabindex="-1"></a><span class="in">    True Pos: 27 </span></span>
 <span id="cb48-707"><a href="#cb48-707" aria-hidden="true" tabindex="-1"></a><span class="in">    False Neg: 14 </span></span>
 <span id="cb48-708"><a href="#cb48-708" aria-hidden="true" tabindex="-1"></a><span class="in">    False Pos: 73</span></span>
-<span id="cb48-709"><a href="#cb48-709" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb48-709"><a href="#cb48-709" aria-hidden="true" tabindex="-1"></a><span class="in">    </span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
