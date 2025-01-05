@@ -4,14 +4,15 @@ author: ""
 description-meta: "Tyler Burleigh's blog"
 title-block-banner: "#CF4446"
 listing:
+  - id: posts_2025
+    contents: "2025/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+    categories: true
   - id: posts_2023
     contents: "2023/**/index.qmd"
     sort: "date desc"
     template: ../html/blog/listing.ejs
-    categories: true
-    feed: 
-      categories: 
-        - R
   - id: posts_2020
     contents: "2020/**/index.qmd"
     sort: "date desc"
@@ -27,6 +28,10 @@ date-format: "MMMM D, YYYY"
 code-tools: false
 comments: false
 ---
+## 2025
+
+:::{#posts_2025}
+:::
 
 ## 2023
 

@@ -5,8 +5,8 @@ main-photo: /files/profiles/tyler-burleigh-2023.jpg
 main-photo-square: /files/profiles/tyler-burleigh-2023-square.jpg
 title-block-banner: "#FF9500"
 listing:
-  - id: posts_2023
-    contents: "2023/**/index.qmd"
+  - id: posts_2025
+    contents: "2025/**/index.qmd"
     sort: "date desc"
     #template: ../html/blog/listing.ejs
     categories: false
@@ -51,5 +51,5 @@ Hi! I'm an AI engineer with a unique background in human psychology and data sci
 
 ## My latest blog posts
 
-:::{#posts_2023}
+:::{#posts_2025}
 :::
