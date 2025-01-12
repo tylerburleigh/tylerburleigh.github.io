@@ -383,7 +383,7 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 </ol>
 <p>Below is my python implementation of the evaluators. To the best of my ability, I have implemented the SAMRE and Baseline methods as described in the paper (I call the paper’s Baseline method “Baseline-Weak”). And I have implemented a Baseline-Strong evaluator that implements what I would consider to be standard best practices for prompt engineering.</p>
 <p>This will allow me to test my hypothesis and predictions.</p>
-<div id="fda40b0a" class="cell" data-code-fold-show="false" data-execution_count="1">
+<div id="d9759172" class="cell" data-code-fold-show="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Click to view the implementation code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass, field</span>
@@ -878,12 +878,12 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 <section id="load-the-mt-bench-dataset" class="level1">
 <h1>Load the MT-bench dataset</h1>
 <p>Next I will read in the MT-bench dataset from disk and prepare it for evaluation. I will use <a href="https://llamahub.ai/l/llama_datasets/MT%20Bench%20Human%20Judgement%20Dataset?from=">MtBenchHumanJudgementDataset</a> from Llamahub.</p>
-<div id="ddc29551" class="cell" data-execution_count="2">
+<div id="9a31ff94" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commented out since the dataset is already downloaded</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!llamaindex-cli download-llamadataset MtBenchHumanJudgementDataset --download-dir ./data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, I will load the dataset into a pandas dataframe and take a random sample of 300 rows.</p>
-<div id="73e44649" class="cell" data-code-fold-show="false" data-execution_count="3">
+<div id="cd3446a1" class="cell" data-code-fold-show="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Click to view the code that loads the dataset</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
@@ -916,7 +916,7 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 <h1>Use methods to evaluate MT-bench dataset</h1>
 <p>Using the MT-bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.</p>
 <p>The code below is the main evaluation loop, designed to run multiple evaluations asynchronously (to save time). It will evaluate each item in the dataset, and save the results to disk as a checkpoint. If the evaluation is interrupted, the code can be resumed from the last checkpoint.</p>
-<div id="86446b43" class="cell" data-code-fold-show="false" data-execution_count="4">
+<div id="d5f0fdea" class="cell" data-code-fold-show="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Click to view the code that runs the evaluations</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
@@ -1125,7 +1125,7 @@ Completed batch 17, waiting before next batch...</code></pre>
 <section id="results" class="level1">
 <h1>Results</h1>
 <p>Now that the evaluation is complete, I will evaluate the performance of each of the three methods by looking at how well each method agreed with the human judgments. I’ll use Krippendorff’s alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).</p>
-<div id="80c1dcbf" class="cell" data-code-fold-show="false" data-execution_count="5">
+<div id="703e2e3f" class="cell" data-code-fold-show="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Click to view the code that calculates agreement</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> krippendorff <span class="im">import</span> alpha</span>
@@ -1203,7 +1203,7 @@ Baseline-Strong vs. SAMRE: 21%</code></pre>
 </div>
 <p>Although none of the methods yielded particularly strong agreement with the human judges, we can observe a few things: 1. As reported in the paper, SAMRE yielded significantly better agreement than Baseline-Weak (0.307 vs.&nbsp;0.252, an increase of ~18%). 2. Baseline-Strong yielded significantly better agreement than Baseline-Weak (0.391 vs.&nbsp;0.252, an increase of ~36%). 3. Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.391 vs.&nbsp;0.252, an increase of ~21%)!</p>
 <p>We can also measure performance in terms of binary classification accuracy, using Matthews Correlation Coefficient (MCC) as the metric, while re-encoding the “winner” columns to indicate whether model_a was selected as better (1) or not better (0) in each case.</p>
-<div id="0d663d7a" class="cell" data-code-fold-show="false" data-execution_count="6">
+<div id="a4045bce" class="cell" data-code-fold-show="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Click to view the code that calculates Matthews Correlation Coefficient (MCC)</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode winner as binary</span></span>
@@ -1263,7 +1263,7 @@ Baseline-Strong vs. SAMRE: 21%</code></pre>
 <span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">MCC Improvements:"</span>)</span>
 <span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_mcc_diff<span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
 <span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1274,7 +1274,7 @@ Baseline-Strong vs. SAMRE: 21%</code></pre>
 
 MCC Improvements:
 SAMRE vs. Baseline-Weak: 0%
-Baseline-Strong vs. Baseline-Weak: 40.2%
+Baseline-Strong vs. Baseline-Weak: 40%
 Baseline-Strong vs. SAMRE: 40%</code></pre>
 </div>
 </div>
@@ -1285,7 +1285,7 @@ Baseline-Strong vs. SAMRE: 40%</code></pre>
 <li>Baseline-Strong did not perform better than SAMRE (0.464 vs.&nbsp;0.331, an increase of ~40%).</li>
 </ol>
 <p>Why does this metric disagree with the Krippendorff alpha results on the SAMRE vs.&nbsp;Baseline-Weak comparison? I would guess this is due to how ties were resolved when encoding the winner as binary. Also note that the same MCC values for SAMRE and Baseline-Weak is not an error. We can see that the confusion matrices were different.</p>
-<div id="b7981876" class="cell" data-code-fold-show="false" data-execution_count="7">
+<div id="f2e22696" class="cell" data-code-fold-show="false" data-execution_count="7">
 <details class="code-fold">
 <summary>Click to view the code that generates confusion matrices</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
