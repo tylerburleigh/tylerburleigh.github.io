@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Tyler Burleigh">
+<meta name="description" content="In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category.">
+<title>Using GPT-4 for classification | Tyler Burleigh – Tyler Burleigh</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../..//files/favico.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-4c6f914d40da27735db8d274bf8358e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
+</script><style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #170C3A;
+      }
+</style>
+<meta property="og:title" content="Using GPT-4 for classification | Tyler Burleigh">
+<meta property="og:description" content="In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category.">
+<meta property="og:image" content="https://tylerburleigh.com/blog/2023/10/08/social-image.png">
+<meta property="og:site_name" content="Tyler Burleigh">
+<meta property="og:image:height" content="960">
+<meta property="og:image:width" content="1344">
+<meta name="twitter:title" content="Using GPT-4 for classification | Tyler Burleigh">
+<meta name="twitter:description" content="In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category.">
+<meta name="twitter:image" content="https://tylerburleigh.com/blog/2023/10/08/social-image.png">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Tyler Burleigh</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/users/tylerburleigh" rel="me"> <i class="bi bi-mastodon" role="img" aria-label="mastodon">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/tylerburleigh.bsky.social" rel="me"> <i class="bi bi-square" role="img" aria-label="bluesky">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tylerburleigh" rel="me"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tylerburleigh" rel="me"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:tylerburleigh@gmail.com" rel="me"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Using GPT-4 for classification</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">GPT</div>
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://www.tylerburleigh.com/">Tyler Burleigh</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Sunday, October 8, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
+   
+  <ul>
+<li><a href="#load-libraries-and-data" id="toc-load-libraries-and-data" class="nav-link active" data-scroll-target="#load-libraries-and-data">Load libraries and data</a></li>
+  <li><a href="#gpt-function" id="toc-gpt-function" class="nav-link" data-scroll-target="#gpt-function">GPT function</a></li>
+  <li><a href="#list-of-agencies" id="toc-list-of-agencies" class="nav-link" data-scroll-target="#list-of-agencies">List of agencies</a></li>
+  <li><a href="#using-gpt-for-classification" id="toc-using-gpt-for-classification" class="nav-link" data-scroll-target="#using-gpt-for-classification">Using GPT for classification</a></li>
+  <li>
+<a href="#ask-it-to-come-up-with-categories" id="toc-ask-it-to-come-up-with-categories" class="nav-link" data-scroll-target="#ask-it-to-come-up-with-categories">1. Ask it to come up with categories</a>
+  <ul class="collapse">
+<li><a href="#ask-it-to-classify-agencies-using-agency-names-and-categories" id="toc-ask-it-to-classify-agencies-using-agency-names-and-categories" class="nav-link" data-scroll-target="#ask-it-to-classify-agencies-using-agency-names-and-categories">2. Ask it to classify agencies using agency names and categories</a></li>
+  <li><a href="#add-categories-to-dataframe" id="toc-add-categories-to-dataframe" class="nav-link" data-scroll-target="#add-categories-to-dataframe">Add categories to dataframe</a></li>
+  </ul>
+</li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a></li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>GPT is a powerful new tool in the Data Science toolkit. Used correctly, it can increase productivity while decreasing the “drudgery” of boring tasks like data cleaning. I’ve been trying to find ways to integrate GPT into my data science workflow, and I thought it might be fun to use it with the latest Tidy Tuesday. (<a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-03/readme.md">US Government Grant Opportunities</a>). So in this blog post, I use GPT to classify US grant-funding agencies into categories using government agency names.</p>
+<section id="load-libraries-and-data" class="level1"><h1>Load libraries and data</h1>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://andrisignorell.github.io/DescTools/">DescTools</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://keyring.r-lib.org/">keyring</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://httr.r-lib.org/">httr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jeroen.r-universe.dev/jsonlite">jsonlite</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/trinker/numform">numform</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/Tazinho/snakecase">snakecase</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">grants</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grants.csv'</span><span class="op">)</span></span>
+<span><span class="va">grant_opportunity_details</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grant_opportunity_details.csv'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Load cached ChatGPT results from disk</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">'categories.Rdata'</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span><span class="op">(</span><span class="st">'agencies_categorized.Rdata'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="gpt-function" class="level1"><h1>GPT function</h1>
+<p>I’ll define a function for querying ChatGPT (<a href="https://www.listendata.com/2023/05/chatgpt-in-r.html">source</a>). This function will use GPT-4 as the model, and the temperature will be set to 0. Temperature defines how stable the responses will be. A temperature closer to 1 is better for creative tasks where high variability is desired, like creative writing. A temperature of 0 is more “boring” but also more stable. This is desirable for classification tasks.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ChatGPT function</span></span>
+<span><span class="va">chatGPT</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">prompt</span>, </span>
+<span>                    <span class="va">modelName</span> <span class="op">=</span> <span class="st">"gpt-4"</span>,</span>
+<span>                    <span class="va">temperature</span> <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>                    <span class="va">apiKey</span> <span class="op">=</span> <span class="fu">keyring</span><span class="fu">::</span><span class="fu"><a href="https://keyring.r-lib.org/reference/key_get.html">key_get</a></span><span class="op">(</span><span class="st">'openai'</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="va">response</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://httr.r-lib.org/reference/POST.html">POST</a></span><span class="op">(</span></span>
+<span>    url <span class="op">=</span> <span class="st">"https://api.openai.com/v1/chat/completions"</span>, </span>
+<span>    <span class="fu"><a href="https://httr.r-lib.org/reference/add_headers.html">add_headers</a></span><span class="op">(</span>Authorization <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Bearer"</span>, <span class="va">apiKey</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="fu"><a href="https://httr.r-lib.org/reference/content_type.html">content_type_json</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    encode <span class="op">=</span> <span class="st">"json"</span>,</span>
+<span>    body <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>      model <span class="op">=</span> <span class="va">modelName</span>,</span>
+<span>      temperature <span class="op">=</span> <span class="va">temperature</span>,</span>
+<span>      messages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>        role <span class="op">=</span> <span class="st">"user"</span>, </span>
+<span>        content <span class="op">=</span> <span class="va">prompt</span></span>
+<span>      <span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://httr.r-lib.org/reference/status_code.html">status_code</a></span><span class="op">(</span><span class="va">response</span><span class="op">)</span><span class="op">&gt;</span><span class="fl">200</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/stop.html">stop</a></span><span class="op">(</span><span class="fu"><a href="https://httr.r-lib.org/reference/content.html">content</a></span><span class="op">(</span><span class="va">response</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://httr.r-lib.org/reference/content.html">content</a></span><span class="op">(</span><span class="va">response</span><span class="op">)</span><span class="op">$</span><span class="va">choices</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">message</span><span class="op">$</span><span class="va">content</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="list-of-agencies" class="level1"><h1>List of agencies</h1>
+<p>I’ll generate a distinct list of US government agencies in the dataset, and then format them as a comma-separated string. This will make it easy to append to a prompt string when querying GPT.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">agencies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">grants</span><span class="op">$</span><span class="va">agency_name</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">agencies</span>,collapse <span class="op">=</span> <span class="st">', '</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">agencies_str</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="using-gpt-for-classification" class="level1"><h1>Using GPT for classification</h1>
+<p>I’ll split the classification task into two parts:</p>
+<ol type="1">
+<li>Give GPT the full list of agency names, and ask it to come up with N categories</li>
+<li>For each of the N categories, give GPT the full list of agency names, and ask it to identify the agencies that belong in each category</li>
+</ol></section><section id="ask-it-to-come-up-with-categories" class="level1"><h1>1. Ask it to come up with categories</h1>
+<p>First I’ll ask GPT to define a fixed number of categories. Somewhat arbitrarily, I’ll ask for 10.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html">exists</a></span><span class="op">(</span><span class="st">'categories'</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">query</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span></span>
+<span>    <span class="st">"I'm going to present a list of US agencies. </span></span>
+<span><span class="st">    Your task is to identify the 10 best categories </span></span>
+<span><span class="st">    to represent them. The categories should be based </span></span>
+<span><span class="st">    on activities they're involved with, such as Defense </span></span>
+<span><span class="st">    and Military, Science and Technology, Arts and Culture, </span></span>
+<span><span class="st">    Health and Medicine, Education, International Aid, </span></span>
+<span><span class="st">    etc... I want you to give me the list of categories </span></span>
+<span><span class="st">    as a comma-separated list.</span></span>
+<span><span class="st">    </span></span>
+<span><span class="st">    ```"</span>, <span class="va">agencies_str</span>, <span class="st">"```"</span></span>
+<span>  <span class="op">)</span></span>
+<span>  <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">chatGPT</span><span class="op">(</span><span class="va">query</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">categories</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">results</span>, <span class="st">","</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># Save to disk</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/save.html">save</a></span><span class="op">(</span><span class="va">categories</span>, file <span class="op">=</span> <span class="st">'categories.Rdata'</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">categories</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Defense and Military"                     
+ [2] "Science and Technology"                   
+ [3] "Health and Medicine"                      
+ [4] "International Aid"                        
+ [5] "Education and Research"                   
+ [6] "Agriculture and Environment"              
+ [7] "Infrastructure and Transportation"        
+ [8] "Business and Economic Development"        
+ [9] "Arts and Culture"                         
+[10] "Social Services and Community Development"</code></pre>
+</div>
+</div>
+<section id="ask-it-to-classify-agencies-using-agency-names-and-categories" class="level2"><h2 class="anchored" data-anchor-id="ask-it-to-classify-agencies-using-agency-names-and-categories">2. Ask it to classify agencies using agency names and categories</h2>
+<p>Next, using the agency names and categories generated above I’ll ask GPT to do classification. First, I’ll define a function that takes a category as input and runs a query against GPT asking it to put the agencies into the provided category, returning a list of agencies that it put in that category. Although I could ask GPT to classify agencies using all categories in a single query, I expect this would be less reliable than tackling each category separately. One of the trade-offs here is that I won’t get mutual exclusivity of the categories, since GPT won’t know how it’s already classified agencies. For this analysis, let’s assume I don’t want mutual exclusivity.</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">get_agencies_in_category</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">category</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">query</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span></span>
+<span>    <span class="st">"I'm going to present a comma-separated list of US agencies,</span></span>
+<span><span class="st">    delimited by triple backticks (```), and a single category to </span></span>
+<span><span class="st">    which some of the agencies belong, delimited by triple hashtags (###). </span></span>
+<span><span class="st">    Your task is to provide a comma-separated list of agency names that </span></span>
+<span><span class="st">    belong in the category provided.</span></span>
+<span><span class="st">    ```"</span>, <span class="va">agencies_str</span>,  <span class="st">"```</span></span>
+<span><span class="st">    ###"</span>, <span class="va">category</span>, <span class="st">"###"</span></span>
+<span>  <span class="op">)</span></span>
+<span>  <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">chatGPT</span><span class="op">(</span><span class="va">query</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># Return as a vector</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/trimws.html">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html">strsplit</a></span><span class="op">(</span><span class="va">results</span>, <span class="st">","</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Using the function above, I’ll query GPT for each of the categories, saving the results into a list called <code>agencies_categorized</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/exists.html">exists</a></span><span class="op">(</span><span class="st">'agencies_categorized'</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">agencies_categorized</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">category</span> <span class="kw">in</span> <span class="va">categories</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="kw">if</span><span class="op">(</span><span class="va">category</span> <span class="op">!=</span> <span class="st">'Other'</span><span class="op">)</span><span class="op">{</span></span>
+<span>      <span class="va">agencies_categorized</span><span class="op">[[</span><span class="va">category</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu">get_agencies_in_category</span><span class="op">(</span><span class="va">category</span><span class="op">)</span> </span>
+<span>    <span class="op">}</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="co"># Save to disk</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/save.html">save</a></span><span class="op">(</span><span class="va">agencies_categorized</span>, file <span class="op">=</span> <span class="st">'agencies_categorized.Rdata'</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span>  </span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">agencies_categorized</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$`Defense and Military`
+ [1] "69A345 Office of the Under Secretary for Policy"   
+ [2] "69A350 OSDBU"                                      
+ [3] "69A355 Research and Technology"                    
+ [4] "ACC APG - Natick"                                  
+ [5] "ACC-APG-Aberdeen Division A"                       
+ [6] "ACC-APG-Belvoir"                                   
+ [7] "ACC-APG-Detrick"                                   
+ [8] "ACC-APG-Edgewood"                                  
+ [9] "ACC-APG-Fort Huachuca"                             
+[10] "Air Force -- Materiel Command"                     
+[11] "Air Force -- Research Lab"                         
+[12] "Air Force Academy"                                 
+[13] "Air Force Office of Scientific Research"           
+[14] "Alaska District"                                   
+[15] "Army Contracting Command - Benet Laboratories"     
+[16] "Army Contracting Command - New Jersey"             
+[17] "Army Contracting Command Rock Island"              
+[18] "Bureau of Diplomatic Security"                     
+[19] "Bureau of International Security-Nonproliferation" 
+[20] "Bureau of Political-Military Affairs - GPI"        
+[21] "Bureau of Political-Military Affairs - WRA"        
+[22] "DARPA - Biological Technologies Office"            
+[23] "DARPA - Defense Sciences Office"                   
+[24] "DARPA - Information Innovation Office"             
+[25] "DARPA - Information Processing Technology Office"  
+[26] "DARPA - Microsystems Technology Office"            
+[27] "DARPA - Strategic Technology Office"               
+[28] "DARPA - Tactical Technology Office"                
+[29] "DARPA - Transformational Convergence Technology"   
+[30] "DARPA-MTO-BAA-09-25"                               
+[31] "Defense Advanced Research Projects Agency"         
+[32] "Defense Health Agency"                             
+[33] "Defense Intelligence Agency"                       
+[34] "Defense Logistics Agency"                          
+[35] "Defense Threat Reduction Agency"                   
+[36] "Department of Defense"                             
+[37] "Dept of the Army -- Materiel Command"              
+[38] "Dept. of the Army  --  Corps of Engineers"         
+[39] "Dept. of the Army -- Space &amp; Missle Defense Comman"
+[40] "Dept. of the Army -- USAMRAA"                      
+[41] "DoD Education Activity"                            
+[42] "DOT - FAA Aviation Research Grants"                
+[43] "DOT - FAA Centers of Excellence"                   
+[44] "DOT Federal Aviation Administration"               
+[45] "Engineer Research and Development Center"          
+[46] "Fort Worth District"                               
+[47] "Kansas City District"                              
+[48] "Missile Defense Agency"                            
+[49] "Mission and Install. Cmd. JBSA Ft. Sam Houston"    
+[50] "NAVAIR"                                            
+[51] "Naval Air Warfare Center Aircraft Div. Lakehurst"  
+[52] "NAVAL FACILITIES ENGINEERING COMMAND"              
+[53] "Naval Facilities Engineering Command Southwest"    
+[54] "Naval Information Warfare Center Pacific"          
+[55] "NAVAL MEDICAL LOGISTICS COMMAND"                   
+[56] "Naval Research Laboratory"                         
+[57] "Naval Supply Systems Command"                      
+[58] "Naval Surface Warfare Center - Carderock"          
+[59] "NAVFAC Atlantic"                                   
+[60] "NAVFAC Washington DC"                              
+[61] "NCA Contracting"                                   
+[62] "NEA Cooperative Agreements Office"                 
+[63] "NSWC - CRANE"                                      
+[64] "NSWC Indian Head"                                  
+[65] "NUWC Division Keyport"                             
+[66] "Office of Local Defense Community Cooperation"     
+[67] "Office of Naval Research"                          
+[68] "Office of the Director of National Intelligence"   
+[69] "Omaha District"                                    
+[70] "Savannah District"                                 
+[71] "Seattle District"                                  
+[72] "SPAWAR SYSTEMS CENTER"                             
+[73] "U.S. Dept. of Treasury RESTORE Act Program"        
+[74] "U.S. Mission to NATO"                              
+[75] "United States Coast Guard"                         
+[76] "United States Marine Corps"                        
+[77] "USAF 347 Contracting Squadron"                     
+[78] "Washington Headquarters Services"                  
+
+$`Science and Technology`
+ [1] "69A345 Office of the Under Secretary for Policy"   
+ [2] "69A355 Research and Technology"                    
+ [3] "Advanced Research Projects Agency Energy"          
+ [4] "Advanced Research Projects Agency for Health"      
+ [5] "Agency for Health Care Research and Quality"       
+ [6] "Agricultural Research Service"                     
+ [7] "Air Force -- Research Lab"                         
+ [8] "Air Force Office of Scientific Research"           
+ [9] "Army Contracting Command - Benet Laboratories"     
+[10] "Bureau of Oceans - Int. Environmental - Scientific"
+[11] "Centers for Disease Control - ATSDR"               
+[12] "Centers for Disease Control - CFA"                 
+[13] "Centers for Disease Control - CGH"                 
+[14] "Centers for Disease Control - CSELS"               
+[15] "Centers for Disease Control - NCBDDD"              
+[16] "Centers for Disease Control - NCCDPHP"             
+[17] "Centers for Disease Control - NCEH"                
+[18] "Centers for Disease Control - NCEZID"              
+[19] "Centers for Disease Control - NCHHSTP"             
+[20] "Centers for Disease Control - NCHS"                
+[21] "Centers for Disease Control - NCIPC"               
+[22] "Centers for Disease Control - NCIRD"               
+[23] "Centers for Disease Control - NIOSH"               
+[24] "Centers for Disease Control - OD"                  
+[25] "Centers for Disease Control - OPHPR"               
+[26] "Centers for Disease Control - OSTLTS"              
+[27] "Centers for Disease Control and Prevention"        
+[28] "Centers for Disease Control and Prevention - ERA"  
+[29] "DARPA - Biological Technologies Office"            
+[30] "DARPA - Defense Sciences Office"                   
+[31] "DARPA - Information Innovation Office"             
+[32] "DARPA - Information Processing Technology Office"  
+[33] "DARPA - Microsystems Technology Office"            
+[34] "DARPA - Strategic Technology Office"               
+[35] "DARPA - Tactical Technology Office"                
+[36] "DARPA - Transformational Convergence Technology"   
+[37] "Defense Advanced Research Projects Agency"         
+[38] "Defense Health Agency"                             
+[39] "Defense Intelligence Agency"                       
+[40] "Defense Threat Reduction Agency"                   
+[41] "Department of Energy"                              
+[42] "DoD Education Activity"                            
+[43] "DOT - FAA Aviation Research Grants"                
+[44] "DOT - FAA Centers of Excellence"                   
+[45] "DOT Federal Aviation Administration"               
+[46] "Economic Research Service"                         
+[47] "Engineer Research and Development Center"          
+[48] "Environmental Protection Agency"                   
+[49] "FAA - Aviation Next Gen"                           
+[50] "FAA-COE-AJFE"                                      
+[51] "FAA-COE-GA"                                        
+[52] "FAA-COE-TTHP"                                      
+[53] "Food and Drug Administration"                      
+[54] "Geological Survey"                                 
+[55] "Health Resources and Services Administration"      
+[56] "Indian Health Service"                             
+[57] "Institute of Museum and Library Services"          
+[58] "National Aeronautics and Space Administration"     
+[59] "National Energy Technology Laboratory"             
+[60] "National Geospatial-Intelligence Agency"           
+[61] "National Highway Traffic Safety Administration"    
+[62] "National Institute of Food and Agriculture"        
+[63] "National Institute of Justice"                     
+[64] "National Institute of Standards and Technology"    
+[65] "National Institutes of Health"                     
+[66] "National Oceanic and Atmospheric Administration"   
+[67] "National Park Service"                             
+[68] "National Science Foundation"                       
+[69] "National Telecommunications and Information Admini"
+[70] "Naval Research Laboratory"                         
+[71] "Naval Supply Systems Command"                      
+[72] "Naval Surface Warfare Center - Carderock"          
+[73] "NNSA"                                              
+[74] "Nuclear Regulatory Commission"                     
+[75] "NUWC Division Keyport"                             
+[76] "Oak Ridge Office"                                  
+[77] "Office of Science"                                 
+[78] "Office of the Assistant Secretary for Health"      
+[79] "Office of the Director of National Intelligence"   
+[80] "Office of the National Coordinator"                
+[81] "Pipeline and Hazardous Materials Safety Admin"     
+[82] "Risk Management Agency"                            
+[83] "Science and Technology Directorate"                
+[84] "Substance Abuse and Mental Health Services Admin"  
+[85] "Substance Abuse and Mental Health Services Adminis"
+[86] "Uniformed Services Univ. of the Health Sciences"   
+[87] "USUHS Medical - Non- Research Projects"            
+[88] "USUHS Medical Research Projects"                   
+[89] "USAID"                                             
+[90] "Woodrow Wilson Center"                             
+
+$`Health and Medicine`
+ [1] "Administration for Children &amp; Families - ACYF/FYSB"
+ [2] "Administration for Children and Families"          
+ [3] "Administration for Children and Families - ACYF/CB"
+ [4] "Administration for Children and Families - ANA"    
+ [5] "Administration for Children and Families - OCC"    
+ [6] "Administration for Children and Families - OCS"    
+ [7] "Administration for Children and Families - OCSE"   
+ [8] "Administration for Children and Families - OFA"    
+ [9] "Administration for Children and Families - OHS"    
+[10] "Administration for Children and Families - OHSEPR" 
+[11] "Administration for Children and Families - OPRE"   
+[12] "Administration for Children and Families - ORR"    
+[13] "Administration for Children and Families-IOAS-OTIP"
+[14] "Administration for Community Living"               
+[15] "Administration on Aging"                           
+[16] "Advanced Research Projects Agency for Health"      
+[17] "Agency for Health Care Research and Quality"       
+[18] "Centers for Disease Control - ATSDR"               
+[19] "Centers for Disease Control - CFA"                 
+[20] "Centers for Disease Control - CGH"                 
+[21] "Centers for Disease Control - CSELS"               
+[22] "Centers for Disease Control - NCBDDD"              
+[23] "Centers for Disease Control - NCCDPHP"             
+[24] "Centers for Disease Control - NCEH"                
+[25] "Centers for Disease Control - NCEZID"              
+[26] "Centers for Disease Control - NCHHSTP"             
+[27] "Centers for Disease Control - NCHS"                
+[28] "Centers for Disease Control - NCIPC"               
+[29] "Centers for Disease Control - NCIRD"               
+[30] "Centers for Disease Control - NIOSH"               
+[31] "Centers for Disease Control - OD"                  
+[32] "Centers for Disease Control - OPHPR"               
+[33] "Centers for Disease Control - OSTLTS"              
+[34] "Centers for Disease Control and Prevention"        
+[35] "Centers for Disease Control and Prevention - ERA"  
+[36] "Centers for Medicare &amp; Medicaid Services"          
+[37] "CMS Consumer Operated and Oriented Plan Program"   
+[38] "CMS-Consumer Information &amp; Insurance Oversight"    
+[39] "Defense Health Agency"                             
+[40] "Department of Health and Human Services"           
+[41] "Food and Drug Administration"                      
+[42] "Health Resources and Services Administration"      
+[43] "Indian Health Service"                             
+[44] "National Institute of Food and Agriculture"        
+[45] "National Institutes of Health"                     
+[46] "Office of the Assistant Secretary for Health"      
+[47] "Office of the National Coordinator"                
+[48] "Substance Abuse and Mental Health Services Admin"  
+[49] "Substance Abuse and Mental Health Services Adminis"
+[50] "Uniformed Services Univ. of the Health Sciences"   
+[51] "USUHS Medical - Non- Research Projects"            
+[52] "USUHS Medical Research Projects"                   
+[53] "VA Office of Mental Health"                        
+[54] "VHA Member Services-Veterans Transportation"       
+
+$`International Aid`
+ [1] "Afghanistan USAID-Kabul"                        
+ [2] "Africa Regional Services"                       
+ [3] "Agency for International Development"           
+ [4] "Albania USAID-Tirana"                           
+ [5] "Armenia USAID-Yerevan"                          
+ [6] "Azerbaijan USAID-Baku"                          
+ [7] "Bangladesh USAID-Dhaka"                         
+ [8] "Benin USAID-Cotonou"                            
+ [9] "Bolivia USAID-La Paz"                           
+[10] "Bosnia USAID-Herzegovina"                       
+[11] "Brazil USAID-Brasilia"                          
+[12] "Burma USAID - Rangoon"                          
+[13] "Burundi USAID-Bujumbura"                        
+[14] "Cambodia USAID-Phnom Penh"                      
+[15] "Colombia USAID-Bogota"                          
+[16] "Democratic Republic of the Congo USAID-Kinshasa"
+[17] "Dominican Republic USAID-Santo Domingo"         
+[18] "East Africa USAID-Kenya"                        
+[19] "Ecuador USAID-Quito"                            
+[20] "Egypt USAID-Cairo"                              
+[21] "El Salvador USAID-San Salvador"                 
+[22] "Ethiopia USAID-Addis Ababa"                     
+[23] "Georgia USAID-Tbilisi"                          
+[24] "Ghana USAID-Accra"                              
+[25] "Guatemala USAID-Guatemala City"                 
+[26] "Guinea USAID-Conakry"                           
+[27] "Haiti USAID-Port Au Prince"                     
+[28] "Honduras USAID-Tegucigalpa"                     
+[29] "Hungary USAID-Budapest"                         
+[30] "India USAID-New Delhi"                          
+[31] "Indonesia USAID-Jakarta"                        
+[32] "Iraq Assistance Office"                         
+[33] "Iraq USAID-Baghdad"                             
+[34] "Jamaica USAID-Kingston"                         
+[35] "Jordan USAID-Amman"                             
+[36] "Kazakhstan USAID-Almaty"                        
+[37] "Kenya USAID-Nairobi"                            
+[38] "Kosovo USAID-Pristina"                          
+[39] "Lebanon USAID-Beirut"                           
+[40] "Liberia USAID-Monrovia"                         
+[41] "Macedonia USAID-Skopje"                         
+[42] "Madagascar USAID-Antananarivo"                  
+[43] "Malawi USAID-Lilongwe"                          
+[44] "Mali USAID -Bamako"                             
+[45] "Mexico USAID-Mexico City"                       
+[46] "Middle East Regional Platform USAID-MERP"       
+[47] "Moldova USAID-Chisinau"                         
+[48] "Mongolia USAID-Ulaanbaatar"                     
+[49] "Morocco USAID-Rabat"                            
+[50] "Mozambique USAID-Maputo"                        
+[51] "Nepal USAID-Kathmandu"                          
+[52] "Nicaragua USAID-Managua"                        
+[53] "Nigeria USAID-Abuja"                            
+[54] "Pakistan USAID-Islamabad"                       
+[55] "Panama USAID-Panama City"                       
+[56] "Paraguay USAID-Asuncion"                        
+[57] "Peru USAID-Lima"                                
+[58] "Philippines USAID-Manila"                       
+[59] "Rwanda USAID-Kigali"                            
+[60] "Senegal USAID-Dakar"                            
+[61] "Serbia USAID-Belgrade"                          
+[62] "South Africa USAID-Pretoria"                    
+[63] "South Sudan (USAID)-Juba"                       
+[64] "Sri Lanka USAID-Colombo"                        
+[65] "Sudan USAID-Khartoum"                           
+[66] "Tajikistan USAID-Dushanbe"                      
+[67] "Tanzania USAID-Dar es Salaam"                   
+[68] "Thailand USAID-Bangkok"                         
+[69] "Uganda USAID-Kampala"                           
+[70] "Ukraine USAID-Kiev"                             
+[71] "Uzbekistan USAID-Tashkent"                      
+[72] "West Africa USAID-Ghana"                        
+[73] "West Bank"                                      
+[74] "Gaza USAID-West Bank"                           
+[75] "Yemen USAID-Sanaa"                              
+[76] "Zambia USAID-Lusaka"                            
+[77] "Zimbabwe USAID-Harare"                          
+[78] "USAID"                                          
+[79] "USAID - Barbados and Eastern Caribbean"         
+[80] "USAID-VIETNAM"                                  
+
+$`Education and Research`
+  [1] "Advanced Research Projects Agency Energy"          
+  [2] "Advanced Research Projects Agency for Health"      
+  [3] "Agency for Health Care Research and Quality"       
+  [4] "Air Force Academy"                                 
+  [5] "Air Force Office of Scientific Research"           
+  [6] "Army Contracting Command - Benet Laboratories"     
+  [7] "Bureau Of Educational and Cultural Affairs"        
+  [8] "Centers for Disease Control - ATSDR"               
+  [9] "Centers for Disease Control - CFA"                 
+ [10] "Centers for Disease Control - CGH"                 
+ [11] "Centers for Disease Control - CSELS"               
+ [12] "Centers for Disease Control - NCBDDD"              
+ [13] "Centers for Disease Control - NCCDPHP"             
+ [14] "Centers for Disease Control - NCEH"                
+ [15] "Centers for Disease Control - NCEZID"              
+ [16] "Centers for Disease Control - NCHHSTP"             
+ [17] "Centers for Disease Control - NCHS"                
+ [18] "Centers for Disease Control - NCIPC"               
+ [19] "Centers for Disease Control - NCIRD"               
+ [20] "Centers for Disease Control - NIOSH"               
+ [21] "Centers for Disease Control - OD"                  
+ [22] "Centers for Disease Control - OPHPR"               
+ [23] "Centers for Disease Control - OSTLTS"              
+ [24] "Centers for Disease Control and Prevention"        
+ [25] "Centers for Disease Control and Prevention - ERA"  
+ [26] "Centers for Medicare &amp; Medicaid Services"          
+ [27] "Chief Evaluation Office"                           
+ [28] "CMS Consumer Operated and Oriented Plan Program"   
+ [29] "CMS-Consumer Information &amp; Insurance Oversight"    
+ [30] "DARPA - Biological Technologies Office"            
+ [31] "DARPA - Defense Sciences Office"                   
+ [32] "DARPA - Information Innovation Office"             
+ [33] "DARPA - Information Processing Technology Office"  
+ [34] "DARPA - Microsystems Technology Office"            
+ [35] "DARPA - Strategic Technology Office"               
+ [36] "DARPA - Tactical Technology Office"                
+ [37] "DARPA - Transformational Convergence Technology"   
+ [38] "DARPA-MTO-BAA-09-25"                               
+ [39] "Defense Advanced Research Projects Agency"         
+ [40] "Defense Health Agency"                             
+ [41] "Defense Intelligence Agency"                       
+ [42] "Department of Education"                           
+ [43] "DoD Education Activity"                            
+ [44] "DOT - FAA Aviation Research Grants"                
+ [45] "DOT - FAA Centers of Excellence"                   
+ [46] "DOT Federal Aviation Administration"               
+ [47] "Economic Research Service"                         
+ [48] "Engineer Research and Development Center"          
+ [49] "FAA - Aviation Next Gen"                           
+ [50] "FAA-COE-AJFE"                                      
+ [51] "FAA-COE-GA"                                        
+ [52] "FAA-COE-TTHP"                                      
+ [53] "Faculty Exchange Program 10.613"                   
+ [54] "Fish and Wildlife Service"                         
+ [55] "Fisheries &amp; Habitat Conservation"                  
+ [56] "Food and Drug Administration"                      
+ [57] "Food and Nutrition Service"                        
+ [58] "Food Safety Inspection Service"                    
+ [59] "Foreign Agricultural Service"                      
+ [60] "Forest Service"                                    
+ [61] "Geological Survey"                                 
+ [62] "Health Resources and Services Administration"      
+ [63] "Indian Health Service"                             
+ [64] "Institute of Museum and Library Services"          
+ [65] "Internal Revenue Service"                          
+ [66] "International Agricultural Educ Fellowship 10.619" 
+ [67] "Library of Congress"                               
+ [68] "NASA Ames Research Center"                         
+ [69] "NASA Armstrong Flight Research Center"             
+ [70] "NASA Glenn Research Center"                        
+ [71] "NASA Goddard Space Flight Center"                  
+ [72] "NASA Headquarters"                                 
+ [73] "NASA Johnson Space Center"                         
+ [74] "NASA Kennedy Space Center"                         
+ [75] "NASA Langley Research Center"                      
+ [76] "NASA Marshall Space Flight Center"                 
+ [77] "NASA Stennis Space Center"                         
+ [78] "National Aeronautics and Space Administration"     
+ [79] "National Archives and Records Administration"      
+ [80] "National Endowment for the Arts"                   
+ [81] "National Endowment for the Humanities"             
+ [82] "National Energy Technology Laboratory"             
+ [83] "National Geospatial-Intelligence Agency"           
+ [84] "National Highway Traffic Safety Administration"    
+ [85] "National Institute of Corrections"                 
+ [86] "National Institute of Food and Agriculture"        
+ [87] "National Institute of Justice"                     
+ [88] "National Institute of Standards and Technology"    
+ [89] "National Institutes of Health"                     
+ [90] "National Oceanic and Atmospheric Administration"   
+ [91] "National Park Service"                             
+ [92] "National Science Foundation"                       
+ [93] "National Telecommunications and Information Admini"
+ [94] "National Veterans Sports Programs"                 
+ [95] "Natural Resources Conservation Service"            
+ [96] "Naval Research Laboratory"                         
+ [97] "Nuclear Regulatory Commission"                     
+ [98] "Office of Science"                                 
+ [99] "Office of the Assistant Secretary for Health"      
+[100] "Office of the Director of National Intelligence"   
+[101] "Office of the National Coordinator"                
+[102] "Office of the Secretary"                           
+[103] "Occupational Safety and Health Administration"     
+[104] "Pipeline and Hazardous Materials Safety Admin"     
+[105] "Risk Management Agency"                            
+[106] "Risk Management Education"                         
+[107] "Rural Business-Cooperative Service"                
+[108] "Rural Housing Service"                             
+[109] "Rural Utilities Service"                           
+[110] "Scientific Cooperation and Research 10.961"        
+[111] "Social Security Administration"                    
+[112] "Substance Abuse and Mental Health Services Admin"  
+[113] "Substance Abuse and Mental Health Services Adminis"
+[114] "Technical Agricultural Assistance 10.960"          
+[115] "Uniformed Services Univ. of the Health Sciences"   
+[116] "USUHS Medical - Non- Research Projects"            
+[117] "USUHS Medical Research Projects"                   
+[118] "Veterans Employment and Training Service"          
+[119] "Volunteer Income Tax Assistance"                   
+[120] "Woodrow Wilson Center"                             
+
+$`Agriculture and Environment`
+ [1] "Agricultural Marketing Service"                    
+ [2] "Agricultural Trade Promotion Program 10.618"       
+ [3] "Animal and Plant Health Inspection Service"        
+ [4] "Bureau of Land Management"                         
+ [5] "Bureau of Ocean Energy Management"                 
+ [6] "Bureau of Reclamation"                             
+ [7] "Bureau of Reclamation - Denver Office"             
+ [8] "Bureau of Reclamation - Great Plains Region"       
+ [9] "Bureau of Reclamation - Lower Colorado Region"     
+[10] "Bureau of Reclamation - Mid-Pacific Region"        
+[11] "Bureau of Reclamation - Pacific Northwest Region"  
+[12] "Bureau of Reclamation - Upper Colorado Region"     
+[13] "Bureau of Reclamation-Upper Columbia Area Office"  
+[14] "Bureau of Reclamation"                             
+[15] "Denver Office"                                     
+[16] "Bureau of Reclamation"                             
+[17] "Mid-Pacific Regional Office"                       
+[18] "Bureau of Safety and Environmental Enforcement"    
+[19] "Department of Agriculture"                         
+[20] "Endangered Species"                                
+[21] "Environmental Management Consolidated Business Cen"
+[22] "Environmental Protection Agency"                   
+[23] "Farm Production and Conservation Business Center"  
+[24] "Farm Service Agency"                               
+[25] "Fish and Wildlife Service"                         
+[26] "Fisheries &amp; Habitat Conservation"                  
+[27] "Forest Service"                                    
+[28] "Migratory Birds"                                   
+[29] "National Energy Technology Laboratory"             
+[30] "National Oceanic and Atmospheric Administration"   
+[31] "Natural Resources Conservation Service"            
+[32] "Office of Science"                                 
+[33] "Risk Management Agency"                            
+[34] "Rural Business-Cooperative Service"                
+[35] "Rural Housing Service"                             
+[36] "Rural Utilities Service"                           
+
+$`Infrastructure and Transportation`
+  [1] "```69A345 Office of the Under Secretary for Policy"
+  [2] "69A350 OSDBU"                                      
+  [3] "69A355 Research and Technology"                    
+  [4] "ACC APG - Natick"                                  
+  [5] "ACC-APG-Aberdeen Division A"                       
+  [6] "ACC-APG-Belvoir"                                   
+  [7] "ACC-APG-Detrick"                                   
+  [8] "ACC-APG-Edgewood"                                  
+  [9] "ACC-APG-Fort Huachuca"                             
+ [10] "Air Force -- Materiel Command"                     
+ [11] "Air Force -- Research Lab"                         
+ [12] "Air Force Academy"                                 
+ [13] "Air Force Office of Scientific Research"           
+ [14] "Airport Improvement Program Discretionary Grants"  
+ [15] "Alaska District"                                   
+ [16] "Army Contracting Command - Benet Laboratories"     
+ [17] "Army Contracting Command - New Jersey"             
+ [18] "Army Contracting Command Rock Island"              
+ [19] "Bureau of Land Management"                         
+ [20] "Bureau of Ocean Energy Management"                 
+ [21] "Bureau of Reclamation"                             
+ [22] "Bureau of Reclamation - Denver Office"             
+ [23] "Bureau of Reclamation - Great Plains Region"       
+ [24] "Bureau of Reclamation - Lower Colorado Region"     
+ [25] "Bureau of Reclamation - Mid-Pacific Region"        
+ [26] "Bureau of Reclamation - Pacific Northwest Region"  
+ [27] "Bureau of Reclamation - Upper Colorado Region"     
+ [28] "Bureau of Reclamation-Upper Columbia Area Office"  
+ [29] "Bureau of Reclamation"                             
+ [30] "Denver Office"                                     
+ [31] "Bureau of Reclamation"                             
+ [32] "Mid-Pacific Regional Office"                       
+ [33] "Bureau of Safety and Environmental Enforcement"    
+ [34] "Chicago Service Center"                            
+ [35] "DARPA - Biological Technologies Office"            
+ [36] "DARPA - Defense Sciences Office"                   
+ [37] "DARPA - Information Innovation Office"             
+ [38] "DARPA - Information Processing Technology Office"  
+ [39] "DARPA - Microsystems Technology Office"            
+ [40] "DARPA - Strategic Technology Office"               
+ [41] "DARPA - Tactical Technology Office"                
+ [42] "DARPA - Transformational Convergence Technology"   
+ [43] "Defense Advanced Research Projects Agency"         
+ [44] "Defense Health Agency"                             
+ [45] "Defense Intelligence Agency"                       
+ [46] "Defense Logistics Agency"                          
+ [47] "Defense Threat Reduction Agency"                   
+ [48] "Department of Transportation"                      
+ [49] "Dept of the Army -- Materiel Command"              
+ [50] "Dept. of the Army  --  Corps of Engineers"         
+ [51] "Dept. of the Army -- Space &amp; Missle Defense Comman"
+ [52] "Dept. of the Army -- USAMRAA"                      
+ [53] "DOT - FAA Aviation Research Grants"                
+ [54] "DOT - FAA Centers of Excellence"                   
+ [55] "DOT - Federal Railroad Administration"             
+ [56] "DOT Federal Aviation Administration"               
+ [57] "DOT Federal Highway Administration"                
+ [58] "DOT OSDBU"                                         
+ [59] "DOT-Federal Motor Carrier Safety Administration"   
+ [60] "DOT-Federal Transit Administration - Inactive Site"
+ [61] "DOT/Federal Transit Administration"                
+ [62] "Economic Development Administration"               
+ [63] "Engineer Research and Development Center"          
+ [64] "FAA - Aviation Next Gen"                           
+ [65] "FAA-COE-AJFE"                                      
+ [66] "FAA-COE-GA"                                        
+ [67] "FAA-COE-TTHP"                                      
+ [68] "Federal Communications Commission"                 
+ [69] "Federal Mediation and Conciliation Service"        
+ [70] "Federal Motor Carrier Safety Administration"       
+ [71] "Federal Transit Administration"                    
+ [72] "Fort Worth District"                               
+ [73] "Kansas City District"                              
+ [74] "Maritime Administration"                           
+ [75] "NASA Ames Research Center"                         
+ [76] "NASA Armstrong Flight Research Center"             
+ [77] "NASA Glenn Research Center"                        
+ [78] "NASA Goddard Space Flight Center"                  
+ [79] "NASA Headquarters"                                 
+ [80] "NASA Johnson Space Center"                         
+ [81] "NASA Kennedy Space Center"                         
+ [82] "NASA Langley Research Center"                      
+ [83] "NASA Marshall Space Flight Center"                 
+ [84] "NASA Stennis Space Center"                         
+ [85] "National Aeronautics and Space Administration"     
+ [86] "National Highway Traffic Safety Administration"    
+ [87] "National Oceanic and Atmospheric Administration"   
+ [88] "National Telecommunications and Information Admini"
+ [89] "Naval Air Warfare Center Aircraft Div. Lakehurst"  
+ [90] "NAVAL FACILITIES ENGINEERING COMMAND"              
+ [91] "Naval Facilities Engineering Command Southwest"    
+ [92] "Naval Information Warfare Center Pacific"          
+ [93] "NAVAL MEDICAL LOGISTICS COMMAND"                   
+ [94] "Naval Research Laboratory"                         
+ [95] "Naval Supply Systems Command"                      
+ [96] "Naval Surface Warfare Center - Carderock"          
+ [97] "NAVFAC Atlantic"                                   
+ [98] "NAVFAC Washington DC"                              
+ [99] "NCA Contracting"                                   
+[100] "Nebraska State Office"                             
+[101] "Nuclear Regulatory Commission"                     
+[102] "NUWC Division Keyport"                             
+[103] "Office of Local Defense Community Cooperation"     
+[104] "Office of the Secretary"                           
+[105] "Omaha District"                                    
+[106] "Pipeline and Hazardous Materials Safety Admin"     
+[107] "Region 1"                                          
+[108] "Region 10"                                         
+[109] "Region 2"                                          
+[110] "Region 3"                                          
+[111] "Region 4"                                          
+[112] "Region 5"                                          
+[113] "Region 6"                                          
+[114] "Region 7"                                          
+[115] "Region 8"                                          
+[116] "Region 9"                                          
+[117] "Risk Management Agency"                            
+[118] "Rural Utilities Service"                           
+[119] "Savannah District"                                 
+[120] "Seattle District"                                  
+[121] "SPAWAR SYSTEMS CENTER"                             
+[122] "Transportation Security Administration"            
+[123] "U.S. Dept. of Treasury RESTORE Act Program"        
+[124] "United States Coast Guard"                         
+[125] "United States Marine Corps"                        
+[126] "USACE Portland District"                           
+[127] "USAF 347 Contracting Squadron"                     
+[128] "Walla Walla District"                              
+[129] "Washington Headquarters Services```"               
+
+$`Business and Economic Development`
+ [1] "Economic Development Administration"               
+ [2] "Small Business Administration"                     
+ [3] "Community Development Financial Institutions"      
+ [4] "Rural Business-Cooperative Service"                
+ [5] "Employment and Training Administration"            
+ [6] "Office of Local Defense Community Cooperation"     
+ [7] "Economic Research Service"                         
+ [8] "Agricultural Marketing Service"                    
+ [9] "Agricultural Trade Promotion Program 10.618"       
+[10] "Bureau of Economic and Business Affairs"           
+[11] "Trade Policy and Geographic Affairs"               
+[12] "Market Access Program 10.601"                      
+[13] "Foreign Agricultural Service"                      
+[14] "Foreign Market Development Cooperator Prog 10600"  
+[15] "Technical Assistance for Specialty Crops 10.604"   
+[16] "Jobs and Innovation Accelerator Challenge"         
+[17] "Energy Cluster Program"                            
+[18] "DOT - FAA Centers of Excellence"                   
+[19] "DOT Federal Highway Administration"                
+[20] "DOT OSDBU"                                         
+[21] "DOT-Federal Motor Carrier Safety Administration"   
+[22] "DOT-Federal Transit Administration - Inactive Site"
+[23] "DOT/Federal Transit Administration"                
+[24] "Federal Communications Commission"                 
+[25] "National Business Center"                          
+[26] "National Telecommunications and Information Admini"
+[27] "U.S. Dept. of Treasury RESTORE Act Program"        
+[28] "Volunteer Income Tax Assistance"                   
+[29] "Low Income Taxpayer Clinic"                        
+[30] "Tax Counseling for the Elderly"                    
+[31] "CMS Consumer Operated and Oriented Plan Program"   
+[32] "CMS-Consumer Information &amp; Insurance Oversight"    
+[33] "Office of Acquisitions Management"                 
+[34] "Office of Procurement Operations - Grants Division"
+[35] "Office of the Secretary"                           
+[36] "Office on Violence Against Women"                  
+[37] "Veterans Employment and Training Service"          
+[38] "Veterans Employment Pay for Success"               
+[39] "Office of Disability Employment Policy"            
+[40] "Office of Partnerships and Public Engagements"     
+[41] "Risk Management Agency"                            
+[42] "Risk Management Education"                         
+[43] "Office of the Assistant Secretary for Health"      
+[44] "Office of the National Coordinator"                
+[45] "Office of the Director of National Intelligence"   
+[46] "Office of the Middle East Partnership Initiative"  
+[47] "Office to Monitor-Combat Trafficking in Persons"   
+[48] "Office of Global Womens Issues"                    
+[49] "Office of Global Criminal Justice"                 
+[50] "Office of Justice Programs"                        
+[51] "Office of Juvenile Justice Delinquency Prevention" 
+[52] "Office for Victims of Crime"                       
+[53] "Office of Science"                                 
+[54] "Office of Surface Mining"                          
+[55] "Office of Mental Health and Suicide Prevention"    
+[56] "Office of National Drug Control Policy"            
+[57] "Office of the Secretary"                           
+[58] "Office of Policy ORES"                             
+[59] "Office of Acquisitions Management"                 
+[60] "Office of Procurement Operations - Grants Division"
+[61] "Office of the Secretary"                           
+[62] "Office on Violence Against Women"                  
+[63] "Veterans Employment and Training Service"          
+[64] "Veterans Employment Pay for Success"               
+[65] "Office of Disability Employment Policy"            
+[66] "Office of Partnerships and Public Engagements"     
+[67] "Risk Management Agency"                            
+[68] "Risk Management Education"                         
+[69] "Office of the Assistant Secretary for Health"      
+[70] "Office of the National Coordinator"                
+[71] "Office of the Director of National Intelligence"   
+[72] "Office of the Middle East Partnership Initiative"  
+[73] "Office to Monitor-Combat Trafficking in Persons"   
+[74] "Office of Global Womens Issues"                    
+[75] "Office of Global Criminal Justice"                 
+[76] "Office of Justice Programs"                        
+[77] "Office of Juvenile Justice Delinquency Prevention" 
+[78] "Office for Victims of Crime"                       
+[79] "Office of Science"                                 
+[80] "Office of Surface Mining"                          
+[81] "Office of Mental Health and Suicide Prevention"    
+[82] "Office of National Drug Control Policy"            
+
+$`Arts and Culture`
+[1] "National Endowment for the Arts"             
+[2] "National Endowment for the Humanities"       
+[3] "Institute of Museum and Library Services"    
+[4] "Library of Congress"                         
+[5] "National Archives and Records Administration"
+[6] "Smithsonian Institution"                     
+
+$`Social Services and Community Development`
+ [1] "Administration for Children &amp; Families - ACYF/FYSB"
+ [2] "Administration for Children and Families"          
+ [3] "Administration for Children and Families - ACYF/CB"
+ [4] "Administration for Children and Families - ANA"    
+ [5] "Administration for Children and Families - OCC"    
+ [6] "Administration for Children and Families - OCS"    
+ [7] "Administration for Children and Families - OCSE"   
+ [8] "Administration for Children and Families - OFA"    
+ [9] "Administration for Children and Families - OHS"    
+[10] "Administration for Children and Families - OHSEPR" 
+[11] "Administration for Children and Families - OPRE"   
+[12] "Administration for Children and Families - ORR"    
+[13] "Administration for Children and Families-IOAS-OTIP"
+[14] "Administration for Community Living"               
+[15] "Administration on Aging"                           
+[16] "AmeriCorps"                                        
+[17] "Community Capacity Development Office"             
+[18] "Community Development Financial Institutions"      
+[19] "Community Oriented Policing Services"              
+[20] "Corporation for National and Community Service"    
+[21] "Department of Housing and Urban Development"       
+[22] "Employment and Training Administration"            
+[23] "Health Resources and Services Administration"      
+[24] "Homeless Providers Grant and Per Diem Program"     
+[25] "Housing and Urban Development"                     
+[26] "Office of Juvenile Justice Delinquency Prevention" 
+[27] "Office of Local Defense Community Cooperation"     
+[28] "Office of the Assistant Secretary for Health"      
+[29] "Office on Violence Against Women"                  
+[30] "Rural Business-Cooperative Service"                
+[31] "Rural Housing Service"                             
+[32] "Rural Utilities Service"                           
+[33] "Social Security Administration"                    
+[34] "Substance Abuse and Mental Health Services Admin"  
+[35] "Substance Abuse and Mental Health Services Adminis"
+[36] "Supportive Services for Veteran Families"          
+[37] "Veterans Employment and Training Service"          
+[38] "Veterans Employment Pay for Success"               
+[39] "Veterans Legacy Grants Program"                    
+[40] "Volunteer Income Tax Assistance"                   
+[41] "Womens Bureau"                                     </code></pre>
+</div>
+</div>
+</section><section id="add-categories-to-dataframe" class="level2"><h2 class="anchored" data-anchor-id="add-categories-to-dataframe">Add categories to dataframe</h2>
+<p>Finally, I’ll add the category labels to the <code>grant_opportunity_details</code> dataframe. Since the categories are not mutually exclusive, I’ll encode them as boolean.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">categories_snakecase</span> <span class="op">&lt;-</span> <span class="fu">snakecase</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/snakecase/man/caseconverter.html">to_snake_case</a></span><span class="op">(</span><span class="va">categories</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">categories_snakecase</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">grant_opportunity_details</span> <span class="op">&lt;-</span> <span class="va">grant_opportunity_details</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="op">!</span><span class="op">!</span><span class="va">categories_snakecase</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">:=</span> <span class="va">agency_name</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">agencies_categorized</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="data-analysis" class="level1"><h1>Data analysis</h1>
+<p>Now that I have a list of agency categories, I can do some analysis. One question I might ask is how much total estimated funding is allocated to each of the agency categories?</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">estimated_total_funding</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="st">'category'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">'estimated_total_funding'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">c</span> <span class="kw">in</span> <span class="va">categories_snakecase</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">estimated_total_funding</span> <span class="op">&lt;-</span></span>
+<span>    <span class="va">estimated_total_funding</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>        <span class="st">'category'</span> <span class="op">=</span> <span class="va">c</span>,</span>
+<span>        <span class="st">'estimated_total_funding'</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="op">(</span><span class="va">grant_opportunity_details</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="op">!</span><span class="fu"><a href="https://rlang.r-lib.org/reference/sym.html">sym</a></span><span class="op">(</span><span class="va">c</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">estimated_total_program_funding</span>, na.rm<span class="op">=</span><span class="cn">T</span><span class="op">)</span></span>
+<span>      <span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">estimated_total_funding</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">estimated_total_funding</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>funding_billions <span class="op">=</span> <span class="fu">numform</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/numform/man/f_denom.html">f_bills</a></span><span class="op">(</span><span class="va">estimated_total_funding</span>, digits<span class="op">=</span><span class="op">-</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">estimated_total_funding</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">estimated_total_funding</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">category</span>, <span class="va">funding_billions</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                    category funding_billions
+1                     science_and_technology            52.9B
+2                agriculture_and_environment            39.7B
+3                     education_and_research            20.3B
+4          infrastructure_and_transportation            17.7B
+5          business_and_economic_development              16B
+6  social_services_and_community_development            12.6B
+7                       defense_and_military             9.4B
+8                        health_and_medicine             2.6B
+9                          international_aid             2.6B
+10                          arts_and_culture              .1B</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">estimated_total_funding</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">estimated_total_funding</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">estimated_total_funding_ordered</span></span>
+<span></span>
+<span><span class="va">estimated_total_funding_ordered</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">estimated_total_funding</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_inorder.html">fct_inorder</a></span><span class="op">(</span><span class="va">category</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">estimated_total_funding</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>      <span class="co"># Convert back from snake case to sentence case for better human readability</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_discrete.html">scale_x_discrete</a></span><span class="op">(</span>labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="fu">snakecase</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/snakecase/man/caseconverter.html">to_sentence_case</a></span><span class="op">(</span><span class="va">estimated_total_funding_ordered</span><span class="op">$</span><span class="va">category</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/unit_format.html">unit_format</a></span><span class="op">(</span>unit <span class="op">=</span> <span class="st">"B"</span>, scale <span class="op">=</span> <span class="fl">1e-9</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">''</span>, y <span class="op">=</span> <span class="st">'Funding in Billions'</span>, title <span class="op">=</span> <span class="st">'Funding by US Government Agency Category'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#ggsave("social-image.png", height=960, width=1344, units = 'px', dpi=150)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><script src="https://giscus.app/client.js" data-repo="tylerburleigh/tylerburleigh.github.io" data-repo-id="R_kgDOKMo8ww" data-category="Blog comments" data-category-id="DIC_kwDOIg6EJc4CSz92" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark"><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Using GPT-4 for classification'</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-10-08</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category."</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> social-image.png</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="an">open-graph:</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - GPT</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>GPT is a powerful new tool in the Data Science toolkit. Used correctly, it can increase productivity while decreasing the "drudgery" of boring tasks like data cleaning. I've been trying to find ways to integrate GPT into my data science workflow, and I thought it might be fun to use it with the latest Tidy Tuesday. (<span class="co">[</span><span class="ot">US Government Grant Opportunities</span><span class="co">](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-03/readme.md)</span>). So in this blog post, I use GPT to classify US grant-funding agencies into categories using government agency names.</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load libraries and data</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="in">library(DescTools)</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="in">library(keyring)</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="in">library(httr)</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="in">library(jsonlite)</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="in">library(numform)</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="in">library(scales)</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="in">library(snakecase)</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="in">grants &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grants.csv')</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="in">grant_opportunity_details &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-10-03/grant_opportunity_details.csv')</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="in"># Load cached ChatGPT results from disk</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="in">load('categories.Rdata')</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="in">load('agencies_categorized.Rdata')</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># GPT function</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>I'll define a function for querying ChatGPT (<span class="co">[</span><span class="ot">source</span><span class="co">](https://www.listendata.com/2023/05/chatgpt-in-r.html)</span>). This function will use GPT-4 as the model, and the temperature will be set to 0. Temperature defines how stable the responses will be. A temperature closer to 1 is better for creative tasks where high variability is desired, like creative writing. A temperature of 0 is more "boring" but also more stable. This is desirable for classification tasks.</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="co"># ChatGPT function</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>chatGPT <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt, </span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>                    <span class="at">modelName =</span> <span class="st">"gpt-4"</span>,</span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>                    <span class="at">temperature =</span> <span class="dv">0</span>,</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>                    <span class="at">apiKey =</span> keyring<span class="sc">::</span><span class="fu">key_get</span>(<span class="st">'openai'</span>)) {</span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> <span class="fu">POST</span>(</span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">url =</span> <span class="st">"https://api.openai.com/v1/chat/completions"</span>, </span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_headers</span>(<span class="at">Authorization =</span> <span class="fu">paste</span>(<span class="st">"Bearer"</span>, apiKey)),</span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">content_type_json</span>(),</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">encode =</span> <span class="st">"json"</span>,</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">body =</span> <span class="fu">list</span>(</span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>      <span class="at">model =</span> modelName,</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>      <span class="at">temperature =</span> temperature,</span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>      <span class="at">messages =</span> <span class="fu">list</span>(<span class="fu">list</span>(</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>        <span class="at">role =</span> <span class="st">"user"</span>, </span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>        <span class="at">content =</span> prompt</span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>      ))</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">status_code</span>(response)<span class="sc">&gt;</span><span class="dv">200</span>) {</span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="fu">content</span>(response))</span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trimws</span>(<span class="fu">content</span>(response)<span class="sc">$</span>choices[[<span class="dv">1</span>]]<span class="sc">$</span>message<span class="sc">$</span>content)</span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a><span class="fu"># List of agencies</span></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>I'll generate a distinct list of US government agencies in the dataset, and then format them as a comma-separated string. This will make it easy to append to a prompt string when querying GPT.</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>agencies <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(grants<span class="sc">$</span>agency_name))</span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(agencies,<span class="at">collapse =</span> <span class="st">', '</span>) <span class="ot">-&gt;</span> agencies_str</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="fu"># Using GPT for classification</span></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>I'll split the classification task into two parts:</span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Give GPT the full list of agency names, and ask it to come up with N categories</span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each of the N categories, give GPT the full list of agency names, and ask it to identify the agencies that belong in each category</span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. Ask it to come up with categories</span></span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>First I'll ask GPT to define a fixed number of categories. Somewhat arbitrarily, I'll ask for 10.</span>
+<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">exists</span>(<span class="st">'categories'</span>)){</span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>  query <span class="ot">&lt;-</span> </span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(</span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I'm going to present a list of US agencies. </span></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="st">    Your task is to identify the 10 best categories </span></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="st">    to represent them. The categories should be based </span></span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="st">    on activities they're involved with, such as Defense </span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="st">    and Military, Science and Technology, Arts and Culture, </span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="st">    Health and Medicine, Education, International Aid, </span></span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="st">    etc... I want you to give me the list of categories </span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="st">    as a comma-separated list.</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a><span class="st">    ```"</span>, agencies_str, <span class="st">"```"</span></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">chatGPT</span>(query)</span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>  categories <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">strsplit</span>(results, <span class="st">","</span>)[[<span class="dv">1</span>]])</span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Save to disk</span></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">save</span>(categories, <span class="at">file =</span> <span class="st">'categories.Rdata'</span>)</span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(categories)</span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Ask it to classify agencies using agency names and categories</span></span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>Next, using the agency names and categories generated above I'll ask GPT to do classification. First, I'll define a function that takes a category as input and runs a query against GPT asking it to put the agencies into the provided category, returning a list of agencies that it put in that category. Although I could ask GPT to classify agencies using all categories in a single query, I expect this would be less reliable than tackling each category separately. One of the trade-offs here is that I won't get mutual exclusivity of the categories, since GPT won't know how it's already classified agencies. For this analysis, let's assume I don't want mutual exclusivity.</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a>get_agencies_in_category <span class="ot">&lt;-</span> <span class="cf">function</span>(category) {</span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>  query <span class="ot">&lt;-</span><span class="fu">paste0</span>(</span>
+<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a>    <span class="st">"I'm going to present a comma-separated list of US agencies,</span></span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="st">    delimited by triple backticks (```), and a single category to </span></span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="st">    which some of the agencies belong, delimited by triple hashtags (###). </span></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="st">    Your task is to provide a comma-separated list of agency names that </span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="st">    belong in the category provided.</span></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="st">    ```"</span>, agencies_str,  <span class="st">"```</span></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a><span class="st">    ###"</span>, category, <span class="st">"###"</span></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a>  results <span class="ot">&lt;-</span> <span class="fu">chatGPT</span>(query)</span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Return as a vector</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trimws</span>(<span class="fu">strsplit</span>(results, <span class="st">","</span>)[[<span class="dv">1</span>]])</span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a>Using the function above, I'll query GPT for each of the categories, saving the results into a list called <span class="in">`agencies_categorized`</span>.</span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">exists</span>(<span class="st">'agencies_categorized'</span>)){</span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a>  agencies_categorized <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (category <span class="cf">in</span> categories){</span>
+<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(category <span class="sc">!=</span> <span class="st">'Other'</span>){</span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>      agencies_categorized[[category]] <span class="ot">&lt;-</span> <span class="fu">get_agencies_in_category</span>(category) </span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Save to disk</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">save</span>(agencies_categorized, <span class="at">file =</span> <span class="st">'agencies_categorized.Rdata'</span>)</span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(agencies_categorized)</span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Add categories to dataframe</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a>Finally, I'll add the category labels to the <span class="in">`grant_opportunity_details`</span> dataframe. Since the categories are not mutually exclusive, I'll encode them as boolean.</span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>categories_snakecase <span class="ot">&lt;-</span> snakecase<span class="sc">::</span><span class="fu">to_snake_case</span>(categories)</span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="fu">length</span>(categories_snakecase))){</span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a>  grant_opportunity_details <span class="ot">&lt;-</span> grant_opportunity_details <span class="sc">%&gt;%</span></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="sc">!!</span>categories_snakecase[i] <span class="sc">:</span><span class="er">=</span> agency_name <span class="sc">%in%</span> agencies_categorized[i][[<span class="dv">1</span>]])</span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data analysis</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>Now that I have a list of agency categories, I can do some analysis. One question I might ask is how much total estimated funding is allocated to each of the agency categories?</span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a>estimated_total_funding <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">'category'</span> <span class="ot">=</span> <span class="fu">c</span>(), <span class="st">'estimated_total_funding'</span> <span class="ot">=</span> <span class="fu">c</span>())</span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (c <span class="cf">in</span> categories_snakecase){</span>
+<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>  estimated_total_funding <span class="ot">&lt;-</span></span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>    estimated_total_funding <span class="sc">%&gt;%</span></span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>      <span class="fu">bind_rows</span>(<span class="fu">data.frame</span>(</span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>        <span class="st">'category'</span> <span class="ot">=</span> c,</span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>        <span class="st">'estimated_total_funding'</span> <span class="ot">=</span> <span class="fu">sum</span>((grant_opportunity_details <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!!</span><span class="fu">sym</span>(c)))<span class="sc">$</span>estimated_total_program_funding, <span class="at">na.rm=</span>T)</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>      ))</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>estimated_total_funding <span class="ot">&lt;-</span> </span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>  estimated_total_funding <span class="sc">%&gt;%</span></span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">funding_billions =</span> numform<span class="sc">::</span><span class="fu">f_bills</span>(estimated_total_funding, <span class="at">digits=</span><span class="sc">-</span><span class="dv">8</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(estimated_total_funding))</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>estimated_total_funding <span class="sc">%&gt;%</span></span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(category, funding_billions)</span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>estimated_total_funding <span class="sc">%&gt;%</span></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(estimated_total_funding) <span class="ot">-&gt;</span> estimated_total_funding_ordered</span>
+<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>estimated_total_funding_ordered <span class="sc">%&gt;%</span></span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(estimated_total_funding) <span class="sc">%&gt;%</span></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_inorder</span>(category), <span class="at">y =</span> estimated_total_funding)) <span class="sc">+</span></span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a>      <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Convert back from snake case to sentence case for better human readability</span></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_x_discrete</span>(<span class="at">labels=</span><span class="fu">unique</span>(snakecase<span class="sc">::</span><span class="fu">to_sentence_case</span>(estimated_total_funding_ordered<span class="sc">$</span>category))) <span class="sc">+</span></span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">unit_format</span>(<span class="at">unit =</span> <span class="st">"B"</span>, <span class="at">scale =</span> <span class="fl">1e-9</span>)) <span class="sc">+</span></span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">''</span>, <span class="at">y =</span> <span class="st">'Funding in Billions'</span>, <span class="at">title =</span> <span class="st">'Funding by US Government Agency Category'</span>)</span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave("social-image.png", height=960, width=1344, units = 'px', dpi=150)</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block"><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i></a> 2014–2025 Tyler Burleigh</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <a href="https://quarto.org/">Quarto</a>, and the <a href="https://github.com/andrewheiss/ath-quarto">ath-quarto</a> theme</span></p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

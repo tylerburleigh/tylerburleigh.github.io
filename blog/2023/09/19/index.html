@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="Tyler Burleigh">
+<meta name="description" content="In this post I show how the performance of an ML model can be improved by encoding high cardinality features using “embeddings”, a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding.">
+<title>Encoding high cardinality features with “embeddings” | Tyler Burleigh – Tyler Burleigh</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../..//files/favico.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dd08061cb7210c315e315379d94beb87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-4c6f914d40da27735db8d274bf8358e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PRHQZ8HPLB"></script><script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
+</script><style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #170C3A;
+      }
+</style>
+<meta property="og:title" content="Encoding high cardinality features with “embeddings” | Tyler Burleigh">
+<meta property="og:description" content="In this post I show how the performance of an ML model can be improved by encoding high cardinality features using “embeddings”, a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding.">
+<meta property="og:image" content="https://tylerburleigh.com/blog/2023/09/19/social-image.png">
+<meta property="og:site_name" content="Tyler Burleigh">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Encoding high cardinality features with “embeddings” | Tyler Burleigh">
+<meta name="twitter:description" content="In this post I show how the performance of an ML model can be improved by encoding high cardinality features using “embeddings”, a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding.">
+<meta name="twitter:image" content="https://tylerburleigh.com/blog/2023/09/19/social-image.png">
+<meta name="twitter:image-height" content="900">
+<meta name="twitter:image-width" content="1600">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">Tyler Burleigh</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="../../../../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/users/tylerburleigh" rel="me"> <i class="bi bi-mastodon" role="img" aria-label="mastodon">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/tylerburleigh.bsky.social" rel="me"> <i class="bi bi-square" role="img" aria-label="bluesky">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tylerburleigh" rel="me"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/tylerburleigh" rel="me"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:tylerburleigh@gmail.com" rel="me"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default blog-post page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Encoding high cardinality features with “embeddings”</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                  <div>
+        <div class="description">
+          In this post I show how the performance of an ML model can be improved by encoding high cardinality features using “embeddings”, a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">machine-learning</div>
+                <div class="quarto-category">R</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://www.tylerburleigh.com/">Tyler Burleigh</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">Tuesday, September 19, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Contents</h2>
+   
+  <ul>
+<li><a href="#load-libraries" id="toc-load-libraries" class="nav-link active" data-scroll-target="#load-libraries">Load libraries</a></li>
+  <li><a href="#load-the-data" id="toc-load-the-data" class="nav-link" data-scroll-target="#load-the-data">Load the data</a></li>
+  <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">Categorical variables</a></li>
+  <li><a href="#traintest-split" id="toc-traintest-split" class="nav-link" data-scroll-target="#traintest-split">Train/test split</a></li>
+  <li>
+<a href="#categorical-encoding" id="toc-categorical-encoding" class="nav-link" data-scroll-target="#categorical-encoding">Categorical encoding</a>
+  <ul class="collapse">
+<li><a href="#one-hot-encoding" id="toc-one-hot-encoding" class="nav-link" data-scroll-target="#one-hot-encoding">One-hot encoding</a></li>
+  <li><a href="#label-encoding" id="toc-label-encoding" class="nav-link" data-scroll-target="#label-encoding">Label encoding</a></li>
+  <li><a href="#frequency-encoding" id="toc-frequency-encoding" class="nav-link" data-scroll-target="#frequency-encoding">Frequency encoding</a></li>
+  <li><a href="#target-encoding" id="toc-target-encoding" class="nav-link" data-scroll-target="#target-encoding">Target encoding</a></li>
+  </ul>
+</li>
+  <li><a href="#embedding-encoding" id="toc-embedding-encoding" class="nav-link" data-scroll-target="#embedding-encoding">Embedding encoding</a></li>
+  <li>
+<a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a>
+  <ul class="collapse">
+<li><a href="#model-fit-function" id="toc-model-fit-function" class="nav-link" data-scroll-target="#model-fit-function">Model fit function</a></li>
+  </ul>
+</li>
+  <li><a href="#model-results" id="toc-model-results" class="nav-link" data-scroll-target="#model-results">Model results</a></li>
+  </ul></nav>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It’s particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.</p>
+<p>In this blog post, I’ll show how ML models with embedding encoding outperform models with other common categorical encoding methods (frequency, label, one-hot, and target). For this demonstration, I’ll be using the dataset from <a href="https://www.kaggle.com/competitions/playground-series-s3e22/data">Kaggle’s Playground Series S3E22: Predict Health Outcomes of Horses</a>.</p>
+<section id="load-libraries" class="level1"><h1>Load libraries</h1>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/laresbernardo/lares">lares</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/imbs-hl/ranger">ranger</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dmlc/xgboost">xgboost</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/tensorflow">tensorflow</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tensorflow.rstudio.com/">keras</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/h2oai/h2o-3">h2o</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/UBC-MDS/encodeR">encodeR</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.init.html">h2o.init</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> Connection successful!
+
+R is connected to the H2O cluster: 
+    H2O cluster uptime:         6 days 23 hours 
+    H2O cluster timezone:       America/New_York 
+    H2O data parsing timezone:  UTC 
+    H2O cluster version:        3.42.0.2 
+    H2O cluster version age:    1 month and 30 days 
+    H2O cluster name:           H2O_started_from_R_tyler_wkj161 
+    H2O cluster total nodes:    1 
+    H2O cluster total memory:   3.11 GB 
+    H2O cluster total cores:    8 
+    H2O cluster allowed cores:  8 
+    H2O cluster healthy:        TRUE 
+    H2O Connection ip:          localhost 
+    H2O Connection port:        54321 
+    H2O Connection proxy:       NA 
+    H2O Internal Security:      FALSE 
+    R Version:                  R version 4.3.1 (2023-06-16) </code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.no_progress.html">h2o.no_progress</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="load-the-data" class="level1"><h1>Load the data</h1>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'data/playground-series-s3e22/train.csv'</span>, show_col_types <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="categorical-variables" class="level1"><h1>Categorical variables</h1>
+<p>This dataset contains 17 character columns.</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/h2o/man/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">class</span><span class="op">)</span> <span class="op">==</span> <span class="st">'character'</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "surgery"               "age"                   "temp_of_extremities"  
+ [4] "peripheral_pulse"      "mucous_membrane"       "capillary_refill_time"
+ [7] "pain"                  "peristalsis"           "abdominal_distention" 
+[10] "nasogastric_tube"      "nasogastric_reflux"    "rectal_exam_feces"    
+[13] "abdomen"               "abdomo_appearance"     "surgical_lesion"      
+[16] "cp_data"               "outcome"              </code></pre>
+</div>
+</div>
+<p>However, there are also several numeric categorical columns: <code>hospital_number</code>, <code>lesion_1</code>, <code>lesion_2</code>, and <code>lesion_3</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">hospital_number</span>, <span class="va">lesion_1</span>, <span class="va">lesion_2</span>, <span class="va">lesion_3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  hospital_number lesion_1 lesion_2 lesion_3
+            &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+1          530001     2209        0        0
+2          533836     2208        0        0
+3          529812     5124        0        0
+4         5262541     2208        0        0
+5         5299629        0        0        0
+6          529642        0        0        0</code></pre>
+</div>
+</div>
+<p><code>hospital_number</code> and <code>lesion_1</code> are of particular interest because they have so many levels.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">hospital_number</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 255</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">lesion_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 57</code></pre>
+</div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">lesion_2</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">lesion_3</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>Looking at the character columns, I see some case inconsistency (i.e., some columns have both “None” and “none”). Converting all strings to lowercase would help to at least combine the “none” types.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">char_cols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.character</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">col</span> <span class="kw">in</span> <span class="va">char_cols</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html">toupper</a></span><span class="op">(</span><span class="va">col</span><span class="op">)</span>, <span class="st">': '</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span><span class="va">col</span><span class="op">]</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>, collapse<span class="op">=</span><span class="st">', '</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "SURGERY: yes, no"
+[1] "AGE: adult, young"
+[1] "TEMP_OF_EXTREMITIES: cool, cold, normal, warm, None"
+[1] "PERIPHERAL_PULSE: reduced, normal, None, absent, increased"
+[1] "MUCOUS_MEMBRANE: dark_cyanotic, pale_cyanotic, pale_pink, normal_pink, bright_pink, bright_red, None"
+[1] "CAPILLARY_REFILL_TIME: more_3_sec, less_3_sec, None, 3"
+[1] "PAIN: depressed, mild_pain, extreme_pain, alert, severe_pain, None, slight"
+[1] "PERISTALSIS: absent, hypomotile, normal, hypermotile, None, distend_small"
+[1] "ABDOMINAL_DISTENTION: slight, moderate, none, severe, None"
+[1] "NASOGASTRIC_TUBE: slight, none, significant, None"
+[1] "NASOGASTRIC_REFLUX: less_1_liter, more_1_liter, none, None, slight"
+[1] "RECTAL_EXAM_FECES: decreased, absent, None, normal, increased, serosanguious"
+[1] "ABDOMEN: distend_small, distend_large, normal, firm, None, other"
+[1] "ABDOMO_APPEARANCE: serosanguious, cloudy, clear, None"
+[1] "SURGICAL_LESION: yes, no"
+[1] "CP_DATA: no, yes"
+[1] "OUTCOME: died, euthanized, lived"</code></pre>
+</div>
+</div>
+</section><section id="traintest-split" class="level1"><h1>Train/test split</h1>
+<p>Before diving into categorical encoding methods, I’ll do a train/test split. I’ll also convert the character columns to lowercase to address the problem I mentioned above (“None” vs.&nbsp;“none”), and I’ll convert <code>hospital_number</code> to categorical.</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate_all.html">mutate_if</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.character</span><span class="op">)</span>, .funs<span class="op">=</span><span class="va">tolower</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>outcome <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.factor.html">as.factor</a></span><span class="op">(</span><span class="va">outcome</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.character</span><span class="op">)</span>, <span class="va">factor</span><span class="op">)</span>,</span>
+<span>         hospital_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.factor.html">as.factor</a></span><span class="op">(</span><span class="va">hospital_number</span><span class="op">)</span>,</span>
+<span>         lesion_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.factor.html">as.factor</a></span><span class="op">(</span><span class="va">lesion_1</span><span class="op">)</span>,</span>
+<span>         lesion_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.factor.html">as.factor</a></span><span class="op">(</span><span class="va">lesion_2</span><span class="op">)</span>,</span>
+<span>         lesion_3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.factor.html">as.factor</a></span><span class="op">(</span><span class="va">lesion_3</span><span class="op">)</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">df</span></span>
+<span></span>
+<span><span class="va">split</span> <span class="op">&lt;-</span> <span class="fu">initial_split</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span><span class="va">train</span> <span class="op">&lt;-</span> <span class="fu">training</span><span class="op">(</span><span class="va">split</span><span class="op">)</span></span>
+<span><span class="va">test</span> <span class="op">&lt;-</span> <span class="fu">testing</span><span class="op">(</span><span class="va">split</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="categorical-encoding" class="level1"><h1>Categorical encoding</h1>
+<section id="one-hot-encoding" class="level2"><h2 class="anchored" data-anchor-id="one-hot-encoding">One-hot encoding</h2>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recipe_1hot_with_novel</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_novel</span><span class="op">(</span><span class="fu">all_nominal_predictors</span><span class="op">(</span><span class="op">)</span>, new_level <span class="op">=</span> <span class="st">"NA"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_dummy</span><span class="op">(</span><span class="fu">all_nominal_predictors</span><span class="op">(</span><span class="op">)</span>, one_hot<span class="op">=</span><span class="cn">T</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The first – and probably most popular – type of categorical encoding is one-hot encoding. One-hot encoding transforms a single categorical variable with N levels into binary variables encoding each of the N levels.</p>
+<p>For example, <code>age</code> is a categorical variable with 2 levels.</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">train</span><span class="op">$</span><span class="va">age</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "adult" "young"</code></pre>
+</div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">train</span><span class="op">$</span><span class="va">age</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>When <code>age</code> is one-hot encoded, a column is created for each level to encode the value (e.g., if the original value was <code>adult</code>, then the <code>age_adult</code> column gets a 1 and the other columns get a 0). And since I’ve also included a step to encode novel levels as <code>NA</code>, there is also a third column for that.</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recipe_1hot_with_novel</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">prep</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">bake</span><span class="op">(</span>new_data <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">'age'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  age_adult age_young age_NA.
+      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1         1         0       0
+2         1         0       0
+3         1         0       0</code></pre>
+</div>
+</div>
+</section><section id="label-encoding" class="level2"><h2 class="anchored" data-anchor-id="label-encoding">Label encoding</h2>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recipe_label</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_integer</span><span class="op">(</span><span class="fu">all_nominal_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With label encoding, each level of the categorical variable is given an (arbitrary) number. In the <code>tidymodels</code> framework, <code>step_integer</code> works like scikit’s <code>LabelEncoder</code>, and encodes new values as zero. Here we see that one level of <code>age</code> was encoded as “1” and the other was encoded as “2”.</p>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recipe_label</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">prep</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">bake</span><span class="op">(</span>new_data <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">age</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="va">distinct</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 1
+    age
+  &lt;int&gt;
+1     1
+2     2</code></pre>
+</div>
+</div>
+</section><section id="frequency-encoding" class="level2"><h2 class="anchored" data-anchor-id="frequency-encoding">Frequency encoding</h2>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">freq_encoding</span> <span class="op">&lt;-</span> <span class="fu">encodeR</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/encodeR/man/frequency_encoder.html">frequency_encoder</a></span><span class="op">(</span></span>
+<span>  X_train <span class="op">=</span> <span class="va">train</span>,</span>
+<span>  X_test <span class="op">=</span> <span class="va">test</span>, </span>
+<span>  cat_columns <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.factor</span><span class="op">)</span>, <span class="op">-</span><span class="va">outcome</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">train_freq</span> <span class="op">&lt;-</span> <span class="va">freq_encoding</span><span class="op">$</span><span class="va">train</span></span>
+<span><span class="va">test_freq</span> <span class="op">&lt;-</span> <span class="va">freq_encoding</span><span class="op">$</span><span class="va">test</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With frequency encoding, levels of the categorical variable are replaced with their frequency. Here, we can see how the levels of <code>age</code> have been replaced with their frequency in the training set. (When this is applied to the test set, these same training frequencies will be used.)</p>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">train_freq</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">age</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 1
+     age
+   &lt;dbl&gt;
+1 0.937 
+2 0.0626</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">recipe_freq</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train_freq</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="target-encoding" class="level2"><h2 class="anchored" data-anchor-id="target-encoding">Target encoding</h2>
+<p>For target encoding (also called “effect encoding” or “likelihood encoding”), I’ll be using the <code>h2o</code> package because it supports multi-class targets. (The <code>embed</code> package can also do target encoding and integrates better with a tidymodels workflow, but at the moment it only supports binary targets.)</p>
+<p>Using <code>h2o</code> requires some additional setup.</p>
+<div class="cell">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Convert to h2o format</span></span>
+<span><span class="va">df_h2o</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.h2o.html">as.h2o</a></span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Split the dataset into train and test</span></span>
+<span><span class="va">splits_h2o</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.splitFrame.html">h2o.splitFrame</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_h2o</span>, ratios <span class="op">=</span> <span class="fl">.8</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span>
+<span><span class="va">train_h2o</span> <span class="op">&lt;-</span> <span class="va">splits_h2o</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="va">test_h2o</span> <span class="op">&lt;-</span> <span class="va">splits_h2o</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With target encoding, the levels of the categorical variable are replaced with their mean value on the target. For example, if the level “young” was associated with a mean target value of 0.75, then this is the value with which that level would be replaced.</p>
+<p>Because the outcome is being used for encoding, care needs to be taken when using this method to avoid leakage and overfitting. In this case, I’ll use the “Leave One Out” method: for each row, the mean is calculated over all rows excluding that row.</p>
+<div class="cell">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Choose which columns to encode</span></span>
+<span><span class="va">encode_columns</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/colnames.html">colnames</a></span><span class="op">(</span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.factor</span><span class="op">)</span>, <span class="op">-</span><span class="va">outcome</span><span class="op">)</span><span class="op">)</span> <span class="co"># All categorical variables</span></span>
+<span></span>
+<span><span class="co"># Train a TE model</span></span>
+<span><span class="va">te_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.targetencoder.html">h2o.targetencoder</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">encode_columns</span>,</span>
+<span>                              y <span class="op">=</span> <span class="st">'outcome'</span>, </span>
+<span>                              keep_original_categorical_columns<span class="op">=</span><span class="cn">T</span>,</span>
+<span>                              training_frame <span class="op">=</span> <span class="va">train_h2o</span>,</span>
+<span>                              noise<span class="op">=</span><span class="fl">0</span>,</span>
+<span>                              seed<span class="op">=</span><span class="fl">100</span>,</span>
+<span>                              blending <span class="op">=</span> <span class="cn">T</span>, <span class="co"># Blending helps with levels that are more rare</span></span>
+<span>                              data_leakage_handling <span class="op">=</span> <span class="st">"LeaveOneOut"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># New target encoded training and test datasets</span></span>
+<span><span class="va">train_te</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.transform.html">h2o.transform</a></span><span class="op">(</span><span class="va">te_model</span>, <span class="va">train_h2o</span><span class="op">)</span></span>
+<span><span class="va">test_te</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.transform.html">h2o.transform</a></span><span class="op">(</span><span class="va">te_model</span>, <span class="va">test_h2o</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here we can see how the target encoding strategy encoded <code>age</code>: Two new variables are created, <code>age_euthanized_te</code> and <code>age_lived_te</code>. The encoded values represent the proportion of cases that were euthanized, or lived, for each level of <code>age</code>. (Note: The “died” level of the outcome variable is missing. This is because if we know the proportion that were euthanized and lived, we also know the proportion that died.)</p>
+<div class="cell">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">train_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">'age'</span><span class="op">)</span> <span class="op">&amp;</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">ends_with</a></span><span class="op">(</span><span class="st">'te'</span><span class="op">)</span>, <span class="va">age</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age_euthanized_te age_lived_te   age
+1        0.20937841    0.4776445 adult
+2        0.06005923    0.2157985 young</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Drop the unencoded columns</span></span>
+<span><span class="va">train_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">all_of</a></span><span class="op">(</span><span class="va">encode_columns</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.h2o.html">as.h2o</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">train_te</span></span>
+<span><span class="va">test_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">all_of</a></span><span class="op">(</span><span class="va">encode_columns</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/as.h2o.html">as.h2o</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">test_te</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a recipe to use later</span></span>
+<span><span class="va">recipe_target</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="embedding-encoding" class="level1"><h1>Embedding encoding</h1>
+<p>Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It’s particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.</p>
+<p>For example, the variable <code>pain</code> has 7 levels.</p>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">train</span><span class="op">$</span><span class="va">pain</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "alert"        "depressed"    "extreme_pain" "mild_pain"    "none"        
+[6] "severe_pain"  "slight"      </code></pre>
+</div>
+</div>
+<p>But using embeddings, I can “project” these 7 levels onto a smaller set of dimensions – say 3.</p>
+<div class="cell">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pain_embedding</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">embed</span><span class="fu">::</span><span class="fu"><a href="https://embed.tidymodels.org/reference/step_embed.html">step_embed</a></span><span class="op">(</span><span class="va">pain</span>, </span>
+<span>                    outcome <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">outcome</span><span class="op">)</span>,</span>
+<span>                    predictors <span class="op">=</span> <span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                    hidden_units <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                    num_terms <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                    keep_original_cols <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tensorflow</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tensorflow/man/set_random_seed.html">set_random_seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span><span class="va">pain_embedding</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">prep</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">bake</span><span class="op">(</span>new_data <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">'pain'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  pain         pain_embed_1 pain_embed_2 pain_embed_3
+  &lt;fct&gt;               &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+1 mild_pain         0.0466      -0.00297     0.000295
+2 depressed         0.0470      -0.0332      0.00238 
+3 severe_pain      -0.00442     -0.0437     -0.0509  
+4 alert             0.0450      -0.0422      0.0152  
+5 extreme_pain      0.0131      -0.0414     -0.00536 
+6 none              0.0293      -0.0480     -0.0285  </code></pre>
+</div>
+</div>
+<p>I want to use embedding strategically. Since embeddings are particularly useful to project into lower-dimensional space, this means it’s going to be most useful for categorical variables that have many levels. For variables with fewer than 3 levels, I’ll use one-hot encoding. For variables with more than 3 levels, I’ll use embeddings and project them onto 3 levels. I’ll project <code>hospital_number</code> onto 50 levels, and <code>lesion_1</code> onto 25 levels. (This is somewhat arbitrary; I did a quick few tests – not shown here – to arrive at these numbers.)</p>
+<div class="cell">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">hospital_number</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 255</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cat_cols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/colnames.html">colnames</a></span><span class="op">(</span><span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.factor</span><span class="op">)</span>, <span class="op">-</span><span class="va">outcome</span>, <span class="op">-</span><span class="va">hospital_number</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">cols_for_onehot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">cols_for_embedding</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">cols_embedding_special</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'lesion_1'</span>, <span class="st">'hospital_number'</span><span class="op">)</span></span>
+<span><span class="kw">for</span><span class="op">(</span><span class="va">col</span> <span class="kw">in</span> <span class="va">cat_cols</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">train</span><span class="op">[</span><span class="va">col</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">&lt;=</span> <span class="fl">3</span><span class="op">)</span><span class="op">{</span></span>
+<span>    <span class="va">cols_for_onehot</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html">append</a></span><span class="op">(</span><span class="va">cols_for_onehot</span>, <span class="va">col</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="kw">else</span> <span class="op">{</span></span>
+<span>    <span class="va">cols_for_embedding</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/append.html">append</a></span><span class="op">(</span><span class="va">cols_for_embedding</span>, <span class="va">col</span><span class="op">)</span></span>
+<span>    <span class="va">cols_for_embedding</span> <span class="op">=</span> <span class="va">cols_for_embedding</span><span class="op">[</span><span class="op">!</span><span class="va">cols_for_embedding</span> <span class="op"><a href="https://rdrr.io/pkg/h2o/man/h2o.match.html">%in%</a></span> <span class="va">cols_embedding_special</span><span class="op">]</span></span>
+<span>  <span class="op">}</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">recipe_embedding</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu">recipe</span><span class="op">(</span><span class="va">outcome</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_normalize</span><span class="op">(</span><span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_novel</span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">all_of</a></span><span class="op">(</span><span class="va">cols_for_onehot</span><span class="op">)</span>, new_level <span class="op">=</span> <span class="st">"NA"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">step_dummy</span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">all_of</a></span><span class="op">(</span><span class="va">cols_for_onehot</span><span class="op">)</span>, one_hot<span class="op">=</span><span class="cn">T</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">embed</span><span class="fu">::</span><span class="fu"><a href="https://embed.tidymodels.org/reference/step_embed.html">step_embed</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">all_of</a></span><span class="op">(</span><span class="va">cols_for_embedding</span><span class="op">)</span>, </span>
+<span>                    outcome <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">outcome</span><span class="op">)</span>,</span>
+<span>                    predictors <span class="op">=</span> <span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                    hidden_units <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                    num_terms <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                    keep_original_cols <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">embed</span><span class="fu">::</span><span class="fu"><a href="https://embed.tidymodels.org/reference/step_embed.html">step_embed</a></span><span class="op">(</span><span class="va">hospital_number</span>, </span>
+<span>                    outcome <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">outcome</span><span class="op">)</span>,</span>
+<span>                    predictors <span class="op">=</span> <span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                    hidden_units <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                    num_terms <span class="op">=</span> <span class="fl">50</span>,</span>
+<span>                    keep_original_cols <span class="op">=</span> <span class="cn">F</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">embed</span><span class="fu">::</span><span class="fu"><a href="https://embed.tidymodels.org/reference/step_embed.html">step_embed</a></span><span class="op">(</span><span class="va">lesion_1</span>, </span>
+<span>                    outcome <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/vars.html">vars</a></span><span class="op">(</span><span class="va">outcome</span><span class="op">)</span>,</span>
+<span>                    predictors <span class="op">=</span> <span class="fu">all_numeric_predictors</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>                    hidden_units <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                    num_terms <span class="op">=</span> <span class="fl">25</span>,</span>
+<span>                    keep_original_cols <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="modeling" class="level1"><h1>Modeling</h1>
+<p>Now onto some modeling.</p>
+<p>I’ll define 3 models to evaluate: multinomial logistic regression, random forest, and xgboost.</p>
+<div class="cell">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">multinom_mod</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu">multinom_reg</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="co"># Need to bump the max weights, otherwise it won't run</span></span>
+<span>  <span class="fu">set_engine</span><span class="op">(</span><span class="st">"nnet"</span>, MaxNWts <span class="op">=</span> <span class="fl">10000</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">set_mode</span><span class="op">(</span><span class="st">"classification"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ranger_mod</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu">rand_forest</span><span class="op">(</span>trees<span class="op">=</span><span class="fl">1000</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">set_engine</span><span class="op">(</span><span class="st">"ranger"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">set_mode</span><span class="op">(</span><span class="st">"classification"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">xgboost_mod</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu">boost_tree</span><span class="op">(</span>trees<span class="op">=</span><span class="fl">50</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">set_engine</span><span class="op">(</span><span class="st">"xgboost"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">set_mode</span><span class="op">(</span><span class="st">"classification"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="model-fit-function" class="level2"><h2 class="anchored" data-anchor-id="model-fit-function">Model fit function</h2>
+<p>With 3 models and 5 categorical encodings, I’ll need to fit 15 models. To streamline this process, I’ll define two functions:</p>
+<ul>
+<li>
+<code>fit_model()</code>: Given training and test datasets, a workflow containing a recipe for the categorical encoding, a model type, and an encoding type, this function will evaluate the model in-sample using cross-validation, then evaluate it out-of-sample, and then return a dataframe containing the results</li>
+<li>
+<code>fit_encodings()</code>: Given a model and model type, this function will generate recipes for each of the 5 categorical encodings, fit the 5 encodings using the model, and then return a dataframe with the results</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fit_model</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">train</span>, <span class="va">test</span>, <span class="va">workflow</span>, <span class="va">model_type</span>, <span class="va">encoding_type</span><span class="op">)</span><span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span>  <span class="va">folds</span> <span class="op">&lt;-</span> <span class="fu">vfold_cv</span><span class="op">(</span><span class="va">train</span>, v <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">resampled_fit</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="va">workflow</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">fit_resamples</span><span class="op">(</span><span class="va">folds</span>,</span>
+<span>                  metrics <span class="op">=</span> <span class="fu">metric_set</span><span class="op">(</span><span class="va">f_meas</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># Get in-sample F1</span></span>
+<span>  <span class="op">(</span><span class="va">resampled_fit</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">collect_metrics</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">mean</span> <span class="op">-&gt;</span> <span class="va">train_perf</span></span>
+<span>  </span>
+<span>  <span class="co"># Get out-of-sample F1</span></span>
+<span>  <span class="va">fit</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="va">workflow</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://generics.r-lib.org/reference/fit.html">fit</a></span><span class="op">(</span><span class="va">train</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="va">test</span><span class="op">$</span><span class="va">pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">fit</span>, <span class="va">test</span><span class="op">)</span><span class="op">$</span><span class="va">.pred_class</span></span>
+<span>  <span class="op">(</span><span class="fu">f_meas</span><span class="op">(</span><span class="va">test</span>, <span class="va">outcome</span>, <span class="va">pred</span>, estimator<span class="op">=</span><span class="st">'micro'</span><span class="op">)</span><span class="op">)</span><span class="op">$</span><span class="va">.estimate</span> <span class="op">-&gt;</span> <span class="va">test_perf</span></span>
+<span>  </span>
+<span>  <span class="co"># Combine in-sample and out-of-sample into a dataframe</span></span>
+<span>  <span class="va">df_perf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>model_type <span class="op">=</span> <span class="va">model_type</span>,</span>
+<span>                        encoding_type <span class="op">=</span> <span class="va">encoding_type</span>,</span>
+<span>                        train_perf <span class="op">=</span> <span class="va">train_perf</span>,</span>
+<span>                        test_perf <span class="op">=</span> <span class="va">test_perf</span><span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">df_perf</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Given a model, run it across the 4 encodings and return a dataframe that summarizes the results</span></span>
+<span><span class="va">fit_encodings</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">model</span>, <span class="va">model_type</span><span class="op">)</span><span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span>  <span class="fu">tensorflow</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tensorflow/man/set_random_seed.html">set_random_seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># One-hot encoded model</span></span>
+<span>  <span class="va">wflow_1hot</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">workflow</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">add_model</span><span class="op">(</span><span class="va">model</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">add_recipe</span><span class="op">(</span><span class="va">recipe_1hot_with_novel</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fit_model</span><span class="op">(</span><span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">test</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">wflow_1hot</span>, </span>
+<span>            <span class="va">model_type</span>,</span>
+<span>            <span class="st">'onehot'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">onehot_model_results</span></span>
+<span>  </span>
+<span>  <span class="co"># Label encoded model</span></span>
+<span>  <span class="va">wflow_label</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">workflow</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">add_model</span><span class="op">(</span><span class="va">model</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">add_recipe</span><span class="op">(</span><span class="va">recipe_label</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fit_model</span><span class="op">(</span><span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">test</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">wflow_label</span>, </span>
+<span>            <span class="va">model_type</span>,</span>
+<span>            <span class="st">'label'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">label_model_results</span></span>
+<span>  </span>
+<span>  <span class="co"># Frequency encoded model</span></span>
+<span>  <span class="va">wflow_freq</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">workflow</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">add_model</span><span class="op">(</span><span class="va">model</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">add_recipe</span><span class="op">(</span><span class="va">recipe_freq</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fit_model</span><span class="op">(</span><span class="va">train_freq</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">test_freq</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">wflow_freq</span>, </span>
+<span>            <span class="va">model_type</span>,</span>
+<span>            <span class="st">'frequency'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">freq_model_results</span></span>
+<span>  </span>
+<span>  <span class="co"># Target encoded model</span></span>
+<span>  <span class="va">wflow_target</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">workflow</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">add_model</span><span class="op">(</span><span class="va">model</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">add_recipe</span><span class="op">(</span><span class="va">recipe_target</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fit_model</span><span class="op">(</span><span class="va">train_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">test_te</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">wflow_target</span>, </span>
+<span>            <span class="va">model_type</span>,</span>
+<span>            <span class="st">'target'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">target_model_results</span></span>
+<span>  </span>
+<span>  </span>
+<span>  <span class="co"># Embedding encoded model</span></span>
+<span>  <span class="va">wflow_embedding</span> <span class="op">&lt;-</span> </span>
+<span>    <span class="fu">workflow</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>    <span class="fu">add_model</span><span class="op">(</span><span class="va">model</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu">add_recipe</span><span class="op">(</span><span class="va">recipe_embedding</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="fu">fit_model</span><span class="op">(</span><span class="va">train</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">test</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">id</span><span class="op">)</span>, </span>
+<span>            <span class="va">wflow_embedding</span>, </span>
+<span>            <span class="va">model_type</span>,</span>
+<span>            <span class="st">'embedding'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">embedding_model_results</span></span>
+<span>  </span>
+<span>  <span class="co"># Compile results into a dataframe</span></span>
+<span>  <span class="va">onehot_model_results</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">label_model_results</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">freq_model_results</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">target_model_results</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">embedding_model_results</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">results</span></span>
+<span>  </span>
+<span>  <span class="va">results</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I’ll run each of the models using the <code>fit_encodings()</code> and <code>fit_model()</code> functions that I just defined.</p>
+<div class="cell">
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">fit_encodings</span><span class="op">(</span><span class="va">multinom_mod</span>, <span class="st">'multinomial logistic'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">multinom_results</span></span>
+<span><span class="fu">fit_encodings</span><span class="op">(</span><span class="va">ranger_mod</span>, <span class="st">'random forest'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">rf_results</span></span>
+<span><span class="fu">fit_encodings</span><span class="op">(</span><span class="va">xgboost_mod</span>, <span class="st">'xgboost'</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">xgb_results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="model-results" class="level1"><h1>Model results</h1>
+<p>Looking at the results, I can see that best models used embedding encoding.</p>
+<div class="cell">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">multinom_results</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">rf_results</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">xgb_results</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">model_results</span></span>
+<span></span>
+<span><span class="va">model_results</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">test_perf</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             model_type encoding_type train_perf test_perf
+1         random forest     embedding  0.6929861 0.7411003
+2               xgboost     embedding  0.6605987 0.7346278
+3         random forest        onehot  0.6987098 0.7184466
+4               xgboost        onehot  0.6767644 0.7055016
+5               xgboost     frequency  0.6420888 0.7055016
+6               xgboost         label  0.6731541 0.7022654
+7         random forest     frequency  0.6880972 0.6990291
+8         random forest        target  0.7679964 0.6964981
+9         random forest         label  0.6880056 0.6925566
+10 multinomial logistic         label  0.6304815 0.6828479
+11 multinomial logistic     frequency  0.6343780 0.6796117
+12 multinomial logistic     embedding  0.6223733 0.6699029
+13 multinomial logistic        target  0.7761116 0.6614786
+14              xgboost        target  0.7694992 0.6498054
+15 multinomial logistic        onehot  0.5479512 0.6084142</code></pre>
+</div>
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">model_results</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/h2o/man/h2o.ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">encoding_type</span> <span class="op">==</span> <span class="st">'embedding'</span>, <span class="st">'1'</span>, <span class="st">'0'</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">model_type</span>, </span>
+<span>                 group <span class="op">=</span> <span class="va">encoding_type</span>, </span>
+<span>                 fill <span class="op">=</span> <span class="va">encoding_type</span>, </span>
+<span>                 y <span class="op">=</span> <span class="va">test_perf</span>,</span>
+<span>                 color <span class="op">=</span> <span class="va">colors</span><span class="op">)</span>, position<span class="op">=</span><span class="st">'dodge'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>limits<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.60</span>, <span class="fl">0.75</span><span class="op">)</span>, oob <span class="op">=</span> <span class="va">rescale_none</span>, breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0.60</span>, <span class="fl">0.75</span>, <span class="fl">0.01</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">'F1 score by model type and categorical encoding method'</span>, </span>
+<span>         subtitle <span class="op">=</span> <span class="st">'The best models used embedding encoding'</span>,</span>
+<span>         fill <span class="op">=</span> <span class="st">'Encoding'</span>, y <span class="op">=</span> <span class="st">'F1 score'</span>, x <span class="op">=</span> <span class="st">'Model'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"white"</span>, <span class="st">"black"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/guides.html">guides</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#ggsave &lt;- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)</span></span>
+<span><span class="co">#ggsave('social-image.png', width=1600, height=900, units='px')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/tylerburleigh\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><script src="https://giscus.app/client.js" data-repo="tylerburleigh/tylerburleigh.github.io" data-repo-id="R_kgDOKMo8ww" data-category="Blog comments" data-category-id="DIC_kwDOIg6EJc4CSz92" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><input type="hidden" id="giscus-base-theme" value="light"><input type="hidden" id="giscus-alt-theme" value="dark"><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb54" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Encoding high cardinality features with "embeddings"'</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2023-09-19</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "In this post I show how the performance of an ML model can be improved by encoding high cardinality features using \"embeddings\", a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding."</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> social-image.png</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="an">twitter-card:</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="an">open-graph:</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="co">  image: "social-image.png"</span></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span></span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - machine-learning</span></span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a><span class="co">  - R</span></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="an">freeze:</span><span class="co"> true</span></span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It's particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>In this blog post, I'll show how ML models with embedding encoding outperform models with other common categorical encoding methods (frequency, label, one-hot, and target). For this demonstration, I'll be using the dataset from <span class="co">[</span><span class="ot">Kaggle's Playground Series S3E22: Predict Health Outcomes of Horses</span><span class="co">](https://www.kaggle.com/competitions/playground-series-s3e22/data)</span>.</span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load libraries</span></span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidymodels)</span></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="in">library(lares)</span></span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a><span class="in">library(ranger)</span></span>
+<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a><span class="in">library(xgboost)</span></span>
+<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a><span class="in">library(tensorflow)</span></span>
+<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a><span class="in">library(keras)</span></span>
+<span id="cb54-31"><a href="#cb54-31" aria-hidden="true" tabindex="-1"></a><span class="in">library(h2o)</span></span>
+<span id="cb54-32"><a href="#cb54-32" aria-hidden="true" tabindex="-1"></a><span class="in">library(encodeR)</span></span>
+<span id="cb54-33"><a href="#cb54-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="in">h2o.init()</span></span>
+<span id="cb54-35"><a href="#cb54-35" aria-hidden="true" tabindex="-1"></a><span class="in">h2o.no_progress()</span></span>
+<span id="cb54-36"><a href="#cb54-36" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-37"><a href="#cb54-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load the data</span></span>
+<span id="cb54-39"><a href="#cb54-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/playground-series-s3e22/train.csv'</span>, <span class="at">show_col_types =</span> F)</span>
+<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a><span class="fu"># Categorical variables</span></span>
+<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-48"><a href="#cb54-48" aria-hidden="true" tabindex="-1"></a>This dataset contains 17 character columns.</span>
+<span id="cb54-49"><a href="#cb54-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-50"><a href="#cb54-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb54-51"><a href="#cb54-51" aria-hidden="true" tabindex="-1"></a><span class="in">colnames(df[, sapply(df, class) == 'character'])</span></span>
+<span id="cb54-52"><a href="#cb54-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-53"><a href="#cb54-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-54"><a href="#cb54-54" aria-hidden="true" tabindex="-1"></a>However, there are also several numeric categorical columns: <span class="in">`hospital_number`</span>, <span class="in">`lesion_1`</span>, <span class="in">`lesion_2`</span>, and <span class="in">`lesion_3`</span>. </span>
+<span id="cb54-55"><a href="#cb54-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-58"><a href="#cb54-58" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-59"><a href="#cb54-59" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb54-60"><a href="#cb54-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(hospital_number, lesion_1, lesion_2, lesion_3) <span class="sc">%&gt;%</span></span>
+<span id="cb54-61"><a href="#cb54-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
+<span id="cb54-62"><a href="#cb54-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-63"><a href="#cb54-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-64"><a href="#cb54-64" aria-hidden="true" tabindex="-1"></a><span class="in">`hospital_number`</span> and <span class="in">`lesion_1`</span> are of particular interest because they have so many levels.</span>
+<span id="cb54-65"><a href="#cb54-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-68"><a href="#cb54-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-69"><a href="#cb54-69" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>hospital_number))</span>
+<span id="cb54-70"><a href="#cb54-70" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>lesion_1))</span>
+<span id="cb54-71"><a href="#cb54-71" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>lesion_2))</span>
+<span id="cb54-72"><a href="#cb54-72" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">unique</span>(df<span class="sc">$</span>lesion_3))</span>
+<span id="cb54-73"><a href="#cb54-73" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-74"><a href="#cb54-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-75"><a href="#cb54-75" aria-hidden="true" tabindex="-1"></a>Looking at the character columns, I see some case inconsistency (i.e., some columns have both "None" and "none"). Converting all strings to lowercase would help to at least combine the "none" types.</span>
+<span id="cb54-76"><a href="#cb54-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-79"><a href="#cb54-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-80"><a href="#cb54-80" aria-hidden="true" tabindex="-1"></a>char_cols <span class="ot">&lt;-</span> <span class="fu">colnames</span>(df <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">where</span>(is.character)))</span>
+<span id="cb54-81"><a href="#cb54-81" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> char_cols){</span>
+<span id="cb54-82"><a href="#cb54-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste0</span>(<span class="fu">toupper</span>(col), <span class="st">': '</span>, <span class="fu">paste0</span>(<span class="fu">distinct</span>(df[col])[[<span class="dv">1</span>]], <span class="at">collapse=</span><span class="st">', '</span>)))</span>
+<span id="cb54-83"><a href="#cb54-83" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-84"><a href="#cb54-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-85"><a href="#cb54-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-86"><a href="#cb54-86" aria-hidden="true" tabindex="-1"></a><span class="fu"># Train/test split</span></span>
+<span id="cb54-87"><a href="#cb54-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-88"><a href="#cb54-88" aria-hidden="true" tabindex="-1"></a>Before diving into categorical encoding methods, I'll do a train/test split. I'll also convert the character columns to lowercase to address the problem I mentioned above ("None" vs. "none"), and I'll convert <span class="in">`hospital_number`</span> to categorical.</span>
+<span id="cb54-89"><a href="#cb54-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-92"><a href="#cb54-92" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-93"><a href="#cb54-93" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb54-94"><a href="#cb54-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-95"><a href="#cb54-95" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">mutate_if</span>(<span class="fu">where</span>(is.character), <span class="at">.funs=</span>tolower) <span class="sc">%&gt;%</span></span>
+<span id="cb54-96"><a href="#cb54-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">outcome =</span> <span class="fu">as.factor</span>(outcome)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-97"><a href="#cb54-97" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), factor),</span>
+<span id="cb54-98"><a href="#cb54-98" aria-hidden="true" tabindex="-1"></a>         <span class="at">hospital_number =</span> <span class="fu">as.factor</span>(hospital_number),</span>
+<span id="cb54-99"><a href="#cb54-99" aria-hidden="true" tabindex="-1"></a>         <span class="at">lesion_1 =</span> <span class="fu">as.factor</span>(lesion_1),</span>
+<span id="cb54-100"><a href="#cb54-100" aria-hidden="true" tabindex="-1"></a>         <span class="at">lesion_2 =</span> <span class="fu">as.factor</span>(lesion_2),</span>
+<span id="cb54-101"><a href="#cb54-101" aria-hidden="true" tabindex="-1"></a>         <span class="at">lesion_3 =</span> <span class="fu">as.factor</span>(lesion_3)) <span class="ot">-&gt;</span> df</span>
+<span id="cb54-102"><a href="#cb54-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-103"><a href="#cb54-103" aria-hidden="true" tabindex="-1"></a>split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(df)</span>
+<span id="cb54-104"><a href="#cb54-104" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">training</span>(split)</span>
+<span id="cb54-105"><a href="#cb54-105" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> <span class="fu">testing</span>(split)</span>
+<span id="cb54-106"><a href="#cb54-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-107"><a href="#cb54-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-108"><a href="#cb54-108" aria-hidden="true" tabindex="-1"></a><span class="fu"># Categorical encoding</span></span>
+<span id="cb54-109"><a href="#cb54-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-110"><a href="#cb54-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## One-hot encoding</span></span>
+<span id="cb54-111"><a href="#cb54-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-114"><a href="#cb54-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-115"><a href="#cb54-115" aria-hidden="true" tabindex="-1"></a>recipe_1hot_with_novel <span class="ot">&lt;-</span> </span>
+<span id="cb54-116"><a href="#cb54-116" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-117"><a href="#cb54-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb54-118"><a href="#cb54-118" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_novel</span>(<span class="fu">all_nominal_predictors</span>(), <span class="at">new_level =</span> <span class="st">"NA"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-119"><a href="#cb54-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_nominal_predictors</span>(), <span class="at">one_hot=</span>T)</span>
+<span id="cb54-120"><a href="#cb54-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-121"><a href="#cb54-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-122"><a href="#cb54-122" aria-hidden="true" tabindex="-1"></a>The first -- and probably most popular -- type of categorical encoding is one-hot encoding. One-hot encoding transforms a single categorical variable with N levels into binary variables encoding each of the N levels.</span>
+<span id="cb54-123"><a href="#cb54-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-124"><a href="#cb54-124" aria-hidden="true" tabindex="-1"></a>For example, <span class="in">`age`</span> is a categorical variable with 2 levels.</span>
+<span id="cb54-125"><a href="#cb54-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-128"><a href="#cb54-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-129"><a href="#cb54-129" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(train<span class="sc">$</span>age)</span>
+<span id="cb54-130"><a href="#cb54-130" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">levels</span>(train<span class="sc">$</span>age))</span>
+<span id="cb54-131"><a href="#cb54-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-132"><a href="#cb54-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-133"><a href="#cb54-133" aria-hidden="true" tabindex="-1"></a>When <span class="in">`age`</span> is one-hot encoded, a column is created for each level to encode the value (e.g., if the original value was <span class="in">`adult`</span>, then the <span class="in">`age_adult`</span> column gets a 1 and the other columns get a 0). And since I've also included a step to encode novel levels as <span class="in">`NA`</span>, there is also a third column for that.</span>
+<span id="cb54-134"><a href="#cb54-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-137"><a href="#cb54-137" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-138"><a href="#cb54-138" aria-hidden="true" tabindex="-1"></a>recipe_1hot_with_novel <span class="sc">%&gt;%</span></span>
+<span id="cb54-139"><a href="#cb54-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prep</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-140"><a href="#cb54-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bake</span>(<span class="at">new_data =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-141"><a href="#cb54-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">'age'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-142"><a href="#cb54-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">3</span>)</span>
+<span id="cb54-143"><a href="#cb54-143" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-144"><a href="#cb54-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-145"><a href="#cb54-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Label encoding</span></span>
+<span id="cb54-146"><a href="#cb54-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-149"><a href="#cb54-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-150"><a href="#cb54-150" aria-hidden="true" tabindex="-1"></a>recipe_label <span class="ot">&lt;-</span> </span>
+<span id="cb54-151"><a href="#cb54-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-152"><a href="#cb54-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb54-153"><a href="#cb54-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_integer</span>(<span class="fu">all_nominal_predictors</span>())</span>
+<span id="cb54-154"><a href="#cb54-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-155"><a href="#cb54-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-156"><a href="#cb54-156" aria-hidden="true" tabindex="-1"></a>With label encoding, each level of the categorical variable is given an (arbitrary) number. In the <span class="in">`tidymodels`</span> framework, <span class="in">`step_integer`</span> works like scikit's <span class="in">`LabelEncoder`</span>, and encodes new values as zero. Here we see that one level of <span class="in">`age`</span> was encoded as "1" and the other was encoded as "2".</span>
+<span id="cb54-157"><a href="#cb54-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-160"><a href="#cb54-160" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-161"><a href="#cb54-161" aria-hidden="true" tabindex="-1"></a>recipe_label <span class="sc">%&gt;%</span></span>
+<span id="cb54-162"><a href="#cb54-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prep</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-163"><a href="#cb54-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bake</span>(<span class="at">new_data =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-164"><a href="#cb54-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(age) <span class="sc">%&gt;%</span></span>
+<span id="cb54-165"><a href="#cb54-165" aria-hidden="true" tabindex="-1"></a>  distinct</span>
+<span id="cb54-166"><a href="#cb54-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-167"><a href="#cb54-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-168"><a href="#cb54-168" aria-hidden="true" tabindex="-1"></a><span class="fu">## Frequency encoding</span></span>
+<span id="cb54-169"><a href="#cb54-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-170"><a href="#cb54-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb54-171"><a href="#cb54-171" aria-hidden="true" tabindex="-1"></a><span class="in">freq_encoding &lt;- encodeR::frequency_encoder(</span></span>
+<span id="cb54-172"><a href="#cb54-172" aria-hidden="true" tabindex="-1"></a><span class="in">  X_train = train,</span></span>
+<span id="cb54-173"><a href="#cb54-173" aria-hidden="true" tabindex="-1"></a><span class="in">  X_test = test, </span></span>
+<span id="cb54-174"><a href="#cb54-174" aria-hidden="true" tabindex="-1"></a><span class="in">  cat_columns = colnames(df %&gt;% select(where(is.factor), -outcome))</span></span>
+<span id="cb54-175"><a href="#cb54-175" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb54-176"><a href="#cb54-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-177"><a href="#cb54-177" aria-hidden="true" tabindex="-1"></a><span class="in">train_freq &lt;- freq_encoding$train</span></span>
+<span id="cb54-178"><a href="#cb54-178" aria-hidden="true" tabindex="-1"></a><span class="in">test_freq &lt;- freq_encoding$test</span></span>
+<span id="cb54-179"><a href="#cb54-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-180"><a href="#cb54-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-181"><a href="#cb54-181" aria-hidden="true" tabindex="-1"></a>With frequency encoding, levels of the categorical variable are replaced with their frequency. Here, we can see how the levels of <span class="in">`age`</span> have been replaced with their frequency in the training set. (When this is applied to the test set, these same training frequencies will be used.)</span>
+<span id="cb54-182"><a href="#cb54-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-185"><a href="#cb54-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-186"><a href="#cb54-186" aria-hidden="true" tabindex="-1"></a>train_freq <span class="sc">%&gt;%</span></span>
+<span id="cb54-187"><a href="#cb54-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(age) <span class="sc">%&gt;%</span></span>
+<span id="cb54-188"><a href="#cb54-188" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb54-189"><a href="#cb54-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-190"><a href="#cb54-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-193"><a href="#cb54-193" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-194"><a href="#cb54-194" aria-hidden="true" tabindex="-1"></a>recipe_freq <span class="ot">&lt;-</span> </span>
+<span id="cb54-195"><a href="#cb54-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train_freq <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-196"><a href="#cb54-196" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
+<span id="cb54-197"><a href="#cb54-197" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-198"><a href="#cb54-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-199"><a href="#cb54-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Target encoding</span></span>
+<span id="cb54-200"><a href="#cb54-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-201"><a href="#cb54-201" aria-hidden="true" tabindex="-1"></a>For target encoding (also called "effect encoding" or "likelihood encoding"), I'll be using the <span class="in">`h2o`</span> package because it supports multi-class targets. (The <span class="in">`embed`</span> package can also do target encoding and integrates better with a tidymodels workflow, but at the moment it only supports binary targets.)</span>
+<span id="cb54-202"><a href="#cb54-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-203"><a href="#cb54-203" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`h2o`</span> requires some additional setup.</span>
+<span id="cb54-204"><a href="#cb54-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-207"><a href="#cb54-207" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-208"><a href="#cb54-208" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to h2o format</span></span>
+<span id="cb54-209"><a href="#cb54-209" aria-hidden="true" tabindex="-1"></a>df_h2o <span class="ot">&lt;-</span> <span class="fu">as.h2o</span>(df)</span>
+<span id="cb54-210"><a href="#cb54-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-211"><a href="#cb54-211" aria-hidden="true" tabindex="-1"></a><span class="co"># Split the dataset into train and test</span></span>
+<span id="cb54-212"><a href="#cb54-212" aria-hidden="true" tabindex="-1"></a>splits_h2o <span class="ot">&lt;-</span> <span class="fu">h2o.splitFrame</span>(<span class="at">data =</span> df_h2o, <span class="at">ratios =</span> .<span class="dv">8</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
+<span id="cb54-213"><a href="#cb54-213" aria-hidden="true" tabindex="-1"></a>train_h2o <span class="ot">&lt;-</span> splits_h2o[[<span class="dv">1</span>]]</span>
+<span id="cb54-214"><a href="#cb54-214" aria-hidden="true" tabindex="-1"></a>test_h2o <span class="ot">&lt;-</span> splits_h2o[[<span class="dv">2</span>]]</span>
+<span id="cb54-215"><a href="#cb54-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-216"><a href="#cb54-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-217"><a href="#cb54-217" aria-hidden="true" tabindex="-1"></a>With target encoding, the levels of the categorical variable are replaced with their mean value on the target. For example, if the level "young" was associated with a mean target value of 0.75, then this is the value with which that level would be replaced. </span>
+<span id="cb54-218"><a href="#cb54-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-219"><a href="#cb54-219" aria-hidden="true" tabindex="-1"></a>Because the outcome is being used for encoding, care needs to be taken when using this method to avoid leakage and overfitting. In this case, I'll use the "Leave One Out" method: for each row, the mean is calculated over all rows excluding that row.</span>
+<span id="cb54-220"><a href="#cb54-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-221"><a href="#cb54-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, message=F}</span></span>
+<span id="cb54-222"><a href="#cb54-222" aria-hidden="true" tabindex="-1"></a><span class="in"># Choose which columns to encode</span></span>
+<span id="cb54-223"><a href="#cb54-223" aria-hidden="true" tabindex="-1"></a><span class="in">encode_columns &lt;- colnames(df %&gt;% select(where(is.factor), -outcome)) # All categorical variables</span></span>
+<span id="cb54-224"><a href="#cb54-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-225"><a href="#cb54-225" aria-hidden="true" tabindex="-1"></a><span class="in"># Train a TE model</span></span>
+<span id="cb54-226"><a href="#cb54-226" aria-hidden="true" tabindex="-1"></a><span class="in">te_model &lt;- h2o.targetencoder(x = encode_columns,</span></span>
+<span id="cb54-227"><a href="#cb54-227" aria-hidden="true" tabindex="-1"></a><span class="in">                              y = 'outcome', </span></span>
+<span id="cb54-228"><a href="#cb54-228" aria-hidden="true" tabindex="-1"></a><span class="in">                              keep_original_categorical_columns=T,</span></span>
+<span id="cb54-229"><a href="#cb54-229" aria-hidden="true" tabindex="-1"></a><span class="in">                              training_frame = train_h2o,</span></span>
+<span id="cb54-230"><a href="#cb54-230" aria-hidden="true" tabindex="-1"></a><span class="in">                              noise=0,</span></span>
+<span id="cb54-231"><a href="#cb54-231" aria-hidden="true" tabindex="-1"></a><span class="in">                              seed=100,</span></span>
+<span id="cb54-232"><a href="#cb54-232" aria-hidden="true" tabindex="-1"></a><span class="in">                              blending = T, # Blending helps with levels that are more rare</span></span>
+<span id="cb54-233"><a href="#cb54-233" aria-hidden="true" tabindex="-1"></a><span class="in">                              data_leakage_handling = "LeaveOneOut")</span></span>
+<span id="cb54-234"><a href="#cb54-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-235"><a href="#cb54-235" aria-hidden="true" tabindex="-1"></a><span class="in"># New target encoded training and test datasets</span></span>
+<span id="cb54-236"><a href="#cb54-236" aria-hidden="true" tabindex="-1"></a><span class="in">train_te &lt;- h2o.transform(te_model, train_h2o)</span></span>
+<span id="cb54-237"><a href="#cb54-237" aria-hidden="true" tabindex="-1"></a><span class="in">test_te &lt;- h2o.transform(te_model, test_h2o)</span></span>
+<span id="cb54-238"><a href="#cb54-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-239"><a href="#cb54-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-240"><a href="#cb54-240" aria-hidden="true" tabindex="-1"></a>Here we can see how the target encoding strategy encoded <span class="in">`age`</span>: Two new variables are created, <span class="in">`age_euthanized_te`</span> and <span class="in">`age_lived_te`</span>. The encoded values represent the proportion of cases that were euthanized, or lived, for each level of <span class="in">`age`</span>. (Note: The "died" level of the outcome variable is missing. This is because if we know the proportion that were euthanized and lived, we also know the proportion that died.)</span>
+<span id="cb54-241"><a href="#cb54-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-244"><a href="#cb54-244" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-245"><a href="#cb54-245" aria-hidden="true" tabindex="-1"></a>train_te <span class="sc">%&gt;%</span></span>
+<span id="cb54-246"><a href="#cb54-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-247"><a href="#cb54-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">'age'</span>) <span class="sc">&amp;</span> <span class="fu">ends_with</span>(<span class="st">'te'</span>), age) <span class="sc">%&gt;%</span></span>
+<span id="cb54-248"><a href="#cb54-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb54-249"><a href="#cb54-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-250"><a href="#cb54-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-253"><a href="#cb54-253" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-254"><a href="#cb54-254" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop the unencoded columns</span></span>
+<span id="cb54-255"><a href="#cb54-255" aria-hidden="true" tabindex="-1"></a>train_te <span class="sc">%&gt;%</span> </span>
+<span id="cb54-256"><a href="#cb54-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-257"><a href="#cb54-257" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">all_of</span>(encode_columns)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-258"><a href="#cb54-258" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.h2o</span>() <span class="ot">-&gt;</span> train_te</span>
+<span id="cb54-259"><a href="#cb54-259" aria-hidden="true" tabindex="-1"></a>test_te <span class="sc">%&gt;%</span> </span>
+<span id="cb54-260"><a href="#cb54-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-261"><a href="#cb54-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">all_of</span>(encode_columns)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-262"><a href="#cb54-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.h2o</span>() <span class="ot">-&gt;</span> test_te</span>
+<span id="cb54-263"><a href="#cb54-263" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-264"><a href="#cb54-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-265"><a href="#cb54-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-268"><a href="#cb54-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-269"><a href="#cb54-269" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a recipe to use later</span></span>
+<span id="cb54-270"><a href="#cb54-270" aria-hidden="true" tabindex="-1"></a>recipe_target <span class="ot">&lt;-</span> </span>
+<span id="cb54-271"><a href="#cb54-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train_te <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-272"><a href="#cb54-272" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>())</span>
+<span id="cb54-273"><a href="#cb54-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-274"><a href="#cb54-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-275"><a href="#cb54-275" aria-hidden="true" tabindex="-1"></a><span class="fu"># Embedding encoding</span></span>
+<span id="cb54-276"><a href="#cb54-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-277"><a href="#cb54-277" aria-hidden="true" tabindex="-1"></a>Embedding is categorical encoding method that that uses deep learning to represent categorical features as vectors. It's particularly useful for categorical features with many levels, since it can be used to project high-dimensional features into low-dimensional space.</span>
+<span id="cb54-278"><a href="#cb54-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-279"><a href="#cb54-279" aria-hidden="true" tabindex="-1"></a>For example, the variable <span class="in">`pain`</span> has 7 levels.</span>
+<span id="cb54-280"><a href="#cb54-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-283"><a href="#cb54-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-284"><a href="#cb54-284" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(train<span class="sc">$</span>pain)</span>
+<span id="cb54-285"><a href="#cb54-285" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-286"><a href="#cb54-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-287"><a href="#cb54-287" aria-hidden="true" tabindex="-1"></a>But using embeddings, I can "project" these 7 levels onto a smaller set of dimensions -- say 3.</span>
+<span id="cb54-288"><a href="#cb54-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-291"><a href="#cb54-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-292"><a href="#cb54-292" aria-hidden="true" tabindex="-1"></a>pain_embedding <span class="ot">&lt;-</span> </span>
+<span id="cb54-293"><a href="#cb54-293" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-294"><a href="#cb54-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb54-295"><a href="#cb54-295" aria-hidden="true" tabindex="-1"></a>  embed<span class="sc">::</span><span class="fu">step_embed</span>(pain, </span>
+<span id="cb54-296"><a href="#cb54-296" aria-hidden="true" tabindex="-1"></a>                    <span class="at">outcome =</span> <span class="fu">vars</span>(outcome),</span>
+<span id="cb54-297"><a href="#cb54-297" aria-hidden="true" tabindex="-1"></a>                    <span class="at">predictors =</span> <span class="fu">all_numeric_predictors</span>(),</span>
+<span id="cb54-298"><a href="#cb54-298" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hidden_units =</span> <span class="dv">2</span>,</span>
+<span id="cb54-299"><a href="#cb54-299" aria-hidden="true" tabindex="-1"></a>                    <span class="at">num_terms =</span> <span class="dv">3</span>,</span>
+<span id="cb54-300"><a href="#cb54-300" aria-hidden="true" tabindex="-1"></a>                    <span class="at">keep_original_cols =</span> T)</span>
+<span id="cb54-301"><a href="#cb54-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-302"><a href="#cb54-302" aria-hidden="true" tabindex="-1"></a>tensorflow<span class="sc">::</span><span class="fu">set_random_seed</span>(<span class="dv">42</span>)</span>
+<span id="cb54-303"><a href="#cb54-303" aria-hidden="true" tabindex="-1"></a>pain_embedding <span class="sc">%&gt;%</span></span>
+<span id="cb54-304"><a href="#cb54-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prep</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-305"><a href="#cb54-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bake</span>(<span class="at">new_data =</span> <span class="cn">NULL</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-306"><a href="#cb54-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">'pain'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-307"><a href="#cb54-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span>
+<span id="cb54-308"><a href="#cb54-308" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-309"><a href="#cb54-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-310"><a href="#cb54-310" aria-hidden="true" tabindex="-1"></a>I want to use embedding strategically. Since embeddings are particularly useful to project into lower-dimensional space, this means it's going to be most useful for categorical variables that have many levels. For variables with fewer than 3 levels, I'll use one-hot encoding. For variables with more than 3 levels, I'll use embeddings and project them onto 3 levels. I'll project <span class="in">`hospital_number`</span> onto 50 levels, and <span class="in">`lesion_1`</span> onto 25 levels. (This is somewhat arbitrary; I did a quick few tests -- not shown here -- to arrive at these numbers.)</span>
+<span id="cb54-311"><a href="#cb54-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-314"><a href="#cb54-314" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-315"><a href="#cb54-315" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">levels</span>(df<span class="sc">$</span>hospital_number))</span>
+<span id="cb54-316"><a href="#cb54-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-317"><a href="#cb54-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-320"><a href="#cb54-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-321"><a href="#cb54-321" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="ot">&lt;-</span> <span class="fu">colnames</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="fu">where</span>(is.factor), <span class="sc">-</span>outcome, <span class="sc">-</span>hospital_number))</span>
+<span id="cb54-322"><a href="#cb54-322" aria-hidden="true" tabindex="-1"></a>cols_for_onehot <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb54-323"><a href="#cb54-323" aria-hidden="true" tabindex="-1"></a>cols_for_embedding <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb54-324"><a href="#cb54-324" aria-hidden="true" tabindex="-1"></a>cols_embedding_special <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'lesion_1'</span>, <span class="st">'hospital_number'</span>)</span>
+<span id="cb54-325"><a href="#cb54-325" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(col <span class="cf">in</span> cat_cols){</span>
+<span id="cb54-326"><a href="#cb54-326" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">nrow</span>(<span class="fu">distinct</span>(train[col])) <span class="sc">&lt;=</span> <span class="dv">3</span>){</span>
+<span id="cb54-327"><a href="#cb54-327" aria-hidden="true" tabindex="-1"></a>    cols_for_onehot <span class="ot">=</span> <span class="fu">append</span>(cols_for_onehot, col)</span>
+<span id="cb54-328"><a href="#cb54-328" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb54-329"><a href="#cb54-329" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> {</span>
+<span id="cb54-330"><a href="#cb54-330" aria-hidden="true" tabindex="-1"></a>    cols_for_embedding <span class="ot">=</span> <span class="fu">append</span>(cols_for_embedding, col)</span>
+<span id="cb54-331"><a href="#cb54-331" aria-hidden="true" tabindex="-1"></a>    cols_for_embedding <span class="ot">=</span> cols_for_embedding[<span class="sc">!</span>cols_for_embedding <span class="sc">%in%</span> cols_embedding_special]</span>
+<span id="cb54-332"><a href="#cb54-332" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb54-333"><a href="#cb54-333" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-334"><a href="#cb54-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-335"><a href="#cb54-335" aria-hidden="true" tabindex="-1"></a>recipe_embedding <span class="ot">&lt;-</span> </span>
+<span id="cb54-336"><a href="#cb54-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recipe</span>(outcome <span class="sc">~</span> ., <span class="at">data =</span> train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-337"><a href="#cb54-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_normalize</span>(<span class="fu">all_numeric_predictors</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb54-338"><a href="#cb54-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_novel</span>(<span class="fu">all_of</span>(cols_for_onehot), <span class="at">new_level =</span> <span class="st">"NA"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-339"><a href="#cb54-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">step_dummy</span>(<span class="fu">all_of</span>(cols_for_onehot), <span class="at">one_hot=</span>T) <span class="sc">%&gt;%</span></span>
+<span id="cb54-340"><a href="#cb54-340" aria-hidden="true" tabindex="-1"></a>  embed<span class="sc">::</span><span class="fu">step_embed</span>(<span class="fu">all_of</span>(cols_for_embedding), </span>
+<span id="cb54-341"><a href="#cb54-341" aria-hidden="true" tabindex="-1"></a>                    <span class="at">outcome =</span> <span class="fu">vars</span>(outcome),</span>
+<span id="cb54-342"><a href="#cb54-342" aria-hidden="true" tabindex="-1"></a>                    <span class="at">predictors =</span> <span class="fu">all_numeric_predictors</span>(),</span>
+<span id="cb54-343"><a href="#cb54-343" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hidden_units =</span> <span class="dv">2</span>,</span>
+<span id="cb54-344"><a href="#cb54-344" aria-hidden="true" tabindex="-1"></a>                    <span class="at">num_terms =</span> <span class="dv">3</span>,</span>
+<span id="cb54-345"><a href="#cb54-345" aria-hidden="true" tabindex="-1"></a>                    <span class="at">keep_original_cols =</span> F) <span class="sc">%&gt;%</span></span>
+<span id="cb54-346"><a href="#cb54-346" aria-hidden="true" tabindex="-1"></a>  embed<span class="sc">::</span><span class="fu">step_embed</span>(hospital_number, </span>
+<span id="cb54-347"><a href="#cb54-347" aria-hidden="true" tabindex="-1"></a>                    <span class="at">outcome =</span> <span class="fu">vars</span>(outcome),</span>
+<span id="cb54-348"><a href="#cb54-348" aria-hidden="true" tabindex="-1"></a>                    <span class="at">predictors =</span> <span class="fu">all_numeric_predictors</span>(),</span>
+<span id="cb54-349"><a href="#cb54-349" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hidden_units =</span> <span class="dv">2</span>,</span>
+<span id="cb54-350"><a href="#cb54-350" aria-hidden="true" tabindex="-1"></a>                    <span class="at">num_terms =</span> <span class="dv">50</span>,</span>
+<span id="cb54-351"><a href="#cb54-351" aria-hidden="true" tabindex="-1"></a>                    <span class="at">keep_original_cols =</span> F) <span class="sc">%&gt;%</span></span>
+<span id="cb54-352"><a href="#cb54-352" aria-hidden="true" tabindex="-1"></a>  embed<span class="sc">::</span><span class="fu">step_embed</span>(lesion_1, </span>
+<span id="cb54-353"><a href="#cb54-353" aria-hidden="true" tabindex="-1"></a>                    <span class="at">outcome =</span> <span class="fu">vars</span>(outcome),</span>
+<span id="cb54-354"><a href="#cb54-354" aria-hidden="true" tabindex="-1"></a>                    <span class="at">predictors =</span> <span class="fu">all_numeric_predictors</span>(),</span>
+<span id="cb54-355"><a href="#cb54-355" aria-hidden="true" tabindex="-1"></a>                    <span class="at">hidden_units =</span> <span class="dv">2</span>,</span>
+<span id="cb54-356"><a href="#cb54-356" aria-hidden="true" tabindex="-1"></a>                    <span class="at">num_terms =</span> <span class="dv">25</span>,</span>
+<span id="cb54-357"><a href="#cb54-357" aria-hidden="true" tabindex="-1"></a>                    <span class="at">keep_original_cols =</span> F)</span>
+<span id="cb54-358"><a href="#cb54-358" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-359"><a href="#cb54-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-360"><a href="#cb54-360" aria-hidden="true" tabindex="-1"></a><span class="fu"># Modeling</span></span>
+<span id="cb54-361"><a href="#cb54-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-362"><a href="#cb54-362" aria-hidden="true" tabindex="-1"></a>Now onto some modeling.</span>
+<span id="cb54-363"><a href="#cb54-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-364"><a href="#cb54-364" aria-hidden="true" tabindex="-1"></a>I'll define 3 models to evaluate: multinomial logistic regression, random forest, and xgboost.</span>
+<span id="cb54-365"><a href="#cb54-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-368"><a href="#cb54-368" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-369"><a href="#cb54-369" aria-hidden="true" tabindex="-1"></a>multinom_mod <span class="ot">&lt;-</span></span>
+<span id="cb54-370"><a href="#cb54-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">multinom_reg</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb54-371"><a href="#cb54-371" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Need to bump the max weights, otherwise it won't run</span></span>
+<span id="cb54-372"><a href="#cb54-372" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"nnet"</span>, <span class="at">MaxNWts =</span> <span class="dv">10000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-373"><a href="#cb54-373" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>)</span>
+<span id="cb54-374"><a href="#cb54-374" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-375"><a href="#cb54-375" aria-hidden="true" tabindex="-1"></a>ranger_mod <span class="ot">&lt;-</span></span>
+<span id="cb54-376"><a href="#cb54-376" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rand_forest</span>(<span class="at">trees=</span><span class="dv">1000</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-377"><a href="#cb54-377" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"ranger"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-378"><a href="#cb54-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>)</span>
+<span id="cb54-379"><a href="#cb54-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-380"><a href="#cb54-380" aria-hidden="true" tabindex="-1"></a>xgboost_mod <span class="ot">&lt;-</span></span>
+<span id="cb54-381"><a href="#cb54-381" aria-hidden="true" tabindex="-1"></a>  <span class="fu">boost_tree</span>(<span class="at">trees=</span><span class="dv">50</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-382"><a href="#cb54-382" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"xgboost"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-383"><a href="#cb54-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_mode</span>(<span class="st">"classification"</span>)</span>
+<span id="cb54-384"><a href="#cb54-384" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-385"><a href="#cb54-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-386"><a href="#cb54-386" aria-hidden="true" tabindex="-1"></a><span class="fu">## Model fit function</span></span>
+<span id="cb54-387"><a href="#cb54-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-388"><a href="#cb54-388" aria-hidden="true" tabindex="-1"></a>With 3 models and 5 categorical encodings, I'll need to fit 15 models. To streamline this process, I'll define two functions:</span>
+<span id="cb54-389"><a href="#cb54-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-390"><a href="#cb54-390" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`fit_model()`</span>: Given training and test datasets, a workflow containing a recipe for the categorical encoding, a model type, and an encoding type, this function will evaluate the model in-sample using cross-validation, then evaluate it out-of-sample, and then return a dataframe containing the results</span>
+<span id="cb54-391"><a href="#cb54-391" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`fit_encodings()`</span>: Given a model and model type, this function will generate recipes for each of the 5 categorical encodings, fit the 5 encodings using the model, and then return a dataframe with the results</span>
+<span id="cb54-392"><a href="#cb54-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-395"><a href="#cb54-395" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-396"><a href="#cb54-396" aria-hidden="true" tabindex="-1"></a>fit_model <span class="ot">&lt;-</span> <span class="cf">function</span>(train, test, workflow, model_type, encoding_type){</span>
+<span id="cb54-397"><a href="#cb54-397" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-398"><a href="#cb54-398" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb54-399"><a href="#cb54-399" aria-hidden="true" tabindex="-1"></a>  folds <span class="ot">&lt;-</span> <span class="fu">vfold_cv</span>(train, <span class="at">v =</span> <span class="dv">5</span>)</span>
+<span id="cb54-400"><a href="#cb54-400" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-401"><a href="#cb54-401" aria-hidden="true" tabindex="-1"></a>  resampled_fit <span class="ot">&lt;-</span> </span>
+<span id="cb54-402"><a href="#cb54-402" aria-hidden="true" tabindex="-1"></a>    workflow <span class="sc">%&gt;%</span> </span>
+<span id="cb54-403"><a href="#cb54-403" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit_resamples</span>(folds,</span>
+<span id="cb54-404"><a href="#cb54-404" aria-hidden="true" tabindex="-1"></a>                  <span class="at">metrics =</span> <span class="fu">metric_set</span>(f_meas))</span>
+<span id="cb54-405"><a href="#cb54-405" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-406"><a href="#cb54-406" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get in-sample F1</span></span>
+<span id="cb54-407"><a href="#cb54-407" aria-hidden="true" tabindex="-1"></a>  (resampled_fit <span class="sc">%&gt;%</span></span>
+<span id="cb54-408"><a href="#cb54-408" aria-hidden="true" tabindex="-1"></a>    <span class="fu">collect_metrics</span>())<span class="sc">$</span>mean <span class="ot">-&gt;</span> train_perf</span>
+<span id="cb54-409"><a href="#cb54-409" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-410"><a href="#cb54-410" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Get out-of-sample F1</span></span>
+<span id="cb54-411"><a href="#cb54-411" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> </span>
+<span id="cb54-412"><a href="#cb54-412" aria-hidden="true" tabindex="-1"></a>    workflow <span class="sc">%&gt;%</span></span>
+<span id="cb54-413"><a href="#cb54-413" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fit</span>(train)</span>
+<span id="cb54-414"><a href="#cb54-414" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-415"><a href="#cb54-415" aria-hidden="true" tabindex="-1"></a>  test<span class="sc">$</span>pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, test)<span class="sc">$</span>.pred_class</span>
+<span id="cb54-416"><a href="#cb54-416" aria-hidden="true" tabindex="-1"></a>  (<span class="fu">f_meas</span>(test, outcome, pred, <span class="at">estimator=</span><span class="st">'micro'</span>))<span class="sc">$</span>.estimate <span class="ot">-&gt;</span> test_perf</span>
+<span id="cb54-417"><a href="#cb54-417" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-418"><a href="#cb54-418" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Combine in-sample and out-of-sample into a dataframe</span></span>
+<span id="cb54-419"><a href="#cb54-419" aria-hidden="true" tabindex="-1"></a>  df_perf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">model_type =</span> model_type,</span>
+<span id="cb54-420"><a href="#cb54-420" aria-hidden="true" tabindex="-1"></a>                        <span class="at">encoding_type =</span> encoding_type,</span>
+<span id="cb54-421"><a href="#cb54-421" aria-hidden="true" tabindex="-1"></a>                        <span class="at">train_perf =</span> train_perf,</span>
+<span id="cb54-422"><a href="#cb54-422" aria-hidden="true" tabindex="-1"></a>                        <span class="at">test_perf =</span> test_perf)</span>
+<span id="cb54-423"><a href="#cb54-423" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(df_perf)</span>
+<span id="cb54-424"><a href="#cb54-424" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-425"><a href="#cb54-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-426"><a href="#cb54-426" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-427"><a href="#cb54-427" aria-hidden="true" tabindex="-1"></a><span class="co"># Given a model, run it across the 4 encodings and return a dataframe that summarizes the results</span></span>
+<span id="cb54-428"><a href="#cb54-428" aria-hidden="true" tabindex="-1"></a>fit_encodings <span class="ot">&lt;-</span> <span class="cf">function</span>(model, model_type){</span>
+<span id="cb54-429"><a href="#cb54-429" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-430"><a href="#cb54-430" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb54-431"><a href="#cb54-431" aria-hidden="true" tabindex="-1"></a>  tensorflow<span class="sc">::</span><span class="fu">set_random_seed</span>(<span class="dv">42</span>)</span>
+<span id="cb54-432"><a href="#cb54-432" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-433"><a href="#cb54-433" aria-hidden="true" tabindex="-1"></a>  <span class="co"># One-hot encoded model</span></span>
+<span id="cb54-434"><a href="#cb54-434" aria-hidden="true" tabindex="-1"></a>  wflow_1hot <span class="ot">&lt;-</span> </span>
+<span id="cb54-435"><a href="#cb54-435" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-436"><a href="#cb54-436" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span></span>
+<span id="cb54-437"><a href="#cb54-437" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(recipe_1hot_with_novel)</span>
+<span id="cb54-438"><a href="#cb54-438" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-439"><a href="#cb54-439" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_model</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-440"><a href="#cb54-440" aria-hidden="true" tabindex="-1"></a>            test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-441"><a href="#cb54-441" aria-hidden="true" tabindex="-1"></a>            wflow_1hot, </span>
+<span id="cb54-442"><a href="#cb54-442" aria-hidden="true" tabindex="-1"></a>            model_type,</span>
+<span id="cb54-443"><a href="#cb54-443" aria-hidden="true" tabindex="-1"></a>            <span class="st">'onehot'</span>) <span class="ot">-&gt;</span> onehot_model_results</span>
+<span id="cb54-444"><a href="#cb54-444" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-445"><a href="#cb54-445" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Label encoded model</span></span>
+<span id="cb54-446"><a href="#cb54-446" aria-hidden="true" tabindex="-1"></a>  wflow_label <span class="ot">&lt;-</span> </span>
+<span id="cb54-447"><a href="#cb54-447" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-448"><a href="#cb54-448" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span></span>
+<span id="cb54-449"><a href="#cb54-449" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(recipe_label)</span>
+<span id="cb54-450"><a href="#cb54-450" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-451"><a href="#cb54-451" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_model</span>(train <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-452"><a href="#cb54-452" aria-hidden="true" tabindex="-1"></a>            test <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-453"><a href="#cb54-453" aria-hidden="true" tabindex="-1"></a>            wflow_label, </span>
+<span id="cb54-454"><a href="#cb54-454" aria-hidden="true" tabindex="-1"></a>            model_type,</span>
+<span id="cb54-455"><a href="#cb54-455" aria-hidden="true" tabindex="-1"></a>            <span class="st">'label'</span>) <span class="ot">-&gt;</span> label_model_results</span>
+<span id="cb54-456"><a href="#cb54-456" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-457"><a href="#cb54-457" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Frequency encoded model</span></span>
+<span id="cb54-458"><a href="#cb54-458" aria-hidden="true" tabindex="-1"></a>  wflow_freq <span class="ot">&lt;-</span> </span>
+<span id="cb54-459"><a href="#cb54-459" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-460"><a href="#cb54-460" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span></span>
+<span id="cb54-461"><a href="#cb54-461" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(recipe_freq)</span>
+<span id="cb54-462"><a href="#cb54-462" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-463"><a href="#cb54-463" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_model</span>(train_freq <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-464"><a href="#cb54-464" aria-hidden="true" tabindex="-1"></a>            test_freq <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-465"><a href="#cb54-465" aria-hidden="true" tabindex="-1"></a>            wflow_freq, </span>
+<span id="cb54-466"><a href="#cb54-466" aria-hidden="true" tabindex="-1"></a>            model_type,</span>
+<span id="cb54-467"><a href="#cb54-467" aria-hidden="true" tabindex="-1"></a>            <span class="st">'frequency'</span>) <span class="ot">-&gt;</span> freq_model_results</span>
+<span id="cb54-468"><a href="#cb54-468" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-469"><a href="#cb54-469" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Target encoded model</span></span>
+<span id="cb54-470"><a href="#cb54-470" aria-hidden="true" tabindex="-1"></a>  wflow_target <span class="ot">&lt;-</span> </span>
+<span id="cb54-471"><a href="#cb54-471" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-472"><a href="#cb54-472" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span></span>
+<span id="cb54-473"><a href="#cb54-473" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(recipe_target)</span>
+<span id="cb54-474"><a href="#cb54-474" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-475"><a href="#cb54-475" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_model</span>(train_te <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-476"><a href="#cb54-476" aria-hidden="true" tabindex="-1"></a>            test_te <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-477"><a href="#cb54-477" aria-hidden="true" tabindex="-1"></a>            wflow_target, </span>
+<span id="cb54-478"><a href="#cb54-478" aria-hidden="true" tabindex="-1"></a>            model_type,</span>
+<span id="cb54-479"><a href="#cb54-479" aria-hidden="true" tabindex="-1"></a>            <span class="st">'target'</span>) <span class="ot">-&gt;</span> target_model_results</span>
+<span id="cb54-480"><a href="#cb54-480" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-481"><a href="#cb54-481" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-482"><a href="#cb54-482" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Embedding encoded model</span></span>
+<span id="cb54-483"><a href="#cb54-483" aria-hidden="true" tabindex="-1"></a>  wflow_embedding <span class="ot">&lt;-</span> </span>
+<span id="cb54-484"><a href="#cb54-484" aria-hidden="true" tabindex="-1"></a>    <span class="fu">workflow</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-485"><a href="#cb54-485" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_model</span>(model) <span class="sc">%&gt;%</span></span>
+<span id="cb54-486"><a href="#cb54-486" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_recipe</span>(recipe_embedding)</span>
+<span id="cb54-487"><a href="#cb54-487" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-488"><a href="#cb54-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit_model</span>(train <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-489"><a href="#cb54-489" aria-hidden="true" tabindex="-1"></a>            test <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>id), </span>
+<span id="cb54-490"><a href="#cb54-490" aria-hidden="true" tabindex="-1"></a>            wflow_embedding, </span>
+<span id="cb54-491"><a href="#cb54-491" aria-hidden="true" tabindex="-1"></a>            model_type,</span>
+<span id="cb54-492"><a href="#cb54-492" aria-hidden="true" tabindex="-1"></a>            <span class="st">'embedding'</span>) <span class="ot">-&gt;</span> embedding_model_results</span>
+<span id="cb54-493"><a href="#cb54-493" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-494"><a href="#cb54-494" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Compile results into a dataframe</span></span>
+<span id="cb54-495"><a href="#cb54-495" aria-hidden="true" tabindex="-1"></a>  onehot_model_results <span class="sc">%&gt;%</span></span>
+<span id="cb54-496"><a href="#cb54-496" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>(label_model_results) <span class="sc">%&gt;%</span></span>
+<span id="cb54-497"><a href="#cb54-497" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>(freq_model_results) <span class="sc">%&gt;%</span></span>
+<span id="cb54-498"><a href="#cb54-498" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>(target_model_results) <span class="sc">%&gt;%</span></span>
+<span id="cb54-499"><a href="#cb54-499" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bind_rows</span>(embedding_model_results) <span class="ot">-&gt;</span> results</span>
+<span id="cb54-500"><a href="#cb54-500" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb54-501"><a href="#cb54-501" aria-hidden="true" tabindex="-1"></a>  results</span>
+<span id="cb54-502"><a href="#cb54-502" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-503"><a href="#cb54-503" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-504"><a href="#cb54-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-505"><a href="#cb54-505" aria-hidden="true" tabindex="-1"></a>I'll run each of the models using the <span class="in">`fit_encodings()`</span> and <span class="in">`fit_model()`</span> functions that I just defined.</span>
+<span id="cb54-506"><a href="#cb54-506" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-509"><a href="#cb54-509" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-510"><a href="#cb54-510" aria-hidden="true" tabindex="-1"></a><span class="fu">fit_encodings</span>(multinom_mod, <span class="st">'multinomial logistic'</span>) <span class="ot">-&gt;</span> multinom_results</span>
+<span id="cb54-511"><a href="#cb54-511" aria-hidden="true" tabindex="-1"></a><span class="fu">fit_encodings</span>(ranger_mod, <span class="st">'random forest'</span>) <span class="ot">-&gt;</span> rf_results</span>
+<span id="cb54-512"><a href="#cb54-512" aria-hidden="true" tabindex="-1"></a><span class="fu">fit_encodings</span>(xgboost_mod, <span class="st">'xgboost'</span>) <span class="ot">-&gt;</span> xgb_results</span>
+<span id="cb54-513"><a href="#cb54-513" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-514"><a href="#cb54-514" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-515"><a href="#cb54-515" aria-hidden="true" tabindex="-1"></a><span class="fu"># Model results</span></span>
+<span id="cb54-516"><a href="#cb54-516" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-517"><a href="#cb54-517" aria-hidden="true" tabindex="-1"></a>Looking at the results, I can see that best models used embedding encoding.</span>
+<span id="cb54-518"><a href="#cb54-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-521"><a href="#cb54-521" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-522"><a href="#cb54-522" aria-hidden="true" tabindex="-1"></a>multinom_results <span class="sc">%&gt;%</span></span>
+<span id="cb54-523"><a href="#cb54-523" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(rf_results) <span class="sc">%&gt;%</span></span>
+<span id="cb54-524"><a href="#cb54-524" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(xgb_results) <span class="ot">-&gt;</span> model_results</span>
+<span id="cb54-525"><a href="#cb54-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-526"><a href="#cb54-526" aria-hidden="true" tabindex="-1"></a>model_results <span class="sc">%&gt;%</span></span>
+<span id="cb54-527"><a href="#cb54-527" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(test_perf))</span>
+<span id="cb54-528"><a href="#cb54-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-529"><a href="#cb54-529" aria-hidden="true" tabindex="-1"></a>model_results <span class="sc">%&gt;%</span></span>
+<span id="cb54-530"><a href="#cb54-530" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">colors =</span> <span class="fu">ifelse</span>(encoding_type <span class="sc">==</span> <span class="st">'embedding'</span>, <span class="st">'1'</span>, <span class="st">'0'</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb54-531"><a href="#cb54-531" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb54-532"><a href="#cb54-532" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">x =</span> model_type, </span>
+<span id="cb54-533"><a href="#cb54-533" aria-hidden="true" tabindex="-1"></a>                 <span class="at">group =</span> encoding_type, </span>
+<span id="cb54-534"><a href="#cb54-534" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> encoding_type, </span>
+<span id="cb54-535"><a href="#cb54-535" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> test_perf,</span>
+<span id="cb54-536"><a href="#cb54-536" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> colors), <span class="at">position=</span><span class="st">'dodge'</span>) <span class="sc">+</span></span>
+<span id="cb54-537"><a href="#cb54-537" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits=</span><span class="fu">c</span>(<span class="fl">0.60</span>, <span class="fl">0.75</span>), <span class="at">oob =</span> rescale_none, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.60</span>, <span class="fl">0.75</span>, <span class="fl">0.01</span>)) <span class="sc">+</span></span>
+<span id="cb54-538"><a href="#cb54-538" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'F1 score by model type and categorical encoding method'</span>, </span>
+<span id="cb54-539"><a href="#cb54-539" aria-hidden="true" tabindex="-1"></a>         <span class="at">subtitle =</span> <span class="st">'The best models used embedding encoding'</span>,</span>
+<span id="cb54-540"><a href="#cb54-540" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> <span class="st">'Encoding'</span>, <span class="at">y =</span> <span class="st">'F1 score'</span>, <span class="at">x =</span> <span class="st">'Model'</span>) <span class="sc">+</span></span>
+<span id="cb54-541"><a href="#cb54-541" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"white"</span>, <span class="st">"black"</span>)) <span class="sc">+</span> </span>
+<span id="cb54-542"><a href="#cb54-542" aria-hidden="true" tabindex="-1"></a>    <span class="fu">guides</span>(<span class="at">colour =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb54-543"><a href="#cb54-543" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb54-544"><a href="#cb54-544" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb54-545"><a href="#cb54-545" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-548"><a href="#cb54-548" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb54-549"><a href="#cb54-549" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave &lt;- function(..., bg = 'white') ggplot2::ggsave(..., bg = bg)</span></span>
+<span id="cb54-550"><a href="#cb54-550" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave('social-image.png', width=1600, height=900, units='px')</span></span>
+<span id="cb54-551"><a href="#cb54-551" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p><span class="faux-block"><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i></a> 2014–2025 Tyler Burleigh</span></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i>, <a href="https://quarto.org/">Quarto</a>, and the <a href="https://github.com/andrewheiss/ath-quarto">ath-quarto</a> theme</span></p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>
