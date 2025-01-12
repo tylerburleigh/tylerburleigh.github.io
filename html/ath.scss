@@ -136,6 +136,12 @@ pre.text, pre.sourceCode, .cell-output pre {
     font-size: 0.775em;
 }
 
+pre.prompt {
+    background-color: #f8f8f8;
+    padding: 1em;
+    border-radius: 4px;
+  }
+
 .navbar {
     font-family: $navbar-font-family;
 }
@@ -671,4 +677,36 @@ pre.text, pre.sourceCode, .cell-output pre {
     @media (max-width: map-get($grid-breakpoints, md)) {
         left: 0;
     }
+}
+// Code block collapse styles
+pre.sourceCode {
+  position: relative;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  
+  &.collapsed {
+    max-height: 2.5em;
+    overflow: hidden;
+  }
+}
+
+.code-block-buttons {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  z-index: 10;
+}
+
+.code-collapse-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  opacity: 0.7;
+  
+  &:hover {
+    opacity: 1;
+  }
 }
