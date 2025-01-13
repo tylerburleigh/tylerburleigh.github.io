@@ -1,7 +1,7 @@
 ---
-title: "A test of the Single Advocate Multi-Round Evaluation (SAMRE) method for LLM evaluation, and the importance of using a baseline model that implements standard best practices"
+title: "Challenging SAMRE: Comparing multi-round debate-style LLM evaluation to a robust (and much simpler) baseline"
 date: 2025-01-12
-description: "In this post, I re-evaluate a method that was recently published in arXiv, critiquing the baseline model used in the paper and then implementing a new baseline model that implements standard best practices and similar multi-round aggregation. I find that the SAMRE method does not perform better than the new baseline model. This serves to highlight the importance of implementing best practices in baseline models for comparison with new methods, as well as the being skeptical of claims in research papers that compare new methods to a baseline."
+description: "In this post, I re-evaluate a method that was recently published in arXiv, critiquing their baseline model and then designing a new baseline model that implements standard best practices for comparison with the new method. I find that the new evaluation method proposed in the paper does not perform better than this robust baseline. This serves to highlight the importance of implementing best practices in baseline models for comparison with new methods, as well as being skeptical of claims in research papers that compare new methods to baseline."
 categories:
   - prompt-engineering
   - python
@@ -14,23 +14,45 @@ I've been doing a lot of work with LLM-based evaluations lately, and I've been t
 
 I like to read research papers from arXiv for inspiration, and I recently came across a paper called [Adversarial Multi-Agent Evaluation of Large Language Models through Iterative Debates](https://arxiv.org/abs/2410.04663), which introduces a new method inspired by judicial process called Single Advocate Multi-Round Evaluation (SAMRE). Briefly, the SAMRE method evaluates the quality of different LLM outputs through an iterative debate process.
 
-I was initially impressed by the results, as they reported a gain of 6-8% over the baseline method(!!). However, I am often skeptical of comparisons to "baseline" models in these research papers, as I find that they often fail to implement standard best practices and are therefore not represenative of true gains over baseline.
+I was initially impressed by the results, which reported a gain of ~6-8% over baseline. Below I've reproduced an excerpt from one of the tables in the paper showing their results.
 
-Given this skepticism of mine, I decided that it might be interesting to put it to the test: What if I implemented the SAMRE method, and compared it to a baseline model that does implement standard best practices for prompt engineering? Would I find that the SAMRE method is indeed an improvement over the baseline? Or would I find that SAMRE is inferior to a properly implemented baseline?
 
-Using a sample of 180 conversations from MT-bench for testing and evaluation, I evaluated three methods:
+| Model | SAMRE w/o Juries | SAMRE w/o Juries (%) |
+|-------|------------------|---------------------|
+| Llama-3-8B | 0.05 | 6.3% |
+| Qwen | 0.06 | 7.3% |
+| Gemini | 0.06 | 7.2% |
+| GPT-4-o | 0.07 | 8.3% |
+| GPT-4-turbo | 0.07 | 8.2% |
+| GPT-3.5-turbo | 0.05 | 6.2% |
 
-1. SAMRE, as implemented in the paper
+: Excerpt from "Table 2: Performance Gains Compared to Baseline"
+
+_Note that the authors had tested versions of SAMRE with and without the addition of "juries". In the table I've included only the version without juries, as it was both simpler and more performant. It is also this more performant version without juries that I am interested in testing. So with that said, in this blog post when I mention "SAMRE", I will be referring to the version without juries._
+
+Despite the impressive results reported in the paper, I am often skeptical when researchers claim to have found that new methods outperform "baseline" models. I have observed that researchers often fail to implement standard best practices in their baseline models, and so their results are therefore not represenative of true gains over baseline. It is as if they are knocking down a straw man.
+
+Given this skepticism of mine, I decided that it might be interesting to put it this skepticism the test: What if I implemented the SAMRE method (again, note that I am referring to the version without juries), and compared it to a baseline model that does implement standard best practices for prompt engineering? Would I find that the SAMRE method is indeed an improvement over the baseline? Or would I find that SAMRE is inferior to a properly implemented baseline?
+
+## TL;DR: What I did and what I found
+
+I tested three model variants:
+
+1. SAMRE, as implemented in the paper (without juries)
 2. Baseline-Weak: The baseline model used in the paper (which does not implement standard best practices for prompt engineering)
 3. Baseline-Strong: A baseline model that implements standard best practices for prompt engineering as I understand them.
 
-After running the evaluations and calculating agreement with human judges, I found that although SAMRE did yield better agreement than Baseline-Weak (18% improvement), it was inferior to Baseline-Strong (which was 36% better than SAMRE!).
+I evaluated each of these models using a sample of 300 conversations from MT-Bench for testing and evaluation. (MT-Bench was used in the original paper as well.)
+
+After running the evaluations and calculating Krippendorff alpha agreement with human judge ground truth, I found that although SAMRE did yield better agreement than Baseline-Weak more importantly it was inferior to Baseline-Strong -- and by a fair margin. A similar result was found when examining binary classification accuracy using Matthews Correlation Coefficient (MCC).
 
 These results serve to highlight the importance of implementing standard best practices in baseline models, as well as being skeptical of claims in research papers that compare new methods to a "baseline model". Prompt engineers need to remain cautious and resist the urge to use complex methods that may seem more sophisticated than standard best practices, without first testing them against a well-engineered baseline.
 
-# Baseline model inadequacies
+# Baseline model prompt inadequacies
 
-First, let's consider some of the inadequacies in the Baseline model's prompt reported in the paper. The prompt they used was as follows:
+Here I will consider some of the inadequacies in the Baseline model's prompt reported in the paper, and share a version of the prompt that addresses these inadequacies and implements standard best practices. 
+
+The "baseline" prompt used by the authors of the paper was as follows:
 
 ```prompt
 You are a fair, impartial judge scoring a debate on the following question:
@@ -134,29 +156,29 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 
 Notice that the prompt now uses XML tags to structure the instructions, that it asks the model to provide reasoning for each criterion before scoring, and that it gives the model a clear format for its response that reinforces analysis before scoring for each criterion.
 
-I've also change the scale from 1-20 to 1-10, removed the unnecessary "Effectiveness in addressing opponent's points" criterion, and removed the instruction to summarize the scores, as I would handle this within the code.
+I've also changed the scale from 1-20 to 1-10, removed the unnecessary "Effectiveness in addressing opponent's points" criterion, and removed the instruction to summarize the scores, as I would handle this within the code.
+
+_Note the baseline could be improved even further by requesting the structured output using a mode like OpenAI's Structured Outputs. This would increase the likelihood of the model responding in the desired format. For this test, I will not be using structured outputs._
 
 # Hypothesis and predictions
 
-I hypothesize that SAMRE will not perform better than a baseline model that implements standard best practices for prompt engineering.
+I hypothesize that SAMRE will NOT perform better than a baseline model that implements standard best practices for prompt engineering.
 
 My predictions are as follows:
 
-1. SAMRE will perform better than Baseline-Weak.
-2. Baseline-Strong will perform better than Baseline-Weak.
-3. Baseline-Strong will perform equal to or better than SAMRE.
+1. SAMRE will perform better than Baseline-Weak, as this was what the authors of the paper found and by implementing these methods faithfully from the paper, I can expect to replicate their results.
+2. Baseline-Strong will perform better than Baseline-Weak, since the "Strong" variant implements best practices and can be expected to perform better than the "Weak" variant.
+3. Baseline-Strong will perform equal to or better than SAMRE, as the best practices implemented in Baseline-Strong will close the gap that exists between SAMRE and Baseline-Weak due to the inadequacies in the Baseline-Weak prompt.
 
 # My implementation of SAMRE and Baseline
 
 Okay, so with those criticisms out of the way, let's design evaluators to implement three methods:
 
-1. SAMRE
-2. Baseline-Weak: The baseline model used in the paper that does not implement standard best practices for prompt engineering.
-3. Baseline-Strong: A baseline model that does implement standard best practices for prompt engineering.
+1. SAMRE, as implemented in the paper (without juries)
+2. Baseline-Weak: The baseline model used in the paper (which does not implement standard best practices for prompt engineering)
+3. Baseline-Strong: A baseline model that implements standard best practices for prompt engineering as I understand them.
 
-Below is my python implementation of the evaluators. To the best of my ability, I have implemented the SAMRE and Baseline methods as described in the paper (I call the paper's Baseline method "Baseline-Weak"). And I have implemented a Baseline-Strong evaluator that implements what I would consider to be standard best practices for prompt engineering.
-
-This will allow me to test my hypothesis and predictions.
+Below is my python implementation of these evaluators. To the best of my ability, I have implemented the SAMRE and Baseline methods as described in the paper (I call the paper's Baseline method "Baseline-Weak"). And I have implemented a Baseline-Strong evaluator that implements what I would consider to be standard best practices for prompt engineering, as discussed in an earlier section.
 
 ```{python}
 #| code-fold: true
@@ -650,21 +672,26 @@ class ModelEvaluator:
         }
 ```
 
-# Load the MT-bench dataset
+# Load the MT-Bench dataset
 
-Next I will read in the MT-bench dataset from disk and prepare it for evaluation. I will use [MtBenchHumanJudgementDataset](https://llamahub.ai/l/llama_datasets/MT%20Bench%20Human%20Judgement%20Dataset?from=) from Llamahub.
+For evaluation, I'll use MT-Bench which is the dataset used in the paper. MT-Bench is a dataset that contains human annotator judgments of preference between two alternative LLM responses.
+
+I'll read the dataset from Llamahub [MtBenchHumanJudgementDataset](https://llamahub.ai/l/llama_datasets/MT%20Bench%20Human%20Judgement%20Dataset?from=), which has simplified the dataset by aggregating human judgments for repeated observations of the same model competitions.
+
+> In the original version, there can be more than one human evaluator for a given example (query, two model responses). In this adapted version however, we aggregate these 'repeated' entries entries and convert the 'winner' column of the original schema to instead represent the proportion of times 'model_a' wins across all of the human evaluators. To adapt this to a llama-dataset, and to better consider ties (albeit with small samples) we set an uncertainty threshold for this proportion in that if it is between [0.4, 0.6] then we consider there to be no winner between the two models.
+
+Although it's not entirely clear from this datacard description, the human evaluator judgments were encoded as "1" (model_a wins), "0" (model_b wins), or "0.5" (tie). Essentially, they were aggregated to represent the majority winner across repeated observations.
 
 ```{python}
 # Commented out since the dataset is already downloaded
 #!llamaindex-cli download-llamadataset MtBenchHumanJudgementDataset --download-dir ./data
 ```
 
-Next, I will load the dataset into a pandas dataframe and take a random sample of 300 rows.
 
 ```{python}
 #| code-fold: true
 #| code-fold-show: false
-#| code-summary: "Click to view the code that loads the dataset"
+#| code-summary: "Code to load the dataset"
 import json
 import pandas as pd
 from llama_index.core.llama_dataset import LabelledPairwiseEvaluatorDataset
@@ -673,6 +700,19 @@ df = LabelledPairwiseEvaluatorDataset.from_json(
     "./data/pairwise_evaluator_dataset.json"
 ).to_pandas()
 
+# Print the shape of the dataset
+print(f'Dataset shape: {df.shape}')
+
+# Print the reference_score value counts, just to confirm that this column is encoding the winner as I expect
+print(f'\nReference score (winner) value counts: {df["reference_score"].value_counts()}')
+```
+
+I'll rename some of the columns, and also encode a "human_winner" column to indicate whether model_a was preferred, model_b, or if there was a tie. (Note: This is just my own preference for how to represent the data).
+
+```{python}
+#| code-fold: true
+#| code-fold-show: false
+#| code-summary: "Code to rename variables and encode a winner column"
 df = df[['query', 'answer', 'second_answer', 'answer_by', 'second_answer_by', 'reference_score']]
 
 # Rename as follows: query => question, answer => model_a_answer, second_answer => model_b_answer, answer_by => model_a, second_answer_by => model_b, reference_score => human_winner
@@ -680,21 +720,27 @@ df.rename(columns={'query': 'question', 'answer': 'model_a_answer', 'second_answ
 
 # Reencode human winner as "model_a" if 1, "model_b" if 0, and "tie" if 0.5
 df['human_winner'] = df['human_winner'].apply(lambda x: 'model_a' if x == 1 else 'model_b' if x == 0 else 'tie')
+```
 
+The original dataset contains ~1200 rows. I'll take a random sample of 300 rows for my testing to save on time and API costs.
+
+```{python}
+#| code-fold: true
+#| code-fold-show: false
+#| code-summary: "Code to take a random sample of 300 rows"
 # Take a random sample of 300 rows
 df = df.sample(n=300, random_state=42)
 
 df.head()
-
-# Take first 180 rows
-df = df.iloc[:180]
 ```
 
-# Use methods to evaluate MT-bench dataset
+# Use methods to evaluate MT-Bench dataset
 
-Using the MT-bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.
+Using this sample of 300 rows from the MT-Bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.
 
 The code below is the main evaluation loop, designed to run multiple evaluations asynchronously (to save time). It will evaluate each item in the dataset, and save the results to disk as a checkpoint. If the evaluation is interrupted, the code can be resumed from the last checkpoint.
+
+I'll use `gpt-4o-mini` for the evaluations. In the paper they had tested models like `gpt-4o` and `gpt-3.5-turbo`, and I would not expect `gpt-4o-mini` to be an exception.
 
 ```{python}
 #| code-fold: true
@@ -883,9 +929,11 @@ finally:
 eval_df = eval_df.dropna(subset=['baseline_strong_winner', 'baseline_weak_winner', 'samre_winner'])
 ```
 
-# Results
+# Performance evaluation
 
-Now that the evaluation is complete, I will evaluate the performance of each of the three methods by looking at how well each method agreed with the human judgments. I'll use Krippendorff's alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).
+Now that the evaluation is complete, I will evaluate the performance of each of the three methods by first looking at how well each method agreed with the human judgments. 
+
+I'll use Krippendorff's alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).
 
 ```{python}
 #| code-fold: true
@@ -931,33 +979,159 @@ human_samre_agreement = calculate_agreement(eval_df, 'human_winner', 'samre_winn
 
 # Create a DataFrame with the agreement scores
 agreement_df = pd.DataFrame({
-    'Evaluator Pair': ['Human-Baseline Strong', 'Human-Baseline Weak', 'Human-SAMRE'],
+    'Evaluator Pair': ['Baseline-Strong Agreement with Humans', 'Baseline-Weak Agreement with Humans', 'SAMRE Agreement with Humans'],
     'Krippendorff Alpha': [human_baseline_strong_agreement, human_baseline_weak_agreement, human_samre_agreement]
 })
 
 # Round the scores to 3 decimal places
 agreement_df['Krippendorff Alpha'] = agreement_df['Krippendorff Alpha'].round(3)
 
-# Display the DataFrame
-agreement_df
-
 # Calculate the percent difference between Baseline-Strong and Baseline-Weak, and SAMRE and Baseline-Strong
 baseline_strong_baseline_weak_diff = (human_baseline_strong_agreement - human_baseline_weak_agreement) / human_baseline_strong_agreement
 baseline_strong_samre_diff = (human_baseline_strong_agreement - human_samre_agreement) / human_baseline_strong_agreement
 samre_baseline_weak_diff = (human_samre_agreement - human_baseline_weak_agreement) / human_samre_agreement
 
+# Print raw values
+print(agreement_df)
+
 # Display the percent difference
+print("\nKrippendorff Alpha Improvements:")
 print(f"SAMRE vs. Baseline-Weak: {samre_baseline_weak_diff:.0%}")
 print(f"Baseline-Strong vs. Baseline-Weak: {baseline_strong_baseline_weak_diff:.0%}")
 print(f"Baseline-Strong vs. SAMRE: {baseline_strong_samre_diff:.0%}")
 ```
 
-Although none of the methods yielded particularly strong agreement with the human judges, we can observe a few things:
-1. As reported in the paper, SAMRE yielded significantly better agreement than Baseline-Weak (0.307 vs. 0.252, an increase of ~18%).
-2. Baseline-Strong yielded significantly better agreement than Baseline-Weak (0.391 vs. 0.252, an increase of ~36%).
-3. Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.391 vs. 0.252, an increase of ~21%)!
+Although none of the methods yielded particularly strong agreement with the human judges in an absolute sense, their relative performance is in line with my predictions:
 
-Thus, SAMRE does not perform better than a baseline that is designed with best practices and similar multi-round aggregation.
+1. As reported in the paper, SAMRE yielded significantly better agreement than Baseline-Weak (0.369 vs. 0.321, an increase of ~13%).
+2. Baseline-Strong yielded significantly better agreement than Baseline-Weak (0.411 vs. 0.321, an increase of ~22%).
+3. Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.411 vs. 0.321, an increase of ~10%)!
+
+Next, we can also measure performance in terms of binary classification accuracy using Matthews Correlation Coefficient (MCC) as a balanced accuracy metric, while re-encoding the "winner" columns to indicate whether model_a was selected as better (1) or not better (0) in each case.
+
+```{python}
+#| code-fold: true
+#| code-fold-show: false
+#| code-summary: "Click to view the code that calculates Matthews Correlation Coefficient (MCC)"
+# Encode winner as binary
+def encode_winner_as_binary(winner):
+    return 1 if winner == 'model_a' else 0
+
+# Create binary columns for each evaluator
+eval_df['human_model_a_better'] = eval_df['human_winner'].apply(encode_winner_as_binary)
+eval_df['baseline_strong_model_a_better'] = eval_df['baseline_strong_winner'].apply(encode_winner_as_binary)
+eval_df['baseline_weak_model_a_better'] = eval_df['baseline_weak_winner'].apply(encode_winner_as_binary)
+eval_df['samre_model_a_better'] = eval_df['samre_winner'].apply(encode_winner_as_binary)
+
+from sklearn.metrics import matthews_corrcoef
+
+# Calculate MCC for each method
+metrics_df = pd.DataFrame({
+    'Method': ['Baseline-Strong', 'Baseline-Weak', 'SAMRE'],
+    'MCC': [
+        matthews_corrcoef(
+            eval_df['human_model_a_better'], 
+            eval_df['baseline_strong_model_a_better']
+        ),
+        matthews_corrcoef(
+            eval_df['human_model_a_better'], 
+            eval_df['baseline_weak_model_a_better']
+        ),
+        matthews_corrcoef(
+            eval_df['human_model_a_better'], 
+            eval_df['samre_model_a_better']
+        )
+    ]
+})
+
+# Round the scores to 3 decimal places
+metrics_df['MCC'] = metrics_df['MCC'].round(3)
+
+# Calculate the percent differences
+def calc_percent_diff(new, old):
+    return (new - old) / old * 100
+
+# MCC differences
+samre_baseline_weak_mcc_diff = calc_percent_diff(
+    metrics_df.loc[metrics_df['Method'] == 'SAMRE', 'MCC'].iloc[0],
+    metrics_df.loc[metrics_df['Method'] == 'Baseline-Weak', 'MCC'].iloc[0]
+)
+baseline_strong_baseline_weak_mcc_diff = calc_percent_diff(
+    metrics_df.loc[metrics_df['Method'] == 'Baseline-Strong', 'MCC'].iloc[0],
+    metrics_df.loc[metrics_df['Method'] == 'Baseline-Weak', 'MCC'].iloc[0]
+)
+baseline_strong_samre_mcc_diff = calc_percent_diff(
+    metrics_df.loc[metrics_df['Method'] == 'Baseline-Strong', 'MCC'].iloc[0],
+    metrics_df.loc[metrics_df['Method'] == 'SAMRE', 'MCC'].iloc[0]
+)
+
+# Print raw values
+print(metrics_df)
+
+print("\nMCC Improvements:")
+print(f"SAMRE vs. Baseline-Weak: {samre_baseline_weak_mcc_diff:.0f}%")
+print(f"Baseline-Strong vs. Baseline-Weak: {baseline_strong_baseline_weak_mcc_diff:.0f}%")
+print(f"Baseline-Strong vs. SAMRE: {baseline_strong_samre_mcc_diff:.0f}%")
+
+```
+
+Looking at MCC values, we observe a similar pattern of findings to the Krippendorff alphas:
+
+1. SAMRE did not perform better than Baseline-Weak, in fact it performed slightly worse (0.401 vs. 0.417, a decrease of 4%). This is a bit different than what we saw with Krippendorff alpha.
+2. Baseline-Strong performed better than Baseline-Weak (0.482 vs. 0.401, an increase of 16%).
+3. Baseline-Strong performed better than SAMRE (0.464 vs. 0.401, an increase of 20%).
+
+_Side-note: Why does MCC disagree with the Krippendorff alpha on the SAMRE vs. Baseline-Weak comparison? I would guess this is due to how ties were resolved when encoding the winner as binary._
+
+Finally, we can look at accuracy in terms of percentage agreement. Percentage agreement is not a "balanced" accuracy metric and therefore needs to be used with caution (for example, if the classes are imbalanced, then percentage agreement accuracy can be misleading). But it is the metric used in the paper.
+
+```{python}
+#| code-fold: true
+#| code-fold-show: false
+#| code-summary: "Click to view the code that calculates percentage agreement"
+# Calculate percentage agreement for each method
+def calculate_percent_agreement(df, rater1_col, rater2_col):
+    """Calculate percentage agreement between two raters"""
+    return (df[rater1_col] == df[rater2_col]).mean()
+
+# Calculate agreement percentages
+agreement_percentages = pd.DataFrame({
+    'Method': ['Baseline-Strong', 'Baseline-Weak', 'SAMRE'],
+    'Agreement': [
+        calculate_percent_agreement(eval_df, 'human_winner', 'baseline_strong_winner'),
+        calculate_percent_agreement(eval_df, 'human_winner', 'baseline_weak_winner'),
+        calculate_percent_agreement(eval_df, 'human_winner', 'samre_winner')
+    ]
+})
+
+# Round to 3 decimal places and convert to percentage
+agreement_percentages['Agreement'] = (agreement_percentages['Agreement'] * 100).round(1)
+
+# Calculate the percentage point differences
+samre_baseline_weak_diff = (
+    agreement_percentages.loc[agreement_percentages['Method'] == 'SAMRE', 'Agreement'].iloc[0] -
+    agreement_percentages.loc[agreement_percentages['Method'] == 'Baseline-Weak', 'Agreement'].iloc[0]
+)
+baseline_strong_baseline_weak_diff = (
+    agreement_percentages.loc[agreement_percentages['Method'] == 'Baseline-Strong', 'Agreement'].iloc[0] -
+    agreement_percentages.loc[agreement_percentages['Method'] == 'Baseline-Weak', 'Agreement'].iloc[0]
+)
+baseline_strong_samre_diff = (
+    agreement_percentages.loc[agreement_percentages['Method'] == 'Baseline-Strong', 'Agreement'].iloc[0] -
+    agreement_percentages.loc[agreement_percentages['Method'] == 'SAMRE', 'Agreement'].iloc[0]
+)
+
+# Print raw values
+print("Percentage Agreement with Human Judgments:")
+print(agreement_percentages)
+
+print("\nPercentage Point Differences:")
+print(f"SAMRE vs. Baseline-Weak: {samre_baseline_weak_diff:+.1f}")
+print(f"Baseline-Strong vs. Baseline-Weak: {baseline_strong_baseline_weak_diff:+.1f}")
+print(f"Baseline-Strong vs. SAMRE: {baseline_strong_samre_diff:+.1f}")
+```
+
+Overall across these three metrics, the story is the same: SAMRE did not perform better than a baseline that is designed with best practices.
 
 # Conclusion
 
