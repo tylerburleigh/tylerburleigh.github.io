@@ -351,7 +351,7 @@ Example: (18, 9)
 Your scores and explanation:</code></pre>
 <p>Here are the issues I see with this prompt:</p>
 <ol type="1">
-<li><p>The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like <question></question>, <answer1></answer1>, and <answer2></answer2>, but in a pinch delimiters like triple backticks can be used.</p></li>
+<li><p>The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like <code>&lt;Question&gt;&lt;/Question&gt;</code>, <code>&lt;Answer1&gt;&lt;/Answer1&gt;</code>, and <code>&lt;Answer2&gt;&lt;/Answer2&gt;</code>, but in a pinch delimiters like triple backticks can be used.</p></li>
 <li><p>The prompt instructs the model to first generate scores in list format, and then to sum them. But as we know, language models models often make arithmetic mistakes. It would be better to ask the model to generate scores for each criterion, and then to programmatically extract and summarize them in python (or another programming language) from which the routine is run.</p></li>
 <li><p>Although the prompt asks the model to “explain your scoring”, it is not clear if the model should be reasoning about each criterion before it scores them, or if it should provide reasoning at the end when giving its final score. I would ask the model to provide reasoning for each criterion that it is asked to score, and ask it to reason before scoring.</p></li>
 <li><p>It’s unclear why a scale of 1-20 is used. This is not a standard scale for scoring. I would use a scale of 1-10 which is likely more familiar to the model and can be expected to be used more consistently.</p></li>
@@ -436,7 +436,7 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 <li>Baseline-Strong: A baseline model that implements standard best practices for prompt engineering as I understand them.</li>
 </ol>
 <p>Below is my python implementation of these evaluators. To the best of my ability, I have implemented the SAMRE and Baseline methods as described in the paper (I call the paper’s Baseline method “Baseline-Weak”). And I have implemented a Baseline-Strong evaluator that implements what I would consider to be standard best practices for prompt engineering, as discussed in an earlier section.</p>
-<div id="8402bdc7" class="cell" data-code-fold-show="false" data-execution_count="1">
+<div id="a0e049f9" class="cell" data-code-fold-show="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Click to view the implementation code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass, field</span>
@@ -936,11 +936,11 @@ Answer 2: [Analysis of Answer 2 performance on the Criterion]
 <p>In the original version, there can be more than one human evaluator for a given example (query, two model responses). In this adapted version however, we aggregate these ‘repeated’ entries entries and convert the ‘winner’ column of the original schema to instead represent the proportion of times ‘model_a’ wins across all of the human evaluators. To adapt this to a llama-dataset, and to better consider ties (albeit with small samples) we set an uncertainty threshold for this proportion in that if it is between [0.4, 0.6] then we consider there to be no winner between the two models.</p>
 </blockquote>
 <p>Although it’s not entirely clear from this datacard description, the human evaluator judgments were encoded as “1” (model_a wins), “0” (model_b wins), or “0.5” (tie). Essentially, they were aggregated to represent the majority winner across repeated observations.</p>
-<div id="dee7bf6e" class="cell" data-execution_count="2">
+<div id="71391835" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commented out since the dataset is already downloaded</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!llamaindex-cli download-llamadataset MtBenchHumanJudgementDataset --download-dir ./data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="52fa6c93" class="cell" data-code-fold-show="false" data-execution_count="3">
+<div id="b6e8f171" class="cell" data-code-fold-show="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code to load the dataset</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
@@ -968,7 +968,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <p>I’ll rename some of the columns, and also encode a “human_winner” column to indicate whether model_a was preferred, model_b, or if there was a tie. (Note: This is just my own preference for how to represent the data).</p>
-<div id="3a53ff62" class="cell" data-code-fold-show="false" data-execution_count="4">
+<div id="c22b4194" class="cell" data-code-fold-show="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Code to rename variables and encode a winner column</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'query'</span>, <span class="st">'answer'</span>, <span class="st">'second_answer'</span>, <span class="st">'answer_by'</span>, <span class="st">'second_answer_by'</span>, <span class="st">'reference_score'</span>]]</span>
@@ -981,7 +981,7 @@ Name: count, dtype: int64</code></pre>
 </details>
 </div>
 <p>The original dataset contains ~1200 rows. I’ll take a random sample of 300 rows for my testing to save on time and API costs.</p>
-<div id="e7d7316a" class="cell" data-code-fold-show="false" data-execution_count="5">
+<div id="d2f9cc35" class="cell" data-code-fold-show="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Code to take a random sample of 300 rows</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Take a random sample of 300 rows</span></span>
@@ -1063,7 +1063,7 @@ Name: count, dtype: int64</code></pre>
 <p>Using this sample of 300 rows from the MT-Bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.</p>
 <p>The code below is the main evaluation loop, designed to run multiple evaluations asynchronously (to save time). It will evaluate each item in the dataset, and save the results to disk as a checkpoint. If the evaluation is interrupted, the code can be resumed from the last checkpoint.</p>
 <p>I’ll use <code>gpt-4o-mini</code> for the evaluations. In the paper they had tested models like <code>gpt-4o</code> and <code>gpt-3.5-turbo</code>, and I would not expect <code>gpt-4o-mini</code> to be an exception.</p>
-<div id="dfbc04d7" class="cell" data-code-fold-show="false" data-execution_count="6">
+<div id="858797b7" class="cell" data-code-fold-show="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Click to view the code that runs the evaluations</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
@@ -1285,7 +1285,7 @@ Completed batch 29, waiting before next batch...</code></pre>
 <h1>Performance evaluation</h1>
 <p>Now that the evaluation is complete, I will evaluate the performance of each of the three methods by first looking at how well each method agreed with the human judgments.</p>
 <p>I’ll use Krippendorff’s alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).</p>
-<div id="473f8fa4" class="cell" data-code-fold-show="false" data-execution_count="7">
+<div id="7f293d8e" class="cell" data-code-fold-show="false" data-execution_count="7">
 <details class="code-fold">
 <summary>Click to view the code that calculates agreement</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> krippendorff <span class="im">import</span> alpha</span>
@@ -1368,7 +1368,7 @@ Baseline-Strong vs. SAMRE: 10%</code></pre>
 <li>Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.411 vs.&nbsp;0.321, an increase of ~10%)!</li>
 </ol>
 <p>Next, we can also measure performance in terms of binary classification accuracy using Matthews Correlation Coefficient (MCC) as a balanced accuracy metric, while re-encoding the “winner” columns to indicate whether model_a was selected as better (1) or not better (0) in each case.</p>
-<div id="f55bfc13" class="cell" data-code-fold-show="false" data-execution_count="8">
+<div id="981d302a" class="cell" data-code-fold-show="false" data-execution_count="8">
 <details class="code-fold">
 <summary>Click to view the code that calculates Matthews Correlation Coefficient (MCC)</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode winner as binary</span></span>
@@ -1451,7 +1451,7 @@ Baseline-Strong vs. SAMRE: 20%</code></pre>
 </ol>
 <p><em>Side-note: Why does MCC disagree with the Krippendorff alpha on the SAMRE vs.&nbsp;Baseline-Weak comparison? I would guess this is due to how ties were resolved when encoding the winner as binary.</em></p>
 <p>Finally, we can look at accuracy in terms of percentage agreement. Percentage agreement is not a “balanced” accuracy metric and therefore needs to be used with caution (for example, if the classes are imbalanced, then percentage agreement accuracy can be misleading). But it is the metric used in the paper.</p>
-<div id="0d1b426c" class="cell" data-code-fold-show="false" data-execution_count="9">
+<div id="41f74433" class="cell" data-code-fold-show="false" data-execution_count="9">
 <details class="code-fold">
 <summary>Click to view the code that calculates percentage agreement</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage agreement for each method</span></span>
@@ -2076,7 +2076,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb17-82"><a href="#cb17-82" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-83"><a href="#cb17-83" aria-hidden="true" tabindex="-1"></a>Here are the issues I see with this prompt:</span>
 <span id="cb17-84"><a href="#cb17-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-85"><a href="#cb17-85" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like &lt;Question&gt;&lt;/Question&gt;, &lt;Answer1&gt;&lt;/Answer1&gt;, and &lt;Answer2&gt;&lt;/Answer2&gt;, but in a pinch delimiters like triple backticks can be used.</span>
+<span id="cb17-85"><a href="#cb17-85" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like <span class="in">`&lt;Question&gt;&lt;/Question&gt;`</span>, <span class="in">`&lt;Answer1&gt;&lt;/Answer1&gt;`</span>, and <span class="in">`&lt;Answer2&gt;&lt;/Answer2&gt;`</span>, but in a pinch delimiters like triple backticks can be used.</span>
 <span id="cb17-86"><a href="#cb17-86" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-87"><a href="#cb17-87" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The prompt instructs the model to first generate scores in list format, and then to sum them. But as we know, language models models often make arithmetic mistakes. It would be better to ask the model to generate scores for each criterion, and then to programmatically extract and summarize them in python (or another programming language) from which the routine is run.</span>
 <span id="cb17-88"><a href="#cb17-88" aria-hidden="true" tabindex="-1"></a></span>
@@ -2668,469 +2668,468 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb17-676"><a href="#cb17-676" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-677"><a href="#cb17-677" aria-hidden="true" tabindex="-1"></a><span class="fu"># Load the MT-Bench dataset</span></span>
 <span id="cb17-678"><a href="#cb17-678" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-679"><a href="#cb17-679" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-680"><a href="#cb17-680" aria-hidden="true" tabindex="-1"></a>For evaluation, I'll use MT-Bench which is the dataset used in the paper. MT-Bench is a dataset that contains human annotator judgments of preference between two alternative LLM responses.</span>
-<span id="cb17-681"><a href="#cb17-681" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-682"><a href="#cb17-682" aria-hidden="true" tabindex="-1"></a>I'll read the dataset from Llamahub <span class="co">[</span><span class="ot">MtBenchHumanJudgementDataset</span><span class="co">](https://llamahub.ai/l/llama_datasets/MT%20Bench%20Human%20Judgement%20Dataset?from=)</span>, which has simplified the dataset by aggregating human judgments for repeated observations of the same model competitions.</span>
-<span id="cb17-683"><a href="#cb17-683" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-684"><a href="#cb17-684" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; In the original version, there can be more than one human evaluator for a given example (query, two model responses). In this adapted version however, we aggregate these 'repeated' entries entries and convert the 'winner' column of the original schema to instead represent the proportion of times 'model_a' wins across all of the human evaluators. To adapt this to a llama-dataset, and to better consider ties (albeit with small samples) we set an uncertainty threshold for this proportion in that if it is between </span><span class="co">[</span><span class="ot">0.4, 0.6</span><span class="co">]</span><span class="at"> then we consider there to be no winner between the two models.</span></span>
-<span id="cb17-685"><a href="#cb17-685" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-686"><a href="#cb17-686" aria-hidden="true" tabindex="-1"></a>Although it's not entirely clear from this datacard description, the human evaluator judgments were encoded as "1" (model_a wins), "0" (model_b wins), or "0.5" (tie). Essentially, they were aggregated to represent the majority winner across repeated observations.</span>
-<span id="cb17-687"><a href="#cb17-687" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-690"><a href="#cb17-690" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-691"><a href="#cb17-691" aria-hidden="true" tabindex="-1"></a><span class="co"># Commented out since the dataset is already downloaded</span></span>
-<span id="cb17-692"><a href="#cb17-692" aria-hidden="true" tabindex="-1"></a><span class="co">#!llamaindex-cli download-llamadataset MtBenchHumanJudgementDataset --download-dir ./data</span></span>
-<span id="cb17-693"><a href="#cb17-693" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-679"><a href="#cb17-679" aria-hidden="true" tabindex="-1"></a>For evaluation, I'll use MT-Bench which is the dataset used in the paper. MT-Bench is a dataset that contains human annotator judgments of preference between two alternative LLM responses.</span>
+<span id="cb17-680"><a href="#cb17-680" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-681"><a href="#cb17-681" aria-hidden="true" tabindex="-1"></a>I'll read the dataset from Llamahub <span class="co">[</span><span class="ot">MtBenchHumanJudgementDataset</span><span class="co">](https://llamahub.ai/l/llama_datasets/MT%20Bench%20Human%20Judgement%20Dataset?from=)</span>, which has simplified the dataset by aggregating human judgments for repeated observations of the same model competitions.</span>
+<span id="cb17-682"><a href="#cb17-682" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-683"><a href="#cb17-683" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; In the original version, there can be more than one human evaluator for a given example (query, two model responses). In this adapted version however, we aggregate these 'repeated' entries entries and convert the 'winner' column of the original schema to instead represent the proportion of times 'model_a' wins across all of the human evaluators. To adapt this to a llama-dataset, and to better consider ties (albeit with small samples) we set an uncertainty threshold for this proportion in that if it is between </span><span class="co">[</span><span class="ot">0.4, 0.6</span><span class="co">]</span><span class="at"> then we consider there to be no winner between the two models.</span></span>
+<span id="cb17-684"><a href="#cb17-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-685"><a href="#cb17-685" aria-hidden="true" tabindex="-1"></a>Although it's not entirely clear from this datacard description, the human evaluator judgments were encoded as "1" (model_a wins), "0" (model_b wins), or "0.5" (tie). Essentially, they were aggregated to represent the majority winner across repeated observations.</span>
+<span id="cb17-686"><a href="#cb17-686" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-689"><a href="#cb17-689" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-690"><a href="#cb17-690" aria-hidden="true" tabindex="-1"></a><span class="co"># Commented out since the dataset is already downloaded</span></span>
+<span id="cb17-691"><a href="#cb17-691" aria-hidden="true" tabindex="-1"></a><span class="co">#!llamaindex-cli download-llamadataset MtBenchHumanJudgementDataset --download-dir ./data</span></span>
+<span id="cb17-692"><a href="#cb17-692" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-693"><a href="#cb17-693" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-694"><a href="#cb17-694" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-695"><a href="#cb17-695" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-698"><a href="#cb17-698" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-699"><a href="#cb17-699" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-700"><a href="#cb17-700" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-701"><a href="#cb17-701" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to load the dataset"</span></span>
-<span id="cb17-702"><a href="#cb17-702" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
-<span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> llama_index.core.llama_dataset <span class="im">import</span> LabelledPairwiseEvaluatorDataset</span>
-<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> LabelledPairwiseEvaluatorDataset.from_json(</span>
-<span id="cb17-707"><a href="#cb17-707" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./data/pairwise_evaluator_dataset.json"</span></span>
-<span id="cb17-708"><a href="#cb17-708" aria-hidden="true" tabindex="-1"></a>).to_pandas()</span>
-<span id="cb17-709"><a href="#cb17-709" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-710"><a href="#cb17-710" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the shape of the dataset</span></span>
-<span id="cb17-711"><a href="#cb17-711" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Dataset shape: </span><span class="sc">{</span>df<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb17-712"><a href="#cb17-712" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-713"><a href="#cb17-713" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the reference_score value counts, just to confirm that this column is encoding the winner as I expect</span></span>
-<span id="cb17-714"><a href="#cb17-714" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">Reference score (winner) value counts: </span><span class="sc">{</span>df[<span class="st">"reference_score"</span>]<span class="sc">.</span>value_counts()<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb17-715"><a href="#cb17-715" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-716"><a href="#cb17-716" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-717"><a href="#cb17-717" aria-hidden="true" tabindex="-1"></a>I'll rename some of the columns, and also encode a "human_winner" column to indicate whether model_a was preferred, model_b, or if there was a tie. (Note: This is just my own preference for how to represent the data).</span>
-<span id="cb17-718"><a href="#cb17-718" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-721"><a href="#cb17-721" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-722"><a href="#cb17-722" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-723"><a href="#cb17-723" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-724"><a href="#cb17-724" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to rename variables and encode a winner column"</span></span>
-<span id="cb17-725"><a href="#cb17-725" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'query'</span>, <span class="st">'answer'</span>, <span class="st">'second_answer'</span>, <span class="st">'answer_by'</span>, <span class="st">'second_answer_by'</span>, <span class="st">'reference_score'</span>]]</span>
-<span id="cb17-726"><a href="#cb17-726" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-727"><a href="#cb17-727" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename as follows: query =&gt; question, answer =&gt; model_a_answer, second_answer =&gt; model_b_answer, answer_by =&gt; model_a, second_answer_by =&gt; model_b, reference_score =&gt; human_winner</span></span>
-<span id="cb17-728"><a href="#cb17-728" aria-hidden="true" tabindex="-1"></a>df.rename(columns<span class="op">=</span>{<span class="st">'query'</span>: <span class="st">'question'</span>, <span class="st">'answer'</span>: <span class="st">'model_a_answer'</span>, <span class="st">'second_answer'</span>: <span class="st">'model_b_answer'</span>, <span class="st">'answer_by'</span>: <span class="st">'model_a'</span>, <span class="st">'second_answer_by'</span>: <span class="st">'model_b'</span>, <span class="st">'reference_score'</span>: <span class="st">'human_winner'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-729"><a href="#cb17-729" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-730"><a href="#cb17-730" aria-hidden="true" tabindex="-1"></a><span class="co"># Reencode human winner as "model_a" if 1, "model_b" if 0, and "tie" if 0.5</span></span>
-<span id="cb17-731"><a href="#cb17-731" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'human_winner'</span>] <span class="op">=</span> df[<span class="st">'human_winner'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">'model_a'</span> <span class="cf">if</span> x <span class="op">==</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">'model_b'</span> <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">'tie'</span>)</span>
-<span id="cb17-732"><a href="#cb17-732" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-733"><a href="#cb17-733" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-734"><a href="#cb17-734" aria-hidden="true" tabindex="-1"></a>The original dataset contains ~1200 rows. I'll take a random sample of 300 rows for my testing to save on time and API costs.</span>
-<span id="cb17-735"><a href="#cb17-735" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-738"><a href="#cb17-738" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-739"><a href="#cb17-739" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-740"><a href="#cb17-740" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-741"><a href="#cb17-741" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to take a random sample of 300 rows"</span></span>
-<span id="cb17-742"><a href="#cb17-742" aria-hidden="true" tabindex="-1"></a><span class="co"># Take a random sample of 300 rows</span></span>
-<span id="cb17-743"><a href="#cb17-743" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.sample(n<span class="op">=</span><span class="dv">300</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb17-744"><a href="#cb17-744" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-745"><a href="#cb17-745" aria-hidden="true" tabindex="-1"></a>df.head()</span>
-<span id="cb17-746"><a href="#cb17-746" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-747"><a href="#cb17-747" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-748"><a href="#cb17-748" aria-hidden="true" tabindex="-1"></a><span class="fu"># Use methods to evaluate MT-Bench dataset</span></span>
-<span id="cb17-749"><a href="#cb17-749" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-750"><a href="#cb17-750" aria-hidden="true" tabindex="-1"></a>Using this sample of 300 rows from the MT-Bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.</span>
-<span id="cb17-751"><a href="#cb17-751" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-752"><a href="#cb17-752" aria-hidden="true" tabindex="-1"></a>The code below is the main evaluation loop, designed to run multiple evaluations asynchronously (to save time). It will evaluate each item in the dataset, and save the results to disk as a checkpoint. If the evaluation is interrupted, the code can be resumed from the last checkpoint.</span>
-<span id="cb17-753"><a href="#cb17-753" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-754"><a href="#cb17-754" aria-hidden="true" tabindex="-1"></a>I'll use <span class="in">`gpt-4o-mini`</span> for the evaluations. In the paper they had tested models like <span class="in">`gpt-4o`</span> and <span class="in">`gpt-3.5-turbo`</span>, and I would not expect <span class="in">`gpt-4o-mini`</span> to be an exception.</span>
-<span id="cb17-755"><a href="#cb17-755" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-758"><a href="#cb17-758" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-759"><a href="#cb17-759" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-760"><a href="#cb17-760" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-761"><a href="#cb17-761" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that runs the evaluations"</span></span>
-<span id="cb17-762"><a href="#cb17-762" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
-<span id="cb17-763"><a href="#cb17-763" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> asyncio <span class="im">import</span> Semaphore</span>
-<span id="cb17-764"><a href="#cb17-764" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
-<span id="cb17-765"><a href="#cb17-765" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb17-766"><a href="#cb17-766" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hashlib</span>
-<span id="cb17-767"><a href="#cb17-767" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
-<span id="cb17-768"><a href="#cb17-768" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(level<span class="op">=</span>logging.WARNING)</span>
-<span id="cb17-769"><a href="#cb17-769" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-770"><a href="#cb17-770" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> evaluate_conversation_pair(row, evaluators, semaphore, idx, total):</span>
-<span id="cb17-771"><a href="#cb17-771" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Evaluate a single conversation pair with all evaluators"""</span></span>
-<span id="cb17-772"><a href="#cb17-772" aria-hidden="true" tabindex="-1"></a>    <span class="cf">async</span> <span class="cf">with</span> semaphore:</span>
-<span id="cb17-773"><a href="#cb17-773" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add delay between API calls</span></span>
-<span id="cb17-774"><a href="#cb17-774" aria-hidden="true" tabindex="-1"></a>        <span class="co">#await asyncio.sleep(1)  # Add small delay between conversations</span></span>
-<span id="cb17-775"><a href="#cb17-775" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-776"><a href="#cb17-776" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Generate pair_id from conversation hash</span></span>
-<span id="cb17-777"><a href="#cb17-777" aria-hidden="true" tabindex="-1"></a>        pair_id <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'model_a'</span>]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>row[<span class="st">'model_b'</span>]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>hashlib<span class="sc">.</span>sha256(<span class="bu">str</span>(row[<span class="st">'question'</span>]).encode())<span class="sc">.</span>hexdigest()[:<span class="dv">12</span>]<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb17-778"><a href="#cb17-778" aria-hidden="true" tabindex="-1"></a>        checkpoint_file <span class="op">=</span> <span class="ss">f'checkpoints/</span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">.json'</span></span>
-<span id="cb17-779"><a href="#cb17-779" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-780"><a href="#cb17-780" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return existing checkpoint if available</span></span>
-<span id="cb17-781"><a href="#cb17-781" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> os.path.exists(checkpoint_file):</span>
-<span id="cb17-782"><a href="#cb17-782" aria-hidden="true" tabindex="-1"></a>            logging.info(<span class="ss">f"Found existing checkpoint file for </span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-783"><a href="#cb17-783" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> json.load(<span class="bu">open</span>(checkpoint_file))</span>
-<span id="cb17-784"><a href="#cb17-784" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-785"><a href="#cb17-785" aria-hidden="true" tabindex="-1"></a>        logging.info(<span class="ss">f"No checkpoint file found for </span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-786"><a href="#cb17-786" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> {</span>
-<span id="cb17-787"><a href="#cb17-787" aria-hidden="true" tabindex="-1"></a>            <span class="st">'model_a'</span>: row[<span class="st">'model_a'</span>],</span>
-<span id="cb17-788"><a href="#cb17-788" aria-hidden="true" tabindex="-1"></a>            <span class="st">'model_b'</span>: row[<span class="st">'model_b'</span>],</span>
-<span id="cb17-789"><a href="#cb17-789" aria-hidden="true" tabindex="-1"></a>            <span class="st">'human_winner'</span>: row[<span class="st">'human_winner'</span>],</span>
-<span id="cb17-790"><a href="#cb17-790" aria-hidden="true" tabindex="-1"></a>            <span class="st">'pair_id'</span>: pair_id</span>
-<span id="cb17-791"><a href="#cb17-791" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb17-792"><a href="#cb17-792" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-793"><a href="#cb17-793" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
-<span id="cb17-794"><a href="#cb17-794" aria-hidden="true" tabindex="-1"></a>            <span class="co"># First run SAMRE evaluation with retries</span></span>
-<span id="cb17-795"><a href="#cb17-795" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):  <span class="co"># Try up to 3 times</span></span>
-<span id="cb17-796"><a href="#cb17-796" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
-<span id="cb17-797"><a href="#cb17-797" aria-hidden="true" tabindex="-1"></a>                    samre_evaluator <span class="op">=</span> evaluators[<span class="st">'samre'</span>]</span>
-<span id="cb17-798"><a href="#cb17-798" aria-hidden="true" tabindex="-1"></a>                    samre_result <span class="op">=</span> <span class="cf">await</span> samre_evaluator.evaluate(</span>
-<span id="cb17-799"><a href="#cb17-799" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>], </span>
-<span id="cb17-800"><a href="#cb17-800" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>], </span>
-<span id="cb17-801"><a href="#cb17-801" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>]</span>
-<span id="cb17-802"><a href="#cb17-802" aria-hidden="true" tabindex="-1"></a>                    )</span>
-<span id="cb17-803"><a href="#cb17-803" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'samre_winner'</span>] <span class="op">=</span> samre_result[<span class="st">'winner'</span>]</span>
-<span id="cb17-804"><a href="#cb17-804" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'samre_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: samre_result[k] <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
-<span id="cb17-805"><a href="#cb17-805" aria-hidden="true" tabindex="-1"></a>                    result.update({</span>
-<span id="cb17-806"><a href="#cb17-806" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'samre_argument_history'</span>: samre_result[<span class="st">'argument_history'</span>],</span>
-<span id="cb17-807"><a href="#cb17-807" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'samre_feedback_history'</span>: samre_result[<span class="st">'feedback_history'</span>]</span>
-<span id="cb17-808"><a href="#cb17-808" aria-hidden="true" tabindex="-1"></a>                    })</span>
-<span id="cb17-809"><a href="#cb17-809" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span>  <span class="co"># If successful, break retry loop</span></span>
-<span id="cb17-810"><a href="#cb17-810" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb17-811"><a href="#cb17-811" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
-<span id="cb17-812"><a href="#cb17-812" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span>  <span class="co"># Exponential backoff</span></span>
-<span id="cb17-813"><a href="#cb17-813" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on SAMRE, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
-<span id="cb17-814"><a href="#cb17-814" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
-<span id="cb17-815"><a href="#cb17-815" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:  <span class="co"># Last attempt failed</span></span>
-<span id="cb17-816"><a href="#cb17-816" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
-<span id="cb17-817"><a href="#cb17-817" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
-<span id="cb17-818"><a href="#cb17-818" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span>  <span class="co"># Re-raise non-rate-limit errors</span></span>
-<span id="cb17-819"><a href="#cb17-819" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-820"><a href="#cb17-820" aria-hidden="true" tabindex="-1"></a>            <span class="cf">await</span> asyncio.sleep(<span class="fl">0.5</span>)  <span class="co"># Add small delay between evaluator calls</span></span>
-<span id="cb17-821"><a href="#cb17-821" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb17-822"><a href="#cb17-822" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Run baseline strong with same number of rounds as SAMRE</span></span>
-<span id="cb17-823"><a href="#cb17-823" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb17-824"><a href="#cb17-824" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
-<span id="cb17-825"><a href="#cb17-825" aria-hidden="true" tabindex="-1"></a>                    baseline_strong_evaluator <span class="op">=</span> evaluators[<span class="st">'baseline_strong'</span>]</span>
-<span id="cb17-826"><a href="#cb17-826" aria-hidden="true" tabindex="-1"></a>                    baseline_strong_result <span class="op">=</span> <span class="cf">await</span> baseline_strong_evaluator.evaluate(</span>
-<span id="cb17-827"><a href="#cb17-827" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>],</span>
-<span id="cb17-828"><a href="#cb17-828" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>],</span>
-<span id="cb17-829"><a href="#cb17-829" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>],</span>
-<span id="cb17-830"><a href="#cb17-830" aria-hidden="true" tabindex="-1"></a>                        num_rounds<span class="op">=</span>result[<span class="st">'samre_rounds'</span>]</span>
-<span id="cb17-831"><a href="#cb17-831" aria-hidden="true" tabindex="-1"></a>                    )</span>
-<span id="cb17-832"><a href="#cb17-832" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_strong_winner'</span>] <span class="op">=</span> baseline_strong_result[<span class="st">'winner'</span>]</span>
-<span id="cb17-833"><a href="#cb17-833" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'baseline_strong_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: baseline_strong_result[k] </span>
-<span id="cb17-834"><a href="#cb17-834" aria-hidden="true" tabindex="-1"></a>                                 <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
-<span id="cb17-835"><a href="#cb17-835" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_strong_full_response'</span>] <span class="op">=</span> baseline_strong_result[<span class="st">'full_response'</span>]</span>
-<span id="cb17-836"><a href="#cb17-836" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
-<span id="cb17-837"><a href="#cb17-837" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb17-838"><a href="#cb17-838" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
-<span id="cb17-839"><a href="#cb17-839" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span></span>
-<span id="cb17-840"><a href="#cb17-840" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on baseline strong, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
-<span id="cb17-841"><a href="#cb17-841" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
-<span id="cb17-842"><a href="#cb17-842" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb17-843"><a href="#cb17-843" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
-<span id="cb17-844"><a href="#cb17-844" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
-<span id="cb17-845"><a href="#cb17-845" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span></span>
-<span id="cb17-846"><a href="#cb17-846" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-847"><a href="#cb17-847" aria-hidden="true" tabindex="-1"></a>            <span class="cf">await</span> asyncio.sleep(<span class="fl">0.5</span>)  <span class="co"># Add small delay between evaluator calls</span></span>
-<span id="cb17-848"><a href="#cb17-848" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-849"><a href="#cb17-849" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Run baseline weak with 1 round</span></span>
-<span id="cb17-850"><a href="#cb17-850" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb17-851"><a href="#cb17-851" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
-<span id="cb17-852"><a href="#cb17-852" aria-hidden="true" tabindex="-1"></a>                    baseline_weak_evaluator <span class="op">=</span> evaluators[<span class="st">'baseline_weak'</span>]</span>
-<span id="cb17-853"><a href="#cb17-853" aria-hidden="true" tabindex="-1"></a>                    baseline_weak_result <span class="op">=</span> <span class="cf">await</span> baseline_weak_evaluator.evaluate(</span>
-<span id="cb17-854"><a href="#cb17-854" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>],</span>
-<span id="cb17-855"><a href="#cb17-855" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>],</span>
-<span id="cb17-856"><a href="#cb17-856" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>],</span>
-<span id="cb17-857"><a href="#cb17-857" aria-hidden="true" tabindex="-1"></a>                        num_rounds<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb17-858"><a href="#cb17-858" aria-hidden="true" tabindex="-1"></a>                    )</span>
-<span id="cb17-859"><a href="#cb17-859" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_weak_winner'</span>] <span class="op">=</span> baseline_weak_result[<span class="st">'winner'</span>]</span>
-<span id="cb17-860"><a href="#cb17-860" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'baseline_weak_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: baseline_weak_result[k] </span>
-<span id="cb17-861"><a href="#cb17-861" aria-hidden="true" tabindex="-1"></a>                                 <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
-<span id="cb17-862"><a href="#cb17-862" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_weak_full_response'</span>] <span class="op">=</span> baseline_weak_result[<span class="st">'full_response'</span>]</span>
-<span id="cb17-863"><a href="#cb17-863" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
-<span id="cb17-864"><a href="#cb17-864" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb17-865"><a href="#cb17-865" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
-<span id="cb17-866"><a href="#cb17-866" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span></span>
-<span id="cb17-867"><a href="#cb17-867" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on baseline weak, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
-<span id="cb17-868"><a href="#cb17-868" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
-<span id="cb17-869"><a href="#cb17-869" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb17-870"><a href="#cb17-870" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
-<span id="cb17-871"><a href="#cb17-871" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
-<span id="cb17-872"><a href="#cb17-872" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span></span>
-<span id="cb17-873"><a href="#cb17-873" aria-hidden="true" tabindex="-1"></a>                        </span>
-<span id="cb17-874"><a href="#cb17-874" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb17-875"><a href="#cb17-875" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Error evaluating row </span><span class="sc">{</span>idx<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-876"><a href="#cb17-876" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'samre_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb17-877"><a href="#cb17-877" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'baseline_strong_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb17-878"><a href="#cb17-878" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'baseline_weak_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb17-879"><a href="#cb17-879" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'error'</span>] <span class="op">=</span> <span class="bu">str</span>(e)</span>
-<span id="cb17-880"><a href="#cb17-880" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-881"><a href="#cb17-881" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Save checkpoint after each evaluation</span></span>
-<span id="cb17-882"><a href="#cb17-882" aria-hidden="true" tabindex="-1"></a>        os.makedirs(<span class="st">'checkpoints'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-883"><a href="#cb17-883" aria-hidden="true" tabindex="-1"></a>        json.dump(result, <span class="bu">open</span>(checkpoint_file, <span class="st">'w'</span>))</span>
-<span id="cb17-884"><a href="#cb17-884" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-885"><a href="#cb17-885" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (idx <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb17-886"><a href="#cb17-886" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Processed </span><span class="sc">{</span>idx <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>total<span class="sc">}</span><span class="ss"> conversations"</span>)</span>
-<span id="cb17-887"><a href="#cb17-887" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb17-888"><a href="#cb17-888" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
-<span id="cb17-889"><a href="#cb17-889" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-890"><a href="#cb17-890" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> evaluate_conversations_async(df, evaluators, semaphore_limit<span class="op">=</span><span class="dv">3</span>):</span>
-<span id="cb17-891"><a href="#cb17-891" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Evaluate conversations asynchronously"""</span></span>
-<span id="cb17-892"><a href="#cb17-892" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reduce semaphore limit</span></span>
-<span id="cb17-893"><a href="#cb17-893" aria-hidden="true" tabindex="-1"></a>    semaphore_limit <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Process one at a time to avoid rate limits</span></span>
-<span id="cb17-894"><a href="#cb17-894" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-895"><a href="#cb17-895" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process in smaller batches</span></span>
-<span id="cb17-896"><a href="#cb17-896" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb17-897"><a href="#cb17-897" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
-<span id="cb17-898"><a href="#cb17-898" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-899"><a href="#cb17-899" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df), batch_size):</span>
-<span id="cb17-900"><a href="#cb17-900" aria-hidden="true" tabindex="-1"></a>        batch <span class="op">=</span> df.iloc[i:i<span class="op">+</span>batch_size]</span>
-<span id="cb17-901"><a href="#cb17-901" aria-hidden="true" tabindex="-1"></a>        tasks <span class="op">=</span> [</span>
-<span id="cb17-902"><a href="#cb17-902" aria-hidden="true" tabindex="-1"></a>            evaluate_conversation_pair(row[<span class="dv">1</span>], evaluators, Semaphore(semaphore_limit), idx, <span class="bu">len</span>(df))</span>
-<span id="cb17-903"><a href="#cb17-903" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> idx, row <span class="kw">in</span> <span class="bu">enumerate</span>(batch.iterrows(), start<span class="op">=</span>i)</span>
-<span id="cb17-904"><a href="#cb17-904" aria-hidden="true" tabindex="-1"></a>        ]</span>
-<span id="cb17-905"><a href="#cb17-905" aria-hidden="true" tabindex="-1"></a>        batch_results <span class="op">=</span> <span class="cf">await</span> asyncio.gather(<span class="op">*</span>tasks)</span>
-<span id="cb17-906"><a href="#cb17-906" aria-hidden="true" tabindex="-1"></a>        results.extend(batch_results)</span>
-<span id="cb17-907"><a href="#cb17-907" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb17-908"><a href="#cb17-908" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add delay between batches</span></span>
-<span id="cb17-909"><a href="#cb17-909" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">+</span> batch_size <span class="op">&lt;</span> <span class="bu">len</span>(df):</span>
-<span id="cb17-910"><a href="#cb17-910" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Completed batch </span><span class="sc">{</span>i<span class="op">//</span>batch_size <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">, waiting before next batch..."</span>)</span>
-<span id="cb17-911"><a href="#cb17-911" aria-hidden="true" tabindex="-1"></a>            <span class="co">#await asyncio.sleep(5)  # 5 second delay between batches</span></span>
-<span id="cb17-912"><a href="#cb17-912" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb17-913"><a href="#cb17-913" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame(results)</span>
-<span id="cb17-914"><a href="#cb17-914" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-915"><a href="#cb17-915" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> main():</span>
-<span id="cb17-916"><a href="#cb17-916" aria-hidden="true" tabindex="-1"></a>    <span class="cf">async</span> <span class="cf">with</span> ModelEvaluator.create(mode<span class="op">=</span><span class="st">"samre"</span>) <span class="im">as</span> samre_evaluator, <span class="op">\</span></span>
-<span id="cb17-917"><a href="#cb17-917" aria-hidden="true" tabindex="-1"></a>               ModelEvaluator.create(mode<span class="op">=</span><span class="st">"baseline_strong"</span>) <span class="im">as</span> baseline_strong_evaluator, <span class="op">\</span></span>
-<span id="cb17-918"><a href="#cb17-918" aria-hidden="true" tabindex="-1"></a>               ModelEvaluator.create(mode<span class="op">=</span><span class="st">"baseline_weak"</span>) <span class="im">as</span> baseline_weak_evaluator:</span>
-<span id="cb17-919"><a href="#cb17-919" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="cf">await</span> evaluate_conversations_async(</span>
-<span id="cb17-920"><a href="#cb17-920" aria-hidden="true" tabindex="-1"></a>            df,</span>
-<span id="cb17-921"><a href="#cb17-921" aria-hidden="true" tabindex="-1"></a>            {</span>
-<span id="cb17-922"><a href="#cb17-922" aria-hidden="true" tabindex="-1"></a>                <span class="st">'samre'</span>: samre_evaluator, </span>
-<span id="cb17-923"><a href="#cb17-923" aria-hidden="true" tabindex="-1"></a>                <span class="st">'baseline_strong'</span>: baseline_strong_evaluator,</span>
-<span id="cb17-924"><a href="#cb17-924" aria-hidden="true" tabindex="-1"></a>                <span class="st">'baseline_weak'</span>: baseline_weak_evaluator</span>
-<span id="cb17-925"><a href="#cb17-925" aria-hidden="true" tabindex="-1"></a>            },</span>
-<span id="cb17-926"><a href="#cb17-926" aria-hidden="true" tabindex="-1"></a>            semaphore_limit<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb17-927"><a href="#cb17-927" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb17-928"><a href="#cb17-928" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-929"><a href="#cb17-929" aria-hidden="true" tabindex="-1"></a><span class="co"># Run evaluation with checkpoint recovery</span></span>
-<span id="cb17-930"><a href="#cb17-930" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb17-931"><a href="#cb17-931" aria-hidden="true" tabindex="-1"></a>    eval_df <span class="op">=</span> <span class="cf">await</span> main()</span>
-<span id="cb17-932"><a href="#cb17-932" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb17-933"><a href="#cb17-933" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Error during evaluation: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ch">\n</span><span class="ss">Recovering from checkpoints..."</span>)</span>
-<span id="cb17-934"><a href="#cb17-934" aria-hidden="true" tabindex="-1"></a>    eval_df <span class="op">=</span> pd.DataFrame([json.load(<span class="bu">open</span>(<span class="ss">f'checkpoints/</span><span class="sc">{</span>f<span class="sc">}</span><span class="ss">'</span>)) </span>
-<span id="cb17-935"><a href="#cb17-935" aria-hidden="true" tabindex="-1"></a>                           <span class="cf">for</span> f <span class="kw">in</span> os.listdir(<span class="st">'checkpoints'</span>) </span>
-<span id="cb17-936"><a href="#cb17-936" aria-hidden="true" tabindex="-1"></a>                           <span class="cf">if</span> f.endswith(<span class="st">'.json'</span>)])</span>
-<span id="cb17-937"><a href="#cb17-937" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
-<span id="cb17-938"><a href="#cb17-938" aria-hidden="true" tabindex="-1"></a>    eval_df.to_csv(<span class="st">'eval_df.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb17-939"><a href="#cb17-939" aria-hidden="true" tabindex="-1"></a>    eval_df.head()</span>
-<span id="cb17-940"><a href="#cb17-940" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-941"><a href="#cb17-941" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with any null values on the model winner columns</span></span>
-<span id="cb17-942"><a href="#cb17-942" aria-hidden="true" tabindex="-1"></a>eval_df <span class="op">=</span> eval_df.dropna(subset<span class="op">=</span>[<span class="st">'baseline_strong_winner'</span>, <span class="st">'baseline_weak_winner'</span>, <span class="st">'samre_winner'</span>])</span>
-<span id="cb17-943"><a href="#cb17-943" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-944"><a href="#cb17-944" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-945"><a href="#cb17-945" aria-hidden="true" tabindex="-1"></a><span class="fu"># Performance evaluation</span></span>
-<span id="cb17-946"><a href="#cb17-946" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-947"><a href="#cb17-947" aria-hidden="true" tabindex="-1"></a>Now that the evaluation is complete, I will evaluate the performance of each of the three methods by first looking at how well each method agreed with the human judgments. </span>
-<span id="cb17-948"><a href="#cb17-948" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-949"><a href="#cb17-949" aria-hidden="true" tabindex="-1"></a>I'll use Krippendorff's alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).</span>
-<span id="cb17-950"><a href="#cb17-950" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-953"><a href="#cb17-953" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-954"><a href="#cb17-954" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-955"><a href="#cb17-955" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-956"><a href="#cb17-956" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates agreement"</span></span>
-<span id="cb17-957"><a href="#cb17-957" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> krippendorff <span class="im">import</span> alpha</span>
-<span id="cb17-958"><a href="#cb17-958" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb17-959"><a href="#cb17-959" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
-<span id="cb17-960"><a href="#cb17-960" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-961"><a href="#cb17-961" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_agreement(df, rater1_col, rater2_col):</span>
-<span id="cb17-962"><a href="#cb17-962" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb17-963"><a href="#cb17-963" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculate Krippendorff's alpha between two raters.</span></span>
-<span id="cb17-964"><a href="#cb17-964" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb17-965"><a href="#cb17-965" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb17-966"><a href="#cb17-966" aria-hidden="true" tabindex="-1"></a><span class="co">        df: DataFrame containing the ratings</span></span>
-<span id="cb17-967"><a href="#cb17-967" aria-hidden="true" tabindex="-1"></a><span class="co">        rater1_col: Name of first rater's column</span></span>
-<span id="cb17-968"><a href="#cb17-968" aria-hidden="true" tabindex="-1"></a><span class="co">        rater2_col: Name of second rater's column</span></span>
-<span id="cb17-969"><a href="#cb17-969" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb17-970"><a href="#cb17-970" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb17-971"><a href="#cb17-971" aria-hidden="true" tabindex="-1"></a><span class="co">        float: Krippendorff's alpha score</span></span>
-<span id="cb17-972"><a href="#cb17-972" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb17-973"><a href="#cb17-973" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create label encoder</span></span>
-<span id="cb17-974"><a href="#cb17-974" aria-hidden="true" tabindex="-1"></a>    le <span class="op">=</span> LabelEncoder()</span>
-<span id="cb17-975"><a href="#cb17-975" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-976"><a href="#cb17-976" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Combine all unique values from both columns</span></span>
-<span id="cb17-977"><a href="#cb17-977" aria-hidden="true" tabindex="-1"></a>    all_values <span class="op">=</span> pd.concat([df[rater1_col], df[rater2_col]]).unique()</span>
-<span id="cb17-978"><a href="#cb17-978" aria-hidden="true" tabindex="-1"></a>    le.fit(all_values)</span>
-<span id="cb17-979"><a href="#cb17-979" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-980"><a href="#cb17-980" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Transform the ratings to numeric values</span></span>
-<span id="cb17-981"><a href="#cb17-981" aria-hidden="true" tabindex="-1"></a>    ratings1 <span class="op">=</span> le.transform(df[rater1_col].fillna(<span class="st">'missing'</span>))</span>
-<span id="cb17-982"><a href="#cb17-982" aria-hidden="true" tabindex="-1"></a>    ratings2 <span class="op">=</span> le.transform(df[rater2_col].fillna(<span class="st">'missing'</span>))</span>
-<span id="cb17-983"><a href="#cb17-983" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-984"><a href="#cb17-984" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reshape data for krippendorff alpha calculation</span></span>
-<span id="cb17-985"><a href="#cb17-985" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Each row represents one item, each column represents one rater</span></span>
-<span id="cb17-986"><a href="#cb17-986" aria-hidden="true" tabindex="-1"></a>    reliability_data <span class="op">=</span> np.vstack([ratings1, ratings2])</span>
-<span id="cb17-987"><a href="#cb17-987" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb17-988"><a href="#cb17-988" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> alpha(reliability_data<span class="op">=</span>reliability_data, level_of_measurement<span class="op">=</span><span class="st">'nominal'</span>)</span>
-<span id="cb17-989"><a href="#cb17-989" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-990"><a href="#cb17-990" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate agreement scores for all methods</span></span>
-<span id="cb17-991"><a href="#cb17-991" aria-hidden="true" tabindex="-1"></a>human_baseline_strong_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_strong_winner'</span>)</span>
-<span id="cb17-992"><a href="#cb17-992" aria-hidden="true" tabindex="-1"></a>human_baseline_weak_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_weak_winner'</span>)</span>
-<span id="cb17-993"><a href="#cb17-993" aria-hidden="true" tabindex="-1"></a>human_samre_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'samre_winner'</span>)</span>
-<span id="cb17-994"><a href="#cb17-994" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-995"><a href="#cb17-995" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame with the agreement scores</span></span>
-<span id="cb17-996"><a href="#cb17-996" aria-hidden="true" tabindex="-1"></a>agreement_df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb17-997"><a href="#cb17-997" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Evaluator Pair'</span>: [<span class="st">'Baseline-Strong Agreement with Humans'</span>, <span class="st">'Baseline-Weak Agreement with Humans'</span>, <span class="st">'SAMRE Agreement with Humans'</span>],</span>
-<span id="cb17-998"><a href="#cb17-998" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Krippendorff Alpha'</span>: [human_baseline_strong_agreement, human_baseline_weak_agreement, human_samre_agreement]</span>
-<span id="cb17-999"><a href="#cb17-999" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb17-1000"><a href="#cb17-1000" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1001"><a href="#cb17-1001" aria-hidden="true" tabindex="-1"></a><span class="co"># Round the scores to 3 decimal places</span></span>
-<span id="cb17-1002"><a href="#cb17-1002" aria-hidden="true" tabindex="-1"></a>agreement_df[<span class="st">'Krippendorff Alpha'</span>] <span class="op">=</span> agreement_df[<span class="st">'Krippendorff Alpha'</span>].<span class="bu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb17-1003"><a href="#cb17-1003" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1004"><a href="#cb17-1004" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percent difference between Baseline-Strong and Baseline-Weak, and SAMRE and Baseline-Strong</span></span>
-<span id="cb17-1005"><a href="#cb17-1005" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_diff <span class="op">=</span> (human_baseline_strong_agreement <span class="op">-</span> human_baseline_weak_agreement) <span class="op">/</span> human_baseline_strong_agreement</span>
-<span id="cb17-1006"><a href="#cb17-1006" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_diff <span class="op">=</span> (human_baseline_strong_agreement <span class="op">-</span> human_samre_agreement) <span class="op">/</span> human_baseline_strong_agreement</span>
-<span id="cb17-1007"><a href="#cb17-1007" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_diff <span class="op">=</span> (human_samre_agreement <span class="op">-</span> human_baseline_weak_agreement) <span class="op">/</span> human_samre_agreement</span>
-<span id="cb17-1008"><a href="#cb17-1008" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1009"><a href="#cb17-1009" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
-<span id="cb17-1010"><a href="#cb17-1010" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agreement_df)</span>
-<span id="cb17-1011"><a href="#cb17-1011" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1012"><a href="#cb17-1012" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the percent difference</span></span>
-<span id="cb17-1013"><a href="#cb17-1013" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Krippendorff Alpha Improvements:"</span>)</span>
-<span id="cb17-1014"><a href="#cb17-1014" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
-<span id="cb17-1015"><a href="#cb17-1015" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
-<span id="cb17-1016"><a href="#cb17-1016" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
-<span id="cb17-1017"><a href="#cb17-1017" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-1018"><a href="#cb17-1018" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1019"><a href="#cb17-1019" aria-hidden="true" tabindex="-1"></a>Although none of the methods yielded particularly strong agreement with the human judges in an absolute sense, their relative performance is in line with my predictions:</span>
-<span id="cb17-1020"><a href="#cb17-1020" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1021"><a href="#cb17-1021" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>As reported in the paper, SAMRE yielded significantly better agreement than Baseline-Weak (0.369 vs. 0.321, an increase of ~13%).</span>
-<span id="cb17-1022"><a href="#cb17-1022" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Baseline-Strong yielded significantly better agreement than Baseline-Weak (0.411 vs. 0.321, an increase of ~22%).</span>
-<span id="cb17-1023"><a href="#cb17-1023" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.411 vs. 0.321, an increase of ~10%)!</span>
-<span id="cb17-1024"><a href="#cb17-1024" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1025"><a href="#cb17-1025" aria-hidden="true" tabindex="-1"></a>Next, we can also measure performance in terms of binary classification accuracy using Matthews Correlation Coefficient (MCC) as a balanced accuracy metric, while re-encoding the "winner" columns to indicate whether model_a was selected as better (1) or not better (0) in each case.</span>
-<span id="cb17-1026"><a href="#cb17-1026" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1029"><a href="#cb17-1029" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-1030"><a href="#cb17-1030" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-1031"><a href="#cb17-1031" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-1032"><a href="#cb17-1032" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates Matthews Correlation Coefficient (MCC)"</span></span>
-<span id="cb17-1033"><a href="#cb17-1033" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode winner as binary</span></span>
-<span id="cb17-1034"><a href="#cb17-1034" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_winner_as_binary(winner):</span>
-<span id="cb17-1035"><a href="#cb17-1035" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="cf">if</span> winner <span class="op">==</span> <span class="st">'model_a'</span> <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb17-1036"><a href="#cb17-1036" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1037"><a href="#cb17-1037" aria-hidden="true" tabindex="-1"></a><span class="co"># Create binary columns for each evaluator</span></span>
-<span id="cb17-1038"><a href="#cb17-1038" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'human_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'human_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
-<span id="cb17-1039"><a href="#cb17-1039" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'baseline_strong_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'baseline_strong_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
-<span id="cb17-1040"><a href="#cb17-1040" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'baseline_weak_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'baseline_weak_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
-<span id="cb17-1041"><a href="#cb17-1041" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'samre_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'samre_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
-<span id="cb17-1042"><a href="#cb17-1042" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1043"><a href="#cb17-1043" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> matthews_corrcoef</span>
-<span id="cb17-1044"><a href="#cb17-1044" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1045"><a href="#cb17-1045" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate MCC for each method</span></span>
-<span id="cb17-1046"><a href="#cb17-1046" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb17-1047"><a href="#cb17-1047" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Method'</span>: [<span class="st">'Baseline-Strong'</span>, <span class="st">'Baseline-Weak'</span>, <span class="st">'SAMRE'</span>],</span>
-<span id="cb17-1048"><a href="#cb17-1048" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MCC'</span>: [</span>
-<span id="cb17-1049"><a href="#cb17-1049" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
-<span id="cb17-1050"><a href="#cb17-1050" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
-<span id="cb17-1051"><a href="#cb17-1051" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'baseline_strong_model_a_better'</span>]</span>
-<span id="cb17-1052"><a href="#cb17-1052" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb17-1053"><a href="#cb17-1053" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
-<span id="cb17-1054"><a href="#cb17-1054" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
-<span id="cb17-1055"><a href="#cb17-1055" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'baseline_weak_model_a_better'</span>]</span>
-<span id="cb17-1056"><a href="#cb17-1056" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb17-1057"><a href="#cb17-1057" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
-<span id="cb17-1058"><a href="#cb17-1058" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
-<span id="cb17-1059"><a href="#cb17-1059" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'samre_model_a_better'</span>]</span>
-<span id="cb17-1060"><a href="#cb17-1060" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb17-1061"><a href="#cb17-1061" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb17-1062"><a href="#cb17-1062" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb17-1063"><a href="#cb17-1063" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1064"><a href="#cb17-1064" aria-hidden="true" tabindex="-1"></a><span class="co"># Round the scores to 3 decimal places</span></span>
-<span id="cb17-1065"><a href="#cb17-1065" aria-hidden="true" tabindex="-1"></a>metrics_df[<span class="st">'MCC'</span>] <span class="op">=</span> metrics_df[<span class="st">'MCC'</span>].<span class="bu">round</span>(<span class="dv">3</span>)</span>
-<span id="cb17-1066"><a href="#cb17-1066" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1067"><a href="#cb17-1067" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percent differences</span></span>
-<span id="cb17-1068"><a href="#cb17-1068" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_percent_diff(new, old):</span>
-<span id="cb17-1069"><a href="#cb17-1069" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb17-1070"><a href="#cb17-1070" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1071"><a href="#cb17-1071" aria-hidden="true" tabindex="-1"></a><span class="co"># MCC differences</span></span>
-<span id="cb17-1072"><a href="#cb17-1072" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
-<span id="cb17-1073"><a href="#cb17-1073" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
-<span id="cb17-1074"><a href="#cb17-1074" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1075"><a href="#cb17-1075" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1076"><a href="#cb17-1076" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
-<span id="cb17-1077"><a href="#cb17-1077" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
-<span id="cb17-1078"><a href="#cb17-1078" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1079"><a href="#cb17-1079" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1080"><a href="#cb17-1080" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
-<span id="cb17-1081"><a href="#cb17-1081" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
-<span id="cb17-1082"><a href="#cb17-1082" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1083"><a href="#cb17-1083" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1084"><a href="#cb17-1084" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1085"><a href="#cb17-1085" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
-<span id="cb17-1086"><a href="#cb17-1086" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metrics_df)</span>
-<span id="cb17-1087"><a href="#cb17-1087" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1088"><a href="#cb17-1088" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">MCC Improvements:"</span>)</span>
-<span id="cb17-1089"><a href="#cb17-1089" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
-<span id="cb17-1090"><a href="#cb17-1090" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
-<span id="cb17-1091"><a href="#cb17-1091" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
-<span id="cb17-1092"><a href="#cb17-1092" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1093"><a href="#cb17-1093" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-1094"><a href="#cb17-1094" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1095"><a href="#cb17-1095" aria-hidden="true" tabindex="-1"></a>Looking at MCC values, we observe a similar pattern of findings to the Krippendorff alphas:</span>
-<span id="cb17-1096"><a href="#cb17-1096" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1097"><a href="#cb17-1097" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>SAMRE did not perform better than Baseline-Weak, in fact it performed slightly worse (0.401 vs. 0.417, a decrease of 4%). This is a bit different than what we saw with Krippendorff alpha.</span>
-<span id="cb17-1098"><a href="#cb17-1098" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Baseline-Strong performed better than Baseline-Weak (0.482 vs. 0.401, an increase of 16%).</span>
-<span id="cb17-1099"><a href="#cb17-1099" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Baseline-Strong performed better than SAMRE (0.464 vs. 0.401, an increase of 20%).</span>
-<span id="cb17-1100"><a href="#cb17-1100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1101"><a href="#cb17-1101" aria-hidden="true" tabindex="-1"></a>_Side-note: Why does MCC disagree with the Krippendorff alpha on the SAMRE vs. Baseline-Weak comparison? I would guess this is due to how ties were resolved when encoding the winner as binary._</span>
-<span id="cb17-1102"><a href="#cb17-1102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1103"><a href="#cb17-1103" aria-hidden="true" tabindex="-1"></a>Finally, we can look at accuracy in terms of percentage agreement. Percentage agreement is not a "balanced" accuracy metric and therefore needs to be used with caution (for example, if the classes are imbalanced, then percentage agreement accuracy can be misleading). But it is the metric used in the paper.</span>
-<span id="cb17-1104"><a href="#cb17-1104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1107"><a href="#cb17-1107" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb17-1108"><a href="#cb17-1108" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
-<span id="cb17-1109"><a href="#cb17-1109" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
-<span id="cb17-1110"><a href="#cb17-1110" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates percentage agreement"</span></span>
-<span id="cb17-1111"><a href="#cb17-1111" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage agreement for each method</span></span>
-<span id="cb17-1112"><a href="#cb17-1112" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_percent_agreement(df, rater1_col, rater2_col):</span>
-<span id="cb17-1113"><a href="#cb17-1113" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate percentage agreement between two raters"""</span></span>
-<span id="cb17-1114"><a href="#cb17-1114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (df[rater1_col] <span class="op">==</span> df[rater2_col]).mean()</span>
-<span id="cb17-1115"><a href="#cb17-1115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1116"><a href="#cb17-1116" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate agreement percentages</span></span>
-<span id="cb17-1117"><a href="#cb17-1117" aria-hidden="true" tabindex="-1"></a>agreement_percentages <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb17-1118"><a href="#cb17-1118" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Method'</span>: [<span class="st">'Baseline-Strong'</span>, <span class="st">'Baseline-Weak'</span>, <span class="st">'SAMRE'</span>],</span>
-<span id="cb17-1119"><a href="#cb17-1119" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Agreement'</span>: [</span>
-<span id="cb17-1120"><a href="#cb17-1120" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_strong_winner'</span>),</span>
-<span id="cb17-1121"><a href="#cb17-1121" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_weak_winner'</span>),</span>
-<span id="cb17-1122"><a href="#cb17-1122" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'samre_winner'</span>)</span>
-<span id="cb17-1123"><a href="#cb17-1123" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb17-1124"><a href="#cb17-1124" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb17-1125"><a href="#cb17-1125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1126"><a href="#cb17-1126" aria-hidden="true" tabindex="-1"></a><span class="co"># Round to 3 decimal places and convert to percentage</span></span>
-<span id="cb17-1127"><a href="#cb17-1127" aria-hidden="true" tabindex="-1"></a>agreement_percentages[<span class="st">'Agreement'</span>] <span class="op">=</span> (agreement_percentages[<span class="st">'Agreement'</span>] <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>)</span>
-<span id="cb17-1128"><a href="#cb17-1128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1129"><a href="#cb17-1129" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percentage point differences</span></span>
-<span id="cb17-1130"><a href="#cb17-1130" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_diff <span class="op">=</span> (</span>
-<span id="cb17-1131"><a href="#cb17-1131" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
-<span id="cb17-1132"><a href="#cb17-1132" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1133"><a href="#cb17-1133" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1134"><a href="#cb17-1134" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_diff <span class="op">=</span> (</span>
-<span id="cb17-1135"><a href="#cb17-1135" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
-<span id="cb17-1136"><a href="#cb17-1136" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1137"><a href="#cb17-1137" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1138"><a href="#cb17-1138" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_diff <span class="op">=</span> (</span>
-<span id="cb17-1139"><a href="#cb17-1139" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
-<span id="cb17-1140"><a href="#cb17-1140" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
-<span id="cb17-1141"><a href="#cb17-1141" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-1142"><a href="#cb17-1142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1143"><a href="#cb17-1143" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
-<span id="cb17-1144"><a href="#cb17-1144" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Percentage Agreement with Human Judgments:"</span>)</span>
-<span id="cb17-1145"><a href="#cb17-1145" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agreement_percentages)</span>
-<span id="cb17-1146"><a href="#cb17-1146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1147"><a href="#cb17-1147" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Percentage Point Differences:"</span>)</span>
-<span id="cb17-1148"><a href="#cb17-1148" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
-<span id="cb17-1149"><a href="#cb17-1149" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
-<span id="cb17-1150"><a href="#cb17-1150" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
-<span id="cb17-1151"><a href="#cb17-1151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-1152"><a href="#cb17-1152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1153"><a href="#cb17-1153" aria-hidden="true" tabindex="-1"></a>Overall across these three metrics, the story is the same: SAMRE did not perform better than a baseline that is designed with best practices.</span>
-<span id="cb17-1154"><a href="#cb17-1154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1155"><a href="#cb17-1155" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
-<span id="cb17-1156"><a href="#cb17-1156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-1157"><a href="#cb17-1157" aria-hidden="true" tabindex="-1"></a>In this post, I have shown that SAMRE does not perform better than a well-engineered baseline method. Prompt engineers need to remain cautious and resist the urge to use complex methods that may seem more sophisticated than standard best practices, without first testing them against a well-engineered baseline.</span>
+<span id="cb17-697"><a href="#cb17-697" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-698"><a href="#cb17-698" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-699"><a href="#cb17-699" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-700"><a href="#cb17-700" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to load the dataset"</span></span>
+<span id="cb17-701"><a href="#cb17-701" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb17-702"><a href="#cb17-702" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> llama_index.core.llama_dataset <span class="im">import</span> LabelledPairwiseEvaluatorDataset</span>
+<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> LabelledPairwiseEvaluatorDataset.from_json(</span>
+<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>    <span class="st">"./data/pairwise_evaluator_dataset.json"</span></span>
+<span id="cb17-707"><a href="#cb17-707" aria-hidden="true" tabindex="-1"></a>).to_pandas()</span>
+<span id="cb17-708"><a href="#cb17-708" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-709"><a href="#cb17-709" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the shape of the dataset</span></span>
+<span id="cb17-710"><a href="#cb17-710" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Dataset shape: </span><span class="sc">{</span>df<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb17-711"><a href="#cb17-711" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-712"><a href="#cb17-712" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the reference_score value counts, just to confirm that this column is encoding the winner as I expect</span></span>
+<span id="cb17-713"><a href="#cb17-713" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">Reference score (winner) value counts: </span><span class="sc">{</span>df[<span class="st">"reference_score"</span>]<span class="sc">.</span>value_counts()<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb17-714"><a href="#cb17-714" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-715"><a href="#cb17-715" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-716"><a href="#cb17-716" aria-hidden="true" tabindex="-1"></a>I'll rename some of the columns, and also encode a "human_winner" column to indicate whether model_a was preferred, model_b, or if there was a tie. (Note: This is just my own preference for how to represent the data).</span>
+<span id="cb17-717"><a href="#cb17-717" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-720"><a href="#cb17-720" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-721"><a href="#cb17-721" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-722"><a href="#cb17-722" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-723"><a href="#cb17-723" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to rename variables and encode a winner column"</span></span>
+<span id="cb17-724"><a href="#cb17-724" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[[<span class="st">'query'</span>, <span class="st">'answer'</span>, <span class="st">'second_answer'</span>, <span class="st">'answer_by'</span>, <span class="st">'second_answer_by'</span>, <span class="st">'reference_score'</span>]]</span>
+<span id="cb17-725"><a href="#cb17-725" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-726"><a href="#cb17-726" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename as follows: query =&gt; question, answer =&gt; model_a_answer, second_answer =&gt; model_b_answer, answer_by =&gt; model_a, second_answer_by =&gt; model_b, reference_score =&gt; human_winner</span></span>
+<span id="cb17-727"><a href="#cb17-727" aria-hidden="true" tabindex="-1"></a>df.rename(columns<span class="op">=</span>{<span class="st">'query'</span>: <span class="st">'question'</span>, <span class="st">'answer'</span>: <span class="st">'model_a_answer'</span>, <span class="st">'second_answer'</span>: <span class="st">'model_b_answer'</span>, <span class="st">'answer_by'</span>: <span class="st">'model_a'</span>, <span class="st">'second_answer_by'</span>: <span class="st">'model_b'</span>, <span class="st">'reference_score'</span>: <span class="st">'human_winner'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-728"><a href="#cb17-728" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-729"><a href="#cb17-729" aria-hidden="true" tabindex="-1"></a><span class="co"># Reencode human winner as "model_a" if 1, "model_b" if 0, and "tie" if 0.5</span></span>
+<span id="cb17-730"><a href="#cb17-730" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'human_winner'</span>] <span class="op">=</span> df[<span class="st">'human_winner'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">'model_a'</span> <span class="cf">if</span> x <span class="op">==</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">'model_b'</span> <span class="cf">if</span> x <span class="op">==</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">'tie'</span>)</span>
+<span id="cb17-731"><a href="#cb17-731" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-732"><a href="#cb17-732" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-733"><a href="#cb17-733" aria-hidden="true" tabindex="-1"></a>The original dataset contains ~1200 rows. I'll take a random sample of 300 rows for my testing to save on time and API costs.</span>
+<span id="cb17-734"><a href="#cb17-734" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-737"><a href="#cb17-737" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-738"><a href="#cb17-738" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-739"><a href="#cb17-739" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-740"><a href="#cb17-740" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Code to take a random sample of 300 rows"</span></span>
+<span id="cb17-741"><a href="#cb17-741" aria-hidden="true" tabindex="-1"></a><span class="co"># Take a random sample of 300 rows</span></span>
+<span id="cb17-742"><a href="#cb17-742" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.sample(n<span class="op">=</span><span class="dv">300</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb17-743"><a href="#cb17-743" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-744"><a href="#cb17-744" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb17-745"><a href="#cb17-745" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-746"><a href="#cb17-746" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-747"><a href="#cb17-747" aria-hidden="true" tabindex="-1"></a><span class="fu"># Use methods to evaluate MT-Bench dataset</span></span>
+<span id="cb17-748"><a href="#cb17-748" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-749"><a href="#cb17-749" aria-hidden="true" tabindex="-1"></a>Using this sample of 300 rows from the MT-Bench dataset, I will run the three LLM models (Baseline-Weak, Baseline-Strong, and SAMRE) on each set of question and answers.</span>
+<span id="cb17-750"><a href="#cb17-750" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-751"><a href="#cb17-751" aria-hidden="true" tabindex="-1"></a>The code below is the main evaluation loop, designed to run multiple evaluations asynchronously (to save time). It will evaluate each item in the dataset, and save the results to disk as a checkpoint. If the evaluation is interrupted, the code can be resumed from the last checkpoint.</span>
+<span id="cb17-752"><a href="#cb17-752" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-753"><a href="#cb17-753" aria-hidden="true" tabindex="-1"></a>I'll use <span class="in">`gpt-4o-mini`</span> for the evaluations. In the paper they had tested models like <span class="in">`gpt-4o`</span> and <span class="in">`gpt-3.5-turbo`</span>, and I would not expect <span class="in">`gpt-4o-mini`</span> to be an exception.</span>
+<span id="cb17-754"><a href="#cb17-754" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-757"><a href="#cb17-757" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-758"><a href="#cb17-758" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-759"><a href="#cb17-759" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-760"><a href="#cb17-760" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that runs the evaluations"</span></span>
+<span id="cb17-761"><a href="#cb17-761" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> asyncio</span>
+<span id="cb17-762"><a href="#cb17-762" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> asyncio <span class="im">import</span> Semaphore</span>
+<span id="cb17-763"><a href="#cb17-763" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
+<span id="cb17-764"><a href="#cb17-764" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb17-765"><a href="#cb17-765" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> hashlib</span>
+<span id="cb17-766"><a href="#cb17-766" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb17-767"><a href="#cb17-767" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(level<span class="op">=</span>logging.WARNING)</span>
+<span id="cb17-768"><a href="#cb17-768" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-769"><a href="#cb17-769" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> evaluate_conversation_pair(row, evaluators, semaphore, idx, total):</span>
+<span id="cb17-770"><a href="#cb17-770" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Evaluate a single conversation pair with all evaluators"""</span></span>
+<span id="cb17-771"><a href="#cb17-771" aria-hidden="true" tabindex="-1"></a>    <span class="cf">async</span> <span class="cf">with</span> semaphore:</span>
+<span id="cb17-772"><a href="#cb17-772" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add delay between API calls</span></span>
+<span id="cb17-773"><a href="#cb17-773" aria-hidden="true" tabindex="-1"></a>        <span class="co">#await asyncio.sleep(1)  # Add small delay between conversations</span></span>
+<span id="cb17-774"><a href="#cb17-774" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-775"><a href="#cb17-775" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Generate pair_id from conversation hash</span></span>
+<span id="cb17-776"><a href="#cb17-776" aria-hidden="true" tabindex="-1"></a>        pair_id <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>row[<span class="st">'model_a'</span>]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>row[<span class="st">'model_b'</span>]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>hashlib<span class="sc">.</span>sha256(<span class="bu">str</span>(row[<span class="st">'question'</span>]).encode())<span class="sc">.</span>hexdigest()[:<span class="dv">12</span>]<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb17-777"><a href="#cb17-777" aria-hidden="true" tabindex="-1"></a>        checkpoint_file <span class="op">=</span> <span class="ss">f'checkpoints/</span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">.json'</span></span>
+<span id="cb17-778"><a href="#cb17-778" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-779"><a href="#cb17-779" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return existing checkpoint if available</span></span>
+<span id="cb17-780"><a href="#cb17-780" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> os.path.exists(checkpoint_file):</span>
+<span id="cb17-781"><a href="#cb17-781" aria-hidden="true" tabindex="-1"></a>            logging.info(<span class="ss">f"Found existing checkpoint file for </span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-782"><a href="#cb17-782" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> json.load(<span class="bu">open</span>(checkpoint_file))</span>
+<span id="cb17-783"><a href="#cb17-783" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-784"><a href="#cb17-784" aria-hidden="true" tabindex="-1"></a>        logging.info(<span class="ss">f"No checkpoint file found for </span><span class="sc">{</span>pair_id<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-785"><a href="#cb17-785" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> {</span>
+<span id="cb17-786"><a href="#cb17-786" aria-hidden="true" tabindex="-1"></a>            <span class="st">'model_a'</span>: row[<span class="st">'model_a'</span>],</span>
+<span id="cb17-787"><a href="#cb17-787" aria-hidden="true" tabindex="-1"></a>            <span class="st">'model_b'</span>: row[<span class="st">'model_b'</span>],</span>
+<span id="cb17-788"><a href="#cb17-788" aria-hidden="true" tabindex="-1"></a>            <span class="st">'human_winner'</span>: row[<span class="st">'human_winner'</span>],</span>
+<span id="cb17-789"><a href="#cb17-789" aria-hidden="true" tabindex="-1"></a>            <span class="st">'pair_id'</span>: pair_id</span>
+<span id="cb17-790"><a href="#cb17-790" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb17-791"><a href="#cb17-791" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-792"><a href="#cb17-792" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb17-793"><a href="#cb17-793" aria-hidden="true" tabindex="-1"></a>            <span class="co"># First run SAMRE evaluation with retries</span></span>
+<span id="cb17-794"><a href="#cb17-794" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):  <span class="co"># Try up to 3 times</span></span>
+<span id="cb17-795"><a href="#cb17-795" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb17-796"><a href="#cb17-796" aria-hidden="true" tabindex="-1"></a>                    samre_evaluator <span class="op">=</span> evaluators[<span class="st">'samre'</span>]</span>
+<span id="cb17-797"><a href="#cb17-797" aria-hidden="true" tabindex="-1"></a>                    samre_result <span class="op">=</span> <span class="cf">await</span> samre_evaluator.evaluate(</span>
+<span id="cb17-798"><a href="#cb17-798" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>], </span>
+<span id="cb17-799"><a href="#cb17-799" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>], </span>
+<span id="cb17-800"><a href="#cb17-800" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>]</span>
+<span id="cb17-801"><a href="#cb17-801" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb17-802"><a href="#cb17-802" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'samre_winner'</span>] <span class="op">=</span> samre_result[<span class="st">'winner'</span>]</span>
+<span id="cb17-803"><a href="#cb17-803" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'samre_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: samre_result[k] <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
+<span id="cb17-804"><a href="#cb17-804" aria-hidden="true" tabindex="-1"></a>                    result.update({</span>
+<span id="cb17-805"><a href="#cb17-805" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'samre_argument_history'</span>: samre_result[<span class="st">'argument_history'</span>],</span>
+<span id="cb17-806"><a href="#cb17-806" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'samre_feedback_history'</span>: samre_result[<span class="st">'feedback_history'</span>]</span>
+<span id="cb17-807"><a href="#cb17-807" aria-hidden="true" tabindex="-1"></a>                    })</span>
+<span id="cb17-808"><a href="#cb17-808" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span>  <span class="co"># If successful, break retry loop</span></span>
+<span id="cb17-809"><a href="#cb17-809" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-810"><a href="#cb17-810" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
+<span id="cb17-811"><a href="#cb17-811" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span>  <span class="co"># Exponential backoff</span></span>
+<span id="cb17-812"><a href="#cb17-812" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on SAMRE, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
+<span id="cb17-813"><a href="#cb17-813" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
+<span id="cb17-814"><a href="#cb17-814" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:  <span class="co"># Last attempt failed</span></span>
+<span id="cb17-815"><a href="#cb17-815" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
+<span id="cb17-816"><a href="#cb17-816" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb17-817"><a href="#cb17-817" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span>  <span class="co"># Re-raise non-rate-limit errors</span></span>
+<span id="cb17-818"><a href="#cb17-818" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-819"><a href="#cb17-819" aria-hidden="true" tabindex="-1"></a>            <span class="cf">await</span> asyncio.sleep(<span class="fl">0.5</span>)  <span class="co"># Add small delay between evaluator calls</span></span>
+<span id="cb17-820"><a href="#cb17-820" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-821"><a href="#cb17-821" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Run baseline strong with same number of rounds as SAMRE</span></span>
+<span id="cb17-822"><a href="#cb17-822" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb17-823"><a href="#cb17-823" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb17-824"><a href="#cb17-824" aria-hidden="true" tabindex="-1"></a>                    baseline_strong_evaluator <span class="op">=</span> evaluators[<span class="st">'baseline_strong'</span>]</span>
+<span id="cb17-825"><a href="#cb17-825" aria-hidden="true" tabindex="-1"></a>                    baseline_strong_result <span class="op">=</span> <span class="cf">await</span> baseline_strong_evaluator.evaluate(</span>
+<span id="cb17-826"><a href="#cb17-826" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>],</span>
+<span id="cb17-827"><a href="#cb17-827" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>],</span>
+<span id="cb17-828"><a href="#cb17-828" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>],</span>
+<span id="cb17-829"><a href="#cb17-829" aria-hidden="true" tabindex="-1"></a>                        num_rounds<span class="op">=</span>result[<span class="st">'samre_rounds'</span>]</span>
+<span id="cb17-830"><a href="#cb17-830" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb17-831"><a href="#cb17-831" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_strong_winner'</span>] <span class="op">=</span> baseline_strong_result[<span class="st">'winner'</span>]</span>
+<span id="cb17-832"><a href="#cb17-832" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'baseline_strong_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: baseline_strong_result[k] </span>
+<span id="cb17-833"><a href="#cb17-833" aria-hidden="true" tabindex="-1"></a>                                 <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
+<span id="cb17-834"><a href="#cb17-834" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_strong_full_response'</span>] <span class="op">=</span> baseline_strong_result[<span class="st">'full_response'</span>]</span>
+<span id="cb17-835"><a href="#cb17-835" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
+<span id="cb17-836"><a href="#cb17-836" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-837"><a href="#cb17-837" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
+<span id="cb17-838"><a href="#cb17-838" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span></span>
+<span id="cb17-839"><a href="#cb17-839" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on baseline strong, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
+<span id="cb17-840"><a href="#cb17-840" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
+<span id="cb17-841"><a href="#cb17-841" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb17-842"><a href="#cb17-842" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
+<span id="cb17-843"><a href="#cb17-843" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb17-844"><a href="#cb17-844" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span></span>
+<span id="cb17-845"><a href="#cb17-845" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-846"><a href="#cb17-846" aria-hidden="true" tabindex="-1"></a>            <span class="cf">await</span> asyncio.sleep(<span class="fl">0.5</span>)  <span class="co"># Add small delay between evaluator calls</span></span>
+<span id="cb17-847"><a href="#cb17-847" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-848"><a href="#cb17-848" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Run baseline weak with 1 round</span></span>
+<span id="cb17-849"><a href="#cb17-849" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> attempt <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb17-850"><a href="#cb17-850" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb17-851"><a href="#cb17-851" aria-hidden="true" tabindex="-1"></a>                    baseline_weak_evaluator <span class="op">=</span> evaluators[<span class="st">'baseline_weak'</span>]</span>
+<span id="cb17-852"><a href="#cb17-852" aria-hidden="true" tabindex="-1"></a>                    baseline_weak_result <span class="op">=</span> <span class="cf">await</span> baseline_weak_evaluator.evaluate(</span>
+<span id="cb17-853"><a href="#cb17-853" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'question'</span>],</span>
+<span id="cb17-854"><a href="#cb17-854" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_a_answer'</span>],</span>
+<span id="cb17-855"><a href="#cb17-855" aria-hidden="true" tabindex="-1"></a>                        row[<span class="st">'model_b_answer'</span>],</span>
+<span id="cb17-856"><a href="#cb17-856" aria-hidden="true" tabindex="-1"></a>                        num_rounds<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb17-857"><a href="#cb17-857" aria-hidden="true" tabindex="-1"></a>                    )</span>
+<span id="cb17-858"><a href="#cb17-858" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_weak_winner'</span>] <span class="op">=</span> baseline_weak_result[<span class="st">'winner'</span>]</span>
+<span id="cb17-859"><a href="#cb17-859" aria-hidden="true" tabindex="-1"></a>                    result.update({<span class="ss">f'baseline_weak_</span><span class="sc">{</span>k<span class="sc">}</span><span class="ss">'</span>: baseline_weak_result[k] </span>
+<span id="cb17-860"><a href="#cb17-860" aria-hidden="true" tabindex="-1"></a>                                 <span class="cf">for</span> k <span class="kw">in</span> [<span class="st">'average_scores'</span>, <span class="st">'rounds'</span>, <span class="st">'score_history'</span>]})</span>
+<span id="cb17-861"><a href="#cb17-861" aria-hidden="true" tabindex="-1"></a>                    result[<span class="st">'baseline_weak_full_response'</span>] <span class="op">=</span> baseline_weak_result[<span class="st">'full_response'</span>]</span>
+<span id="cb17-862"><a href="#cb17-862" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span></span>
+<span id="cb17-863"><a href="#cb17-863" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-864"><a href="#cb17-864" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="st">"rate limit"</span> <span class="kw">in</span> <span class="bu">str</span>(e).lower():</span>
+<span id="cb17-865"><a href="#cb17-865" aria-hidden="true" tabindex="-1"></a>                        wait_time <span class="op">=</span> (<span class="dv">2</span> <span class="op">**</span> attempt) <span class="op">*</span> <span class="dv">1</span></span>
+<span id="cb17-866"><a href="#cb17-866" aria-hidden="true" tabindex="-1"></a>                        <span class="bu">print</span>(<span class="ss">f"Rate limit hit on baseline weak, waiting </span><span class="sc">{</span>wait_time<span class="sc">}</span><span class="ss"> seconds..."</span>)</span>
+<span id="cb17-867"><a href="#cb17-867" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">await</span> asyncio.sleep(wait_time)</span>
+<span id="cb17-868"><a href="#cb17-868" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">if</span> attempt <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb17-869"><a href="#cb17-869" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">raise</span></span>
+<span id="cb17-870"><a href="#cb17-870" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb17-871"><a href="#cb17-871" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">raise</span></span>
+<span id="cb17-872"><a href="#cb17-872" aria-hidden="true" tabindex="-1"></a>                        </span>
+<span id="cb17-873"><a href="#cb17-873" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-874"><a href="#cb17-874" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Error evaluating row </span><span class="sc">{</span>idx<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-875"><a href="#cb17-875" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'samre_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb17-876"><a href="#cb17-876" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'baseline_strong_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb17-877"><a href="#cb17-877" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'baseline_weak_winner'</span>] <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb17-878"><a href="#cb17-878" aria-hidden="true" tabindex="-1"></a>            result[<span class="st">'error'</span>] <span class="op">=</span> <span class="bu">str</span>(e)</span>
+<span id="cb17-879"><a href="#cb17-879" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-880"><a href="#cb17-880" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Save checkpoint after each evaluation</span></span>
+<span id="cb17-881"><a href="#cb17-881" aria-hidden="true" tabindex="-1"></a>        os.makedirs(<span class="st">'checkpoints'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb17-882"><a href="#cb17-882" aria-hidden="true" tabindex="-1"></a>        json.dump(result, <span class="bu">open</span>(checkpoint_file, <span class="st">'w'</span>))</span>
+<span id="cb17-883"><a href="#cb17-883" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-884"><a href="#cb17-884" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (idx <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb17-885"><a href="#cb17-885" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Processed </span><span class="sc">{</span>idx <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>total<span class="sc">}</span><span class="ss"> conversations"</span>)</span>
+<span id="cb17-886"><a href="#cb17-886" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-887"><a href="#cb17-887" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb17-888"><a href="#cb17-888" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-889"><a href="#cb17-889" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> evaluate_conversations_async(df, evaluators, semaphore_limit<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb17-890"><a href="#cb17-890" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Evaluate conversations asynchronously"""</span></span>
+<span id="cb17-891"><a href="#cb17-891" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reduce semaphore limit</span></span>
+<span id="cb17-892"><a href="#cb17-892" aria-hidden="true" tabindex="-1"></a>    semaphore_limit <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Process one at a time to avoid rate limits</span></span>
+<span id="cb17-893"><a href="#cb17-893" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-894"><a href="#cb17-894" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process in smaller batches</span></span>
+<span id="cb17-895"><a href="#cb17-895" aria-hidden="true" tabindex="-1"></a>    batch_size <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb17-896"><a href="#cb17-896" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
+<span id="cb17-897"><a href="#cb17-897" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-898"><a href="#cb17-898" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(df), batch_size):</span>
+<span id="cb17-899"><a href="#cb17-899" aria-hidden="true" tabindex="-1"></a>        batch <span class="op">=</span> df.iloc[i:i<span class="op">+</span>batch_size]</span>
+<span id="cb17-900"><a href="#cb17-900" aria-hidden="true" tabindex="-1"></a>        tasks <span class="op">=</span> [</span>
+<span id="cb17-901"><a href="#cb17-901" aria-hidden="true" tabindex="-1"></a>            evaluate_conversation_pair(row[<span class="dv">1</span>], evaluators, Semaphore(semaphore_limit), idx, <span class="bu">len</span>(df))</span>
+<span id="cb17-902"><a href="#cb17-902" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> idx, row <span class="kw">in</span> <span class="bu">enumerate</span>(batch.iterrows(), start<span class="op">=</span>i)</span>
+<span id="cb17-903"><a href="#cb17-903" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb17-904"><a href="#cb17-904" aria-hidden="true" tabindex="-1"></a>        batch_results <span class="op">=</span> <span class="cf">await</span> asyncio.gather(<span class="op">*</span>tasks)</span>
+<span id="cb17-905"><a href="#cb17-905" aria-hidden="true" tabindex="-1"></a>        results.extend(batch_results)</span>
+<span id="cb17-906"><a href="#cb17-906" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-907"><a href="#cb17-907" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add delay between batches</span></span>
+<span id="cb17-908"><a href="#cb17-908" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">+</span> batch_size <span class="op">&lt;</span> <span class="bu">len</span>(df):</span>
+<span id="cb17-909"><a href="#cb17-909" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Completed batch </span><span class="sc">{</span>i<span class="op">//</span>batch_size <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">, waiting before next batch..."</span>)</span>
+<span id="cb17-910"><a href="#cb17-910" aria-hidden="true" tabindex="-1"></a>            <span class="co">#await asyncio.sleep(5)  # 5 second delay between batches</span></span>
+<span id="cb17-911"><a href="#cb17-911" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-912"><a href="#cb17-912" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame(results)</span>
+<span id="cb17-913"><a href="#cb17-913" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-914"><a href="#cb17-914" aria-hidden="true" tabindex="-1"></a><span class="cf">async</span> <span class="kw">def</span> main():</span>
+<span id="cb17-915"><a href="#cb17-915" aria-hidden="true" tabindex="-1"></a>    <span class="cf">async</span> <span class="cf">with</span> ModelEvaluator.create(mode<span class="op">=</span><span class="st">"samre"</span>) <span class="im">as</span> samre_evaluator, <span class="op">\</span></span>
+<span id="cb17-916"><a href="#cb17-916" aria-hidden="true" tabindex="-1"></a>               ModelEvaluator.create(mode<span class="op">=</span><span class="st">"baseline_strong"</span>) <span class="im">as</span> baseline_strong_evaluator, <span class="op">\</span></span>
+<span id="cb17-917"><a href="#cb17-917" aria-hidden="true" tabindex="-1"></a>               ModelEvaluator.create(mode<span class="op">=</span><span class="st">"baseline_weak"</span>) <span class="im">as</span> baseline_weak_evaluator:</span>
+<span id="cb17-918"><a href="#cb17-918" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="cf">await</span> evaluate_conversations_async(</span>
+<span id="cb17-919"><a href="#cb17-919" aria-hidden="true" tabindex="-1"></a>            df,</span>
+<span id="cb17-920"><a href="#cb17-920" aria-hidden="true" tabindex="-1"></a>            {</span>
+<span id="cb17-921"><a href="#cb17-921" aria-hidden="true" tabindex="-1"></a>                <span class="st">'samre'</span>: samre_evaluator, </span>
+<span id="cb17-922"><a href="#cb17-922" aria-hidden="true" tabindex="-1"></a>                <span class="st">'baseline_strong'</span>: baseline_strong_evaluator,</span>
+<span id="cb17-923"><a href="#cb17-923" aria-hidden="true" tabindex="-1"></a>                <span class="st">'baseline_weak'</span>: baseline_weak_evaluator</span>
+<span id="cb17-924"><a href="#cb17-924" aria-hidden="true" tabindex="-1"></a>            },</span>
+<span id="cb17-925"><a href="#cb17-925" aria-hidden="true" tabindex="-1"></a>            semaphore_limit<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb17-926"><a href="#cb17-926" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb17-927"><a href="#cb17-927" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-928"><a href="#cb17-928" aria-hidden="true" tabindex="-1"></a><span class="co"># Run evaluation with checkpoint recovery</span></span>
+<span id="cb17-929"><a href="#cb17-929" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb17-930"><a href="#cb17-930" aria-hidden="true" tabindex="-1"></a>    eval_df <span class="op">=</span> <span class="cf">await</span> main()</span>
+<span id="cb17-931"><a href="#cb17-931" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-932"><a href="#cb17-932" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Error during evaluation: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ch">\n</span><span class="ss">Recovering from checkpoints..."</span>)</span>
+<span id="cb17-933"><a href="#cb17-933" aria-hidden="true" tabindex="-1"></a>    eval_df <span class="op">=</span> pd.DataFrame([json.load(<span class="bu">open</span>(<span class="ss">f'checkpoints/</span><span class="sc">{</span>f<span class="sc">}</span><span class="ss">'</span>)) </span>
+<span id="cb17-934"><a href="#cb17-934" aria-hidden="true" tabindex="-1"></a>                           <span class="cf">for</span> f <span class="kw">in</span> os.listdir(<span class="st">'checkpoints'</span>) </span>
+<span id="cb17-935"><a href="#cb17-935" aria-hidden="true" tabindex="-1"></a>                           <span class="cf">if</span> f.endswith(<span class="st">'.json'</span>)])</span>
+<span id="cb17-936"><a href="#cb17-936" aria-hidden="true" tabindex="-1"></a><span class="cf">finally</span>:</span>
+<span id="cb17-937"><a href="#cb17-937" aria-hidden="true" tabindex="-1"></a>    eval_df.to_csv(<span class="st">'eval_df.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb17-938"><a href="#cb17-938" aria-hidden="true" tabindex="-1"></a>    eval_df.head()</span>
+<span id="cb17-939"><a href="#cb17-939" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-940"><a href="#cb17-940" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop rows with any null values on the model winner columns</span></span>
+<span id="cb17-941"><a href="#cb17-941" aria-hidden="true" tabindex="-1"></a>eval_df <span class="op">=</span> eval_df.dropna(subset<span class="op">=</span>[<span class="st">'baseline_strong_winner'</span>, <span class="st">'baseline_weak_winner'</span>, <span class="st">'samre_winner'</span>])</span>
+<span id="cb17-942"><a href="#cb17-942" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-943"><a href="#cb17-943" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-944"><a href="#cb17-944" aria-hidden="true" tabindex="-1"></a><span class="fu"># Performance evaluation</span></span>
+<span id="cb17-945"><a href="#cb17-945" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-946"><a href="#cb17-946" aria-hidden="true" tabindex="-1"></a>Now that the evaluation is complete, I will evaluate the performance of each of the three methods by first looking at how well each method agreed with the human judgments. </span>
+<span id="cb17-947"><a href="#cb17-947" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-948"><a href="#cb17-948" aria-hidden="true" tabindex="-1"></a>I'll use Krippendorff's alpha to measure agreement, since it is a robust measure of agreement that can handle non-binary ratings (among other things).</span>
+<span id="cb17-949"><a href="#cb17-949" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-952"><a href="#cb17-952" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-953"><a href="#cb17-953" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-954"><a href="#cb17-954" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-955"><a href="#cb17-955" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates agreement"</span></span>
+<span id="cb17-956"><a href="#cb17-956" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> krippendorff <span class="im">import</span> alpha</span>
+<span id="cb17-957"><a href="#cb17-957" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb17-958"><a href="#cb17-958" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
+<span id="cb17-959"><a href="#cb17-959" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-960"><a href="#cb17-960" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_agreement(df, rater1_col, rater2_col):</span>
+<span id="cb17-961"><a href="#cb17-961" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb17-962"><a href="#cb17-962" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculate Krippendorff's alpha between two raters.</span></span>
+<span id="cb17-963"><a href="#cb17-963" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb17-964"><a href="#cb17-964" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb17-965"><a href="#cb17-965" aria-hidden="true" tabindex="-1"></a><span class="co">        df: DataFrame containing the ratings</span></span>
+<span id="cb17-966"><a href="#cb17-966" aria-hidden="true" tabindex="-1"></a><span class="co">        rater1_col: Name of first rater's column</span></span>
+<span id="cb17-967"><a href="#cb17-967" aria-hidden="true" tabindex="-1"></a><span class="co">        rater2_col: Name of second rater's column</span></span>
+<span id="cb17-968"><a href="#cb17-968" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb17-969"><a href="#cb17-969" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb17-970"><a href="#cb17-970" aria-hidden="true" tabindex="-1"></a><span class="co">        float: Krippendorff's alpha score</span></span>
+<span id="cb17-971"><a href="#cb17-971" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb17-972"><a href="#cb17-972" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create label encoder</span></span>
+<span id="cb17-973"><a href="#cb17-973" aria-hidden="true" tabindex="-1"></a>    le <span class="op">=</span> LabelEncoder()</span>
+<span id="cb17-974"><a href="#cb17-974" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-975"><a href="#cb17-975" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Combine all unique values from both columns</span></span>
+<span id="cb17-976"><a href="#cb17-976" aria-hidden="true" tabindex="-1"></a>    all_values <span class="op">=</span> pd.concat([df[rater1_col], df[rater2_col]]).unique()</span>
+<span id="cb17-977"><a href="#cb17-977" aria-hidden="true" tabindex="-1"></a>    le.fit(all_values)</span>
+<span id="cb17-978"><a href="#cb17-978" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-979"><a href="#cb17-979" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Transform the ratings to numeric values</span></span>
+<span id="cb17-980"><a href="#cb17-980" aria-hidden="true" tabindex="-1"></a>    ratings1 <span class="op">=</span> le.transform(df[rater1_col].fillna(<span class="st">'missing'</span>))</span>
+<span id="cb17-981"><a href="#cb17-981" aria-hidden="true" tabindex="-1"></a>    ratings2 <span class="op">=</span> le.transform(df[rater2_col].fillna(<span class="st">'missing'</span>))</span>
+<span id="cb17-982"><a href="#cb17-982" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-983"><a href="#cb17-983" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reshape data for krippendorff alpha calculation</span></span>
+<span id="cb17-984"><a href="#cb17-984" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Each row represents one item, each column represents one rater</span></span>
+<span id="cb17-985"><a href="#cb17-985" aria-hidden="true" tabindex="-1"></a>    reliability_data <span class="op">=</span> np.vstack([ratings1, ratings2])</span>
+<span id="cb17-986"><a href="#cb17-986" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-987"><a href="#cb17-987" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> alpha(reliability_data<span class="op">=</span>reliability_data, level_of_measurement<span class="op">=</span><span class="st">'nominal'</span>)</span>
+<span id="cb17-988"><a href="#cb17-988" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-989"><a href="#cb17-989" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate agreement scores for all methods</span></span>
+<span id="cb17-990"><a href="#cb17-990" aria-hidden="true" tabindex="-1"></a>human_baseline_strong_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_strong_winner'</span>)</span>
+<span id="cb17-991"><a href="#cb17-991" aria-hidden="true" tabindex="-1"></a>human_baseline_weak_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_weak_winner'</span>)</span>
+<span id="cb17-992"><a href="#cb17-992" aria-hidden="true" tabindex="-1"></a>human_samre_agreement <span class="op">=</span> calculate_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'samre_winner'</span>)</span>
+<span id="cb17-993"><a href="#cb17-993" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-994"><a href="#cb17-994" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame with the agreement scores</span></span>
+<span id="cb17-995"><a href="#cb17-995" aria-hidden="true" tabindex="-1"></a>agreement_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb17-996"><a href="#cb17-996" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Evaluator Pair'</span>: [<span class="st">'Baseline-Strong Agreement with Humans'</span>, <span class="st">'Baseline-Weak Agreement with Humans'</span>, <span class="st">'SAMRE Agreement with Humans'</span>],</span>
+<span id="cb17-997"><a href="#cb17-997" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Krippendorff Alpha'</span>: [human_baseline_strong_agreement, human_baseline_weak_agreement, human_samre_agreement]</span>
+<span id="cb17-998"><a href="#cb17-998" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb17-999"><a href="#cb17-999" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1000"><a href="#cb17-1000" aria-hidden="true" tabindex="-1"></a><span class="co"># Round the scores to 3 decimal places</span></span>
+<span id="cb17-1001"><a href="#cb17-1001" aria-hidden="true" tabindex="-1"></a>agreement_df[<span class="st">'Krippendorff Alpha'</span>] <span class="op">=</span> agreement_df[<span class="st">'Krippendorff Alpha'</span>].<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb17-1002"><a href="#cb17-1002" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1003"><a href="#cb17-1003" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percent difference between Baseline-Strong and Baseline-Weak, and SAMRE and Baseline-Strong</span></span>
+<span id="cb17-1004"><a href="#cb17-1004" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_diff <span class="op">=</span> (human_baseline_strong_agreement <span class="op">-</span> human_baseline_weak_agreement) <span class="op">/</span> human_baseline_strong_agreement</span>
+<span id="cb17-1005"><a href="#cb17-1005" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_diff <span class="op">=</span> (human_baseline_strong_agreement <span class="op">-</span> human_samre_agreement) <span class="op">/</span> human_baseline_strong_agreement</span>
+<span id="cb17-1006"><a href="#cb17-1006" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_diff <span class="op">=</span> (human_samre_agreement <span class="op">-</span> human_baseline_weak_agreement) <span class="op">/</span> human_samre_agreement</span>
+<span id="cb17-1007"><a href="#cb17-1007" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1008"><a href="#cb17-1008" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
+<span id="cb17-1009"><a href="#cb17-1009" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agreement_df)</span>
+<span id="cb17-1010"><a href="#cb17-1010" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1011"><a href="#cb17-1011" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the percent difference</span></span>
+<span id="cb17-1012"><a href="#cb17-1012" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Krippendorff Alpha Improvements:"</span>)</span>
+<span id="cb17-1013"><a href="#cb17-1013" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb17-1014"><a href="#cb17-1014" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb17-1015"><a href="#cb17-1015" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_diff<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb17-1016"><a href="#cb17-1016" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-1017"><a href="#cb17-1017" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1018"><a href="#cb17-1018" aria-hidden="true" tabindex="-1"></a>Although none of the methods yielded particularly strong agreement with the human judges in an absolute sense, their relative performance is in line with my predictions:</span>
+<span id="cb17-1019"><a href="#cb17-1019" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1020"><a href="#cb17-1020" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>As reported in the paper, SAMRE yielded significantly better agreement than Baseline-Weak (0.369 vs. 0.321, an increase of ~13%).</span>
+<span id="cb17-1021"><a href="#cb17-1021" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Baseline-Strong yielded significantly better agreement than Baseline-Weak (0.411 vs. 0.321, an increase of ~22%).</span>
+<span id="cb17-1022"><a href="#cb17-1022" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Importantly, Baseline-Strong also yielded significantly better agreement than SAMRE (0.411 vs. 0.321, an increase of ~10%)!</span>
+<span id="cb17-1023"><a href="#cb17-1023" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1024"><a href="#cb17-1024" aria-hidden="true" tabindex="-1"></a>Next, we can also measure performance in terms of binary classification accuracy using Matthews Correlation Coefficient (MCC) as a balanced accuracy metric, while re-encoding the "winner" columns to indicate whether model_a was selected as better (1) or not better (0) in each case.</span>
+<span id="cb17-1025"><a href="#cb17-1025" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1028"><a href="#cb17-1028" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-1029"><a href="#cb17-1029" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-1030"><a href="#cb17-1030" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-1031"><a href="#cb17-1031" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates Matthews Correlation Coefficient (MCC)"</span></span>
+<span id="cb17-1032"><a href="#cb17-1032" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode winner as binary</span></span>
+<span id="cb17-1033"><a href="#cb17-1033" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_winner_as_binary(winner):</span>
+<span id="cb17-1034"><a href="#cb17-1034" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="cf">if</span> winner <span class="op">==</span> <span class="st">'model_a'</span> <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb17-1035"><a href="#cb17-1035" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1036"><a href="#cb17-1036" aria-hidden="true" tabindex="-1"></a><span class="co"># Create binary columns for each evaluator</span></span>
+<span id="cb17-1037"><a href="#cb17-1037" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'human_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'human_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
+<span id="cb17-1038"><a href="#cb17-1038" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'baseline_strong_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'baseline_strong_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
+<span id="cb17-1039"><a href="#cb17-1039" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'baseline_weak_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'baseline_weak_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
+<span id="cb17-1040"><a href="#cb17-1040" aria-hidden="true" tabindex="-1"></a>eval_df[<span class="st">'samre_model_a_better'</span>] <span class="op">=</span> eval_df[<span class="st">'samre_winner'</span>].<span class="bu">apply</span>(encode_winner_as_binary)</span>
+<span id="cb17-1041"><a href="#cb17-1041" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1042"><a href="#cb17-1042" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> matthews_corrcoef</span>
+<span id="cb17-1043"><a href="#cb17-1043" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1044"><a href="#cb17-1044" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate MCC for each method</span></span>
+<span id="cb17-1045"><a href="#cb17-1045" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb17-1046"><a href="#cb17-1046" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Method'</span>: [<span class="st">'Baseline-Strong'</span>, <span class="st">'Baseline-Weak'</span>, <span class="st">'SAMRE'</span>],</span>
+<span id="cb17-1047"><a href="#cb17-1047" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MCC'</span>: [</span>
+<span id="cb17-1048"><a href="#cb17-1048" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
+<span id="cb17-1049"><a href="#cb17-1049" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
+<span id="cb17-1050"><a href="#cb17-1050" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'baseline_strong_model_a_better'</span>]</span>
+<span id="cb17-1051"><a href="#cb17-1051" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb17-1052"><a href="#cb17-1052" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
+<span id="cb17-1053"><a href="#cb17-1053" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
+<span id="cb17-1054"><a href="#cb17-1054" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'baseline_weak_model_a_better'</span>]</span>
+<span id="cb17-1055"><a href="#cb17-1055" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb17-1056"><a href="#cb17-1056" aria-hidden="true" tabindex="-1"></a>        matthews_corrcoef(</span>
+<span id="cb17-1057"><a href="#cb17-1057" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'human_model_a_better'</span>], </span>
+<span id="cb17-1058"><a href="#cb17-1058" aria-hidden="true" tabindex="-1"></a>            eval_df[<span class="st">'samre_model_a_better'</span>]</span>
+<span id="cb17-1059"><a href="#cb17-1059" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb17-1060"><a href="#cb17-1060" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb17-1061"><a href="#cb17-1061" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb17-1062"><a href="#cb17-1062" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1063"><a href="#cb17-1063" aria-hidden="true" tabindex="-1"></a><span class="co"># Round the scores to 3 decimal places</span></span>
+<span id="cb17-1064"><a href="#cb17-1064" aria-hidden="true" tabindex="-1"></a>metrics_df[<span class="st">'MCC'</span>] <span class="op">=</span> metrics_df[<span class="st">'MCC'</span>].<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb17-1065"><a href="#cb17-1065" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1066"><a href="#cb17-1066" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percent differences</span></span>
+<span id="cb17-1067"><a href="#cb17-1067" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_percent_diff(new, old):</span>
+<span id="cb17-1068"><a href="#cb17-1068" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (new <span class="op">-</span> old) <span class="op">/</span> old <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb17-1069"><a href="#cb17-1069" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1070"><a href="#cb17-1070" aria-hidden="true" tabindex="-1"></a><span class="co"># MCC differences</span></span>
+<span id="cb17-1071"><a href="#cb17-1071" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
+<span id="cb17-1072"><a href="#cb17-1072" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
+<span id="cb17-1073"><a href="#cb17-1073" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1074"><a href="#cb17-1074" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1075"><a href="#cb17-1075" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
+<span id="cb17-1076"><a href="#cb17-1076" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
+<span id="cb17-1077"><a href="#cb17-1077" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1078"><a href="#cb17-1078" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1079"><a href="#cb17-1079" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_mcc_diff <span class="op">=</span> calc_percent_diff(</span>
+<span id="cb17-1080"><a href="#cb17-1080" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>],</span>
+<span id="cb17-1081"><a href="#cb17-1081" aria-hidden="true" tabindex="-1"></a>    metrics_df.loc[metrics_df[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'MCC'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1082"><a href="#cb17-1082" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1083"><a href="#cb17-1083" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1084"><a href="#cb17-1084" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
+<span id="cb17-1085"><a href="#cb17-1085" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metrics_df)</span>
+<span id="cb17-1086"><a href="#cb17-1086" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1087"><a href="#cb17-1087" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">MCC Improvements:"</span>)</span>
+<span id="cb17-1088"><a href="#cb17-1088" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb17-1089"><a href="#cb17-1089" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb17-1090"><a href="#cb17-1090" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_mcc_diff<span class="sc">:.0f}</span><span class="ss">%"</span>)</span>
+<span id="cb17-1091"><a href="#cb17-1091" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1092"><a href="#cb17-1092" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-1093"><a href="#cb17-1093" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1094"><a href="#cb17-1094" aria-hidden="true" tabindex="-1"></a>Looking at MCC values, we observe a similar pattern of findings to the Krippendorff alphas:</span>
+<span id="cb17-1095"><a href="#cb17-1095" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1096"><a href="#cb17-1096" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>SAMRE did not perform better than Baseline-Weak, in fact it performed slightly worse (0.401 vs. 0.417, a decrease of 4%). This is a bit different than what we saw with Krippendorff alpha.</span>
+<span id="cb17-1097"><a href="#cb17-1097" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Baseline-Strong performed better than Baseline-Weak (0.482 vs. 0.401, an increase of 16%).</span>
+<span id="cb17-1098"><a href="#cb17-1098" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Baseline-Strong performed better than SAMRE (0.464 vs. 0.401, an increase of 20%).</span>
+<span id="cb17-1099"><a href="#cb17-1099" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1100"><a href="#cb17-1100" aria-hidden="true" tabindex="-1"></a>_Side-note: Why does MCC disagree with the Krippendorff alpha on the SAMRE vs. Baseline-Weak comparison? I would guess this is due to how ties were resolved when encoding the winner as binary._</span>
+<span id="cb17-1101"><a href="#cb17-1101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1102"><a href="#cb17-1102" aria-hidden="true" tabindex="-1"></a>Finally, we can look at accuracy in terms of percentage agreement. Percentage agreement is not a "balanced" accuracy metric and therefore needs to be used with caution (for example, if the classes are imbalanced, then percentage agreement accuracy can be misleading). But it is the metric used in the paper.</span>
+<span id="cb17-1103"><a href="#cb17-1103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1106"><a href="#cb17-1106" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb17-1107"><a href="#cb17-1107" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb17-1108"><a href="#cb17-1108" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold-show: false</span></span>
+<span id="cb17-1109"><a href="#cb17-1109" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-summary: "Click to view the code that calculates percentage agreement"</span></span>
+<span id="cb17-1110"><a href="#cb17-1110" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate percentage agreement for each method</span></span>
+<span id="cb17-1111"><a href="#cb17-1111" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_percent_agreement(df, rater1_col, rater2_col):</span>
+<span id="cb17-1112"><a href="#cb17-1112" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate percentage agreement between two raters"""</span></span>
+<span id="cb17-1113"><a href="#cb17-1113" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (df[rater1_col] <span class="op">==</span> df[rater2_col]).mean()</span>
+<span id="cb17-1114"><a href="#cb17-1114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1115"><a href="#cb17-1115" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate agreement percentages</span></span>
+<span id="cb17-1116"><a href="#cb17-1116" aria-hidden="true" tabindex="-1"></a>agreement_percentages <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb17-1117"><a href="#cb17-1117" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Method'</span>: [<span class="st">'Baseline-Strong'</span>, <span class="st">'Baseline-Weak'</span>, <span class="st">'SAMRE'</span>],</span>
+<span id="cb17-1118"><a href="#cb17-1118" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Agreement'</span>: [</span>
+<span id="cb17-1119"><a href="#cb17-1119" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_strong_winner'</span>),</span>
+<span id="cb17-1120"><a href="#cb17-1120" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'baseline_weak_winner'</span>),</span>
+<span id="cb17-1121"><a href="#cb17-1121" aria-hidden="true" tabindex="-1"></a>        calculate_percent_agreement(eval_df, <span class="st">'human_winner'</span>, <span class="st">'samre_winner'</span>)</span>
+<span id="cb17-1122"><a href="#cb17-1122" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb17-1123"><a href="#cb17-1123" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb17-1124"><a href="#cb17-1124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1125"><a href="#cb17-1125" aria-hidden="true" tabindex="-1"></a><span class="co"># Round to 3 decimal places and convert to percentage</span></span>
+<span id="cb17-1126"><a href="#cb17-1126" aria-hidden="true" tabindex="-1"></a>agreement_percentages[<span class="st">'Agreement'</span>] <span class="op">=</span> (agreement_percentages[<span class="st">'Agreement'</span>] <span class="op">*</span> <span class="dv">100</span>).<span class="bu">round</span>(<span class="dv">1</span>)</span>
+<span id="cb17-1127"><a href="#cb17-1127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1128"><a href="#cb17-1128" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the percentage point differences</span></span>
+<span id="cb17-1129"><a href="#cb17-1129" aria-hidden="true" tabindex="-1"></a>samre_baseline_weak_diff <span class="op">=</span> (</span>
+<span id="cb17-1130"><a href="#cb17-1130" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
+<span id="cb17-1131"><a href="#cb17-1131" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1132"><a href="#cb17-1132" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1133"><a href="#cb17-1133" aria-hidden="true" tabindex="-1"></a>baseline_strong_baseline_weak_diff <span class="op">=</span> (</span>
+<span id="cb17-1134"><a href="#cb17-1134" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
+<span id="cb17-1135"><a href="#cb17-1135" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Weak'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1136"><a href="#cb17-1136" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1137"><a href="#cb17-1137" aria-hidden="true" tabindex="-1"></a>baseline_strong_samre_diff <span class="op">=</span> (</span>
+<span id="cb17-1138"><a href="#cb17-1138" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'Baseline-Strong'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>] <span class="op">-</span></span>
+<span id="cb17-1139"><a href="#cb17-1139" aria-hidden="true" tabindex="-1"></a>    agreement_percentages.loc[agreement_percentages[<span class="st">'Method'</span>] <span class="op">==</span> <span class="st">'SAMRE'</span>, <span class="st">'Agreement'</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb17-1140"><a href="#cb17-1140" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-1141"><a href="#cb17-1141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1142"><a href="#cb17-1142" aria-hidden="true" tabindex="-1"></a><span class="co"># Print raw values</span></span>
+<span id="cb17-1143"><a href="#cb17-1143" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Percentage Agreement with Human Judgments:"</span>)</span>
+<span id="cb17-1144"><a href="#cb17-1144" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(agreement_percentages)</span>
+<span id="cb17-1145"><a href="#cb17-1145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1146"><a href="#cb17-1146" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Percentage Point Differences:"</span>)</span>
+<span id="cb17-1147"><a href="#cb17-1147" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"SAMRE vs. Baseline-Weak: </span><span class="sc">{</span>samre_baseline_weak_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
+<span id="cb17-1148"><a href="#cb17-1148" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. Baseline-Weak: </span><span class="sc">{</span>baseline_strong_baseline_weak_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
+<span id="cb17-1149"><a href="#cb17-1149" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Baseline-Strong vs. SAMRE: </span><span class="sc">{</span>baseline_strong_samre_diff<span class="sc">:+.1f}</span><span class="ss">"</span>)</span>
+<span id="cb17-1150"><a href="#cb17-1150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-1151"><a href="#cb17-1151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1152"><a href="#cb17-1152" aria-hidden="true" tabindex="-1"></a>Overall across these three metrics, the story is the same: SAMRE did not perform better than a baseline that is designed with best practices.</span>
+<span id="cb17-1153"><a href="#cb17-1153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1154"><a href="#cb17-1154" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb17-1155"><a href="#cb17-1155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-1156"><a href="#cb17-1156" aria-hidden="true" tabindex="-1"></a>In this post, I have shown that SAMRE does not perform better than a well-engineered baseline method. Prompt engineers need to remain cautious and resist the urge to use complex methods that may seem more sophisticated than standard best practices, without first testing them against a well-engineered baseline.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
