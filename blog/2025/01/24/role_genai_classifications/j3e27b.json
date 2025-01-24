@@ -1,0 +1,31 @@
+{
+  "filename": "j3e27b",
+  "responsibilities": [
+    "Design, build, and launch data pipelines to move data across systems and build the next generation of data tools that generate business insights for a product.",
+    "Analyze user needs and software requirements to determine workability and to offer support for end users on data usage.",
+    "Design, architect, and develop software and data solutions that help product and business teams make data-driven decisions.",
+    "Rethink and influence strategy and roadmap for building efficient data solutions and scalable data warehouse plans.",
+    "Design, develop, test, and launch new data models and processes into production, and provide support.",
+    "Leverage homegrown extract, transform, and load (ETL) framework as well as off-the-shelf ETL tools, as appropriate.",
+    "Interface closely with data infrastructure, product, and engineering teams to build and extend cross platform ETL and reports generation framework.",
+    "Identify data infrastructure issues and drive to resolution."
+  ],
+  "skills": [
+    "Writing SQL statements",
+    "Data warehousing architecture and plans",
+    "Dimensional data modeling",
+    "Schema Design",
+    "Map Reduce",
+    "MPP System",
+    "Hadoop",
+    "Hive",
+    "Data Visualization",
+    "Database System",
+    "Scala",
+    "R",
+    "Data Analysis",
+    "Machine Learning"
+  ],
+  "analysis": "The job responsibilities focus on designing, building, and launching data pipelines, analyzing user needs, developing software and data solutions, and working with data infrastructure. The skills required include SQL, data warehousing, data modeling, Hadoop, Hive, and machine learning. These responsibilities and skills are centered around data engineering, data analysis, and data infrastructure. There is no mention of working with Generative AI or language models (LLMs) specifically. The focus is more on data processing, ETL frameworks, and data-driven decision-making rather than on natural language processing or generation tasks that would typically involve GenAI or LLMs.",
+  "is_genai_role": false
+}

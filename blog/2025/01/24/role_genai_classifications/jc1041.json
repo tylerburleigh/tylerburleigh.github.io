@@ -1,0 +1,22 @@
+{
+  "filename": "jc1041",
+  "responsibilities": [
+    "Develop software targeted on Huawei's hardware, including fundamental kernels and cutting-edge tools.",
+    "Apply parallel and high-performance computing knowledge to improve performance of various aspects of the solver.",
+    "Develop GPU/NPU versions of classical algorithms or new algorithms to solve critical problems in applications.",
+    "Improve training and inference performance of machine learning models on GPU/NPU.",
+    "Assist in profiling, bottleneck analysis, testing, and validation.",
+    "Assist teams to accelerate their software on Huawei's heterogeneous architectures: CPU + X.",
+    "Collaborate and communicate with team members to ensure smooth integration with the larger project."
+  ],
+  "qualifications": [
+    "Parallel and high-performance computing knowledge.",
+    "C/C++ programming skills at an expert level.",
+    "Strong foundation in sparse computations, linear algebra, and matrix computation.",
+    "Familiarity with performance profiling tools.",
+    "Knowledge of machine learning tools like Torch and TensorFlow.",
+    "Experience with BLAS/LAPACK and well-known Sparse Linear Solvers."
+  ],
+  "analysis": "The job responsibilities focus on developing software for Huawei's hardware, improving performance of machine learning models, and working with parallel and high-performance computing. The skills required include knowledge of machine learning tools like Torch and TensorFlow, which are commonly used for training various types of machine learning models, including neural networks. However, there is no explicit mention of working with Generative AI or language models (LLMs) specifically. The focus seems to be more on performance optimization and hardware acceleration rather than developing or working directly with GenAI or LLMs.",
+  "is_genai_role": false
+}

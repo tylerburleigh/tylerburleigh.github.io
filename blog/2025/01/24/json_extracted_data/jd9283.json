@@ -1,0 +1,42 @@
+{
+  "responsibilities": [
+    "Design, build, and deliver ML models and components that solve real-world business problems in collaboration with Product and Data Science teams.",
+    "Inform ML infrastructure decisions using understanding of ML modeling techniques and issues.",
+    "Solve complex problems by writing and testing application code, developing and validating ML models, and automating tests and deployment.",
+    "Collaborate as part of a cross-functional Agile team to create and enhance software for big data and ML applications.",
+    "Retrain, maintain, and monitor models in production.",
+    "Leverage or build cloud-based architectures, technologies, and platforms to deliver optimized ML models at scale.",
+    "Construct optimized data pipelines to feed ML models.",
+    "Leverage continuous integration and continuous deployment best practices, including test automation and monitoring.",
+    "Ensure all code is well-managed to reduce vulnerabilities and models are well-governed from a risk perspective.",
+    "Use programming languages like Python, Scala, or Java."
+  ],
+  "skills": [
+    "Proficiency in programming languages such as Python, Scala, or Java.",
+    "Experience with ML frameworks like scikit-learn, PyTorch, Dask, Spark, or TensorFlow.",
+    "Ability to design and build data-intensive solutions using distributed computing.",
+    "Experience in productionizing, monitoring, and maintaining models.",
+    "Knowledge of cloud-based architectures and platforms.",
+    "Understanding of ML modeling techniques, including model training, hyperparameter tuning, and validation.",
+    "Experience with continuous integration and continuous deployment best practices.",
+    "Ability to construct and optimize data pipelines.",
+    "Familiarity with Responsible and Explainable AI practices."
+  ],
+  "qualifications": [
+    "Bachelor’s degree.",
+    "At least 4 years of experience programming with Python, Scala, or Java.",
+    "At least 3 years of experience designing and building data-intensive solutions using distributed computing.",
+    "At least 2 years of experience with an industry-recognized ML framework.",
+    "At least 1 year of experience in productionizing, monitoring, and maintaining models.",
+    "Preferred: 1+ years of experience building, scaling, and optimizing ML systems.",
+    "Preferred: 1+ years of experience with data gathering and preparation for ML models.",
+    "Preferred: 2+ years of experience developing performant, resilient, and maintainable code.",
+    "Preferred: Experience developing and deploying ML solutions in a public cloud such as AWS, Azure, or Google Cloud Platform.",
+    "Preferred: Master's or doctoral degree in computer science, electrical engineering, mathematics, or a similar field.",
+    "Preferred: 3+ years of experience with distributed file systems or multi-node database paradigms.",
+    "Preferred: Contribution to open source ML software.",
+    "Preferred: Authored/co-authored a paper on a ML technique, model, or proof of concept.",
+    "Preferred: 3+ years of experience building production-ready data pipelines that feed ML models.",
+    "Preferred: Experience designing, implementing, and scaling complex data pipelines for ML models and evaluating their performance."
+  ]
+}

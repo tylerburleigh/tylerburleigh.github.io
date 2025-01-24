@@ -1,0 +1,19 @@
+{
+  "filename": "jbddac",
+  "responsibilities": [
+    "Design, implement, and optimize a high-performance serving platform for MLLMs.",
+    "Integrate SOTA open-source serving frameworks such as vLLM, sglang, or lmdeploy.",
+    "Develop techniques for efficient resource utilization and low-latency inference for MLLMs in serverless environments.",
+    "Optimize memory usage, scalability, and throughput of the serving platform.",
+    "Conduct experiments to evaluate and benchmark MLLM serving performance.",
+    "Contribute novel ideas to improve serving efficiency and publish findings when applicable."
+  ],
+  "qualifications": [
+    "Strong proficiency in PyTorch.",
+    "Familiarity with distributed systems, serverless architectures, and cloud computing platforms.",
+    "Experience with inference optimization for large-scale AI models.",
+    "Familiarity with multimodal architectures and serving requirements."
+  ],
+  "analysis": "The job responsibilities include designing, implementing, and optimizing a high-performance serving platform specifically for MLLMs, which stands for Multimodal Large Language Models. This directly indicates that the job involves working with language models. The integration of state-of-the-art open-source serving frameworks such as vLLM, sglang, or lmdeploy further suggests a focus on serving language models. Additionally, the development of techniques for efficient resource utilization and low-latency inference for MLLMs in serverless environments, as well as optimizing memory usage, scalability, and throughput, are all tasks associated with handling large-scale AI models, particularly language models.\n\nThe skills required for the job include strong proficiency in PyTorch, which is a popular framework for developing AI models, including language models. Familiarity with distributed systems, serverless architectures, and cloud computing platforms is essential for deploying and serving large language models efficiently. Experience with inference optimization for large-scale AI models and familiarity with multimodal architectures and serving requirements further indicate that the job involves working with complex AI models, including language models.\n\nOverall, both the responsibilities and skills clearly point towards working with language models, specifically large language models (LLMs), and potentially generative AI (GenAI) given the context of serving and optimizing these models.",
+  "is_genai_role": true
+}

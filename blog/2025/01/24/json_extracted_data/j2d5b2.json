@@ -1,0 +1,40 @@
+{
+  "responsibilities": [
+    "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+    "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+    "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+    "Implement model observation and performance monitoring.",
+    "Deploy and support enterprise-grade ML solutions.",
+    "Optimize machine learning models for production efficiency and cost.",
+    "Build MLOps solutions for various problem domains such as clickstream, product demand, logistics, and more.",
+    "Design, build, and maintain ML CI/CD pipeline and workflows.",
+    "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+    "Support production ML solutions for mission-critical applications.",
+    "Translate models to optimal production code and validate results with Data Science.",
+    "Evaluate third-party tools and frameworks for adoption.",
+    "Establish and enforce team development standards."
+  ],
+  "skills": [
+    "Solid knowledge of model versioning, deployment, serving, monitoring, and data versioning.",
+    "Hands-on experience with DevOps, MLOps, or container-based application development (Docker, Kubernetes, etc.).",
+    "Expertise in setting up CI/CD pipeline processes and managing versioned data sets.",
+    "Experience designing and implementing data pipelines using tools like Spark, PySpark, Java, Docker, Kafka/Confluence.",
+    "Knowledge of data and ML frameworks: Spark/PySpark, Dask, scikit-learn, scipy, statsmodels, plotly.",
+    "Exposure to deep learning approaches and modeling frameworks (PyTorch, Tensorflow, Keras, etc.).",
+    "Hands-on experience with Cloud computing technology like AWS, Google Cloud, etc.",
+    "Proficiency in Python and strong object-oriented design skills.",
+    "Knowledge of other analytical programming languages such as R, Scala, and SAS.",
+    "Familiarity with workflow orchestration frameworks (KubeFlow, Airflow, Argo, etc.).",
+    "Knowledge of RESTful API design.",
+    "Technical mindset and analytical approach.",
+    "Great attention to detail.",
+    "Good leadership skills.",
+    "Sense of ownership and pride in performance.",
+    "Critical thinking and problem-solving skills."
+  ],
+  "qualifications": [
+    "Bachelor’s degree or higher in computer science, engineering, or related quantitative field.",
+    "5+ years of experience as an MLOps engineer, or 5+ years of experience as a DevOps engineer and 2+ years of experience building, training, and deploying ML models.",
+    "Solid experience supporting a Data Science or Data Solutions Team."
+  ]
+}

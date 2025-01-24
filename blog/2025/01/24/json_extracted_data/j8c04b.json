@@ -1,0 +1,37 @@
+{
+  "responsibilities": [
+    "Design, develop, and maintain the Cloud infrastructure for AI/ML-enabled applications using infrastructure-as-code software tools.",
+    "Setup and maintain CI/CD pipelines and other developer tools.",
+    "Ensure Cloud infrastructure's security, availability, and reliability via monitoring, observability, and alerting.",
+    "Work closely with Software Engineers to optimize performance and scalability and deliver highly available customer-facing products.",
+    "Create infrastructure code and reference architectures for orchestrating environment creation, housekeeping, and deployment throughout the application and product life cycles.",
+    "Support pre-production and production environments, diagnose and troubleshoot problems in code and in the environment, conduct root cause analyses and incident response.",
+    "Act as a mentor for other members of the team.",
+    "Stay up to date with the latest developments in cloud technologies and operational tools."
+  ],
+  "skills": [
+    "Strong foundation of internet engineering fundamentals.",
+    "Strong background in applying DevOps methodologies.",
+    "Deep understanding of cloud technologies.",
+    "Experience with infrastructure-as-code or configuration management tools (e.g., Terraform, Puppet, Ansible, Salt, Chef).",
+    "Deep knowledge of containerization and packaging using technologies such as Docker, Podman, or CRI-O, Helm, or Kustomize.",
+    "Expert Unix/Linux and networking skills.",
+    "Proficient in system integration.",
+    "Deep understanding of web app hosting and micro-service architecture.",
+    "Proficient in SRE activities.",
+    "Proficient in infrastructure automation and deployment processes.",
+    "Experience hosting and scaling data infrastructure and integrating multi-cloud environments.",
+    "Working experience with ML-OPS/LLM-OPS preferred.",
+    "Value culture and good relationship-building with cross-functional teams."
+  ],
+  "qualifications": [
+    "At least 12+ years of experience in a cloud-based, DevOps, or software engineering role supporting production applications or production environments.",
+    "At least 7 years of experience in an on-call rotation, supporting production applications, or resolving time-sensitive issues in customer-facing applications.",
+    "At least 12+ years of experience operating in at least one major cloud provider: GCP, AWS, or Azure; Azure experience preferred.",
+    "At least 7+ years of driving distributed system architecture.",
+    "At least 8+ years of experience operating a container orchestration platform, such as Kubernetes, in a production environment.",
+    "At least 10+ years of experience with CI/CD tools such as GitLab CI, Azure/GCP/AWS Cloud Build, Jenkins, or Github CI.",
+    "Deep understanding of Buy Vs Build strategy.",
+    "For positions requiring access to technical data, may need export licensing approval from the U.S. Department of Commerce - Bureau of Industry and Security and/or the U.S. Department of State - Directorate of Defense Trade Controls."
+  ]
+}

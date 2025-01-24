@@ -1,0 +1,26 @@
+{
+  "responsibilities": [
+    "Maintain Alchemy's batch pipelines that power our production serving systems",
+    "Set up frameworks and tools to help team members create and debug pipelines by themselves",
+    "Track data quality and latency, and set up monitors and alerts to ensure smooth operation",
+    "Build production DAG workflows for batch data processing and storage",
+    "Aggregate logs from multiple regions and multiple clouds",
+    "Design and implement our next generation data warehouse that aggregates internal and third-party data sources"
+  ],
+  "skills": [
+    "Ability to architect and build new systems as well as improve existing ones",
+    "Experience with high-throughput distributed systems",
+    "Self-starter attitude and the ability to execute new ideas with autonomy",
+    "Ability to find the right balance between perfection and shipping quickly",
+    "Passion for blockchain technologies and Web3",
+    "Hustler mentality, founding a company or building side projects is a plus"
+  ],
+  "qualifications": [
+    "BS (or higher) degree in Computer Science or similar",
+    "4+ years experience in a software engineering discipline",
+    "At least 2+ years experience in data engineering or data infrastructure",
+    "(Bonus) Experience in low-latency, streaming data architectures",
+    "(Bonus) Prior experience in Airflow/Spark/ELK Stack",
+    "Experience working with startups"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "filename": "jc96d3",
+  "responsibilities": [
+    "Design, develop, and maintain scalable data pipelines and ELT processes for the data lake/data warehouse",
+    "Implement data orchestration tools to automate and streamline data workflows",
+    "Work with the AI Solutions team to implement AI enhanced processes throughout the organization",
+    "Build and integrate machine learning models and data pipelines into end-to-end analytics solutions",
+    "Build and manage reverse ETL workflows to business systems such as the CRM",
+    "Support development of predictive models to support strategic and operational initiatives",
+    "Develop and maintain comprehensive documentation for data processes and systems",
+    "Build production-ready data models and schemas using DBT to support downstream analytics",
+    "Collaborate with cross-functional teams to define and implement data governance policies and best practices",
+    "Manage the modern analytics tech stack to support the democratization of data and analytics through dashboards, reports, and predictive models",
+    "Support analysts in developing dashboards, data products, and ad hoc report studies to analyze and present data associated with GTM analytics, product performance, business operations, and strategic decision-making"
+  ],
+  "skills": [
+    "Proficiency in SQL",
+    "Proficiency in any statistical programming language (i.e., Python or R)",
+    "Hands-on experience building and managing ETL and rETL workflows",
+    "Strong understanding of data engineering principles, including ETL/ELT processes, data modeling, and data warehousing",
+    "Experience with workflow orchestration tools, such as Airflow",
+    "Experience with ETL/ELT tools, such as Fivetran",
+    "Experience with cloud data warehouse and transformation tools (e.g., Snowflake, DBT)",
+    "Ability to communicate technical concepts to both technical and non-technical audiences through visualizations and presentations",
+    "Ability to partner with leadership and stakeholders across the company to understand business needs and how these can be addressed through analytics"
+  ],
+  "analysis": "The job responsibilities primarily focus on data engineering tasks such as designing and maintaining data pipelines, implementing data orchestration tools, building machine learning models, and supporting predictive models. There is a mention of working with the AI Solutions team to implement AI-enhanced processes, but it does not specifically mention Generative AI or language models. The skills required include proficiency in SQL, statistical programming languages, and experience with ETL/ELT workflows, data modeling, and data warehousing. There is no explicit mention of skills related to Generative AI or language models, such as working with frameworks like TensorFlow or PyTorch, or specific experience with LLMs like GPT or BERT. The focus is more on data engineering and analytics rather than on developing or deploying Generative AI or language models.",
+  "is_genai_role": false
+}

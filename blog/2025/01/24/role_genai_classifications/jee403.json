@@ -1,0 +1,21 @@
+{
+  "filename": "jee403",
+  "responsibilities": [
+    "Monitor machine learning models for issues like data/model drift",
+    "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+    "Help improve how we manage and monitor data pipelines",
+    "Collaborate with the team to make sure models stay accurate and useful"
+  ],
+  "qualifications": [
+    "Experience monitoring machine learning models in production",
+    "Knowledge of tools like WhyLabs, Splunk, and Datadog",
+    "Familiarity with AKS and Databricks",
+    "Understanding of how data moves through systems and how to keep it reliable",
+    "Comfortable with Python or SQL for debugging and building workflows",
+    "Understanding of MLOps best practices",
+    "Experience with cloud tools like Azure Cosmos DB",
+    "Familiarity with integrating models into BI tools for reporting"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. The skills required include experience with monitoring tools, cloud services, and MLOps best practices, as well as proficiency in Python or SQL. These are general machine learning and data engineering tasks and skills, which are applicable to a wide range of machine learning models, not specifically GenAI or LLMs. There is no mention of tasks related to generating content, natural language processing, or working with specific language models, which would indicate involvement with GenAI or LLMs.",
+  "is_genai_role": false
+}

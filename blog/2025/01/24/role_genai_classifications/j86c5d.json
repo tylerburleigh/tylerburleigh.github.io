@@ -1,0 +1,19 @@
+{
+  "filename": "j86c5d",
+  "responsibilities": [
+    "Design and build the platform for ML engineers and data scientists to understand and delight Discord's users and keep them safe.",
+    "Evaluate and integrate new machine learning frameworks and tools, including LLMs and generative AI.",
+    "Collaborate with model builders to ensure a smooth path from idea to production.",
+    "Set best practices in machine learning at Discord.",
+    "Create foundational datasets and models.",
+    "Lead projects and work directly with ML practitioners and other staff+ engineers."
+  ],
+  "qualifications": [
+    "Experience with orchestration systems such as Airflow, Dagster, or Argo.",
+    "Experience with real-time data processing tools like Spark, Flink, Dataflow, Kafka, or Pulsar.",
+    "Experience debugging and maintaining live production systems on Kubernetes.",
+    "Experience building ML models using modern frameworks."
+  ],
+  "analysis": "The job responsibilities include evaluating and integrating new machine learning frameworks and tools, specifically mentioning LLMs (Large Language Models) and generative AI. This indicates that the job involves working with Generative AI and language models. Additionally, the role involves collaborating with model builders and setting best practices in machine learning, which further supports the involvement with advanced AI technologies like LLMs and GenAI. The skills required, such as experience building ML models using modern frameworks, align with the need to work with these advanced AI technologies.",
+  "is_genai_role": true
+}

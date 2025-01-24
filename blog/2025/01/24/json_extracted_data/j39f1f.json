@@ -1,0 +1,32 @@
+{
+  "responsibilities": [
+    "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+    "Ensure data pipelines are optimized for real-time and batch processing.",
+    "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+    "Implement and enforce best practices for data governance, security, and quality.",
+    "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+    "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+    "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+    "Work closely with data scientists and AI engineers to understand data requirements.",
+    "Ensure seamless integration between data pipelines and AI/ML models.",
+    "Monitor system performance and optimize data workflows to meet scalability needs.",
+    "Debug and troubleshoot data pipeline issues.",
+    "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+  ],
+  "skills": [
+    "Proficiency in programming languages such as Python, Java, or Scala.",
+    "Experience with data processing frameworks like Apache Spark, Flink, or Hadoop.",
+    "Familiarity with cloud platforms (AWS/GCP/Azure) and their data services (e.g., S3, Redshift, BigQuery).",
+    "Expertise in SQL and NoSQL databases.",
+    "Knowledge of machine learning workflows and AI tools (e.g., TensorFlow, PyTorch) is a plus.",
+    "Strong problem-solving skills and attention to detail.",
+    "Experience with containerization and orchestration (e.g., Docker, Kubernetes).",
+    "Familiarity with stream processing platforms (e.g., Kafka).",
+    "Exposure to MLOps tools and practices.",
+    "Hands-on experience with version control (e.g., Git) and collaboration tools."
+  ],
+  "qualifications": [
+    "Bachelor’s or Master’s degree in Computer Science, Engineering, or a related field.",
+    "3+ years of experience in data engineering or a related role."
+  ]
+}

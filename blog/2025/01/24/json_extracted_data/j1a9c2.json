@@ -1,0 +1,29 @@
+{
+  "responsibilities": [
+    "Ensure that systems which power ChatGPT training and development run smoothly.",
+    "Dive into large ML codebases to understand and debug systems issues.",
+    "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+    "Create reusable Python libraries with great abstractions usable across ML projects.",
+    "Profile large model reinforcement learning training and identify and address bottlenecks.",
+    "Identify experiment failures in a new research cluster.",
+    "Redesign data pipelines to handle diverse multimodal data.",
+    "Build front-end evaluation tooling for use across the company."
+  ],
+  "skills": [
+    "Experience working in complex technical environments.",
+    "Experience debugging ML systems.",
+    "Experience with reinforcement learning and/or transformers.",
+    "Proficiency in Python.",
+    "Experience with Kubernetes / distributed infrastructure.",
+    "Experience with GPUs.",
+    "Experience with one or more large-scale data systems such as Beam or Spark."
+  ],
+  "qualifications": [
+    "Strong technical background in data technologies, distributed systems, and reliable software development.",
+    "Deep expertise in either ML system optimization, distributed systems, or full-stack application development for internal tools.",
+    "Experience collaborating with ML researchers in an applied setting is highly valued.",
+    "Ability to analyze and troubleshoot complex system issues and implement effective solutions.",
+    "Proactive in identifying ways to prevent future failures.",
+    "Willingness to work in a hybrid work model of 3 days in the office per week in San Francisco, CA."
+  ]
+}

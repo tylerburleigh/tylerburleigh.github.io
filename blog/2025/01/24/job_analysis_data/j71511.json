@@ -1,0 +1,77 @@
+[
+  {
+    "filename": "j71511",
+    "responsibilities": [
+      "Build data-intensive products, working with data and features.",
+      "Help build the foundational Machine Learning (ML) infrastructure for future use by ML engineers.",
+      "Design, implement, and integrate the next generation of Machine Learning infrastructure.",
+      "Collaborate with other engineers and data scientists to create optimal experiences on the Core ML platform.",
+      "Write crisp design documentation.",
+      "Build, debug, and maintain highly available distributed systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on building data-intensive products, machine learning infrastructure, and collaborating with engineers and data scientists. While these responsibilities involve machine learning, they do not specifically mention fine-tuning or customizing large language models. The focus seems to be more on infrastructure and system-level tasks rather than model-specific tasks like fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j71511",
+    "responsibilities": [
+      "Build data-intensive products, working with data and features.",
+      "Help build the foundational Machine Learning (ML) infrastructure for future use by ML engineers.",
+      "Design, implement, and integrate the next generation of Machine Learning infrastructure.",
+      "Collaborate with other engineers and data scientists to create optimal experiences on the Core ML platform.",
+      "Write crisp design documentation.",
+      "Build, debug, and maintain highly available distributed systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention prompt engineering or refining prompts for large language models. The responsibilities are more aligned with building infrastructure and systems rather than crafting and refining prompts for LLMs. Therefore, this activity does not seem directly relevant to the job.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j71511",
+    "responsibilities": [
+      "Build data-intensive products, working with data and features.",
+      "Help build the foundational Machine Learning (ML) infrastructure for future use by ML engineers.",
+      "Design, implement, and integrate the next generation of Machine Learning infrastructure.",
+      "Collaborate with other engineers and data scientists to create optimal experiences on the Core ML platform.",
+      "Write crisp design documentation.",
+      "Build, debug, and maintain highly available distributed systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include building and maintaining distributed systems and collaborating with engineers and data scientists, which could involve some level of model evaluation. However, there is no explicit mention of evaluating large language models or using specific metrics like perplexity or BLEU. The focus is more on infrastructure and system design rather than model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j71511",
+    "responsibilities": [
+      "Build data-intensive products, working with data and features.",
+      "Help build the foundational Machine Learning (ML) infrastructure for future use by ML engineers.",
+      "Design, implement, and integrate the next generation of Machine Learning infrastructure.",
+      "Collaborate with other engineers and data scientists to create optimal experiences on the Core ML platform.",
+      "Write crisp design documentation.",
+      "Build, debug, and maintain highly available distributed systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include designing and integrating machine learning infrastructure, which could involve integrating LLM outputs into applications. However, the responsibilities do not explicitly mention handling LLM outputs or specific tasks like content moderation or retrieval augmentation. The focus is more on infrastructure and system-level integration rather than application-specific integration of LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j71511",
+    "responsibilities": [
+      "Build data-intensive products, working with data and features.",
+      "Help build the foundational Machine Learning (ML) infrastructure for future use by ML engineers.",
+      "Design, implement, and integrate the next generation of Machine Learning infrastructure.",
+      "Collaborate with other engineers and data scientists to create optimal experiences on the Core ML platform.",
+      "Write crisp design documentation.",
+      "Build, debug, and maintain highly available distributed systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include building, debugging, and maintaining distributed systems, which could involve some level of debugging related to machine learning models. However, there is no specific mention of model interpretability or debugging techniques for large language models. The focus is more on system-level debugging rather than model-specific interpretability and debugging.",
+    "is_relevant": false
+  }
+]

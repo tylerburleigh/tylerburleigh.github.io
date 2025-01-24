@@ -1,0 +1,37 @@
+{
+  "filename": "j0954b",
+  "responsibilities": [
+    "Develop test strategies and frameworks for AI/ML products.",
+    "Design and implement automated tests.",
+    "Create and carry out test plans.",
+    "Maintain and enhance test frameworks.",
+    "Participate in standard quality practices design reviews and automated testing.",
+    "Productize major product features and bug fixes.",
+    "Consider novel ways for testing non-deterministic systems and code.",
+    "Pay attention to potential sources of bias during model build and training.",
+    "Execute manual and automated tests for InstructLab.",
+    "Deliver clear status updates in a timely manner.",
+    "Explore, identify, and document unwanted behavior, output, and bias in InstructLab models.",
+    "Advocate for the resolution of critical issues and communicate the impact on customers to the development team(s).",
+    "Monitor and participate in upstream AI/ML communities.",
+    "Evaluate new AI/ML-related technologies and consider potential integrations and collaborations upstream.",
+    "Conduct new feature research and design test cases with emphasis on model performance, scalability, automation, and bias reduction.",
+    "Design, develop, and maintain automation frameworks, scripts, and performance benchmarking tools with Python.",
+    "Run technical initiatives to grow, improve, and scale existing processes.",
+    "Contribute to the development of open-source projects that comprise Red Hat\u2019s AI family of products.",
+    "Regularly communicate with project stakeholders including other teams of Red Hat engineers, product managers, consultants, management, and senior leadership."
+  ],
+  "skills": [
+    "Extensive experience scripting and creating automation in Python and Bash.",
+    "Experience with AI and Machine Learning platforms, tools, and frameworks such as PyTorch, LLaMA.cpp, vLLM, fsdp, deepspeed, Kubeflow, and Tensorflow.",
+    "Experience creating automation for GitHub, using GitHub Actions or related continuous integration tools.",
+    "Experience with hardware accelerators such as GPU, CUDA, and ROCm.",
+    "Experience developing unit, functional, and end-to-end (E2E) test cases and automation.",
+    "Ability to quickly learn and use new tools and technologies.",
+    "Experience working with Kubernetes/OpenShift and containers.",
+    "Troubleshooting issues with Kubernetes/OpenShift and working with YAML, Kubernetes controllers, and operators.",
+    "Understanding of DevOps methodology, scrum, and/or Jira."
+  ],
+  "analysis": "The job responsibilities and skills indicate a focus on AI/ML products, with specific mention of testing non-deterministic systems, model performance, scalability, and bias reduction. The responsibilities include exploring and documenting unwanted behavior and bias in models, which suggests an involvement with AI models. The skills section lists experience with AI and Machine Learning platforms and frameworks such as PyTorch, LLaMA.cpp, vLLM, and Tensorflow. Notably, LLaMA.cpp and vLLM are associated with language models, indicating that the job likely involves working with language models or LLMs. Additionally, the mention of monitoring and participating in upstream AI/ML communities and evaluating new AI/ML-related technologies further supports the involvement with cutting-edge AI technologies, potentially including Generative AI or LLMs.",
+  "is_genai_role": true
+}

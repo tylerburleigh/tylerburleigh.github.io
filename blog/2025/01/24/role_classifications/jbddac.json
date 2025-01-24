@@ -1,0 +1,20 @@
+{
+  "filename": "jbddac",
+  "responsibilities": [
+    "Design, implement, and optimize a high-performance serving platform for MLLMs.",
+    "Integrate SOTA open-source serving frameworks such as vLLM, sglang, or lmdeploy.",
+    "Develop techniques for efficient resource utilization and low-latency inference for MLLMs in serverless environments.",
+    "Optimize memory usage, scalability, and throughput of the serving platform.",
+    "Conduct experiments to evaluate and benchmark MLLM serving performance.",
+    "Contribute novel ideas to improve serving efficiency and publish findings when applicable."
+  ],
+  "skills": [
+    "Strong proficiency in PyTorch.",
+    "Familiarity with distributed systems, serverless architectures, and cloud computing platforms.",
+    "Experience with inference optimization for large-scale AI models.",
+    "Familiarity with multimodal architectures and serving requirements."
+  ],
+  "analysis": "The Job involves designing, implementing, and optimizing a high-performance serving platform for MLLMs, integrating open-source serving frameworks, and optimizing resource utilization and inference efficiency in serverless environments. The Skills required include proficiency in PyTorch, familiarity with distributed systems, serverless architectures, and cloud computing platforms, and experience with inference optimization for large-scale AI models.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which is not directly aligned with the job's focus on serving platform optimization and integration.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which is somewhat related but not directly focused on serving platform optimization and integration.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is closely related to the job as it involves ensuring reliable deployment, scaling, and monitoring of AI systems, managing infrastructure for scalable AI deployments, and optimizing compute usage. The responsibilities and skills align well with the job's focus on serving platform optimization and resource utilization.\n\n4. **AI Solution Architect**: This role focuses on designing AI solutions and collaborating with SMEs, which is not directly related to the job's technical focus on serving platform optimization.\n\n5. **Data Scientist**: This option is focused on data analysis, model development, and experimentation, which is not aligned with the job's focus on serving platform optimization and integration.\n\n6. **Data Engineer**: This role involves designing and maintaining data pipelines, which is not directly related to the job's focus on serving platform optimization and integration.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which is not aligned with the technical focus of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is somewhat related but not directly focused on serving platform optimization and integration.\n\nThe most relevant option is **MLOps / AI Infrastructure Engineer** (Option 3), as it aligns with the job's focus on optimizing and managing AI serving platforms and infrastructure.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

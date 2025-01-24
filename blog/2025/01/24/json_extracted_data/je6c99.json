@@ -1,0 +1,35 @@
+{
+  "responsibilities": [
+    "Shape the architecture and scalability of the next-generation AI inference platform.",
+    "Lead the design and implementation of core systems for AI services, including resilient fault-tolerant queues, model catalogs, and scheduling mechanisms.",
+    "Build and scale infrastructure capable of handling millions of API requests per second.",
+    "Own critical subsystems for managed AI inference to serve large language models (LLMs) globally.",
+    "Collaborate cross-functionally to influence the long-term vision of the platform.",
+    "Develop a customer-facing API that serves real-world AI models.",
+    "Prototype rapidly, optimize performance on GPUs, and ensure high availability as part of MVP development.",
+    "Contribute to open-source AI frameworks and low-level performance optimizations."
+  ],
+  "skills": [
+    "Strong background in distributed systems design and implementation.",
+    "Experience with cloud-based services that can handle millions of requests.",
+    "Problem-solving skills around performance optimizations, particularly for AI inference on GPU-based systems.",
+    "Proactive and collaborative approach with the ability to work autonomously.",
+    "Strong communication skills, both written and verbal.",
+    "Passion for open-source contributions and AI inference frameworks.",
+    "Keen interest in customer-facing product development and building user-friendly APIs."
+  ],
+  "qualifications": [
+    "Advanced degree in Computer Science, Engineering, or a related field.",
+    "Demonstrable experience in distributed systems design and implementation.",
+    "Proven track record of delivering early-stage projects under tight deadlines.",
+    "Expertise in using cloud-based services, such as elastic compute, object storage, virtual private networks, managed databases, etc.",
+    "Experience in Generative AI (Large Language Models, Multimodal).",
+    "Experience with container runtimes (e.g., Kubernetes) and microservices architectures.",
+    "Experience using REST APIs and common communication protocols, such as gRPC.",
+    "Demonstrated experience in the software development cycle and familiarity with CI/CD tools.",
+    "Proficiency in Golang or Python for large-scale, production-level services (Nice-to-Have).",
+    "Familiarity with AI infrastructure, including training, inference, and ETL pipelines (Nice-to-Have).",
+    "Contributions to open-source AI projects such as VLLM or similar frameworks (Nice-to-Have).",
+    "Performance optimizations on GPU systems and inference frameworks (Nice-to-Have)."
+  ]
+}

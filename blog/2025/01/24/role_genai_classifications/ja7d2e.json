@@ -1,0 +1,22 @@
+{
+  "filename": "ja7d2e",
+  "responsibilities": [
+    "Innovate and develop new machine learning compiler and systems technologies",
+    "Design, implement, and optimize compilers for high impact AI workloads",
+    "Co-design learning system solutions with current and future ML compiler and algorithm technologies",
+    "Collaborate closely with other engineering teams at NVIDIA to build high impact solutions for machine learning acceleration",
+    "Develop new ML/DL compiler abstractions, build runtimes, and ML/DL-compiler driven system solutions to accelerate large language models, agents, and other high-impact machine learning workloads",
+    "Build a close technical relationship with internal NVIDIA software and hardware teams to push the latest developments to NVIDIA's product"
+  ],
+  "qualifications": [
+    "Strong experience in developing or using deep learning frameworks (e.g. PyTorch, JAX, TensorFlow, ONNX etc.)",
+    "Strong python and C/C++ programming skills",
+    "Expertise in AI frameworks such as PyTorch, TensorFlow, and ONNX",
+    "Expertise in machine compilers (e.g. Apache TVM, MLIR)",
+    "Strong experience in GPU performance optimizations",
+    "Strong experience in machine learning systems research and productionization",
+    "Open source project ownership or contributions"
+  ],
+  "analysis": "The job responsibilities include developing and optimizing compilers for AI workloads, co-designing learning system solutions, and accelerating large language models, agents, and other high-impact machine learning workloads. The mention of \"large language models\" directly indicates involvement with language models, which are a type of Generative AI. Additionally, the job involves developing new ML/DL compiler abstractions and system solutions to accelerate these models, further supporting the involvement with language models.\n\nThe skills required include experience with deep learning frameworks like PyTorch and TensorFlow, which are commonly used in developing and deploying language models. The expertise in machine compilers and GPU performance optimizations also aligns with the need to efficiently run large language models.\n\nOverall, the job clearly involves working with language models, which are a subset of Generative AI technologies.",
+  "is_genai_role": true
+}

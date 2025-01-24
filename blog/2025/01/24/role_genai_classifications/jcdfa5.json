@@ -1,0 +1,23 @@
+{
+  "filename": "jcdfa5",
+  "responsibilities": [
+    "Build and deploy Lattice, the foundation for Anduril's defense technology systems.",
+    "Work on platform engineering roles, including core infrastructure, distributed systems, web development, and networking.",
+    "Collaborate with team members and partners in the autonomy domain to develop and deploy autonomous systems at scale.",
+    "Build and integrate model/software/hardware-in-the-loop components using first and third-party technologies.",
+    "Deliver novel software capabilities by working with customers."
+  ],
+  "skills": [
+    "Proficiency in a variety of programming languages such as Rust, Go, C++, Java, Python, JavaScript/TypeScript.",
+    "Experience with industry-standard cloud platforms (AWS, Azure), CI/CD tools, and software infrastructure fundamentals.",
+    "Ability to quickly understand and navigate complex systems and established code bases.",
+    "Experience building scalable backend software systems with various data storage and processing requirements.",
+    "Familiarity with modern build and deployment tooling (e.g., NixOS, Terraform).",
+    "Understanding of how computers and networks work, from a single desktop to a multi-cluster cloud node.",
+    "Experience implementing robot or autonomous vehicle testing frameworks in a software-in-the-loop or hardware-in-the-loop environment.",
+    "Familiarity with industry-standard monitoring, logging, and data management tools and best practices.",
+    "A bias towards rapid delivery and iteration."
+  ],
+  "analysis": "The job responsibilities focus on building and deploying defense technology systems, working on platform engineering roles, collaborating on autonomous systems, and integrating model/software/hardware-in-the-loop components. There is no explicit mention of working with Generative AI or language models. The skills required include proficiency in various programming languages, experience with cloud platforms, understanding complex systems, building scalable backend systems, and familiarity with modern deployment tools. There is also a focus on autonomous vehicle testing frameworks and software-in-the-loop environments. None of these responsibilities or skills specifically indicate work with Generative AI or language models.",
+  "is_genai_role": false
+}

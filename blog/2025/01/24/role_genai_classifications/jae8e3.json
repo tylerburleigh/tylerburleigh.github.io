@@ -1,0 +1,28 @@
+{
+  "filename": "jae8e3",
+  "responsibilities": [
+    "Design, build, and maintain robust and scalable data pipelines for collecting, transforming, storing, and delivering large datasets.",
+    "Implement ETL processes to integrate data from various sources into the Data Warehouse.",
+    "Optimize new and legacy data pipelines for performance, scalability, and reliability.",
+    "Design and implement data architectures that support analytics and reporting needs, ensuring efficient data storage and retrieval.",
+    "Build and manage data models, ensuring they align with business requirements and data consumption patterns.",
+    "Optimize SQL queries, database performance, and data processing jobs to minimize latency and improve efficiency.",
+    "Continuously monitor and tune data processing pipelines, databases, and queries to enhance performance, reduce latency, and minimize costs.",
+    "Implement robust security measures to ensure the confidentiality and integrity of sensitive data, including encryption, access controls, and data masking.",
+    "Maintain comprehensive documentation for data workflows, pipelines, infrastructure and facilitate knowledge sharing and team collaboration."
+  ],
+  "qualifications": [
+    "Strong proficiency with SQL and working with both transactional RDBMS (PostgreSQL, MySQL, Oracle, etc) and MPP databases (Redshift, Snowflake, BigQuery).",
+    "Experience writing and maintaining ETL codebases in at least one modern object-oriented programming language (Python, Java, C#, Go).",
+    "Ability to understand and compose complex queries and data structures.",
+    "Strong understanding of data modeling, data architecture, and data governance principles.",
+    "Strong understanding of cloud environments (AWS, GCP, Azure).",
+    "Hands-on experience with designing, maintaining, and optimizing data warehouses using fact and dimension tables.",
+    "Ability to collaborate with cross-functional teams, including software engineers, data scientists, analysts, and business stakeholders.",
+    "Familiarity with orchestration tools like Apache Airflow, Luigi, or Prefect (Nice to Have).",
+    "Experience working with container technology including Docker and Kubernetes (Nice to Have).",
+    "Knowledge using tools like Kafka, RabbitMQ, or Kinesis for real-time data streaming (Nice to Have)."
+  ],
+  "analysis": "The job responsibilities and skills listed are primarily focused on data engineering tasks. The responsibilities include designing and maintaining data pipelines, implementing ETL processes, optimizing data architectures, and ensuring data security. The skills required include proficiency in SQL, experience with ETL codebases, understanding of data modeling and cloud environments, and familiarity with data orchestration and container technologies.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data processing, storage, and optimization, which are typical tasks for a data engineer. The job does not involve tasks related to natural language processing, machine learning model development, or any specific mention of AI technologies that would indicate work with GenAI or LLMs.\n\nTherefore, based on the provided information, this job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

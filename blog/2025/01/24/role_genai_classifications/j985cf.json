@@ -1,0 +1,32 @@
+{
+  "filename": "j985cf",
+  "responsibilities": [
+    "Design, implement, and optimize AI tooling and systems to improve the quality and relevance of generated content.",
+    "Develop retrieval mechanisms to efficiently access and leverage external data sources.",
+    "Train and fine-tune generative models with retrieved data to enhance performance and accuracy.",
+    "Evaluate model performance and iterate on improvements based on metrics and user feedback.",
+    "Work closely with data scientists, product managers, and other stakeholders to understand requirements and deliver effective solutions.",
+    "Participate in code reviews and collaborate on best practices within the engineering team.",
+    "Stay up-to-date with the latest advancements in AI, natural language processing (NLP), RAG methodologies, and other related technologies.",
+    "Participate in upstream generative AI model projects such as lm-eval, ragas.io, LlamaIndex, LangChain, Hugging Face Transformers, vllm, pytorch, etc.",
+    "Document system designs, processes, and model performance for transparency and future reference.",
+    "Report on project status, challenges, and results to stakeholders.",
+    "Serve as a subject matter expert for your assigned component, providing mentorship and expertise to build knowledge and capabilities within Red Hat teams.",
+    "Gather and analyze user feedback to refine and enhance AI tooling."
+  ],
+  "skills": [
+    "Advanced programming skills in Python and SQL.",
+    "Experience in or familiarity with machine learning frameworks (e.g., TensorFlow, PyTorch).",
+    "Understanding of natural language processing (NLP) techniques and models.",
+    "Familiarity with retrieval-augmented generation architectures and methodologies.",
+    "Experience with data processing and manipulation libraries.",
+    "Knowledge of microservices and containerization technologies (e.g., Kubernetes) for LLM deployment.",
+    "Strong self-motivation and organizational skills.",
+    "Demonstrated ability to context switch between multiple concurrent projects.",
+    "Outstanding mentorship and coaching skills.",
+    "Excellent written and verbal communication skills.",
+    "Positive attitude and willingness to share ideas openly."
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities include designing, implementing, and optimizing AI tooling and systems to improve the quality and relevance of generated content, which is a core aspect of working with Generative AI. Additionally, the task of training and fine-tuning generative models with retrieved data directly involves working with language models. The mention of participating in upstream generative AI model projects such as lm-eval, ragas.io, LlamaIndex, LangChain, Hugging Face Transformers, vllm, and PyTorch further confirms the involvement with LLMs and GenAI.\n\nThe skills required for the job also support this conclusion. Advanced programming skills in Python and SQL, experience with machine learning frameworks like TensorFlow and PyTorch, and understanding of natural language processing (NLP) techniques and models are all essential for working with Generative AI and LLMs. Familiarity with retrieval-augmented generation architectures and methodologies, as well as knowledge of microservices and containerization technologies for LLM deployment, further emphasize the focus on language models and generative AI technologies.\n\nOverall, both the responsibilities and skills align with tasks and knowledge areas associated with Generative AI and language models.",
+  "is_genai_role": true
+}

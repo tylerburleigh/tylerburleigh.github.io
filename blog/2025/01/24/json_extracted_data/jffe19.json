@@ -1,0 +1,45 @@
+{
+  "responsibilities": [
+    "Design and implement novel architectures for large-scale video and multimodal diffusion models",
+    "Develop new approaches to multimodal fusion, temporal modeling, and video control",
+    "Research temporal video editing techniques and controllable generation",
+    "Research and validate scaling laws for video generation models",
+    "Create new loss functions and training objectives for improved generation quality",
+    "Drive rapid experimentation with model architectures and training strategies",
+    "Validate research directly through product deployment and user feedback",
+    "Train and optimize models at massive scale (10s-100s of billions of parameters)",
+    "Develop sophisticated distributed training approaches using FSDP, DeepSpeed, Megatron-LM",
+    "Design and implement model surgery techniques (pruning, distillation, quantization)",
+    "Create new approaches to memory optimization and training efficiency",
+    "Research techniques for improving training stability at scale",
+    "Conduct systematic empirical studies of architecture and optimization choices",
+    "Advance state-of-the-art in video model architecture design and optimization",
+    "Develop new approaches to temporal modeling for video generation",
+    "Create novel solutions for multimodal learning and cross-modal alignment",
+    "Research and implement new optimization techniques for generative modeling and sampling",
+    "Design and validate new evaluation metrics for generation quality",
+    "Systematically analyze and improve model behavior across different regimes"
+  ],
+  "skills": [
+    "Strong proficiency in modern deep learning tooling (PyTorch, CUDA, Triton, FSDP, etc.)",
+    "Experience training diffusion models with 10B+ parameters",
+    "Deep understanding of attention, transformers, and modern multimodal architectures",
+    "Expertise in distributed training systems and model parallelism",
+    "Proven ability to implement and improve complex model architectures",
+    "Strong software engineering practices including testing and code review",
+    "Experience with rapid prototyping and experimental design",
+    "Strong analytical skills for debugging model behavior and training dynamics",
+    "Facility with profiling and optimization tools"
+  ],
+  "qualifications": [
+    "Master's or PhD in Computer Science, Machine Learning, or related field",
+    "Track record of research contributions at top ML conferences (NeurIPS, ICML, ICLR)",
+    "Demonstrated experience implementing and improving upon state-of-the-art architectures",
+    "Deep expertise in generative modeling approaches (diffusion, autoregressive, VAEs, etc.)",
+    "Strong background in optimization techniques and loss function design",
+    "Experience with empirical scaling studies and systematic architecture research",
+    "Experience with very large language models (200B+ parameters) is a plus",
+    "Track record of systematic empirical research and rigorous evaluation",
+    "Experience maintaining high code quality in a research environment"
+  ]
+}

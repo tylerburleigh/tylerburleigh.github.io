@@ -1,0 +1,37 @@
+{
+  "responsibilities": [
+    "Provide technical direction for the design and development of AI pipelines, ensuring scalability, robustness, and extensibility.",
+    "Serve as a mentor and guide for engineers on the AI Platform team, fostering growth and technical excellence.",
+    "Identify and drive high-impact projects aligned with business objectives and product needs.",
+    "Architect, design, and maintain AI pipelines for labeling, embeddings, training, and deploying models into production.",
+    "Lead the development and optimization of MLFlow pipelines for deployment.",
+    "Build and deploy foundational models that serve as the backbone for SnorkelFlow’s core product capabilities.",
+    "Partner with the Compute Platform team to ensure seamless integration with orchestration tools and infrastructure.",
+    "Develop and deploy LLM-based systems for production workflows, focusing on efficiency, scalability, and reproducibility.",
+    "Create AI training framework pipelines that will allow LLM usage in applications, including fine-tuning, pruning, distillation, and foundational model training.",
+    "Integrate APIs from providers such as OpenAI, Anthropic, and Gemini into SnorkelFlow’s pipelines.",
+    "Oversee the integration of backend services for managing LLM calls and API interactions.",
+    "Collaborate with the Data Platform team to define data requirements and ensure smooth interoperability.",
+    "Work with the Application team to design and implement APIs that power application workflows.",
+    "Establish observability standards for AI pipelines, including tools and dashboards for monitoring model performance and debugging.",
+    "Define key metrics for system health and optimization.",
+    "Act as a thought leader, collaborating with Data Platform, Compute Platform, Application, Product and other internal teams to deliver cohesive, scalable solutions.",
+    "Partner with stakeholders to translate product goals into technical roadmaps."
+  ],
+  "skills": [
+    "Expertise in Python and deep learning frameworks such as PyTorch.",
+    "Proficiency with CI/CD pipelines for machine learning workflows.",
+    "Deep understanding of LLM architectures, fine-tuning, and deployment methodologies.",
+    "Strong communication skills, with an emphasis on scalable and reliable system design.",
+    "Familiarity with libraries such as Hugging Face Transformers, spaCy, scikit-learn, or XGBoost.",
+    "Knowledge of MLOps tools and practices, such as MLflow, Kubernetes, or Ray.",
+    "Experience building APIs or SDKs for AI services."
+  ],
+  "qualifications": [
+    "Bachelor’s or Master’s degree in Computer Science, Machine Learning, or a related field.",
+    "8+ years of experience with a good portion of them in AI development, including hands-on work with AI in production systems.",
+    "Proven experience leading technical projects and mentoring engineers.",
+    "Expertise in NLP and familiarity with multimodal AI concepts, including vision and audio tasks.",
+    "Experience working with APIs and foundational model providers such as OpenAI, Anthropic, or Gemini."
+  ]
+}

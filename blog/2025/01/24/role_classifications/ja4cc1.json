@@ -1,0 +1,26 @@
+{
+  "filename": "ja4cc1",
+  "responsibilities": [
+    "Interact with customers directly to understand their business problems and help them define and implement scalable ML/DL solutions.",
+    "Research, develop, and implement state-of-the-art AI and ML solutions to deploy scalable solutions into production.",
+    "Collaborate and coordinate with product managers, designers, engineers, and other key stakeholders to define requirements, scope, and architecture for new features and enhancements.",
+    "Push forward AI technology initiatives, helping to discover and keep Procore on the leading edge.",
+    "Communicate effectively by clearly articulating results and ideas to customers, managers, and key decision makers.",
+    "Foster a healthy and inclusive team environment, provide technical guidance to other engineers, and act as a mentor."
+  ],
+  "skills": [
+    "Proficiency in Python with a focus on scalable, maintainable code.",
+    "Experience in training and deploying models using PyTorch and TensorFlow, including YOLOv8-v11, Transformers, Mask R-CNN, DETR, and Swin Transformers.",
+    "Skilled in fine-tuning LLMs, VLMs, and NLP technologies for specialized applications.",
+    "Ability to design workflows for data collection, annotation, feature engineering, model training, and evaluation.",
+    "Proficiency in distributed GPU training with CUDA and cuDNN for multi-GPU systems.",
+    "Proficiency in containerization, microservices, and deployment using Docker, Kubernetes, and cloud platforms like AWS.",
+    "Strong knowledge of Ray for distributed execution, ArgoCD for GitOps workflows, and Kubernetes for managing ML applications.",
+    "Proficiency in Git and building robust CI/CD pipelines for efficient development and deployment.",
+    "Experience with monitoring tools like Datadog, New Relic, and Sumo Logic for ensuring system reliability and performance.",
+    "Solid understanding of Agile practices with a proven track record of delivering iterative, high-quality results."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an \"AI/ML Engineer\" (Option 2). The job involves interacting with customers to understand business problems and implementing scalable ML/DL solutions, which aligns with transforming research output into robust, scalable AI solutions. The responsibilities also include collaborating with product managers, designers, engineers, and other stakeholders, which is similar to the AI/ML Engineer's role of collaborating closely with Research Scientists to optimize and refine model implementations.\n\nThe skills required for the job, such as proficiency in Python, experience with PyTorch and TensorFlow, containerization, microservices, and deployment using Docker, Kubernetes, and cloud platforms, align well with the AI/ML Engineer's skills and tools, which include proficiency in Python, experience with API development and integration, and working knowledge of software engineering best practices.\n\nWhile the job also mentions fostering a healthy and inclusive team environment and providing technical guidance, which could align with some aspects of the \"AI Solution Architect\" (Option 4) or \"Product Manager\" (Option 7), the primary focus on scalable ML/DL solutions and the technical skills required make the AI/ML Engineer the best fit.\n\nOther options like \"AI Research Scientist\" (Option 1), \"MLOps / AI Infrastructure Engineer\" (Option 3), \"Data Scientist\" (Option 5), \"Data Engineer\" (Option 6), and \"Software Engineer\" (Option 8) do not align as closely with the job's primary focus on deploying scalable ML/DL solutions and the specific technical skills listed.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

@@ -1,0 +1,33 @@
+{
+  "filename": "j81774",
+  "responsibilities": [
+    "Provide technical direction for the design and development of AI pipelines, ensuring scalability, robustness, and extensibility.",
+    "Serve as a mentor and guide for engineers on the AI Platform team, fostering growth and technical excellence.",
+    "Identify and drive high-impact projects aligned with business objectives and product needs.",
+    "Architect, design, and maintain AI pipelines for labeling, embeddings, training, and deploying models into production.",
+    "Lead the development and optimization of MLFlow pipelines for deployment.",
+    "Build and deploy foundational models that serve as the backbone for SnorkelFlow\u2019s core product capabilities.",
+    "Partner with the Compute Platform team to ensure seamless integration with orchestration tools and infrastructure.",
+    "Develop and deploy LLM-based systems for production workflows, focusing on efficiency, scalability, and reproducibility.",
+    "Create AI training framework pipelines that will allow LLM usage in applications, including fine-tuning, pruning, distillation, and foundational model training.",
+    "Integrate APIs from providers such as OpenAI, Anthropic, and Gemini into SnorkelFlow\u2019s pipelines.",
+    "Oversee the integration of backend services for managing LLM calls and API interactions.",
+    "Collaborate with the Data Platform team to define data requirements and ensure smooth interoperability.",
+    "Work with the Application team to design and implement APIs that power application workflows.",
+    "Establish observability standards for AI pipelines, including tools and dashboards for monitoring model performance and debugging.",
+    "Define key metrics for system health and optimization.",
+    "Act as a thought leader, collaborating with Data Platform, Compute Platform, Application, Product and other internal teams to deliver cohesive, scalable solutions.",
+    "Partner with stakeholders to translate product goals into technical roadmaps."
+  ],
+  "qualifications": [
+    "Expertise in Python and deep learning frameworks such as PyTorch.",
+    "Proficiency with CI/CD pipelines for machine learning workflows.",
+    "Deep understanding of LLM architectures, fine-tuning, and deployment methodologies.",
+    "Strong communication skills, with an emphasis on scalable and reliable system design.",
+    "Familiarity with libraries such as Hugging Face Transformers, spaCy, scikit-learn, or XGBoost.",
+    "Knowledge of MLOps tools and practices, such as MLflow, Kubernetes, or Ray.",
+    "Experience building APIs or SDKs for AI services."
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities include developing and deploying LLM-based systems, creating AI training framework pipelines for LLM usage, and integrating APIs from providers like OpenAI, Anthropic, and Gemini, which are known for their work in Generative AI and LLMs. Additionally, the skills required include a deep understanding of LLM architectures, fine-tuning, and deployment methodologies, as well as familiarity with libraries such as Hugging Face Transformers, which are commonly used in working with language models. The mention of foundational models and LLM-based systems further supports the involvement with Generative AI and LLMs.",
+  "is_genai_role": true
+}

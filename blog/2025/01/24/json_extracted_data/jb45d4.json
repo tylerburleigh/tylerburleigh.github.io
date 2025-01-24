@@ -1,0 +1,31 @@
+{
+  "responsibilities": [
+    "Enable the building, maintenance, enhancements, and support of new and existing Azure data pipelines for various analytical use cases.",
+    "Partner with team members to understand data and leverage it to serve businesses and operations.",
+    "Ensure adherence to Manulife’s IT security and Risk guidelines.",
+    "Gain deep understanding of data by collaborating with business and advanced analytics partners.",
+    "Design, curate, and publish connected data sets that enable users to self-serve.",
+    "Propose technology improvements or innovative solutions to solve business problems.",
+    "Collaborate with Architecture, security, and risk teams to implement latest guidelines and Azure standard methodologies.",
+    "Automate infrastructure provisioning and deployment using tools such as terraform.",
+    "Implement CI/CD pipelines for automated code deployment.",
+    "Participate in Agile sprints and ceremonies; support rapid iteration and development.",
+    "Cultivate and maintain strong relationships and foster collaboration with various teams and partners within the organization."
+  ],
+  "skills": [
+    "Solid understanding of Azure infrastructure, including subscriptions, resource groups, resources, access control with RBAC, integrations with Azure AD, and Azure security principles.",
+    "Strong hands-on knowledge of Azure Databricks (Unity Catalog), ADF, ADLS, Synapse Serverless/dedicated/spark pools, Python, PySpark, and T-SQL.",
+    "Experience designing and developing scripts for ETL processes and automation in Azure data factory and Azure databricks.",
+    "High proficiency in GIT/Jenkins/dev ops processes to maintain and resolve issues with data pipelines in production.",
+    "Knowledge of implementing azure technologies and networking via terraform.",
+    "Good understanding of data modeling/data marts/Lake house architecture, SCD, data mesh, and delta lake.",
+    "Solid understanding of data privacy and compliance regulations and standard methodologies for preserving customer data.",
+    "Knowledge of insurance and financial products is a plus."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in computer/IT or data-related fields required.",
+    "Master’s degree is a plus.",
+    "5+ years of previous data engineering experience.",
+    "3+ years of experience working in enabling azure-related data technologies."
+  ]
+}

@@ -82,7 +82,7 @@ Your scores and explanation:
 
 Here are the issues I see with this prompt:
 
-1. The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like <Question></Question>, <Answer1></Answer1>, and <Answer2></Answer2>, but in a pinch delimiters like triple backticks can be used.
+1. The prompt does not use delimiters for most of the inputs. I would enclose the inputs inside XML tags like `<Question></Question>`, `<Answer1></Answer1>`, and `<Answer2></Answer2>`, but in a pinch delimiters like triple backticks can be used.
 
 2. The prompt instructs the model to first generate scores in list format, and then to sum them. But as we know, language models models often make arithmetic mistakes. It would be better to ask the model to generate scores for each criterion, and then to programmatically extract and summarize them in python (or another programming language) from which the routine is run.
 

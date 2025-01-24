@@ -1,0 +1,28 @@
+{
+  "filename": "j887a4",
+  "responsibilities": [
+    "Develop, test, and support features of DataRobot.",
+    "Create and maintain automated unit tests and functional tests.",
+    "Design infrastructure for new features with the input of peers.",
+    "Manage individual projects and milestones with abundant communication of progress.",
+    "Seek, give, and receive critical feedback in a constructive manner, including but not limited to code reviews.",
+    "Engage in engineering on-call escalated support of services owned by the team."
+  ],
+  "qualifications": [
+    "Proven experience writing high-quality code in a collaborative environment, preferably using Python and/or Go.",
+    "Strong Computer Science fundamentals in object-oriented design, data structures, algorithm design, problem-solving, and complexity analysis.",
+    "Understanding of design for scalability, performance, and reliability.",
+    "Deep experience with automated testing and test-driven development.",
+    "Demonstrable knowledge of software architecture for large systems.",
+    "Real-world experience decoupling monolithic software into smaller reusable components.",
+    "Self-motivated and proactive, able to take ownership and deliver results.",
+    "Ability and willingness to learn about new technologies.",
+    "Personal drive to get things finished.",
+    "Effective communication behavior.",
+    "Fundamental understanding of Kubernetes and Helm.",
+    "Experience in building and running software systems on Kubernetes clusters in production.",
+    "Hands-on experience with infrastructure provisioning and configuration using Infrastructure as Code (IaC) principles."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on developing, testing, and supporting features of DataRobot, creating and maintaining automated tests, designing infrastructure, managing projects, and providing support. The skills required include experience in coding (Python and/or Go), computer science fundamentals, software architecture, automated testing, Kubernetes, and infrastructure provisioning. There is no mention of working with AI models, natural language processing, or any specific tasks related to GenAI or LLMs. The focus is more on software development, infrastructure, and system scalability rather than AI model development or deployment.",
+  "is_genai_role": false
+}

@@ -1,0 +1,32 @@
+{
+  "filename": "jed82e",
+  "responsibilities": [
+    "Work with the DB Lead to create and maintain optimal data pipeline architecture.",
+    "Assemble large, complex data sets that meet functional/non-functional business requirements.",
+    "Build the ETL jobs required for optimal extraction, transformation, and loading of data from a wide variety of data sources using SQL and Google \u2018big data\u2019 technologies.",
+    "Build APIs that expose the data so customers can consume and integrate with our data.",
+    "Evaluate large and complex queries/stored procedures and recommend changes to optimize performance.",
+    "Assist with the expansion into public cloud cost transparency.",
+    "Lead automation efforts leveraging inner source interaction models with other teams.",
+    "Assist data analysts on our team with query development, statistical analysis, and data visualization as needed.",
+    "Maintain technical documentation on stored procedures and ETL logic used to manage the database and data ingestion pipeline."
+  ],
+  "qualifications": [
+    "Proficient in Microsoft SQL Server 2016 & 2019 Database Development (T-SQL), Data Analysis, and Support.",
+    "Thorough understanding of RDBMS concepts and ability to write complex SQL queries, Stored procedures, Functions & triggers.",
+    "Proficiency with Java and Python languages.",
+    "Basic experience with database administration (managing access, scheduled jobs, etc.).",
+    "Basic experience with Google cloud compute services.",
+    "Basic experience with Google Big Query.",
+    "Understand REST API development and design.",
+    "Very strong foundational knowledge in Object-Oriented Design Principles, Data Structures, Algorithms, and Software Engineering.",
+    "CI/CD pipeline experience.",
+    "Experience with code repositories like Git/GitHub.",
+    "Demonstrated experience working with large data sets and a love for working with data.",
+    "Experience writing and maintaining technical documentation.",
+    "Basic familiarity with MS Office knowledge (Excel, PowerPoint, Word).",
+    "Strong communication skills and a constant desire to grow, learn, and explore new things."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, database management, and software development. The responsibilities include creating and maintaining data pipeline architecture, building ETL jobs, working with SQL and Google big data technologies, building APIs, and optimizing queries. The skills required include proficiency in SQL, Java, and Python, understanding of RDBMS concepts, experience with Google cloud services, REST API development, and CI/CD pipelines. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data management, analysis, and software engineering rather than AI model development or deployment.",
+  "is_genai_role": false
+}

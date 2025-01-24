@@ -1,0 +1,27 @@
+{
+  "filename": "jc41d1",
+  "responsibilities": [
+    "Develop backend & data engineering framework for 6sense\u2019s revenue AI, marketing, and analytics products",
+    "Work on complex problems related to scalability, performance, and big data",
+    "Write performant REST APIs for both internal and external consumption",
+    "Build robust high-volume, large data set production applications",
+    "Collaborate with Product and Architect to solve complex problems",
+    "Support QA and DevOps teams with test frameworks and automation",
+    "Mentor junior engineers and provide technical guidance to the team"
+  ],
+  "skills": [
+    "Strong coding skills and hands-on experience in Java on Spring Boot, Python on Django, and OO framework",
+    "Knowledge in SQL or Non-SQL, direct work experience on MySQL and/or Hive",
+    "Working experience of SingleStore (memsql) DB is a huge plus",
+    "Experience with test-driven development, continuous integration, and continuous deployment processes",
+    "Experience with DevOps, including rolling out and managing development, build, and production environments",
+    "Familiarity with CI/CD tools like Jenkins, Bazel, and DevOps for build",
+    "Exposure to application security",
+    "Familiarity with Node.JS",
+    "SQL, Non-SQL performance tuning",
+    "Exposure to design patterns and aspect-oriented programming is a huge plus",
+    "Excellent communication skills, both written and oral"
+  ],
+  "analysis": "The job responsibilities focus on developing backend and data engineering frameworks for AI, marketing, and analytics products, addressing scalability and performance issues, writing REST APIs, and building high-volume data applications. The skills required include strong coding skills in Java and Python, experience with SQL/Non-SQL databases, test-driven development, DevOps, and CI/CD tools. There is no explicit mention of working with Generative AI or language models. The focus is more on backend development, data engineering, and infrastructure rather than on developing or working with GenAI or LLMs.",
+  "is_genai_role": false
+}

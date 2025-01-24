@@ -1,0 +1,22 @@
+{
+  "filename": "jf4142",
+  "responsibilities": [
+    "Lead Projects: Plan, schedule, and deliver software projects on time and at the highest quality.",
+    "Build Teams: Manage and mentor developers, fostering collaboration and high performance.",
+    "Drive Strategy: Make key decisions on backend architecture, scalability, and infrastructure.",
+    "Collaborate Cross-Functionally: Align software, product, engineering, and department goals for seamless execution.",
+    "Optimize Processes: Streamline workflows, solve technical challenges, and improve productivity.",
+    "Oversee Deployments: Ensure smooth, efficient deployments and system performance."
+  ],
+  "skills": [
+    "Proficient in TypeScript and Golang, with extensive testing experience (unit, end-to-end, and load testing using Cypress, Playwright, k6).",
+    "Skilled in containerization (Docker, Kubernetes) and DevOps practices, including CI/CD pipelines, infrastructure as code (IaC), and system monitoring (Datadog, Grafana).",
+    "Experienced in developing and optimizing LLM applications, including Retrieval-Augmented Generation (RAG) and GPT-based solutions, with strong knowledge of deployment patterns, prompt engineering, and API integration (OpenAI, Anthropic, Gemini).",
+    "Proficient in ML frameworks (PyTorch), optimization techniques (quantization, model distillation), and vector databases (pgvector, Weaviate, Pinecone).",
+    "Experienced with LLM inference stacks (TensorRT-LLM, VLLM, llama.cpp) and developing RAG systems.",
+    "Strong problem-solving and analytical skills, with excellent communication to foster cross-functional collaboration and stakeholder alignment."
+  ],
+  "analysis": "The job responsibilities and skills provided align most closely with the role of an \"AI Solution Architect\" (Option 4). Here's the breakdown:\n\n1. **Responsibilities**:\n   - The job involves leading projects, building teams, driving strategy, collaborating cross-functionally, optimizing processes, and overseeing deployments. These responsibilities align with the AI Solution Architect's focus on designing and orchestrating AI solutions, collaborating with SMEs, and facilitating cross-functional collaboration.\n\n2. **Skills**:\n   - The job requires proficiency in TypeScript and Golang, containerization, DevOps practices, and experience with LLM applications and ML frameworks. These skills align with the AI Solution Architect's need for a strong understanding of LLM capabilities, prompt engineering principles, and experience with conversational experience design.\n\n3. **Comparison with Other Options**:\n   - The AI Research Scientist (Option 1) focuses more on research and experimentation, which is not the primary focus of the job.\n   - The AI/ML Engineer (Option 2) and MLOps / AI Infrastructure Engineer (Option 3) focus more on productionizing models and managing infrastructure, which are not the primary responsibilities of the job.\n   - The Data Scientist (Option 5) and Data Engineer (Option 6) focus on data analysis and pipeline development, which are not the main focus of the job.\n   - The Product Manager (Option 7) focuses on product vision and strategy, which is not the primary focus of the job.\n   - The Software Engineer (Option 8) focuses on software development, which is not the primary focus of the job.\n\nOverall, the job's emphasis on leading projects, building teams, driving strategy, and collaborating cross-functionally aligns best with the AI Solution Architect's responsibilities and skills.",
+  "role_classification": 4,
+  "role_title": "AI Solution Architect"
+}

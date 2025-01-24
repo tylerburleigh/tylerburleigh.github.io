@@ -1,0 +1,26 @@
+{
+  "filename": "j44b02",
+  "responsibilities": [
+    "Organizing plans that drive outcomes and make a direct impact on the company's mission.",
+    "Providing technical leadership to teammates through coaching and mentorship.",
+    "Collaborating cross-functionally to implement impactful improvements to the product.",
+    "Ensuring data remains a strategic asset by delivering timely, high-quality, and purpose-built data.",
+    "Operating as part of a cross-functional product development team including Architecture, Infrastructure, and Product Management.",
+    "Leading the data pipeline, modeling, and populating data schemas for business intelligence and data analysis activities.",
+    "Collaborating closely with Product Management to translate strategic vision into actionable projects.",
+    "Conducting architecture design, project analysis, work breakdown, and planning.",
+    "Creating Physical and Logical Data Models with large, complex data sets.",
+    "Managing data pipeline, ETL/ELT processes using SQL and Python.",
+    "Maintaining data lifecycle and quality standards."
+  ],
+  "skills": [
+    "Proficient in managing Data ETL/ELT with large data sets.",
+    "Experience with columnar data structures such as Amazon RedShift.",
+    "Familiarity with AWS data warehousing tools.",
+    "Experience with common software engineering tools such as Git, JIRA, Confluence, and similar platforms.",
+    "Familiarity with Apache Airflow and Python.",
+    "Excellent listening, interpersonal, written, and oral communication skills."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data management, data modeling, and data pipeline processes. The responsibilities include tasks such as leading data pipelines, creating data models, and managing ETL/ELT processes. The skills required include proficiency in data warehousing tools, SQL, Python, and familiarity with software engineering tools. There is no mention of Generative AI, language models, or any specific tasks related to developing, training, or deploying AI models. The focus is on data engineering and business intelligence rather than AI or language model development.",
+  "is_genai_role": false
+}

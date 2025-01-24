@@ -1,0 +1,29 @@
+{
+  "filename": "j06f13",
+  "responsibilities": [
+    "Improve how Scale engineers develop, share, review, and merge code through best practices, automated testing, infrastructure, and processes.",
+    "Develop tooling to make it easier and safer for Scale developers to build and evolve schemas, regardless of the use case, language, or repository they work in.",
+    "Develop better tooling and metrics so that we, and our users, understand the health of our systems.",
+    "Work with developers to resolve their day-to-day issues doing development and build scalable solutions to fix or mitigate them.",
+    "Work with a team of technically sophisticated engineers who make developer experience their first priority.",
+    "Solve problems for fellow Scale engineers by understanding their needs and coming up with both tactical and strategic solutions.",
+    "Utilize qualitative and quantitative metrics to prioritize tasks and evaluate outcomes.",
+    "Provide practical, dependable self-service tools and procedures to Scale's engineering team.",
+    "Develop and maintain infrastructure for artifact publishing, codegen, and import of schemas across all Scale repositories.",
+    "Balance and prioritize conflicting objectives while working with stakeholders throughout Scale."
+  ],
+  "qualifications": [
+    "Strong proficiency in programming languages such as Python, Java, or Go.",
+    "Experience with cloud platforms such as AWS, GCP, or Azure.",
+    "Familiarity with containerization technologies such as Docker and Kubernetes.",
+    "Understanding of infrastructure-as-code tools such as Terraform, CloudFormation, and Ansible.",
+    "Knowledge of build systems such as Bazel, Gradle, Maven, or Make.",
+    "Experience with version control systems such as Git.",
+    "Familiarity with continuous integration and deployment tools such as Jenkins, CircleCI, or Github Actions.",
+    "Proficiency in database technologies such as MySQL, Postgres, or MongoDB.",
+    "Familiarity with monitoring and logging tools such as Prometheus, Grafana, or ELK stack.",
+    "Experience with Agile methodologies and project management tools such as JIRA or Asana."
+  ],
+  "analysis": "The job responsibilities focus on improving developer experience, developing tooling, maintaining infrastructure, and solving problems for engineers. The skills required include proficiency in programming languages, experience with cloud platforms, containerization technologies, infrastructure-as-code tools, build systems, version control systems, continuous integration and deployment tools, database technologies, monitoring and logging tools, and Agile methodologies. There is no mention of Generative AI (GenAI) or language models (LLMs) in either the responsibilities or the skills. The job seems to be centered around software development, infrastructure, and developer support rather than working with AI models.",
+  "is_genai_role": false
+}

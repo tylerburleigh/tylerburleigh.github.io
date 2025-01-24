@@ -1,0 +1,30 @@
+{
+  "responsibilities": [
+    "Develop efficient, reusable, and reliable data models to create business and customer value.",
+    "Use dbt to transform data from staging to reusable dimensional marts within dbt Cloud and Amazon Redshift.",
+    "Partner with analysts and stakeholders to understand business needs, document source-to-target mappings, and design and document data models.",
+    "Implement validation rules and conduct audits of data models, enforcing governance standards.",
+    "Develop data quality tests and documentation to support ongoing data modeling work.",
+    "Guide and mentor others to improve data literacy across Wave.",
+    "Design and implement processes and tools that drive data-driven decisions across Wave."
+  ],
+  "skills": [
+    "Proficiency in dbt for SQL model transformation.",
+    "Experience with cloud infrastructure, including container development with Kubernetes and GitOps.",
+    "Comfortable coding in Python for data pipelines.",
+    "Experience with BI tools, preferably Looker.",
+    "Strong communication skills to translate technical terms into non-technical language.",
+    "Ability to work autonomously and produce high-quality work.",
+    "Collaboration skills to work with different teams across Wave."
+  ],
+  "qualifications": [
+    "At least 3 years of experience in Analytics Engineering or Business Intelligence, particularly in data modeling, transformation, and data engineering.",
+    "At least 2 years of experience working with cloud infrastructure, including AWS.",
+    "Experience using dbt to implement an automated data transformation layer in a modern data warehouse.",
+    "At least 5 years of experience in Analytics Engineering, particularly in data modeling and transformation.",
+    "Strong experience designing and implementing scalable and efficient dimensional data models.",
+    "Experience writing SQL optimized for large and complex datasets.",
+    "Comfortable using version control systems like Git and CI/CD workflows.",
+    "Practical knowledge of data warehouse design frameworks (e.g., Kimball, data mesh) and best practices."
+  ]
+}

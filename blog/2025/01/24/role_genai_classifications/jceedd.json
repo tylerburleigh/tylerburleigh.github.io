@@ -1,0 +1,24 @@
+{
+  "filename": "jceedd",
+  "responsibilities": [
+    "Own the technical evolution of the data engineering capabilities and ensure solutions are delivered incrementally, meeting outcomes, and promptly escalating risks and issues.",
+    "Establish a deep understanding of data engineering processes to direct and coordinate technical aspects of work across data engineering, systematically improving productivity across teams.",
+    "Maintain a high bar for operational data quality and proactively address performance, scale, complexity, and security considerations.",
+    "Drive complex decisions impacting data engineering work, setting technical direction while balancing customer and business needs with long-term maintainability and scale.",
+    "Understand and define problem spaces, architect solutions, and coordinate a team of engineers towards implementation, unblocking them as necessary.",
+    "Lead a team of data engineers through mentoring and coaching, working closely with the engineering manager, and providing consistent feedback to help manage and grow the team.",
+    "Collaborate with counterparts in other departments as part of a multi-functional team and build this culture within your team."
+  ],
+  "skills": [
+    "Ability to drive and deliver large, complex efforts involving multiple people or teams.",
+    "Strong communication skills to maintain essential cross-team and cross-functional relationships.",
+    "Experience building streaming pipelines with a micro-services architecture for low-latency analytics.",
+    "Proficiency in working with varied forms of data infrastructure, including relational databases (e.g., SQL), Spark, and column stores (e.g., Redshift).",
+    "Experience building scalable data pipelines using Spark with Airflow scheduler/executor framework or similar scheduling tools.",
+    "Familiarity with AWS data services (Redshift, Athena, EMR) or similar Apache projects (Spark, Flink, Hive, or Kafka).",
+    "Understanding of Data Engineering tools/frameworks and standards to improve productivity and quality of output for Data Engineers.",
+    "Industry experience with large-scale, high-performance data processing systems (batch and streaming) with a \"Streaming First\" mindset."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data infrastructure, and data processing. The responsibilities include managing data engineering capabilities, improving productivity, maintaining data quality, and leading a team of data engineers. The skills required include experience with streaming pipelines, micro-services architecture, relational databases, Spark, Airflow, AWS data services, and large-scale data processing systems. There is no mention of Generative AI, language models, or any specific tasks related to developing or working with GenAI or LLMs. The focus is on data engineering and infrastructure rather than AI model development or deployment.",
+  "is_genai_role": false
+}

@@ -1,0 +1,19 @@
+{
+  "filename": "j4fe42",
+  "responsibilities": [
+    "Develop the compiler backend, specifically for assigning hardware resources in a spatial architecture to execute low-level instructions.",
+    "Solve algorithmic compiler problems.",
+    "Learn intricate details of the underlying hardware and software architectures.",
+    "Map low-level instructions to hardware resources.",
+    "Work on model partitioning, tiling, resource allocation, memory management, scheduling, and optimization for latency, bandwidth, and throughput."
+  ],
+  "qualifications": [
+    "Ability to deliver production-quality code in modern C++.",
+    "Experience in modern compiler infrastructures such as LLVM and MLIR.",
+    "Experience in machine learning frameworks and interfaces like ONNX, TensorFlow, and PyTorch.",
+    "Algorithm design ability, from high-level conceptual design to actual implementation.",
+    "Experience with relevant Open Source ML projects like Torch-MLIR, ONNX-MLIR, Caffe, and TVM."
+  ],
+  "analysis": "The job responsibilities focus on developing a compiler backend for spatial architectures, solving algorithmic compiler problems, and optimizing hardware resource allocation. The skills required include proficiency in modern C++, experience with compiler infrastructures like LLVM and MLIR, and familiarity with machine learning frameworks such as ONNX, TensorFlow, and PyTorch. While the job involves working with machine learning frameworks and open-source ML projects, there is no specific mention of Generative AI (GenAI) or language models (LLMs). The focus is more on compiler development and optimization for machine learning workloads rather than directly working with GenAI or LLMs.",
+  "is_genai_role": false
+}

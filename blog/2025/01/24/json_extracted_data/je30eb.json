@@ -1,0 +1,46 @@
+{
+  "responsibilities": [
+    "Address end-to-end production challenges related to the AgentForce AI platform.",
+    "Lead the triaging of production issues for critical projects within the Generative AI platform.",
+    "Implement automated solutions to enhance reliability.",
+    "Maintain comprehensive documentation of production incidents.",
+    "Collaborate closely with AgentForce AI, product, and platform teams.",
+    "Establish the reliability process and collaborate closely with lead engineers.",
+    "Investigate alerts and customer-reported issues, analyze the end-to-end stack, identify root causes, and generate detailed reports.",
+    "Escalate issues to relevant engineering contacts and work to resolve them when necessary.",
+    "Lead and shape the production triage process for AgentForce, focusing on service, infrastructure deployment, configuration, performance, and latency issues.",
+    "Collaborate with cross-functional teams and external partners to ensure scalable and reliable services.",
+    "Maintain comprehensive documentation of production issues, workflows, and areas for improvement.",
+    "Understand and support capacity modeling and forecasting for AgentForce services in production.",
+    "Drive the scaling of Large Language Models (LLMs) and associated services in production.",
+    "Create and maintain playbooks and detailed knowledge articles for future analysis and troubleshooting.",
+    "Automate manual processes to maintain high availability and repeatability of production systems.",
+    "Utilize availability and trust dashboards, adjust SLOs and SLIs based on production feedback.",
+    "Identify automation gaps in production and compare established critical user journey (CUJ) benchmarks for reliability and trustworthiness.",
+    "Establish strong partnerships with Customer Support Groups (CSG) team to streamline escalations and minimize disruptions.",
+    "Be part of the 24x7 on-call support and multi-GEO coverage to maintain service reliability during peak periods.",
+    "Collaborate with business and engineering stakeholders for operational excellence, processes, and SLAs.",
+    "Drive improvements based on key metrics, KPIs, and customer feedback."
+  ],
+  "skills": [
+    "Expertise in diagnosing and triaging performance and scalability issues across diverse systems and vendors.",
+    "Strong knowledge of feature provisioning, user permissions, and CRM licensing requirements.",
+    "Proficiency in scripting languages (Python, Shell, Golang).",
+    "Knowledge of AI model deployment and scaling.",
+    "Experience in DevOps or data center management roles with expertise in Linux system engineering.",
+    "Strong knowledge of cloud services (AWS preferred), container technologies (Docker, Kubernetes), and CI/CD tools (Jenkins, GitLab).",
+    "Experience in leading large-scale AI applications and services, including monitoring and diagnostic techniques.",
+    "Expertise in deploying and leading LLMs and technologies like Retrieval-Augmented Generation (RAG).",
+    "Background in monitoring tools such as Splunk, Prometheus, Grafana, and ELK stack.",
+    "Knowledge of Java profiler (e.g., Java Flight Recorder), open telemetry.",
+    "Knowledge of TCP/IP networking protocols and infrastructure services in IaaS environments.",
+    "Familiarity with MLOps tools and practices for supporting the machine learning lifecycle."
+  ],
+  "qualifications": [
+    "Bachelor’s degree or equivalent experience in Computer Science, Engineering, or a related technical field.",
+    "Shown expertise in implementing robust reliability processes across full-stack, end-to-end ML platforms.",
+    "In-depth understanding of Generative AI architecture and systems.",
+    "8+ years of experience in production support and triaging roles with a focus on end-to-end, infrastructure, and operational reliability.",
+    "AWS or Salesforce certifications are a plus."
+  ]
+}

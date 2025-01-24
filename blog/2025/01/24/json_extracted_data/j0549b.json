@@ -1,0 +1,20 @@
+{
+  "responsibilities": [
+    "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+    "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+    "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+    "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into the video creation platform.",
+    "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+  ],
+  "skills": [
+    "Strong software engineering skills in Python (or similar).",
+    "Experience in cloud environments (AWS, GCP, or Azure).",
+    "Expertise in deep learning frameworks (e.g., PyTorch, TensorFlow).",
+    "Focus on inference optimization and high-throughput serving.",
+    "Familiarity with distributed training methods and large-scale data processing pipelines."
+  ],
+  "qualifications": [
+    "5+ years of industry experience deploying and scaling large generative or deep learning models in production.",
+    "A passion for practical, results-driven ML solutions—delivering tangible value to end users rather than purely research outcomes."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "filename": "j4a0ed",
+  "responsibilities": [
+    "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+    "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+    "Implement machine learning algorithms for AI-driven validation to detect discrepancies, anomalies, and errors.",
+    "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+    "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+    "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+    "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+  ],
+  "qualifications": [
+    "Proficiency in programming languages such as Python and JavaScript.",
+    "Proficiency in SQL, including PostgreSQL, MySQL, and SQL Server.",
+    "Experience working with ETL tools, with a preference for FlatFile.",
+    "Proficiency with Snowflake and AWS technologies.",
+    "Proficiency with dbt, Apache Airflow, and Airbyte.",
+    "Working experience in AI and machine learning.",
+    "Familiarity with designing schema for data warehouses, including star and snowflake schema.",
+    "Familiarity with big data technologies such as Hadoop, Spark, and Kafka.",
+    "Strong problem-solving skills.",
+    "Ability to work in an innovative, dynamic environment."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, machine learning, and AI-driven validation. The responsibilities include assembling datasets, creating data pipelines, implementing machine learning algorithms, and building infrastructure for data extraction and transformation. The skills required include proficiency in programming languages, SQL, ETL tools, and big data technologies, as well as experience in AI and machine learning.\n\nWhile the job involves working with AI and machine learning, there is no specific mention of Generative AI (GenAI) or language models (LLMs) such as those used in natural language processing tasks. The focus is more on data engineering and general AI applications rather than on generative models or language models.\n\nTherefore, based on the provided responsibilities and skills, it does not appear that the job specifically involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

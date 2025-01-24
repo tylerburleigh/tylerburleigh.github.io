@@ -1,0 +1,21 @@
+{
+  "filename": "j3212f",
+  "responsibilities": [
+    "Use cutting edge ML and LLM techniques to power the Permitting and Regulatory product",
+    "Design and develop new modules for the app using spatial compute and modeling technologies",
+    "Build and support front-end features, creating reusable components where possible",
+    "Build and support an ETL platform for large geospatial datasets as well as regulatory and project risk data"
+  ],
+  "qualifications": [
+    "Strong computer science fundamentals",
+    "Ability to tinker, build, and push the limits of what\u2019s possible",
+    "Experience with React / NextJS",
+    "Proficiency in Python / FastAPI / Prefect",
+    "Familiarity with LLM (text-in text-out via OpenAI and others)",
+    "Experience with PostgresDB",
+    "Knowledge of Docker",
+    "Understanding of Mapbox-GL"
+  ],
+  "analysis": "The job responsibilities include using cutting-edge ML and LLM techniques to power a product, which directly indicates involvement with language models. Additionally, the skills section lists familiarity with LLM (text-in text-out via OpenAI and others), which further confirms that the job involves working with language models. The mention of LLMs in both responsibilities and skills clearly points to the use of Generative AI or language models in this job.",
+  "is_genai_role": true
+}

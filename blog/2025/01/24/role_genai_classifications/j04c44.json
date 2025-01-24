@@ -1,0 +1,42 @@
+{
+  "filename": "j04c44",
+  "responsibilities": [
+    "Collaborate across the University of Rochester Libraries to ensure successful implementation, maintenance, and improvement of systems, services, workflows, and processes.",
+    "Share responsibility for management and administration of on-premise and cloud-based infrastructure services.",
+    "Manage storage, maintenance, security patching, backup, disaster recovery preparedness, performance monitoring, and task automation.",
+    "Write and maintain critical documentation, perform source control, automated testing, automated monitoring, and solution deployment.",
+    "Work closely with colleagues in Digital Initiatives, other IT staff across the UR Libraries, and staff across University IT.",
+    "Perform and advise on implementation and maintenance activities during and outside business hours.",
+    "Prepare use case requirements, design solutions, and deploy on-premise or cloud-based solutions.",
+    "Integrate on-premise solutions with cloud solutions.",
+    "Automate and deploy solutions hosted on both cloud services and on-premise infrastructure.",
+    "Develop and document workflows to ensure conformance to University and Library standards and procedures.",
+    "Solve systems and service issues and complete proactive performance monitoring, analysis, alerting, reporting, and tuning.",
+    "Coordinate with Library and University IT staff on troubleshooting efforts for mission-critical enterprise systems and services.",
+    "Coordinate maintenance activities including deploying patches and ensuring firmware and software are up to date.",
+    "Work with the Sr Systems Engineer on data backups and recovery, information security measures, routine upgrades/patches, and data storage needs.",
+    "Create, review, and maintain technical documentation of managed server and software environments and procedures.",
+    "Collaborate with the Sr Systems Engineer and UIT to ensure system security and compliance with regulations.",
+    "Ensure server security by using operating system hardening techniques, SSL certificates, firewall rules, and maintenance.",
+    "Complete incident and problem analysis reports, resolve and complete follow-up tasks to ensure platform stability.",
+    "Fulfill internal support requests according to Library and University policies.",
+    "Participate in service provision across the Libraries.",
+    "Support work priorities, technical decisions, and operating procedures at the team or project level.",
+    "Evaluate new products and services to enhance the delivery of infrastructure services.",
+    "Maintain currency with IT and library functions, resources, practices, and procedures.",
+    "Participate in and contribute to RCL, UR Libraries, and University committees, meetings, and events."
+  ],
+  "skills": [
+    "Expertise with virtualization technology and cloud providers such as Amazon Web Services and Microsoft Azure.",
+    "Technical experience and ability to configure and manage Linux (primarily Ubuntu and RedHat distributions) and Windows information systems in a secure networked environment.",
+    "Ability to interact with all levels of staff to communicate and process communications on technical change.",
+    "Demonstrated analytical, troubleshooting, and critical thinking skills.",
+    "Strong BASH/shell scripting skills.",
+    "Comprehensive grasp of coding and scripting in common languages, including Python, Perl, PHP, and Ruby.",
+    "Advanced knowledge of on-premise virtual infrastructure, such as VMware vSphere.",
+    "Technical experience and ability to configure and manage Apache/Nginx HTTP servers, Apache Tomcat, Open SSL, system building, and OS installation.",
+    "Expertise with server operating systems and orchestration and automation tools (including Ansible and Puppet)."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on IT infrastructure management, system administration, and cloud services. The responsibilities include tasks such as managing on-premise and cloud-based infrastructure, automating and deploying solutions, ensuring system security, and maintaining technical documentation. The skills required include expertise in virtualization technology, cloud providers, scripting languages, and server management.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on IT infrastructure, system security, and automation, which are not directly related to GenAI or LLMs. The job does not involve tasks such as developing, training, or deploying language models, nor does it mention any specific AI or machine learning technologies.\n\nTherefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

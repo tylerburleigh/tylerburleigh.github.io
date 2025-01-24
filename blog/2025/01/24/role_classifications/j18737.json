@@ -1,0 +1,23 @@
+{
+  "filename": "j18737",
+  "responsibilities": [
+    "Design and develop intuitive and responsive front-end user interfaces into data products for the Generative AI program",
+    "Write clean, maintainable code that generates data science-ready outputs",
+    "Collaborate closely with data scientists and back-end engineers to integrate front-end components seamlessly",
+    "Employ strong testing techniques and employ code management techniques for version control, collaboration, and continuous integration",
+    "Deploy and manage applications on cloud platforms like AWS, optimizing for performance, scalability, and security"
+  ],
+  "skills": [
+    "Expertise in modern front end development using JavaScript, React, or Angular",
+    "Experience with cloud platforms, especially AWS or Azure, for deploying and managing applications",
+    "Experience with code management and version control tools like Bitbucket",
+    "Experience in SQL, Python, JSON and related tools",
+    "Understanding of LLM and related AI/ML architectures",
+    "Deep understanding of data privacy standards and ethics",
+    "Experience with and understanding of data science concepts",
+    "Demonstrated ability to organize and incorporate complex systems requirements into product features and prioritize features effectively"
+  ],
+  "analysis": "The job responsibilities and skills focus on front-end development, collaboration with data scientists and back-end engineers, cloud platform deployment, and data science concepts. Let's analyze each option:\n\n1. **AI Research Scientist**: This role focuses on AI methodologies, experiments, and model evaluation, which doesn't align with the front-end development and cloud deployment focus of the job.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which is more backend and model-focused, not front-end development.\n\n3. **MLOps / AI Infrastructure Engineer**: This role is about deploying and monitoring AI systems, focusing on infrastructure and DevOps, not front-end development.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating on high-level architectures, which is more strategic and less about front-end development.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and insights, which doesn't match the front-end development and cloud deployment focus.\n\n6. **Data Engineer**: This role is about data pipelines and architecture, which is backend-focused and not aligned with front-end development.\n\n7. **Product Manager**: This role involves product vision and strategy, which is not directly related to front-end development or cloud deployment.\n\n8. **Software Engineer**: This role involves designing, developing, and maintaining software applications, which aligns with the job's focus on front-end development, writing clean code, and collaborating with cross-functional teams. The skills in JavaScript, React, or Angular, and cloud platforms like AWS, are also relevant.\n\nThe job is most similar to the \"Software Engineer\" option, as it involves front-end development, writing clean code, and cloud deployment, which are key aspects of the job description.",
+  "role_classification": 8,
+  "role_title": "Software Engineer"
+}

@@ -1,0 +1,19 @@
+{
+  "filename": "j28089",
+  "responsibilities": [
+    "Develop and maintain scalable, secure, and high-performance data architectures to support business needs.",
+    "Design, implement, and optimize complex data pipelines for real-time and batch processing using technologies such as Spark, Kafka, and cloud-based ETL tools.",
+    "Implement a robust data quality framework to ensure the highest quality of data on the platform.",
+    "Automate manual processes, monitor data systems, and resolve data quality issues.",
+    "Collaborate with data analysts and scientists to support data initiatives and ensure consistent, optimal data delivery architecture for ongoing projects."
+  ],
+  "qualifications": [
+    "Proven expertise in Spark and Databricks technologies.",
+    "Experience with machine learning workflows and LLMs.",
+    "Strong stakeholder management and communication skills.",
+    "Strong problem-solving skills and ability to work independently in a fast-paced environment.",
+    "Knowledge of data governance, security, and compliance best practices."
+  ],
+  "analysis": "The job responsibilities focus on developing and maintaining data architectures, designing and optimizing data pipelines, implementing data quality frameworks, automating processes, and collaborating with data analysts and scientists. These responsibilities do not explicitly mention working with Generative AI or language models.\n\nHowever, when examining the skills section, there is a specific mention of \"Experience with machine learning workflows and LLMs.\" LLMs, or Large Language Models, are a type of language model, which indicates that the job does involve working with language models. While there is no explicit mention of Generative AI, the inclusion of LLMs suggests that the job may involve tasks related to language models, which can include generative tasks.\n\nOverall, the presence of LLMs in the skills section is a clear indicator that the job involves working with language models.",
+  "is_genai_role": true
+}

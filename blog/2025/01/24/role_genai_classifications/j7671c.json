@@ -1,0 +1,24 @@
+{
+  "filename": "j7671c",
+  "responsibilities": [
+    "Design, build, and maintain large-scale data warehouses using Snowflake.",
+    "Perform data transformation, testing, and deployment using DBT.",
+    "Conduct ETL transformations using Snowpark.",
+    "Process, transform, and load data using Python.",
+    "Collaborate with cross-functional teams to troubleshoot complex data issues."
+  ],
+  "qualifications": [
+    "Strong understanding of Snowflake architecture, data modeling, and data warehousing concepts.",
+    "Proficiency in SQL, including Snowflake's SQL dialect.",
+    "Experience with DBT for data transformation, testing, and deployment.",
+    "Understanding and experience with Snowpark for ETL transformations.",
+    "Strong programming skills in Python for data processing, transformation, and loading tasks.",
+    "Experience with data visualization tools such as Tableau, Power BI, or D3.js.",
+    "Strong analytical and problem-solving skills.",
+    "Excellent communication and collaboration skills.",
+    "Experience with Agile development methodologies.",
+    "Experience with version control systems, such as Git."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data warehousing, data transformation, and data processing using tools like Snowflake, DBT, and Snowpark. The skills required include proficiency in SQL, Python programming, and experience with data visualization tools. There is no mention of Generative AI, language models, or any specific tasks related to developing, deploying, or working with GenAI or LLMs. The focus is on data engineering and analytics rather than AI or machine learning technologies.",
+  "is_genai_role": false
+}

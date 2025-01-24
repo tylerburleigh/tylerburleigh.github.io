@@ -1,0 +1,35 @@
+{
+  "responsibilities": [
+    "Contribute to designing and maintaining AI pipelines for labeling, embeddings, training, and deploying models into production.",
+    "Collaborate with the Compute Platform team to ensure seamless integration with orchestration tools and infrastructure.",
+    "Define and develop AI Platform APIs for other applications to use them.",
+    "Build and deploy LLM-based systems for production workflows, focusing on efficiency, scalability, and reproducibility.",
+    "Implement training pipelines for LLMs, including fine-tuning, pruning, distillation, and foundational model training.",
+    "Integrate APIs from providers such as OpenAI, Anthropic, and Gemini into SnorkelFlow’s pipelines.",
+    "Develop and integrate backend services to manage LLM calls and API interactions.",
+    "Work with the Data Platform team to define data requirements and ensure smooth interoperability.",
+    "Partner with the Application team to design and implement APIs that power workflows.",
+    "Implement tools and dashboards to monitor and track AI pipeline performance.",
+    "Define metrics to ensure system health and support optimization efforts.",
+    "Innovate on advanced training methodologies for LLMs and NLP systems, including state-of-the-art optimization techniques.",
+    "Take ownership of end-to-end model lifecycle management, from training to production deployment."
+  ],
+  "skills": [
+    "Strong coding skills in Python.",
+    "Familiarity with deep learning frameworks like PyTorch or TensorFlow.",
+    "Expertise in NLP and libraries such as Hugging Face Transformers, spaCy, or XGBoost.",
+    "Knowledge of foundational model APIs such as OpenAI, Anthropic, or Gemini.",
+    "Familiarity with MLOps tools and practices like MLflow, Kubernetes, or Ray.",
+    "Experience building APIs or SDKs for AI services.",
+    "Solid understanding of LLM architectures, fine-tuning, and deployment.",
+    "Solid understanding of agentic workflows and tooling (Langchain, Crew.ai etc).",
+    "Experience building scalable CI/CD pipelines for machine learning workflows."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in Computer Science, Machine Learning, or a related field.",
+    "1-2 years of experience in AI development or backend engineering for entry-level engineers.",
+    "4-6 years of experience in AI and/or backend development, including hands-on work with AI pipelines in production systems for senior engineers.",
+    "Proven ability to lead projects and mentor team members for senior engineers.",
+    "Passion for AI development and willingness to learn advanced techniques."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "filename": "j985cf",
+  "responsibilities": [
+    "Design, implement, and optimize AI tooling and systems to improve the quality and relevance of generated content.",
+    "Develop retrieval mechanisms to efficiently access and leverage external data sources.",
+    "Train and fine-tune generative models with retrieved data to enhance performance and accuracy.",
+    "Evaluate model performance and iterate on improvements based on metrics and user feedback.",
+    "Work closely with data scientists, product managers, and other stakeholders to understand requirements and deliver effective solutions.",
+    "Participate in code reviews and collaborate on best practices within the engineering team.",
+    "Stay up-to-date with the latest advancements in AI, natural language processing (NLP), RAG methodologies, and other related technologies.",
+    "Participate in upstream generative AI model projects such as lm-eval, ragas.io, LlamaIndex, LangChain, Hugging Face Transformers, vllm, pytorch, etc.",
+    "Document system designs, processes, and model performance for transparency and future reference.",
+    "Report on project status, challenges, and results to stakeholders.",
+    "Serve as a subject matter expert for your assigned component, providing mentorship and expertise to build knowledge and capabilities within Red Hat teams.",
+    "Gather and analyze user feedback to refine and enhance AI tooling."
+  ],
+  "skills": [
+    "Advanced programming skills in Python and SQL.",
+    "Experience in or familiarity with machine learning frameworks (e.g., TensorFlow, PyTorch).",
+    "Understanding of natural language processing (NLP) techniques and models.",
+    "Familiarity with retrieval-augmented generation architectures and methodologies.",
+    "Experience with data processing and manipulation libraries.",
+    "Knowledge of microservices and containerization technologies (e.g., Kubernetes) for LLM deployment.",
+    "Strong self-motivation and organizational skills.",
+    "Demonstrated ability to context switch between multiple concurrent projects.",
+    "Outstanding mentorship and coaching skills.",
+    "Excellent written and verbal communication skills.",
+    "Positive attitude and willingness to share ideas openly."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an \"AI/ML Engineer\" (Option 2). Here's the breakdown:\n\n1. **Responsibilities**:\n   - The job involves designing, implementing, and optimizing AI systems, which aligns with the AI/ML Engineer's focus on transforming research output into robust, scalable AI solutions.\n   - Developing retrieval mechanisms and training generative models are tasks that fit well with the AI/ML Engineer's responsibility to productionize AI models and develop data pipelines.\n   - Evaluating model performance and iterating on improvements is similar to the AI/ML Engineer's role in ensuring models meet performance and reliability requirements.\n   - Collaboration with data scientists and other stakeholders is a key responsibility in both the job description and the AI/ML Engineer role.\n   - Staying up-to-date with AI advancements and participating in upstream projects aligns with the AI/ML Engineer's need to collaborate with Research Scientists and optimize model implementations.\n\n2. **Skills**:\n   - Advanced programming skills in Python and SQL are relevant to the AI/ML Engineer's proficiency in Python and similar languages.\n   - Experience with machine learning frameworks like TensorFlow and PyTorch is directly applicable to the AI/ML Engineer role.\n   - Understanding of NLP techniques and familiarity with retrieval-augmented generation architectures are important for both the job and the AI/ML Engineer role.\n   - Knowledge of microservices and containerization technologies (e.g., Kubernetes) is relevant to the AI/ML Engineer's need to work with software engineering best practices and possibly containerization for deployment.\n\nWhile there are elements of the job that could relate to other roles, such as the MLOps / AI Infrastructure Engineer (Option 3) due to the mention of Kubernetes, the primary focus on developing and optimizing AI models and systems aligns more closely with the AI/ML Engineer role. The job does not focus as much on infrastructure management or data engineering, which are key aspects of the MLOps and Data Engineer roles, respectively.\n\nTherefore, the job is a good fit with the AI/ML Engineer role (Option 2).",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

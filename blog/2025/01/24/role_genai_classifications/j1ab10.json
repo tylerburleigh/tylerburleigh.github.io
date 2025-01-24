@@ -1,0 +1,22 @@
+{
+  "filename": "j1ab10",
+  "responsibilities": [
+    "Operate as part of a cross-functional product development team that includes Architecture, Infrastructure, and Product Management.",
+    "Lead the data pipeline, modeling, and populating data schemas within Self Financial's Data Environment for use in business intelligence and data analysis activities.",
+    "Collaborate closely with Product Management to translate Self Financial's strategic vision into actionable projects.",
+    "Conduct architecture design, project analysis, work breakdown, and planning.",
+    "Create Physical and Logical Data Models with large, complex data sets.",
+    "Manage data pipeline, ETL/ELT processes using SQL and Python.",
+    "Maintain data lifecycle and quality standards."
+  ],
+  "skills": [
+    "Proficient in managing Data ETL/ELT with large data sets.",
+    "Experience with columnar data structures such as Amazon RedShift.",
+    "Familiarity with AWS data warehousing tools.",
+    "Experience with common software engineering tools such as Git, JIRA, Confluence, and similar platforms.",
+    "Familiarity with Apache Airflow and Python.",
+    "Excellent listening, interpersonal, written, and oral communication skills."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data management, data modeling, and data pipeline processes. The responsibilities include leading data pipelines, creating data models, and managing ETL/ELT processes, which are typical tasks in data engineering and business intelligence roles. The skills required include proficiency in SQL, Python, and familiarity with AWS data warehousing tools, which are standard for handling large data sets and data infrastructure.\n\nThere is no mention of Generative AI, language models, or any specific tasks related to developing, deploying, or working with AI models. The focus is on data architecture, data lifecycle management, and business intelligence, which do not inherently involve GenAI or LLMs.",
+  "is_genai_role": false
+}

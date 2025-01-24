@@ -1,0 +1,34 @@
+{
+  "responsibilities": [
+    "Improve how Scale engineers develop, share, review, and merge code through best practices, automated testing, infrastructure, and processes.",
+    "Develop tooling to make it easier and safer for Scale developers to build and evolve schemas, regardless of the use case, language, or repository they work in.",
+    "Develop better tooling and metrics so that we, and our users, understand the health of our systems.",
+    "Work with developers to resolve their day-to-day issues doing development and build scalable solutions to fix or mitigate them.",
+    "Work with a team of technically sophisticated engineers who make developer experience their first priority.",
+    "Solve problems for fellow Scale engineers by understanding their needs and coming up with both tactical and strategic solutions.",
+    "Utilize qualitative and quantitative metrics to prioritize tasks and evaluate outcomes.",
+    "Provide practical, dependable self-service tools and procedures to Scale's engineering team.",
+    "Develop and maintain infrastructure for artifact publishing, codegen, and import of schemas across all Scale repositories.",
+    "Balance and prioritize conflicting objectives while working with stakeholders throughout Scale."
+  ],
+  "skills": [
+    "Strong proficiency in programming languages such as Python, Java, or Go.",
+    "Experience with cloud platforms such as AWS, GCP, or Azure.",
+    "Familiarity with containerization technologies such as Docker and Kubernetes.",
+    "Understanding of infrastructure-as-code tools such as Terraform, CloudFormation, and Ansible.",
+    "Knowledge of build systems such as Bazel, Gradle, Maven, or Make.",
+    "Experience with version control systems such as Git.",
+    "Familiarity with continuous integration and deployment tools such as Jenkins, CircleCI, or Github Actions.",
+    "Proficiency in database technologies such as MySQL, Postgres, or MongoDB.",
+    "Familiarity with monitoring and logging tools such as Prometheus, Grafana, or ELK stack.",
+    "Experience with Agile methodologies and project management tools such as JIRA or Asana."
+  ],
+  "qualifications": [
+    "Experience in designing and developing automation frameworks and efficient workflows for developers.",
+    "Ability to build and maintain automated frameworks, feature testing, code promotion, code review, and documentation.",
+    "Experience working with technically sophisticated engineering teams.",
+    "Ability to solve problems and provide strategic solutions for developer needs.",
+    "Experience in developing and maintaining infrastructure for artifact publishing, codegen, and schema import.",
+    "Ability to balance and prioritize conflicting objectives while working with stakeholders."
+  ]
+}

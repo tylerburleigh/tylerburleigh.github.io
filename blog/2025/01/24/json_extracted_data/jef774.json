@@ -1,0 +1,34 @@
+{
+  "responsibilities": [
+    "Work with stakeholders to gather solution requirements and capture a definition of what a successful solution looks like",
+    "Develop code solutions to meet the stakeholders' requirements using Visual Studio or Visual Studio Code, the Python language, and Python notebooks",
+    "Design the user interfaces for the AI solutions, which will pass prompt values to the trained model for uploading attachments and adding audio/speech capabilities",
+    "Fine-tune models to meet specific business needs",
+    "Develop multi-modal AI solutions involving text prompts, voice, imagery, and data",
+    "Train Machine Learning custom classification models, enabling the organization to analyze narrative comments and classify the outcomes according to a custom rubric",
+    "Publish user-facing web interfaces to the IaaS to facilitate interaction with the trained models",
+    "Communicate all issues and concerns that arise during course delivery to the CATHEXIS CTO",
+    "Other duties as required to ensure successful build and deployment of the target models"
+  ],
+  "skills": [
+    "One or more years of experience in applying AI to practical and comprehensive technology solutions",
+    "A solid understanding of the principles and concepts of AI/ML, such as supervised and unsupervised learning, deep learning, natural language processing, computer vision, etc.",
+    "Experience with ML, deep learning, TensorFlow, Python, NLP or other related tools",
+    "Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns",
+    "Experience in REST API development, NoSQL database design, and RDBMS design and optimizations",
+    "Strong analytical and problem-solving skills with a keen attention to detail",
+    "Ability to solve coding problems independently",
+    "Experience building AI solutions involving images",
+    "Experience building ML models using sentiment analysis using tools like Azure Synapse, SnowFlake, or DataBricks",
+    "Familiar with code management tools like GitHub and GitLab"
+  ],
+  "qualifications": [
+    "Bachelor's degree in computer science or a related field",
+    "5 years of experience in software development, specifically developing applications hosted in serverless environments",
+    "AWS/Azure platform expertise, with AWS Bedrock expertise as a plus",
+    "Experience in agile software development",
+    "Knowledge of software security, including the ability to integrate Microsoft Entra ID authentication into published web apps",
+    "Experience creating custom classification machine learning models",
+    "Experience developing user interfaces and deploying web apps that are integrated with Entra ID for authentication"
+  ]
+}

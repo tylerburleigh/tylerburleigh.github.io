@@ -1,0 +1,752 @@
+[
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on developing and integrating AI solutions, building machine learning frameworks, and working with data scientists. While these tasks involve machine learning, there is no specific mention of fine-tuning or customizing language models, particularly large language models like GPT. The responsibilities seem more aligned with general AI and machine learning development rather than specific language model customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention prompt engineering or refining prompts for large language models. The focus is on developing scalable machine learning frameworks and integrating AI solutions, which may involve some level of prompt engineering, but it is not explicitly stated. Therefore, this activity does not appear directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include developing scalable pipelines and services for building production-ready machine-learning models, which implies a need for evaluating model performance. However, there is no specific mention of evaluating large language models or using specific metrics like perplexity or BLEU. The focus seems to be on general machine learning model development rather than specific evaluation of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include developing and integrating AI solutions with existing software teams and building production-ready machine-learning models. This suggests a need for integrating AI outputs into end-user experiences or pipelines, which aligns with the activity of integrating LLM outputs into applications. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities focus on developing machine learning frameworks and maintaining streamlined code and automation. While these tasks may involve some level of debugging, there is no specific mention of model interpretability or debugging large language models. The responsibilities are more aligned with general machine learning development rather than specific interpretability and debugging of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include developing scalable machine learning frameworks and pipelines, which aligns with designing end-to-end workflows for AI-driven pipelines. The focus on integrating generative AI solutions and building production-ready models suggests a need for a comprehensive architecture blueprint that ensures seamless integration of components like data storage and model hosting.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or resource planning. However, developing scalable pipelines and frameworks may implicitly require understanding compute requirements. Despite this indirect connection, the responsibilities focus more on development and integration rather than resource planning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities emphasize developing scalable and streamlined ML pipeline components, which could involve performance optimization. However, there is no direct mention of latency control or advanced caching mechanisms. The responsibilities focus more on development and integration rather than specific performance optimization techniques.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities include maintaining a culture of CI/CD automation, which aligns with aspects of model lifecycle management such as continuous retraining and versioning. This suggests a relevance to ensuring smooth rollbacks and adapting to evolving data, which are key components of model lifecycle management.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities involve integrating generative AI solutions with existing software teams and products, which directly relates to system interoperability and integration. Establishing APIs and aligning AI services with enterprise systems is crucial for the integration tasks mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research or evaluating AI quality. The focus is more on development, integration, and maintaining streamlined code rather than research and evaluation of AI systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on developing and integrating AI solutions and frameworks, which could involve developing AI systems and algorithms. However, there is no specific mention of automated insights or analyzing user behavior, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation or related tasks. The focus is on developing and integrating AI solutions and maintaining CI/CD automation, which does not directly involve creating synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities do not explicitly mention identifying performance metrics or success criteria. The focus is on development and integration rather than defining or tracking specific performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not mention creating labeled datasets or tasks related to data annotation. The focus is on developing scalable frameworks and integrating AI solutions, which does not directly involve dataset creation for evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not mention designing or running experiments such as A/B tests. The focus is on development, integration, and maintaining CI/CD automation, which does not directly involve experimental design or analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not mention sampling data for evaluation. The focus is on developing and integrating AI solutions and maintaining streamlined code, which does not directly involve data sampling tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing and integrating AI solutions, building machine learning frameworks, and working with data scientists to pilot products. There is no mention of designing labeling tasks or creating annotation guidelines, which are specific to data annotation processes. The responsibilities are more aligned with the development and deployment of machine learning models rather than the data preparation phase.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, nor do they involve overseeing annotation teams. The focus is on developing scalable machine learning solutions and integrating them with existing products. Collecting human annotation data is a separate task that is not directly related to the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include developing machine learning frameworks and working with data scientists, which may involve some level of data analysis. However, the specific task of analyzing human annotation data is not mentioned. The responsibilities are more focused on the development and deployment of machine learning models rather than the analysis of annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on developing scalable machine learning frameworks, integrating AI solutions, and building production-ready models. While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or statistical model validation. The emphasis is more on integration, scalability, and production-readiness rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on developing machine learning frameworks, pipelines, and integrating AI solutions. There is no indication that presenting findings or conducting exploratory analysis is a part of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not specifically mention data mining or analysis of conversational datasets. The focus is on developing machine learning frameworks and integrating AI solutions. While data mining could be a part of building models, it is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include developing scalable pipelines, tools, and services for building production-ready machine-learning models. This aligns with the activity of developing data models and pipelines for analytics, as both involve creating scalable data processing workflows and pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics or success criteria. The focus is on developing machine learning frameworks, integrating AI solutions, and maintaining CI/CD automation. While metrics are important for assessing model health, they are not highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention maintaining a culture of full CI/CD automation and developing scalable pipelines, tools, and services for building production-ready machine-learning models. This aligns with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The emphasis on performance, scalability, and reliability of AI systems in production is also relevant to the responsibilities of developing scalable machine learning frameworks and integrating AI solutions with existing software teams.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring or observability. However, the focus on developing production-ready machine-learning models and working with data scientists to pilot products with beta customers implies a need for monitoring model performance and reliability. While not directly stated, the relevance is inferred from the context of ensuring the models function correctly in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or versioning of datasets and model artifacts. However, the emphasis on developing scalable pipelines and maintaining a culture of streamlined code suggests an underlying need for reproducibility and traceability, which are key aspects of data and model versioning. This Activity is somewhat relevant but not directly addressed in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities emphasize developing well-tested ML pipeline components and maintaining a culture of simple, streamlined code. This aligns with the Activity's focus on automating validation steps and introducing guardrails to verify stability before rolling out changes. The emphasis on testing and validation is relevant to ensuring the quality and reliability of machine learning models in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities include developing scalable machine learning frameworks and scalable pipelines, which directly relate to optimizing and scaling model-serving infrastructure. The focus on scalability in both the responsibilities and the Activity indicates a strong relevance, as both aim to handle increased demand and ensure consistent performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not explicitly mention governance, compliance, or security. The focus is more on development, integration, and scalability rather than regulatory compliance or security measures. As such, this Activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include developing scalable machine learning frameworks and working with data scientists to pilot products, which implies a need for continuous improvement and adaptation of models. While not explicitly stated, the context suggests an ongoing process of model evaluation and iteration, making this Activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on developing AI solutions, machine learning frameworks, and scalable pipelines, with an emphasis on collaboration with data scientists and maintaining streamlined code. There is no mention of gathering user insights or conducting interviews and surveys, which are central to this activity. The responsibilities are more technical and product development-oriented rather than user research-focused.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities do not mention usability testing or prototyping. The focus is on developing AI and machine learning solutions, integrating them with existing products, and working with data scientists. Usability testing and prototyping are more aligned with user experience design, which is not highlighted in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities are centered around technical development and integration of AI and machine learning solutions. There is no indication of creating user personas or mapping user journeys, which are activities related to understanding user experience and behavior. The job is more focused on the technical aspects of product development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The job responsibilities emphasize technical development, integration, and collaboration with data scientists, without any mention of qualitative data analysis related to user research. The focus is on building and maintaining machine learning models and pipelines, which are more technical tasks rather than user experience research activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include developing scalable machine learning frameworks and integrating AI solutions, which require a solid understanding of software architecture to ensure scalability, maintainability, and integration with existing systems. This aligns with the activity of designing and implementing software architecture.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention developing scalable pipelines, tools, and services for production-ready machine-learning models, which involves writing clean, modular, and efficient code. This is directly related to developing production-grade applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities explicitly mention maintaining a culture of full CI/CD automation, which directly relates to automating build, test, and deployment processes as described in this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. While these are important for maintaining production systems, they are not directly referenced in the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities include integrating AI solutions with existing software teams and products, which may involve API development and system integration. However, there is no explicit mention of API development in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities emphasize developing well-tested ML pipeline components, which aligns with the activity of developing automated test suites and maintaining test coverage to ensure quality assurance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibilities do not explicitly mention DevOps practices or infrastructure as code. While these could be relevant to the overall development process, they are not directly referenced in the job responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities focus on developing and integrating AI solutions, building scalable machine learning frameworks, and working with data scientists to pilot products. While these tasks involve AI development and integration, they do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or fairness. The responsibilities are more aligned with development and deployment rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include developing scalable machine learning frameworks and integrating AI solutions, which align with building and refining AI methods and models. The focus on developing production-ready machine-learning models suggests relevance to developing AI systems and algorithms for automated insights, as both involve creating and refining AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or the development of methods for producing synthetic datasets. The focus is on developing AI solutions and scalable frameworks, which do not directly relate to generating synthetic data for testing or improving AI models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention identifying performance metrics or success criteria. While maintaining a culture of streamlined code and CI/CD automation may involve some performance tracking, the responsibilities are more focused on development and integration rather than defining and tracking performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets or preparing data annotations. The focus is on developing AI solutions and frameworks, which implies using existing data rather than creating new labeled datasets for evaluation and optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include working with data scientists to pilot products with beta customers, which may involve designing and running experiments to test new features or models. This suggests some relevance to designing, running, and analyzing experiments, as piloting products often requires experimental validation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jeee1d",
+    "responsibilities": [
+      "Develop and integrate generative AI solutions with existing software teams building products",
+      "Develop a scalable machine learning framework for data science products",
+      "Develop scalable pipelines, tools, and services for building production-ready machine-learning models",
+      "Work with data scientists to pilot products with beta customers",
+      "Maintain a culture of simple, streamlined code and full CI/CD automation",
+      "Develop simple, streamlined, and well-tested ML pipeline components"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. The focus is on developing AI solutions and frameworks, which implies using data but does not specifically address the process of sampling data for evaluation purposes.",
+    "is_relevant": false
+  }
+]

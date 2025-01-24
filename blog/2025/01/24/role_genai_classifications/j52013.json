@@ -1,0 +1,31 @@
+{
+  "filename": "j52013",
+  "responsibilities": [
+    "Engage with complex business challenges, harnessing modern tools and technologies to securely store, process, transform, and enrich terabyte to petabyte scale healthcare data.",
+    "Design, develop, and maintain optimal data pipelines to assemble large and intricate datasets.",
+    "Collaborate closely with teams to craft tools that provide actionable insights and integrate them with consumer touchpoints.",
+    "Deliver innovative solutions to business problems by collaborating with cross-functional teams in a dynamic and agile environment.",
+    "Solve problems associated with large scale complex, structured and unstructured data."
+  ],
+  "skills": [
+    "SQL and NoSQL",
+    "Python or a comparable scripting language",
+    "Data modeling and technical architectures",
+    "ETL/ELT and building high-volume data pipelines",
+    "Reporting/analytic tools",
+    "Query optimization, data structures, transformation, metadata, dependency, and workload management",
+    "Big data and cloud architecture",
+    "Collaboration and communication skills",
+    "Data visualization and reporting",
+    "Designing and building data engineering solutions in cloud environments",
+    "Git, CI/CD pipeline, and other DevOps principles/best practices",
+    "Bash shell scripts, UNIX utilities & UNIX Commands",
+    "Software development methodologies including waterfall and agile",
+    "Leveraging multiple tools and programming languages to analyze and manipulate data sets",
+    "API development",
+    "Schema design and dimensional data modeling",
+    "Knowledge of microservices and SOA"
+  ],
+  "analysis": "The job responsibilities focus on handling large-scale healthcare data, designing data pipelines, and collaborating with teams to provide insights and solutions. The skills required include SQL, Python, data modeling, ETL/ELT, big data, cloud architecture, and DevOps principles. There is a strong emphasis on data engineering, data processing, and cloud environments. \n\nThere is no mention of Generative AI, language models, or any specific tasks related to natural language processing, text generation, or working with LLMs. The job seems to be centered around data engineering and analytics rather than AI model development or deployment.",
+  "is_genai_role": false
+}

@@ -1,0 +1,35 @@
+{
+  "responsibilities": [
+    "Design, implement, and optimize distributed training frameworks tailored for large language models.",
+    "Develop custom modules, plugins, and features to enhance framework scalability and performance.",
+    "Optimize communication patterns (e.g., gradient synchronization, all-reduce) in distributed training.",
+    "Implement techniques like mixed precision, tensor parallelism, pipeline parallelism, and sharded training.",
+    "Conduct in-depth profiling and debugging of training jobs to identify and resolve bottlenecks.",
+    "Collaborate with hardware teams to optimize performance for GPUs, TPUs, and other accelerators.",
+    "Ensure training systems scale efficiently to thousands of nodes and petabytes of data.",
+    "Develop resilience mechanisms for fault-tolerant and checkpointed training pipelines.",
+    "Work closely with researchers, data engineers, and platform teams to ensure training frameworks meet model and workload requirements.",
+    "Provide guidance and tools to improve the overall efficiency of the LLM development lifecycle."
+  ],
+  "skills": [
+    "Expertise in distributed training frameworks (e.g., PyTorch DDP, DeepSpeed, Megatron-LM, TensorFlow XLA).",
+    "Strong understanding of parallelism techniques (e.g., data, tensor, pipeline, and ZeRO-based parallelism).",
+    "Familiarity with GPU/TPU hardware and deep learning performance optimizations.",
+    "Proficient in Python and C++ or CUDA for high-performance computing.",
+    "Experience with memory optimization techniques (e.g., activation checkpointing, gradient sharding).",
+    "Knowledge of training dynamics for large-scale LLMs, including hyperparameter tuning and optimization.",
+    "Analytical problem-solving skills and a focus on performance improvement.",
+    "Strong collaboration and communication skills across teams."
+  ],
+  "qualifications": [
+    "5+ years of experience in deep learning frameworks, distributed systems, or machine learning infrastructure.",
+    "Proficient in Python and C++ or CUDA for high-performance computing.",
+    "Experience with memory optimization techniques (e.g., activation checkpointing, gradient sharding).",
+    "Knowledge of training dynamics for large-scale LLMs, including hyperparameter tuning and optimization.",
+    "Analytical problem-solving skills and a focus on performance improvement.",
+    "Strong collaboration and communication skills across teams.",
+    "Familiarity with graph optimization and compiler-level performance tuning (Nice-to-Have).",
+    "Contributions to open-source deep learning or distributed training projects (Nice-to-Have).",
+    "Experience with low-level hardware optimizations (e.g., kernel fusion, custom CUDA kernels) (Nice-to-Have)."
+  ]
+}

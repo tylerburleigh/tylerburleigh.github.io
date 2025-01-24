@@ -1,0 +1,29 @@
+{
+  "filename": "j966a5",
+  "responsibilities": [
+    "Design, develop, and maintain robust backend services and APIs using Python frameworks like Django, Flask, or FastAPI.",
+    "Manage schema migrations using Alembic for SQLAlchemy.",
+    "Define and interact with models using SQLAlchemy or similar ORMs.",
+    "Deploy, manage, and scale backend services on GCP, ensuring high availability and performance.",
+    "Work on ETL, reverse ETL, data warehousing, and metadata handling.",
+    "Monitor, analyze, and improve the performance, reliability, and scalability of backend systems.",
+    "Design systems for scale and implement security best practices.",
+    "Collaborate with cross-functional teams to understand requirements and translate them into technical solutions.",
+    "Stay up-to-date with industry trends, emerging technologies, and best practices.",
+    "Own, design, implement, and maintain business impacting features end to end."
+  ],
+  "qualifications": [
+    "Proficiency in Python frameworks such as Django, Flask, or FastAPI.",
+    "Expertise in schema management using Alembic for SQLAlchemy.",
+    "Skilled in using SQLAlchemy or similar ORMs.",
+    "Experience with GCP, Docker, and Kubernetes for deploying and managing backend services.",
+    "Knowledge of ETL, reverse ETL, data warehousing, and metadata handling.",
+    "Ability to monitor and optimize backend system performance.",
+    "Understanding of scalable and secure system design.",
+    "Strong collaboration and communication skills.",
+    "Continuous learning and adaptability to new technologies.",
+    "Ability to write clean, simple, and elegant code."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on backend development using Python frameworks such as Django, Flask, or FastAPI. The tasks include managing schema migrations, deploying and scaling services on GCP, working with ETL processes, and ensuring system performance and security. The skills required emphasize proficiency in Python, experience with cloud services like GCP, and knowledge of data handling and system optimization.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around backend development, data management, and system performance rather than AI or language model development or integration.",
+  "is_genai_role": false
+}

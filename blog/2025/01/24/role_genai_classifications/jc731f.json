@@ -1,0 +1,28 @@
+{
+  "filename": "jc731f",
+  "responsibilities": [
+    "Understand enterprise data and interpret it to derive business value",
+    "Design and engineer data models representing key business entities",
+    "Ensure data quality and integrity across data sources",
+    "Convert complex business and technical rules into logic for data flows and pipelines",
+    "Work with Data Science teams to implement data products for various use cases",
+    "Collaborate with stakeholders and incorporate their requirements into solution design",
+    "Standardize metadata into a common glossary with necessary documentation for data consumers"
+  ],
+  "qualifications": [
+    "Hands-on experience with AWS technologies for data processing and analytics",
+    "Experience with AWS Glue for ETL, Glue Catalog, Glue Data Quality, AWS Step Functions, AWS Lambda, AWS Athena",
+    "Proficiency in AWS CLI, Identity & Access Management (IAM), and BI Tools like Tableau and Quicksight",
+    "Experience in Python, Pyspark, and SQL",
+    "Performance tuning of Spark jobs",
+    "Experience with relational database systems, relational models, dimensional models, and analytical models",
+    "Engineering data products for analytical models",
+    "Building feedback loops between model deployment and its data",
+    "Understanding of Data Management and Data Governance principles",
+    "Data modeling and a passion for analytics",
+    "Knowledge of popular data formats like Parquet, Iceberg",
+    "Excellent verbal and written communication skills"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data modeling, and data processing using AWS technologies. The responsibilities include understanding enterprise data, designing data models, ensuring data quality, and working with data science teams to implement data products. The skills required include experience with AWS services like AWS Glue, AWS Lambda, and AWS Athena, as well as proficiency in Python, Pyspark, and SQL. There is also a focus on data management, data governance, and performance tuning of Spark jobs.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around data engineering and analytics rather than AI model development or deployment, particularly those involving GenAI or LLMs.",
+  "is_genai_role": false
+}

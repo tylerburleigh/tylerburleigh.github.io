@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing high-quality research. Fine-tuning and customization of language models align with these responsibilities as they involve training models for specific tasks, which is a form of advancing technology. However, the responsibilities do not explicitly mention language models or fine-tuning, so the relevance is indirect.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities include performing research to advance intelligent machines and learning the semantics of data. Prompt engineering involves crafting instructions to elicit desired behaviors from language models, which can be seen as part of learning semantics and advancing machine intelligence. However, the responsibilities do not explicitly mention prompt engineering, so the relevance is indirect.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities emphasize producing high-quality research and influencing research communities. Model evaluation and performance assessment are critical components of ensuring the quality and reliability of research outputs. This activity is relevant as it aligns with the responsibility of producing reproducible research and advancing the field through rigorous evaluation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities focus on research and advancing technology, with no explicit mention of integrating outputs into applications. While integration can be a part of applying research findings, the responsibilities do not directly address this aspect. Therefore, this activity is less relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include advancing the science of intelligent machines and producing high-quality research. Model interpretability and debugging are essential for understanding and improving model outputs, which aligns with the goal of advancing technology and ensuring research quality. This activity is relevant as it supports the refinement and understanding of intelligent systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing research publications. This activity involves designing workflows for AI-driven pipelines, which is more aligned with practical implementation and system design rather than research. Therefore, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities emphasize research and advancing AI technology, while this activity is about assessing computational demands and planning resources, which is more related to infrastructure and deployment rather than research. Thus, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities are centered around research and advancing AI technology, whereas this activity focuses on optimizing performance and controlling latency, which is more about system performance and engineering rather than research. Therefore, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities involve research and advancing AI technology, while this activity is about managing the lifecycle and governance of models, which is more related to operational aspects rather than research. Thus, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities focus on research and advancing AI technology, whereas this activity involves integrating AI systems with existing enterprise systems, which is more about system integration and engineering rather than research. Therefore, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "This activity involves investigating system accuracy, robustness, and other performance metrics, which aligns with the job responsibility of performing research to advance AI technology and learning the semantics of data. It is directly relevant to the job responsibilities as it involves research and evaluation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "This activity involves building and refining AI methods, which aligns with the job responsibility of performing research to advance AI technology. It is relevant as it involves developing systems and algorithms, which is a part of research.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "This activity involves developing methods for producing synthetic datasets, which can be relevant to the job responsibility of performing research that enables learning the semantics of data. It is relevant as it involves research and data generation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "This activity involves defining measurable indicators and tracking metrics, which aligns with the job responsibility of performing research to advance AI technology. It is relevant as it involves research and evaluation of performance metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "This activity involves preparing data annotations for robust model training, which aligns with the job responsibility of performing research that enables learning the semantics of data. It is relevant as it involves data preparation and research.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "This activity involves planning and executing experiments, which aligns with the job responsibility of performing research to advance AI technology. It is relevant as it involves designing and analyzing experiments, which is a part of research.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "This activity involves using statistical methods to sample data for evaluation, which aligns with the job responsibility of performing research that enables learning the semantics of data. It is relevant as it involves data sampling and evaluation, which is a part of research.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing research outputs. Designing labeling tasks for data annotation involves creating guidelines and workflows for consistent data labeling, which is a foundational step in preparing datasets for machine learning and AI research. However, the responsibilities do not explicitly mention data annotation or labeling tasks. The focus is more on research and development rather than the preparatory steps of data annotation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize research, learning semantics of data, and producing publications. Collecting human annotation data is a logistical and management task that ensures high-quality data for machine learning models. While high-quality data is crucial for research, the responsibilities do not directly involve managing annotation projects or overseeing teams. The focus is more on the research outcomes rather than the data collection process.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include performing research to advance intelligent machines and learning the semantics of data. Analyzing human annotation data involves using statistical methods to evaluate dataset quality, which can be relevant to understanding and improving the datasets used in research. This activity aligns with the responsibility of performing research that enables learning the semantics of data, as analyzing annotation data can provide insights into the quality and semantics of the data being used.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing research. While statistical methods are fundamental in data science and analytics, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The emphasis is more on research and development rather than applying statistical techniques for data analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include performing research on data semantics and producing publications, which may involve data visualization to communicate findings. However, the responsibilities do not explicitly mention exploratory data analysis or visualization as a primary task. The focus is more on research and open-sourcing code rather than presenting data insights to stakeholders.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities involve performing research on data semantics, which could include analyzing large datasets to uncover patterns and trends. However, the responsibilities do not specifically mention conversational datasets or translating findings into actionable recommendations. The focus is more on advancing research and technology rather than data mining for user experience or product strategy.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities focus on research and technology advancement, which may involve developing data models. However, the responsibilities do not explicitly mention building data pipelines for analytics or systematic performance tracking. The emphasis is more on research goals and open-sourcing code rather than implementing ETL workflows.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include working towards long-term research goals and identifying milestones, which may involve defining metrics and success criteria. However, the responsibilities do not explicitly mention tracking or analyzing metrics. The focus is more on influencing research communities and producing reproducible research rather than defining measurable indicators for model health.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing reproducible research. While these responsibilities are research-oriented, the Activity \"Deployment and MLOps\" is more about the operational aspect of deploying models in production. There is no direct mention of deployment or operational tasks in the Job Responsibilities, suggesting that this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities emphasize research and advancing technology, with no specific mention of monitoring or observability in production environments. This Activity is focused on tracking model performance and detecting data drift, which are operational tasks not covered by the research-oriented responsibilities. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities include producing reproducible research, which aligns with the concept of ensuring reproducibility and traceability in the model lifecycle as described in this Activity. While the focus is on research, the need for reproducibility suggests some relevance to versioning practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention testing or validation of models, focusing instead on research and publication. Continuous testing and validation are more aligned with operational deployment rather than the research focus of the responsibilities. Thus, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities are centered on research and advancing technology, with no mention of infrastructure or scalability concerns. This Activity is focused on optimizing and scaling model-serving infrastructure, which is not directly related to the research-oriented tasks described. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security, focusing instead on research and publication. This Activity is concerned with establishing frameworks for data privacy and security, which are not directly related to the research tasks outlined. Thus, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include advancing technology and producing reproducible research, which could involve aspects of model lifecycle management such as retraining and performance evaluations. While the primary focus is on research, the need for continuous improvement in models suggests some relevance to this Activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on advancing the science and technology of intelligent machines, learning the semantics of data, and producing research publications. User interviews and surveys are typically associated with gathering user insights and preferences, which are more aligned with user experience research rather than the technical and scientific research described in the job responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities emphasize research in intelligent machines and data semantics, as well as producing high-quality code and publications. Usability testing and prototyping are activities focused on improving user experience, which does not directly align with the technical and scientific nature of the job responsibilities. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The job responsibilities are centered around scientific research and technological advancements in intelligent machines and data semantics. Persona development and user journey mapping are activities related to understanding user segments and improving user flows, which do not align with the research-focused responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The job responsibilities involve performing research to advance intelligent machines and learning data semantics, which may involve analyzing data. However, qualitative data analysis in the context of UX research typically involves synthesizing user feedback and identifying themes related to user experience, which is not the focus of the job responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on research in intelligent machines, learning semantics of data, and producing publications and open-source code. Designing and implementing software architecture is more aligned with building software solutions rather than conducting research. While there may be some overlap in skills, the primary focus of the job is research, not software architecture design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities emphasize research and advancing technology, which is different from developing production-grade applications. The latter involves writing code and testing for production environments, which is not explicitly mentioned in the job responsibilities. The focus is more on research and publication rather than application development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not mention the need for continuous integration and delivery processes. The focus is on research, learning semantics, and producing publications, which are not directly related to CI/CD practices. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "Monitoring and incident management are operational activities focused on system health and incident resolution. The job responsibilities are centered around research and advancing technology, which do not involve operational monitoring or incident management. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "API development and system integration involve creating interfaces for software systems, which is not mentioned in the job responsibilities. The responsibilities are focused on research and advancing the science of intelligent machines, which do not directly involve API development. Therefore, this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "Software testing and quality assurance are focused on ensuring code quality and reliability, which are not explicitly mentioned in the job responsibilities. The responsibilities are more research-oriented, focusing on advancing technology and producing publications. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "DevOps and infrastructure as code involve managing cloud resources and promoting collaboration between development and operations. The job responsibilities are centered on research and advancing technology, which do not involve DevOps practices. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include performing research to advance the science and technology of intelligent machines and enabling learning the semantics of data. Conducting research to evaluate AI quality aligns with these responsibilities as it involves investigating system accuracy, robustness, and other performance metrics, which are crucial for advancing AI technology.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on research and producing publications, rather than directly developing AI systems for automated insights. While there is an overlap in the broader field of AI, the specific task of developing systems for insights is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. However, generating synthetic datasets can be a part of research to advance AI technology and enable learning from data. This activity could indirectly support the research goals mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "Identifying performance metrics and success criteria is relevant to the job responsibilities as it involves defining measurable indicators that align with project goals. This is crucial for assessing the progress of research and ensuring that milestones are met, which is part of the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not specifically mention creating labeled datasets. However, having high-quality labeled data is essential for performing research that enables learning the semantics of data, which is part of the responsibilities. Thus, this activity is indirectly relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "Designing, running, and analyzing experiments is relevant to the job responsibilities as it involves planning and executing controlled experiments to compare model variants or new features. This aligns with the responsibility of performing research and identifying immediate milestones.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j25806",
+    "responsibilities": [
+      "Perform research to advance the science and technology of intelligent machines.",
+      "Perform research that enables learning the semantics of data (images, video, text, audio, and other modalities).",
+      "Work towards long-term research goals, while identifying immediate milestones.",
+      "Influence progress of relevant research communities by producing publications.",
+      "Open source high quality code and produce reproducible research."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "Sampling data for evaluation is a fundamental part of conducting research and ensuring that experiments are based on representative datasets. This activity supports the research goals mentioned in the job responsibilities, making it relevant.",
+    "is_relevant": true
+  }
+]

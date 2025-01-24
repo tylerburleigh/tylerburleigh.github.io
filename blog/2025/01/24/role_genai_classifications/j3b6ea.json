@@ -1,0 +1,36 @@
+{
+  "filename": "j3b6ea",
+  "responsibilities": [
+    "Identify, recruit and hire a team of scientists in Physics Informed AI with a focus on design",
+    "Work closely with a multi-disciplinary team of research scientists and engineers to conceive, plan, develop, and implement scientific research projects",
+    "Direct & perform research on machine learning models combining physics simulation and measurement data",
+    "Manage a team, perform bi-annual evaluations, plan development, coach, mentor and connect your personnel to academic communities and throughout the company",
+    "Publish papers in peer-reviewed scientific journals/conferences",
+    "Supervise researchers, engineers and interns (undergrad, Masters, PhD or Post-docs)",
+    "Document and communicate the intent and the results of projects in clear terms to both technical and non-technical team audiences",
+    "Present research findings at conferences and participate in research collaborations with external research institutes and universities",
+    "Communicate and promote the use of research findings throughout Autodesk",
+    "Consult with product teams on the implementation of research findings into products"
+  ],
+  "qualifications": [
+    "Excellent written and oral communication skills",
+    "Excellent knowledge of Numerical Methods",
+    "Ability to quickly learn new technologies and adapt to new situations",
+    "Ability to collaborate effectively with a diverse, multicultural global team of scientists, engineers and architects",
+    "Knowledge of geometry and topology",
+    "Experience training large-scale, multi-modal models and ensembles",
+    "Familiarity with collaborative development environments and version control systems",
+    "Experience with 2D and 3D computer graphics programming",
+    "Visualization techniques",
+    "Bayesian statistics",
+    "Experience with NVIDIA Warp and/or JAX, NVIDIA Modulus or similar",
+    "Proficiency in Pytorch, Pytorch Lightning, Weights & Biases, Ray, AWS Sagemaker",
+    "Experience training diverse architectures: CNNs, GNNs, Diffusion models, Contrastive learning, Transformers, LLMs, RNNs etc. at scale",
+    "Knowledge of Koopman, DMD, SINDy, Fourier Neural Operators, PINNs etc.",
+    "Computer Vision",
+    "Proficiency in Python, C++, Rust",
+    "Experience with OpenMP, Clang, SIMD, etc."
+  ],
+  "analysis": "The job involves a range of responsibilities and skills that are centered around scientific research, machine learning, and AI. The responsibilities include directing research on machine learning models, managing a team of scientists, and consulting with product teams on implementing research findings. The skills required include experience with training large-scale, multi-modal models and ensembles, proficiency in machine learning frameworks like Pytorch, and experience with diverse architectures such as CNNs, GNNs, Diffusion models, Contrastive learning, Transformers, LLMs, and RNNs.\n\nThe mention of \"LLMs\" (Large Language Models) in the skills section directly indicates that the job involves working with language models. Additionally, the experience with Transformers, which are a foundational architecture for many language models, further supports this. While the job also involves other areas of AI and machine learning, the explicit mention of LLMs confirms that working with language models is a part of this job.\n\nThere is no direct mention of Generative AI (GenAI) in the responsibilities or skills, but the inclusion of Diffusion models and Transformers, which are often used in generative tasks, suggests that there might be some involvement with GenAI as well. However, the primary indicator here is the explicit mention of LLMs.",
+  "is_genai_role": true
+}

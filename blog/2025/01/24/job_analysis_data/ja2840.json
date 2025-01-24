@@ -1,0 +1,87 @@
+[
+  {
+    "filename": "ja2840",
+    "responsibilities": [
+      "Lead the design, development, and deployment of scalable machine learning (ML) systems and infrastructure.",
+      "Collaborate closely with data scientists, software engineers, and product teams to translate complex ML models into production-ready solutions.",
+      "Optimize model performance and ensure system reliability.",
+      "Implement efficient data pipelines.",
+      "Drive architectural decisions for high-performance computing and cloud-based ML platforms, ensuring scalability and security.",
+      "Mentor junior engineers and promote best practices in ML operations (MLOps).",
+      "Stay updated on emerging technologies to guide strategic innovation.",
+      "Deliver robust, scalable, and efficient machine learning solutions that support business growth and innovation."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on designing, developing, and deploying scalable machine learning systems, collaborating with data scientists and engineers, optimizing model performance, and ensuring system reliability. While these tasks are related to machine learning, they do not specifically mention fine-tuning or customizing large language models, which is a specialized task within the broader ML domain. The responsibilities do not indicate a focus on domain-specific language model tasks or resource management techniques specific to language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja2840",
+    "responsibilities": [
+      "Lead the design, development, and deployment of scalable machine learning (ML) systems and infrastructure.",
+      "Collaborate closely with data scientists, software engineers, and product teams to translate complex ML models into production-ready solutions.",
+      "Optimize model performance and ensure system reliability.",
+      "Implement efficient data pipelines.",
+      "Drive architectural decisions for high-performance computing and cloud-based ML platforms, ensuring scalability and security.",
+      "Mentor junior engineers and promote best practices in ML operations (MLOps).",
+      "Stay updated on emerging technologies to guide strategic innovation.",
+      "Deliver robust, scalable, and efficient machine learning solutions that support business growth and innovation."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities emphasize the development and deployment of ML systems, collaboration with teams, and optimization of model performance. There is no specific mention of prompt engineering or iterative refinement of language models. The responsibilities are more aligned with general ML system development rather than the specific task of crafting and refining prompts for large language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja2840",
+    "responsibilities": [
+      "Lead the design, development, and deployment of scalable machine learning (ML) systems and infrastructure.",
+      "Collaborate closely with data scientists, software engineers, and product teams to translate complex ML models into production-ready solutions.",
+      "Optimize model performance and ensure system reliability.",
+      "Implement efficient data pipelines.",
+      "Drive architectural decisions for high-performance computing and cloud-based ML platforms, ensuring scalability and security.",
+      "Mentor junior engineers and promote best practices in ML operations (MLOps).",
+      "Stay updated on emerging technologies to guide strategic innovation.",
+      "Deliver robust, scalable, and efficient machine learning solutions that support business growth and innovation."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include optimizing model performance and ensuring system reliability, which are related to evaluating and assessing models. However, the responsibilities do not specifically mention methodologies for evaluating large language models or the use of automated metrics and human-in-the-loop reviews. The focus is more on general ML system performance rather than specific evaluation techniques for language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja2840",
+    "responsibilities": [
+      "Lead the design, development, and deployment of scalable machine learning (ML) systems and infrastructure.",
+      "Collaborate closely with data scientists, software engineers, and product teams to translate complex ML models into production-ready solutions.",
+      "Optimize model performance and ensure system reliability.",
+      "Implement efficient data pipelines.",
+      "Drive architectural decisions for high-performance computing and cloud-based ML platforms, ensuring scalability and security.",
+      "Mentor junior engineers and promote best practices in ML operations (MLOps).",
+      "Stay updated on emerging technologies to guide strategic innovation.",
+      "Deliver robust, scalable, and efficient machine learning solutions that support business growth and innovation."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities involve deploying ML systems and collaborating with product teams, which could imply integration with downstream applications. However, there is no explicit mention of designing workflows that incorporate LLM outputs or handling content moderation and retrieval augmentation. The responsibilities are more focused on the overall deployment and optimization of ML systems rather than specific integration tasks related to language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja2840",
+    "responsibilities": [
+      "Lead the design, development, and deployment of scalable machine learning (ML) systems and infrastructure.",
+      "Collaborate closely with data scientists, software engineers, and product teams to translate complex ML models into production-ready solutions.",
+      "Optimize model performance and ensure system reliability.",
+      "Implement efficient data pipelines.",
+      "Drive architectural decisions for high-performance computing and cloud-based ML platforms, ensuring scalability and security.",
+      "Mentor junior engineers and promote best practices in ML operations (MLOps).",
+      "Stay updated on emerging technologies to guide strategic innovation.",
+      "Deliver robust, scalable, and efficient machine learning solutions that support business growth and innovation."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include optimizing model performance and ensuring system reliability, which could involve some level of model interpretability and debugging. However, there is no specific mention of analyzing model outputs for errors or biases, or using interpretability techniques and debugging tools. The focus is more on general ML system performance and reliability rather than specific interpretability and debugging tasks for language models.",
+    "is_relevant": false
+  }
+]

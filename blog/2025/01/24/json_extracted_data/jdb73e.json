@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Design and implement ELT processes and data models using dbt.",
+    "Design and maintain data orchestration workflows using Dagster or Airflow.",
+    "Build data pipelines to support machine learning use cases, enabling predictive and prescriptive customer-facing inference.",
+    "Build and optimize processes for sourcing, processing, contextualizing, and modeling data.",
+    "Create and maintain near-real-time streaming data pipelines.",
+    "Deliver automated solutions to address complex data processing challenges.",
+    "Enforce data retention policies to balance liability, cost efficiency, and data lifecycle optimization.",
+    "Develop and maintain a comprehensive data catalog, dictionary, and technical documentation derived from data assets and software solutions.",
+    "Collaborate closely with cross-functional teams, including analytics, product, and external customer stakeholders."
+  ],
+  "skills": [
+    "Advanced proficiency in SQL (any dialect).",
+    "Adequate knowledge of at least one programming language, ideally one widely used in the data industry, such as Python, Spark, or Scala.",
+    "Thorough understanding and application of data modeling principles.",
+    "Skilled in designing and building scalable data pipelines.",
+    "Ability to work with complex datasets.",
+    "Interest in empowering both internal teams and external customers through actionable insights."
+  ],
+  "qualifications": [
+    "2+ years of experience in the development of one or more of these technologies: Database solutions, data pipelines, advanced analytics applications.",
+    "2+ years of experience with one or more of these datastores: Snowflake, Redshift, Teradata, Azure Synapse (SQL Data Warehouse), BigQuery, Hadoop, Microsoft SQL Server, PostgreSQL, other leading RDBMS."
+  ]
+}

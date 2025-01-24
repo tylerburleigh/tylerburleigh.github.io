@@ -1,0 +1,27 @@
+{
+  "responsibilities": [
+    "Work with embedded Linux filesystems to ensure smooth system operation.",
+    "Enhance the performance analysis infrastructure and tooling to streamline development processes.",
+    "Develop and maintain robust interfaces with various devices and sensors, including GNSS, IMU (Inertial Measurement Unit), and LTE.",
+    "Optimize Linux kernel drivers, kernel space code, and user space applications for performance and efficiency.",
+    "Develop and maintain low-level drivers and firmware for Microcontroller Units (MCUs).",
+    "Leverage prior experience with STM32 microcontrollers to contribute to ongoing projects."
+  ],
+  "skills": [
+    "Strong programming experience in C.",
+    "Extensive knowledge of Linux at the system level.",
+    "Proficiency in scripting languages like Bash or Python for automation tasks.",
+    "Expertise in ARM64-based platforms and development tools.",
+    "Experience with CUDA/OpenCL programming and video processing pipelines.",
+    "Knowledge of Controller Area Network (CAN) or CAN FD protocols.",
+    "Proven experience in designing, implementing, and verifying over-the-air (OTA) updates.",
+    "Familiarity with board bring-up procedures and hardware debugging techniques."
+  ],
+  "qualifications": [
+    "Bachelor's degree or Master's degree in Computer Science, Electrical Engineering, or a related field.",
+    "Deep understanding of embedded systems programming principles.",
+    "Proven ability to build and debug Linux kernels for embedded systems.",
+    "Solid understanding of CPU and GPU architectures.",
+    "Prior experience working with inter-integrated circuit (I2C), Serial Peripheral Interface (SPI), Peripheral Component Interconnect (PCI), MIPI, Universal Serial Bus (USB), and Serial UART communication protocols."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "filename": "j5f7c5",
+  "responsibilities": [
+    "Own the relationship with one or more business team stakeholders for the data team",
+    "Collaborate with business teams to identify, document and develop analytic solutions",
+    "Collaborate with data analysts, engineers and other stakeholders on data lake models",
+    "Develop and maintain data pipelines collecting data from various source systems",
+    "Develop and maintain data model transformations for use in analytic models",
+    "Ensure data accuracy, quality and consistency with monitoring and validation processes",
+    "Maintain our data catalog, and document data pipelines, transformations and models",
+    "Monitor, and respond to production incidents in the data lake",
+    "Optimize queries, and data engineering activities for performance and cost",
+    "Assist in implementing data governance and security best practices",
+    "Document processes, workflows, and data definitions to support knowledge sharing",
+    "Guide user story breakdown sessions, and contribute to quarterly planning sessions",
+    "Provide mentorship and coaching to junior analytics engineers"
+  ],
+  "qualifications": [
+    "Expert-level proficiency in SQL",
+    "Proficiency building transformations and data models with dbt (cli preferred)",
+    "Strong knowledge of data modeling, schema design, and data governance principles",
+    "Proficiency in programming languages such as Python or Java",
+    "Demonstrated experience optimizing performance and managing complex datasets",
+    "Excellent leadership and communication skills",
+    "Ability to mentor and guide team members",
+    "Willingness to adapt to changes in the job description and accept other duties as assigned"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, analytics, and data governance. The responsibilities include tasks such as developing and maintaining data pipelines, collaborating with business teams to develop analytic solutions, and ensuring data accuracy and quality. The skills required include proficiency in SQL, data modeling, and programming languages like Python or Java. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data management, transformation, and optimization rather than on developing or deploying AI models or working with language models.",
+  "is_genai_role": false
+}

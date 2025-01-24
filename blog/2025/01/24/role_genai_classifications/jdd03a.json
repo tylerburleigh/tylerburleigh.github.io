@@ -1,0 +1,23 @@
+{
+  "filename": "jdd03a",
+  "responsibilities": [
+    "Build machine learning and deep learning models based on financial and other modalities like images and text",
+    "Devise new research methods to solve bleeding edge problems and work on publishable outcomes",
+    "Conduct in-depth analysis of machine learning models and pioneer research methodologies to address cutting-edge challenges",
+    "Collaborate closely with cross-functional teams to integrate machine learning models seamlessly into production systems",
+    "Design and develop robust ML pipelines and systems",
+    "Implement end-to-end solutions, including architecture design, business logic, and deployment",
+    "Drive the adoption of rigorous testing practices, ensuring high-quality, reliable ML model releases",
+    "Stay updated with advancements in machine learning and related technologies to continuously improve solutions"
+  ],
+  "skills": [
+    "Strong knowledge in Computer Vision, Deep Learning, Linear Algebra, Probability, Data Structures, and Algorithms",
+    "Proficiency in numpy, scipy, pandas, torch, scikit-learn, and other Python libraries commonly used in machine learning",
+    "Experience designing and implementing APIs",
+    "Intimate familiarity with Python, PostgreSQL, FLASK, REST, and Linux",
+    "Ability to convert functional logic into code",
+    "Fluency on the Linux command-line, including utilities (grep, find, etc.) and use of git"
+  ],
+  "analysis": "The job responsibilities focus on building machine learning and deep learning models, conducting research, and integrating these models into production systems. While there is a mention of working with text as a modality, there is no explicit mention of working with Generative AI or language models specifically. The skills required include knowledge in computer vision, deep learning, and various machine learning libraries, but again, there is no direct reference to GenAI or LLMs. The focus seems to be more on general machine learning and deep learning applications rather than specifically on language models or generative AI technologies.",
+  "is_genai_role": false
+}

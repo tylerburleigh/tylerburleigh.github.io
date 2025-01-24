@@ -1,0 +1,38 @@
+{
+  "filename": "j108f7",
+  "responsibilities": [
+    "Create infrastructure code and reference architectures for orchestrating environment.",
+    "Support pre-production and production environments, diagnose and troubleshoot problems in code and in the environment, conduct root cause analyses and incident post-mortems.",
+    "Work extensively with customers to successfully implement VPN\u2019s across environments.",
+    "Act as a mentor for other members of the team and developer community.",
+    "Lead the design, deployment, and automation of cloud infrastructure resources on AWS.",
+    "Implement and manage AWS networking, VPCs, subnets, route tables, security groups, and NACLs.",
+    "Design and implement security best practices for AWS S3, including bucket policies and data protection strategies.",
+    "Manage AWS Identity & Access Management (IAM) roles, policies, and permissions for least privilege access in tandem with OKTA.",
+    "Configure and maintain AWS load balancing, AWS Lambda, and related services for high availability and scalability.",
+    "Design and deploy infrastructure-as-code using Terraform for automation and consistency.",
+    "Utilize SNS, SES, SQS for messaging, notifications, and communication services.",
+    "Use Python (especially Boto3 library) for automation and scripting tasks.",
+    "Write Python, BASH, and PowerShell scripts to automate operational processes.",
+    "Create technical diagrams and architecture designs to communicate solutions effectively."
+  ],
+  "skills": [
+    "AWS Cloud, Terraform & Gitlab experience",
+    "Solid skills on AWS \u2013 DevOps/ CICD, SCP, VPN\u2019s, Transit gateway, RBAC",
+    "Experience with IT system integration into customer networks",
+    "Solid Terraform coding skills \u2013 new modules, config mgmt., deployment, workflow & TF state mgmt., manage PAC, Maintain clean, scalable, reusable IaC",
+    "Skills on GitLab CICD - Forks, Branches, Merge & Pull Requests",
+    "OKTA Identity Management and Access Management basics: SSO, RBAC, Active Directory, least privilege principles",
+    "Strong understanding of IT infrastructure",
+    "Understanding of Networking, firewalls, Storage, PKI, LDAP, etc.",
+    "Experience in IDEs - like Visual Studio Code or VSCODE or similar",
+    "Working knowledge of Powershell and Bash shell scripting languages",
+    "Understanding of JSON and YAML file/data formats",
+    "Collaboration & Problem-Solving skills",
+    "Knowledge of Kubernetes, Containers, Palo Alto Firewalls, AWS networking, and/or Prisma Cloud",
+    "Experience implementing secure techniques related to Regulatory Compliance (SOC2, HiTrust, HIPAA)",
+    "Working knowledge of GitLab, Jenkins, Terraform, Ansible, SonarQube, ArgoCD, Artifactory, and/or DataDog"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on cloud infrastructure, automation, and security. The responsibilities include creating infrastructure code, supporting environments, implementing VPNs, designing cloud infrastructure, managing AWS services, and automating processes using scripting languages like Python, BASH, and PowerShell. The skills required include experience with AWS, Terraform, GitLab, OKTA, networking, and various IT infrastructure components. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on cloud infrastructure, automation, and security rather than AI or language model development or deployment.",
+  "is_genai_role": false
+}

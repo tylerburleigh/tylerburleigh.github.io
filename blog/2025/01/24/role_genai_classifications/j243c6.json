@@ -1,0 +1,18 @@
+{
+  "filename": "j243c6",
+  "responsibilities": [
+    "Architect and implement log aggregation pipelines for Anduril infrastructure and applications.",
+    "Contribute to the development and maintenance of a security data lake for centralized security data management.",
+    "Design and implement ETL processes for security data ingestion, transformation, and storage.",
+    "Collaborate with teams to establish best practices for data usage (e.g., search functionality)."
+  ],
+  "qualifications": [
+    "Strong programming skills in one or more general-purpose languages (Python, Go, Rust, etc.).",
+    "Familiarity with one or more infrastructure as code languages (e.g., Terraform, AWS CDK) in a production capacity.",
+    "Ability to develop and maintain systems in cloud environments.",
+    "Familiarity with deploying code through CI/CD pipelines.",
+    "Ability to work autonomously and take ownership of complex projects."
+  ],
+  "analysis": "The job responsibilities focus on architecting and implementing log aggregation pipelines, developing and maintaining a security data lake, designing ETL processes, and collaborating on data usage best practices. These tasks are centered around data management, security, and infrastructure, with no mention of Generative AI or language models. The skills required include programming, familiarity with infrastructure as code, cloud environments, and CI/CD pipelines, which are relevant to software engineering and data infrastructure but do not specifically indicate work with GenAI or LLMs. There is no explicit mention of tasks or skills related to developing, training, or deploying Generative AI models or language models.",
+  "is_genai_role": false
+}

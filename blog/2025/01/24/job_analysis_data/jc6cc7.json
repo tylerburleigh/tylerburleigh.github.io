@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on developing an AI Effect Generation system, enhancing user creation experience, and improving system intelligence. While these tasks involve AI and potentially large language models, there is no explicit mention of fine-tuning or customizing language models for domain-specific tasks. The responsibilities do not indicate a need for parameter-efficient fine-tuning or prompt tuning, which are specific to language model customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "One of the job responsibilities explicitly mentions using \"Prompt Engineering to improve TikTok's AI Effect Generation model output.\" This directly aligns with the activity of crafting and refining prompt instructions to elicit desired behaviors from large language models. The focus on improving model output and user experience through prompt engineering is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include designing and implementing data collection, training, and evaluation pipelines to assess AI Effect Generation system performance. This aligns with the activity of developing and applying methodologies for evaluating the quality, reliability, and fairness of models. Although the responsibilities do not specifically mention large language models, the evaluation aspect is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities focus on developing and enhancing the AI Effect Generation system, but they do not explicitly mention integrating LLM outputs into end-user experiences or handling content moderation and retrieval augmentation. While there may be some overlap in enhancing user experiences, the specific integration tasks described in the activity are not clearly reflected in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include investigating ways to improve system intelligence, which could involve analyzing model outputs to identify errors or potential improvements. However, there is no explicit mention of employing interpretability techniques or debugging tools. While there is some potential overlap, the specific focus on model interpretability and debugging is not clearly indicated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing and implementing data collection, training, and evaluation pipelines, which aligns with the activity of designing end-to-end workflows for AI-driven pipelines. Both involve creating comprehensive systems that integrate various components to deliver high-quality results.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this activity. The responsibilities are more focused on developing and improving AI systems and features rather than infrastructure planning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include investigating ways to improve system intelligence and using techniques to improve model output, which could involve performance optimization. However, there is no direct mention of latency control or specific optimization strategies like caching or load balancing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities involve designing and implementing data collection, training, and evaluation pipelines, which could relate to model lifecycle management. However, there is no explicit mention of continuous retraining, versioning, or governance, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities focus on developing AI systems and improving model outputs, with no mention of aligning AI services with existing enterprise systems or establishing APIs for integration. This activity is more about system integration than the responsibilities described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include investigating ways to improve system intelligence and designing evaluation pipelines, which align with conducting research to evaluate AI quality. Both involve assessing and improving AI system performance through research and experimentation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve researching and developing AI systems for effect generation, which aligns with developing AI systems and algorithms for automated insights. Both focus on building and refining AI methods to enhance system capabilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. They focus on developing AI systems and improving model outputs, but there is no indication of creating synthetic datasets for testing or improvement.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include designing evaluation pipelines to assess system performance, which involves identifying performance metrics and success criteria. This activity is relevant as it aligns with tracking and analyzing metrics to guide decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities mention designing data collection and evaluation pipelines, which could involve creating labeled datasets. However, there is no explicit mention of preparing data annotations, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include designing and implementing evaluation pipelines, which could involve running experiments to assess system performance. However, there is no specific mention of A/B tests or similar experimental methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve designing evaluation pipelines, which could include sampling data for evaluation. However, there is no explicit mention of statistical sampling methods, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing and enhancing AI systems for AR Effect Generation, which involves designing and implementing features, data collection, training, and evaluation pipelines. While these tasks may indirectly involve data annotation, the responsibilities do not explicitly mention designing labeling tasks or creating annotation guidelines. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include designing and implementing data collection pipelines, which could involve collecting human annotation data as part of the process. However, the responsibilities do not specifically mention managing logistics or overseeing annotation projects. Thus, while there may be some overlap, the activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve evaluating AI Effect Generation system performance, which could include analyzing data to assess system outputs. However, the responsibilities do not specifically mention analyzing human annotation data or using statistical methods for this purpose. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on developing AI systems, implementing new features, and improving system intelligence. While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus seems more on AI system development and performance enhancement rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on developing AI systems and improving their performance. While data visualization can be a part of understanding system performance, it is not explicitly mentioned as a responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include designing and implementing data collection, training, and evaluation pipelines, which could involve data mining and analysis. However, the responsibilities do not specifically mention analyzing conversational datasets or uncovering trends and patterns from user interactions. The focus is more on AI system development and performance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include designing and implementing data collection, training, and evaluation pipelines, which aligns with developing data models and pipelines for analytics. This activity is relevant as it involves implementing scalable data processing workflows, which is part of the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities involve assessing AI Effect Generation system performance and investigating ways to improve system intelligence. Defining metrics and success criteria is relevant as it helps in tracking and analyzing system performance, which aligns with the responsibilities of evaluating and improving the AI system.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on developing and enhancing AI systems for AR Effect Generation, which involves designing and implementing new features, data collection, training, and evaluation pipelines. While these tasks are related to AI development, they do not explicitly mention deployment or MLOps practices such as CI/CD pipelines, containerization, or orchestration. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring or observability of AI systems in production. The focus is more on research, development, and improving system intelligence. Although monitoring could be a part of the broader system performance assessment, it is not directly highlighted in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities include designing and implementing data collection, training, and evaluation pipelines, which could imply the need for data and model versioning to ensure reproducibility and traceability. However, versioning is not explicitly mentioned, and the primary focus is on system performance and feature enhancement rather than version control.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities involve designing and implementing pipelines to assess AI Effect Generation system performance, which could include testing and validation processes. However, continuous testing and validation, as described in the Activity, are not explicitly mentioned in the responsibilities. The focus is more on feature development and system intelligence improvement.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not mention infrastructure optimization or scalability concerns. The focus is on developing AI systems and enhancing user experience through new features and improved intelligence. Infrastructure and scalability are not directly relevant to the tasks described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not address governance, compliance, or security aspects. The focus is on AI system development and performance improvement, without mention of data privacy, ethics, or regulatory compliance. Therefore, this Activity is not relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include designing and implementing pipelines to build and assess AI Effect Generation system performance, which aligns with model lifecycle management and continuous improvement. The focus on investigating ways to improve system intelligence also suggests an ongoing process of refinement and adaptation, making this Activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on developing and enhancing AI systems for AR Effect Generation, which involves technical tasks such as research, design, implementation, and evaluation of AI models. User interviews and surveys are typically used to gather insights on user needs and preferences, which is more aligned with user experience research rather than the technical development of AI systems. There is no direct mention of gathering user insights or conducting interviews in the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities emphasize the development and improvement of AI systems for AR Effect Generation, which includes designing new features and improving system intelligence. While usability testing and prototyping are important for enhancing user experience, the responsibilities do not explicitly mention these activities. The focus is more on the technical aspects of AI system development rather than user experience testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities that focus on understanding user segments and their interactions with a product. The Job Responsibilities are centered around the technical development and enhancement of AI systems for AR Effect Generation, with no mention of creating user personas or mapping user journeys. The responsibilities are more aligned with system performance and feature implementation rather than user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and needs, which is a key part of user experience research. The Job Responsibilities, however, are focused on the technical aspects of AI system development, such as designing features and improving system intelligence. There is no indication that qualitative data analysis of user feedback is part of the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing new features and systems for TikTok's AI Effect Generation product. This aligns with the activity of designing and implementing software architecture, as it involves defining system components and ensuring alignment with performance requirements and best practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention designing and implementing new features and improving system intelligence, which requires writing clean, efficient code and maintaining code quality. This is directly related to developing production-grade applications, which involves writing modular code and performing testing and refactoring.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities focus on developing AI systems and improving model output, they do not explicitly mention automating build, test, and deployment processes or maintaining version control workflows, which are key aspects of CI/CD.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not mention implementing logging, metrics, or alerting solutions, nor do they discuss resolving production incidents or conducting post-mortems. These are specific to monitoring and incident management, which is not highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities focus on AI system development and feature implementation, but they do not specifically mention designing or implementing APIs for integration purposes. Therefore, this activity is not directly relevant to the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities include designing and implementing data collection, training, and evaluation pipelines, which implies a need for testing and assessing system performance. This aligns with software testing and quality assurance, which involves developing automated test suites and maintaining test coverage.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention managing or provisioning cloud resources or promoting a DevOps culture. The focus is more on AI system development and feature enhancement rather than infrastructure management or DevOps practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include investigating ways to improve system intelligence and designing and implementing data collection, training, and evaluation pipelines. These tasks align with conducting research to evaluate AI quality, as they involve assessing system performance and using rigorous methodologies to guide improvements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on developing an AI system for AR Effect Generation and improving model output using techniques like RAG, CoT, and Prompt Engineering. While these tasks involve AI development, they do not specifically mention developing systems for automated insights into user behavior or system performance, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities include designing and implementing data collection and training pipelines, which could involve synthetic data generation to improve AI models. However, there is no explicit mention of synthetic data generation, making this activity only potentially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibilities include designing and implementing evaluation pipelines to assess AI system performance, which involves identifying performance metrics and success criteria. This activity is relevant as it aligns with tracking and analyzing metrics to guide decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities mention designing and implementing data collection and training pipelines, which likely involve creating labeled datasets for AI evaluation and optimization. This activity is relevant as it supports robust model training and performance measurement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibilities include investigating ways to improve system intelligence and designing evaluation pipelines, which could involve running experiments to compare model variants or new features. This activity is relevant as it aligns with using experiments to inform product or research decisions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jc6cc7",
+    "responsibilities": [
+      "Research and develop the cutting-edge AR Effect Generation AI system for interactive experience generation.",
+      "Design and implement new features for TikTok's AI Effect Generation product to enhance user creation experience.",
+      "Design and implement data collection, training, and evaluation pipelines to build and assess AI Effect Generation system performance.",
+      "Investigate ways to improve system intelligence at various stages.",
+      "Use inference stage techniques such as RAG, CoT, and Prompt Engineering to improve TikTok's AI Effect Generation model output."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve designing and implementing evaluation pipelines, which may include sampling data for evaluation to ensure a representative dataset. This activity is relevant as it supports the evaluation process.",
+    "is_relevant": true
+  }
+]

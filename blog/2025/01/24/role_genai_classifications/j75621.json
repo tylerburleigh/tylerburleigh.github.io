@@ -1,0 +1,23 @@
+{
+  "filename": "j75621",
+  "responsibilities": [
+    "Study and transform data science prototypes and apply appropriate machine learning algorithms and tools.",
+    "Design and develop machine learning and Gen AI systems.",
+    "Solve complex problems with multilayered data sets and optimize existing machine learning libraries and frameworks.",
+    "Construct optimized data pipelines to feed machine learning models.",
+    "Run machine learning tests and experiments, and document findings and results.",
+    "Implement and monitor model and data quality checks to ensure accuracy and consistency of models and pipelines in production.",
+    "Train, retrain, and monitor machine learning systems and models as needed.",
+    "Collaborate with cross-functional teams, including software engineers, data scientists, and product managers, to build machine learning applications that align with business objectives and best practices.",
+    "Provide support on model and data-related issues and queries from other teams, including providing clear and actionable reporting for stakeholders.",
+    "Create and maintain comprehensive documentation for machine learning processes, models, and pipelines.",
+    "Implement and promote best practices for machine learning, including coding standards, maintenance, and governance of machine learning models."
+  ],
+  "qualifications": [
+    "Strong proficiency in SQL, Databricks, AWS services, Python, Spark, and machine learning frameworks such as XGBoost, Scikit, TensorFlow, Keras, or PyTorch.",
+    "Excellent analytical and problem-solving skills with a strong ability to derive insights from complex data sets.",
+    "Effective communication skills with the ability to convey technical information and business impact to non-technical stakeholders."
+  ],
+  "analysis": "The job responsibilities include designing and developing machine learning and Gen AI systems, which explicitly mentions Generative AI (GenAI). This indicates that the role involves working with GenAI technologies. The responsibilities also involve solving complex problems with multilayered data sets, optimizing machine learning libraries, and collaborating with cross-functional teams to build machine learning applications. While the skills section lists proficiency in machine learning frameworks such as TensorFlow, Keras, or PyTorch, which are commonly used in developing language models, there is no explicit mention of working with language models or Large Language Models (LLMs) specifically. However, the mention of GenAI in the responsibilities is a clear indicator that the job involves working with Generative AI.",
+  "is_genai_role": true
+}

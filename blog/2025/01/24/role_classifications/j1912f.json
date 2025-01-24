@@ -1,0 +1,31 @@
+{
+  "filename": "j1912f",
+  "responsibilities": [
+    "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+    "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+    "Design and implement APIs for seamless integration with AI models and services.",
+    "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+    "Participate in code reviews, testing, and quality assurance processes.",
+    "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+    "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+    "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+    "Document and communicate development processes, system designs, and architectural decisions.",
+    "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+    "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+  ],
+  "skills": [
+    "Strong grasp of OOP, Design Patterns, efficient algorithms, and quality software development.",
+    "Strong proficiency in Python and familiarity with ML libraries such as PyTorch.",
+    "Familiarity with cloud platforms such as AWS or Azure.",
+    "Familiarity with GenAI services such as OpenAI GPT, Anthropic Claude, Google Gemma, etc.",
+    "Experience developing and fine-tuning prompts on any of the GenAI services.",
+    "Excellent problem-solving skills, attention to detail, and a strong capacity for logical thinking.",
+    "Passion for customer, innovation, product quality, service excellence, and test engineering.",
+    "The ability to work collaboratively across multiple disciplines in an extremely fast-paced, startup environment.",
+    "Experience working with microservices/an API-based application paradigm.",
+    "Good written communication skills that enable collaboration in a remote environment."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing and productionizing machine learning solutions, particularly in AI-driven applications, backend services, and API integration. The job also emphasizes working across the ML model lifecycle, including training, validation, and deployment, as well as ensuring security and compliance with healthcare data.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not the primary focus of the job. The job is more about development and productionizing solutions rather than research.\n\n2. **AI/ML Engineer**: This option aligns well with the job's focus on transforming research into scalable AI solutions, productionizing AI models, and developing data pipelines. The skills required, such as proficiency in Python and experience with API development, match the job description.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which is part of the job but not its primary focus. The job is more about developing and integrating AI solutions rather than infrastructure management.\n\n4. **AI Solution Architect**: This option involves designing AI solutions and collaborating with SMEs, which is not the primary focus of the job. The job is more technical and hands-on with development and integration.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is part of the job, but the job is more focused on the development and integration of AI solutions rather than data analysis.\n\n6. **Data Engineer**: This option focuses on data pipelines and architectures, which is not the primary focus of the job. The job is more about developing AI-driven applications and services.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not relevant to the job's technical and development focus.\n\n8. **Software Engineer**: This option involves software development and maintenance, which is part of the job, but the job is more specialized in AI and ML solutions.\n\nThe job aligns most closely with the AI/ML Engineer role, as it involves developing and productionizing AI solutions, working with APIs, and ensuring performance and reliability, which are key aspects of the AI/ML Engineer responsibilities.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

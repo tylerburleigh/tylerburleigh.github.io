@@ -1,0 +1,30 @@
+{
+  "filename": "j4ddbe",
+  "responsibilities": [
+    "Work with a multi-disciplinary team",
+    "Design and build proof-of-concept analytics or software solutions for customer projects using current ML / deep learning / LLM best practices and technologies",
+    "Build new capabilities for data intensive processing and analysis on specialized high performance systems using state of the art open source technologies",
+    "Prepare and present research findings at scientific seminars, conferences, and workshops",
+    "Publish technical reports and refereed journal articles",
+    "Mentor junior staff"
+  ],
+  "skills": [
+    "Proficiency with UNIX, shell (bash) scripting, automating tasks and application setup via scripts",
+    "Bash scripting with multi-node utilization (for ML, distributed processing, utilities, setup scripts)",
+    "Understanding and application of the machine learning process using common environments and libraries, either traditional (e.g. pandas, scikit-learn) or deep learning technologies (e.g. PyTorch, TensorFlow)",
+    "Experience with applying the above by setting up and running AI/ML training jobs (e.g. in Python scripts/notebooks, or as configuration running as part of a cloud service)",
+    "Experience with container & virtualization technologies like Singularity, Docker",
+    "Good written and verbal communication skills and oral presentation skills",
+    "Experience designing and training neural networks, DNNs using libraries such as TensorFlow, PyTorch",
+    "Experience with AI/ML training at scale using distributed libraries/frameworks such as Dask, Spark",
+    "Familiarity with GPU accelerated AI/ML (e.g. Rapids)",
+    "Experience working with LLM concepts and frameworks (RAG, embeddings, vector databases, prompt engineering, agents, ollama, langchain, langsmith)",
+    "Experience fine-tuning existing large language models (LLMs) for domain specific use cases",
+    "Experience delivering trained machine learning models, i.e. MLOps (e.g. deploying a model as a service, model evaluation and monitoring, model versioning and storage)",
+    "Experience working with High Performance Computing",
+    "Writing pbs/slurm scripts to orchestrate ML model training"
+  ],
+  "analysis": "The job responsibilities and skills provided align most closely with the role of an \"AI Research Scientist\" (Option 1). The responsibilities include designing and building proof-of-concept analytics or software solutions using current ML/deep learning/LLM best practices, which aligns with the AI Research Scientist's focus on investigating and adapting cutting-edge AI methodologies. The job also involves preparing and presenting research findings, publishing technical reports, and mentoring junior staff, which are activities typically associated with research roles.\n\nThe skills required for the job include proficiency with machine learning libraries (e.g., PyTorch, TensorFlow), experience with AI/ML training at scale, and familiarity with LLM concepts and frameworks, which are relevant to the AI Research Scientist's need for a deep understanding of LLMs and prompt engineering. Additionally, the job's focus on high-performance computing and container technologies like Docker aligns with the technical skills expected of an AI Research Scientist.\n\nWhile there are elements of the job that could relate to other roles, such as the MLOps / AI Infrastructure Engineer (Option 3) due to the mention of containerization and high-performance computing, the primary focus on research, experimentation, and LLMs makes the AI Research Scientist the best fit.\n\nOther options like AI/ML Engineer, Data Scientist, and Software Engineer do not align as closely with the research and LLM focus of the job. The AI Solution Architect and Product Manager roles are more focused on solution design and product strategy, which are not the primary focus of the job described.\n\nTherefore, the job is most similar to the AI Research Scientist role.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

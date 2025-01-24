@@ -1,0 +1,25 @@
+{
+  "filename": "j101c0",
+  "responsibilities": [
+    "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+    "Support data collection, analysis, content understanding, storage, and processing tasks.",
+    "Write code for training, testing, and deploying machine learning models.",
+    "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+    "Perform requirements analysis, collaborate with team members, and document solutions.",
+    "Work with large-scale data sets and manage data flow between systems.",
+    "Organize and process large batches of text and geometric data.",
+    "Communicate findings through quantitative analysis, visuals, and actionable insights."
+  ],
+  "qualifications": [
+    "Hands-on experience with training deep neural networks (e.g., CNNs, transformers).",
+    "Proficiency with at least one deep learning framework such as PyTorch or TensorFlow.",
+    "Experience with large language models (LLMs), embedding models, vector databases, and Retrieval-Augmented Generation (RAG) systems.",
+    "Experience with data modeling, architecture, and processing, including handling 2D/3D geometric data.",
+    "Proficiency in AWS cloud services, including SageMaker Studio, for scalable data processing and model development.",
+    "Strong understanding of fundamental computer science algorithms and their scalability.",
+    "Proficient in coding, covering both procedural and data-analytics-oriented languages (like Python).",
+    "Ability to convert theoretical concepts into practical, prototype-ready solutions."
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities mention \"develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs)\" and \"write code for training, testing, and deploying machine learning models,\" which are directly related to working with LLMs. Additionally, the skills section explicitly lists \"experience with large language models (LLMs), embedding models, vector databases, and Retrieval-Augmented Generation (RAG) systems,\" which are components of Generative AI and language models. The mention of \"training deep neural networks (e.g., CNNs, transformers)\" and proficiency in frameworks like PyTorch or TensorFlow further supports the involvement with GenAI and LLMs, as these are commonly used in developing and deploying such models.",
+  "is_genai_role": true
+}

@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention developing new customer-facing ChatGPT and OpenAI API features, which implies working with language models. Fine-tuning and customization of language models is directly relevant to this responsibility as it involves training or adapting models for specific tasks, which could be part of developing new features. However, the responsibilities do not explicitly mention fine-tuning or customization, so the relevance is inferred rather than explicit.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities include talking to users to understand their problems and designing solutions, which aligns with crafting and refining prompt instructions to elicit desired behaviors from language models. This activity is relevant as it involves optimizing system outputs and user experiences, which is a key part of developing customer-facing features and understanding user needs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "Optimizing applications for speed and scale is mentioned in the job responsibilities, which could involve evaluating model performance. However, the responsibilities do not explicitly mention evaluating the quality, reliability, or fairness of models. While model evaluation could be a part of ensuring optimal performance, it is not directly stated, making the relevance less explicit.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include developing new customer-facing features and collaborating with a cross-functional team, which could involve integrating LLM outputs into end-user experiences. This activity is relevant as it involves designing workflows that incorporate LLM outputs, which aligns with creating product experiences and handling specialized domain knowledge.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention analyzing model outputs or debugging, but optimizing applications for speed and scale could involve some level of model analysis and refinement. However, without explicit mention of interpretability or debugging, the relevance is not clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include developing new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end, which aligns with designing end-to-end workflows for AI-driven pipelines. This activity involves ensuring seamless integration of components, which is relevant to creating cutting-edge products and optimizing applications for speed and scale.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or resource planning. However, optimizing applications for speed and scale may involve some level of resource planning. The relevance is indirect and not strongly aligned with the core responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "Optimizing applications for speed and scale is directly related to performance optimization and latency control. This activity is relevant as it involves maintaining low response times and handling spikes in requests, which are crucial for developing efficient customer-facing features.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not explicitly mention model lifecycle management or governance. While continuous retraining and versioning could be part of developing new features, these aspects are not directly highlighted in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "Collaborating with a cross-functional team to create cutting-edge products may involve system interoperability and integration. However, the job responsibilities do not explicitly mention aligning AI services with existing systems or establishing APIs, making this activity only indirectly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "Talking to users to understand their problems and designing solutions may involve evaluating AI quality to ensure the solutions are effective. However, the job responsibilities do not explicitly mention conducting research or evaluating AI quality, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on developing customer-facing features and product experiences, which may involve developing AI systems and algorithms. However, the emphasis is more on product development rather than creating systems for automated insights, making this activity only indirectly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. While synthetic data could be used in developing new features, it is not explicitly highlighted in the responsibilities, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "Optimizing applications for speed and scale and talking to users to understand their problems may involve identifying performance metrics and success criteria. However, the job responsibilities do not explicitly mention this activity, making it only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While this could be part of developing new features, it is not directly highlighted in the responsibilities, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "Talking to users to understand their problems and designing solutions may involve running experiments to validate these solutions. However, the job responsibilities do not explicitly mention designing or analyzing experiments, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. While data evaluation could be part of developing new features, it is not directly highlighted in the responsibilities, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing customer-facing features, understanding user problems, collaborating with cross-functional teams, optimizing applications, and creating an inclusive culture. Designing labeling tasks for data annotation involves creating guidelines and workflows for data consistency, which is more aligned with data management and quality assurance. There is no direct mention of data annotation or labeling tasks in the job responsibilities, suggesting that this activity is not directly relevant to the role described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize product development, user interaction, team collaboration, and application optimization. Collecting human annotation data involves managing logistics and communication for annotation projects, which is more related to data collection and management. The responsibilities do not mention data collection or annotation, indicating that this activity is not directly relevant to the job role.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities are centered around product development, user engagement, team collaboration, and application performance. Analyzing human annotation data involves using statistical methods to evaluate data quality and generate insights, which is more related to data analysis and quality assessment. The responsibilities do not include data analysis or annotation tasks, suggesting that this activity is not directly relevant to the job role.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on developing customer-facing features, talking to users, collaborating with cross-functional teams, optimizing applications, and creating an inclusive culture. There is no direct mention of applying statistical techniques, hypothesis testing, or building predictive models. While data science might be indirectly involved in understanding user problems or optimizing applications, the responsibilities do not explicitly require statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include talking to users to understand their problems and designing solutions, which could involve data visualization and exploratory analysis to reveal patterns and communicate insights. However, the responsibilities do not explicitly mention using visualization tools or presenting findings to stakeholders. The focus seems more on product development and user interaction rather than data analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities involve developing new customer-facing features and optimizing applications for speed and scale, which could benefit from data mining and analysis of conversational datasets to uncover trends and improve user experience. However, the responsibilities do not explicitly mention data mining or analysis of large datasets. The focus is more on product development and user interaction.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include optimizing applications for speed and scale, which might involve developing data models and pipelines for analytics. However, the responsibilities do not explicitly mention implementing data processing workflows or leveraging pipelines for analytics. The focus is more on product development and user interaction rather than data engineering.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities involve developing new features and optimizing applications, which could require defining metrics and success criteria to assess performance and guide decision-making. However, the responsibilities do not explicitly mention defining measurable indicators or tracking metrics. The focus is more on product development and user interaction rather than analytics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities include \"Optimize applications for speed and scale,\" which aligns with the need for robust model deployment and ensuring performance and scalability in production. However, the responsibilities do not explicitly mention CI/CD pipelines, containerization, or orchestration, which are specific to MLOps. The focus seems more on product development and user experience rather than the technical deployment aspects.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or observability of models in production. The focus is more on developing new features, understanding user problems, and optimizing applications. While monitoring could be a part of optimizing applications, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not mention version control systems or the need for reproducibility and traceability of datasets and model artifacts. The responsibilities are more focused on product development and user interaction rather than the technical aspects of data and model management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities do not explicitly mention testing and validation of models. The focus is on developing new features, understanding user needs, and optimizing applications. While testing could be a part of ensuring product quality, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The responsibility to \"Optimize applications for speed and scale\" aligns with the need to optimize and scale infrastructure. This suggests a relevance to ensuring consistent response times and handling traffic spikes, which are part of infrastructure and scalability concerns.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not mention governance, compliance, or security. The focus is on product development, user interaction, and creating an inclusive culture. These responsibilities do not directly relate to establishing governance frameworks or implementing security practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities do not explicitly mention model lifecycle management or continuous improvement. The focus is on developing new features, understanding user needs, and optimizing applications. While continuous improvement could be inferred as part of product development, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibility \"Talk to users to understand their problems and design solutions to address them\" directly aligns with the activity of conducting user interviews and surveys. This activity involves gathering insights on user needs and preferences, which is essential for understanding user problems and designing appropriate solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "While the job responsibilities do not explicitly mention usability testing and prototyping, the responsibility to \"Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end\" implies a need for ensuring these products are user-friendly. Usability testing and prototyping are crucial steps in developing user-centric products, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The job responsibilities do not explicitly mention persona development or user journey mapping. However, understanding user problems and designing solutions, as well as collaborating with a cross-functional team, could benefit from having detailed user personas and journey maps. These tools help in creating targeted and effective product experiences, suggesting some relevance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The responsibility to \"Talk to users to understand their problems and design solutions to address them\" suggests a need for analyzing qualitative data to extract insights. This activity involves synthesizing interview notes and survey responses, which is directly relevant to understanding user needs and translating them into actionable solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include developing new customer-facing features and optimizing applications for speed and scale. Designing and implementing software architecture is relevant as it involves building scalable, maintainable software solutions, which aligns with the responsibility of optimizing applications for speed and scale.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities mention owning the development of new features and product experiences end-to-end, which involves writing clean, modular, and efficient code. This aligns with developing production-grade applications, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, optimizing applications for speed and scale could involve automating build, test, and deployment processes. However, without explicit mention, the relevance is less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. However, collaborating with a cross-functional team could involve some aspects of this activity, but it is not directly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities include developing new customer-facing ChatGPT and OpenAI API features, which directly involves API development and system integration. This activity is highly relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities do not explicitly mention software testing or quality assurance. However, ensuring product experiences are robust could imply some level of testing, but it is not directly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not explicitly mention DevOps or infrastructure as code. While optimizing applications for speed and scale might involve some DevOps practices, it is not directly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include \"Optimize applications for speed and scale\" and \"Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products.\" These responsibilities suggest a focus on improving product performance and working with a team to enhance product features, which aligns with conducting research to evaluate AI quality. Evaluating system accuracy, robustness, and other performance metrics is relevant to optimizing applications and ensuring high-quality product experiences.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities mention \"Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end\" and \"Talk to users to understand their problems and design solutions to address them.\" Developing AI systems and algorithms for automated insights aligns with creating new features and product experiences, as it involves building AI methods that can enhance user engagement and system performance. This activity is relevant to the job's focus on developing and refining product features.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. However, the responsibility to \"Optimize applications for speed and scale\" could indirectly involve using synthetic data to test and improve AI models. While synthetic data generation can be part of the broader process of optimizing applications, it is not directly mentioned or implied in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibility to \"Optimize applications for speed and scale\" implies a need to identify and track performance metrics to ensure the application meets desired standards. Additionally, collaborating with a cross-functional team to create cutting-edge products suggests a focus on defining success criteria to guide product development. This activity is relevant as it involves defining and analyzing metrics that are crucial for optimizing and evaluating product performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. However, the responsibility to \"Optimize applications for speed and scale\" could involve using labeled datasets to train and evaluate AI models. While this activity is relevant to AI evaluation and optimization, it is not directly mentioned or implied in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibility to \"Talk to users to understand their problems and design solutions to address them\" suggests a focus on user-centered design and testing. Designing, running, and analyzing experiments like A/B tests aligns with this responsibility, as it involves testing new features and solutions to improve user experiences. This activity is relevant to the job's focus on designing and validating product solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "ja8e3f",
+    "responsibilities": [
+      "Own the development of new customer-facing ChatGPT and OpenAI API features and product experiences end-to-end",
+      "Talk to users to understand their problems and design solutions to address them",
+      "Collaborate with a cross-functional team of engineers, researchers, product managers, designers, and operations folks to create cutting-edge products",
+      "Optimize applications for speed and scale",
+      "Create a diverse and inclusive culture that makes all feel welcome"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention data sampling. However, optimizing applications and collaborating with a cross-functional team may involve evaluating data to ensure product quality and performance. While data sampling can be part of the evaluation process, it is not directly mentioned or implied in the job responsibilities.",
+    "is_relevant": false
+  }
+]

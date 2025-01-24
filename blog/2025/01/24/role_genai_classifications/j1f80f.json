@@ -1,0 +1,24 @@
+{
+  "filename": "j1f80f",
+  "responsibilities": [
+    "Collaborate with leadership team to define and execute a data testing strategy and plan",
+    "Design and implement a data validation framework",
+    "Partner with architects and developers to review architecture for testability and data quality",
+    "Provide coaching and technical guidance to junior data quality engineers",
+    "Act as a primary advocate and subject matter expert in data quality and drive awareness across cross-functional teams",
+    "Evaluate data testing tools and frameworks",
+    "Define and enforce testing and automation standards, processes, and metrics",
+    "Collect metrics to measure test progress and quality outcomes"
+  ],
+  "skills": [
+    "Proficient in Python",
+    "Experience with a modern data stack (Object stores like S3, Spark, Airflow, Lakehouse architectures, real-time databases, Glue, Athena, Sagemaker, Jupyter Notebook)",
+    "Experience with automated test tools (Great Expectations, Lambda test, Selenium, Cucumber, PyTest, Cypress)",
+    "Understanding of automation strategies & techniques for testing data, application, and CI/CD infrastructure",
+    "Knowledge of Big Data ecosystem",
+    "Strong desire and motivation to take up challenges and opportunities in a large and complex program",
+    "Demonstrates mutual respect, embraces diversity, equity, and inclusion, and acts with authenticity"
+  ],
+  "analysis": "The job responsibilities focus on data testing, validation, and quality assurance. The tasks include designing a data validation framework, collaborating with architects and developers, providing technical guidance, and evaluating data testing tools. The skills required include proficiency in Python, experience with a modern data stack, and knowledge of automated test tools and Big Data ecosystems. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on data quality and testing within a data engineering context.",
+  "is_genai_role": false
+}

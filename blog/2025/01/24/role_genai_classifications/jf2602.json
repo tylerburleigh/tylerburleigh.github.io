@@ -1,0 +1,22 @@
+{
+  "filename": "jf2602",
+  "responsibilities": [
+    "Design and develop robust data architectures and data pipelines to support data ingestion, processing, storage, and retrieval.",
+    "Evaluate and select appropriate technologies, frameworks, and tools to build scalable and reliable data infrastructure.",
+    "Optimize data engineering systems and processes to handle large-scale data sets efficiently.",
+    "Collaborate with cross-functional teams, such as data scientists, software engineers, and business stakeholders, to understand data requirements and deliver solutions that meet business needs.",
+    "Effectively communicate complex technical concepts to non-technical stakeholders.",
+    "Enforce data governance policies and practices to maintain data integrity, security, and compliance with relevant regulations.",
+    "Collaborate with data governance and security teams to implement robust data protection mechanisms and access controls."
+  ],
+  "qualifications": [
+    "Proficiency in data engineering tech stack; Snowflake / PostgreSQL / Python / SQL / GitLab / AWS / Airflow/ DBT and others.",
+    "Proficiency in relational database platforms and cloud database platforms such as Snowflake, Redshift, or GCP.",
+    "Strong in Python and/or another data-centric language.",
+    "Thorough knowledge of data modeling, database design, data architecture principles, and data operations.",
+    "Strong analytical and problem-solving abilities, with the capability to simplify complex issues into actionable plans.",
+    "Experience with Apache Spark."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data architecture, and data infrastructure. The responsibilities include designing and developing data architectures, optimizing data engineering systems, and collaborating with cross-functional teams to meet data requirements. The skills required include proficiency in data engineering technologies such as Snowflake, PostgreSQL, Python, SQL, and cloud platforms like AWS. There is also a focus on data modeling, database design, and data operations.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around data engineering and infrastructure rather than working with AI models or language processing technologies.\n\nTherefore, based on the provided information, this job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

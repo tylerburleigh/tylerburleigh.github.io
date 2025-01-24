@@ -1,0 +1,35 @@
+{
+  "responsibilities": [
+    "Own the relationship with one or more business team stakeholders for the data team",
+    "Collaborate with business teams to identify, document and develop analytic solutions",
+    "Collaborate with data analysts, engineers and other stakeholders on data lake models",
+    "Develop and maintain data pipelines collecting data from various source systems",
+    "Develop and maintain data model transformations for use in analytic models",
+    "Ensure data accuracy, quality and consistency with monitoring and validation processes",
+    "Maintain our data catalog, and document data pipelines, transformations and models",
+    "Monitor, and respond to production incidents in the data lake",
+    "Optimize queries, and data engineering activities for performance and cost",
+    "Assist in implementing data governance and security best practices",
+    "Document processes, workflows, and data definitions to support knowledge sharing",
+    "Guide user story breakdown sessions, and contribute to quarterly planning sessions",
+    "Provide mentorship and coaching to junior analytics engineers"
+  ],
+  "skills": [
+    "Expert-level proficiency in SQL",
+    "Proficiency building transformations and data models with dbt (cli preferred)",
+    "Strong knowledge of data modeling, schema design, and data governance principles",
+    "Proficiency in programming languages such as Python or Java",
+    "Demonstrated experience optimizing performance and managing complex datasets",
+    "Excellent leadership and communication skills",
+    "Ability to mentor and guide team members",
+    "Willingness to adapt to changes in the job description and accept other duties as assigned"
+  ],
+  "qualifications": [
+    "5+ years of experience working with cloud-based data engineering platforms (Airflow, FiveTran, Stitch, etc.)",
+    "Hands-on experience with cloud-based data warehouse platforms (e.g., Snowflake, Redshift, BigQuery)",
+    "Bachelor’s or Master’s degree in Computer Science, Information Systems, or a related field preferred",
+    "Familiarity with implementing or using a “data vault” data modeling pattern (desired but not required)",
+    "Familiarity with modern cloud BI tools (e.g., Tableau, ThoughtSpot, Looker) (desired but not required)",
+    "Experience with “Data Hub” or equivalent open source data catalog platform (desired but not required)"
+  ]
+}

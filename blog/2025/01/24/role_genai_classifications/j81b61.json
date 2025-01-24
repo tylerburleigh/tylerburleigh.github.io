@@ -1,0 +1,41 @@
+{
+  "filename": "j81b61",
+  "responsibilities": [
+    "Actively contribute to writing high quality, readable, maintainable, and testable code",
+    "Introduce software design patterns into the codebase as required and proactively propose new technologies that will benefit the software product",
+    "Design data structures, services, and data warehouses to balance current requirements with future expandability",
+    "Participate in Agile planning and Scrum ceremonies",
+    "Collaborate inclusively with cross-functional teams with a wide range of experience levels",
+    "Mentor, train, and advise team members, participate in code reviews to ensure software quality standards",
+    "Understand and follow coding conventions, architectures, and best practices",
+    "Write reactive, non-blocking, responsive, and scalable event data ingestion services for real-time streaming events",
+    "Maintain and enhance data ETL/ELT pipelines for existing data lake/data warehousing solutions",
+    "Create integrations with multiple vendors to bring data into the ecosystem",
+    "Work with the team to estimate, plan, and deliver work via two-week sprints",
+    "Take ownership of what the team builds and develop domain expertise",
+    "Look for ways to automate and optimize processes to improve productivity across the team",
+    "Build scalable and secure applications that healthcare providers trust every day"
+  ],
+  "qualifications": [
+    "Ability to write high quality, readable, maintainable, and testable code",
+    "Proficiency in introducing software design patterns and proposing new technologies",
+    "Expertise in designing data structures, services, and data warehouses",
+    "Experience in Agile planning and Scrum ceremonies",
+    "Strong collaboration skills with cross-functional teams",
+    "Mentoring, training, and advising team members",
+    "Understanding of coding conventions, architectures, and best practices",
+    "Experience with reactive, non-blocking frameworks like Spring WebFlux",
+    "Proficiency in building scalable back-end APIs using Java",
+    "Experience with SQL relational database technologies like Oracle or Postgres",
+    "Experience in data ELT/ETL using orchestration tools such as Informatica or Apache Airflow",
+    "Streaming application development experience with Apache Kafka and/or Amazon MSK",
+    "Hands-on experience with cloud-based data warehouse platforms such as Snowflake",
+    "Experience with building, deploying, testing, and maintaining services on AWS",
+    "Knowledge of microservices architecture using Docker/Kubernetes",
+    "Experience with strategies and tools around Data Governance and Data Lineage",
+    "Experience with RESTful API design, implementation, basic documentation, and testing",
+    "Familiarity with languages and frameworks such as Python, Kotlin, TypeScript, and React"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on software development, data engineering, and cloud-based solutions. The responsibilities include writing high-quality code, designing data structures, participating in Agile planning, and building scalable applications. The skills required include proficiency in software design patterns, experience with SQL databases, cloud platforms like AWS, and microservices architecture. There is also a focus on data ETL/ELT processes, streaming application development, and data governance.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around traditional software engineering and data management tasks rather than AI or machine learning tasks. The technologies and frameworks mentioned, such as Spring WebFlux, Apache Kafka, and Docker/Kubernetes, are not directly related to GenAI or LLMs.\n\nOverall, the job does not appear to involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

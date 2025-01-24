@@ -1,0 +1,28 @@
+{
+  "filename": "jf406c",
+  "responsibilities": [
+    "Identify, evaluate, and integrate diverse data sources into data products for the Generative AI program",
+    "Develop and optimize data processing workflows for chunking, indexing, and vectorization for both text and non-text data sources",
+    "Benchmark and implement various vector stores, embedding techniques, and retrieval methods",
+    "Create a flexible pipeline supporting multiple embedding algorithms, vector stores, and search types (e.g., vector search, hybrid search)",
+    "Implement and maintain auto-tagging systems and data preparation processes for LLMs",
+    "Integrate and optimize workflows using various vector store technologies",
+    "Write clean, maintainable data pipelines that generate AI and data science-ready outputs",
+    "Collaborate with data scientists and front-end engineers to design scalable AI-driven solutions",
+    "Communicate the technical approaches and associated benefits or drawbacks to multiple stakeholders via oral presentations or written documentation",
+    "Provide engineering oversight across projects and support data scientists and engineers in optimizing approaches",
+    "Continually scan the external environment for and bring in novel technological innovations that can be applied to our projects"
+  ],
+  "skills": [
+    "Deep understanding of modern data architectures incorporating AI/ML components including LLMs from vendor platforms such as AWS, Snowflake, Azure, and Databricks",
+    "Expertise in SQL, Python and related tools",
+    "Experience with RAG frameworks, knowledge base construction, and vector store technologies and their applications in AI",
+    "Experience with automation of quasi-experimental design techniques, such as A/B testing, to measure solution impact",
+    "Experience with data cleaning, tagging, and annotation processes",
+    "Experience with embedding techniques, similarity search algorithms, and information retrieval concepts",
+    "Deep understanding of data privacy standards and ethics"
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on data integration, processing, and optimization for AI applications, particularly involving vector stores, embedding techniques, and data pipelines. The role also emphasizes collaboration with data scientists and engineers, as well as communication with stakeholders.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies and experiments, which is not the primary focus of the job. The job is more about data engineering and integration rather than conducting AI research.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable solutions and maintaining data pipelines, which aligns with some aspects of the job, such as developing data processing workflows and collaborating with data scientists. However, the job's emphasis on vector stores and embedding techniques is not a primary focus here.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about deploying and monitoring AI systems, which does not align well with the job's focus on data integration and processing workflows.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and ensuring compliance with data governance, which partially aligns with the job's responsibilities of integrating diverse data sources and maintaining data preparation processes. However, the job is more technical and hands-on with data processing than architectural design.\n\n5. **Data Scientist**: This role focuses on statistical analysis and model development, which is not the primary focus of the job. The job is more about data engineering and integration.\n\n6. **Data Engineer**: This option is the most aligned with the job. The responsibilities of developing and optimizing data workflows, integrating data sources, and collaborating with data scientists match well with the job's focus on data processing workflows, vector stores, and embedding techniques. The skills required, such as proficiency in Python and SQL, also align with the job's requirements.\n\n7. **Product Manager**: This role is about driving product vision and strategy, which does not align with the technical and data-focused nature of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which does not align with the job's focus on data integration and processing for AI applications.\n\nThe job is most similar to the \"Data Engineer\" option, as it involves designing and maintaining data pipelines and architectures, which is a core aspect of the job's responsibilities and skills.",
+  "role_classification": 6,
+  "role_title": "Data Engineer"
+}

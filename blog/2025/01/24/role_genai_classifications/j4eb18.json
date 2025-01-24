@@ -1,0 +1,24 @@
+{
+  "filename": "j4eb18",
+  "responsibilities": [
+    "Design and deploy advanced machine learning, operations research, and optimization solutions across various aspects of healthcare operations.",
+    "Translate complex healthcare challenges into actionable strategies.",
+    "Collaborate effectively with clinicians, operations teams, and product managers to align data-driven solutions with business goals.",
+    "Design experiments, pilot studies, and A/B tests to assess the impact of interventions in clinical and operational contexts.",
+    "Stay current with advancements in machine learning, operations research, and healthcare analytics.",
+    "Prioritize adherence to healthcare privacy regulations and implement secure workflows for data handling and deployment."
+  ],
+  "qualifications": [
+    "Developing and deploying machine learning models using complex healthcare data.",
+    "Creating and scaling LLM-based solutions, including Retriever-Augmented Generation (RAG) architectures.",
+    "Applying operations research techniques such as linear programming, queueing theory, and optimization.",
+    "Excellent communication skills to convey complex technical concepts to both technical and non-technical stakeholders.",
+    "Proficiency in Python or R, with experience in libraries/frameworks like scikit-learn, PyTorch, or TensorFlow.",
+    "Strong SQL skills and familiarity with distributed computing platforms like Spark or Hadoop.",
+    "Experience with cloud environments (AWS, GCP, Azure) and MLOps best practices.",
+    "Knowledge of LLMs, NLP, and Retriever-Augmented Generation (RAG).",
+    "Strong analytical thinking and problem-solving abilities."
+  ],
+  "analysis": "The job involves designing and deploying machine learning solutions in the healthcare sector. Among the skills listed, there is a specific mention of \"Creating and scaling LLM-based solutions, including Retriever-Augmented Generation (RAG) architectures\" and \"Knowledge of LLMs, NLP, and Retriever-Augmented Generation (RAG).\" These skills directly indicate that the job involves working with language models, specifically Large Language Models (LLMs). The mention of LLMs and RAG architectures suggests that the job may involve Generative AI (GenAI) as well, as these are often used in generative tasks. Therefore, the job does involve working with Generative AI and language models.",
+  "is_genai_role": true
+}

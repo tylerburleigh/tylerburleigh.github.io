@@ -1,0 +1,652 @@
+[
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention designing and contributing to an integrated search platform to support ML workloads, which could potentially involve working with language models. However, there is no explicit mention of fine-tuning or customizing language models for domain-specific tasks. The responsibilities focus more on architecture discussions, code reviews, and collaboration with other teams, which do not directly align with the specific activity of fine-tuning language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention working with prompts or refining instructions for large language models. The focus is on architecture discussions, code reviews, and collaboration, which do not directly relate to crafting and refining prompt instructions. Therefore, this activity does not seem relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include performing code reviews and making recommendations on improving code and software development processes. While this involves evaluation and assessment, it is more focused on software development rather than evaluating the quality, reliability, and fairness of large language models. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include designing and contributing to an integrated search platform and collaborating with other teams to coordinate changes or contribute to their projects. This suggests a focus on integration and collaboration, which aligns with the activity of integrating LLM outputs into end-user experiences or pipelines. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention analyzing model outputs or employing interpretability techniques. The focus is on architecture discussions, code reviews, and collaboration, which do not directly relate to model interpretability and debugging. Therefore, this activity does not seem relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing and contributing to an integrated search platform to support ML workloads, which aligns with the activity of designing end-to-end workflows for AI-driven pipelines. Both involve creating a cohesive system that integrates various components to deliver results, indicating relevance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this activity. While there may be some overlap in terms of architecture discussions, the specific focus on compute requirements is not directly addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities do not specifically mention performance optimization or latency control. While code reviews and architecture discussions might touch on these topics, they are not explicitly stated as part of the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not mention model lifecycle management or governance. The focus is more on code reviews, architecture discussions, and collaboration with other teams, rather than on managing model versions or retraining.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include collaborating with other teams to coordinate changes or contribute to their projects, which aligns with the activity of aligning generative AI services with existing enterprise systems. This suggests a focus on integration and interoperability, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities do not explicitly mention conducting research to evaluate AI quality. The focus is more on architecture discussions, code reviews, and collaboration, rather than on research and evaluation of AI systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities do not explicitly mention developing AI systems or algorithms for automated insights. The focus is more on architecture, code reviews, and collaboration, rather than on developing AI methods for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on architecture, code reviews, and collaboration, rather than on creating synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention identifying performance metrics or success criteria. The focus is more on architecture, code reviews, and collaboration, rather than on defining and tracking performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets for AI evaluation and optimization. The focus is on architecture, code reviews, and collaboration, rather than on data preparation and labeling.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing, running, or analyzing experiments such as A/B tests. The focus is more on architecture, code reviews, and collaboration, rather than on experimental design and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on architecture, code reviews, and collaboration, rather than on data sampling and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing and contributing to an integrated search platform, participating in product and architecture discussions, performing code reviews, and collaborating with other teams. These tasks are more aligned with software development and architecture rather than data annotation. Designing labeling tasks for data annotation involves creating guidelines and workflows for data labeling, which is not mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, overseeing performance of annotation teams, or resolving ambiguities in data labeling. The focus is on software development, architecture discussions, and collaboration with other technical teams. Therefore, collecting human annotation data is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities do not include analyzing annotation data or using statistical methods to evaluate dataset quality. The responsibilities are centered around software development, architecture, and collaboration with technical teams. Analyzing human annotation data is not relevant to the job responsibilities as described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on designing and contributing to an integrated search platform, participating in product and architecture discussions, performing code reviews, and collaborating with other teams. While these tasks may involve some level of data analysis, there is no explicit mention of applying statistical techniques for hypothesis testing, inference, or building statistical models. Therefore, this activity does not seem directly relevant to the specified job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not explicitly mention data visualization or exploratory data analysis. The focus is more on software development, architecture discussions, and collaboration with other teams. While data visualization could be a part of communicating insights in some roles, it is not directly indicated in the responsibilities provided. Thus, this activity is not clearly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not mention data mining or the analysis of large datasets, particularly conversational datasets. The responsibilities are more aligned with software development, architecture, and collaboration. Without specific mention of data mining or analysis tasks, this activity does not appear to be relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include designing and contributing to an integrated search platform, which could potentially involve developing data models and pipelines. However, the responsibilities do not explicitly mention analytics or data processing workflows. The focus is more on software development and collaboration. Therefore, while there might be some overlap, this activity is not explicitly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics or success criteria. The responsibilities focus on software development, architecture discussions, and collaboration. While defining metrics could be part of assessing the success of software projects, it is not directly indicated in the responsibilities provided. Thus, this activity is not clearly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities mention designing and contributing to an integrated search platform to support ML workloads, which aligns with the deployment and MLOps activity. This involves creating and maintaining CI/CD pipelines, containerization, and orchestration, which are essential for supporting ML workloads in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities do not explicitly mention monitoring and observability. However, ensuring the performance and reliability of ML workloads could imply the need for monitoring solutions. Without explicit mention, it's difficult to definitively classify this as relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not explicitly mention data and model versioning. While versioning is crucial for ML operations, there is no direct reference to it in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities include performing code reviews and making recommendations on improving software development processes, which could encompass continuous testing and validation. However, there is no explicit mention of testing and validation specific to ML models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities mention collaborating with other teams, including cloud services, which could involve infrastructure and scalability considerations. However, there is no explicit mention of optimizing and scaling model-serving infrastructure.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not mention governance, compliance, or security. These are important aspects of MLOps, but without explicit mention, it is difficult to classify this as relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities do not explicitly mention model lifecycle management or continuous improvement. While these are important for ML operations, there is no direct reference to them in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on designing and contributing to an integrated search platform, participating in product and architecture discussions, performing code reviews, and collaborating with other teams. These tasks are primarily technical and development-oriented. User interviews and surveys, which involve gathering insights on user needs and preferences, are more aligned with user experience research rather than the technical development tasks described in the responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities include participating in product discussions and collaborating with other teams, which could involve some level of understanding of user experience. However, the primary focus is on technical development and architecture, rather than directly conducting usability tests or creating prototypes. While usability testing and prototyping are important for user experience, they are not explicitly mentioned or implied in the job responsibilities, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities that focus on understanding user segments and their interactions with a product. The job responsibilities are centered around technical development, architecture discussions, and code reviews, which do not directly involve creating user personas or mapping user journeys. These activities are more relevant to UX research and design, rather than the technical and collaborative tasks outlined in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and make recommendations. The job responsibilities are focused on technical aspects such as code reviews, architecture discussions, and collaboration with technical teams. While qualitative data analysis is crucial for UX research, it does not align with the technical and development-oriented nature of the job responsibilities. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and contributing to an integrated search platform, which aligns with building scalable, maintainable software solutions. This involves defining system components and ensuring alignment with business needs, which is a core aspect of software architecture.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention performing code reviews and making recommendations on improving code and software development processes. This aligns with writing clean, modular, and efficient code, as well as maintaining code quality, which are key aspects of developing production-grade applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, the emphasis on improving software development processes and collaborating with other teams suggests a need for streamlined feature releases and maintaining high software quality, which are goals of CI/CD practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. However, collaboration with support teams could imply some involvement in resolving production incidents, but this is not clearly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities include collaborating with other teams to coordinate changes or contribute to their projects, which may involve system integration. However, there is no explicit mention of API development or integration tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include performing code reviews and making recommendations on improving code, which indirectly relates to maintaining test coverage and reliability. However, there is no direct mention of developing automated test suites or quality assurance tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention infrastructure management or DevOps practices. While collaboration with cloud services is mentioned, there is no indication of using infrastructure-as-code tools or promoting a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include designing and contributing to an integrated search platform to support ML workloads, which implies a focus on machine learning and potentially AI systems. However, there is no explicit mention of conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or fairness. The responsibilities are more aligned with development and collaboration rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The responsibility of designing and contributing to an integrated search platform to support ML workloads suggests involvement in developing AI systems and algorithms. This aligns with building and refining AI methods, as mentioned in the activity. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or any tasks related to data creation or manipulation. The focus is more on platform design, architecture discussions, and collaboration with other teams. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "While the job responsibilities include participating in product and architecture discussions and performing code reviews, there is no explicit mention of identifying performance metrics or success criteria. The responsibilities are more focused on development and collaboration rather than defining and tracking metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets or any tasks related to data preparation or annotation. The focus is on platform design, architecture discussions, and collaboration with other teams. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include participating in product and architecture discussions, which could involve designing and analyzing experiments to inform decisions. However, there is no explicit mention of running experiments or A/B tests. The responsibilities are more focused on development and collaboration rather than experimentation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1f8c5",
+    "responsibilities": [
+      "Design and contribute to the integrated search platform to support ML workloads.",
+      "Participate in product and architecture discussions.",
+      "Perform code reviews with peers and make recommendations on improving code and software development processes.",
+      "Collaborate with other teams including cloud services, database, enterprise tools, drivers, and support to coordinate changes or contribute to their projects."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation or any tasks related to data evaluation. The focus is on platform design, architecture discussions, and collaboration with other teams. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  }
+]

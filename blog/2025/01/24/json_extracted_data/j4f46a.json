@@ -1,0 +1,30 @@
+{
+  "responsibilities": [
+    "Develop and implement intelligent scheduling algorithms for distributed AI workloads in multi-cluster and multi-tenant environments.",
+    "Ensure efficient allocation of GPUs, TPUs, and CPUs across diverse workloads, balancing resource utilization and job performance.",
+    "Design optimization techniques for dynamic resource allocation, addressing real-time variations in workload demand.",
+    "Implement load balancing, job preemption, and task placement strategies to maximize throughput and minimize latency.",
+    "Build systems that efficiently scale to thousands of nodes and petabytes of data.",
+    "Optimize training and inference pipelines to reduce runtime and cost while maintaining accuracy and reliability.",
+    "Build tools for real-time monitoring and diagnostics of resource utilization, job scheduling efficiency, and bottlenecks.",
+    "Leverage telemetry data and machine learning models for predictive analytics and proactive optimization.",
+    "Collaborate with researchers, data scientists, and platform engineers to understand workload requirements and align resource management solutions.",
+    "Stay updated with the latest trends in distributed systems, AI model training, and cloud-native technologies."
+  ],
+  "skills": [
+    "Proficiency in distributed computing frameworks (e.g., Kubernetes, Slurm, Ray).",
+    "Expertise in designing and implementing resource allocation algorithms and scheduling frameworks.",
+    "Hands-on experience with cloud platforms (e.g., AWS, GCP, Azure) and GPU orchestration.",
+    "Proficient in Python, C++, or Go for building high-performance systems.",
+    "Strong understanding of operational research techniques, such as linear programming, graph algorithms, or evolutionary strategies.",
+    "Analytical mindset with a focus on problem-solving and performance tuning.",
+    "Excellent collaboration and communication skills across teams."
+  ],
+  "qualifications": [
+    "5+ years of experience in resource scheduling, distributed systems, or large-scale machine learning infrastructure.",
+    "Experience with AI/ML frameworks (e.g., TensorFlow, PyTorch, JAX) is nice-to-have.",
+    "Familiarity with AI-specific workloads like DDP, sharded training, or reinforcement learning is nice-to-have.",
+    "Knowledge of auto-scaling and cost-optimization strategies in cloud environments is nice-to-have.",
+    "Contributions to open-source scheduling or orchestration projects is nice-to-have."
+  ]
+}

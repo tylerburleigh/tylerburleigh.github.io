@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on building MLOps solutions, developing frameworks for machine learning model development and deployment, and supporting infrastructure for machine learning services. While these responsibilities involve machine learning, they do not specifically mention fine-tuning or customizing large language models, which is the focus of this activity. The responsibilities are more aligned with the infrastructure and deployment aspects rather than the specific training or fine-tuning of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention any tasks related to crafting or refining prompts for large language models. The focus is on MLOps solutions, infrastructure, and deployment processes, which are not directly related to prompt engineering or iterative refinement of language model outputs. Therefore, this activity is not relevant to the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include developing and enhancing frameworks for machine learning model development and deployment, which could involve some level of model evaluation and performance assessment. However, the responsibilities do not explicitly mention evaluating large language models or using specific metrics like perplexity or BLEU. The focus is more on infrastructure and deployment rather than detailed model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities mention collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services. This could involve integrating machine learning models into applications, which aligns with the activity of integrating LLM outputs into end-user experiences or pipelines. Therefore, this activity is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention tasks related to analyzing model outputs for errors, biases, or potential improvements, nor do they mention using interpretability techniques or debugging tools. The focus is on MLOps solutions, infrastructure, and deployment, which are not directly related to model interpretability and debugging.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities focus on designing and building MLOps solutions, developing frameworks for machine learning model development and deployment, and supporting infrastructure for machine learning services. The Activity involves designing end-to-end workflows for AI-driven pipelines, which aligns with the responsibility of developing and enhancing frameworks for machine learning model development and deployment. Both involve creating structured processes for handling data and models, making this Activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities include developing and maintaining infrastructure for machine learning services, which may involve considerations of computational demands and resource planning. However, the specific focus on assessing computational demands and planning for scalability in this Activity is not explicitly mentioned in the Job Responsibilities. While there is some overlap, the direct relevance is limited.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities do not explicitly mention performance optimization or latency control. They focus more on developing and maintaining frameworks and infrastructure, collaborating with model builders, and supporting deployment patterns. While performance optimization could be a part of maintaining infrastructure, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities include developing, maintaining, and enhancing frameworks for machine learning model development and deployment, which implies managing the model lifecycle. This Activity's focus on continuous retraining, versioning, and governance aligns with the responsibilities of maintaining and enhancing machine learning frameworks and infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities mention collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services. This aligns with the Activity's focus on aligning generative AI services with existing enterprise systems and establishing APIs, indicating relevance in terms of system integration and interoperability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research to evaluate AI quality. They focus more on developing and maintaining frameworks, infrastructure, and deployment patterns. While evaluating AI quality could be a part of these processes, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on developing frameworks and infrastructure for machine learning models, which could involve developing AI systems and algorithms. However, the specific focus on automated insights and analyzing user behavior or system performance is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation. They focus on developing and maintaining frameworks and infrastructure for machine learning models, which may use synthetic data, but the generation of such data is not a direct responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services, which could involve identifying performance metrics and success criteria. However, this is not explicitly mentioned, making the relevance indirect.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. They focus on developing and maintaining frameworks and infrastructure for machine learning models, which may involve using labeled datasets, but the creation of such datasets is not a direct responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not mention designing, running, or analyzing experiments. They focus on developing and maintaining frameworks and infrastructure for machine learning models, which may involve experimentation, but it is not explicitly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not mention sampling data for evaluation. They focus on developing and maintaining frameworks and infrastructure for machine learning models, which may involve data evaluation, but sampling is not explicitly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing and maintaining machine learning platforms, frameworks, and infrastructure, as well as collaborating with model builders and supporting CI/CD pipelines. There is no mention of data annotation or labeling tasks, which are typically part of the data preparation phase before model development. Therefore, designing labeling tasks for data annotation does not seem relevant to the specified job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities are centered around building and maintaining machine learning infrastructure and solutions, with an emphasis on MLOps, automated pipelines, and collaboration with model builders. Collecting human annotation data is a task related to data preparation and management, which is not explicitly mentioned in the job responsibilities. Thus, this activity does not appear to be relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve developing and enhancing machine learning frameworks and infrastructure, with a focus on MLOps and automated processes. Analyzing human annotation data is related to evaluating data quality and generating insights, which is not directly mentioned in the job responsibilities. The responsibilities do not indicate involvement in data analysis or quality assessment of annotation data, making this activity irrelevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on developing and maintaining machine learning infrastructure, collaborating with model builders, and supporting deployment patterns. While statistical methods are fundamental to machine learning, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus is more on infrastructure and deployment rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on building and maintaining ML infrastructure and pipelines, not on analyzing data or presenting findings. Therefore, this activity is not directly relevant to the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not specifically mention data mining or analysis of conversational datasets. The focus is on infrastructure, deployment, and collaboration with model builders. There is no indication that the role involves exploring user-generated interactions or uncovering trends in datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include developing, maintaining, and enhancing frameworks for machine learning model development and deployment, as well as supporting the development of new patterns for deployment with CI/CD pipelines. This aligns with the activity of developing data models and pipelines, as it involves creating scalable workflows and infrastructure for ML models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities mention collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services. This could involve defining metrics and success criteria to ensure that the services meet business needs. However, the responsibilities do not explicitly mention defining or tracking metrics, so the relevance is not strong.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities include designing and building MLOps solutions with automated pipelines and standardized processes, as well as supporting the deployment of machine learning models with CI/CD pipelines and automated testing. This aligns closely with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The use of containerization, orchestration, and real-time monitoring mentioned in the Activity is also relevant to ensuring performance, scalability, and reliability, which are critical aspects of the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention real-time monitoring and logging solutions or tracking model performance, latency, and errors in production. However, the focus on collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services may imply a need for monitoring to ensure these requirements are met. Additionally, supporting the development of new patterns for deployment with automated testing could involve monitoring aspects. Despite these indirect connections, the specific focus on monitoring and observability is not strongly emphasized in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention implementing version control systems for datasets and model artifacts. However, the development, maintenance, and enhancement of frameworks for machine learning model development and deployment could imply a need for versioning to ensure reproducibility and traceability. Despite this potential connection, the specific focus on data and model versioning is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include supporting the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing. This aligns with the Activity's focus on automating validation steps (unit tests, integration tests, performance benchmarks) for new or updated models. The mention of introducing guardrails like canary testing or shadow deployments to verify stability is also relevant to ensuring stability before fully rolling out changes, which is a critical aspect of the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities include developing, maintaining, and enhancing infrastructure supporting machine learning services. This aligns with the Activity's focus on optimizing and scaling model-serving infrastructure using cloud platforms and container orchestration tools. Designing automated scaling policies to handle traffic spikes and ensure consistent response times is relevant to the responsibilities of maintaining and enhancing infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not explicitly mention establishing governance frameworks for data privacy, ethics, and regulatory compliance, or implementing role-based access controls and secure deployment practices. While these are important aspects of MLOps, they are not directly addressed in the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities do not explicitly mention planning regular retraining, hyperparameter tuning, or performance evaluations. However, the development, maintenance, and enhancement of frameworks for machine learning model development and deployment could imply a need for continuous improvement and lifecycle management. Despite this potential connection, the specific focus on model lifecycle management and continuous improvement is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on developing and maintaining machine learning infrastructure, collaborating with model builders, and supporting deployment processes. User interviews and surveys are typically associated with gathering user insights for UX design, which is not directly related to the technical and infrastructure-focused responsibilities outlined in the job description.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities are centered around machine learning operations, infrastructure, and deployment, which do not directly involve usability testing or prototyping. These activities are more relevant to UX design and improving user interfaces, which are not mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities related to understanding user segments and improving user experience. The Job Responsibilities are focused on technical aspects of machine learning platforms and do not mention user experience or user journey considerations, making this activity irrelevant to the job.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and needs, which is more aligned with UX research. The Job Responsibilities are focused on technical development and deployment of machine learning models, without any mention of user feedback analysis or UX research, making this activity irrelevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and building MLOps solutions, which involves defining system components and integration points. This aligns with the activity of designing and implementing software architecture, as both require creating scalable and maintainable solutions that meet business needs and performance requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities focus on developing and enhancing frameworks for machine learning model development and deployment, which involves writing clean and efficient code. This is relevant to developing production-grade applications, as both require maintaining code quality and following coding standards.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities explicitly mention supporting the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing. This directly aligns with the activity of continuous integration and delivery, which involves automating build, test, and deployment processes.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. While these are important aspects of maintaining machine learning services, they are not directly addressed in the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities include collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services. This is relevant to API development and system integration, as it involves designing and implementing APIs to enable integrations.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities mention supporting the development of new patterns for deployment with automated testing. This is relevant to software testing and quality assurance, as it involves developing automated test suites to maintain test coverage and reliability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities include developing, maintaining, and enhancing infrastructure supporting machine learning services. This aligns with the activity of DevOps and infrastructure as code, as both involve managing and provisioning cloud resources and promoting collaboration and scalability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities focus on developing and maintaining MLOps solutions, frameworks, and infrastructure for machine learning models. While these tasks are related to the deployment and operational aspects of ML models, they do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or fairness. Therefore, this activity is not directly relevant to the specified job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include developing and enhancing frameworks for machine learning model development and deployment, which aligns with building and refining AI methods. However, the focus is more on the operational side (MLOps) rather than developing AI systems for automated insights. Thus, while there is some overlap, the primary focus of the job is not on developing AI systems for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or related tasks. The focus is on MLOps solutions, model deployment, and infrastructure support, which do not directly involve creating synthetic datasets. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities involve collaborating with ML model builders and application owners to determine business requirements and SLAs for API-enabled services. This could involve identifying performance metrics and success criteria to ensure that the services meet the required standards. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets or data annotation tasks. The focus is on MLOps solutions, model deployment, and infrastructure support, which do not directly involve creating labeled datasets. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include supporting the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing. While this involves testing, it does not explicitly mention designing, running, or analyzing experiments like A/B tests. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j52b7e",
+    "responsibilities": [
+      "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+      "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+      "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+      "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+      "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on MLOps solutions, model deployment, and infrastructure support, which do not directly involve data sampling tasks. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  }
+]

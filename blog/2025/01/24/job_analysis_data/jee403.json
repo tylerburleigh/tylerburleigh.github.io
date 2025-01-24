@@ -1,0 +1,652 @@
+[
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. While these tasks involve working with models, they do not specifically mention fine-tuning or customizing large language models for domain-specific tasks. The responsibilities are more about the operational aspects of model lifecycle management rather than the development or customization of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention crafting or refining prompts for large language models. The focus is on monitoring and managing models and data pipelines, which does not directly relate to prompt engineering or iterative refinement of language model outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include monitoring models for issues like data/model drift and ensuring models stay accurate and useful. These tasks align with evaluating model performance and reliability, which is a part of model evaluation and performance assessment. However, the responsibilities do not specifically mention large language models or the specific metrics used in their evaluation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities do not mention integrating model outputs into end-user experiences or pipelines. The focus is on monitoring and managing models and data pipelines, which is more about the operational side rather than integration with applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include monitoring models and ensuring they remain accurate and useful, which could involve analyzing model outputs to identify errors or potential improvements. This aligns with the concept of model interpretability and debugging, as understanding and refining model outputs is crucial for maintaining model performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include monitoring data pipelines and ensuring models remain accurate and useful. Designing end-to-end workflows for AI-driven pipelines aligns with these responsibilities, as it involves creating a seamless integration of components that support data ingestion, preprocessing, and model deployment. This is relevant to the task of managing and monitoring data pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities focus on monitoring models and data pipelines, but do not explicitly mention assessing computational demands or planning for scalability. While resource planning is important for model deployment, it is not directly mentioned in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities include ensuring models stay accurate and useful, which could involve performance optimization. However, there is no specific mention of latency control or handling spikes in requests, which are the main focus of this activity. Therefore, this activity is not directly relevant to the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities explicitly mention working on the full lifecycle of models, including deployment, monitoring, and retraining. This aligns closely with the activity of model lifecycle management and governance, which involves continuous retraining and versioning to adapt to evolving data and requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities do not mention aligning AI services with existing enterprise systems or establishing APIs for integration. The focus is more on monitoring and managing models and data pipelines rather than system interoperability.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research or evaluating AI quality through experiments. The focus is more on monitoring and managing models rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities do not mention developing new AI systems or algorithms. The focus is on monitoring existing models and data pipelines, rather than creating new systems for automated insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention generating synthetic data. The focus is on monitoring and managing existing models and data pipelines, rather than creating synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities involve ensuring models stay accurate and useful, which could involve identifying performance metrics. However, there is no explicit mention of defining success criteria or performance metrics, so this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not mention creating labeled datasets. The focus is on monitoring and managing models and data pipelines, rather than preparing datasets for evaluation and optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not mention designing or running experiments. The focus is on monitoring and managing models and data pipelines, rather than conducting experiments to compare model variants or features.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not mention sampling data for evaluation. The focus is on monitoring and managing models and data pipelines, rather than sampling data for evaluation purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. Designing labeling tasks for data annotation involves creating guidelines and workflows for data labeling, which is a foundational step in preparing data for machine learning models. However, the responsibilities do not explicitly mention data annotation or labeling tasks. The focus is more on the lifecycle of models and data pipeline management rather than the initial data preparation phase.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize monitoring models, managing data pipelines, and collaborating to maintain model accuracy. Collecting human annotation data is a task related to the preparation of datasets for training models. While it is an important part of the data lifecycle, the responsibilities do not specifically mention data collection or annotation. The focus is more on post-data collection activities like deployment and monitoring.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include monitoring models and data pipelines, which implies a need for data analysis to ensure model accuracy and performance. Analyzing human annotation data involves evaluating dataset quality, which could be relevant to ensuring the accuracy and usefulness of models. However, the responsibilities do not explicitly mention analyzing annotation data, and the focus is more on model lifecycle management rather than data quality analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. While statistical methods are fundamental to building and validating models, the responsibilities do not explicitly mention statistical techniques or hypothesis testing. The emphasis is more on operational aspects like deployment, monitoring, and retraining rather than the initial model development phase where statistical methods are typically applied.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities do not explicitly mention data visualization or exploratory analysis. The focus is on monitoring models and data pipelines, which may involve some level of data analysis, but the responsibilities do not highlight the need for visualization or presenting findings to stakeholders. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include monitoring models and data pipelines, which could involve analyzing data to detect issues like data drift. However, there is no specific mention of working with large conversational datasets or uncovering trends and patterns in such data. The responsibilities are more focused on maintaining model accuracy and operational efficiency rather than exploratory data mining.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities include improving how data pipelines are managed and monitored, which directly relates to developing data models and pipelines for analytics. This activity is relevant as it aligns with the responsibility of ensuring that data pipelines are efficient and effective for model performance tracking and retraining.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities involve monitoring models for issues and ensuring they remain accurate and useful. Defining metrics and success criteria is crucial for assessing model health and guiding decision-making, which aligns with the responsibility of monitoring and maintaining model performance. This activity is relevant as it supports the ongoing evaluation and improvement of models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention working on the full lifecycle of models, including deployment, which directly aligns with the Deployment and MLOps activity. This activity involves designing and maintaining CI/CD pipelines for model deployment, which is a crucial part of the model lifecycle mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities explicitly mention monitoring machine learning models for issues like data/model drift and ensuring models stay accurate and useful. This directly relates to the Monitoring and observability activity, which focuses on real-time monitoring and logging to track model performance and detect data drift.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "While the Job Responsibilities do not explicitly mention versioning, they do involve managing and monitoring data pipelines and working on the full lifecycle of models. Versioning is an integral part of managing the lifecycle and ensuring reproducibility, which suggests a relevance to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention testing and validation. However, ensuring models stay accurate and useful could imply a need for continuous testing and validation to verify model stability and performance. This makes the activity somewhat relevant, though not directly mentioned.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not mention infrastructure or scalability directly. They focus more on monitoring, deployment, and lifecycle management. While infrastructure and scalability are important for MLOps, they are not explicitly covered in the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security. These aspects are important for MLOps but are not directly related to the tasks described in the responsibilities, which focus more on model lifecycle and monitoring.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include working on the full lifecycle of models, including deployment, monitoring, and retraining. This directly aligns with the Model lifecycle management and continuous improvement activity, which involves planning regular retraining and performance evaluations.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. User interviews and surveys are primarily about gathering user insights, which is not directly related to the technical tasks described in the responsibilities. There is no mention of user research or gathering user feedback in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities are centered around the technical aspects of machine learning models and data pipelines. Usability testing and prototyping involve evaluating user interfaces and experiences, which do not align with the responsibilities of monitoring models and data pipelines. There is no indication that the role involves user experience design or testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities related to understanding user segments and their interactions with a product. The Job Responsibilities are focused on technical tasks related to machine learning models and data management, with no mention of user experience or journey mapping. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback and identifying themes, which is more aligned with user research than the technical tasks outlined in the Job Responsibilities. The responsibilities focus on model monitoring, data pipeline management, and collaboration for model accuracy, none of which involve qualitative data analysis related to user research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on monitoring machine learning models, managing data pipelines, and ensuring model accuracy. While designing and implementing software architecture is crucial for building scalable systems, it is not directly mentioned in the responsibilities. The responsibilities are more aligned with operational tasks rather than architectural design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities include working on the full lifecycle of models, which may involve developing production-grade applications. However, the focus is more on deployment, monitoring, and retraining rather than the initial development of applications. Therefore, this activity is somewhat relevant but not a primary focus.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The responsibilities mention deployment and monitoring, which are part of the CI/CD process. Automating deployment processes and maintaining code quality are relevant to ensuring models are deployed efficiently and remain accurate. Thus, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "Monitoring is explicitly mentioned in the job responsibilities, including monitoring machine learning models and data pipelines. Implementing logging, metrics, and alerting solutions aligns with the need for real-time visibility into system health, making this activity highly relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not specifically mention API development or system integration. While these tasks could be part of managing data pipelines, they are not explicitly stated, making this activity less relevant to the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities focus on monitoring and maintaining model accuracy, which implies a need for testing and quality assurance. However, the responsibilities do not explicitly mention developing automated test suites or maintaining test coverage, making this activity somewhat relevant but not directly aligned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibilities involve managing and monitoring data pipelines and deploying models, which are tasks that can benefit from a DevOps approach and infrastructure as code. Embracing a DevOps culture can enhance collaboration and scalability, making this activity relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include monitoring machine learning models for issues like data/model drift and ensuring models stay accurate and useful. Conducting research to evaluate AI quality involves investigating system accuracy and other performance metrics, which aligns with the responsibility of monitoring and maintaining model accuracy. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on the lifecycle of models, including deployment, monitoring, and retraining, as well as improving data pipeline management. While developing AI systems and algorithms for automated insights involves building and refining AI methods, the job responsibilities do not explicitly mention developing new systems or algorithms. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities include monitoring models and managing data pipelines, but they do not mention generating synthetic data or evaluating its quality. Synthetic data generation is more focused on creating datasets for testing or improving models, which is not explicitly covered in the job responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities involve monitoring models for issues and ensuring they remain accurate and useful. Identifying performance metrics and success criteria is crucial for assessing model health and guiding decision-making, which aligns with the responsibility of monitoring and maintaining model accuracy. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities focus on monitoring models and managing data pipelines, but they do not explicitly mention creating labeled datasets. While labeled datasets are important for model training and evaluation, the job responsibilities do not directly address this aspect. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include ensuring models stay accurate and useful, which may involve testing different model variants or features. Designing, running, and analyzing experiments like A/B tests can help in comparing model variants and making informed decisions, aligning with the responsibility of maintaining model accuracy. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jee403",
+    "responsibilities": [
+      "Monitor machine learning models for issues like data/model drift",
+      "Work on the full lifecycle of models, including deployment, monitoring, and retraining",
+      "Help improve how we manage and monitor data pipelines",
+      "Collaborate with the team to make sure models stay accurate and useful"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve monitoring models and managing data pipelines, which may require sampling data for evaluation to ensure model accuracy and performance. Sampling data is a part of evaluating models and ensuring they are trained on representative datasets, aligning with the responsibility of maintaining model accuracy. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  }
+]

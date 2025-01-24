@@ -1,0 +1,34 @@
+{
+  "filename": "j8e9b9",
+  "responsibilities": [
+    "Architect, develop, and deliver software solutions for AI-focused applications.",
+    "Drive and participate in feasibility, requirements, architecture, design, implementation, integration, and verification for Web applications.",
+    "Build best-in-class web and standalone software.",
+    "Develop data transformations for Machine Learning pipelines.",
+    "Maintain proprietary and open-source Python packages.",
+    "Work with engineers from different business units to create or improve products.",
+    "Design for modularity and reuse; develop robust, scalable, and fault-tolerant solutions.",
+    "Write user and API documentation and unit tests.",
+    "Automate the build, test, and deployment of code.",
+    "Design and implement back and front-end components and services.",
+    "Design, implement, and maintain well-abstracted and documented REST APIs.",
+    "Collaborate with other teams to deploy and serve AI/ML models via APIs.",
+    "Work closely with the DevOps team to improve system availability, scalability, and reliability.",
+    "Guarantee product and code quality using best practices such as unit testing and code reviews.",
+    "Stay up to date with the latest developments in web technologies and frameworks."
+  ],
+  "qualifications": [
+    "Expertise in Full Stack software technology (Front-end, Backend, Data, Systems).",
+    "Proficiency with microservices architectures and REST API development (e.g., FastAPI).",
+    "Experience with CI/CD systems, SQL, and NoSQL database technologies (e.g., MySQL, MongoDB, PostgresSQL).",
+    "Expertise with at least one cloud platform, Azure (preferred).",
+    "Proficiency in Agile/Scrum development processes and tools (e.g., Jira, Confluence).",
+    "Excellent communication and collaboration skills.",
+    "Proficient in technologies such as Angular, React, Java, Python, Groovy, Linux, Github, Docker, Redis, RabbitMQ, NGINX, RESTful services, LlamaIndex, multi-threading, SQL query optimization, JIRA automation, DevOps, Git-flow.",
+    "Advanced knowledge in security \u2013 Authentication, encryption at rest and in transit, SSL, TLS, oAuth, Vault, tokenization.",
+    "Familiarity with message queue-based micro-service orchestration through RabbitMQ or similar.",
+    "Background in ML/ML-OPS preferred but not required."
+  ],
+  "analysis": "The job responsibilities and skills listed focus on developing AI-focused applications, building web and standalone software, and working with machine learning pipelines. The responsibilities include deploying and serving AI/ML models via APIs, which suggests involvement with AI technologies. However, there is no explicit mention of Generative AI or language models (LLMs) such as GPT, BERT, or similar technologies. The skills section mentions a background in ML/ML-OPS, but it is not required, and there is no specific mention of skills related to GenAI or LLMs. The mention of \"LlamaIndex\" could be a reference to a tool or library related to AI, but it is not explicitly tied to GenAI or LLMs. Overall, while the job involves AI and ML, there is no clear indication that it specifically involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

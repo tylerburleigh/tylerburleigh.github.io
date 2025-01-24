@@ -1,0 +1,20 @@
+{
+  "filename": "j456d9",
+  "responsibilities": [
+    "Help build, scale, and maintain production services and infrastructure that deliver critical data, ML inferences, and experiences to students and teachers on Quizlet.com",
+    "Accelerate and amplify the work of Machine Learning Engineers by building infrastructure that streamlines the development, testing, and deployment of machine learning models to production",
+    "Support ML engineers in productionizing ML models and features with the goal of developing tools and processes that enable self-service",
+    "Develop and implement scalable infrastructure and platform solutions that enable the acquisition, ingestion, and processing of data at scale",
+    "Partner with Product Engineers and Data Scientists to ensure that critical data is delivered to its destination with maximal availability, recoverability, and operational efficiency",
+    "Collaborate with engineers and leadership across the organization to define the technical vision and build on the technical roadmap for Data Platform"
+  ],
+  "qualifications": [
+    "Experience building and operating API endpoints and services for users or business-facing products with high levels of reliability",
+    "Proficiency with microservices development and distributed systems (Docker, Kubernetes, Terraform)",
+    "Experience with building and maintaining systems in Google Cloud Platform (or AWS and Azure)",
+    "Excellent communication and problem-solving skills",
+    "A desire to learn new things and help others learn"
+  ],
+  "analysis": "The job responsibilities focus on building, scaling, and maintaining production services and infrastructure for delivering data and machine learning (ML) inferences. The role involves accelerating the work of ML engineers by streamlining the development, testing, and deployment of ML models, and supporting the productionization of ML models and features. The responsibilities also include developing scalable infrastructure for data acquisition, ingestion, and processing, and collaborating with engineers and leadership to define the technical vision for the Data Platform.\n\nThe skills required include experience with API endpoints, microservices development, distributed systems, and cloud platforms like Google Cloud Platform, AWS, or Azure. There is no specific mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on infrastructure, data processing, and supporting ML engineers rather than directly working with GenAI or LLMs.\n\nBased on the provided information, the job does not explicitly involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

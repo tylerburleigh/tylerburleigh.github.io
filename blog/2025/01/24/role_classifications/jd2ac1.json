@@ -1,0 +1,24 @@
+{
+  "filename": "jd2ac1",
+  "responsibilities": [
+    "Enhance the existing NLP/NLU platform using the latest machine learning techniques and tools.",
+    "Work on voice transcription and translation pipelines, search and discovery algorithms, Generative AI, and voice assistance technology.",
+    "Solve problems in the NLP/NLU domain such as named entity recognition, user intent recognition, and query classification.",
+    "Build, train, and deploy open source models such as Whisper and LLaMA.",
+    "Hypothesize, design, and conduct experiments in natural language processing, understanding, and generation.",
+    "Build tools to mine and label text datasets for training and testing.",
+    "Work on search algorithms and optimizations using OpenSearch/Elastic Search."
+  ],
+  "skills": [
+    "Understanding of transformer models and GenAI, including few-shot learning, fine-tuning, guardrailing, and benchmarking.",
+    "Knowledge of neural network architectures for NLP, such as CNN, LSTM, GRU, and transformer-based architectures.",
+    "Deep understanding of word embeddings, BERT, GPT, text classifiers, transfer learning, text mining, and text labeling concepts.",
+    "Experience with technologies like Tensorflow, PyTorch, spaCy, Sagemaker, MLFlow, Airflow, TensorBoard, Anaconda, Jupyter, and Kubernetes.",
+    "Experience with building personal digital assistants or chatbots.",
+    "Experience with building search platforms and personalizing search and discovery.",
+    "Worked with automatic speech recognition (ASR)."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on natural language processing (NLP), natural language understanding (NLU), and machine learning techniques. The responsibilities include enhancing NLP/NLU platforms, working on voice transcription, translation pipelines, search algorithms, and deploying models like Whisper and LLaMA. The skills required include understanding transformer models, neural network architectures, and experience with technologies like TensorFlow, PyTorch, and Kubernetes.\n\n1. **AI Research Scientist**: This option involves investigating AI methodologies and conducting experiments, which aligns with the job's focus on enhancing NLP/NLU platforms and conducting experiments. However, the primary focus here is more on generative models and prompt engineering, which is not the main focus of the job.\n\n2. **AI/ML Engineer**: This role focuses on transforming research into scalable solutions and maintaining data pipelines, which partially aligns with the job's focus on deploying models and working with technologies like TensorFlow and PyTorch. However, the job's emphasis on NLP/NLU and specific models like Whisper and LLaMA is not a direct match.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about deploying and monitoring AI systems, which involves some overlap with the job's use of Kubernetes and model deployment. However, the job's focus on NLP/NLU and specific model training is not a direct match.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which does not align with the job's technical focus on NLP/NLU and model deployment.\n\n5. **Data Scientist**: This role involves data analysis and model development, which is somewhat related to the job's focus on NLP/NLU and model training. However, the job's specific focus on NLP/NLU and technologies like TensorFlow and PyTorch is not a direct match.\n\n6. **Data Engineer**: This role focuses on data pipelines and architectures, which does not align with the job's focus on NLP/NLU and model deployment.\n\n7. **Product Manager**: This role involves product vision and strategy, which does not align with the job's technical focus on NLP/NLU and model deployment.\n\n8. **Software Engineer**: This role involves software development and system architecture, which does not align with the job's specific focus on NLP/NLU and model deployment.\n\nThe job's focus on NLP/NLU, model training, and deployment aligns most closely with the responsibilities and skills of an AI/ML Engineer, as it involves deploying models and working with machine learning technologies. However, the specific focus on NLP/NLU and models like Whisper and LLaMA makes it a unique fit that doesn't perfectly align with any of the options. Despite this, the AI/ML Engineer role is the closest match due to its focus on transforming research into scalable solutions and working with machine learning technologies.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

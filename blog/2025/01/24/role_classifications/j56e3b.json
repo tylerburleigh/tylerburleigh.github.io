@@ -1,0 +1,28 @@
+{
+  "filename": "j56e3b",
+  "responsibilities": [
+    "Collaborate closely with Data Scientists and Data Engineers to design and implement scalable, efficient machine learning pipelines that meet business needs.",
+    "Evaluate machine learning models to ensure optimal performance and scalability, making necessary adjustments to improve outcomes.",
+    "Deploy machine learning models into production environments, ensuring seamless integration, and continuously monitor their performance to maintain reliability and accuracy.",
+    "Manage and oversee data science infrastructure to streamline the model development and deployment process, ensuring efficient workflows.",
+    "Propose and implement appropriate tools, including languages, libraries, and frameworks, to enhance project execution and outcomes.",
+    "Work in collaboration with infrastructure architects to develop scalable and efficient solutions that align with organizational goals and technological capabilities.",
+    "Collaborate with multi-functional teams to integrate machine learning models into existing systems and processes, ensuring a smooth transition and effective implementation.",
+    "Stay ahead of the latest advancements in Machine Learning (ML), Artificial Intelligence (AI), and Generative AI (GenAI) to incorporate innovative techniques and technologies into projects.",
+    "Mentor peers and provide guidance on ML/LLMOps standard practices, fostering a culture of continuous learning and improvement within the team."
+  ],
+  "skills": [
+    "Strong programming skills in Python, with experience in machine learning libraries like TensorFlow, PyTorch, or scikit-learn.",
+    "Strong familiarity with MLOps practices, including model monitoring, versioning, and lifecycle management.",
+    "Advanced knowledge of SQL and experience working with relational databases, alongside proficiency in RDBMS and NoSQL databases.",
+    "Experience in infrastructure management, including cloud computing, Linux OS, networks, Docker, and Kubernetes.",
+    "Expertise in cloud-native architecture, preferably using the Azure stack, with skills in Azure ML, Databricks (Spark), and Azure Data Factory.",
+    "Proficient in building ETL pipelines for feature engineering on large-scale datasets using Spark.",
+    "Experience with Large Language Models (LLMs) including proprietary or open source models.",
+    "Ability to balance urgency with the delivery of high-quality, pragmatic solutions.",
+    "Expertise in delivering analytics and machine learning products, with a deep understanding of agile product delivery in enterprise environments."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on machine learning operations (MLOps), infrastructure management, and the deployment and monitoring of machine learning models. The responsibilities include collaborating with data scientists and engineers, deploying models into production, managing data science infrastructure, and staying updated with advancements in ML and AI. The skills required include strong programming skills in Python, familiarity with MLOps practices, experience in infrastructure management, and expertise in cloud-native architecture.\n\n1. **AI Research Scientist**: This option focuses on AI research, conducting experiments, and developing datasets. It does not align well with the job's focus on MLOps and infrastructure.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which partially aligns with the job's focus on deploying models and managing data pipelines. However, it lacks the strong emphasis on infrastructure management and MLOps practices.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is a strong match as it focuses on reliable deployment, scaling, and monitoring of AI systems, setting up CI/CD pipelines, and managing infrastructure for scalable AI deployments. The skills required, such as a strong DevOps background and familiarity with Docker, Kubernetes, and cloud services, align well with the job's requirements.\n\n4. **AI Solution Architect**: This role focuses on designing AI solutions and collaborating with SMEs, which does not align with the job's focus on MLOps and infrastructure management.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and presenting findings, which does not align with the job's focus on MLOps and infrastructure.\n\n6. **Data Engineer**: This role involves developing data pipelines and managing data workflows, which partially aligns with the job's focus on managing data science infrastructure. However, it lacks the emphasis on deploying and monitoring machine learning models.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which does not align with the job's technical focus on MLOps and infrastructure.\n\n8. **Software Engineer**: This role involves software development and system architecture, which does not align with the job's focus on MLOps and machine learning infrastructure.\n\nThe most relevant option is the \"MLOps / AI Infrastructure Engineer\" as it closely matches the job's focus on deploying, scaling, and monitoring machine learning models, as well as managing infrastructure and implementing MLOps practices.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

@@ -1,0 +1,24 @@
+{
+  "filename": "je6c99",
+  "responsibilities": [
+    "Shape the architecture and scalability of the next-generation AI inference platform.",
+    "Lead the design and implementation of core systems for AI services, including resilient fault-tolerant queues, model catalogs, and scheduling mechanisms.",
+    "Build and scale infrastructure capable of handling millions of API requests per second.",
+    "Own critical subsystems for managed AI inference to serve large language models (LLMs) globally.",
+    "Collaborate cross-functionally to influence the long-term vision of the platform.",
+    "Develop a customer-facing API that serves real-world AI models.",
+    "Prototype rapidly, optimize performance on GPUs, and ensure high availability as part of MVP development.",
+    "Contribute to open-source AI frameworks and low-level performance optimizations."
+  ],
+  "qualifications": [
+    "Strong background in distributed systems design and implementation.",
+    "Experience with cloud-based services that can handle millions of requests.",
+    "Problem-solving skills around performance optimizations, particularly for AI inference on GPU-based systems.",
+    "Proactive and collaborative approach with the ability to work autonomously.",
+    "Strong communication skills, both written and verbal.",
+    "Passion for open-source contributions and AI inference frameworks.",
+    "Keen interest in customer-facing product development and building user-friendly APIs."
+  ],
+  "analysis": "The job responsibilities include owning critical subsystems for managed AI inference to serve large language models (LLMs) globally, which directly indicates involvement with language models. Additionally, the development of a customer-facing API that serves real-world AI models suggests working with AI models, potentially including generative AI models. The skills required, such as performance optimizations for AI inference on GPU-based systems and a passion for AI inference frameworks, further support the involvement with AI technologies, including generative AI and language models. The mention of contributing to open-source AI frameworks also aligns with working in the AI domain, potentially involving generative AI and LLMs.",
+  "is_genai_role": true
+}

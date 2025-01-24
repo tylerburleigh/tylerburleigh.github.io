@@ -1,0 +1,38 @@
+{
+  "responsibilities": [
+    "Design, build, and maintain scalable data pipelines using CI/CD and Git to incorporate best practices.",
+    "Implement ETL/ELT processes of IoT data to ensure prompt access to business-ready data.",
+    "Create and refine tools and frameworks for data scientists and analysts to efficiently query, process, and visualize data.",
+    "Develop automated data quality checks and create data models that align with business requirements.",
+    "Work on the architecture of data systems, ensuring robustness, scalability, and security.",
+    "Optimize data flow for real-time analytics and machine learning model training.",
+    "Integrate various data sources and ensure interoperability between cloud services and microservices.",
+    "Monitor and enhance the performance of data systems, including tuning SQL queries and managing data warehouse performance.",
+    "Collaborate with data scientists, analysts, and engineers to provide tailored data solutions.",
+    "Participate in cross-functional teams to drive projects from conception to deployment.",
+    "Maintain comprehensive documentation of data pipelines, tools, and processes.",
+    "Mentor junior team members and share knowledge to foster a culture of continuous learning.",
+    "Keep abreast of new developments in IoT, big data technologies, and data engineering practices."
+  ],
+  "skills": [
+    "Proficient in programming languages like Python.",
+    "Experience with big data technologies such as Apache Spark, Kafka, or similar tools.",
+    "Experience implementing streaming applications with Apache Kafka, Spark Structured Streaming, or Flink.",
+    "Knowledge of cloud platforms (AWS, GCP, Azure) with practical experience in implementing cloud-based data solutions.",
+    "Familiarity with database systems, both relational (e.g., PostgreSQL) and NoSQL (e.g., MongoDB).",
+    "Expertise in version control systems such as Git.",
+    "Experience with Databricks and workflow management tools such as Databricks Workflows or Apache Airflow.",
+    "Expertise with build pipelines such as Github Actions or Bitbucket Pipelines.",
+    "Proficiency with Java and/or Scala.",
+    "Knowledge of code design frameworks such as microservices, domain-driven design, functional programming, and event-based application design.",
+    "Strong analytical and problem-solving skills.",
+    "Excellent communication skills to liaise between technical and non-technical stakeholders.",
+    "Ability to independently manage and progress on multiple projects simultaneously."
+  ],
+  "qualifications": [
+    "Bachelor's or master’s degree in computer science, Machine Learning, or a related field.",
+    "3-5 years of experience in data engineering roles with at least one role in a technology company.",
+    "Proven experience in Apache Spark and Python.",
+    "Experience deploying containerized applications via Docker, Kubernetes, and/or Terraform."
+  ]
+}

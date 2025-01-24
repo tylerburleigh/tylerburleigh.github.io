@@ -1,0 +1,29 @@
+{
+  "responsibilities": [
+    "Lead the modernization of IHS health records by establishing a central repository for clinical data and longitudinal patient records.",
+    "Design and implement Azure data pipelines to consolidate clinical data from 200+ healthcare facilities into an enterprise analytics environment.",
+    "Develop automated ETL processes for high-volume JSON/HL7 FHIR data using Azure Data Factory and Data Lake.",
+    "Create and optimize PySpark processes for large-scale healthcare data transformation.",
+    "Build and maintain enterprise data models to standardize clinical information across facilities.",
+    "Implement monitoring solutions to ensure data quality and pipeline performance.",
+    "Provide technical leadership on cloud architecture best practices."
+  ],
+  "skills": [
+    "Proficiency in Microsoft Azure.",
+    "Strong programming skills in Python (PySpark) and .NET for large-scale data processing.",
+    "Proficiency in Structured Query Language (SQL) and data modeling for enterprise-scale databases.",
+    "Extensive experience with Azure data services including Azure Data Lake Gen2, Azure Synapse Analytics, Azure Data Factory, Azure Monitor, and Spark Clusters.",
+    "Experience developing Infrastructure as Code and RESTful APIs in Azure.",
+    "Track record of implementing CI/CD pipelines and DevOps practices.",
+    "Advanced PowerBI data visualization and development skills.",
+    "Experience with HL7 FHIR implementation and healthcare data standards.",
+    "Experience with Agile methodologies and team leadership."
+  ],
+  "qualifications": [
+    "Technical Training, Certification(s) or Degree and 1+ years of experience or equivalent years of experience.",
+    "Ability to take the lead as a big data engineer on a database migration and data pipelines using Azure.",
+    "Must be able to obtain a public trust level 5 clearance, which requires residency in the U.S. for 3 of the last 5 years.",
+    "Relevant Azure certifications such as Azure Data Engineer Associate (DP-203), Azure Database Administrator Associate (DP-300), and Azure Solutions Architect Expert (AZ-305) are nice to have.",
+    "Master's degree in Computer Science or related field is nice to have."
+  ]
+}

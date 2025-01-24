@@ -1,0 +1,30 @@
+{
+  "responsibilities": [
+    "Design and develop data pipelines using tools like Apache Airflow or by leveraging Snowflake's external tables functionality.",
+    "Translate HiveQL queries to Snowflake SQL, ensuring compatibility and efficient data processing.",
+    "Utilize dbt to model and transform data within Snowflake, adhering to best practices for data governance and maintainability.",
+    "Configure and manage data pipelines in GCP to orchestrate data movement and processing tasks.",
+    "Collaborate with data analysts and stakeholders to understand data requirements and ensure a successful migration outcome.",
+    "Monitor and optimize data pipelines for performance and scalability.",
+    "Develop and implement automated testing procedures to validate data quality and integrity after migration.",
+    "Document the migration process and provide ongoing support for the migrated data warehouse on Snowflake."
+  ],
+  "skills": [
+    "Strong expertise in HiveQL, SQL, and experience with data warehousing/lake house concepts (dimensional modeling, data quality, etc.).",
+    "Strong programming knowledge in Python.",
+    "Strong understanding of data architectures and patterns.",
+    "Experience with Apache Spark for large-scale data processing (a plus).",
+    "Proficiency in dbt for data modeling and transformation in Snowflake preferred.",
+    "Experience working with Google Cloud Platform (GCP) and its data storage services (GCS, BigQuery - a plus).",
+    "Excellent written and verbal communication skills with the ability to collaborate effectively with cross-functional teams.",
+    "Strong problem-solving skills and a passion for building efficient and scalable data solutions."
+  ],
+  "qualifications": [
+    "5+ years of experience as a Data Engineer with a proven track record of successful data warehouse/data lake implementation and management.",
+    "Deep understanding of leveraging Snowflake, or similar tools, to build highly performant and resilient datawarehouse/lakehouse system.",
+    "Snowflake certification preferred.",
+    "Experience in DataOps implementation and support.",
+    "Experience in MLOps implementation and support.",
+    "Experience in building and supporting AI/ML platform."
+  ]
+}

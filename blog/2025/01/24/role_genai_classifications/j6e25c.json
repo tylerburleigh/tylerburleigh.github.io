@@ -1,0 +1,22 @@
+{
+  "filename": "j6e25c",
+  "responsibilities": [
+    "Conduct novel research applying AI/ML to OSK\u2019s satellite hyperspectral imagery.",
+    "Help transition research to production, deploying models for both batch and online inference as well as embedded on the satellites.",
+    "Produce analytical infrastructure for AI/ML pipeline development.",
+    "Inform colleagues and mentor Individual Contributors about AI/ML opportunities and tasks.",
+    "Publish research in geospatial and/or AI conferences and write blog posts to showcase work.",
+    "Contribute to a cross-functional team responsible for the full algorithm development process, from human annotation to integration with the platform.",
+    "Develop new research that can lead to new products and publications.",
+    "Work collaboratively within the company to produce high-level engineering of both the data collection and information delivery platforms."
+  ],
+  "qualifications": [
+    "Proficiency in Python, Pytorch, ML Flow/ClearML, DVC, Ray, Dask, and the Python data science stack.",
+    "Comfortable training models in a cloud (AWS) environment.",
+    "Ability to use best practices to track ML experiments.",
+    "Excellent written and oral communication skills.",
+    "Familiarity with common remote sensing data types and tools, such as GeoTiffs, GDAL, rasterio, and xarray."
+  ],
+  "analysis": "The job involves conducting research applying AI/ML to satellite hyperspectral imagery, transitioning research to production, and developing AI/ML pipelines. The responsibilities focus on geospatial data and satellite imagery, which are not directly related to Generative AI or language models. The skills required include proficiency in Python, Pytorch, and cloud environments, which are common in AI/ML roles but do not specifically indicate work with GenAI or LLMs. The mention of remote sensing data types and tools further suggests a focus on geospatial analysis rather than language models or generative tasks. There is no explicit mention of working with Generative AI or language models in the responsibilities or skills.",
+  "is_genai_role": false
+}

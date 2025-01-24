@@ -1,0 +1,852 @@
+[
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on ensuring smooth operation of systems, debugging, building tools, creating libraries, profiling training, identifying experiment failures, redesigning data pipelines, and building evaluation tooling. While these tasks are related to machine learning and systems, they do not explicitly mention fine-tuning or customizing language models. The responsibilities are more about infrastructure and tooling rather than model training or fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or iterative refinement of prompts. The focus is on system operations, debugging, and tooling rather than crafting and refining prompts for language models. Therefore, this activity does not seem directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "One of the Job Responsibilities is to build front-end evaluation tooling for use across the company, which aligns with the activity of model evaluation and performance assessment. This suggests a focus on evaluating models, which is relevant to the activity described.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities do not explicitly mention integrating LLM outputs into downstream applications. The focus is more on system operations, debugging, and tooling rather than integration with applications. Therefore, this activity does not seem directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include diving into large ML codebases to understand and debug systems issues, which aligns with the activity of model interpretability and debugging. This suggests a focus on analyzing and debugging models, making this activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include tasks such as redesigning data pipelines to handle diverse multimodal data and creating reusable Python libraries for ML projects. These tasks align with designing end-to-end workflows and ensuring seamless integration of components, which are key aspects of creating architecture blueprints for AI-driven pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this Activity. While there is a general need for systems to run smoothly, the specific task of compute requirements and resource planning is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities include profiling large model reinforcement learning training and identifying and addressing bottlenecks, which directly relate to performance optimization and latency control. This Activity is relevant as it involves maintaining low response times and handling spikes in requests, which are critical for system performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities do not explicitly mention tasks related to model lifecycle management, such as continuous retraining, versioning, or governance. While there is a focus on building tools for data management and model configuration, the specific governance aspects are not highlighted.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities include building front-end evaluation tooling for use across the company, which suggests a need for system interoperability and integration. However, the specific focus on aligning generative AI services with existing enterprise systems is not directly mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities involve working with researchers to build tools for evaluation and identifying experiment failures, which aligns with conducting research to evaluate AI quality. This Activity is relevant as it involves investigating system performance metrics and validating hypotheses.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities include creating reusable Python libraries and working with researchers to build tools, which could involve developing AI systems and algorithms. However, the specific focus on automated insights is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation or related tasks. While there is a focus on data management and model configuration, the specific task of generating synthetic datasets is not addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include identifying experiment failures and building tools for evaluation, which involves defining and tracking performance metrics. This Activity is relevant as it aligns with assessing model health and guiding decision-making based on success criteria.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. While there is a focus on data management, the specific task of preparing balanced, high-quality data annotations is not highlighted.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include identifying experiment failures and building evaluation tools, which suggests involvement in designing and analyzing experiments. This Activity is relevant as it involves planning and executing controlled experiments to inform decisions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. While there is a focus on data management and evaluation, the specific task of using statistical methods to sample data is not addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The Job Responsibilities focus on managing systems for ChatGPT training, debugging ML codebases, building tools for data management, and creating Python libraries. While these tasks involve data management and system design, they do not specifically mention designing labeling tasks for data annotation. The responsibilities are more aligned with system-level and tool-building tasks rather than the creation of annotation guidelines or workflows.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The Job Responsibilities do not explicitly mention collecting human annotation data. The focus is on ensuring systems run smoothly, debugging, building tools, and handling data pipelines. While data management is mentioned, it is more in the context of model configuration and evaluation rather than managing logistics and communication for annotation projects.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The Job Responsibilities include tasks related to data management and evaluation, which could involve analyzing data. However, the responsibilities are more focused on system-level tasks, debugging, and building tools rather than specifically analyzing human annotation data using statistical methods. The analysis of annotation data is not directly mentioned or implied in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on ensuring smooth operation of systems for ChatGPT training, debugging systems issues, building tools for data management, and creating reusable Python libraries. While these tasks may involve some data analysis, there is no explicit mention of applying statistical techniques for hypothesis testing, inference, or building statistical models. The responsibilities are more aligned with system operations, debugging, and tool development rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include building front-end evaluation tooling and working with researchers to build tools for data management and evaluation. These tasks could involve data visualization and exploratory analysis to some extent, especially when presenting findings or insights. However, the primary focus seems to be on tool development and system operations rather than conducting exploratory data analysis or creating visualizations for stakeholders.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The responsibilities mention redesigning data pipelines to handle diverse multimodal data and working with researchers to build tools for data management. These tasks could involve data mining and analysis of large datasets, especially in the context of improving model performance and handling diverse data types. The focus on data management and pipeline redesign suggests relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include redesigning data pipelines to handle diverse multimodal data and working with researchers to build tools for data management. These tasks are directly related to developing data models and pipelines for analytics, as they involve implementing scalable data processing workflows and transforming data for systematic analysis.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The responsibilities do not explicitly mention defining metrics or success criteria. However, tasks such as identifying experiment failures and building evaluation tooling could involve some level of metric definition and analysis to assess model health and performance. Despite this indirect connection, the primary focus of the responsibilities is on system operations and tool development rather than metric definition.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention ensuring that systems run smoothly, debugging systems issues, and building tools for data management and model configuration. These tasks align with the deployment and MLOps activity, which involves maintaining CI/CD pipelines and ensuring the performance and reliability of AI systems. The focus on system performance and reliability in the responsibilities suggests a relevance to deployment and MLOps practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include ensuring systems run smoothly and identifying experiment failures, which implies a need for monitoring and observability. However, there is no explicit mention of real-time monitoring or logging solutions. The responsibilities do suggest a focus on system performance and debugging, which are related to monitoring and observability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or versioning of datasets and model artifacts. While there is a focus on data management and model configuration, the specific aspect of versioning is not highlighted. Therefore, this activity may not be directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include building tools for evaluation and identifying experiment failures, which suggests a need for testing and validation. However, there is no explicit mention of automating validation steps or testing strategies like canary testing. The focus on evaluation and identifying failures indicates some relevance to continuous testing and validation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities mention ensuring systems run smoothly and redesigning data pipelines, which could relate to infrastructure and scalability. However, there is no explicit mention of optimizing model-serving infrastructure or automated scaling policies. The responsibilities do imply a need for efficient system operation, which is related to infrastructure and scalability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security aspects such as data privacy, regulatory compliance, or secure deployment practices. The focus is more on system performance, debugging, and tool development, which do not directly relate to governance, compliance, and security.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include building tools for model configuration and evaluation, which are part of the model lifecycle management. However, there is no explicit mention of retraining, hyperparameter tuning, or feedback loops for continuous improvement. The responsibilities do suggest a focus on model management, indicating some relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on technical tasks related to machine learning systems, data management, and software development. There is no mention of direct user interaction or gathering user insights, which are central to user interviews and surveys. Therefore, this activity is not relevant to the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities do not include tasks related to designing or conducting usability tests, nor do they involve creating prototypes for user experience enhancement. The focus is on technical and system-level tasks rather than user experience design. Thus, this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities are centered around technical aspects of machine learning systems and data management, with no indication of tasks related to understanding user personas or mapping user journeys. These activities are typically part of UX research, which is not the focus here. Therefore, this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While the Job Responsibilities involve data management and evaluation, they are focused on technical and system-level data rather than qualitative data from user research. The responsibilities do not include synthesizing user feedback or translating it into recommendations, which are key aspects of qualitative data analysis in UX research. Thus, this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include tasks such as redesigning data pipelines, creating reusable Python libraries, and building tools for data management and model configuration. These tasks involve defining system components and integration points, which align with designing and implementing software architecture. The focus on ensuring systems run smoothly and handling diverse data also suggests a need for scalable and maintainable solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention creating reusable Python libraries and building front-end evaluation tooling, which involves writing clean, modular, and efficient code. However, the focus seems more on research and development tools rather than full production-grade applications. While there is some overlap, the primary focus is not on developing production-grade applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not explicitly mention automating build, test, and deployment processes or maintaining version control workflows. The focus is more on debugging systems issues, building tools, and managing data, which are not directly related to CI/CD practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The responsibility of identifying experiment failures in a new research cluster suggests a need for monitoring and incident management. However, the responsibilities do not explicitly mention implementing logging, metrics, or alerting solutions. The focus is more on debugging and addressing bottlenecks rather than real-time system health visibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention designing or implementing APIs. The focus is more on building tools for data management, model configuration, and evaluation, which may involve some level of system integration but not specifically API development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities include identifying experiment failures and debugging systems issues, which relate to ensuring quality and reliability. However, there is no explicit mention of developing automated test suites or maintaining test coverage, which are key aspects of software testing and quality assurance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention leveraging infrastructure-as-code tools or promoting a DevOps culture. The focus is more on ML codebases, data management, and building tools, which do not directly relate to managing and provisioning cloud resources or embracing DevOps practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include tasks such as working with researchers to build tools for data management, model configuration, and evaluation, as well as identifying experiment failures. These tasks align with the activity of conducting research to evaluate AI quality, which involves investigating system performance metrics and designing experiments to validate hypotheses. Therefore, this activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities mention creating reusable Python libraries for ML projects and profiling large model reinforcement learning training. These tasks suggest involvement in developing AI systems and algorithms. However, the focus on automated insights, such as analyzing user behavior or system performance, is not explicitly mentioned in the responsibilities. While there is some overlap, the specific focus on automated insights is not clearly reflected in the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities include redesigning data pipelines to handle diverse multimodal data, which could involve synthetic data generation. However, there is no explicit mention of developing methods for producing synthetic datasets or evaluating their quality. The focus seems to be more on handling existing data rather than generating synthetic data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities involve tasks such as profiling large model reinforcement learning training and identifying experiment failures, which require understanding and tracking performance metrics. This aligns with the activity of identifying performance metrics and success criteria, as it involves defining and analyzing indicators to assess model health and guide decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. While there is a focus on data management and evaluation, the specific task of preparing data annotations for AI evaluation and optimization is not highlighted. Therefore, this activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include identifying experiment failures and building evaluation tooling, which suggests involvement in experimental processes. However, there is no explicit mention of designing, running, or analyzing controlled experiments like A/B tests. The focus seems to be more on debugging and evaluation rather than experimental design and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1a9c2",
+    "responsibilities": [
+      "Ensure that systems which power ChatGPT training and development run smoothly.",
+      "Dive into large ML codebases to understand and debug systems issues.",
+      "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+      "Create reusable Python libraries with great abstractions usable across ML projects.",
+      "Profile large model reinforcement learning training and identify and address bottlenecks.",
+      "Identify experiment failures in a new research cluster.",
+      "Redesign data pipelines to handle diverse multimodal data.",
+      "Build front-end evaluation tooling for use across the company."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities involve tasks related to data management and evaluation, such as redesigning data pipelines and building evaluation tooling. These tasks could involve sampling data for evaluation purposes. However, the specific mention of using statistical methods to sample data is not present. While there is some relevance, it is not explicitly highlighted in the responsibilities.",
+    "is_relevant": false
+  }
+]

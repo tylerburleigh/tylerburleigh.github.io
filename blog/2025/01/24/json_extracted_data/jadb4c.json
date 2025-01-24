@@ -1,0 +1,38 @@
+{
+  "responsibilities": [
+    "Design, develop, automate, and maintain scalable and robust data pipelines to support various data-driven applications.",
+    "Utilize GCP services like Dataflow, Pub/Sub, BigQuery, and Cloud Storage for data ingestion, transformation, and storage.",
+    "Ensure data quality, integrity, and availability through automated testing and monitoring.",
+    "Develop and manage ETL/ELT processes to integrate data from various sources into a central data warehouse using Airflow, DBT, and other tools.",
+    "Create efficient data models optimized for analytics and reporting use cases.",
+    "Implement data validation and monitoring tools to detect anomalies and ensure quality.",
+    "Optimize data storage and retrieval processes using GCP’s BigQuery and other cloud-native data storage solutions.",
+    "Partner with Data Scientists & ML Engineers, Analysts, and Product teams to understand needs, provide actionable insights, and ensure alignment between data capabilities and business objectives.",
+    "Document data pipelines, architectures, and processes for internal use and future reference.",
+    "Communicate technical concepts and solutions effectively to non-technical stakeholders.",
+    "Continuously monitor and optimize data pipelines and storage solutions for performance and cost-efficiency.",
+    "Identify and resolve bottlenecks in data processing and model deployment pipelines.",
+    "Collaborate with data scientists to build and maintain data pipelines that feed machine learning models.",
+    "Assist in the deployment and operationalization of machine learning models, ensuring they run efficiently in production environments.",
+    "Mentor Junior Data Engineers and collaborate within the Data & Insights team as well as externally with Program/Project Managers, analytics, and other cross-functional teams."
+  ],
+  "skills": [
+    "Strong programming skills in Python and SQL.",
+    "Understanding and experience in object-oriented design principles.",
+    "Experience with schema design and data modeling.",
+    "Hands-on experience in using tools like DBT, Airflow, etc.",
+    "Understanding of reporting tools like Preset, Tableau, or Power BI.",
+    "Familiarity with Git or similar tools for version control.",
+    "Strong verbal and written communication skills, with the ability to explain technical concepts to non-technical stakeholders.",
+    "Strong analytical and problem-solving skills.",
+    "Ability to work independently or as part of a team."
+  ],
+  "qualifications": [
+    "3+ years of experience in data engineering, with a focus on development and deployment of accurate and optimized data models.",
+    "Bachelor’s degree in computer science, information science, or a resume full of relevant experience.",
+    "Experience in cloud platforms and its offerings like Google, Azure, or AWS (GCP strongly preferred).",
+    "Experience with DevOps tools and practices (e.g., CI/CD pipelines, Docker, Kubernetes) is a plus.",
+    "Knowledge of machine learning pipelines or basic ML model deployment is a plus.",
+    "Experience in a Mobile App industry and/or B2C Subscription business model is a plus."
+  ]
+}

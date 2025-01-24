@@ -1,0 +1,43 @@
+{
+  "filename": "jcdbb0",
+  "responsibilities": [
+    "Define data requirements, gather, and wrangle large scale of structured and unstructured data, and validate data by running various data tools in the Data Environment.",
+    "Support the standardization, customization, and ad-hoc data analysis, and develop mechanisms to ingest, analyze, validate, normalize, and clean data.",
+    "Create data policy and develop interfaces and retention models which require synthesizing or anonymizing data.",
+    "Implement statistical data quality procedures on new data sources and support Data Scientists and analytics in data sourcing and preparation.",
+    "Develop and maintain data engineering best practices and contribute to insights on data analytics and visualization concepts, methods, and techniques.",
+    "Work closely with the data science and business intelligence teams to develop data models and pipelines for research, reporting, and machine learning.",
+    "Build data pipelines that clean, transform, and aggregate data from disparate sources.",
+    "Employ a variety of languages and tools to integrate systems.",
+    "Engage with business teams to gather requirements and design data solutions.",
+    "Understand overall architecture and industry data technology.",
+    "Mentor a team of more Junior Data Engineers.",
+    "Refine and prioritize team backlog.",
+    "Collaborate across multiple projects to provide data engineering expertise across teams.",
+    "Present to leadership around solutions that are in-progress or being maintained.",
+    "Analyze most relevant insights and share with leadership to provide strategic recommendations for the business.",
+    "Lead a team of data engineers and act as a key senior contributor to a data engineering project.",
+    "Drive innovative technology solutions through thought leadership on emerging trends.",
+    "Apply knowledge of Data Architecture components and lead project teams from requirements to implementation."
+  ],
+  "skills": [
+    "7+ years of experience in a data engineering role with a track record of manipulating, processing, and extracting value from large datasets.",
+    "Experience with Databricks UI, Managing Databricks Notebooks, Delta Lake with Python, Delta Lake with Spark SQL, Delta Live Tables, Unity Catalog.",
+    "7+ years of experience with data tools like Hadoop, Spark, Spark SQL, Kafka, Sqoop, Hive, S3, HDFS.",
+    "5+ years building, testing, and optimizing \u2018Big Data\u2019 data ingestion pipelines, architectures, and data sets with Tibco, IBM, or others.",
+    "Advanced SQL, data ingestion frameworks, data modeling, and working with big data.",
+    "High-velocity high-volume stream processing with Apache Kafka and Spark Streaming.",
+    "NoSQL databases, including HBASE and/or Cassandra.",
+    "ETL experience with Scala (and/or Python) and PySpark/Scala-Spark.",
+    "Agile Scrum, Kanban, or SAFe experience.",
+    "Python (and/or Scala) and PySpark/Scala-Spark.",
+    "Database solutions like Snowflake, Kudu/Impala, Delta Lake, or BigQuery.",
+    "Azure, AWS Serverless technologies, like S3, Kinesis/MSK, lambda, and Glue.",
+    "Messaging Platforms like Kafka, Amazon MSK & TIBCO EMS or IBM MQ Series.",
+    "Strong understanding of Relational & Dimensional modeling.",
+    "Experience with GIT code versioning software.",
+    "Experience with REST API and Web Services."
+  ],
+  "analysis": "The job responsibilities and skills listed are primarily focused on data engineering, data processing, and data architecture. The responsibilities include tasks such as defining data requirements, gathering and wrangling data, supporting data analysis, developing data models and pipelines, and leading a team of data engineers. The skills required include experience with data tools like Hadoop, Spark, Kafka, and SQL, as well as experience with cloud technologies and data ingestion frameworks.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and processing large datasets, rather than on developing or working with AI models or language models.\n\nTherefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

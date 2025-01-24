@@ -1,0 +1,25 @@
+{
+  "filename": "j3b048",
+  "responsibilities": [
+    "Partner with product management to identify challenges, scope ML opportunities, and design solutions.",
+    "Understand business requirements and present technical solutions to non-technical team members.",
+    "Collaborate with engineering, data science, and product teams to implement ML and GenAI solutions in production environments.",
+    "Evaluate and improve existing machine learning models.",
+    "Leverage Google Cloud Platform and VertexAI for model training and deployment.",
+    "Enhance ML infrastructure and tools to keep aligned with industry best practices.",
+    "Work with big and novel data by data wrangling, feature engineering, model building, and visualization.",
+    "Process large quantities of data streamed from many different applications to test and build models.",
+    "Build DAGs, ETL pipelines, perform exploratory data analysis, and develop scalable solutions."
+  ],
+  "qualifications": [
+    "Proficient in developing in Python and SQL.",
+    "Experience with ML/AI frameworks and tools: PyTorch, Tensorflow, Sci-kit Learn, XGBoost, Pandas, Numpy, Flask, Langchain, Spark/Pyspark.",
+    "Experience with Google Cloud Platform - Vertex AI or other cloud platforms for ML implementation.",
+    "Experience working with BigQuery, Composer, DAGs, Spark/Pyspark, and other data tools.",
+    "Eagerness to learn new techniques and technologies.",
+    "Problem-solving skills and ability to contribute in a team environment.",
+    "Great interpersonal skills and experience working with cross-functional teams."
+  ],
+  "analysis": "The job responsibilities include collaborating with engineering, data science, and product teams to implement ML and GenAI solutions in production environments. This explicitly mentions GenAI, indicating that the job involves working with Generative AI. Additionally, the skills section lists Langchain, which is a framework often used for working with language models, further suggesting involvement with LLMs. The combination of these elements strongly indicates that the job involves working with Generative AI and potentially language models.",
+  "is_genai_role": true
+}

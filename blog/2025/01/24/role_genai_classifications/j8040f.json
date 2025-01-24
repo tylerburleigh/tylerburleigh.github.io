@@ -1,0 +1,22 @@
+{
+  "filename": "j8040f",
+  "responsibilities": [
+    "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+    "Updating routing plans based on unexpected construction observed online.",
+    "Producing smooth paths for motion planning trajectory optimization through construction and other unexpected circumstances.",
+    "Proving functionality can be achieved in a high-integrity, highly available way.",
+    "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+    "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+    "Providing safety case evidence."
+  ],
+  "qualifications": [
+    "Strong C++ and Python fluency.",
+    "Robotics systems fluency, including coordinate frames and system dynamics.",
+    "Technical leadership skills.",
+    "Experience with Bayesian methods.",
+    "Experience with deep learning and machine learning.",
+    "Experience with system testing and validation."
+  ],
+  "analysis": "The job responsibilities focus on dynamically updating map content, updating routing plans, producing smooth paths for motion planning, and developing mission-critical online algorithms related to semantic mapping and motion planning. These tasks are primarily related to robotics, autonomous systems, and real-time data processing. The skills required include strong C++ and Python fluency, robotics systems fluency, technical leadership, Bayesian methods, deep learning, and machine learning. While deep learning and machine learning are mentioned, which are related to AI, there is no specific mention of Generative AI or language models (LLMs) in the responsibilities or skills. The focus seems to be more on robotics and real-time systems rather than on natural language processing or generation tasks typically associated with GenAI or LLMs.",
+  "is_genai_role": false
+}

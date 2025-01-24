@@ -1,0 +1,87 @@
+[
+  {
+    "filename": "jdef78",
+    "responsibilities": [
+      "Lead the design and engineering of software systems for the AI/ML Platform, contributing to the full ML development lifecycle",
+      "Identify and implement opportunities to automate and streamline ML development processes, fostering efficiency and effectiveness",
+      "Develop comprehensive systems to automate and optimize laborious processes, integrating them seamlessly into our platform to streamline operations",
+      "Develop tools for building and deploying ML artifacts in production environments, facilitating a smooth transition from development to deployment",
+      "Automate and orchestrate tasks related to managing big data transformation and processing, building large-scale data stores for ML artifacts",
+      "Design and implement low-latency, scalable prediction, and inference services to support the diverse needs of our users",
+      "Collaborate across diverse teams, including machine learning researchers, developers, product managers, software architects, and operations, fostering a collaborative and cohesive work environment",
+      "Take ownership of critical components of the platform, providing architectural direction, and contributing to the overall success of the AI/ML Platform"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on designing and engineering software systems for an AI/ML Platform, automating ML processes, and developing tools for ML artifacts. While these tasks involve machine learning, they do not specifically mention fine-tuning or customizing language models, which is a specialized task related to large language models (LLMs). The responsibilities are more aligned with system-level engineering and automation rather than model-specific tasks like fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jdef78",
+    "responsibilities": [
+      "Lead the design and engineering of software systems for the AI/ML Platform, contributing to the full ML development lifecycle",
+      "Identify and implement opportunities to automate and streamline ML development processes, fostering efficiency and effectiveness",
+      "Develop comprehensive systems to automate and optimize laborious processes, integrating them seamlessly into our platform to streamline operations",
+      "Develop tools for building and deploying ML artifacts in production environments, facilitating a smooth transition from development to deployment",
+      "Automate and orchestrate tasks related to managing big data transformation and processing, building large-scale data stores for ML artifacts",
+      "Design and implement low-latency, scalable prediction, and inference services to support the diverse needs of our users",
+      "Collaborate across diverse teams, including machine learning researchers, developers, product managers, software architects, and operations, fostering a collaborative and cohesive work environment",
+      "Take ownership of critical components of the platform, providing architectural direction, and contributing to the overall success of the AI/ML Platform"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities emphasize automation, system design, and collaboration across teams for the AI/ML Platform. There is no direct mention of crafting or refining prompts for language models, which is a specific task related to LLMs. The responsibilities are more focused on the engineering and operational aspects of ML systems rather than the iterative refinement of prompts for LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jdef78",
+    "responsibilities": [
+      "Lead the design and engineering of software systems for the AI/ML Platform, contributing to the full ML development lifecycle",
+      "Identify and implement opportunities to automate and streamline ML development processes, fostering efficiency and effectiveness",
+      "Develop comprehensive systems to automate and optimize laborious processes, integrating them seamlessly into our platform to streamline operations",
+      "Develop tools for building and deploying ML artifacts in production environments, facilitating a smooth transition from development to deployment",
+      "Automate and orchestrate tasks related to managing big data transformation and processing, building large-scale data stores for ML artifacts",
+      "Design and implement low-latency, scalable prediction, and inference services to support the diverse needs of our users",
+      "Collaborate across diverse teams, including machine learning researchers, developers, product managers, software architects, and operations, fostering a collaborative and cohesive work environment",
+      "Take ownership of critical components of the platform, providing architectural direction, and contributing to the overall success of the AI/ML Platform"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include designing and implementing scalable prediction and inference services, which could involve evaluating model performance. However, the specific focus on evaluating large language models using metrics like perplexity or BLEU is not mentioned. The responsibilities are more about system-level performance and efficiency rather than detailed model evaluation, particularly for LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jdef78",
+    "responsibilities": [
+      "Lead the design and engineering of software systems for the AI/ML Platform, contributing to the full ML development lifecycle",
+      "Identify and implement opportunities to automate and streamline ML development processes, fostering efficiency and effectiveness",
+      "Develop comprehensive systems to automate and optimize laborious processes, integrating them seamlessly into our platform to streamline operations",
+      "Develop tools for building and deploying ML artifacts in production environments, facilitating a smooth transition from development to deployment",
+      "Automate and orchestrate tasks related to managing big data transformation and processing, building large-scale data stores for ML artifacts",
+      "Design and implement low-latency, scalable prediction, and inference services to support the diverse needs of our users",
+      "Collaborate across diverse teams, including machine learning researchers, developers, product managers, software architects, and operations, fostering a collaborative and cohesive work environment",
+      "Take ownership of critical components of the platform, providing architectural direction, and contributing to the overall success of the AI/ML Platform"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve developing tools for deploying ML artifacts in production environments and automating data processing tasks. These tasks could relate to integrating ML outputs into applications, which aligns with the activity of integrating LLM outputs into end-user experiences or pipelines. However, the responsibilities do not specifically mention LLMs or the unique challenges associated with their integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jdef78",
+    "responsibilities": [
+      "Lead the design and engineering of software systems for the AI/ML Platform, contributing to the full ML development lifecycle",
+      "Identify and implement opportunities to automate and streamline ML development processes, fostering efficiency and effectiveness",
+      "Develop comprehensive systems to automate and optimize laborious processes, integrating them seamlessly into our platform to streamline operations",
+      "Develop tools for building and deploying ML artifacts in production environments, facilitating a smooth transition from development to deployment",
+      "Automate and orchestrate tasks related to managing big data transformation and processing, building large-scale data stores for ML artifacts",
+      "Design and implement low-latency, scalable prediction, and inference services to support the diverse needs of our users",
+      "Collaborate across diverse teams, including machine learning researchers, developers, product managers, software architects, and operations, fostering a collaborative and cohesive work environment",
+      "Take ownership of critical components of the platform, providing architectural direction, and contributing to the overall success of the AI/ML Platform"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities focus on system design, automation, and collaboration, with no specific mention of analyzing model outputs for errors or biases, which is central to model interpretability and debugging. The responsibilities are more aligned with engineering and operational tasks rather than the interpretability and debugging of LLMs.",
+    "is_relevant": false
+  }
+]

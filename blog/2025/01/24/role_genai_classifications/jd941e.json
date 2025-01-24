@@ -1,0 +1,23 @@
+{
+  "filename": "jd941e",
+  "responsibilities": [
+    "Derive and implement novel real-time pose estimation algorithms.",
+    "Research, develop, and implement algorithms to solve large-scale mapping.",
+    "Collaborate with other engineers to develop algorithms for in-situ and in-factory multi-sensor calibration.",
+    "Work with multiple sensors such as GPS, IMU, camera, and wheel odometry.",
+    "Program and develop software in C++.",
+    "Deploy an estimator for SLAM/VIO in a real application.",
+    "Understand and utilize numerical stability, sensor modeling, and system/noise identification concepts.",
+    "Understand theoretical shortcomings in modern algorithms and problem solve to overcome them."
+  ],
+  "skills": [
+    "Proficiency in programming in C++.",
+    "Knowledge of classical machine learning, linear algebra, stochastic processes, geometric computer vision, and optimization (convex, nonlinear).",
+    "Experience with Kalman Filter, MAP, Sequential Monte Carlo (particle filter), Nonlinear Least squares, IRLS, and MHT.",
+    "Familiarity with GPS, IMU, camera, and wheel odometry.",
+    "Ability to work with multiple sensors and develop algorithms for sensor calibration.",
+    "Problem-solving skills to address theoretical shortcomings in algorithms."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing algorithms for pose estimation, mapping, and sensor calibration, particularly in the context of SLAM (Simultaneous Localization and Mapping) and VIO (Visual-Inertial Odometry). The job involves working with multiple sensors such as GPS, IMU, cameras, and wheel odometry, and requires proficiency in C++ programming. The skills required include knowledge of classical machine learning, linear algebra, stochastic processes, geometric computer vision, and optimization techniques. There is no mention of Generative AI or language models (LLMs) in the responsibilities or skills. The focus is on real-time estimation, sensor modeling, and algorithm development for navigation and mapping, which are not directly related to GenAI or LLMs.",
+  "is_genai_role": false
+}

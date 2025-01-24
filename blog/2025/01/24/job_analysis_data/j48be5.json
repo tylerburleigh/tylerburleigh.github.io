@@ -1,0 +1,752 @@
+[
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on evaluating and developing infrastructure for training and model evaluation, working with researchers on new techniques, and delivering high-quality software. While these tasks involve model evaluation and infrastructure, they do not specifically mention fine-tuning or customizing language models, especially in the context of large language models (LLMs) like GPT. The responsibilities are more aligned with infrastructure and project management rather than the specific task of fine-tuning LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention prompt engineering or iterative refinement of prompts for LLMs. The focus is on infrastructure, model evaluation, and collaboration with researchers, which may indirectly involve some aspects of prompt engineering, but it is not a primary responsibility. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include evaluating the performance of training infrastructure and developing reliable infrastructure for model evaluation. This aligns with the activity of model evaluation and performance assessment, as both involve assessing the quality and reliability of models. The responsibilities also mention working closely with researchers to evaluate models, which further supports the relevance of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities do not mention integration with downstream applications or handling content moderation, retrieval augmentation, or specialized domain knowledge. The focus is more on infrastructure, model evaluation, and project management. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention model interpretability or debugging. While there is a focus on evaluating models and working with researchers, the specific task of analyzing model outputs for errors, biases, or improvements is not highlighted. The responsibilities are more aligned with infrastructure and project management rather than interpretability and debugging of models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include developing reliable infrastructure for scheduling training and model evaluation jobs, which aligns with designing end-to-end workflows for AI-driven pipelines. The focus on high-quality software delivery and integration with emerging research capabilities also suggests relevance to ensuring seamless integration of components in AI-driven pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities mention evaluating performance and addressing gaps, which could involve assessing computational demands and planning for scalability. However, there is no explicit mention of compute requirements or resource planning in the responsibilities, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The responsibilities include delivering high-quality software and influencing technical strategy, which could involve performance optimization. However, there is no specific mention of latency control or advanced caching mechanisms, making this activity only tangentially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The responsibilities involve working closely with researchers to create new techniques and infrastructure, which could include model lifecycle management. However, there is no explicit mention of governance or continuous retraining, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include creating infrastructure and tooling around emerging research capabilities, which could involve system interoperability and integration. However, there is no explicit mention of aligning AI services with enterprise systems, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The responsibilities include evaluating models to meet customer needs and working closely with researchers, which aligns with conducting research to evaluate AI quality. The focus on diagnosing problems and addressing gaps also suggests relevance to investigating system accuracy and performance metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The responsibilities involve creating new techniques and infrastructure, which could include developing AI systems and algorithms. However, there is no explicit mention of automated insights or analyzing user behavior, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The responsibilities do not explicitly mention synthetic data generation or methods for producing synthetic datasets. While there is a focus on evaluating models, this activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibilities include evaluating performance and diagnosing problems, which aligns with identifying performance metrics and success criteria. The focus on meeting customer needs and influencing technical strategy also suggests relevance to defining measurable indicators.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The responsibilities involve evaluating models and addressing gaps, which could involve creating labeled datasets for AI evaluation. However, there is no explicit mention of data annotation or dataset preparation, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibilities include evaluating models and working closely with researchers, which could involve designing and analyzing experiments. However, there is no explicit mention of A/B tests or controlled experiments, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The responsibilities include evaluating performance and diagnosing problems, which could involve sampling data for evaluation. However, there is no explicit mention of statistical methods or data sampling, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on infrastructure development, model evaluation, project management, and technical strategy. There is no mention of designing labeling tasks or creating annotation guidelines, which are specific to data annotation processes. The responsibilities do not indicate involvement in data annotation or labeling tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include managing project prioritization and stakeholder communication, which could involve overseeing projects. However, the specific focus on collecting human annotation data and managing annotation teams is not mentioned. The responsibilities are more aligned with infrastructure and software development rather than data collection for annotation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve evaluating models and diagnosing problems, which could involve some data analysis. However, the specific task of analyzing human annotation data is not mentioned. The focus is more on infrastructure and model evaluation rather than analyzing annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on evaluating training infrastructure, developing infrastructure for model evaluation, and working with researchers on emerging research capabilities. While statistical methods are crucial in data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus is more on infrastructure and tooling rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include managing stakeholder communication and delivering high-quality software. Data visualization and exploratory analysis can be relevant for communicating insights and findings to stakeholders. However, the responsibilities do not explicitly mention data visualization or exploratory analysis as part of the role.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities involve evaluating models and working with researchers on emerging research capabilities. Data mining and analysis of large datasets could be relevant for uncovering trends and patterns that inform model improvements. However, the responsibilities do not specifically mention working with conversational datasets or data mining.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include developing infrastructure for scheduling training and model evaluation jobs, which aligns with implementing scalable data processing and ETL workflows. This activity is relevant as it involves creating reliable infrastructure and pipelines that support systematic performance tracking and analytics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities involve evaluating models and managing project deliverables, which could involve defining metrics and success criteria to assess model health and guide decision-making. This activity is relevant as it aligns with the need to track and analyze performance indicators in the context of model evaluation and project management.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention developing reliable infrastructure and working closely with researchers to create new techniques and tooling, which aligns with designing and maintaining CI/CD pipelines for robust model deployment. The focus on performance, scalability, and reliability in the responsibilities also matches the description of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The responsibilities include evaluating performance and diagnosing problems, which is related to implementing real-time monitoring and logging solutions to track model performance. However, there is no explicit mention of monitoring or observability in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The responsibilities do not explicitly mention version control systems or the need for reproducibility and traceability. While infrastructure development is mentioned, it does not specifically relate to data and model versioning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The responsibilities do not explicitly mention testing or validation processes. While there is a focus on delivering high-quality software, there is no direct reference to automating validation steps or introducing guardrails for model stability.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The responsibilities include developing reliable infrastructure and operating in a dynamic environment to deliver high-quality software, which aligns with optimizing and scaling model-serving infrastructure. The mention of cloud platforms and container orchestration tools is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The responsibilities do not mention governance frameworks, compliance, or security measures. The focus is more on infrastructure, performance, and technical strategy rather than governance or security.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The responsibilities include evaluating models to meet customer needs and working closely with researchers, which could imply some level of model lifecycle management. However, there is no explicit mention of retraining, hyperparameter tuning, or continuous improvement processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on evaluating training infrastructure, developing infrastructure for model evaluation, collaborating with researchers, managing projects, and delivering high-quality software. These tasks are more technical and infrastructure-oriented, with no direct mention of gathering user insights or conducting interviews and surveys. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities emphasize technical tasks related to infrastructure, model evaluation, and software delivery. Usability testing and prototyping are more aligned with user experience design and testing, which are not mentioned in the job responsibilities. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The job responsibilities are centered around technical infrastructure, model evaluation, and collaboration with researchers. Persona development and user journey mapping are activities related to understanding user segments and improving user flows, which are not part of the described responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The job responsibilities involve technical tasks such as evaluating training infrastructure, developing infrastructure for model evaluation, and managing projects. Qualitative data analysis, which involves synthesizing user feedback and identifying themes, is not directly related to these technical and infrastructure-focused responsibilities. Hence, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include developing reliable infrastructure and working closely with researchers to create new techniques and tooling. This aligns with designing and implementing software architecture, as it involves building scalable and maintainable software solutions and ensuring alignment with business needs and performance requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention delivering high-quality software and operating in a dynamic environment, which suggests the need for developing production-grade applications. Writing clean, modular, and efficient code is essential for maintaining code quality, which is relevant to the job's focus on high-quality software delivery.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, the focus on delivering high-quality software and managing project deliverables and timelines implies the need for streamlined processes. CI/CD practices would support these goals by automating build, test, and deployment processes.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. However, ensuring high-quality software delivery and addressing gaps in the training infrastructure could involve some level of monitoring. Still, the primary focus seems to be on development and infrastructure rather than operational monitoring.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not specifically mention API development or system integration. The focus is more on infrastructure, tooling, and model evaluation rather than developing APIs or integrating systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibility to deliver high-quality software implies the need for software testing and quality assurance. Ensuring code quality and reliability aligns with developing automated test suites and maintaining test coverage, which are essential for meeting acceptance criteria.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities include developing reliable infrastructure and evaluating the performance of the training infrastructure, which aligns with leveraging infrastructure-as-code tools and embracing a DevOps culture. This supports collaboration, scalability, and rapid iteration, which are relevant to the job's focus on infrastructure and tooling.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include evaluating models to meet customer needs and diagnosing problems in the training infrastructure. This aligns with the activity of conducting research to evaluate AI quality, as both involve assessing system performance and using rigorous methodologies to guide improvements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on infrastructure development, model evaluation, and working with researchers to create new techniques. While these tasks are related to AI systems, the specific focus on developing AI systems and algorithms for automated insights is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or related tasks such as producing datasets or evaluating their quality. The focus is more on infrastructure, model evaluation, and stakeholder communication.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibilities include evaluating models and diagnosing problems, which implies the need to identify and track performance metrics. This activity is relevant as it involves defining measurable indicators to assess model health, which aligns with the job's focus on evaluation and addressing gaps.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is more on infrastructure, model evaluation, and collaboration with researchers, rather than data preparation tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibilities include evaluating models and working closely with researchers, which could involve designing and analyzing experiments to compare model variants or features. This activity is relevant as it aligns with the job's focus on model evaluation and research collaboration.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j48be5",
+    "responsibilities": [
+      "Evaluate performance of the training infrastructure, diagnose problems and address any gaps that exist.",
+      "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+      "Work closely with researchers to create new techniques, infrastructure, and tooling around emerging research capabilities and evaluating models to meet customer needs.",
+      "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+      "Illuminate trade-offs, educate the team on best practices, and influence technical strategy.",
+      "Operate in a dynamic environment to deliver high quality software."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not specifically mention sampling data for evaluation. The focus is more on infrastructure, model evaluation, and stakeholder communication, rather than data sampling tasks.",
+    "is_relevant": false
+  }
+]

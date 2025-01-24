@@ -1,0 +1,33 @@
+{
+  "filename": "jd1bf1",
+  "responsibilities": [
+    "Collaborate with customers and partners on key engagements.",
+    "Develop and deliver proof-of-concept projects and technical workshops.",
+    "Support implementation projects focused on customer solutions such as Data and Analytics, AI, GenAI, ML, and HPC.",
+    "Work with AWS offerings like Amazon Kinesis, AWS Glue, Amazon Redshift, Amazon EMR, Amazon Athena, Amazon SageMaker, Amazon Bedrock, Amazon Q, and Amazon Lex.",
+    "Help customers and partners remove constraints to leverage data for business insights.",
+    "Create white papers, write blogs, build demos, and other reusable collateral for customers.",
+    "Work closely with Solution Architects, Data Scientists, and Service Engineering teams.",
+    "Engage in a wide variety of projects for customers and partners.",
+    "Collaborate across the AWS organization to deliver solutions and drive feature innovation."
+  ],
+  "qualifications": [
+    "Extensive experience with design, development, and operations using modern data services.",
+    "Knowledge in the use of technologies like DynamoDB, Amazon Kinesis, Apache Kafka, Apache Spark, Amazon Sagemaker, and Amazon RDS.",
+    "Hands-on experience with building data or machine learning pipelines.",
+    "Experience with tools like SQL, PostgreSQL, Data lake, DynamoDB, and Hadoop.",
+    "Experience with implementation and performance tuning of Kinesis, Kafka, Spark, or similar technologies.",
+    "Familiarity with machine learning concepts.",
+    "Experience working on large-scale data science/data analytics projects.",
+    "Experience implementing AWS services in distributed computing environments.",
+    "Experience with distributed Machine Learning and Deep Learning frameworks like TensorFlow, PyTorch, MxNet, Caffe, and Keras.",
+    "Experience building large-scale machine-learning infrastructure.",
+    "Experience defining system architectures and exploring technical feasibility trade-offs.",
+    "Experience developing cloud software services with a focus on scalability, performance, and reliability.",
+    "Ability to prototype and evaluate applications and interaction methodologies.",
+    "Experience with AWS technology stack.",
+    "Written and verbal technical communication skills."
+  ],
+  "analysis": "The job responsibilities and skills listed involve working with a variety of data and machine learning technologies, particularly within the AWS ecosystem. The responsibilities mention supporting implementation projects focused on AI, GenAI, ML, and HPC, which indicates a potential involvement with Generative AI. Additionally, the job involves working with AWS services like Amazon SageMaker and Amazon Bedrock, which are platforms that can be used for building and deploying machine learning models, including generative models.\n\nThe skills section highlights experience with machine learning concepts, distributed machine learning and deep learning frameworks (such as TensorFlow, PyTorch, MxNet, Caffe, and Keras), and building large-scale machine-learning infrastructure. These skills are relevant to working with Generative AI and language models, as they often require deep learning frameworks and large-scale infrastructure.\n\nHowever, there is no explicit mention of language models or specific Generative AI applications like text generation, image generation, or other generative tasks. The focus seems to be more on general AI and machine learning capabilities, data analytics, and AWS services.\n\nOverall, while there is a mention of GenAI in the responsibilities, the job does not explicitly focus on language models or Generative AI tasks. The skills and responsibilities are more aligned with general AI and machine learning roles.",
+  "is_genai_role": false
+}

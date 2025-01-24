@@ -1,0 +1,652 @@
+[
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on designing methods, tools, and infrastructure for analyzing multimodal data sets, transitioning algorithms from research to production, and developing metrics for deep learning models. While these tasks involve working with models and data, they do not specifically mention fine-tuning or customizing language models, particularly large language models (LLMs) like GPT. The responsibilities are more aligned with general model analysis and metric development rather than domain-specific fine-tuning of LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities include designing experiments to assess model performance and developing metrics for deep learning models. These tasks could involve crafting and refining prompts to test model outputs, especially if the models in question are LLMs. However, the responsibilities do not explicitly mention prompt engineering or iterative refinement, making it unclear if this activity is directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities explicitly mention analyzing and developing metrics for deep learning models and designing experiments to assess model performance. These tasks align closely with the activity of developing and applying methodologies for evaluating model quality, reliability, and fairness. Therefore, this activity is relevant to the responsibilities described.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities focus on transitioning algorithms from research to production and designing methods for analyzing data sets. While these tasks could involve integrating models into applications, the responsibilities do not specifically mention workflows or end-user experiences related to LLM outputs. The focus is more on model analysis and metric development rather than integration with downstream applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include analyzing and developing metrics for deep learning models, which could involve understanding model outputs and identifying potential improvements. However, the responsibilities do not explicitly mention interpretability or debugging, making it unclear if this activity is directly relevant. The focus is more on metric development and performance assessment rather than interpretability and debugging.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on designing methods, tools, and infrastructure for analyzing multimodal data sets, transitioning algorithms from research to production, and developing metrics for deep learning models. While these tasks involve design and analysis, they do not explicitly mention creating architecture blueprints for AI-driven pipelines, which involves end-to-end workflow design and integration of components. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not mention assessing computational demands or planning for scalability, which are the main focus of this activity. The responsibilities are more aligned with data analysis, algorithm transition, and metric development rather than resource planning and compute requirements. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities do not explicitly address performance optimization or latency control. They focus on designing methods and tools for data analysis, transitioning algorithms, and developing metrics. While performance optimization could be a part of transitioning algorithms into production, it is not explicitly mentioned, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include transitioning algorithms from research into production and developing metrics for models, which could involve aspects of model lifecycle management. However, the responsibilities do not explicitly mention governance, continuous retraining, or versioning, which are key components of this activity. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not mention aligning AI services with existing systems or establishing APIs and messaging protocols. The focus is on data analysis, algorithm transition, and metric development, which do not directly relate to system interoperability and integration. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include analyzing and developing metrics for deep learning models and designing experiments to assess model performance. These tasks align with conducting research to evaluate AI quality, as they involve investigating performance metrics and designing experiments. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing methods and tools for data analysis and transitioning algorithms into production, which could include developing AI systems and algorithms. However, the focus is more on analysis and metric development rather than specifically on automated insights. This makes the relevance of this activity less direct.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. They focus on analyzing data sets, transitioning algorithms, and developing metrics. While synthetic data could be used in these processes, it is not explicitly mentioned, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include analyzing and developing metrics for deep learning models, which directly involves identifying performance metrics and success criteria. This activity is relevant as it aligns with the responsibility of developing metrics to assess model performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. They focus on data analysis, algorithm transition, and metric development. While labeled datasets are important for evaluation and optimization, this specific task is not mentioned in the responsibilities, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include designing experiments to assess model performance, which aligns with designing, running, and analyzing experiments like A/B tests. This activity is relevant as it involves experimentation to validate model performance, which is a key responsibility.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve analyzing data sets and developing metrics, which could include sampling data for evaluation. However, the responsibilities do not explicitly mention data sampling, making the relevance of this activity less direct.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing methods, tools, and infrastructure for analyzing multimodal data sets, transitioning algorithms from research to production, and developing metrics for deep learning models. While these tasks involve data analysis and model performance assessment, they do not explicitly mention designing labeling tasks or creating annotation guidelines. The responsibilities are more aligned with high-level data analysis and model evaluation rather than the specifics of data annotation task design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include designing experiments involving human participants to assess model performance. This could imply some level of interaction with human-generated data, but the focus is on model performance rather than the logistics of collecting annotation data. The responsibilities do not explicitly mention managing annotation projects or overseeing teams, which are key aspects of collecting human annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include analyzing and developing metrics for deep learning models and experimental datasets, which suggests a focus on data analysis. Analyzing human annotation data could be relevant if it contributes to evaluating dataset quality or generating insights for model performance. However, the responsibilities do not explicitly mention analyzing annotation data, so the relevance is indirect and not strongly supported by the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities include designing methods and tools to analyze data, transitioning algorithms from research to production, and developing metrics for deep learning models. These tasks align with applying statistical techniques for data analysis and model validation, as described in the Activity. The use of statistical methods is essential for hypothesis testing and interpreting models, which are relevant to the responsibilities mentioned.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities focus on analyzing and developing metrics for models, designing experiments, and leveraging data sets. While data visualization and exploratory analysis are crucial for revealing patterns and communicating insights, the responsibilities do not explicitly mention visualization or presenting findings. However, exploratory analysis is a part of analyzing data sets, which is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities involve analyzing and leveraging multimodal data sets and developing metrics for models. While the responsibilities do not specifically mention conversational datasets, the skills required for data mining and analysis are relevant to handling large data sets and uncovering trends, which align with the responsibilities of analyzing and developing metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities include designing methods and tools for data analysis and transitioning algorithms into production. Developing data models and pipelines is crucial for systematic data processing and analytics, which supports the responsibilities of analyzing data and transitioning research into production. This Activity is relevant as it provides the infrastructure needed for these tasks.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities explicitly mention analyzing and developing metrics for deep learning models and experimental datasets. Defining metrics and success criteria is directly related to these tasks, as it involves setting measurable indicators to assess model performance and guide decision-making. This Activity is highly relevant to the responsibilities outlined.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities focus on designing methods, tools, and infrastructure for analyzing data, transitioning algorithms from research to production, and developing metrics for deep learning models. While these tasks are related to the broader field of machine learning, they do not explicitly mention the deployment of models or the maintenance of CI/CD pipelines, which are central to this activity. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities include analyzing and developing metrics for deep learning models, which could involve monitoring model performance. However, the responsibilities do not explicitly mention real-time monitoring, logging solutions, or detecting data drift, which are key aspects of this activity. Thus, while there is some overlap, the activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not mention version control systems or the need for reproducibility and traceability of datasets and model artifacts. The focus is more on designing methods and analyzing data rather than managing versions of data and models. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities include transitioning algorithms and metrics from research into production, which may involve some level of testing and validation. However, the responsibilities do not explicitly mention automating validation steps or introducing testing strategies like canary testing or shadow deployments. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities mention designing infrastructure to analyze data, which could relate to optimizing and scaling model-serving infrastructure. However, the responsibilities do not explicitly mention cloud platforms, container orchestration, or automated scaling policies. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not mention governance frameworks, compliance, or security measures. The focus is more on designing methods and analyzing data rather than establishing governance or security practices. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities include analyzing and developing metrics for deep learning models and transitioning algorithms from research into production, which could involve aspects of model lifecycle management. However, the responsibilities do not explicitly mention retraining, hyperparameter tuning, or establishing feedback loops for continuous improvement. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on designing methods, analyzing data, transitioning algorithms, and developing metrics for deep learning models. User interviews and surveys are primarily about gathering qualitative and quantitative insights on user needs, which is not directly mentioned in the responsibilities. The responsibilities do not explicitly involve gathering user insights or conducting interviews and surveys.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities include designing experiments to assess model performance, which could involve usability testing if the models are user-facing. However, the responsibilities do not explicitly mention usability testing or prototyping. The focus is more on algorithm and metric development rather than user experience testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities do not mention creating user personas or mapping user journeys. The focus is on data analysis, algorithm transition, and metric development, which are more technical and data-driven rather than user experience-focused activities like persona development and journey mapping.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities involve analyzing and developing metrics for deep learning models and experimental datasets. While qualitative data analysis is about synthesizing interview notes and open-ended responses, the responsibilities focus on quantitative data analysis related to model performance and metrics. There is no mention of qualitative data analysis in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on designing methods, tools, and infrastructure for analyzing data, transitioning algorithms from research to production, and designing experiments. While these tasks involve design and implementation, they are more research and data-focused rather than software architecture-focused. The responsibilities do not explicitly mention defining system components, data flows, or integration points, which are key aspects of software architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities include transitioning algorithms and metrics from research into production, which aligns with developing production-grade applications. However, the focus is more on the research and data analysis side rather than writing clean, modular code or following coding standards. The responsibilities do not explicitly mention coding or application development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not mention automating build, test, and deployment processes or maintaining version control workflows, which are central to CI/CD. The focus is more on data analysis, metrics development, and experiment design rather than on software delivery processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The responsibilities do not include implementing logging, metrics, or alerting solutions for system health monitoring. The focus is on analyzing data, developing metrics, and designing experiments, which are not directly related to monitoring or incident management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not mention designing or implementing APIs or system integration. The focus is on data analysis, metrics development, and experiment design, which do not directly involve API development or integration tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities include analyzing and developing metrics for deep learning models and experimental datasets, which could involve some level of testing and quality assurance. However, the responsibilities do not explicitly mention developing automated test suites or maintaining test coverage, which are key aspects of software testing and QA.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibilities involve designing methods, tools, and infrastructure for data analysis, which could relate to infrastructure management. However, there is no explicit mention of using infrastructure-as-code tools or embracing a DevOps culture. The focus is more on research and data analysis rather than infrastructure management or DevOps practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include tasks such as designing methods and tools to analyze data, transitioning algorithms from research to production, and designing experiments to assess model performance. These responsibilities align with the Activity of conducting research to evaluate AI quality, as both involve investigating system performance metrics and designing experiments to validate hypotheses.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on analyzing and developing metrics for deep learning models, which is related to developing AI systems and algorithms. However, the specific mention of automated insights and user behavior analysis is not explicitly covered in the responsibilities. The focus is more on transitioning algorithms and designing experiments rather than building AI systems for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not explicitly mention synthetic data generation. They focus on analyzing data, developing metrics, and designing experiments. While synthetic data could be a part of these processes, it is not directly mentioned or implied in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include analyzing and developing metrics for deep learning models, which directly relates to identifying performance metrics and success criteria. This Activity is relevant as it involves defining measurable indicators and tracking them, which aligns with the responsibilities of analyzing and developing metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. They focus more on analyzing data, developing metrics, and designing experiments. While labeled datasets are crucial for AI evaluation, the responsibilities do not directly address this aspect.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include designing experiments involving human participants to assess model performance, which aligns with the Activity of designing, running, and analyzing experiments. Both involve planning and executing controlled experiments to draw insights, making this Activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j30bc6",
+    "responsibilities": [
+      "Design methods, tools, and infrastructure to analyze and leverage rich multimodal data sets.",
+      "Help transition algorithms and metrics from research into production.",
+      "Analyze and develop metrics for deep learning models and experimental datasets.",
+      "Design experiments, involving human participants, to assess model performance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. They focus on analyzing data, developing metrics, and designing experiments. While sampling could be a part of these processes, it is not directly mentioned or implied in the responsibilities provided.",
+    "is_relevant": false
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "filename": "j086ec",
+  "responsibilities": [
+    "Lead build out of industry-leading AI clusters, partnering closely with cloud service providers on cluster build out and required features.",
+    "Consult with different stakeholders to deeply understand infrastructure, data, and compute needs, identifying potential solutions to support frontier research and product development.",
+    "Set technical strategy and oversee development of high scale, reliable infrastructure systems.",
+    "Mentor top technical talent.",
+    "Design processes (e.g., postmortem review, incident response, on-call rotations) that help the team operate effectively and never fail the same way twice."
+  ],
+  "qualifications": [
+    "Strong proficiency in at least one programming language (e.g., Python, Rust, Go, Java).",
+    "Strong problem-solving skills and ability to work independently.",
+    "Excellent communication skills to build consensus with stakeholders, both internally and externally.",
+    "Deep knowledge of modern cloud infrastructure including Kubernetes, Infrastructure as Code, AWS, and GCP.",
+    "Expertise in security and privacy best practices.",
+    "Experience with machine learning infrastructure like GPUs, TPUs, or Trainium, as well as supporting networking infrastructure like NCCL.",
+    "Low level systems experience, for example, Linux kernel tuning and eBPF.",
+    "Technical expertise in quickly understanding systems design tradeoffs and keeping track of rapidly evolving software systems."
+  ],
+  "analysis": "The job responsibilities focus on building and managing AI clusters, consulting on infrastructure needs, and developing high-scale infrastructure systems. While these tasks are related to AI infrastructure, they do not explicitly mention Generative AI or language models. The skills required include proficiency in programming languages, cloud infrastructure, machine learning infrastructure, and low-level systems experience. Although there is a mention of machine learning infrastructure like GPUs and TPUs, which are often used in training AI models, there is no direct reference to Generative AI or language models. The job seems to be more focused on the infrastructure and systems that support AI research and development rather than specifically working with Generative AI or LLMs.",
+  "is_genai_role": false
+}

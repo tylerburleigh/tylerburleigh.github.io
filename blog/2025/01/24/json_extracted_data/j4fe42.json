@@ -1,0 +1,20 @@
+{
+  "responsibilities": [
+    "Develop the compiler backend, specifically for assigning hardware resources in a spatial architecture to execute low-level instructions.",
+    "Solve algorithmic compiler problems.",
+    "Learn intricate details of the underlying hardware and software architectures.",
+    "Map low-level instructions to hardware resources.",
+    "Work on model partitioning, tiling, resource allocation, memory management, scheduling, and optimization for latency, bandwidth, and throughput."
+  ],
+  "skills": [
+    "Ability to deliver production-quality code in modern C++.",
+    "Experience in modern compiler infrastructures such as LLVM and MLIR.",
+    "Experience in machine learning frameworks and interfaces like ONNX, TensorFlow, and PyTorch.",
+    "Algorithm design ability, from high-level conceptual design to actual implementation.",
+    "Experience with relevant Open Source ML projects like Torch-MLIR, ONNX-MLIR, Caffe, and TVM."
+  ],
+  "qualifications": [
+    "Bachelor's degree in Computer Science with 7+ years of relevant industry experience, or MSCS preferred with 5+ years of relevant industry experience.",
+    "Experience in production compiler development."
+  ]
+}

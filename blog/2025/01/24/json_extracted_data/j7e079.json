@@ -1,0 +1,31 @@
+{
+  "responsibilities": [
+    "Develop a deep learning compiler stack that converts neural network descriptions into code for special-purpose and embedded platforms.",
+    "Use modern compiler frameworks such as LLVM and MLIR.",
+    "Develop optimized implementations of neural-network operations and integrate them into a runtime framework.",
+    "Develop new optimization techniques and algorithms to efficiently map CNNs onto Xtensa processors and specialized hardware.",
+    "Benchmark end-to-end network performance on DSP and special-purpose accelerator platforms.",
+    "Enhance the framework to improve functionality and performance on various hardware platforms.",
+    "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+    "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+    "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+    "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+  ],
+  "skills": [
+    "Expertise in C and C++ programming.",
+    "Experience in software development on Linux and Windows systems, including testing, debugging, and releasing.",
+    "Knowledge of state-of-the-art compiler stacks such as LLVM and MLIR.",
+    "Experience with compilation techniques like loop optimization, polyhedral models, and IR construction/transition/lowering techniques.",
+    "Python programming experience.",
+    "Familiarity with deep learning frameworks such as TensorFlow, Caffe, and PyTorch.",
+    "Experience programming and optimizing for embedded platforms such as DSPs with DMA engines.",
+    "Familiarity with deep learning compilation approaches like Glow, TVM, and XLA.",
+    "Knowledge of neural net exchange formats like ONNX and NNEF."
+  ],
+  "qualifications": [
+    "Complete Bachelor in Computer Science or Computer Engineering or equivalent experience.",
+    "3-5+ years of experience in C and C++ programming.",
+    "3+ years of experience working on a production compiler is highly desired.",
+    "Master or PhD is a plus."
+  ]
+}

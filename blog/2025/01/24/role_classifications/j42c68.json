@@ -1,0 +1,27 @@
+{
+  "filename": "j42c68",
+  "responsibilities": [
+    "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+    "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment.",
+    "Focus on prompt engineering and generative AI more broadly.",
+    "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+    "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+    "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+    "Manage project stakeholder expectations and issue communications on progress.",
+    "React to shifting priorities without compromising deadlines and momentum."
+  ],
+  "skills": [
+    "Strong Python data fundamentals coupled with a software mindset for making data processing and collection pipelines repeatable, scalable, and high quality.",
+    "Deep expertise in writing and reviewing production code in Python.",
+    "Understanding of the development lifecycle for LLMs, including developing data sets for pre-training, instruction tuning, and preference alignment.",
+    "Strong knowledge of LLM frameworks and libraries (such as transformers, trl, deepspeed, PyTorch).",
+    "Exposure to various ML techniques and their practical implementation in production at large scale.",
+    "Experience on distributed, high throughput, and low latency architectures.",
+    "Strong fundamentals in NLP techniques for text representation, semantic extraction techniques, data structures, and modeling.",
+    "Experience building software on top of major container technology (Kubernetes, Docker, etc.).",
+    "Multi-disciplinary approach to problem-solving, including excellent interpersonal and communication skills (written and verbal)."
+  ],
+  "analysis": "The Job involves working with AI engineers to design, build, and serve LLMs using Azure, focusing on prompt engineering and generative AI. It requires developing data sets, ensuring high-quality code, building reusable pipelines, and managing stakeholder expectations. The Skills required include strong Python fundamentals, expertise in LLM frameworks, experience with distributed architectures, and familiarity with container technology.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which aligns with the Job's focus on state-of-the-art LLM techniques and prompt engineering. The Skills required, such as deep understanding of LLMs and prompt engineering, match the Job's requirements.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable solutions and developing data pipelines, which aligns with the Job's focus on building pipelines and processes. However, the primary focus on productionizing models is less aligned with the Job's research and development focus.\n\n3. **MLOps / AI Infrastructure Engineer**: This role focuses on deployment, scaling, and monitoring AI systems, which partially aligns with the Job's focus on building reusable pipelines and tools. However, the primary focus on infrastructure management is less relevant to the Job's responsibilities.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which partially aligns with the Job's focus on managing stakeholder expectations. However, the primary focus on solution architecture is less relevant to the Job's responsibilities.\n\n5. **Data Scientist**: This role focuses on statistical analysis and model development, which is less aligned with the Job's focus on LLMs and generative AI.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures, which aligns with the Job's focus on building scalable data processing pipelines. However, the primary focus on data engineering is less relevant to the Job's responsibilities.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which is less aligned with the Job's technical focus on LLMs and generative AI.\n\n8. **Software Engineer**: This role involves developing software applications, which partially aligns with the Job's focus on ensuring high-quality code. However, the primary focus on software development is less relevant to the Job's responsibilities.\n\nThe Job is most similar to the \"AI Research Scientist\" option, as it involves working with LLMs, prompt engineering, and developing novel data sets, which aligns with the responsibilities and skills required for an AI Research Scientist.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

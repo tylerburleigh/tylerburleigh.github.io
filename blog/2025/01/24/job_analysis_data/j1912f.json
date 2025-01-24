@@ -1,0 +1,1002 @@
+[
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention developing machine learning solutions, working across the lifecycle of ML model development, and ensuring the integrity and robustness of ML solutions. However, there is no specific mention of fine-tuning or customizing large language models, which is a specialized task within the broader ML domain. The responsibilities focus more on backend services, integration, and deployment rather than the specific task of fine-tuning language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention prompt engineering or iterative refinement of language models. The focus is on developing and maintaining AI-driven applications, designing APIs, and ensuring the robustness of ML solutions. While these tasks may involve some level of interaction with language models, the specific activity of crafting and refining prompts is not highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include ensuring the integrity and robustness of ML solutions, which implies some level of model evaluation and performance assessment. Additionally, implementing system telemetry, A/B testing, and other statistical methods to validate AI models suggests an involvement in evaluating model performance. However, there is no specific mention of evaluating large language models using metrics like perplexity or BLEU.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include designing and implementing APIs for seamless integration with AI models and services, which aligns with the activity of integrating LLM outputs into end-user experiences or pipelines. This suggests a direct relevance to the task of integrating language models with downstream applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities mention troubleshooting and resolving technical issues related to AI models, which could involve some level of model interpretability and debugging. However, there is no explicit mention of analyzing model outputs for errors or biases, or employing interpretability techniques, which are specific to this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing, developing, and productionizing machine learning solutions, as well as designing and implementing APIs for seamless integration with AI models and services. This aligns with the activity of designing end-to-end workflows for AI-driven pipelines, ensuring seamless integration of components. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or planning for scalability in terms of infrastructure. While there is a focus on developing and maintaining backend services and ensuring the robustness of ML solutions, the specific task of compute requirements and resource planning is not directly addressed. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include ensuring the integrity and robustness of ML solutions and implementing system telemetry and A/B testing to validate AI models' effectiveness. While these tasks involve performance considerations, the specific focus on advanced caching mechanisms, model distillation, and latency control is not explicitly mentioned. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities involve working across the complete lifecycle of ML model development, including model training, validation, and deployment. This aligns with the activity of planning continuous retraining or fine-tuning and implementing versioning for models. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include designing and implementing APIs for seamless integration with AI models and services, which aligns with the activity of aligning generative AI services with existing enterprise systems and establishing APIs. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include participating in code reviews, testing, and quality assurance processes, as well as implementing statistical methods to validate AI models. This aligns with the activity of investigating system accuracy, robustness, and other performance metrics. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on developing AI-driven applications and ensuring the effectiveness of AI models. However, there is no explicit mention of developing AI systems for automated insights or analyzing user behavior. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or methods for producing synthetic datasets. The focus is more on developing and maintaining AI-driven applications and ensuring model robustness. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include implementing system telemetry and statistical methods to validate AI models, which involves identifying performance metrics and success criteria. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While there is a focus on data exploration and feature engineering, the specific task of preparing data annotations is not addressed. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include implementing A/B testing and other statistical methods to validate AI models' effectiveness. This aligns with the activity of designing, running, and analyzing experiments. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve data exploration and feature engineering, but there is no explicit mention of sampling data for evaluation. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing, developing, and maintaining AI-driven applications, including ML model development and deployment. While these tasks involve data handling and feature engineering, there is no explicit mention of designing labeling tasks for data annotation. The responsibilities do not indicate involvement in creating annotation guidelines or workflows, which are specific to data annotation processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include developing and maintaining backend services, designing APIs, and working on ML model development. However, there is no mention of managing logistics or communication for annotation projects, nor overseeing performance of annotation teams. The focus is more on the technical development and deployment of AI models rather than the collection of human annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve implementing statistical methods to validate AI models and ensuring the integrity of ML solutions. While these tasks require data analysis, they do not specifically mention analyzing human annotation data. The focus is on model validation and deployment rather than evaluating dataset quality or generating insights from annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities mention implementing statistical methods to validate the effectiveness of AI models, which aligns with the use of statistical techniques for hypothesis testing, inference, and data analysis described in this Activity. The focus on tools like scikit-learn and statsmodels for building and validating models is relevant to the responsibilities of developing and productionizing ML solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities do not explicitly mention data visualization or exploratory data analysis. While these skills are often useful in data science roles, the responsibilities focus more on backend services, API design, and ML model lifecycle management. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include developing ML solutions in fields like Document understanding, Search and QnA, and Virtual Agents, which may involve analyzing conversational datasets. However, the responsibilities do not explicitly mention data mining or analysis of large datasets. The focus is more on model development and integration rather than data mining.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities involve working across the complete lifecycle of ML model development, which includes feature engineering and model deployment. Developing data models and pipelines is a crucial part of this process, especially for systematic performance tracking and feature engineering. This Activity is relevant to the responsibilities of ensuring the integrity and robustness of ML solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities include implementing system telemetry, A/B testing, and other statistical methods to validate AI models, which involves defining and tracking metrics. This aligns with the Activity of defining measurable indicators and analyzing metrics to assess model health and guide decision-making. Therefore, this Activity is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities include tasks such as \"Design, develop, and productionize machine learning (ML) solutions\" and \"Work across the complete lifecycle of ML model development, including deployment.\" These responsibilities align with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The mention of \"productionize\" and \"deployment\" in the responsibilities suggests a direct relevance to MLOps practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities mention \"Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models,\" which aligns with the Activity's focus on real-time monitoring and logging solutions to track model performance and detect data drift. This indicates that monitoring and observability are relevant to the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems for datasets and model artifacts. However, the responsibilities do include \"Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes,\" which implies a need for traceability and reproducibility, indirectly suggesting relevance to data and model versioning.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities explicitly mention \"Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes\" and \"Participate in code reviews, testing, and quality assurance processes.\" These tasks align closely with the Activity's focus on automating validation steps and introducing guardrails like canary testing, indicating strong relevance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not explicitly mention optimizing and scaling model-serving infrastructure or using cloud platforms and container orchestration tools. While there is a focus on backend services and integration, the specific mention of infrastructure and scalability is not present, suggesting limited direct relevance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities include \"Ensure the security and compliance of healthcare data, adhering to HIPAA regulations,\" which directly aligns with the Activity's focus on governance frameworks for data privacy, ethics, and regulatory compliance. This indicates a strong relevance to governance, compliance, and security.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities mention \"Work across the complete lifecycle of ML model development\" and \"Plan regular retraining, hyperparameter tuning, and performance evaluations,\" which align with the Activity's focus on model lifecycle management and continuous improvement. This suggests a direct relevance to the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on designing, developing, and maintaining AI-driven applications, with an emphasis on backend services, APIs, and ML model lifecycle management. There is no mention of gathering user insights or conducting interviews and surveys, which are central to user experience research. The responsibilities are more technical and development-oriented, rather than user-focused.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities do not mention usability testing or prototyping. The focus is on developing and deploying AI models, backend services, and ensuring system integrity and compliance. Usability testing and prototyping are typically associated with user experience design, which is not a primary focus of the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities do not include tasks related to understanding user personas or mapping user journeys. The job is centered around technical development, AI model lifecycle, and system integration, rather than user experience research or design activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While the job involves data exploration and validation, it is in the context of ML model development and not qualitative data analysis for user experience research. The responsibilities do not include synthesizing user feedback or translating qualitative insights into recommendations, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing, developing, and productionizing machine learning solutions, as well as designing and implementing APIs for integration with AI models and services. These tasks require a strong understanding of software architecture to ensure scalability, maintainability, and alignment with business needs. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention developing and maintaining backend services using Python, focusing on AI-driven applications, and ensuring the integrity and robustness of ML solutions. This aligns with writing clean, modular, and efficient code, as well as performing testing and refactoring, which are key aspects of developing production-grade applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities include participating in code reviews, testing, and quality assurance processes, as well as developing automated testing and validation processes. These tasks are closely related to CI/CD practices, which involve automating build, test, and deployment processes to streamline feature releases and maintain high software quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The responsibilities include troubleshooting and resolving technical issues related to AI models, integration, deployment, and backend services. This aligns with monitoring and incident management, which involves implementing logging, metrics, and alerting solutions for real-time visibility into system health and resolving production incidents.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities explicitly mention designing and implementing APIs for seamless integration with AI models and services. This directly corresponds to the activity of API development and system integration, which involves designing and implementing RESTful or GraphQL APIs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities include participating in code reviews, testing, and quality assurance processes, as well as developing automated testing and validation processes. These tasks are directly related to software testing and quality assurance, which involve developing automated test suites and maintaining test coverage and reliability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "While the job responsibilities do not explicitly mention DevOps or infrastructure as code, they do involve developing and maintaining backend services, ensuring the integrity and robustness of ML solutions, and implementing system telemetry and A/B testing. These tasks may benefit from a DevOps culture and infrastructure-as-code practices, but the connection is not as direct as with other activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include tasks such as implementing system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models. This aligns with the activity of conducting research to evaluate AI quality, as both involve investigating system performance metrics and validating hypotheses to guide improvements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing, developing, and productionizing machine learning solutions, as well as developing and maintaining backend services for AI-driven applications. This is directly related to developing AI systems and algorithms for automated insights, as both involve building and refining AI methods and models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. While there is a focus on data exploration and feature engineering, there is no direct reference to developing methods for producing synthetic datasets. Therefore, this activity is not clearly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include implementing system telemetry and statistical methods to validate AI models, which implies a need to identify and track performance metrics. This aligns with the activity of identifying performance metrics and success criteria, as both involve defining and analyzing measurable indicators to assess model health.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities mention data exploration and feature engineering, which are related to preparing data for model training. However, there is no specific mention of creating labeled datasets. While related, the activity of creating labeled datasets is not explicitly covered in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities explicitly mention implementing A/B testing and other statistical methods to validate AI models. This directly corresponds to designing, running, and analyzing experiments, making this activity highly relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1912f",
+    "responsibilities": [
+      "Design, develop, and productionize machine learning (ML) solutions in the fields of Document understanding, Search and QnA, GenAI, Virtual Agents, etc.",
+      "Develop and maintain backend services using Python, focusing on AI-driven applications.",
+      "Design and implement APIs for seamless integration with AI models and services.",
+      "Work across the complete lifecycle of ML model development, including problem definition, data exploration, feature engineering, model training, validation, and deployment.",
+      "Participate in code reviews, testing, and quality assurance processes.",
+      "Troubleshoot and resolve technical issues related to AI model, integration, deployment, and backend services.",
+      "Implement system telemetry, A/B testing, and other statistical methods to validate the effectiveness of AI models.",
+      "Ensure the integrity and robustness of ML solutions by developing automated testing and validation processes.",
+      "Document and communicate development processes, system designs, and architectural decisions.",
+      "Ensure the security and compliance of healthcare data, adhering to HIPAA regulations.",
+      "Responsible for adherence to the Capital Rx Code of Conduct including reporting of noncompliance."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve data exploration and feature engineering, which may include sampling data for evaluation. However, there is no explicit mention of using statistical methods to sample data. While related, the activity of sampling data for evaluation is not clearly outlined in the job responsibilities.",
+    "is_relevant": false
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "responsibilities": [
+    "Develop systems to identify, isolate, and recover from failures in large-scale distributed training workloads.",
+    "Implement proactive error-detection mechanisms, including straggler detection and fault prediction algorithms.",
+    "Ensure stability and consistency across distributed training clusters (e.g., GPU/TPU clusters).",
+    "Optimize recovery time and throughput in the face of hardware or software failures.",
+    "Design and maintain observability systems for monitoring cluster health, training performance, and failure patterns.",
+    "Leverage telemetry data to improve incident response and automate mitigation strategies.",
+    "Build resilience-focused tooling, such as job health monitors, distributed checkpoint systems, and automated recovery workflows.",
+    "Enhance debugging and diagnosis frameworks for distributed training jobs.",
+    "Collaborate with platform engineers, researchers, and ML practitioners to identify pain points and resilience requirements.",
+    "Document and communicate best practices for fault-tolerant AI training."
+  ],
+  "skills": [
+    "Proficiency in distributed computing frameworks (e.g., PyTorch DDP, TensorFlow, Horovod).",
+    "Strong knowledge of resilience strategies in distributed systems (e.g., leader election, consensus, retry mechanisms).",
+    "Hands-on experience with observability tools (e.g., Prometheus, Grafana, ELK stack).",
+    "Proficient in Python, Go, or a similar programming language.",
+    "Experience working with cloud platforms (e.g., AWS, GCP, Azure) and Kubernetes for workload orchestration.",
+    "Strong analytical, problem-solving, and debugging skills.",
+    "Excellent collaboration and communication skills."
+  ],
+  "qualifications": [
+    "5+ years of experience in distributed systems, cloud infrastructure, or large-scale machine learning training.",
+    "Proficiency in distributed computing frameworks (e.g., PyTorch DDP, TensorFlow, Horovod).",
+    "Strong knowledge of resilience strategies in distributed systems (e.g., leader election, consensus, retry mechanisms).",
+    "Hands-on experience with observability tools (e.g., Prometheus, Grafana, ELK stack).",
+    "Proficient in Python, Go, or a similar programming language.",
+    "Experience working with cloud platforms (e.g., AWS, GCP, Azure) and Kubernetes for workload orchestration.",
+    "Strong analytical, problem-solving, and debugging skills.",
+    "Excellent collaboration and communication skills.",
+    "Familiarity with GPU/TPU cluster management and scheduling (Nice-to-Have).",
+    "Experience with high-availability database systems or message queues (Nice-to-Have).",
+    "Experience with open-source contributions or community engagement (Nice-to-Have)."
+  ]
+}

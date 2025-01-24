@@ -1,0 +1,19 @@
+
+Identify the most common Responsibilities and Skills listed in the jobs below, returning a bulleted list in the format
+
+# Responsibilities
+- [responsibility]: [responsibility description]
+- [responsibility]: [responsibility description]
+...
+# Skills
+- [skill]: [skill description]
+- [skill]: [skill description]
+...
+<Job>
+<Responsibilities>['Design, implement, and optimize a high-performance serving platform for MLLMs.', 'Integrate SOTA open-source serving frameworks such as vLLM, sglang, or lmdeploy.', 'Develop techniques for efficient resource utilization and low-latency inference for MLLMs in serverless environments.', 'Optimize memory usage, scalability, and throughput of the serving platform.', 'Conduct experiments to evaluate and benchmark MLLM serving performance.', 'Contribute novel ideas to improve serving efficiency and publish findings when applicable.']</Responsibilities>
+<Skills>['Strong proficiency in PyTorch.', 'Familiarity with distributed systems, serverless architectures, and cloud computing platforms.', 'Experience with inference optimization for large-scale AI models.', 'Familiarity with multimodal architectures and serving requirements.']</Skills>
+</Job>
+<Job>
+<Responsibilities>['Build infrastructure that powers groundbreaking research with real-world impact on accelerating science', 'Conduct ML/AI/HCI experiments for research projects', 'Implement and share open-source software to improve access to research', 'Collaborate with and learn from team members across Ai2, including scientists and engineers', 'Mentor early-career researchers, engineers, and interns on their projects', 'Contribute toward scientific papers for publication in high-profile computing conferences and journals']</Responsibilities>
+<Skills>['Strong software engineering skills', 'Experience with system building (e.g., web application frameworks) or deep learning frameworks (e.g., PyTorch, Tensorflow)', 'Contributions to open-source research libraries (e.g., spaCy, Hugging Face’s Transformers) are a plus', 'A passion for using AI to deliver high-quality products and user experiences']</Skills>
+</Job>

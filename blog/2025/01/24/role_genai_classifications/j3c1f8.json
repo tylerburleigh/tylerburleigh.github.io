@@ -1,0 +1,33 @@
+{
+  "filename": "j3c1f8",
+  "responsibilities": [
+    "Design and develop production-grade Machine Learning solutions.",
+    "Ensure all ML code conforms to software engineering best practices and coding standards.",
+    "Help set ML engineering standards (development stack, sample starter projects, etc.).",
+    "Implement models with debugging, scaling, and monitoring in mind.",
+    "Mentor engineers and data scientists in applying software engineering to ML problems.",
+    "Set up ML experiments for server-based hyperparameter tuning.",
+    "Work with MLOps Engineers to develop pipelines and tools to automate model deployment.",
+    "Mentor ML Engineers and Data Scientists in proper development practices via Pull Requests.",
+    "Collaborate with the team on architecture and implementation.",
+    "Develop solution architectures that integrate ML models into real-world systems.",
+    "Prototype new technology and AI solutions.",
+    "Collaborate with product managers, data scientists, and other engineers.",
+    "Review code to ensure solutions are properly designed and implemented.",
+    "Stay up to date with the latest AI trends/emerging technologies and look for opportunities to improve the stack.",
+    "Articulate information and ideas to a diverse group of people."
+  ],
+  "skills": [
+    "Expertise in Python, including experience with machine learning libraries and frameworks such as sklearn, TensorFlow, PyTorch, or Keras.",
+    "Understanding of containerization (Docker & Linux experience).",
+    "Experience optimizing/tuning models.",
+    "Strong knowledge of data structures, algorithms, and software engineering principles.",
+    "Experience with SQL and big data platforms such as Postgres, Redshift, and Snowflake.",
+    "Experience with cloud compute environments (AWS) along with cloud-native tools.",
+    "Experience with Agile/Scrum methodology and best practices.",
+    "Experience in API development, best standards, and practices.",
+    "Experience with advanced natural language processing (NLP) techniques and tools, such as SpaCy, NLTK, or Hugging Face."
+  ],
+  "analysis": "The job responsibilities and skills listed focus on designing and developing machine learning solutions, ensuring best practices in ML engineering, and integrating ML models into real-world systems. The responsibilities include prototyping new AI solutions and staying updated with the latest AI trends, which could potentially involve Generative AI or language models. However, there is no explicit mention of working with Generative AI or LLMs in the responsibilities.\n\nIn the skills section, there is a mention of advanced natural language processing (NLP) techniques and tools, such as SpaCy, NLTK, or Hugging Face. Hugging Face is known for its work with transformers and language models, which are a type of LLM. This suggests that there might be some involvement with language models, although it is not explicitly stated as a primary focus of the job.\n\nOverall, while there is a potential for working with language models given the mention of NLP tools, the job does not explicitly focus on Generative AI or LLMs as a core responsibility or skill requirement.",
+  "is_genai_role": false
+}

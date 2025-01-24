@@ -1,0 +1,20 @@
+{
+  "filename": "jfbcd7",
+  "responsibilities": [
+    "Design and create evaluation measures, harnesses, and datasets for measuring risks posed by frontier AI systems.",
+    "Design and build harnesses to test AI agents for dangerous capabilities such as hacking or exploiting security vulnerabilities.",
+    "Develop and run human-in-the-loop tests of AI capabilities to deceive, manipulate, blackmail, or engage in social engineering.",
+    "Work with government agencies or other labs to collectively scope and design evaluations to measure and mitigate risks posed by advanced AI systems."
+  ],
+  "skills": [
+    "Proficiency in frameworks like Pytorch, Jax, or Tensorflow.",
+    "Ability to interpret research literature and quickly turn new ideas into prototypes.",
+    "Strong written and verbal communication skills.",
+    "Practical ML prototyping and debugging skills.",
+    "Experience with open source LLM fine-tuning or bespoke LLM fine-tuning projects.",
+    "Experience working with cloud technology stack (e.g., AWS or GCP) and developing machine learning models in a cloud environment."
+  ],
+  "analysis": "The Job's Responsibilities focus on designing evaluation measures and harnesses for AI systems, testing AI agents for dangerous capabilities, and collaborating with government agencies to mitigate AI risks. The Skills required include proficiency in ML frameworks, interpreting research literature, ML prototyping, and experience with cloud technology.\n\n1. **AI Research Scientist**: This option involves investigating AI methodologies, conducting experiments, and developing datasets. The responsibilities align with the Job's focus on designing evaluation measures and interpreting research literature. The Skills required, such as understanding LLMs and prompt engineering, are somewhat related to the Job's Skills.\n\n2. **AI/ML Engineer**: This role focuses on productionizing AI models and developing data pipelines. The Job's Responsibilities and Skills do not align well with this option, as it is more research and evaluation-focused rather than production-focused.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about deploying and monitoring AI systems. The Job's focus on evaluation and testing for risks does not align with the infrastructure and deployment focus of this role.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs. The Job's Responsibilities of designing evaluation measures and testing AI agents do not align with the solution design and business alignment focus of this role.\n\n5. **Data Scientist**: This role involves data analysis and model development. The Job's focus on AI evaluation and risk assessment does not align with the data analysis and predictive modeling focus of this role.\n\n6. **Data Engineer**: This role is about building data pipelines and architectures. The Job's Responsibilities and Skills do not align with the data engineering focus of this role.\n\n7. **Product Manager**: This role involves driving product vision and strategy. The Job's focus on AI evaluation and risk assessment does not align with the product management focus of this role.\n\n8. **Software Engineer**: This role involves software development and maintenance. The Job's Responsibilities and Skills do not align with the software engineering focus of this role.\n\nThe Job aligns most closely with the \"AI Research Scientist\" option, as both involve designing evaluation measures, interpreting research literature, and developing datasets, which are key aspects of the Job's Responsibilities and Skills.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

@@ -1,0 +1,26 @@
+{
+  "filename": "ja2638",
+  "responsibilities": [
+    "Develop event-driven distributed systems that process large amounts of data and integrate with downstream back end services",
+    "Build internal tools and libraries to help accelerate other backend teams",
+    "Build streaming data pipelines",
+    "Work with data science and data engineering teams to build best-in-class SDLC processes",
+    "Oversee the design and maintenance of data systems and contribute to the continual enhancement of the data platform",
+    "Collaborate with the team to define, track, and meet SLOs",
+    "Maintain and expand existing systems, tooling, and infrastructure",
+    "Other duties as required"
+  ],
+  "qualifications": [
+    "Strong competencies in data structures, distributed systems, algorithms, and software design",
+    "Strong knowledge of Java, Java frameworks (Springboot or Quarkus), Design Patterns, and Domain Driven Design",
+    "Experience with Kafka, Pub/Sub, or some other streaming platform",
+    "Strong knowledge of tools like Airflow to orchestrate data pipelines",
+    "Familiarity with Docker and Kubernetes",
+    "Experience with at least one major cloud platform (AWS, GCP, Azure)",
+    "Strong organization and collaboration skills",
+    "Excellent written and oral communications skills",
+    "Nice to have: Knowledge of Python, GO, Reactive programming"
+  ],
+  "analysis": "The job responsibilities focus on developing distributed systems, building data pipelines, and collaborating with data science and engineering teams. The skills required include strong competencies in data structures, distributed systems, and software design, as well as experience with Java, streaming platforms like Kafka, and cloud platforms. There is no mention of working with Generative AI or language models (LLMs) in the responsibilities or skills. The focus is more on backend development, data processing, and infrastructure rather than AI or language model development or integration.",
+  "is_genai_role": false
+}

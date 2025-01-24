@@ -1,0 +1,38 @@
+{
+  "filename": "j2d5b2",
+  "responsibilities": [
+    "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+    "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+    "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+    "Implement model observation and performance monitoring.",
+    "Deploy and support enterprise-grade ML solutions.",
+    "Optimize machine learning models for production efficiency and cost.",
+    "Build MLOps solutions for various problem domains such as clickstream, product demand, logistics, and more.",
+    "Design, build, and maintain ML CI/CD pipeline and workflows.",
+    "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+    "Support production ML solutions for mission-critical applications.",
+    "Translate models to optimal production code and validate results with Data Science.",
+    "Evaluate third-party tools and frameworks for adoption.",
+    "Establish and enforce team development standards."
+  ],
+  "qualifications": [
+    "Solid knowledge of model versioning, deployment, serving, monitoring, and data versioning.",
+    "Hands-on experience with DevOps, MLOps, or container-based application development (Docker, Kubernetes, etc.).",
+    "Expertise in setting up CI/CD pipeline processes and managing versioned data sets.",
+    "Experience designing and implementing data pipelines using tools like Spark, PySpark, Java, Docker, Kafka/Confluence.",
+    "Knowledge of data and ML frameworks: Spark/PySpark, Dask, scikit-learn, scipy, statsmodels, plotly.",
+    "Exposure to deep learning approaches and modeling frameworks (PyTorch, Tensorflow, Keras, etc.).",
+    "Hands-on experience with Cloud computing technology like AWS, Google Cloud, etc.",
+    "Proficiency in Python and strong object-oriented design skills.",
+    "Knowledge of other analytical programming languages such as R, Scala, and SAS.",
+    "Familiarity with workflow orchestration frameworks (KubeFlow, Airflow, Argo, etc.).",
+    "Knowledge of RESTful API design.",
+    "Technical mindset and analytical approach.",
+    "Great attention to detail.",
+    "Good leadership skills.",
+    "Sense of ownership and pride in performance.",
+    "Critical thinking and problem-solving skills."
+  ],
+  "analysis": "The job responsibilities and skills listed focus on automating, scaling, and optimizing machine learning pipelines, collaborating with data scientists and engineers, and deploying enterprise-grade ML solutions. The responsibilities include tasks such as developing reusable pipelining libraries, implementing model observation and performance monitoring, and optimizing machine learning models for production efficiency. The skills required include knowledge of model versioning, deployment, serving, monitoring, and data versioning, as well as experience with DevOps, MLOps, and container-based application development. There is also a focus on data and ML frameworks, deep learning approaches, and cloud computing technologies.\n\nWhile the job involves working with machine learning models and deep learning frameworks, there is no specific mention of Generative AI (GenAI) or language models (LLMs) such as GPT or BERT. The focus is more on the infrastructure, deployment, and optimization of machine learning models in general, rather than specifically on generative or language models.\n\nTherefore, based on the provided responsibilities and skills, it does not appear that this job specifically involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

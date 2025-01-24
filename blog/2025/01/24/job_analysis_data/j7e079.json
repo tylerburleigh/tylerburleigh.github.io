@@ -1,0 +1,97 @@
+[
+  {
+    "filename": "j7e079",
+    "responsibilities": [
+      "Develop a deep learning compiler stack that converts neural network descriptions into code suitable for execution on special-purpose and embedded platforms.",
+      "Use modern compiler frameworks such as LLVM and MLIR.",
+      "Develop optimized implementations of various neural-network operations and integrate them into a runtime framework.",
+      "Develop new optimization techniques and algorithms to efficiently map CNNs onto a wide range of Xtensa processors and specialized hardware.",
+      "Benchmark end-to-end network performance on various DSP and special-purpose accelerator platforms.",
+      "Enhance the framework to improve overall functionality and performance on various hardware platforms.",
+      "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+      "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+      "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+      "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on developing a deep learning compiler stack, optimizing neural-network operations, and working with hardware designers. These tasks are centered around neural networks and hardware optimization rather than language models. Fine-tuning and customization of language models, which involves training or fine-tuning large language models for domain-specific tasks, does not align with the responsibilities described, as they do not mention language models or related tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j7e079",
+    "responsibilities": [
+      "Develop a deep learning compiler stack that converts neural network descriptions into code suitable for execution on special-purpose and embedded platforms.",
+      "Use modern compiler frameworks such as LLVM and MLIR.",
+      "Develop optimized implementations of various neural-network operations and integrate them into a runtime framework.",
+      "Develop new optimization techniques and algorithms to efficiently map CNNs onto a wide range of Xtensa processors and specialized hardware.",
+      "Benchmark end-to-end network performance on various DSP and special-purpose accelerator platforms.",
+      "Enhance the framework to improve overall functionality and performance on various hardware platforms.",
+      "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+      "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+      "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+      "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention any tasks related to crafting or refining prompt instructions for large language models. The focus is on compiler frameworks, optimization techniques, and hardware acceleration for neural networks. There is no indication that prompt engineering or iterative refinement of language models is part of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j7e079",
+    "responsibilities": [
+      "Develop a deep learning compiler stack that converts neural network descriptions into code suitable for execution on special-purpose and embedded platforms.",
+      "Use modern compiler frameworks such as LLVM and MLIR.",
+      "Develop optimized implementations of various neural-network operations and integrate them into a runtime framework.",
+      "Develop new optimization techniques and algorithms to efficiently map CNNs onto a wide range of Xtensa processors and specialized hardware.",
+      "Benchmark end-to-end network performance on various DSP and special-purpose accelerator platforms.",
+      "Enhance the framework to improve overall functionality and performance on various hardware platforms.",
+      "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+      "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+      "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+      "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include benchmarking end-to-end network performance on various platforms, which involves performance assessment. However, this is specific to neural networks and hardware platforms, not large language models. The methodologies for evaluating language models, such as using perplexity or BLEU, are not relevant to the responsibilities described, which focus on neural network performance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j7e079",
+    "responsibilities": [
+      "Develop a deep learning compiler stack that converts neural network descriptions into code suitable for execution on special-purpose and embedded platforms.",
+      "Use modern compiler frameworks such as LLVM and MLIR.",
+      "Develop optimized implementations of various neural-network operations and integrate them into a runtime framework.",
+      "Develop new optimization techniques and algorithms to efficiently map CNNs onto a wide range of Xtensa processors and specialized hardware.",
+      "Benchmark end-to-end network performance on various DSP and special-purpose accelerator platforms.",
+      "Enhance the framework to improve overall functionality and performance on various hardware platforms.",
+      "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+      "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+      "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+      "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities do not mention integrating outputs into end-user experiences or pipelines, especially in the context of large language models. The focus is on developing and optimizing neural network operations and working with hardware designers. There is no indication of handling content moderation, retrieval augmentation, or specialized domain knowledge related to language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j7e079",
+    "responsibilities": [
+      "Develop a deep learning compiler stack that converts neural network descriptions into code suitable for execution on special-purpose and embedded platforms.",
+      "Use modern compiler frameworks such as LLVM and MLIR.",
+      "Develop optimized implementations of various neural-network operations and integrate them into a runtime framework.",
+      "Develop new optimization techniques and algorithms to efficiently map CNNs onto a wide range of Xtensa processors and specialized hardware.",
+      "Benchmark end-to-end network performance on various DSP and special-purpose accelerator platforms.",
+      "Enhance the framework to improve overall functionality and performance on various hardware platforms.",
+      "Devise multiprocessor/multicore partitioning and scheduling strategies.",
+      "Develop complex programs to validate the functionality and performance of the CNN application programming kit.",
+      "Work with hardware designers to identify opportunities for additional hardware acceleration of neural network functions.",
+      "Collaborate with industry-leading partners and customers to design and standardize neural network APIs."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not include tasks related to analyzing model outputs for errors, biases, or potential improvements in the context of language models. The responsibilities are centered around neural network operations, compiler frameworks, and hardware optimization. There is no mention of interpretability techniques or debugging tools for language models.",
+    "is_relevant": false
+  }
+]

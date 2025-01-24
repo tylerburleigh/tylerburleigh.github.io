@@ -1,0 +1,29 @@
+{
+  "responsibilities": [
+    "Design, build, and maintain robust and scalable data pipelines for collecting, transforming, storing, and delivering large datasets.",
+    "Implement ETL processes to integrate data from various sources into the Data Warehouse.",
+    "Optimize new and legacy data pipelines for performance, scalability, and reliability.",
+    "Design and implement data architectures that support analytics and reporting needs, ensuring efficient data storage and retrieval.",
+    "Build and manage data models, ensuring they align with business requirements and data consumption patterns.",
+    "Optimize SQL queries, database performance, and data processing jobs to minimize latency and improve efficiency.",
+    "Continuously monitor and tune data processing pipelines, databases, and queries to enhance performance, reduce latency, and minimize costs.",
+    "Implement robust security measures to ensure the confidentiality and integrity of sensitive data, including encryption, access controls, and data masking.",
+    "Maintain comprehensive documentation for data workflows, pipelines, infrastructure and facilitate knowledge sharing and team collaboration."
+  ],
+  "skills": [
+    "Strong proficiency with SQL and working with both transactional RDBMS (PostgreSQL, MySQL, Oracle, etc) and MPP databases (Redshift, Snowflake, BigQuery).",
+    "Experience writing and maintaining ETL codebases in at least one modern object-oriented programming language (Python, Java, C#, Go).",
+    "Ability to understand and compose complex queries and data structures.",
+    "Strong understanding of data modeling, data architecture, and data governance principles.",
+    "Strong understanding of cloud environments (AWS, GCP, Azure).",
+    "Hands-on experience with designing, maintaining, and optimizing data warehouses using fact and dimension tables.",
+    "Ability to collaborate with cross-functional teams, including software engineers, data scientists, analysts, and business stakeholders.",
+    "Familiarity with orchestration tools like Apache Airflow, Luigi, or Prefect (Nice to Have).",
+    "Experience working with container technology including Docker and Kubernetes (Nice to Have).",
+    "Knowledge using tools like Kafka, RabbitMQ, or Kinesis for real-time data streaming (Nice to Have)."
+  ],
+  "qualifications": [
+    "5+ years in Data Engineering or a related field.",
+    "Proven track record as a seasoned Senior Data Engineer."
+  ]
+}

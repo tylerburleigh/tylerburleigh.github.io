@@ -1,0 +1,25 @@
+{
+  "filename": "je1695",
+  "responsibilities": [
+    "Design, build, and scale data pipelines across a variety of source systems and streams (internal, third-party, and cloud-based), distributed/elastic environments, and downstream applications and self-service solutions.",
+    "Implement appropriate design patterns while optimizing performance, cost, security, and scale and end-user experience.",
+    "Collaborate with cross-functional teams to understand data requirements and develop efficient data acquisition and integration strategies.",
+    "Interface with other technology teams to extract, load, and transform data from a wide variety of data sources using cloud-native data engineering principles.",
+    "Become a subject matter expert for data engineering-related technologies and designs.",
+    "Coach and guide others within the organization to build scalable pipelines based on foundational data engineering principles.",
+    "Participate in development sprints, demos, and retrospectives alongside releases and deployment.",
+    "Build and manage relationships with supporting engineering teams to deliver work products to production effectively.",
+    "Collaborate with business leaders, engineers, and product managers to understand data needs.",
+    "Create documentation for developers and business users to help them understand our products."
+  ],
+  "skills": [
+    "Strong understanding of data modeling, warehousing, and architecture principles.",
+    "Strong understanding of Machine Learning best practices and algorithms.",
+    "Deep experience in building data pipelines using Python/SQL.",
+    "Deep experience in Airflow or similar orchestration engines.",
+    "Deep experience in applying CI/CD principles and processes to data engineering solutions.",
+    "Strong understanding of cloud data engineering design patterns and use cases."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data engineering, data pipelines, and cloud-based data solutions. The responsibilities include designing and scaling data pipelines, collaborating with cross-functional teams for data acquisition, and becoming a subject matter expert in data engineering technologies. The skills required include a strong understanding of data modeling, machine learning best practices, and experience with data pipeline tools like Python/SQL and Airflow.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering principles, cloud data engineering design patterns, and machine learning best practices, which are related to data processing and management rather than the development or application of GenAI or LLMs.\n\nTherefore, based on the provided responsibilities and skills, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

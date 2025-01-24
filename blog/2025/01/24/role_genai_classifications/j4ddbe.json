@@ -1,0 +1,29 @@
+{
+  "filename": "j4ddbe",
+  "responsibilities": [
+    "Work with a multi-disciplinary team",
+    "Design and build proof-of-concept analytics or software solutions for customer projects using current ML / deep learning / LLM best practices and technologies",
+    "Build new capabilities for data intensive processing and analysis on specialized high performance systems using state of the art open source technologies",
+    "Prepare and present research findings at scientific seminars, conferences, and workshops",
+    "Publish technical reports and refereed journal articles",
+    "Mentor junior staff"
+  ],
+  "qualifications": [
+    "Proficiency with UNIX, shell (bash) scripting, automating tasks and application setup via scripts",
+    "Bash scripting with multi-node utilization (for ML, distributed processing, utilities, setup scripts)",
+    "Understanding and application of the machine learning process using common environments and libraries, either traditional (e.g. pandas, scikit-learn) or deep learning technologies (e.g. PyTorch, TensorFlow)",
+    "Experience with applying the above by setting up and running AI/ML training jobs (e.g. in Python scripts/notebooks, or as configuration running as part of a cloud service)",
+    "Experience with container & virtualization technologies like Singularity, Docker",
+    "Good written and verbal communication skills and oral presentation skills",
+    "Experience designing and training neural networks, DNNs using libraries such as TensorFlow, PyTorch",
+    "Experience with AI/ML training at scale using distributed libraries/frameworks such as Dask, Spark",
+    "Familiarity with GPU accelerated AI/ML (e.g. Rapids)",
+    "Experience working with LLM concepts and frameworks (RAG, embeddings, vector databases, prompt engineering, agents, ollama, langchain, langsmith)",
+    "Experience fine-tuning existing large language models (LLMs) for domain specific use cases",
+    "Experience delivering trained machine learning models, i.e. MLOps (e.g. deploying a model as a service, model evaluation and monitoring, model versioning and storage)",
+    "Experience working with High Performance Computing",
+    "Writing pbs/slurm scripts to orchestrate ML model training"
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI (GenAI) and language models (LLMs). The responsibilities include designing and building proof-of-concept analytics or software solutions using current ML/deep learning/LLM best practices and technologies. This suggests a focus on advanced AI technologies, including LLMs. \n\nThe skills section further supports this, with specific mentions of experience working with LLM concepts and frameworks, such as RAG, embeddings, vector databases, prompt engineering, and agents. Additionally, there is a mention of experience fine-tuning existing large language models (LLMs) for domain-specific use cases. These are direct references to working with LLMs, which are a subset of Generative AI technologies. \n\nOther skills related to AI/ML training, neural networks, and distributed processing also align with the use of advanced AI technologies, including LLMs. The combination of these responsibilities and skills strongly indicates that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

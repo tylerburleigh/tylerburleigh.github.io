@@ -1,0 +1,602 @@
+[
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention training and fine-tuning multi-modal generative models, which could include language models. However, the focus is on multi-modal models and diffusion-based training, which may not directly align with the fine-tuning of language models specifically. The responsibilities do not explicitly mention domain-specific tasks or techniques like parameter-efficient fine-tuning or prompt tuning, which are central to this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention crafting or refining prompt instructions for large language models. The focus is on ensuring generated data meets specific requirements and working with autonomous driving systems, which does not directly relate to prompt engineering or iterative refinement of language model outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include ensuring that generated data meets specific requirements for visual plausibility and fidelity to physical laws. This could involve evaluating the quality and reliability of the models, which aligns with the activity of model evaluation and performance assessment. However, the focus is more on the data's visual and physical fidelity rather than the evaluation of language models specifically.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities involve working closely with the autonomous driving team to exploit the generated dataset for training and validating autonomous driving systems. This suggests an integration of model outputs into downstream applications, aligning with the activity of designing and implementing workflows that incorporate model outputs into end-user experiences or pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention analyzing model outputs for errors, biases, or potential improvements, nor do they mention employing interpretability techniques or debugging tools. The focus is more on training and ensuring data quality rather than interpreting or debugging model outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities involve training and fine-tuning multi-modal generative models, ensuring data meets specific requirements, and working with the autonomous driving team. Designing end-to-end workflows for AI-driven pipelines aligns with these responsibilities, as it involves creating a seamless integration of components necessary for generative AI, which is relevant to the task of training and fine-tuning models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities focus on training generative models and ensuring data quality, which implies a need for understanding computational demands and resource planning. This activity is relevant as it involves assessing computational needs and planning for scalability, which is crucial for handling large-scale datasets and model training.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "While performance optimization and latency control are important for AI systems, the job responsibilities do not explicitly mention these aspects. The focus is more on training models and ensuring data quality rather than optimizing performance or controlling latency. Therefore, this activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include training and fine-tuning models, which are part of the model lifecycle. This activity involves planning continuous retraining and fine-tuning, which directly aligns with the responsibilities of adapting models to evolving data and requirements. Therefore, it is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not explicitly mention system interoperability or integration with existing systems. The focus is on training models and ensuring data quality for autonomous driving systems. While integration might be a part of the broader context, it is not directly relevant to the specific responsibilities mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include ensuring that generated data meets specific requirements, which implies a need for evaluating AI quality. Conducting research to evaluate system accuracy and other performance metrics is relevant to ensuring data quality and fidelity to physical laws.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on training generative models and ensuring data quality, rather than developing systems for automated insights. While insights could be a byproduct of the models, this activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities involve training generative models and ensuring data quality, which directly relates to synthetic data generation. Developing methods for producing synthetic datasets is relevant as it can be used to improve AI models and validate autonomous driving systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include ensuring that generated data meets specific requirements, which implies the need for identifying performance metrics and success criteria. This activity is relevant as it involves defining measurable indicators to assess model health and guide decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities focus on training and fine-tuning models, which require high-quality datasets. Creating labeled datasets is relevant as it ensures robust model training and reliable performance measurement, aligning with the responsibility of ensuring data quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing or running experiments like A/B tests. The focus is more on training models and ensuring data quality. While experiments could be part of the broader research context, they are not directly relevant to the specific responsibilities mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include ensuring data quality, which implies the need for proper data evaluation. Sampling data for evaluation is relevant as it ensures a representative and diverse dataset for training and evaluation, aligning with the responsibility of ensuring data meets specific requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on training and fine-tuning multi-modal generative models, ensuring data meets specific requirements, and collaborating with the autonomous driving team. Designing labeling tasks for data annotation involves creating guidelines and workflows for consistent data labeling. While data quality is important for model training, the responsibilities do not explicitly mention designing labeling tasks or managing annotation processes. The focus is more on model training and dataset exploitation rather than the initial data annotation phase.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, nor overseeing performance of annotation teams. The focus is on training models and ensuring data quality for autonomous driving systems. While high-quality data is crucial, the responsibilities do not include tasks related to collecting human annotation data. The emphasis is on leveraging existing datasets rather than collecting new annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve ensuring generated data meets specific requirements and working with the autonomous driving team to exploit datasets. Analyzing human annotation data could be relevant if it involves evaluating dataset quality or generating insights that inform model training. However, the responsibilities do not explicitly mention analyzing annotation data. The focus is more on model training and dataset utilization rather than analysis of annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on training and fine-tuning multi-modal generative models, ensuring data meets specific requirements, and collaborating with the autonomous driving team. While statistical methods are fundamental in data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus is more on generative models and their application in autonomous driving, which may not directly involve traditional statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory analysis. The tasks are centered around model training, data generation, and collaboration with the autonomous driving team. While visualization can be a part of understanding model outputs or communicating results, it is not explicitly stated as a responsibility, making it less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities involve working with large-scale datasets for training generative models and ensuring data quality. However, there is no mention of conversational datasets or the specific analysis of user-generated interactions. The focus is more on generative models and autonomous driving, which may not involve conversational data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The responsibilities include training and fine-tuning models on large-scale datasets, which implies the need for data processing and possibly developing data pipelines. However, the focus is on generative models and their application in autonomous driving, rather than analytics pipelines. While there may be some overlap, the primary focus is not on developing analytics pipelines.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include ensuring that generated data meets specific requirements for visual plausibility and fidelity to physical laws. This implies the need for defining metrics and success criteria to evaluate the quality of the generated data. Additionally, working with the autonomous driving team may require defining metrics to assess the effectiveness of the generated datasets in training and validating systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities focus on training and fine-tuning generative models, ensuring data quality, and collaborating with the autonomous driving team. While these tasks are related to model development and application, they do not explicitly mention deployment or MLOps practices such as CI/CD pipelines, containerization, or orchestration. Therefore, this activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities do not mention monitoring or observability of models in production. The focus is on training models and ensuring data quality, rather than tracking model performance or detecting data drift. Thus, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities involve training and fine-tuning models, which implies a need for managing different versions of datasets and models. However, there is no explicit mention of version control systems or practices. While there is a potential indirect relevance, it is not explicitly stated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities include ensuring that generated data meets specific requirements, which could imply a need for validation. However, there is no explicit mention of automated testing or validation processes for models. The focus is more on data quality rather than model testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities do not mention infrastructure or scalability concerns. The focus is on model training and collaboration with the autonomous driving team, rather than optimizing or scaling model-serving infrastructure.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not address governance, compliance, or security issues. The focus is on model training and data quality, without mention of data privacy, ethics, or regulatory compliance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities involve training and fine-tuning models, which are part of the model lifecycle. However, there is no explicit mention of lifecycle management or continuous improvement practices such as retraining or hyperparameter tuning. The focus is more on initial training and data quality.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on training and fine-tuning generative models, ensuring data meets specific requirements, and collaborating with the autonomous driving team. User interviews and surveys are typically used to gather insights on user needs and preferences, which is more aligned with user experience research rather than the technical and data-driven tasks described in the Job Responsibilities. Therefore, this activity is not directly relevant to the responsibilities outlined.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities involve technical tasks related to generative models and autonomous driving systems, with no mention of user experience or usability testing. Usability testing and prototyping are activities focused on improving user experience, which does not align with the technical and data-centric nature of the responsibilities. Thus, this activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities centered around understanding user segments and improving user flows, which are part of user experience research. The Job Responsibilities, however, are focused on technical aspects of model training and data generation for autonomous driving systems, with no indication of user experience considerations. Therefore, this activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and needs, which is a key part of user experience research. The Job Responsibilities are centered on technical tasks related to generative models and autonomous driving, with no mention of qualitative data analysis or user feedback. As such, this activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on training and fine-tuning generative models, ensuring data meets specific requirements, and collaborating with the autonomous driving team. While these tasks involve software development, they do not explicitly mention designing and implementing software architecture. The responsibilities are more aligned with model training and data generation rather than system architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities involve training models and ensuring data quality, which are crucial for developing production-grade applications. However, the focus is more on model training and data generation rather than the broader scope of developing applications. The responsibilities do not explicitly mention writing code for applications, which is a key aspect of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not mention any aspects of continuous integration and delivery. The focus is on model training, data generation, and collaboration with the autonomous driving team. There is no indication of automating build, test, and deployment processes, which are central to CI/CD.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not include monitoring or incident management tasks. The focus is on training models, ensuring data quality, and collaborating with the autonomous driving team. There is no mention of implementing logging, metrics, or resolving production incidents.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention API development or system integration. The focus is on training models and ensuring data quality for autonomous driving systems. While system integration might be indirectly relevant, it is not a primary focus of the responsibilities described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "Ensuring that generated data meets specific requirements for visual plausibility and fidelity to physical laws is related to quality assurance. However, the responsibilities do not explicitly mention developing automated test suites or maintaining test coverage, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention DevOps practices or infrastructure as code. The focus is on training models, data generation, and collaboration with the autonomous driving team. There is no indication of managing cloud resources or promoting a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities focus on training and fine-tuning generative models, ensuring data meets specific requirements, and collaborating with the autonomous driving team. While these tasks involve working with AI models, they do not explicitly mention evaluating AI quality through research or experiments. The responsibilities are more about model development and application rather than evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include training and fine-tuning models, ensuring data quality, and collaborating with a team for autonomous driving systems. These tasks align with developing AI systems and algorithms, as they involve building and refining models. However, the focus is not on automated insights but rather on generating and validating data for specific applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities explicitly mention training and fine-tuning generative models and ensuring generated data meets specific requirements. This directly relates to synthetic data generation, as it involves creating datasets to improve AI models. The focus on visual plausibility and fidelity to physical laws further supports the relevance of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention identifying performance metrics or success criteria. While ensuring data quality and collaborating with a team may involve some consideration of performance metrics, the primary focus is on model training and data generation rather than defining and tracking specific metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities focus on training generative models and ensuring data quality, but they do not specifically mention creating labeled datasets. The emphasis is on generating synthetic data rather than preparing labeled datasets for evaluation and optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing or running experiments such as A/B tests. The focus is on model training, data generation, and collaboration with the autonomous driving team, rather than conducting controlled experiments to compare model variants or features.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j44119",
+    "responsibilities": [
+      "Train and fine-tune multi-modal generative models on large-scale datasets, leveraging diffusion-based training and transformer architectures.",
+      "Ensure that generated data meets specific requirements for visual plausibility and fidelity to physical laws.",
+      "Work closely with the autonomous driving team to understand their requirements and exploit the generated dataset for training and validating autonomous driving systems."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve ensuring generated data meets specific requirements, which may imply some level of data evaluation. However, there is no explicit mention of sampling data for evaluation purposes. The focus is more on data generation and model training rather than statistical sampling for evaluation.",
+    "is_relevant": false
+  }
+]

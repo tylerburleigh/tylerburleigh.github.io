@@ -1,0 +1,28 @@
+{
+  "filename": "j4d857",
+  "responsibilities": [
+    "Lead the design, implementation, and testing of data systems from architecture to production.",
+    "Contribute to the development of long-term data strategies and roadmaps.",
+    "Develop and maintain the \u201csource of truth\u201d data environment for Klaviyo.",
+    "Architect and productionize batch and real-time data systems.",
+    "Build ETLs to ingest multiple terabytes of data per day.",
+    "Ensure quality, performance, and stability of data systems.",
+    "Collaborate with cross-functional teams including Platform Engineering, Security, Product, Finance, Go-To-Market, Customer Success, Support, Sales, and Marketing.",
+    "Build data governance solutions ensuring compliance and security standards.",
+    "Mentor and coach team members to enhance their skills and performance."
+  ],
+  "qualifications": [
+    "Strong understanding of cloud technologies (AWS preferred).",
+    "Experience with Infrastructure as Code (IaC) tooling such as Terraform.",
+    "Expertise in database design, 3NF, dimensional modeling, data vault, or star schema.",
+    "Experience with Big Data technologies (e.g., Snowflake, Databricks/Spark, Trino).",
+    "Experience building real-time data pipelines and working with massive amounts of semi-structured data.",
+    "Knowledge of data and cloud engineering best practices.",
+    "Experience working with Docker and container orchestration services (e.g., ECS, Kubernetes).",
+    "Experience building data products with a security-first mindset.",
+    "Ability to clearly communicate complex technical concepts to both technical and non-technical stakeholders.",
+    "Passion for learning new technologies and staying current with industry trends."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data systems architecture, data engineering, and cloud technologies. The responsibilities include designing and implementing data systems, developing data strategies, building ETLs, and ensuring data quality and security. The skills required include expertise in cloud technologies, Infrastructure as Code, database design, and Big Data technologies. There is no mention of Generative AI, language models, or any specific tasks related to working with AI models or natural language processing. The focus is on data engineering and cloud infrastructure rather than AI or language model development or deployment.",
+  "is_genai_role": false
+}

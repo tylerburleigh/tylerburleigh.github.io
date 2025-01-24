@@ -1,0 +1,21 @@
+{
+  "responsibilities": [
+    "Design, implement, and optimize a high-performance serving platform for MLLMs.",
+    "Integrate SOTA open-source serving frameworks such as vLLM, sglang, or lmdeploy.",
+    "Develop techniques for efficient resource utilization and low-latency inference for MLLMs in serverless environments.",
+    "Optimize memory usage, scalability, and throughput of the serving platform.",
+    "Conduct experiments to evaluate and benchmark MLLM serving performance.",
+    "Contribute novel ideas to improve serving efficiency and publish findings when applicable."
+  ],
+  "skills": [
+    "Strong proficiency in PyTorch.",
+    "Familiarity with distributed systems, serverless architectures, and cloud computing platforms.",
+    "Experience with inference optimization for large-scale AI models.",
+    "Familiarity with multimodal architectures and serving requirements."
+  ],
+  "qualifications": [
+    "Bachelor’s degree or higher in Computer Science, Electrical and Computer Engineering (ECE), or a related field.",
+    "Experience with one or more SOTA LLM serving frameworks such as vLLM, sglang, or lmdeploy.",
+    "Previous experience in deploying AI platforms on cloud services."
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "jcc100",
+    "responsibilities": [
+      "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+      "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+      "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+      "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+      "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on designing and maintaining data engineering workflows, developing CI/CD pipelines, and deploying ML pipelines using AWS tools. There is no mention of training or fine-tuning large language models or employing techniques like parameter-efficient fine-tuning or prompt tuning. The responsibilities are more aligned with data engineering and machine learning infrastructure rather than language model customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jcc100",
+    "responsibilities": [
+      "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+      "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+      "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+      "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+      "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention crafting or refining prompt instructions for large language models. The focus is on data engineering workflows, CI/CD pipelines, and ML pipeline deployment. There is no indication of work related to prompt engineering or optimizing system outputs for language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jcc100",
+    "responsibilities": [
+      "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+      "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+      "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+      "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+      "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities do not include evaluating the quality, reliability, or fairness of large language models. The responsibilities are centered around data engineering, CI/CD pipelines, and ML pipeline deployment, with no mention of model evaluation metrics or human-in-the-loop reviews for language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jcc100",
+    "responsibilities": [
+      "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+      "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+      "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+      "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+      "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve designing and deploying data and ML pipelines, which could potentially include integrating outputs into end-user experiences or pipelines. However, there is no specific mention of handling LLM outputs, content moderation, or retrieval augmentation. The focus is more on data engineering and ML infrastructure rather than LLM integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jcc100",
+    "responsibilities": [
+      "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+      "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+      "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+      "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+      "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not mention analyzing model outputs for errors, biases, or potential improvements, nor do they mention employing interpretability techniques or debugging tools. The focus is on data engineering workflows, CI/CD pipelines, and ML pipeline deployment, without specific reference to model interpretability or debugging for language models.",
+    "is_relevant": false
+  }
+]

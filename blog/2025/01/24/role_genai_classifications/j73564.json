@@ -1,0 +1,18 @@
+{
+  "filename": "j73564",
+  "responsibilities": [
+    "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+    "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+    "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+    "Develop new supervision protocols and gather human annotations using these protocols.",
+    "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+  ],
+  "qualifications": [
+    "Proficiency in frameworks like Pytorch, Jax, or Tensorflow.",
+    "Ability to interpret research literature and quickly turn new ideas into prototypes.",
+    "Strong written and verbal communication skills to operate in a cross-functional team.",
+    "Practical ML prototyping and debugging skills."
+  ],
+  "analysis": "The job responsibilities include developing and evaluating methods for the evaluation and supervision of advanced AI systems, designing experiments related to language models, and training language models using reinforcement learning. These tasks clearly indicate involvement with language models, as they focus on the evaluation, supervision, and training of such models. Additionally, the mention of designing experiments to exemplify failure modes of current supervision protocols for language models further supports this. The skills required, such as proficiency in frameworks like Pytorch, Jax, or Tensorflow, and practical ML prototyping and debugging skills, are commonly associated with working on machine learning models, including language models. Therefore, the job involves working with language models, which are a type of Generative AI.",
+  "is_genai_role": true
+}

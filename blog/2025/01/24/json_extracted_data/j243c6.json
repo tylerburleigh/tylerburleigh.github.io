@@ -1,0 +1,24 @@
+{
+  "responsibilities": [
+    "Architect and implement log aggregation pipelines for Anduril infrastructure and applications.",
+    "Contribute to the development and maintenance of a security data lake for centralized security data management.",
+    "Design and implement ETL processes for security data ingestion, transformation, and storage.",
+    "Collaborate with teams to establish best practices for data usage (e.g., search functionality)."
+  ],
+  "skills": [
+    "Strong programming skills in one or more general-purpose languages (Python, Go, Rust, etc.).",
+    "Familiarity with one or more infrastructure as code languages (e.g., Terraform, AWS CDK) in a production capacity.",
+    "Ability to develop and maintain systems in cloud environments.",
+    "Familiarity with deploying code through CI/CD pipelines.",
+    "Ability to work autonomously and take ownership of complex projects."
+  ],
+  "qualifications": [
+    "Minimum of 3 years of experience in data and/or security engineering.",
+    "Familiarity with data lake architectures and best practices for security data management.",
+    "Experience with ETL tools and processes for large-scale data environments.",
+    "Must be eligible to obtain and maintain a U.S. TS clearance.",
+    "Experience building high-volume log ingestion and storage pipelines (preferred).",
+    "Experience with AWS, Azure, or GCP security ecosystems and tooling (preferred).",
+    "Experience with supporting multiple access patterns for data stored in various formats (using tools other than Splunk) (preferred)."
+  ]
+}

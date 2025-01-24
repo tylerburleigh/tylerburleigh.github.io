@@ -1,0 +1,602 @@
+[
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on designing and expanding build tool functionality, debugging and resolving issues for ML applications, and working with cross-functional teams. There is no mention of training or fine-tuning large language models, which is the primary focus of this activity. The responsibilities seem more aligned with hardware and software integration and debugging rather than model training or customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention crafting or refining prompt instructions for large language models. The focus is on hardware and software support, debugging, and cross-functional collaboration, which does not align with the iterative refinement of prompts for LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which could involve some level of model evaluation and performance assessment. However, the responsibilities are more focused on hardware and software contexts rather than evaluating large language models specifically. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities involve designing and expanding build tool functionality and working with cross-functional teams, which could potentially include integrating ML applications into broader systems. However, there is no specific mention of integrating LLM outputs into end-user experiences or pipelines, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which aligns with the activity of model interpretability and debugging. This suggests a potential overlap in skills and tasks, as both involve analyzing outputs and identifying errors or improvements. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on designing and expanding build tool functionality, debugging and resolving issues for ML applications, and working with cross-functional teams. While these tasks involve technical design and collaboration, they do not specifically mention designing end-to-end workflows for AI-driven pipelines, which is the focus of this activity. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities include designing and expanding build tool functionality and working with cross-functional teams, which may involve some level of resource planning. However, the specific focus on assessing computational demands and planning for scalability in AI models is not explicitly mentioned in the job responsibilities. Thus, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which could involve performance optimization and latency control. However, the specific techniques mentioned in this activity, such as caching mechanisms and load balancing, are not explicitly referenced in the job responsibilities. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not mention model lifecycle management or governance, such as retraining, versioning, or traceability. The focus is more on tool functionality, debugging, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include working with cross-functional teams, which may involve some level of system integration. However, the specific focus on aligning generative AI services with enterprise systems and establishing APIs is not explicitly mentioned. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which may involve evaluating AI quality. However, the specific focus on conducting research to evaluate system accuracy, robustness, and other metrics is not explicitly mentioned. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include designing and expanding build tool functionality and debugging ML applications, which may involve developing AI systems. However, the specific focus on building AI methods for automated insights is not explicitly mentioned. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on tool functionality, debugging, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which may involve identifying performance metrics. However, the specific focus on defining measurable indicators aligned with project goals is not explicitly mentioned. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets. The focus is on tool functionality, debugging, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing, running, or analyzing experiments. The focus is on tool functionality, debugging, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on tool functionality, debugging, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing and expanding build tool functionality, debugging and resolving issues for ML applications, and working with cross-functional teams. These tasks are more related to software development and problem-solving in a hardware/software context rather than data annotation. Designing labeling tasks for data annotation involves creating guidelines and workflows for data labeling, which does not align with the responsibilities mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention any tasks related to managing logistics or communication for annotation projects, overseeing performance of teams, or resolving ambiguities in data annotation. The focus is on technical aspects of software and hardware development and debugging, which are not related to collecting human annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The responsibilities listed do not include tasks related to analyzing annotation data or evaluating dataset quality. The focus is on technical development and debugging in a hardware/software context, which does not involve statistical analysis of annotation data. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on designing and expanding build tool functionality, debugging and resolving issues for ML applications, and working with cross-functional teams. While these tasks may involve some level of data analysis, they do not explicitly mention the application of statistical techniques or building statistical models. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The tasks are more focused on tool development, debugging, and collaboration with teams. There is no indication that the role involves presenting findings or using visualization tools to communicate insights. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not mention data mining or the analysis of large datasets. The focus is on hardware and software support, debugging, and collaboration. There is no indication that the role involves exploring user-generated interactions or uncovering trends in data. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities do not mention developing data models or pipelines for analytics. The tasks are centered around tool functionality, debugging, and cross-functional collaboration. There is no indication that the role involves implementing data processing workflows or analytics pipelines. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics or success criteria. However, the task of working with cross-functional teams to increase solution lead could involve some level of metric definition and analysis to assess competition and performance. Despite this potential indirect relevance, the primary focus of the responsibilities does not align with defining metrics. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention designing and expanding build tool functionality, which aligns with the design and maintenance of CI/CD pipelines for robust model deployment. However, the responsibilities do not explicitly mention deployment, versioning, or rollback strategies, nor do they mention containerization or orchestration. The focus seems more on hardware and software support rather than deployment processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include reproducing, debugging, and resolving issues for ML applications, which could involve monitoring and observability to track model performance and errors. However, the responsibilities do not explicitly mention real-time monitoring or logging solutions. The focus is more on debugging specific issues rather than continuous monitoring.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not mention version control systems or the need for reproducibility and traceability of datasets and model artifacts. The focus is more on hardware and software support and debugging rather than managing data and model versions.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not mention automating validation steps or testing models. The focus is on debugging and resolving issues, which is more reactive than the proactive approach of continuous testing and validation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not mention optimizing or scaling model-serving infrastructure. The focus is on supporting hardware and software, which may indirectly relate to infrastructure, but there is no explicit mention of scalability or cloud platforms.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance frameworks, compliance, or security measures. The focus is on technical support for hardware and software rather than establishing governance or security practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities do not mention model lifecycle management or continuous improvement practices such as retraining or hyperparameter tuning. The focus is on supporting hardware and software and resolving specific issues rather than managing the model lifecycle.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on designing and expanding build tool functionality, debugging and resolving issues for ML applications, and collaborating with cross-functional teams. These tasks are technical and engineering-focused, with no mention of gathering user insights or understanding user needs, which are central to user interviews and surveys.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities do not mention any tasks related to usability testing or prototyping. The focus is on technical development and problem-solving for hardware and software, which does not align with the user experience focus of designing and conducting usability tests.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities outlined are centered around technical development and issue resolution, with no indication of creating user personas or mapping user journeys. These activities are typically part of UX research and design, which is not relevant to the given job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities do not involve qualitative data analysis related to user experience. The focus is on technical tasks such as debugging and resolving issues, which are not related to synthesizing user feedback or translating findings into UX recommendations.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and expanding build tool functionality to support new hardware and software, which aligns with the activity of designing and implementing software architecture. This involves defining system components and integration points, which is relevant to the task of expanding build tool functionality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities mention reproducing, debugging, and resolving issues for ML applications, which involves writing and maintaining code. This aligns with developing production-grade applications, which includes writing clean, modular, and efficient code and performing testing and refactoring.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not explicitly mention CI/CD processes such as automating build, test, and deployment processes. While these practices are generally relevant to software engineering, there is no direct mention of CI/CD in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities include reproducing, debugging, and resolving issues, which is related to incident management. However, there is no explicit mention of monitoring or implementing logging and metrics solutions, which are key components of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not specifically mention API development or system integration. While these are common tasks in software engineering, there is no direct reference to designing or implementing APIs in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include reproducing, debugging, and resolving issues, which involves testing and ensuring the quality of software. This aligns with the activity of software testing and quality assurance, which includes developing automated test suites and maintaining test coverage.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention DevOps practices or the use of infrastructure-as-code tools. While these are important in software engineering, there is no direct reference to managing or provisioning cloud resources or promoting a DevOps culture in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include designing and expanding build tool functionality, reproducing, debugging, and resolving issues for ML applications, and working with cross-functional teams. These tasks suggest a focus on development and problem-solving in the context of hardware and software. Conducting research to evaluate AI quality involves investigating system performance metrics and designing experiments, which aligns with the responsibility of debugging and resolving issues for ML applications. This suggests a relevance in terms of ensuring the quality and performance of AI systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on tool functionality, issue resolution, and collaboration with teams, which are more aligned with development and problem-solving rather than directly building AI systems for insights. While there is an overlap in the use of ML applications, the primary focus of the job seems to be on supporting hardware and software contexts rather than developing AI systems for insights. Therefore, this activity is less relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention data generation or the use of synthetic datasets. The focus is more on tool functionality, debugging, and collaboration. While synthetic data generation can be a part of ML application development, it is not directly mentioned or implied in the responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibility of reproducing, debugging, and resolving issues for ML applications suggests a need to understand and work with performance metrics. Identifying performance metrics and success criteria is relevant as it aligns with assessing model health and guiding decision-making, which is crucial for resolving issues and improving ML applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is on tool functionality, debugging, and collaboration. While labeled datasets are important for AI evaluation, the responsibilities do not indicate direct involvement in data preparation or annotation. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include debugging and resolving issues for ML applications, which may involve experimentation to identify and fix problems. Designing, running, and analyzing experiments can be relevant to understanding the impact of changes and improvements in ML applications. This aligns with the responsibility of ensuring the solution leads in competition, suggesting a relevance to the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8b779",
+    "responsibilities": [
+      "Design and expand build tool functionality to support new WSE hardware and SW.",
+      "Reproduce, debug and resolve issues for ML applications such as stalls/nan specific to HW/SW context.",
+      "Work with cross functional teams to further increase the solution lead Cerebras with its competitions."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention data sampling. The focus is on tool functionality, debugging, and collaboration. While data sampling is important for evaluation, the responsibilities do not indicate direct involvement in data sampling processes. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  }
+]

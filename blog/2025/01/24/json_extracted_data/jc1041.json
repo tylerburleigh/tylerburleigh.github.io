@@ -1,0 +1,24 @@
+{
+  "responsibilities": [
+    "Develop software targeted on Huawei's hardware, including fundamental kernels and cutting-edge tools.",
+    "Apply parallel and high-performance computing knowledge to improve performance of various aspects of the solver.",
+    "Develop GPU/NPU versions of classical algorithms or new algorithms to solve critical problems in applications.",
+    "Improve training and inference performance of machine learning models on GPU/NPU.",
+    "Assist in profiling, bottleneck analysis, testing, and validation.",
+    "Assist teams to accelerate their software on Huawei's heterogeneous architectures: CPU + X.",
+    "Collaborate and communicate with team members to ensure smooth integration with the larger project."
+  ],
+  "skills": [
+    "Parallel and high-performance computing knowledge.",
+    "C/C++ programming skills at an expert level.",
+    "Strong foundation in sparse computations, linear algebra, and matrix computation.",
+    "Familiarity with performance profiling tools.",
+    "Knowledge of machine learning tools like Torch and TensorFlow.",
+    "Experience with BLAS/LAPACK and well-known Sparse Linear Solvers."
+  ],
+  "qualifications": [
+    "PhD in Computer Science, Electronic Engineering, or related fields, or an equivalent level of proven work experience and successful project delivery.",
+    "Experience in developing core algorithms for GPUs, TPUs, FPGAs, or ASICs.",
+    "Experience in high-performance computing applications."
+  ]
+}

@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention \"Train and fine-tune cutting-edge models on real-world lab data\" and \"Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.\" This aligns with the Activity's focus on fine-tuning language models for domain-specific tasks, suggesting a strong relevance to the responsibilities of training and customizing models for specific applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or iterative refinement of prompts. While the responsibilities involve collaboration and integration of domain-specific constraints, there is no direct reference to crafting and refining prompts for LLMs. Therefore, this Activity seems less relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include \"Develop rigorous testing, documentation, and model benchmarking,\" which aligns with the Activity's focus on evaluating model quality and performance. This suggests a strong relevance, as both involve assessing and ensuring the reliability and effectiveness of models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities mention \"Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability,\" which suggests some level of integration with specific applications. However, there is no explicit mention of incorporating LLM outputs into end-user experiences or pipelines, making the relevance of this Activity less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention model interpretability or debugging. While developing rigorous testing and documentation could involve some level of analysis, there is no direct reference to analyzing model outputs for errors or biases. Therefore, this Activity seems less relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include designing and implementing generative models tailored for biological sequences, which implies a need for a structured workflow. This aligns with the Activity's focus on designing end-to-end workflows for AI-driven pipelines. The integration of components to deliver high-quality generative results is relevant to the responsibility of developing rigorous testing, documentation, and model benchmarking.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this Activity. While the responsibilities involve training and fine-tuning models, they do not directly address the infrastructure or resource planning aspects.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities do not specifically mention performance optimization or latency control. While developing rigorous testing and model benchmarking could indirectly relate to performance, the responsibilities do not explicitly focus on maintaining low response times or handling spikes in requests.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities include training and fine-tuning models, which aligns with the Activity's focus on continuous retraining or fine-tuning. Additionally, the responsibility of developing rigorous testing and documentation could relate to implementing versioning and ensuring traceability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities involve collaborating with experts across biology and automation, which may require some level of system integration. However, the specific focus on aligning generative AI services with existing enterprise systems is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include developing rigorous testing, documentation, and model benchmarking, which aligns with conducting research to evaluate AI quality. This involves investigating system accuracy and other performance metrics, which is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on designing and implementing generative models and integrating domain-specific constraints, which involves developing AI systems. However, the specific focus on automated insights from user behavior or system performance is not directly mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation. While the responsibilities involve training models on real-world lab data, there is no explicit mention of developing methods for producing synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include developing rigorous testing, documentation, and model benchmarking, which involves identifying performance metrics and success criteria. This is relevant to ensuring model health and guiding decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. While training and fine-tuning models may involve data preparation, the specific focus on creating labeled datasets for evaluation and optimization is not directly addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include developing rigorous testing and model benchmarking, which could involve designing and analyzing experiments. However, there is no explicit mention of A/B tests or similar experimental methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. While rigorous testing and model benchmarking may involve data evaluation, the specific focus on statistical sampling methods is not directly addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on training and fine-tuning models, collaborating with experts, designing generative models, integrating domain-specific constraints, and developing testing and documentation. These tasks are primarily related to model development and implementation rather than data annotation. Designing labeling tasks for data annotation involves creating guidelines and workflows for consistent data labeling, which is not directly mentioned or implied in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or overseeing annotation projects. The focus is on model development, collaboration, and testing. Collecting human annotation data is a task related to data preparation and management, which is not explicitly covered in the responsibilities listed. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities emphasize model design, integration of constraints, and testing, but do not mention analyzing annotation data. While analyzing data could be a part of model evaluation, the responsibilities specifically highlight model benchmarking and documentation rather than data analysis. Thus, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on training and fine-tuning models, collaborating with experts, designing generative models, integrating domain-specific constraints, and developing testing and documentation. While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or data analysis using statistical techniques. The focus is more on generative models and their application in biology, which may not directly involve traditional statistical methods as described in this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on model training, collaboration, and integration of domain-specific constraints. While data visualization can be a part of model development and communication, it is not explicitly highlighted in the responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not mention data mining or analysis of conversational datasets. The focus is on generative models for biological sequences and structures, which is a different domain from conversational data. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include developing rigorous testing, documentation, and model benchmarking, which may involve creating data models and pipelines. However, the primary focus is on generative models and their application in biology, rather than on developing data models and pipelines for analytics. While there may be some overlap, the activity is not directly relevant to the core responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include developing rigorous testing, documentation, and model benchmarking, which likely involves defining metrics and success criteria to assess model performance. This activity aligns with the need to track and analyze metrics to guide decision-making, making it relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on training, fine-tuning, and designing generative models, as well as integrating domain-specific constraints and developing testing and documentation. While these tasks are related to model development, they do not explicitly mention deployment or MLOps practices such as CI/CD pipelines, containerization, or orchestration. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not mention monitoring or observability of models in production. The focus is on model development, testing, and collaboration with experts. Monitoring and observability are more aligned with post-deployment activities, which are not covered in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities include developing rigorous testing, documentation, and model benchmarking, which implies a need for reproducibility and traceability. While versioning is not explicitly mentioned, it is a critical part of ensuring reproducibility and traceability, making this Activity somewhat relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities mention developing rigorous testing and model benchmarking, which aligns with the concept of continuous testing and validation. This Activity is relevant as it supports the need for automated validation steps and performance benchmarks in the model development process.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not address infrastructure optimization or scalability concerns. The focus is on model development and integration of domain-specific constraints, which are separate from infrastructure and scalability considerations typically associated with deployment.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security aspects. The focus is on model development and collaboration, without reference to data privacy, ethics, or regulatory compliance, making this Activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include training, fine-tuning, and designing models, which are part of the model lifecycle. While continuous improvement is not explicitly mentioned, the responsibilities imply ongoing development and adaptation of models, making this Activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on developing and fine-tuning models, collaborating with experts, and integrating domain-specific constraints into generative models. These tasks are technical and research-oriented, primarily in the field of biology and automation. User interviews and surveys, which are part of UX research, involve gathering insights on user needs and preferences, which do not directly align with the responsibilities of model development and collaboration in a scientific context.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities are centered around designing and implementing generative models, integrating constraints, and developing testing and documentation. Usability testing and prototyping are activities related to evaluating user experience and iterating on product design, which do not directly relate to the technical and scientific focus of the job responsibilities. The responsibilities do not mention user experience or product design, indicating a lack of relevance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities that focus on understanding user segments and their interactions with a product or service. The Job Responsibilities are focused on technical tasks related to model development and collaboration in a scientific context, with no mention of user experience or audience segmentation. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing interview notes and survey responses to identify themes and needs. The Job Responsibilities are focused on technical tasks such as model development, collaboration, and testing in a scientific context. While both involve analysis, the nature of the data and the purpose of the analysis differ significantly. The job responsibilities do not involve qualitative data from user research, making this activity irrelevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities mention designing and implementing generative models tailored for biological sequences, structures, and molecular modalities. This involves creating a structured framework for these models, which aligns with the concept of designing and implementing software architecture. However, the focus is more on model design rather than general software architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities include developing rigorous testing, documentation, and model benchmarking, which are aspects of creating production-grade applications. However, the primary focus is on model development rather than application development, which is more aligned with software engineering.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not explicitly mention CI/CD practices. While developing rigorous testing and documentation could imply some level of integration and delivery processes, the responsibilities are more focused on model development and collaboration with experts.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not mention monitoring or incident management. The focus is on model development, collaboration, and integration of domain-specific constraints, which do not directly relate to monitoring and incident management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities include integrating domain-specific constraints and priors into generative models, which involves some level of integration. However, this is more about model integration rather than system or API development, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities mention developing rigorous testing, documentation, and model benchmarking, which aligns with software testing and quality assurance practices. This activity is relevant as it involves ensuring the quality and reliability of the models developed.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention DevOps practices or infrastructure as code. The focus is on model development and collaboration, which does not directly relate to managing and provisioning cloud resources or promoting a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include developing rigorous testing, documentation, and model benchmarking, which aligns with investigating system accuracy, robustness, and other key performance metrics. This suggests a focus on evaluating AI quality, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on designing and implementing generative models tailored for biological sequences and integrating domain-specific constraints. While this involves developing AI systems, the emphasis is on generative models for biological applications rather than automated insights from user behavior or system performance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. However, developing generative models could involve creating synthetic data, especially if it enhances biological plausibility and experimental viability. This makes the activity potentially relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include developing rigorous testing and model benchmarking, which implies identifying and tracking performance metrics. This aligns with defining measurable indicators to assess model health, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is more on model development and integration of domain-specific constraints rather than data preparation. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include developing rigorous testing and model benchmarking, which could involve designing and analyzing experiments to compare model variants. However, there is no explicit mention of A/B testing or similar methodologies, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfaf0b",
+    "responsibilities": [
+      "Train and fine-tune cutting-edge models on real-world lab data.",
+      "Collaborate with experts across biology and automation to push boundaries.",
+      "Design and implement generative models (e.g., LLMs, VAEs, diffusion models) tailored for biological sequences, structures, and molecular modalities.",
+      "Integrate domain-specific constraints and priors into generative models to enhance biological plausibility and experimental viability.",
+      "Develop rigorous testing, documentation, and model benchmarking."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention data sampling for evaluation. The focus is more on model development and integration of constraints rather than data sampling. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  }
+]

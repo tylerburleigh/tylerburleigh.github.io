@@ -1,0 +1,38 @@
+{
+  "filename": "jffe19",
+  "responsibilities": [
+    "Design and implement novel architectures for large-scale video and multimodal diffusion models",
+    "Develop new approaches to multimodal fusion, temporal modeling, and video control",
+    "Research temporal video editing techniques and controllable generation",
+    "Research and validate scaling laws for video generation models",
+    "Create new loss functions and training objectives for improved generation quality",
+    "Drive rapid experimentation with model architectures and training strategies",
+    "Validate research directly through product deployment and user feedback",
+    "Train and optimize models at massive scale (10s-100s of billions of parameters)",
+    "Develop sophisticated distributed training approaches using FSDP, DeepSpeed, Megatron-LM",
+    "Design and implement model surgery techniques (pruning, distillation, quantization)",
+    "Create new approaches to memory optimization and training efficiency",
+    "Research techniques for improving training stability at scale",
+    "Conduct systematic empirical studies of architecture and optimization choices",
+    "Advance state-of-the-art in video model architecture design and optimization",
+    "Develop new approaches to temporal modeling for video generation",
+    "Create novel solutions for multimodal learning and cross-modal alignment",
+    "Research and implement new optimization techniques for generative modeling and sampling",
+    "Design and validate new evaluation metrics for generation quality",
+    "Systematically analyze and improve model behavior across different regimes"
+  ],
+  "skills": [
+    "Strong proficiency in modern deep learning tooling (PyTorch, CUDA, Triton, FSDP, etc.)",
+    "Experience training diffusion models with 10B+ parameters",
+    "Deep understanding of attention, transformers, and modern multimodal architectures",
+    "Expertise in distributed training systems and model parallelism",
+    "Proven ability to implement and improve complex model architectures",
+    "Strong software engineering practices including testing and code review",
+    "Experience with rapid prototyping and experimental design",
+    "Strong analytical skills for debugging model behavior and training dynamics",
+    "Facility with profiling and optimization tools"
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on advanced deep learning techniques, particularly in the context of video and multimodal diffusion models. The responsibilities include designing novel architectures, developing new approaches to multimodal fusion, and optimizing models at a massive scale. The skills required include proficiency in deep learning tools like PyTorch and CUDA, experience with diffusion models, and expertise in distributed training systems.\n\n1. **AI Research Scientist**: This option involves investigating AI methodologies and conducting experiments, which aligns with the research and experimentation aspects of the job. However, it lacks the specific focus on large-scale model training and optimization.\n\n2. **AI/ML Engineer**: This role focuses on transforming research into scalable solutions, which is not the primary focus of the job, as the job is more research-oriented.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about deploying and monitoring AI systems, which does not align with the research and development focus of the job.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which is not directly related to the research and model development focus of the job.\n\n5. **Data Scientist**: This role focuses on data analysis and model development, but it does not match the specific deep learning and model optimization focus of the job.\n\n6. **Data Engineer**: This role is about building data pipelines and architectures, which is not relevant to the job's focus on deep learning model development.\n\n7. **Product Manager**: This role involves driving product vision and strategy, which is not related to the technical and research-focused nature of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which does not align with the deep learning research and model optimization focus of the job.\n\nThe job's focus on deep learning research, model architecture design, and optimization aligns most closely with the responsibilities and skills of an AI Research Scientist. The emphasis on experimentation, model validation, and staying current with AI research trends matches the job's requirements.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

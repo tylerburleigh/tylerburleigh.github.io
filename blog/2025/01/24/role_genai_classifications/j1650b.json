@@ -1,0 +1,25 @@
+{
+  "filename": "j1650b",
+  "responsibilities": [
+    "Design and develop data pipelines using tools like Apache Airflow or by leveraging Snowflake's external tables functionality.",
+    "Translate HiveQL queries to Snowflake SQL, ensuring compatibility and efficient data processing.",
+    "Utilize dbt to model and transform data within Snowflake, adhering to best practices for data governance and maintainability.",
+    "Configure and manage data pipelines in GCP to orchestrate data movement and processing tasks.",
+    "Collaborate with data analysts and stakeholders to understand data requirements and ensure a successful migration outcome.",
+    "Monitor and optimize data pipelines for performance and scalability.",
+    "Develop and implement automated testing procedures to validate data quality and integrity after migration.",
+    "Document the migration process and provide ongoing support for the migrated data warehouse on Snowflake."
+  ],
+  "qualifications": [
+    "Strong expertise in HiveQL, SQL, and experience with data warehousing/lake house concepts (dimensional modeling, data quality, etc.).",
+    "Strong programming knowledge in Python.",
+    "Strong understanding of data architectures and patterns.",
+    "Experience with Apache Spark for large-scale data processing (a plus).",
+    "Proficiency in dbt for data modeling and transformation in Snowflake preferred.",
+    "Experience working with Google Cloud Platform (GCP) and its data storage services (GCS, BigQuery - a plus).",
+    "Excellent written and verbal communication skills with the ability to collaborate effectively with cross-functional teams.",
+    "Strong problem-solving skills and a passion for building efficient and scalable data solutions."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data migration, and data warehousing tasks. The responsibilities include designing and developing data pipelines, translating queries, utilizing dbt for data modeling, configuring data pipelines in GCP, and optimizing data pipelines for performance. The skills required include expertise in SQL, Python programming, understanding data architectures, and experience with tools like Apache Spark, dbt, and GCP.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data processing, transformation, and migration, which are typical tasks in data engineering and data management roles. Therefore, this job does not involve working with GenAI or LLMs.",
+  "is_genai_role": false
+}

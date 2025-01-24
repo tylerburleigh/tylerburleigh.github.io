@@ -1,0 +1,20 @@
+{
+  "filename": "j7edef",
+  "responsibilities": [
+    "Design, develop, and maintain robust and scalable GenAI Solutions, including inference services, automated workflows, and data ingestion systems.",
+    "Optimize infrastructure resources to maximize efficiency and minimize costs.",
+    "Build and maintain tools for model experimentation, visualization, and monitoring.",
+    "Collaborate with cross-functional teams to understand their needs and translate them into technical solutions.",
+    "Stay up-to-date with the latest advancements in AI, machine learning, and cloud technologies."
+  ],
+  "skills": [
+    "Strong proficiency in programming languages like Java or Python.",
+    "Familiarity with GenAI frameworks (LangChain, LlamaIndex, etc.).",
+    "Experience with cloud platforms (AWS, GCP) and containerization technologies (Docker, Kubernetes).",
+    "Strong problem-solving and analytical skills.",
+    "Excellent communication and collaboration skills."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an \"MLOps / AI Infrastructure Engineer\" (Option 3). Here's the breakdown:\n\n1. **Responsibilities**:\n   - The job involves designing, developing, and maintaining GenAI solutions, optimizing infrastructure resources, and building tools for model experimentation and monitoring. These tasks are closely related to the responsibilities of an MLOps / AI Infrastructure Engineer, which include managing infrastructure for scalable AI deployments, setting up CI/CD pipelines, and monitoring production models.\n   - The job also requires collaboration with cross-functional teams, which is a common responsibility across many roles, but particularly emphasized in the MLOps role for ensuring reliable deployment and scaling of AI systems.\n\n2. **Skills**:\n   - The job requires strong proficiency in programming languages like Java or Python, familiarity with GenAI frameworks, and experience with cloud platforms and containerization technologies. These skills align well with the MLOps role, which requires a strong DevOps background, experience with Docker and Kubernetes, and familiarity with cloud services.\n   - The job also emphasizes strong problem-solving and analytical skills, as well as excellent communication and collaboration skills, which are essential for an MLOps role to effectively manage AI infrastructure and work with cross-functional teams.\n\nWhile there are elements of the job that could relate to other roles, such as AI/ML Engineer (Option 2) or Software Engineer (Option 8), the focus on infrastructure optimization, cloud technologies, and containerization makes the MLOps / AI Infrastructure Engineer the best fit.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

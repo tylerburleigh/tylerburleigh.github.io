@@ -1,0 +1,22 @@
+{
+  "filename": "jcc100",
+  "responsibilities": [
+    "Design, build, and maintain platform components to support data engineering workflows and machine learning pipelines.",
+    "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+    "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+    "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+    "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+  ],
+  "qualifications": [
+    "Expertise in data engineering and machine learning engineering.",
+    "Proficiency in designing and building pipelines using AWS services such as S3, Glue, Lambda, Redshift, Athena, SageMaker, and Kinesis.",
+    "Strong experience with CI/CD pipelines, especially using Jenkins.",
+    "Extensive knowledge of Python programming language and its data manipulation libraries (Pyspark, Pandas, and Numpy).",
+    "Analytical and detail-oriented mindset.",
+    "Skilled in coaching and mentoring junior employees.",
+    "Strong teamwork, accountability, and ownership of tasks and projects.",
+    "Capable of driving change and influencing others in a fast-paced environment."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data engineering, machine learning engineering, and the development of data and ML pipelines using AWS services. The responsibilities include designing and deploying ML pipelines, building data engineering workflows, and collaborating on domain-specific data products. The skills required include expertise in data engineering, proficiency in AWS services, and experience with CI/CD pipelines and Python programming.\n\nThere is no explicit mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on the infrastructure and processes for data and machine learning workflows rather than on the development or application of GenAI or LLMs. Tools like SageMaker are mentioned, which can be used for a variety of machine learning tasks, but there is no specific indication that they are used for GenAI or LLMs in this context.\n\nOverall, the job seems to be centered around data engineering and machine learning infrastructure rather than directly involving Generative AI or language models.",
+  "is_genai_role": false
+}

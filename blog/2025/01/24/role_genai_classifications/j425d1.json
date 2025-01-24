@@ -1,0 +1,20 @@
+{
+  "filename": "j425d1",
+  "responsibilities": [
+    "Lead the implementation of generative AI use cases that bring measurable economic benefit to Covestro by designing and implementing suitable generative AI solution architectures, including software design and Cloud architectures.",
+    "Oversee use cases throughout the entire lifecycle of generative AI products, such as development and implementation of prototypes, minimum viable products (MVP) as well as in supporting the products in the operational phase.",
+    "Select, evaluate, and make decisions on proposals from external solution providers and consulting companies in terms of their effectiveness and usefulness.",
+    "Establish and contribute to internal communities of practice to shape the generative AI tech-stack of Covestro."
+  ],
+  "qualifications": [
+    "Solid experience with generative AI frameworks, runtimes, and foundational models like RAG, Amazon Bedrock, Azure OpenAI, Vector Databases, and LangChain.",
+    "Experience in a programming language like Python or TypeScript.",
+    "Knowledge about AWS Serverless technologies like Lambda, DynamoDB, SNS, and SQS.",
+    "Knowledge about Infrastructure as Code (CDK, CloudFormation, etc.).",
+    "Ability to present and effectively communicate to colleagues from different departments and levels.",
+    "Ability to work in a dynamic and fast-paced working environment.",
+    "Project and product management experience."
+  ],
+  "analysis": "The job responsibilities explicitly mention \"generative AI\" multiple times, indicating a focus on implementing and overseeing generative AI use cases. The responsibilities include designing and implementing generative AI solution architectures, supporting generative AI products throughout their lifecycle, and shaping the generative AI tech-stack. This clearly shows that the job involves working with generative AI.\n\nThe skills section further supports this by listing \"solid experience with generative AI frameworks, runtimes, and foundational models\" such as Amazon Bedrock, Azure OpenAI, and LangChain. These are tools and platforms commonly associated with generative AI and language models. The mention of \"foundational models\" and \"LangChain\" suggests a focus on language models, as these are often used in the context of LLMs.\n\nOverall, both the responsibilities and skills sections strongly indicate that the job involves working with generative AI and language models.",
+  "is_genai_role": true
+}

@@ -1,0 +1,29 @@
+{
+  "filename": "jef774",
+  "responsibilities": [
+    "Work with stakeholders to gather solution requirements and capture a definition of what a successful solution looks like",
+    "Develop code solutions to meet the stakeholders' requirements using Visual Studio or Visual Studio Code, the Python language, and Python notebooks",
+    "Design the user interfaces for the AI solutions, which will pass prompt values to the trained model for uploading attachments and adding audio/speech capabilities",
+    "Fine-tune models to meet specific business needs",
+    "Develop multi-modal AI solutions involving text prompts, voice, imagery, and data",
+    "Train Machine Learning custom classification models, enabling the organization to analyze narrative comments and classify the outcomes according to a custom rubric",
+    "Publish user-facing web interfaces to the IaaS to facilitate interaction with the trained models",
+    "Communicate all issues and concerns that arise during course delivery to the CATHEXIS CTO",
+    "Other duties as required to ensure successful build and deployment of the target models"
+  ],
+  "skills": [
+    "One or more years of experience in applying AI to practical and comprehensive technology solutions",
+    "A solid understanding of the principles and concepts of AI/ML, such as supervised and unsupervised learning, deep learning, natural language processing, computer vision, etc.",
+    "Experience with ML, deep learning, TensorFlow, Python, NLP or other related tools",
+    "Knowledge of basic algorithms, object-oriented and functional design principles, and best-practice patterns",
+    "Experience in REST API development, NoSQL database design, and RDBMS design and optimizations",
+    "Strong analytical and problem-solving skills with a keen attention to detail",
+    "Ability to solve coding problems independently",
+    "Experience building AI solutions involving images",
+    "Experience building ML models using sentiment analysis using tools like Azure Synapse, SnowFlake, or DataBricks",
+    "Familiar with code management tools like GitHub and GitLab"
+  ],
+  "analysis": "The job involves developing AI solutions using Python, designing user interfaces, fine-tuning models, and deploying AI solutions. The skills required include experience with AI/ML, Python, REST API development, and familiarity with tools like GitHub. \n\n1. **AI Research Scientist**: This option focuses on research and experimentation with AI methodologies, which is not the primary focus of the job. The job is more about developing and deploying solutions rather than conducting experiments or staying current with AI research.\n\n2. **AI/ML Engineer**: This option involves transforming research into scalable AI solutions, which aligns well with the job's focus on developing and deploying AI solutions. The skills required, such as proficiency in Python and experience with API development, match the job's requirements.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which is not the primary focus of the job. The job is more about developing AI solutions rather than managing infrastructure.\n\n4. **AI Solution Architect**: This option involves designing AI solutions and collaborating with SMEs, which partially aligns with the job's responsibilities. However, the job is more hands-on with development and deployment rather than high-level solution architecture.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not the primary focus of the job. The job is more about developing AI solutions and interfaces rather than performing data analysis.\n\n6. **Data Engineer**: This option involves designing data pipelines and architectures, which is not the primary focus of the job. The job is more about developing AI solutions rather than data engineering.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not the primary focus of the job. The job is more technical and development-oriented.\n\n8. **Software Engineer**: This option involves software development and maintenance, which partially aligns with the job's responsibilities. However, the job is more focused on AI solutions rather than general software engineering.\n\nThe most relevant option is **AI/ML Engineer** (Option 2), as it involves developing and deploying AI solutions, which aligns well with the job's responsibilities and required skills.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

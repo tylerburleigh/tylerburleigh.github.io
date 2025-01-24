@@ -1,0 +1,43 @@
+{
+  "filename": "je30eb",
+  "responsibilities": [
+    "Address end-to-end production challenges related to the AgentForce AI platform.",
+    "Lead the triaging of production issues for critical projects within the Generative AI platform.",
+    "Implement automated solutions to enhance reliability.",
+    "Maintain comprehensive documentation of production incidents.",
+    "Collaborate closely with AgentForce AI, product, and platform teams.",
+    "Establish the reliability process and collaborate closely with lead engineers.",
+    "Investigate alerts and customer-reported issues, analyze the end-to-end stack, identify root causes, and generate detailed reports.",
+    "Escalate issues to relevant engineering contacts and work to resolve them when necessary.",
+    "Lead and shape the production triage process for AgentForce, focusing on service, infrastructure deployment, configuration, performance, and latency issues.",
+    "Collaborate with cross-functional teams and external partners to ensure scalable and reliable services.",
+    "Maintain comprehensive documentation of production issues, workflows, and areas for improvement.",
+    "Understand and support capacity modeling and forecasting for AgentForce services in production.",
+    "Drive the scaling of Large Language Models (LLMs) and associated services in production.",
+    "Create and maintain playbooks and detailed knowledge articles for future analysis and troubleshooting.",
+    "Automate manual processes to maintain high availability and repeatability of production systems.",
+    "Utilize availability and trust dashboards, adjust SLOs and SLIs based on production feedback.",
+    "Identify automation gaps in production and compare established critical user journey (CUJ) benchmarks for reliability and trustworthiness.",
+    "Establish strong partnerships with Customer Support Groups (CSG) team to streamline escalations and minimize disruptions.",
+    "Be part of the 24x7 on-call support and multi-GEO coverage to maintain service reliability during peak periods.",
+    "Collaborate with business and engineering stakeholders for operational excellence, processes, and SLAs.",
+    "Drive improvements based on key metrics, KPIs, and customer feedback."
+  ],
+  "skills": [
+    "Expertise in diagnosing and triaging performance and scalability issues across diverse systems and vendors.",
+    "Strong knowledge of feature provisioning, user permissions, and CRM licensing requirements.",
+    "Proficiency in scripting languages (Python, Shell, Golang).",
+    "Knowledge of AI model deployment and scaling.",
+    "Experience in DevOps or data center management roles with expertise in Linux system engineering.",
+    "Strong knowledge of cloud services (AWS preferred), container technologies (Docker, Kubernetes), and CI/CD tools (Jenkins, GitLab).",
+    "Experience in leading large-scale AI applications and services, including monitoring and diagnostic techniques.",
+    "Expertise in deploying and leading LLMs and technologies like Retrieval-Augmented Generation (RAG).",
+    "Background in monitoring tools such as Splunk, Prometheus, Grafana, and ELK stack.",
+    "Knowledge of Java profiler (e.g., Java Flight Recorder), open telemetry.",
+    "Knowledge of TCP/IP networking protocols and infrastructure services in IaaS environments.",
+    "Familiarity with MLOps tools and practices for supporting the machine learning lifecycle."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on production challenges, triaging production issues, implementing automated solutions, maintaining documentation, collaborating with teams, and ensuring scalable and reliable services. The skills required include expertise in diagnosing performance issues, proficiency in scripting languages, knowledge of AI model deployment, experience in DevOps, and familiarity with cloud services and container technologies.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which does not align with the job's focus on production challenges and reliability.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which partially aligns with the job's focus on production systems but lacks emphasis on triaging and reliability processes.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is a strong match as it focuses on ensuring reliable deployment, scaling, and monitoring of AI systems in production. The responsibilities and skills, such as managing infrastructure for scalable AI deployments and monitoring production models, align well with the job's requirements.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating on high-level architectures, which does not match the job's focus on production reliability and triaging.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which does not align with the job's emphasis on production challenges and system reliability.\n\n6. **Data Engineer**: This role involves building data pipelines and managing data workflows, which is not directly related to the job's focus on production system reliability and triaging.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which does not align with the job's technical and operational focus on production systems.\n\n8. **Software Engineer**: This role involves software development and system architecture, which partially aligns with the job's focus on system performance and scalability but lacks emphasis on production triaging and reliability processes.\n\nThe most relevant option is **MLOps / AI Infrastructure Engineer** as it closely matches the job's focus on production reliability, scaling, and monitoring of AI systems.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

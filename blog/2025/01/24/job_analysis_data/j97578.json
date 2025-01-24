@@ -1,0 +1,602 @@
+[
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention \"analyze AI + data landscape\" and \"build the core stack,\" which could involve working with language models. However, there is no explicit mention of fine-tuning or customizing language models for domain-specific tasks. The responsibilities focus more on product direction, feature definition, and implementation rather than model training or fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities include \"analyze AI + data landscape\" and \"build the core stack,\" which could involve prompt engineering. The task of \"translating feedback into actionable product features\" may require crafting and refining prompts to optimize system outputs and user experiences. This aligns with the activity of prompt engineering and iterative refinement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities do not explicitly mention evaluating or assessing the performance of language models. The focus is more on product direction, feature definition, and implementation. While model evaluation could be a part of building the core stack, it is not directly highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The responsibility to \"build the core stack\" and \"implement features across the PromptQL AI assistant\" suggests that integrating LLM outputs into end-user experiences or pipelines could be relevant. This involves designing workflows and handling content moderation, which aligns with the activity of integration with downstream applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention model interpretability or debugging. The focus is on product direction, feature definition, and implementation. While debugging could be a part of building the core stack, it is not directly highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities mention \"Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure.\" This aligns with designing end-to-end workflows and ensuring seamless integration of components, which is the focus of this Activity. The responsibility of building the core stack suggests involvement in architecture and integration, making this Activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this Activity. While building the core stack might involve some consideration of resources, the responsibilities do not directly align with the detailed resource planning and compute requirements described here.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities do not specifically mention performance optimization or latency control. While building and implementing features might involve some level of performance consideration, the responsibilities do not explicitly align with the advanced caching mechanisms, load balancing, and autoscaling strategies described in this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities do not mention model lifecycle management or governance. The focus is more on building and implementing features rather than managing model versions or planning retraining. Therefore, this Activity does not directly align with the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities include \"Build the Core Stack,\" which involves designing and implementing features across various components. This suggests a need for system interoperability and integration, aligning with the Activity's focus on aligning generative AI services with existing systems and establishing APIs. Therefore, this Activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research to evaluate AI quality. The focus is more on product direction, feature definition, and building the core stack rather than evaluating AI quality through research. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities involve \"Build the Core Stack,\" which could include developing AI systems and algorithms. However, the focus is more on implementing features rather than specifically developing systems for automated insights. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation. The focus is on product direction, feature definition, and building the core stack, which does not directly involve generating synthetic datasets. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities do not explicitly mention identifying performance metrics or success criteria. The focus is on product direction, feature definition, and building the core stack, which does not directly involve defining performance metrics. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not mention creating labeled datasets. The focus is on product direction, feature definition, and building the core stack, which does not directly involve dataset creation for evaluation and optimization. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not explicitly mention designing, running, or analyzing experiments. The focus is on product direction, feature definition, and building the core stack, which does not directly involve conducting experiments. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not mention sampling data for evaluation. The focus is on product direction, feature definition, and building the core stack, which does not directly involve data sampling for evaluation purposes. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The Job Responsibilities focus on driving product direction, defining features, and building the core stack for PromptQL, which is an AI assistant and data engine. While these responsibilities involve working with AI and data, they do not explicitly mention designing labeling tasks or creating annotation guidelines. The responsibilities are more aligned with product development and feature implementation rather than data annotation processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The Job Responsibilities do not mention managing logistics or communication for annotation projects, nor do they involve overseeing performance of annotation teams. The focus is on product direction, feature definition, and building the core stack, which are more related to product development and engineering rather than data collection and annotation management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The Job Responsibilities include analyzing the AI and data landscape to influence product evolution, which could involve some level of data analysis. However, the specific task of analyzing human annotation data is not mentioned. The responsibilities are more focused on product features and infrastructure rather than evaluating dataset quality or generating insights from annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities focus on driving product direction, defining features, and building core infrastructure for PromptQL, an AI assistant. While statistical methods are crucial in data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus seems more on product development and feature implementation rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities do not explicitly mention data visualization or exploratory data analysis. The focus is on product direction, feature definition, and building infrastructure. While data visualization can be a part of understanding product usage and feedback, it is not directly mentioned or implied in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include analyzing the AI and data landscape to influence product evolution, which could involve data mining and analysis of conversational datasets. This activity aligns with understanding user interactions and trends, which can inform product strategy and improvements, making it relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities mention building the core stack, which includes the PromptQL data engine. Developing data models and pipelines for analytics is relevant as it supports the infrastructure needed for systematic performance tracking and feature engineering, aligning with the responsibility of implementing features across the PromptQL platform.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "Defining metrics and success criteria is relevant to the Job Responsibilities as it aligns with translating feedback into actionable product features and assessing the health of the AI assistant. Metrics are crucial for guiding decision-making and ensuring the product meets its goals, which is a part of driving product direction and defining features.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention \"Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure.\" This suggests involvement in the development and deployment of AI systems, which aligns with the MLOps activity of designing and maintaining CI/CD pipelines for robust model deployment. The focus on infrastructure and ensuring performance, scalability, and reliability is relevant to the responsibilities described.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring or observability of AI systems. While building the core stack might involve some level of monitoring, there is no direct reference to implementing real-time monitoring and logging solutions or tracking model performance, latency, and errors. Therefore, this activity seems less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention versioning of data or models. While building the core stack might involve some aspects of versioning, there is no direct reference to implementing version control systems for datasets and model artifacts. Therefore, this activity seems less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention testing or validation of models. While building the core stack might involve some level of testing, there is no direct reference to automating validation steps or introducing guardrails like canary testing. Therefore, this activity seems less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities include \"Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure.\" This suggests a focus on infrastructure, which aligns with optimizing and scaling model-serving infrastructure. The emphasis on infrastructure and scalability is relevant to the responsibilities described.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not explicitly mention governance, compliance, or security. While building the core stack might involve some aspects of security, there is no direct reference to establishing governance frameworks or implementing role-based access controls. Therefore, this activity seems less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities do not explicitly mention model lifecycle management or continuous improvement. While building the core stack might involve some level of model management, there is no direct reference to planning regular retraining or establishing feedback loops. Therefore, this activity seems less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on driving product direction, defining features, and building the core stack for PromptQL. While these responsibilities involve understanding user needs and translating feedback into product features, they do not explicitly mention conducting user interviews or surveys. However, gathering insights on user needs could indirectly support defining features and product direction. Therefore, this activity is somewhat relevant but not directly mentioned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities include defining features and building the core stack, which may involve some level of usability testing and prototyping to ensure the features are user-friendly and meet user needs. However, the responsibilities do not explicitly mention usability testing or prototyping as part of the process. Thus, while there is an indirect connection, it is not a primary focus.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities do not explicitly mention persona development or user journey mapping. These activities are typically part of a UX research process to understand user segments and their interactions with a product. While understanding user needs is important for defining features, the responsibilities focus more on product direction and feature implementation rather than detailed UX research activities like persona development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities involve translating feedback from sales and GTM teams into actionable product features, which could involve some level of qualitative data analysis. However, the responsibilities do not explicitly mention analyzing qualitative data from user research. The focus is more on product direction and feature implementation rather than detailed qualitative analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The Job Responsibilities mention \"Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure.\" This aligns with the activity of designing and implementing software architecture, as it involves defining system components and integration points, which are essential for building the core stack of a software product.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The Job Responsibilities include \"Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure.\" This suggests a need for developing production-grade applications, as it involves implementing features that are likely to be used in a production environment. Writing clean, modular, and efficient code is crucial for this task.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The Job Responsibilities do not explicitly mention continuous integration and delivery (CI/CD) practices. While CI/CD is an important aspect of software engineering, there is no direct reference to automating build, test, and deployment processes or maintaining version control workflows in the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The Job Responsibilities do not mention monitoring or incident management. The focus is on product direction, feature definition, and building the core stack, without reference to implementing logging, metrics, or resolving production incidents.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The Job Responsibilities do not specifically mention API development or system integration. While building the core stack might involve some level of integration, there is no explicit mention of designing and implementing APIs or handling authentication and authorization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The Job Responsibilities do not explicitly mention software testing or quality assurance. Although these are important aspects of software development, the responsibilities focus more on product direction, feature definition, and building the core stack, without specific reference to developing automated test suites or maintaining test coverage.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The Job Responsibilities do not mention DevOps practices or infrastructure as code. The focus is on product direction, feature definition, and building the core stack, without reference to managing cloud resources or promoting a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include analyzing the AI and data landscape to influence product evolution, which aligns with evaluating AI quality. However, the responsibilities focus more on product direction and feature definition rather than conducting research to evaluate AI quality directly. Therefore, while there is some overlap, the specific activity of conducting research to evaluate AI quality is not explicitly mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve building the core stack, which includes designing and implementing features across the AI assistant and data engine. This aligns with developing AI systems and algorithms, as it involves creating and refining AI methods. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. They focus on product direction, feature definition, and building the core stack. While synthetic data generation could be a part of building the core stack, it is not explicitly mentioned or implied in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include analyzing the AI and data landscape, which could involve identifying performance metrics. However, the responsibilities do not explicitly mention defining measurable indicators or tracking metrics. The focus is more on product direction and feature implementation rather than performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets. The focus is on product direction, feature definition, and building the core stack. While labeled datasets could be part of building the core stack, it is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include defining features and building the core stack, which could involve designing and analyzing experiments to test new features. However, the responsibilities do not explicitly mention running experiments or A/B tests. The focus is more on product direction and feature implementation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j97578",
+    "responsibilities": [
+      "Drive Product Direction: Analyze AI + data landscape to influence the evolution of PromptQL.",
+      "Define Features: Translate feedback from sales and GTM teams into actionable product features.",
+      "Build the Core Stack: Rapidly design and implement features across the PromptQL AI assistant, the PromptQL data engine, and the PromptQL runtime infrastructure."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. The focus is on product direction, feature definition, and building the core stack. While data sampling could be part of building the core stack, it is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  }
+]

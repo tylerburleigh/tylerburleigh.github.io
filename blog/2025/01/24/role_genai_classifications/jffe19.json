@@ -1,0 +1,37 @@
+{
+  "filename": "jffe19",
+  "responsibilities": [
+    "Design and implement novel architectures for large-scale video and multimodal diffusion models",
+    "Develop new approaches to multimodal fusion, temporal modeling, and video control",
+    "Research temporal video editing techniques and controllable generation",
+    "Research and validate scaling laws for video generation models",
+    "Create new loss functions and training objectives for improved generation quality",
+    "Drive rapid experimentation with model architectures and training strategies",
+    "Validate research directly through product deployment and user feedback",
+    "Train and optimize models at massive scale (10s-100s of billions of parameters)",
+    "Develop sophisticated distributed training approaches using FSDP, DeepSpeed, Megatron-LM",
+    "Design and implement model surgery techniques (pruning, distillation, quantization)",
+    "Create new approaches to memory optimization and training efficiency",
+    "Research techniques for improving training stability at scale",
+    "Conduct systematic empirical studies of architecture and optimization choices",
+    "Advance state-of-the-art in video model architecture design and optimization",
+    "Develop new approaches to temporal modeling for video generation",
+    "Create novel solutions for multimodal learning and cross-modal alignment",
+    "Research and implement new optimization techniques for generative modeling and sampling",
+    "Design and validate new evaluation metrics for generation quality",
+    "Systematically analyze and improve model behavior across different regimes"
+  ],
+  "qualifications": [
+    "Strong proficiency in modern deep learning tooling (PyTorch, CUDA, Triton, FSDP, etc.)",
+    "Experience training diffusion models with 10B+ parameters",
+    "Deep understanding of attention, transformers, and modern multimodal architectures",
+    "Expertise in distributed training systems and model parallelism",
+    "Proven ability to implement and improve complex model architectures",
+    "Strong software engineering practices including testing and code review",
+    "Experience with rapid prototyping and experimental design",
+    "Strong analytical skills for debugging model behavior and training dynamics",
+    "Facility with profiling and optimization tools"
+  ],
+  "analysis": "The job responsibilities and skills listed are heavily focused on generative modeling, particularly in the context of video and multimodal diffusion models. The responsibilities include designing novel architectures for large-scale video and multimodal diffusion models, developing new approaches to multimodal fusion, temporal modeling, and video control, and researching techniques for improving training stability at scale. These tasks are indicative of working with Generative AI, as they involve creating and optimizing models that generate content, in this case, video and multimodal content.\n\nThe skills required, such as proficiency in deep learning tools like PyTorch and CUDA, experience with diffusion models, and a deep understanding of attention and transformers, further support the involvement with Generative AI. The mention of training models with 10B+ parameters and expertise in distributed training systems also aligns with working on large-scale generative models.\n\nWhile the job does not explicitly mention language models or LLMs, the focus on generative modeling, particularly with large-scale models and diffusion techniques, suggests a strong involvement with Generative AI. The use of transformers and attention mechanisms, common in LLMs, indicates that the skills and techniques could be applicable to language models as well, but the primary focus here is on video and multimodal generation.",
+  "is_genai_role": true
+}

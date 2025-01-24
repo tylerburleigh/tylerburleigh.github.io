@@ -1,0 +1,31 @@
+{
+  "filename": "je9221",
+  "responsibilities": [
+    "Contribute to designing and maintaining AI pipelines for labeling, embeddings, training, and deploying models into production.",
+    "Collaborate with the Compute Platform team to ensure seamless integration with orchestration tools and infrastructure.",
+    "Define and develop AI Platform APIs for other applications to use them.",
+    "Build and deploy LLM-based systems for production workflows, focusing on efficiency, scalability, and reproducibility.",
+    "Implement training pipelines for LLMs, including fine-tuning, pruning, distillation, and foundational model training.",
+    "Integrate APIs from providers such as OpenAI, Anthropic, and Gemini into SnorkelFlow\u2019s pipelines.",
+    "Develop and integrate backend services to manage LLM calls and API interactions.",
+    "Work with the Data Platform team to define data requirements and ensure smooth interoperability.",
+    "Partner with the Application team to design and implement APIs that power workflows.",
+    "Implement tools and dashboards to monitor and track AI pipeline performance.",
+    "Define metrics to ensure system health and support optimization efforts.",
+    "Innovate on advanced training methodologies for LLMs and NLP systems, including state-of-the-art optimization techniques.",
+    "Take ownership of end-to-end model lifecycle management, from training to production deployment."
+  ],
+  "skills": [
+    "Strong coding skills in Python.",
+    "Familiarity with deep learning frameworks like PyTorch or TensorFlow.",
+    "Expertise in NLP and libraries such as Hugging Face Transformers, spaCy, or XGBoost.",
+    "Knowledge of foundational model APIs such as OpenAI, Anthropic, or Gemini.",
+    "Familiarity with MLOps tools and practices like MLflow, Kubernetes, or Ray.",
+    "Experience building APIs or SDKs for AI services.",
+    "Solid understanding of LLM architectures, fine-tuning, and deployment.",
+    "Solid understanding of agentic workflows and tooling (Langchain, Crew.ai etc).",
+    "Experience building scalable CI/CD pipelines for machine learning workflows."
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities include building and deploying LLM-based systems, implementing training pipelines for LLMs, and integrating APIs from providers like OpenAI, Anthropic, and Gemini, which are known for their work in Generative AI and LLMs. Additionally, the job involves innovating on advanced training methodologies for LLMs and NLP systems, which are directly related to language models. The skills required include expertise in NLP, knowledge of foundational model APIs such as OpenAI, Anthropic, or Gemini, and a solid understanding of LLM architectures, fine-tuning, and deployment. These are all indicative of work with Generative AI and language models.",
+  "is_genai_role": true
+}

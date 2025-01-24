@@ -1,0 +1,31 @@
+{
+  "filename": "jda183",
+  "responsibilities": [
+    "Drive larger, more ambiguous projects from start to completion.",
+    "Take a leadership role in the engineering team, mentoring less experienced engineers.",
+    "Navigate uncertainty and complex technical challenges.",
+    "Own key systems and influence their evolution.",
+    "Coordinate with stakeholders to ensure technical direction aligns with business goals.",
+    "Facilitate a self-organizing team environment for collaboration and clear communication.",
+    "Shape team approaches to problems, guiding toward scalable and efficient solutions."
+  ],
+  "skills": [
+    "Experience with large and complex systems.",
+    "Ability to collaborate with other engineers and interface with stakeholders.",
+    "Problem-solving skills with a focus on simplicity.",
+    "Experience with modern programming languages (statically and dynamically typed).",
+    "Proficiency in SQL and production databases.",
+    "Knowledge of Typescript and/or Python.",
+    "Understanding of REST and/or GraphQL APIs.",
+    "Familiarity with Functional Programming.",
+    "Experience with Containers, Docker, and Kubernetes.",
+    "Use of workflow management tools (e.g., Argo Workflows, Airflow, AWS Step Functions).",
+    "Knowledge of Infrastructure as Code (IaC) \u2014 Terraform.",
+    "Experience with cloud platforms such as AWS, GCP, or Azure.",
+    "Understanding of Data Warehouses such as Snowflake, Redshift, or Big Query.",
+    "Familiarity with cloud-based object storage such as S3 or GCS.",
+    "Ability to learn and understand the inner workings of tools used."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on leadership, project management, and technical challenges, while the skills emphasize experience with large systems, programming languages, databases, APIs, cloud platforms, and infrastructure tools. There is no direct reference to AI, machine learning, or specific technologies related to GenAI or LLMs. The focus appears to be on general software engineering and system management rather than AI-specific tasks.",
+  "is_genai_role": false
+}

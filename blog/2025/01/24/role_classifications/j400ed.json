@@ -1,0 +1,21 @@
+{
+  "filename": "j400ed",
+  "responsibilities": [
+    "Partner with a cross-functional team of engineers, research scientists, technical program managers, and product managers to deliver AI-powered products.",
+    "Design, develop, test, deploy, and support AI software components including foundation model training, large language model inference, similarity search, guardrails, model evaluation, experimentation, governance, and observability.",
+    "Leverage a broad stack of Open Source and SaaS AI technologies such as AWS Ultraclusters, Huggingface, VectorDBs, Nemo Guardrails, PyTorch, and more.",
+    "Invent and introduce state-of-the-art LLM optimization techniques to improve the performance of large scale production AI systems.",
+    "Contribute to the technical vision and the long term roadmap of foundational AI systems at Capital One."
+  ],
+  "skills": [
+    "Strong foundation in engineering and mathematics.",
+    "Expertise in hardware, software, and AI.",
+    "Ability to intuitively understand scientific publications and apply novel techniques in production.",
+    "Ability to adapt quickly and bring clarity to big, undefined problems.",
+    "Excellent communication and presentation skills.",
+    "Ability to lead and mentor an engineering team and influence cross-functional stakeholders."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an AI/ML Engineer (Option 2). The responsibilities include designing, developing, testing, deploying, and supporting AI software components, which is a core aspect of transforming research output into robust, scalable AI solutions as described in the AI/ML Engineer option. The job also involves leveraging a broad stack of Open Source and SaaS AI technologies, which aligns with the AI/ML Engineer's need to develop and maintain data pipelines for model training, inference, and monitoring.\n\nThe skills required for the job, such as expertise in hardware, software, and AI, and the ability to lead and mentor an engineering team, are consistent with the skills and tools listed for the AI/ML Engineer, which include proficiency in programming languages and working knowledge of software engineering best practices.\n\nWhile the job also mentions contributing to the technical vision and long-term roadmap, which could align with roles like AI Solution Architect or Product Manager, the primary focus on engineering and development tasks makes the AI/ML Engineer the best fit.\n\nOther options like AI Research Scientist, MLOps / AI Infrastructure Engineer, and Data Scientist have different primary focuses that do not align as closely with the job description. The AI Research Scientist focuses more on experimentation and staying current with AI research, while the MLOps / AI Infrastructure Engineer is more about deployment and monitoring. The Data Scientist role is more about data analysis and model development rather than engineering and software development.\n\nTherefore, the AI/ML Engineer role is the most similar to the job description provided.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

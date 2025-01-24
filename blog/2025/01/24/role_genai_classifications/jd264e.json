@@ -1,0 +1,28 @@
+{
+  "filename": "jd264e",
+  "responsibilities": [
+    "Deploy and maintain CI/CD and software release pipelines across multiple environments and continuously improve testing frameworks, development tooling, and deployment best practices.",
+    "Define and build deployment strategy for SaaS-hosted, on-prem, and managed service offerings.",
+    "Build and maintain Snorkel\u2019s production and staging infrastructure, own k8s and cloud strategy.",
+    "Design, develop, and maintain observability, alarms, and monitoring tools.",
+    "Participate in on-call responsibilities in rotation with the engineering team.",
+    "Work a hybrid schedule with three days per week in the Redwood City HQ or the SF office and work remotely with \"No Meeting\" Tuesdays and Thursdays."
+  ],
+  "skills": [
+    "Strong experience with cloud platforms and infrastructure as code (Terraform, CloudFormation, Helm).",
+    "Deep expertise in building services on Kubernetes (EKS, GKE, etc.).",
+    "Strong development experience in Python or other languages like Java, Golang, Scala, etc.",
+    "Extremely well-versed in building and managing cloud infrastructure for enterprise platforms on AWS, GCP, Azure, and services like EC2, EKS, VPC, etc.",
+    "Experience in one or more build tools like Bazel, Gradle, Make, etc.",
+    "Designed and implemented developer-friendly APIs or tools to boost developer productivity.",
+    "Familiarity with deployment, monitoring, and maintenance of large-scale enterprise software products.",
+    "Experience working cross-functionally across teams including product, design, customer success, and support.",
+    "Familiarity in developing and releasing infrastructure software for SaaS and on-prem platforms.",
+    "Hands-on experience setting up and operating Kubernetes clusters in production at scale (Nice to have).",
+    "Experience leading teams building large-scale distributed computing systems for ML Training or Serving, e.g., Ray, Spark, TensorFlow, etc. (Nice to have).",
+    "Hands-on experience in creating and maintaining metrics and dashboards on observability platforms such as New Relic, DataDog, Chronosphere, or similar tools (Nice to have).",
+    "Experience building services and infrastructure for Machine Learning and AI Systems (Nice to have)."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on cloud infrastructure, CI/CD pipelines, Kubernetes, and software deployment strategies. The responsibilities include maintaining infrastructure, building deployment strategies, and developing observability tools. The skills required emphasize cloud platforms, infrastructure as code, Kubernetes, and experience with large-scale distributed computing systems for ML training or serving. There is a mention of experience building services and infrastructure for Machine Learning and AI systems, but it is listed as a \"Nice to have\" skill, indicating it is not a core requirement. There is no specific mention of Generative AI or language models (LLMs) in the responsibilities or skills. The focus is more on infrastructure and deployment rather than on developing or working directly with GenAI or LLMs.",
+  "is_genai_role": false
+}

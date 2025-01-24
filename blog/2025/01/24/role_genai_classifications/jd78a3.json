@@ -1,0 +1,18 @@
+{
+  "filename": "jd78a3",
+  "responsibilities": [
+    "Develop and lead projects, team ideas, and mentor junior engineers.",
+    "Conduct advanced research and engineering on AI-based rendering techniques.",
+    "Transfer advanced research AI/CG solutions to solve real-world problems for integration into Huawei products.",
+    "Provide expert opinions on relevant fields by summarizing research findings in high-quality papers or patents."
+  ],
+  "qualifications": [
+    "Extensive background in machine learning and deep learning, including DNN, GAN, ViT, and Diffusion techniques.",
+    "Experience in neural representation/rendering such as NerF, Gaussian Splatting, neural rendering, procedural generation, SVBRDF, etc.",
+    "Proficiency in Python, PyTorch, TensorFlow, etc.",
+    "Strong programming skills in shading languages, e.g., glsl, hlsl, etc.",
+    "Experience in building large-scale machine learning solutions for computer vision/graphics topics, including model design, data collection/augmentation evaluation, etc."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on AI-based rendering techniques, machine learning, and deep learning. The mention of DNN (Deep Neural Networks), GAN (Generative Adversarial Networks), ViT (Vision Transformers), and Diffusion techniques indicates a strong emphasis on generative AI technologies. These are commonly used in creating generative models for images and other media, which aligns with the responsibilities of conducting advanced research and engineering on AI-based rendering techniques.\n\nThe skills section further supports this with experience in neural representation/rendering and procedural generation, which are key components of generative AI. The use of tools like PyTorch and TensorFlow, which are popular frameworks for developing AI models, also suggests a focus on generative AI.\n\nHowever, there is no explicit mention of language models or tasks typically associated with LLMs, such as natural language processing, text generation, or language understanding. The focus is more on computer vision and graphics, which are areas where generative AI is commonly applied.\n\nTherefore, while the job involves working with generative AI, it does not specifically involve working with language models or LLMs.",
+  "is_genai_role": true
+}

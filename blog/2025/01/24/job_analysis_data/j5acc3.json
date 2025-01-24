@@ -1,0 +1,802 @@
+[
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on designing and implementing evaluation infrastructure, leading technical projects, collaborating with domain experts, building testing environments, and working with researchers. While these tasks involve working with models, they do not explicitly mention fine-tuning or customizing language models. The responsibilities are more aligned with evaluation and assessment rather than training or fine-tuning models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or iterative refinement of prompts. The focus is on evaluation infrastructure, technical projects, and collaboration with domain experts. While prompt engineering could be a part of model evaluation, it is not directly mentioned or implied in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities are heavily focused on evaluation, including designing evaluation infrastructure, building evaluation systems, and collaborating with researchers on evaluation approaches. This aligns closely with the activity of developing and applying methodologies for evaluating model quality, reliability, and fairness. Therefore, this activity is highly relevant to the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities do not mention integration with downstream applications or workflows. The focus is on evaluation and assessment rather than the application or integration of model outputs into end-user experiences. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention model interpretability or debugging. The focus is on evaluation infrastructure and assessment rather than analyzing model outputs for errors or biases. While interpretability could be a part of evaluation, it is not directly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities focus on designing and implementing evaluation infrastructure, collaborating with domain experts, and building testing environments for model assessment. While these tasks involve technical design and implementation, they are more aligned with evaluation and testing rather than creating end-to-end AI-driven pipelines. The activity of designing architecture blueprints for AI-driven pipelines is more relevant to solution architecture rather than evaluation and experimentation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention compute requirements or resource planning. The focus is on evaluation infrastructure, collaboration, and model assessment. While compute resources might be a consideration in building evaluation systems, the responsibilities do not directly align with assessing computational demands or planning for scalability.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities emphasize building evaluation systems and collaborating on evaluation frameworks, which may involve some level of performance optimization. However, the specific focus on latency control and optimization strategies is not directly mentioned in the responsibilities. The primary focus is on evaluation rather than performance optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities include building evaluation systems and contributing to capability reports, which may involve aspects of model lifecycle management. However, the specific focus on continuous retraining, versioning, and governance is not explicitly mentioned. The responsibilities are more centered on evaluation and assessment rather than lifecycle management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities do not mention system interoperability or integration with existing enterprise systems. The focus is on evaluation infrastructure, collaboration, and model assessment. While integration might be a part of building evaluation systems, it is not a primary focus of the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include designing and implementing evaluation infrastructure, collaborating with domain experts, and building testing environments for model assessment. These tasks align closely with conducting research to evaluate AI quality, as they involve investigating system capabilities and risks, which are key aspects of AI quality evaluation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on evaluation infrastructure and model assessment, which may involve developing systems and algorithms for insights. However, the primary focus is on evaluation rather than developing AI systems for automated insights. The responsibilities do not explicitly mention building AI methods for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not explicitly mention synthetic data generation. While building evaluation systems might involve using synthetic data, the responsibilities focus more on evaluation frameworks and model assessment rather than data generation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include designing evaluation frameworks and contributing to capability reports, which likely involve identifying performance metrics and success criteria. This activity aligns with the responsibilities of measuring model capabilities and risks, as it requires defining and tracking relevant metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities focus on evaluation infrastructure and model assessment, which may involve creating labeled datasets for evaluation. However, the responsibilities do not explicitly mention data annotation or dataset creation. The primary focus is on evaluation rather than dataset creation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include building evaluation systems and collaborating on evaluation frameworks, which may involve designing and analyzing experiments. This activity aligns with the responsibilities of rapidly prototyping and iterating on evaluation approaches, as it involves experimental design and analysis.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities focus on evaluation infrastructure and model assessment, which may involve sampling data for evaluation. However, the responsibilities do not explicitly mention data sampling. The primary focus is on building and scaling evaluation systems rather than data sampling.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing and implementing evaluation infrastructure, building evaluation systems, and collaborating with domain experts to create evaluation frameworks. While these tasks involve designing systems and frameworks, they are more focused on model evaluation rather than data annotation. Designing labeling tasks for data annotation is not explicitly mentioned or implied in the responsibilities, which are more aligned with model assessment and evaluation rather than data preparation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize building evaluation systems, collaborating with experts, and creating testing environments for model assessment. Collecting human annotation data is a task related to data preparation and management, which is not directly mentioned in the responsibilities. The focus of the job is on evaluating models and their capabilities, not on the data collection process itself.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include designing evaluation infrastructure and collaborating with researchers to prototype evaluation approaches. Analyzing human annotation data involves evaluating dataset quality and generating insights, which could be relevant to assessing model performance. However, the responsibilities are more focused on model evaluation rather than data analysis. While there is some overlap in the skills required, the primary focus of the job is not on analyzing annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on designing and implementing evaluation infrastructure, building evaluation systems, and collaborating with domain experts to create evaluation frameworks. While statistical methods could be relevant for evaluating models, the responsibilities do not explicitly mention the use of statistical techniques or tools like scikit-learn or statsmodels. The emphasis is more on building systems and frameworks rather than applying statistical methods directly.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include collaborating with domain experts and contributing to Capability Reports, which may involve presenting findings and insights. However, there is no explicit mention of using data visualization tools or conducting exploratory data analysis. The focus is more on building evaluation systems and frameworks rather than on data visualization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities involve building evaluation systems and collaborating with domain experts, which could potentially involve analyzing large datasets to uncover trends and patterns. However, the responsibilities do not explicitly mention data mining or analysis of conversational datasets. The focus is more on evaluation infrastructure and frameworks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include building automated pipelines for continuous model assessment, which aligns with developing data models and pipelines for analytics. This activity is relevant as it involves implementing scalable data processing workflows, which is a part of building evaluation systems and infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities involve designing evaluation infrastructure and contributing to Capability Reports, which likely require defining metrics and success criteria to assess model capabilities and risks. This activity is relevant as it involves defining measurable indicators to guide decision-making, which aligns with the responsibilities of measuring model capabilities and risks.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on designing and implementing evaluation infrastructure, building evaluation systems, and collaborating with domain experts and researchers. While these tasks involve technical projects and infrastructure, they do not explicitly mention CI/CD pipelines, containerization, or orchestration, which are central to Deployment and MLOps. The responsibilities are more aligned with evaluation and testing rather than deployment.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include building automated pipelines for continuous model assessment and collaborating with researchers to prototype evaluation approaches. These tasks suggest a need for monitoring and observability to track model performance and ensure reliability. However, the responsibilities do not explicitly mention real-time monitoring or logging solutions, which are key aspects of this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or the need for reproducibility and traceability, which are central to Data and model versioning. The focus is more on evaluation frameworks and testing environments rather than managing datasets and model artifacts.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include building sandboxed testing environments and automated pipelines for continuous model assessment, which aligns with the concept of continuous testing and validation. The responsibilities also mention rapidly prototyping and iterating on evaluation approaches, which suggests a need for automated validation steps and testing strategies.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities focus on building evaluation systems and testing environments, but they do not explicitly mention optimizing or scaling model-serving infrastructure. The responsibilities are more concerned with evaluation and assessment rather than handling traffic spikes or designing scaling policies.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance frameworks, compliance, or security measures. The focus is on evaluation infrastructure and collaboration with domain experts, which does not directly relate to governance, compliance, or security practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities involve designing evaluation infrastructure and collaborating with researchers to iterate on evaluation approaches. While these tasks suggest a focus on continuous improvement, the responsibilities do not explicitly mention model lifecycle management activities such as retraining or hyperparameter tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on designing and implementing evaluation infrastructure, leading technical projects, collaborating with domain experts, building testing environments, and working with researchers. These tasks are more technical and system-oriented, rather than user-focused. User interviews and surveys are primarily about gathering insights on user needs and preferences, which does not align with the technical and evaluation-focused nature of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities emphasize building evaluation systems, collaborating with experts, and creating testing environments. While usability testing involves testing and iterating on prototypes, the focus here is on user experience rather than the technical evaluation of models. The responsibilities do not mention user experience or usability, indicating that this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities centered around understanding user segments and their interactions with a product. The job responsibilities are more concerned with technical evaluation, model assessment, and collaboration with domain experts, which do not involve user personas or journey mapping. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing interview notes and survey responses to identify themes and needs. The job responsibilities focus on technical evaluation, building systems, and collaborating with researchers, which are not related to qualitative analysis of user data. The responsibilities do not mention qualitative data or user insights, indicating that this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing robust evaluation infrastructure, which aligns with the activity of designing and implementing software architecture. Both involve building scalable and maintainable systems, ensuring alignment with performance requirements and best practices. This suggests a strong relevance to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities focus on building and scaling evaluation systems, which implies the need for developing production-grade applications. Writing clean, modular, and efficient code is essential for creating robust evaluation systems and automated pipelines, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities mention building automated pipelines for continuous model assessment, which directly relates to continuous integration and delivery (CI/CD). Automating build, test, and deployment processes is crucial for maintaining high software quality and streamlining feature releases, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "While monitoring and incident management are important for maintaining system health, the job responsibilities do not explicitly mention these aspects. The focus is more on building evaluation systems and collaborating with researchers and domain experts. Therefore, this activity is less directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention API development or system integration. The focus is on evaluation infrastructure and collaboration with domain experts, which may not directly involve API development. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include building automated pipelines for continuous model assessment, which implies the need for software testing and quality assurance. Developing automated test suites is crucial for maintaining test coverage and reliability, making this activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities involve building and scaling evaluation systems, which may require managing and provisioning cloud resources. Embracing a DevOps culture can promote collaboration and rapid iteration, aligning with the responsibilities of building automated pipelines and collaborating with cross-functional teams. Therefore, this activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include designing and implementing evaluation infrastructure, collaborating with domain experts to create evaluation frameworks, and rapidly prototyping new evaluation approaches. These tasks align closely with conducting research to evaluate AI quality, as they involve investigating system performance metrics and validating hypotheses to guide improvements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "While the job responsibilities focus on building evaluation systems and collaborating with researchers, they do not explicitly mention developing AI systems or algorithms for automated insights. The emphasis is more on evaluation rather than the development of AI systems for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on evaluation infrastructure, frameworks, and testing environments, rather than creating synthetic datasets to test or improve AI models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibilities include designing evaluation infrastructure and collaborating with experts to create evaluation frameworks, which likely involves identifying performance metrics and success criteria. This activity is relevant as it aligns with assessing model health and guiding decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is more on building evaluation systems and frameworks rather than preparing data annotations for model training and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibilities include building testing environments and collaborating with researchers to prototype evaluation approaches, which could involve designing and analyzing experiments. However, A/B testing is not explicitly mentioned, so the relevance is not clear-cut.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j5acc3",
+    "responsibilities": [
+      "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+      "Lead technical projects to build and scale evaluation systems that could become industry standards",
+      "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+      "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+      "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+      "Partner with cross-functional teams to advance Anthropic's safety mission",
+      "Contribute to Capability Reports that inform critical deployment decisions"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities focus on building evaluation systems and frameworks, which may involve sampling data to ensure representative datasets for evaluation. However, this is not explicitly mentioned, so the relevance is not strongly indicated.",
+    "is_relevant": false
+  }
+]

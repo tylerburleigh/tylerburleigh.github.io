@@ -1,0 +1,23 @@
+{
+  "filename": "j9c38a",
+  "responsibilities": [
+    "Build and maintain data products used to solve compliance and regulatory needs at DriveWealth",
+    "Establish best in class development practices that prioritize data quality without hindering deployment time",
+    "Work with business partners, compliance, and product managers to finalize requirements and anticipate future features",
+    "Collaborate with the broader data & analytics team to ideate, build, and maintain \u201cself service\u201d data products",
+    "Establish an open and scalable data culture through documentation, code reviews, and clear communication",
+    "Provide thought leadership and best practices on architecture and tooling for scalable data analytics solutions",
+    "Provide mentorship and guidance to analytics engineers and analysts"
+  ],
+  "qualifications": [
+    "Proficiency in Python, SQL, and Spark (PySpark, Spark SQL)",
+    "Experience with Rest API",
+    "Familiarity with compute platforms like Databricks and AWS (e.g., Delta Lake, Kinesis, Kinesis Firehose)",
+    "Knowledge of databases such as DynamoDb, PostgreSQL, and SQL Server",
+    "Experience with orchestration tools like Airflow and DBT",
+    "Ability to work within a CI/CD process leveraging GitHub and AGILE development",
+    "Strong problem-solving skills and ability to work with business partners"
+  ],
+  "analysis": "The job responsibilities focus on building and maintaining data products for compliance and regulatory needs, establishing development practices, collaborating with teams, and providing mentorship. The skills required include proficiency in Python, SQL, and Spark, experience with Rest API, familiarity with compute platforms like Databricks and AWS, and knowledge of databases and orchestration tools. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on data analytics, data engineering, and compliance solutions rather than AI model development or deployment.",
+  "is_genai_role": false
+}

@@ -1,0 +1,32 @@
+{
+  "responsibilities": [
+    "Lead “shift left” security efforts to build security into the software development lifecycle.",
+    "Conduct secure design reviews and threat modeling. Identify and prioritize risks, attack surfaces, and vulnerabilities.",
+    "Perform security code reviews of source code changes and advise developers on remediating vulnerabilities and following secure coding practices.",
+    "Manage Anthropic's vulnerability management program. Triage and prioritize vulnerabilities from scans, audits, and bug bounty submissions. Track remediation and validate fixes.",
+    "Oversee Anthropic's bug bounty program. Set scope, triage submissions, coordinate disclosure with engineering teams, and reward bounties. Cultivate relationships with the ethical hacker community.",
+    "Research and recommend security tools and technologies to strengthen defenses against emerging threats targeting machine learning systems.",
+    "Develop and document security policies, standards, and playbooks. Conduct security awareness training for engineers.",
+    "Collaborate closely with product engineers and researchers to instill security best practices. Advocate for secure architecture, design, and development."
+  ],
+  "skills": [
+    "Empathy, collaboration skills, and a learning mindset to work cross-functionally with engineers of all levels.",
+    "Creative and strategic thinking to reduce risk through secure design and simplicity.",
+    "Broad security knowledge to connect the dots across domains and identify holistic ways to lower the overall threat surface.",
+    "Ability to distill complex security concepts into clear actions and drive consensus without direct authority.",
+    "Proactive mindset to thread security throughout the product lifecycle through activities like threat modeling, secure code review, and education.",
+    "Strong grasp of offensive security to anticipate risks from an adversary's perspective.",
+    "Experience with modern application stacks, infrastructure, and security tools to implement pragmatic defenses.",
+    "Passion for security fundamentals like least privilege, defense-in-depth, and eliminating complexity.",
+    "Excellent communication skills, able to distill complex security topics for broad audiences."
+  ],
+  "qualifications": [
+    "5+ years of hands-on experience in application and infrastructure security, including securing cloud-based and containerized environments.",
+    "Hands-on technical expertise securing complex cloud environments and microservices architectures leveraging technologies like Kubernetes, Docker, and AWS / GCP.",
+    "Experience with offensive security techniques like vulnerability testing, pen testing, and red team exercises.",
+    "Familiarity with AI/ML security risks such as data poisoning, model extraction, adversarial examples, etc., and mitigations.",
+    "Experience building security tools, scripts, and automations.",
+    "Solid foundational knowledge of security engineering principles and technologies.",
+    "Bachelor's degree in a related field or equivalent experience."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "responsibilities": [
+    "Design, develop, and maintain scalable data pipelines and ELT processes for the data lake/data warehouse",
+    "Implement data orchestration tools to automate and streamline data workflows",
+    "Work with the AI Solutions team to implement AI enhanced processes throughout the organization",
+    "Build and integrate machine learning models and data pipelines into end-to-end analytics solutions",
+    "Build and manage reverse ETL workflows to business systems such as the CRM",
+    "Support development of predictive models to support strategic and operational initiatives",
+    "Develop and maintain comprehensive documentation for data processes and systems",
+    "Build production-ready data models and schemas using DBT to support downstream analytics",
+    "Collaborate with cross-functional teams to define and implement data governance policies and best practices",
+    "Manage the modern analytics tech stack to support the democratization of data and analytics through dashboards, reports, and predictive models",
+    "Support analysts in developing dashboards, data products, and ad hoc report studies to analyze and present data associated with GTM analytics, product performance, business operations, and strategic decision-making"
+  ],
+  "skills": [
+    "Proficiency in SQL",
+    "Proficiency in any statistical programming language (i.e., Python or R)",
+    "Hands-on experience building and managing ETL and rETL workflows",
+    "Strong understanding of data engineering principles, including ETL/ELT processes, data modeling, and data warehousing",
+    "Experience with workflow orchestration tools, such as Airflow",
+    "Experience with ETL/ELT tools, such as Fivetran",
+    "Experience with cloud data warehouse and transformation tools (e.g., Snowflake, DBT)",
+    "Ability to communicate technical concepts to both technical and non-technical audiences through visualizations and presentations",
+    "Ability to partner with leadership and stakeholders across the company to understand business needs and how these can be addressed through analytics"
+  ],
+  "qualifications": [
+    "Experience working with AI workflow orchestration tools such as AirOps or Vectorshift",
+    "Experience working with entitlements and connecting the CRM to the Platform to gatekeep product features",
+    "Experience setting up large scale integrations to pull data from various Google products",
+    "Experience working with BI tools (Tableau, SiSense, Sigma, or Looker)",
+    "Experience in a B2B or SaaS environment, supporting functions such as sales, marketing, product development, and/or customer success"
+  ]
+}

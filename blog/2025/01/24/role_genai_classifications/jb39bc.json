@@ -1,0 +1,34 @@
+{
+  "filename": "jb39bc",
+  "responsibilities": [
+    "Develop a centralized data strategy for organizational data, driving data validation, governance, and improved access.",
+    "Lead the development of scalable data pipelines for high-volume batch and streaming data.",
+    "Enhance and maintain APIs and event-driven architecture for efficient data access.",
+    "Build utilities and workflows for data anonymization and tokenization.",
+    "Implement data enrichment solutions at scale with third-party data sources.",
+    "Improve the reporting and analytics platform with a focus on security and compliance.",
+    "Collaborate with cross-functional teams to design solutions for business and technical needs.",
+    "Provide mentorship and guidance to engineers, fostering a culture of learning and growth.",
+    "Optimize performance through tuning, performance testing, and data platform optimization.",
+    "Innovate with agility, iterating on data infrastructure and processes for scalability and reliability.",
+    "Ensure security and scalability by identifying gaps and risks in current infrastructure."
+  ],
+  "qualifications": [
+    "Strong experience with Python and PySpark.",
+    "Strong experience with RDBMS.",
+    "Proficiency with workflow orchestration tools (Airflow, Dagster, etc.).",
+    "Experience implementing data pipelines using Apache Spark, AWS Glue, or EMR.",
+    "Hands-on experience building data-intensive applications using common API frameworks (FastAPI, NestJS, etc.).",
+    "Expertise in SQL optimization, query performance tuning, and data warehousing.",
+    "Experience with infrastructure as code tools such as Terraform.",
+    "Experience with AWS suite of data engineering managed services and OSS tools.",
+    "Familiarity with Domain Driven Design.",
+    "Experience with monitoring and observability frameworks and tools.",
+    "Familiarity with data quality measures, tools, and frameworks.",
+    "Ability to identify tradeoffs for warehousing vs data lake infrastructure.",
+    "Ability to communicate highly technical topics to non-technical stakeholders.",
+    "Familiarity with common pitfalls in high volume, partitioned data ingestion pipelines."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data infrastructure, and data management. The responsibilities include developing data strategies, building data pipelines, enhancing APIs, and implementing data enrichment solutions. The skills required include proficiency in Python, PySpark, RDBMS, workflow orchestration tools, and experience with AWS data engineering services. There is a strong emphasis on data processing, optimization, and infrastructure management.\n\nThere is no mention of Generative AI, language models, or any specific tasks related to developing, training, or deploying such models. The focus is on data engineering and infrastructure rather than AI model development or application.\n\nTherefore, based on the provided responsibilities and skills, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

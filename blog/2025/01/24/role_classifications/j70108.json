@@ -1,0 +1,29 @@
+{
+  "filename": "j70108",
+  "responsibilities": [
+    "Develop LLM-based reasoning techniques, including automated decision-making and context understanding.",
+    "Integrate LLM solutions into the core product to enhance user experiences and streamline compliance workflows.",
+    "Proficiency in chunking large documents and creating efficient indexes for retrieval-augmented generation.",
+    "Run queries on RAG databases or vector stores to retrieve relevant context.",
+    "Re-rank and optimize results to provide the highest-quality context for LLM queries.",
+    "Collaborate with the engineering team to integrate LLM solutions into infrastructure, ensuring compatibility and scalability.",
+    "Partner with product managers and engineers to align functionality with the product vision and deliver tangible user value.",
+    "Conduct code reviews, write clean, maintainable code, and follow software engineering best practices.",
+    "Continuously experiment with cutting-edge ML techniques and frameworks, particularly those related to LLMs and emerging technologies.",
+    "Monitor and evaluate LLM system performance in production, iterating on solutions and model selection to ensure high reliability."
+  ],
+  "skills": [
+    "Expertise in LLM pipelines and RAG frameworks (e.g., Haystack, LlamaIndex, LangChain).",
+    "Strong programming skills in Python or similar languages.",
+    "Solid understanding of cloud platforms (AWS, GCP, or Azure) for production deployment and performance monitoring.",
+    "Excellent collaboration and communication skills.",
+    "Strong problem-solving abilities.",
+    "Proficiency in Go, TypeScript, gRPC, and Protocol Buffers (Protobuf).",
+    "Hands-on experience with LLM model tuning and performance benchmarking.",
+    "Familiarity with NLP and ML techniques for text classification.",
+    "Knowledge of microservices architecture, DevOps, and containerization tools (Docker, Kubernetes)."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on developing and integrating LLM (Large Language Model) solutions, optimizing retrieval-augmented generation (RAG) frameworks, and collaborating with engineering teams to ensure scalability and compatibility. The skills required include expertise in LLM pipelines, strong programming skills, cloud platform knowledge, and familiarity with DevOps and containerization tools.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies and experiments, which aligns with the job's emphasis on LLM techniques and experimentation. However, the job's focus on integration and collaboration with engineering teams is less emphasized here.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable solutions, which aligns with the job's focus on integrating LLM solutions into products. The skills in Python and software engineering best practices are also relevant.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring, which partially aligns with the job's emphasis on integrating LLM solutions and ensuring scalability. The skills in DevOps and cloud platforms are relevant.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with teams, which aligns with the job's focus on integrating LLM solutions and collaborating with product managers and engineers. The skills in LLM capabilities and communication are relevant.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is less relevant to the job's focus on LLM integration and engineering collaboration.\n\n6. **Data Engineer**: This role involves data pipelines and architecture, which is not directly aligned with the job's focus on LLM solutions and engineering collaboration.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is less relevant to the job's technical focus on LLM integration and engineering collaboration.\n\n8. **Software Engineer**: This role involves software development and collaboration, which aligns with the job's focus on writing clean code and collaborating with engineering teams. However, the specific focus on LLM solutions is less emphasized.\n\nThe job is most similar to the **AI Solution Architect** role, as it involves designing and integrating LLM solutions, collaborating with teams, and ensuring scalability and compatibility, which are key aspects of the job's responsibilities and skills.",
+  "role_classification": 4,
+  "role_title": "AI Solution Architect"
+}

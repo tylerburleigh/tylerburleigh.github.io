@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "j529d5",
+    "responsibilities": [
+      "Review features to identify privacy exposures and partner with teams to design mitigations.",
+      "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+      "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+      "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+      "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on privacy, data collection, and privacy technologies, with no mention of training or fine-tuning language models. The responsibilities are more aligned with privacy risk assessment and mitigation rather than model customization or training.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j529d5",
+    "responsibilities": [
+      "Review features to identify privacy exposures and partner with teams to design mitigations.",
+      "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+      "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+      "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+      "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention crafting or refining prompts for language models. The focus is on privacy risks, data collection, and privacy technologies, which are not directly related to prompt engineering or iterative refinement of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j529d5",
+    "responsibilities": [
+      "Review features to identify privacy exposures and partner with teams to design mitigations.",
+      "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+      "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+      "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+      "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities do not include evaluating the quality, reliability, or fairness of language models. The responsibilities are centered around privacy audits, risk communication, and privacy technology guidance, which do not directly relate to model evaluation or performance assessment.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j529d5",
+    "responsibilities": [
+      "Review features to identify privacy exposures and partner with teams to design mitigations.",
+      "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+      "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+      "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+      "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities do not involve designing workflows for integrating LLM outputs into applications. The focus is on privacy-related tasks, such as auditing, risk communication, and privacy technology development, which do not directly relate to integrating LLMs into applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j529d5",
+    "responsibilities": [
+      "Review features to identify privacy exposures and partner with teams to design mitigations.",
+      "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+      "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+      "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+      "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not mention analyzing model outputs or debugging models. The focus is on privacy risks, data collection, and privacy technologies, which are not directly related to model interpretability or debugging.",
+    "is_relevant": false
+  }
+]

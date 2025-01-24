@@ -1,0 +1,24 @@
+{
+  "filename": "j97fbb",
+  "responsibilities": [
+    "Design, develop, test, and deploy algorithms and models for weather forecasting.",
+    "Collaborate with scientists, engineers, and product managers to understand business requirements and translate them into technical solutions.",
+    "Provide technical leadership and mentorship to engineers and peers.",
+    "Ensure code quality, performance, reliability, and scalability of the platform components.",
+    "Research and evaluate new technologies and frameworks to improve platform capabilities.",
+    "Troubleshoot and resolve issues in production and development environments.",
+    "Maintain and improve existing service pipelines: identify performance bottlenecks and single point failures.",
+    "Improve deployment and test pipeline reliability to reduce live site incidents.",
+    "Coordinate communication across different time zones (approximately 5% to 10%)."
+  ],
+  "qualifications": [
+    "Knowledge of modern cloud-based architecture and services, including containers, caching, load-balancing, IO bandwidth optimization, and non-sql databases.",
+    "General understanding of machine learning and deployment of SOTA deep learning models.",
+    "Performance tuning experience for serving deep learning models.",
+    "Coding proficiency in languages such as C, C++, C#, Java, JavaScript, or Python.",
+    "Experience with deep learning frameworks (PyTorch, TensorFlow, Keras, etc.).",
+    "Ability to analyze cloud service performance bottlenecks and drive end-to-end service pipeline optimization."
+  ],
+  "analysis": "The job responsibilities focus on designing, developing, testing, and deploying algorithms and models for weather forecasting, collaborating with various teams, providing technical leadership, ensuring code quality, and improving platform capabilities. The skills required include knowledge of cloud-based architecture, machine learning, deep learning frameworks, and coding proficiency in several programming languages.\n\nWhile the job involves machine learning and deep learning, there is no specific mention of working with Generative AI (GenAI) or language models (LLMs). The focus seems to be more on weather forecasting models and general deep learning rather than on generative models or language models specifically. The skills and responsibilities do not explicitly indicate the use of GenAI or LLMs, which are typically associated with tasks like natural language processing, text generation, or other language-related applications.\n\nTherefore, based on the provided responsibilities and skills, it does not appear that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

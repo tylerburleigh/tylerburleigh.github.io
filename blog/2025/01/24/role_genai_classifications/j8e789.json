@@ -1,0 +1,19 @@
+{
+  "filename": "j8e789",
+  "responsibilities": [
+    "Lead build out of industry-leading AI clusters, partnering closely with cloud service providers on cluster build out and required features.",
+    "Consult with different stakeholders to deeply understand infrastructure, data, and compute needs, identifying potential solutions to support frontier research and product development.",
+    "Set technical strategy and oversee development of high scale, reliable infrastructure systems.",
+    "Mentor top technical talent.",
+    "Design processes (e.g., postmortem review, incident response, on-call rotations) that help the team operate effectively and never fail the same way twice."
+  ],
+  "qualifications": [
+    "Strong proficiency in at least one programming language (e.g., Python, Rust, Go, Java).",
+    "Strong problem-solving skills and ability to work independently.",
+    "Excellent communication skills to build consensus with stakeholders, both internally and externally.",
+    "Deep knowledge of modern cloud infrastructure including Kubernetes, Infrastructure as Code, AWS, and GCP.",
+    "Expertise in distributed systems at scale, infrastructure reliability, scalability, security, and continuous improvement."
+  ],
+  "analysis": "The job responsibilities focus on building and managing AI clusters, consulting on infrastructure needs, setting technical strategy, and mentoring technical talent. The skills required include proficiency in programming languages, problem-solving, communication, and deep knowledge of cloud infrastructure and distributed systems. While the job involves working with AI clusters and infrastructure, there is no explicit mention of Generative AI (GenAI) or language models (LLMs). The focus is more on infrastructure and systems reliability rather than on developing or working directly with GenAI or LLMs.",
+  "is_genai_role": false
+}

@@ -1,0 +1,25 @@
+{
+  "filename": "j20d92",
+  "responsibilities": [
+    "Develop and maintain APIs, services, and orchestration systems to facilitate data fulfillment for partners and internal consumers",
+    "Integrate with 3rd party APIs and landing zones",
+    "Oversee the design and maintenance of data systems and contribute to the continual enhancement of the data fulfillment platform",
+    "Build streaming data pipelines",
+    "Collaborate with the team to define, track, and meet SLOs",
+    "Maintain and expand existing systems, tooling, and infrastructure"
+  ],
+  "qualifications": [
+    "Strong competencies in data structures, distributed systems, algorithms, and software design",
+    "Strong knowledge of Python and at least one compiled language like Java, Go, or Elixir",
+    "Experience with FastAPI, Flask, or another Python web framework",
+    "Experience with Kafka, Pub/Sub, or similar messaging systems",
+    "Strong knowledge of tools like Airflow to orchestrate data pipelines",
+    "Very comfortable deploying and maintaining services on Kubernetes",
+    "Strong knowledge of relational databases and SQL",
+    "Experience with a cloud data warehouse like BigQuery or Redshift",
+    "Strong organization and collaboration skills",
+    "Excellent written and oral communications skills"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on developing and maintaining APIs, integrating with third-party APIs, designing data systems, building data pipelines, and maintaining existing systems and infrastructure. The skills required include knowledge of data structures, distributed systems, software design, Python, web frameworks, messaging systems, data orchestration tools, and cloud data warehouses. These are typical skills and responsibilities for a data engineering or backend development role, which may involve working with data systems and infrastructure but do not specifically indicate work with GenAI or LLMs. There is no mention of tasks related to natural language processing, machine learning, or AI model development, which would be indicative of working with GenAI or LLMs.",
+  "is_genai_role": false
+}

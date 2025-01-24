@@ -1,0 +1,29 @@
+{
+  "filename": "j2ea08",
+  "responsibilities": [
+    "Own the development and uptime of Dialpad\u2019s proprietary near real-time ML inference system.",
+    "Work closely with the Data Science teams to unleash Ai features for customers.",
+    "Acclimate and work with a peer to ensure access to necessary information and tools.",
+    "Work primarily with fully asynchronous modern Python and other languages as needed.",
+    "Contribute to and maintain Open Source codebases.",
+    "Collaborate with engineers on authoring and reviewing PRs and RFCs.",
+    "Deploy code daily on Google Cloud Platform using Kubernetes, Docker, and CI/CD Systems.",
+    "Continuously learn and apply state-of-the-art systems and techniques.",
+    "Build and manage high-performance real-time data pipelines.",
+    "Share knowledge and findings with teammates through learning sessions."
+  ],
+  "qualifications": [
+    "Strong fundamentals in software engineering and computer science.",
+    "Experience working with one or more dynamically typed programming languages.",
+    "Strong desire to continuously learn.",
+    "Ability to evaluate problem spaces and find the right tool for the job.",
+    "Ability to measure and monitor systems ensuring stability, redundancy, and runtime.",
+    "Data-driven decision-making skills.",
+    "Ability to work on diverse problems across different systems.",
+    "Appreciation for code and system maintainability and support for continuous improvement.",
+    "Fluency in English.",
+    "Bonus: Experience with the Python ecosystem, cloud providers like Google Cloud Platform or AWS, git or other version control systems, relational and/or non-relational database systems, Pub/Sub, Messaging Systems, and building/managing data processing pipelines."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention working with Generative AI (GenAI) or language models (LLMs). The responsibilities focus on developing and maintaining a real-time ML inference system, collaborating with data science teams, and working with modern programming languages and cloud platforms. The skills emphasize software engineering fundamentals, experience with programming languages, and data-driven decision-making. While there is a mention of unleashing AI features for customers, it does not specifically indicate the use of GenAI or LLMs. The focus seems to be more on general machine learning and data processing rather than specifically on generative models or language models.",
+  "is_genai_role": false
+}

@@ -1,0 +1,33 @@
+{
+  "filename": "j331b7",
+  "responsibilities": [
+    "Design, implement, and optimize AI tooling and systems to improve the quality and relevance of generated content.",
+    "Develop retrieval mechanisms to efficiently access and leverage external data sources.",
+    "Train and fine-tune generative models with retrieved data to enhance performance and accuracy.",
+    "Evaluate model performance and iterate on improvements based on metrics and user feedback.",
+    "Work closely with data scientists, product managers, and other stakeholders to understand requirements and deliver effective solutions.",
+    "Participate in code reviews and collaborate on best practices within the engineering team.",
+    "Stay up-to-date with the latest advancements in AI, natural language processing (NLP), RAG methodologies, and other related technologies.",
+    "Participate in upstream generative AI model projects such as lm-eval, ragas.io, LlamaIndex, LangChain, Hugging Face Transformers, vllm, pytorch, etc.",
+    "Document system designs, processes, and model performance for transparency and future reference.",
+    "Report on project status, challenges, and results to stakeholders.",
+    "Serve as a subject matter expert for your assigned component, providing mentorship and expertise to build knowledge and capabilities within Red Hat teams.",
+    "Gather and analyze user feedback to refine and enhance AI tooling."
+  ],
+  "skills": [
+    "Advanced programming skills in Python and SQL.",
+    "Experience in or familiarity with machine learning frameworks (e.g., TensorFlow, PyTorch).",
+    "Understanding of natural language processing (NLP) techniques and models.",
+    "Familiarity with retrieval-augmented generation architectures and methodologies.",
+    "Experience with data processing and manipulation libraries.",
+    "Knowledge of microservices and containerization technologies (e.g., Kubernetes) for LLM deployment.",
+    "Strong self-motivation and organizational skills.",
+    "Demonstrated ability to context switch between multiple concurrent projects.",
+    "Outstanding mentorship and coaching skills.",
+    "Excellent written and verbal communication skills.",
+    "Positive attitude and willingness to share ideas openly."
+  ],
+  "analysis": "The job responsibilities and skills focus on designing, implementing, and optimizing AI systems, particularly in the context of generative models and retrieval-augmented generation (RAG) methodologies. The role involves working closely with data scientists and other stakeholders, participating in code reviews, and staying updated with AI advancements. Key skills include advanced programming in Python and SQL, experience with machine learning frameworks, and knowledge of NLP techniques.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which aligns with the job's emphasis on model performance evaluation and staying updated with AI advancements. However, the job's focus on implementation and optimization of AI systems is less aligned with the research-centric responsibilities of this option.\n\n2. **AI/ML Engineer**: This option involves transforming research into scalable AI solutions, which aligns with the job's focus on implementing and optimizing AI systems. The skills required, such as proficiency in Python and collaboration with research scientists, match well with the job's requirements.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which is somewhat related to the job's focus on optimizing AI systems. However, the job's emphasis on generative models and RAG methodologies is not a primary focus here.\n\n4. **AI Solution Architect**: This option involves designing AI solutions and collaborating with SMEs, which is less aligned with the job's technical focus on model training and optimization.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is related to the job's responsibilities of training and fine-tuning models. However, the job's emphasis on AI tooling and generative models is not a primary focus here.\n\n6. **Data Engineer**: This option involves building data pipelines and architectures, which is less aligned with the job's focus on AI model optimization and generative models.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not aligned with the technical and AI-focused responsibilities of the job.\n\n8. **Software Engineer**: This option involves software development and system architecture, which is somewhat related to the job's focus on implementing AI systems. However, the job's emphasis on AI and generative models is not a primary focus here.\n\nThe job aligns most closely with the responsibilities and skills of an AI/ML Engineer, as it involves implementing and optimizing AI systems, collaborating with data scientists, and having proficiency in Python.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

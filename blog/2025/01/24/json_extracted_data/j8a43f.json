@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Work on cleaning and curating large-scale datasets for fine-tuning language models, ensuring high quality and relevance of data.",
+    "Develop and implement a fine-tuning pipeline for large language models utilizing multiple GPUs and nodes for efficient processing.",
+    "Deploy and manage a pipeline for Retrieval-Augmented Generation (RAG), integrating external knowledge sources to enhance the LLM's response quality.",
+    "Set up Guardrails to ensure the AI companion's responses are safe, secure, and trustworthy, mitigating risks associated with LLM-generated content."
+  ],
+  "skills": [
+    "Proficiency in Python.",
+    "Experience with machine learning frameworks (e.g., TensorFlow, PyTorch).",
+    "Experience with LLM fine-tuning, natural language processing, and data management.",
+    "Familiarity with cloud computing platforms and multi-GPU environments.",
+    "Knowledge of large language models and experience in fine-tuning them.",
+    "Experience with real-time data processing and streaming technologies.",
+    "Understanding of ethical AI principles and secure software development practices.",
+    "Strong analytical and problem-solving skills.",
+    "Ability to work independently and collaboratively."
+  ],
+  "qualifications": [
+    "Enrolled in a graduate program in computer science, machine learning, or a related field.",
+    "Proficiency in Python and experience with machine learning frameworks (e.g., TensorFlow, PyTorch).",
+    "Experience with LLM fine-tuning, natural language processing, and data management.",
+    "Familiarity with cloud computing platforms and multi-GPU environments."
+  ]
+}

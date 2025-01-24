@@ -1,0 +1,20 @@
+{
+  "filename": "jfb140",
+  "responsibilities": [
+    "Write and maintain core libraries and services for collaborative teams of robots, including motion deconfliction and contingency management of fast mover air vehicles.",
+    "Own major feature development and rollout of large, complex features for products, such as developing terminal-phase autonomy for air vehicles and creating test plans on live surrogates.",
+    "Work closely with Anduril and third-party vehicle hardware teams, as well as operational subject matter experts, to align on requirements during product development and iterate towards a final design."
+  ],
+  "qualifications": [
+    "Understanding of data structures, algorithms, concurrency, and code optimization.",
+    "Troubleshooting and analyzing remotely deployed software systems.",
+    "Working with and testing electrical and mechanical systems.",
+    "Experience with C++ or Rust in a Linux development environment.",
+    "Experience in motion planning, perception, localization, mapping, controls, and related system performance metrics.",
+    "Programming for embedded and physical devices.",
+    "Multi-agent coordination of UAVs.",
+    "Solving complex frame transformation problems, such as target localization or multi-degree of freedom robotic arms."
+  ],
+  "analysis": "The job responsibilities and skills listed focus on developing and maintaining software for collaborative teams of robots, particularly in the context of air vehicles. The responsibilities include writing core libraries for motion deconfliction, developing autonomy features, and working with hardware teams. The skills required include understanding data structures, algorithms, concurrency, and code optimization, as well as experience with C++ or Rust, motion planning, perception, localization, mapping, controls, and multi-agent coordination of UAVs.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on robotics, motion planning, and embedded systems, which are not directly related to GenAI or LLMs. The job seems to be more about robotics and autonomous systems rather than natural language processing or generative tasks typically associated with GenAI or LLMs.",
+  "is_genai_role": false
+}

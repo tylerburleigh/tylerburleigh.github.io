@@ -1,0 +1,31 @@
+{
+  "responsibilities": [
+    "Conduct in-depth reverse engineering and vulnerability analysis across various architectures and platforms, including x86/64, ARM, PowerPC, and more.",
+    "Research and analyze operating system and application internals, identifying and understanding security strengths and weaknesses of those systems.",
+    "Develop and enhance functionality by adding features and capabilities to undocumented interfaces.",
+    "Model and analyze in-memory compiled application behavior to identify potential vulnerabilities and improve security measures.",
+    "Develop and understand mobile/embedded systems and kernel modules, particularly related to vulnerability research.",
+    "Participate actively in the Vulnerability Research mentorship program, sharing knowledge and collaborating with colleagues."
+  ],
+  "skills": [
+    "Proficient understanding of wireless networking and associated security protocols, such as Wi-Fi (802.11), Bluetooth, or cellular networks (2G/3G/4G/5G).",
+    "Strong grasp of legacy exploit mitigations and bypass techniques, including Address Space Layout Randomization (ASLR), Data Execution Prevention (DEP/NX), Stack Cookies (Canaries), and Control Flow Integrity (CFI).",
+    "In-depth knowledge of security and network fundamentals, such as cryptography, authentication, access control, and network protocols (TCP/IP, UDP, DNS, HTTP, etc.).",
+    "Programming experience with both scripted languages (preferably Python3) and compiled languages (preferably C).",
+    "Familiarity with low-level architectures such as x86, ARM, or MIPS.",
+    "Experience with operating system internals and implementations, including Windows, Linux, or macOS.",
+    "Excellent oral, written, and interpersonal communication skills."
+  ],
+  "qualifications": [
+    "Active US Top Secret security clearance, with the ability to upgrade to TS/SCI Special Access Program access.",
+    "Bachelor's or postgraduate degree in Computer Science, Computer Engineering, or a related field.",
+    "Experience with vulnerability research and reverse engineering of real-time operating systems (RTOS), such as FreeRTOS, QNX, or VxWorks.",
+    "Experience with software protection and binary armoring techniques, such as anti-debugging, code obfuscation, or tamper resistance.",
+    "Proficiency in agile development methodologies, including Scrum or Kanban.",
+    "Familiarity with low-level iOS/Android development and associated security considerations.",
+    "Knowledge of hypervisors and their security implications.",
+    "Proficiency in malware analysis, including static and dynamic analysis techniques.",
+    "Experience with constraint solving techniques, such as symbolic execution, theorem proving, or model checking.",
+    "Background in machine learning, particularly in the context of vulnerability analysis and detection."
+  ]
+}

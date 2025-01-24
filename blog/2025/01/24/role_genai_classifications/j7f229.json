@@ -1,0 +1,23 @@
+{
+  "filename": "j7f229",
+  "responsibilities": [
+    "Develop, optimize, and maintain robust data models in dbt to support Accounting and Finance processes.",
+    "Build and automate data pipelines for reconciliation and reporting between systems like NetSuite, Shopify, Stripe, Avalara, and Snowflake.",
+    "Partner with Accounting and Finance teams to validate and reconcile data, including orders, invoices, refunds, disputes, and item fulfillment data.",
+    "Implement and maintain data quality testing frameworks to ensure the integrity and reliability of financial data.",
+    "Collaborate with Data Engineering to improve data ingestion and warehouse optimization.",
+    "Document processes, prioritize data governance, and support stakeholders in using self-service tools like Sigma for financial reporting and analysis.",
+    "Provide technical guidance and support for Finance-related projects, including data integration, reporting automation, and strategic financial analysis.",
+    "Apply software engineering best practices to analytics code, including version control, testing, and continuous integration."
+  ],
+  "skills": [
+    "Advanced expertise in SQL and ETL optimization techniques.",
+    "Hands-on experience with data modeling and schema design for financial reporting.",
+    "Familiarity with accounting and finance concepts, such as revenue recognition and cost allocation.",
+    "Experience with ERP systems like NetSuite and financial platforms such as Shopify, Stripe, and Avalara.",
+    "Excellent attention to detail.",
+    "Ability to partner effectively with Accounting, Finance, and other cross-functional teams."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data modeling, data pipeline automation, data quality testing, and financial data integration. The responsibilities include developing data models, automating data pipelines, collaborating with finance teams, and applying software engineering best practices to analytics code. The skills required include expertise in SQL, ETL optimization, data modeling, and familiarity with financial systems and concepts. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job is centered around data engineering and financial data management rather than AI or language model development or application.",
+  "is_genai_role": false
+}

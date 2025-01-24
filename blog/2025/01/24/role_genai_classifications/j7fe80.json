@@ -1,0 +1,33 @@
+{
+  "filename": "j7fe80",
+  "responsibilities": [
+    "Develop and maintain monitoring, alerting, and logging systems to proactively detect and resolve incidents.",
+    "Perform root cause analysis and implement solutions to prevent recurrence.",
+    "Manage incident response, including on-call rotations, triaging, and escalation.",
+    "Create and manage Infrastructure as Code (IaC) using tools like Terraform.",
+    "Automate deployments, scaling, backups, and disaster recovery processes.",
+    "Develop and maintain CI/CD pipelines to ensure smooth deployment and rollback processes.",
+    "Analyze performance metrics and optimize infrastructure and application performance.",
+    "Define and enforce Service Level Objectives (SLOs) and Service Level Indicators (SLIs).",
+    "Conduct capacity planning and scaling to manage anticipated loads.",
+    "Implement security best practices, including network security, IAM policies, and encryption.",
+    "Conduct security audits and compliance checks to ensure regulatory adherence.",
+    "Respond to security incidents and implement remediation measures.",
+    "Work with development teams to ensure services are reliable, scalable, and easily monitored.",
+    "Collaborate with cross-functional teams to design, build, and maintain cloud infrastructure.",
+    "Identify and implement improvements to operational processes and workflows.",
+    "Design, implement, and test disaster recovery and business continuity plans.",
+    "Ensure regular backups and replication to minimize data loss and downtime."
+  ],
+  "qualifications": [
+    "Proficiency in AWS services (EC2, S3, RDS, Lambda, VPC, CloudWatch, IAM, etc.).",
+    "Strong knowledge of scripting languages (Python, Bash, etc.) and automation tools (Terraform).",
+    "Experience with CI/CD tools and DevOps practices.",
+    "Familiarity with monitoring and logging tools.",
+    "Strong troubleshooting and problem-solving skills.",
+    "Exposure to Machine Learning (ML) and Artificial Intelligence (AI) fields.",
+    "Exposure to industry-standard Data Governance processes and procedures."
+  ],
+  "analysis": "The job responsibilities primarily focus on infrastructure management, incident response, automation, security, and collaboration with development teams. The skills required include proficiency in AWS services, scripting languages, CI/CD tools, and DevOps practices. There is a mention of exposure to Machine Learning (ML) and Artificial Intelligence (AI) fields, but this is not specific to Generative AI or language models. The responsibilities and skills do not explicitly mention working with Generative AI (GenAI) or language models (LLMs). The focus is more on infrastructure and operational aspects rather than developing or deploying GenAI or LLMs.",
+  "is_genai_role": false
+}

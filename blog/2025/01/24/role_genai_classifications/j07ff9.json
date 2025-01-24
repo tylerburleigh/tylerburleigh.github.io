@@ -1,0 +1,21 @@
+{
+  "filename": "j07ff9",
+  "responsibilities": [
+    "Design, implement, and maintain scalable and reliable data marts and transformation processes.",
+    "Collaborate with data analysts, data scientists, and business stakeholders to understand their data needs and requirements.",
+    "Develop and optimize data models and schemas to ensure data is stored efficiently and can be retrieved and analyzed quickly.",
+    "Implement ETL processes and frameworks to transform raw data from multiple sources into structured formats suitable for analysis.",
+    "Work closely with internal Data, Architecture, and DevOps teams to ensure the reliability and scalability of data systems.",
+    "Monitor and troubleshoot data pipelines, and look for opportunities for continuous improvement.",
+    "Document data systems, data flow, and data processes."
+  ],
+  "skills": [
+    "Strong proficiency in SQL and experience with database and data warehouse systems.",
+    "Experience building and deploying data processes in a cloud environment (Azure, AWS, GCP).",
+    "Experience in at least one programming language (e.g., Python, Java, Scala).",
+    "Understanding of best practices in designing ETL/ELT processes, data modeling, and data warehousing.",
+    "Good written and oral English (B2 or higher)."
+  ],
+  "analysis": "The job responsibilities focus on designing, implementing, and maintaining data systems, including data marts, transformation processes, and ETL frameworks. The role involves collaboration with data analysts, data scientists, and business stakeholders to understand data needs, as well as optimizing data models and schemas for efficient storage and retrieval. The skills required include proficiency in SQL, experience with cloud environments, and programming languages like Python, Java, or Scala. The job description emphasizes data engineering tasks, such as data modeling, data warehousing, and ETL processes.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and infrastructure rather than on developing or deploying AI models or language models. Therefore, it is unlikely that this job involves working with GenAI or LLMs.",
+  "is_genai_role": false
+}

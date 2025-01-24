@@ -1,0 +1,28 @@
+{
+  "responsibilities": [
+    "Design, implement, and optimize backend systems to support large-scale data ingestion, transformation, and storage",
+    "Own the overall data architecture, including ETL pipelines, data lakes, and warehouses",
+    "Develop scalable and maintainable APIs to support both internal and external systems",
+    "Architect and manage real-time data streaming pipelines using Apache Kafka to ensure high availability and low-latency processing",
+    "Drive optimization efforts for data storage (e.g., partitioning, clustering) to improve query performance",
+    "Collaborate with AI and analytics teams to ensure backend infrastructure meets business and product needs",
+    "Establish best practices for backend development, data governance, and pipeline monitoring",
+    "Lead efforts to enhance reliability, fault tolerance, and security of backend systems",
+    "Identify and drive new initiatives to improve efficiency and productivity through automation and process improvements"
+  ],
+  "skills": [
+    "Expertise in cloud platforms like Google Cloud (BigQuery, Dataflow) or AWS (Redshift, Lambda)",
+    "Strong knowledge of SQL, Python, and backend frameworks (e.g., Node.js, Django, Flask)",
+    "Proven experience designing and optimizing data warehouses and ETL/ELT pipelines",
+    "Extensive experience with Apache Kafka, including designing, deploying, and managing Kafka-based streaming pipelines",
+    "Proficiency in containerization and orchestration tools (e.g., Docker, Kubernetes)",
+    "Familiarity with DBT or similar transformation layer tools",
+    "Strong understanding of API design, security best practices, and RESTful principles",
+    "Excellent problem-solving skills and ability to manage complex data-driven projects"
+  ],
+  "qualifications": [
+    "Education: BS/MS in Computer Science, Engineering, or a related field",
+    "Experience: 7+ years in backend system design and data architecture, with at least 3 years in a lead/architect role",
+    "Recent startup experience preferred"
+  ]
+}

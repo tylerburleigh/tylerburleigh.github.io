@@ -1,0 +1,31 @@
+{
+  "filename": "jeff82",
+  "responsibilities": [
+    "Support software design process based on functional requirements.",
+    "Consult with project teams and end users to identify application requirements.",
+    "Design and write detailed design specifications, develop, and implement new software features or modifications to existing software.",
+    "Participate in code reviews and provide feedback on code quality correctness and style.",
+    "Support CI/CD process for stability, efficiency, security, and quality of all shipped code.",
+    "Support Runtime platform maintenance, integration of new features, and release fixes.",
+    "Make recommendations for continuous improvement of SDLC and DevOps.",
+    "Design, develop, and implement test automation to improve efficiency and enforce quality/security baselines.",
+    "Support in creating and maintaining product documentation.",
+    "Participate in advanced support escalation for live site management."
+  ],
+  "qualifications": [
+    "Strong knowledge of Large Language Models (LLMs), including their architectures, training processes, and applications.",
+    "Working knowledge of the Git Source Control System.",
+    "Working knowledge of Agile software development principles.",
+    "Proficiency in Python, SQL, NoSQL, CSS, JavaScript, and RESTful services.",
+    "Excellent spoken and written communication and receptive listening skills, with the ability to present ideas in a clear, concise fashion to technical and non-technical audiences.",
+    "Ability to conform to shifting priorities, demands, and timelines through analytical and problem-solving capabilities.",
+    "Strong ability to work independently or in a team-oriented, collaborative environment.",
+    "Ability to take initiative and prioritize tasks, manage time, problem prevention, and problem-solving skills.",
+    "Proven experience as a hands-on engineer designing and delivering solutions to meet complex design and architectural challenges in a cloud services environment.",
+    "Prior experience building services that run on Microsoft Azure and Amazon Web Services Infrastructure.",
+    "Deep practical experience operating high-scale services in production environments.",
+    "Experience and opinions on what great observability looks like, what safe deployments look like, and whether to push code on Fridays."
+  ],
+  "analysis": "The job responsibilities focus on software design, development, and maintenance, including tasks such as supporting the software design process, consulting with project teams, designing and implementing software features, participating in code reviews, and supporting CI/CD processes. These responsibilities do not explicitly mention working with Generative AI or language models.\n\nHowever, the skills section includes a specific mention of \"Strong knowledge of Large Language Models (LLMs), including their architectures, training processes, and applications.\" This indicates that the job requires expertise in LLMs, which are a type of language model. The presence of this skill requirement strongly suggests that the job involves working with language models.\n\nWhile the responsibilities do not explicitly mention Generative AI or LLMs, the skills section's emphasis on LLMs implies that the job likely involves working with these technologies, possibly in the context of software development or integration.",
+  "is_genai_role": true
+}

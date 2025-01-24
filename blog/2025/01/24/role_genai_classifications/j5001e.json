@@ -1,0 +1,29 @@
+{
+  "filename": "j5001e",
+  "responsibilities": [
+    "Own and improve the development infrastructure for the core TypeScript project including CI/CD pipelines, test frameworks, and automated tooling",
+    "Optimize the Bun/Node.js/TypeScript build system to balance speed, reliability, and security",
+    "Design and maintain test fixtures that enable rapid, reliable development across the project",
+    "Evaluate and integrate modern JavaScript runtime environments like Bun to improve build and test performance",
+    "Maintain npm dependencies and internal development tools",
+    "Establish and enforce TypeScript best practices throughout the codebase",
+    "Architect and maintain React component testing infrastructure including unit, integration, and visual regression tests",
+    "Define and enforce React best practices, patterns, and component architecture",
+    "Improve build tooling for optimal React development and production performance",
+    "Create and maintain reusable component fixtures and testing utilities",
+    "Create comprehensive technical documentation to help the team work effectively with tools and practices",
+    "Advocate for and implement developer experience improvements"
+  ],
+  "qualifications": [
+    "Deep experience with TypeScript, React, and modern JavaScript tooling",
+    "Expertise in React development, including performance optimization and modern patterns",
+    "Strong testing expertise across the stack, with experience designing test fixtures and maintainable testing strategies",
+    "Hands-on experience maintaining developer infrastructure including CI/CD pipelines, build tools, and bundlers",
+    "Passion for developer experience and ability to identify friction points and implement solutions",
+    "Experience shipping developer tools and understanding of what makes tools useful and adoptable",
+    "Hands-on experience working with large language models and prompt engineering",
+    "Understanding of societal impacts and ethics of work"
+  ],
+  "analysis": "The job responsibilities primarily focus on improving development infrastructure, optimizing build systems, maintaining test fixtures, and establishing best practices for TypeScript and React. These tasks are centered around software development, testing, and developer experience improvements. However, one of the skills listed is \"Hands-on experience working with large language models and prompt engineering.\" This indicates that the job does involve working with language models, specifically large language models (LLMs). The mention of prompt engineering further supports this, as it is a key aspect of working with LLMs and generative AI technologies.",
+  "is_genai_role": true
+}

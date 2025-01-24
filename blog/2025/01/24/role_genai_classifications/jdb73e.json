@@ -1,0 +1,24 @@
+{
+  "filename": "jdb73e",
+  "responsibilities": [
+    "Design and implement ELT processes and data models using dbt.",
+    "Design and maintain data orchestration workflows using Dagster or Airflow.",
+    "Build data pipelines to support machine learning use cases, enabling predictive and prescriptive customer-facing inference.",
+    "Build and optimize processes for sourcing, processing, contextualizing, and modeling data.",
+    "Create and maintain near-real-time streaming data pipelines.",
+    "Deliver automated solutions to address complex data processing challenges.",
+    "Enforce data retention policies to balance liability, cost efficiency, and data lifecycle optimization.",
+    "Develop and maintain a comprehensive data catalog, dictionary, and technical documentation derived from data assets and software solutions.",
+    "Collaborate closely with cross-functional teams, including analytics, product, and external customer stakeholders."
+  ],
+  "qualifications": [
+    "Advanced proficiency in SQL (any dialect).",
+    "Adequate knowledge of at least one programming language, ideally one widely used in the data industry, such as Python, Spark, or Scala.",
+    "Thorough understanding and application of data modeling principles.",
+    "Skilled in designing and building scalable data pipelines.",
+    "Ability to work with complex datasets.",
+    "Interest in empowering both internal teams and external customers through actionable insights."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering tasks, such as designing and implementing ELT processes, building data pipelines, and maintaining data orchestration workflows. The responsibilities also include building and optimizing processes for data sourcing, processing, and modeling, as well as creating near-real-time streaming data pipelines. The skills required include proficiency in SQL, knowledge of programming languages like Python, Spark, or Scala, and a thorough understanding of data modeling principles.\n\nThere is a mention of supporting machine learning use cases, which could potentially involve working with AI models. However, there is no explicit mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus seems to be more on data engineering and enabling machine learning rather than directly working with GenAI or LLMs.\n\nTherefore, based on the provided information, it does not appear that the job specifically involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

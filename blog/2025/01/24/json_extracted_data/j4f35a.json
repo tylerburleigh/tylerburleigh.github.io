@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Design, build and maintain platform components to support data engineering workflows and machine learning pipelines, enabling scalability and self-service for domain teams.",
+    "Develop robust CI/CD pipelines using Jenkins for seamless integration and deployment of data and ML workflows.",
+    "Design and implement scalable real-time and batch data pipelines using AWS S3, Glue, Lambda, Step Functions, Redshift, and Lake Formation.",
+    "Collaborate with domain teams to design domain-specific data products that are reliable, reusable, and aligned with Data Mesh principles.",
+    "Design and deploy ML pipelines using tools such as MLflow, Bedrock, and SageMaker to support end-to-end model development, training, and deployment."
+  ],
+  "skills": [
+    "Expertise in data engineering and machine learning engineering.",
+    "Proficiency in designing and building pipelines using AWS services such as S3, Glue, Lambda, Redshift, Athena, SageMaker, and Kinesis.",
+    "Strong experience with CI/CD pipelines, especially using Jenkins.",
+    "Extensive knowledge of Python programming language and its data manipulation libraries (Pyspark, Pandas, and Numpy).",
+    "Analytical and detail-oriented with a solution-oriented mindset.",
+    "Skilled in coaching and mentoring junior employees.",
+    "Demonstrates strong teamwork, high accountability, and ownership of tasks and projects.",
+    "Capable of driving change, influencing others, and thriving in a fast-paced environment with rapidly evolving web technologies."
+  ],
+  "qualifications": [
+    "A minimum of 5-7 years of experience in Data Engineering, ML Engineering, or related field.",
+    "At least 3 years of experience with Apache Spark for big data processing.",
+    "Deep understanding of Data Mesh principles, including domain-oriented data product ownership and federated governance.",
+    "Deep understanding of the Machine Learning lifecycle."
+  ]
+}

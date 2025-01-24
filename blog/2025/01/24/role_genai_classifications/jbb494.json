@@ -1,0 +1,25 @@
+{
+  "filename": "jbb494",
+  "responsibilities": [
+    "Design and implement robust data pipelines (batch and streaming) to ingest and process healthcare data from diverse EHR systems and data sources.",
+    "Apply medallion architecture principles to develop scalable bronze, silver, and gold layers for advanced analytics and machine learning.",
+    "Build and manage event-driven architectures with tools like Kafka or Kinesis for real-time data processing.",
+    "Collaborate with healthcare IT teams and third-party vendors to integrate, normalize, and secure data from EHRs, HL7, and FHIR standards.",
+    "Optimize data pipeline performance for throughput, latency, and cost-effectiveness.",
+    "Ensure compliance with HIPAA, HITECH, and other regulations by implementing strong encryption, access controls, and patient privacy measures.",
+    "Partner with data scientists, analysts, and developers to design data models and interfaces.",
+    "Guide and mentor junior engineers in data engineering, cloud architecture, containerization, and orchestration tools."
+  ],
+  "qualifications": [
+    "Proficiency in SQL and Python.",
+    "Experience with frameworks such as Apache Spark, Databricks, or Hadoop.",
+    "Hands-on experience with event-driven systems like Kafka or Kinesis.",
+    "Expertise in medallion architecture for data transformations.",
+    "Strong knowledge of ACID transaction principles.",
+    "Familiarity with cloud platforms (AWS, Azure, or GCP) and orchestration tools such as Airflow or Step Functions.",
+    "Strong problem-solving skills and attention to detail.",
+    "Excellent communication abilities."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data engineering, particularly in the healthcare domain. The responsibilities include designing and implementing data pipelines, applying medallion architecture principles, building event-driven architectures, and ensuring compliance with healthcare regulations. The skills required include proficiency in SQL and Python, experience with data processing frameworks like Apache Spark, Databricks, or Hadoop, and familiarity with cloud platforms and orchestration tools.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering, data processing, and compliance with healthcare standards, rather than on developing or working with AI models, particularly those related to natural language processing or generation.\n\nTherefore, based on the provided responsibilities and skills, this job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

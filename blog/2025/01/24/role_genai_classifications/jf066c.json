@@ -1,0 +1,33 @@
+{
+  "filename": "jf066c",
+  "responsibilities": [
+    "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+    "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+    "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+    "Optimize prompt engineering and model selection for different use cases",
+    "Implement caching strategies and fallback mechanisms for AI service integrations",
+    "Develop monitoring and observability solutions for AI-enhanced systems",
+    "Collaborate with product teams to identify opportunities for AI integration",
+    "Write technical documentation and integration guides",
+    "Ensure compliance with AI service providers' terms of service and rate limits"
+  ],
+  "qualifications": [
+    "Strong programming skills in Rust, JavaScript/TypeScript, or similar languages",
+    "Experience working with REST APIs and building API integrations",
+    "Familiarity with LLM APIs (OpenAI, Anthropic, etc.) and prompt engineering",
+    "Understanding of distributed systems and microservices architecture",
+    "Experience with version control systems (Git) and CI/CD pipelines",
+    "Knowledge of AI/ML concepts and natural language processing",
+    "Experience with container orchestration (Kubernetes, Docker)",
+    "Familiarity with WebAssembly and canister development",
+    "Experience with real-time systems and websocket implementations",
+    "Programming Languages: Rust, JavaScript/TypeScript, Python",
+    "Frameworks & Tools: Node.js, React, Internet Computer SDK",
+    "AI/ML: LLM APIs, prompt engineering, vector embeddings",
+    "Infrastructure: Docker, Kubernetes, CI/CD",
+    "Protocols: REST, GraphQL, WebSocket",
+    "Version Control: Git, GitHub"
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities include designing and implementing integrations with various LLM APIs such as OpenAI, Anthropic, and Meta\u2019s Llama, which are well-known language models. Additionally, the job involves creating automation tools that leverage LLMs, optimizing prompt engineering, and developing solutions for AI-enhanced systems. These tasks are directly related to working with language models.\n\nThe skills section further supports this conclusion, as it lists familiarity with LLM APIs, prompt engineering, and knowledge of AI/ML concepts and natural language processing. These are all key components of working with language models and Generative AI. The mention of vector embeddings, which are often used in the context of language models, reinforces this.\n\nOverall, both the responsibilities and skills sections provide strong evidence that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

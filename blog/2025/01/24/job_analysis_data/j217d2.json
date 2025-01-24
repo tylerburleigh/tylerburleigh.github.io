@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "j217d2",
+    "responsibilities": [
+      "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+      "Updating routing plans based on unexpected construction observed online.",
+      "Producing smooth paths that can be used as initial seeds for motion planning trajectory optimization through construction and other unexpected circumstances.",
+      "Proving that all of this functionality can be achieved in a high-integrity, highly available way.",
+      "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+      "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+      "Providing safety case evidence."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on dynamically updating map content, routing plans, and developing algorithms related to semantic mapping and motion planning. These tasks are related to real-time data processing and algorithm development for navigation and safety. Fine-tuning and customization of language models, which involves training language models for domain-specific tasks, does not directly align with these responsibilities. The tasks do not mention the use of language models or require domain-specific language processing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j217d2",
+    "responsibilities": [
+      "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+      "Updating routing plans based on unexpected construction observed online.",
+      "Producing smooth paths that can be used as initial seeds for motion planning trajectory optimization through construction and other unexpected circumstances.",
+      "Proving that all of this functionality can be achieved in a high-integrity, highly available way.",
+      "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+      "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+      "Providing safety case evidence."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities are centered around updating map content, routing plans, and developing algorithms for motion planning and safety. Prompt engineering involves crafting and refining prompts for language models, which is not directly related to the responsibilities of updating maps or developing motion planning algorithms. There is no indication that language models or prompt engineering are part of the tasks described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j217d2",
+    "responsibilities": [
+      "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+      "Updating routing plans based on unexpected construction observed online.",
+      "Producing smooth paths that can be used as initial seeds for motion planning trajectory optimization through construction and other unexpected circumstances.",
+      "Proving that all of this functionality can be achieved in a high-integrity, highly available way.",
+      "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+      "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+      "Providing safety case evidence."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include developing mission-critical algorithms and creating validation frameworks. While model evaluation and performance assessment are important for ensuring quality and reliability, the context here is specific to language models. The responsibilities do not mention evaluating language models but rather focus on algorithms related to mapping and motion planning. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j217d2",
+    "responsibilities": [
+      "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+      "Updating routing plans based on unexpected construction observed online.",
+      "Producing smooth paths that can be used as initial seeds for motion planning trajectory optimization through construction and other unexpected circumstances.",
+      "Proving that all of this functionality can be achieved in a high-integrity, highly available way.",
+      "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+      "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+      "Providing safety case evidence."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve developing algorithms and frameworks for mapping and motion planning, which could potentially involve integrating various systems and applications. However, the focus is not on integrating language model outputs into applications. The responsibilities do not mention language models or their integration, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j217d2",
+    "responsibilities": [
+      "Dynamically updating map content based on perceived lane boundaries and construction blockages on-the-fly.",
+      "Updating routing plans based on unexpected construction observed online.",
+      "Producing smooth paths that can be used as initial seeds for motion planning trajectory optimization through construction and other unexpected circumstances.",
+      "Proving that all of this functionality can be achieved in a high-integrity, highly available way.",
+      "Developing mission-critical online algorithms in the intersection of semantic mapping and motion planning.",
+      "Creating validation frameworks running on large amounts of data in large cloud compute settings.",
+      "Providing safety case evidence."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include proving functionality in a high-integrity way and providing safety case evidence, which involves ensuring the reliability and correctness of algorithms. While model interpretability and debugging are crucial for understanding and improving model outputs, the context here is specific to language models. The responsibilities do not mention language models, so this activity is not directly relevant.",
+    "is_relevant": false
+  }
+]

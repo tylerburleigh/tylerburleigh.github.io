@@ -1,0 +1,30 @@
+{
+  "filename": "jf3642",
+  "responsibilities": [
+    "Design, build, test, and deploy a real-time, map-based interface for displaying and interacting with sensor data and commanding physical assets.",
+    "Fetch and manage large streams of data while maintaining performant rendering in a low-friction user experience.",
+    "Design and build the backend APIs and services that power our frontend experience.",
+    "Build and design immersive image-viewing experiences in a web-based platform.",
+    "Take ownership of initial, well-scoped projects with clear objectives.",
+    "Work closely with colleagues to deliver results, understanding the importance of teamwork in achieving success.",
+    "Partner with end-users to turn needs into features while balancing user experience with engineering constraints."
+  ],
+  "qualifications": [
+    "Experience working on frontend applications, preferably data-intensive or map-based systems.",
+    "Skilled in full-stack development, including working with RESTful and/or gRPC APIs.",
+    "Bias towards action, rapid delivery, and iteration.",
+    "A mindset towards innovative approaches to problem solving.",
+    "Experience with React or some other well-known JavaScript framework.",
+    "Professional software development lifecycle experience using tools such as version control, CI/CD systems, etc.",
+    "A deep, demonstrated understanding of how computers and networks work, from a single desktop to a multi-cluster cloud node.",
+    "Experience building scalable backend software systems with various data storage and processing requirements.",
+    "Experience with industry standard cloud platforms (AWS, Azure), CI/CD tools, and software infrastructure fundamentals (networking, security, distributed systems).",
+    "Ability to quickly understand and navigate complex systems and established code bases.",
+    "Experience implementing robot or autonomous vehicle testing frameworks in a software-in-the-loop or hardware-in-the-loop (HITL) environment.",
+    "Experience with modern build and deployment tooling (e.g. NixOS, Terraform).",
+    "Experience designing complex software systems, and iterating upon designs via a technical design review process.",
+    "Familiarity with industry standard monitoring, logging, and data management tools and best practices."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on designing and building real-time, map-based interfaces, managing data streams, and creating immersive image-viewing experiences. The skills required include frontend and full-stack development, experience with JavaScript frameworks like React, and backend software systems. There is also a focus on cloud platforms, CI/CD tools, and software infrastructure. The job involves working with data-intensive systems, but there is no indication of working with GenAI or LLMs. The mention of autonomous vehicle testing frameworks suggests a focus on robotics or autonomous systems rather than language models or generative AI technologies.",
+  "is_genai_role": false
+}

@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on deploying and optimizing large generative models, building ML pipelines, improving model performance, and integrating ML features into a video creation platform. While these tasks involve working with models, they do not specifically mention fine-tuning or customizing language models for domain-specific tasks. The responsibilities are more aligned with operational and performance optimization rather than model training or fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention crafting or refining prompt instructions for language models. The focus is on deploying, optimizing, and integrating models into production environments, which does not directly relate to prompt engineering or iterative refinement of prompts for LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include improving model performance through techniques like quantization and pruning, which suggests an interest in model performance. However, there is no explicit mention of evaluating the quality, reliability, or fairness of language models using methodologies or metrics like perplexity or BLEU. The responsibilities are more focused on operational aspects rather than detailed performance assessment of LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include collaborating with cross-functional teams to integrate advanced ML features into a video creation platform. This aligns with the activity of designing and implementing workflows that incorporate LLM outputs into end-user experiences or pipelines. The integration aspect is relevant to the responsibilities described.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention analyzing model outputs for errors, biases, or potential improvements, nor do they mention employing interpretability techniques or debugging tools. The focus is more on deploying, optimizing, and maintaining ML pipelines rather than on interpretability and debugging of LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include building and maintaining end-to-end ML pipelines, which aligns with designing end-to-end workflows encompassing data ingestion, preprocessing, model selection, inference services, and post-processing of outputs. This activity is relevant as it involves ensuring seamless integration of components, which is crucial for deploying and optimizing large generative models and maintaining ML pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities mention deploying and optimizing large generative models, which implies a need for understanding compute requirements and resource planning. However, the responsibilities do not explicitly mention resource planning or infrastructure decisions like cloud versus on-premises deployments. While there is some overlap, the direct relevance is limited.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "Improving model performance through techniques like quantization, pruning, or distributed model inference directly relates to performance optimization and latency control. The job responsibilities focus on optimizing models for real-time or batch inference, which aligns with maintaining low response times and handling spikes in requests.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include implementing MLOps best practices, which encompass aspects of model lifecycle management such as monitoring, logging, and CI/CD workflows. However, the responsibilities do not explicitly mention continuous retraining, versioning, or governance, making the direct relevance less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "Collaborating with cross-functional teams to integrate advanced ML features into a video creation platform suggests a need for system interoperability and integration. This activity is relevant as it involves aligning generative AI services with existing systems and establishing APIs, which is crucial for seamless integration.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities do not explicitly mention conducting research to evaluate AI quality. While improving model performance and collaborating with research teams might involve some evaluation, the primary focus is on deployment, optimization, and integration rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on deploying, optimizing, and integrating ML models rather than developing new AI systems or algorithms for automated insights. While there may be some overlap in improving model performance, the primary focus is not on developing new systems or algorithms.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on deploying and optimizing existing models and maintaining ML pipelines, rather than generating synthetic datasets for testing or improvement.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities involve improving model performance and implementing MLOps best practices, which likely require identifying performance metrics and success criteria. However, this is not explicitly stated, making the direct relevance less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets. The focus is on deploying, optimizing, and integrating models, rather than data preparation or annotation for evaluation and optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments like A/B tests. The focus is on deploying and optimizing models and maintaining ML pipelines, rather than experimental design and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on deploying, optimizing, and integrating models, rather than data sampling for evaluation purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on deploying and optimizing ML models, building ML pipelines, improving model performance, collaborating with teams, and implementing MLOps best practices. These tasks are centered around the technical aspects of machine learning and model deployment. Designing labeling tasks for data annotation is more related to the data preparation phase, which is not explicitly mentioned in the job responsibilities. Therefore, this activity does not seem directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention data collection or management of annotation projects. The focus is on model deployment, optimization, and MLOps practices. Collecting human annotation data is a task related to data preparation and management, which is not covered in the job responsibilities. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities emphasize model deployment, optimization, and MLOps practices, with no mention of data analysis or evaluation of dataset quality. Analyzing human annotation data is more aligned with data quality assessment and insights generation, which are not part of the specified responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on deploying and optimizing large generative models, building ML pipelines, improving model performance, collaborating with cross-functional teams, and implementing MLOps best practices. While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus is more on model deployment, optimization, and operationalization rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on deploying models, building pipelines, and improving model performance. While data visualization can be a part of the broader data science process, it is not directly relevant to the specific responsibilities listed, which are more technical and operational in nature.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not specifically mention data mining or the analysis of conversational datasets. The focus is on deploying and optimizing models, building ML pipelines, and improving model performance. While data mining could be relevant in a broader data science context, it is not directly aligned with the responsibilities described, which are more focused on model deployment and operationalization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "One of the job responsibilities is to build and maintain end-to-end ML pipelines, which directly aligns with developing data models and pipelines for analytics. This involves implementing scalable data processing workflows, which is relevant to the responsibility of building ML pipelines from data ingestion to model serving in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include improving model performance and implementing MLOps best practices, which could involve defining metrics and success criteria to assess model health and guide decision-making. Metrics such as precision, recall, and latency are often used to evaluate model performance, making this activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention \"Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML,\" which directly aligns with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment. Additionally, the use of containerization and orchestration for performance, scalability, and reliability is relevant to the responsibility of building and maintaining end-to-end ML pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include \"Implement MLOps best practices, including monitoring, logging,\" which directly corresponds to the Activity's focus on real-time monitoring and logging solutions to track model performance, latency, and errors in production. This indicates a clear relevance to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "While the Job Responsibilities do not explicitly mention versioning, the responsibility of building and maintaining end-to-end ML pipelines implies a need for version control to ensure reproducibility and traceability. However, the lack of explicit mention makes the relevance less direct.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention continuous testing and validation. While robust CI/CD workflows might imply some level of testing, the specific focus on automating validation steps and introducing guardrails is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The responsibility to \"Build and maintain end-to-end ML pipelines\" and \"Deploy and optimize large generative models\" suggests a need for infrastructure optimization and scalability, which aligns with the Activity's focus on optimizing and scaling model-serving infrastructure using cloud platforms and container orchestration tools.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security aspects. The focus is more on model deployment, optimization, and collaboration, making this Activity less relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The responsibility to \"Improve model performance through techniques like quantization, pruning, or distributed model inference\" suggests a focus on continuous improvement and adaptation of models, which aligns with the Activity's emphasis on regular retraining, hyperparameter tuning, and performance evaluations.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on deploying and optimizing ML models, building ML pipelines, improving model performance, collaborating with cross-functional teams, and implementing MLOps best practices. These tasks are technical and related to machine learning and software engineering. User interviews and surveys, which are part of UX research, involve gathering insights on user needs and preferences, which is not directly related to the technical responsibilities outlined in the job description.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities are centered around technical aspects of machine learning and software development, such as model deployment, optimization, and MLOps practices. Usability testing and prototyping are activities focused on evaluating and improving user experience, which do not align with the technical nature of the job responsibilities. There is no mention of user experience or product design in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities emphasize technical tasks related to machine learning models and pipelines, as well as collaboration with cross-functional teams for ML feature integration. Persona development and user journey mapping are UX research activities aimed at understanding user segments and their interactions with a product, which are not relevant to the technical and ML-focused responsibilities described in the job.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities are focused on technical tasks such as deploying ML models, building pipelines, and implementing MLOps practices. Qualitative data analysis in the context of UX research involves synthesizing user feedback to identify themes and needs, which is not directly related to the technical and ML-focused responsibilities. The job does not mention any tasks related to user research or qualitative analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on deploying and optimizing ML models, building ML pipelines, and integrating ML features into a platform. While these tasks require some level of software architecture design, the responsibilities are more specific to machine learning and MLOps rather than general software architecture. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities include building and maintaining ML pipelines and integrating ML features into a platform, which involves developing production-grade applications. This activity is relevant as it aligns with the need to write efficient and maintainable code for ML applications in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "One of the job responsibilities explicitly mentions implementing MLOps best practices, including robust CI/CD workflows for ML. This directly aligns with the activity of continuous integration and delivery, making it highly relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities include implementing MLOps best practices, which encompass monitoring and logging. This aligns with the activity of monitoring and incident management, making it relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities focus on ML model deployment, optimization, and integration into a platform. While API development and system integration are important for enabling these tasks, the responsibilities do not explicitly mention API development. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities do not explicitly mention software testing and quality assurance. However, ensuring model performance and maintaining ML pipelines in production environments would implicitly require some level of testing and quality assurance. Despite this indirect relevance, the activity is not a primary focus of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities include implementing MLOps best practices and collaborating with infrastructure teams, which aligns with the principles of DevOps and infrastructure as code. This activity is relevant as it supports the deployment and management of ML models and pipelines in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities focus on deploying and optimizing ML models, building ML pipelines, improving model performance, collaborating with teams, and implementing MLOps practices. While these tasks involve ensuring model performance and integration, they do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or fairness. The responsibilities are more aligned with practical implementation and optimization rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include deploying and optimizing models, building ML pipelines, and improving model performance, which are related to developing AI systems. However, the focus is on model deployment and optimization rather than developing algorithms specifically for automated insights. The responsibilities do not explicitly mention analyzing user behavior or system performance for insights, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. They focus on deploying models, building pipelines, improving performance, and integrating ML features. While synthetic data can be a part of improving model performance, it is not explicitly mentioned or implied in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include improving model performance and implementing MLOps best practices, which likely involve identifying and tracking performance metrics. This activity is relevant as it aligns with the need to assess model health and guide decision-making, which is an implicit part of optimizing and maintaining ML models in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. They focus on deploying models, building pipelines, and improving performance. While labeled datasets are crucial for model training and evaluation, the responsibilities provided do not indicate involvement in data annotation or dataset preparation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing or running experiments like A/B tests. The focus is on deploying and optimizing models, building pipelines, and improving performance. While experiments can be part of model optimization, they are not specifically highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j0549b",
+    "responsibilities": [
+      "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+      "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+      "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+      "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into our video creation platform.",
+      "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. They focus on deploying models, building pipelines, and improving performance. While data sampling can be part of the evaluation process, it is not specifically mentioned or implied in the responsibilities provided.",
+    "is_relevant": false
+  }
+]

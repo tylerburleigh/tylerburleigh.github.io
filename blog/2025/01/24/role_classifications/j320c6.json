@@ -1,0 +1,33 @@
+{
+  "filename": "j320c6",
+  "responsibilities": [
+    "Design, implement, and tune robust APIs and API framework-related features for a multi-tenant environment.",
+    "Design and develop generic, customer-facing objects for ease of use and customization.",
+    "Design and experiment with creative prompts to optimize LLM performance for specific use cases.",
+    "Implement techniques like few-shot learning, chain-of-thought prompting, and context tuning.",
+    "Use pre-trained LLMs for Salesforce-specific applications using prompt engineering and RLHF.",
+    "Build and maintain datasets for training, fine-tuning, and evaluation of LLMs.",
+    "Develop metrics and tools to evaluate model performance, reliability, and fairness.",
+    "Deploy LLM prompts into production systems ensuring scalability, security, and efficiency.",
+    "Collaborate with product managers, engineers, and designers to implement AI-driven solutions.",
+    "Stay updated with LLM research and emerging technologies.",
+    "Participate in the team\u2019s on-call rotation to address complex problems in real-time.",
+    "Analyze large-scale datasets to uncover patterns and insights for AI applications.",
+    "Ensure data quality, security, and compliance with industry standards."
+  ],
+  "skills": [
+    "Strong expertise in LLMs/MLMs and prompt engineering techniques.",
+    "High proficiency in Java programming language.",
+    "Experience in automated testing using Java, JUnit, JSUnit.",
+    "Experience in REST-based API development and API lifecycle management.",
+    "Solid understanding of relational and non-relational databases.",
+    "Ability to translate business needs into AI solutions.",
+    "Proven experience working in cross-functional teams.",
+    "Effective communication with geographically distributed teams.",
+    "Experience in a fast-paced technical environment.",
+    "Ability to develop and ship products in quick increments."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on designing, implementing, and optimizing APIs and API frameworks, as well as working with large language models (LLMs) and prompt engineering. The job also involves deploying LLM prompts into production, collaborating with cross-functional teams, and staying updated with LLM research.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which aligns with the job's focus on designing and experimenting with prompts. However, the job's emphasis on API development and deployment is not a primary focus here.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions and developing data pipelines, which aligns with the job's focus on deploying LLM prompts into production and collaborating with teams. The skills in API development and integration are also relevant.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which partially aligns with the job's focus on deploying LLM prompts. However, the job's emphasis on API development and prompt engineering is not a primary focus here.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with teams, which aligns with the job's focus on collaboration and designing customer-facing objects. However, the job's emphasis on API development and prompt engineering is not a primary focus here.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not the primary focus of the job, as it emphasizes API development and prompt engineering.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures, which is not the primary focus of the job, as it emphasizes API development and prompt engineering.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not the primary focus of the job, as it emphasizes API development and prompt engineering.\n\n8. **Software Engineer**: This role involves software development and collaboration with teams, which aligns with the job's focus on API development and collaboration. The skills in Java programming and REST-based API development are relevant.\n\nThe job is most similar to the \"AI/ML Engineer\" option, as it involves deploying AI solutions, collaborating with teams, and has relevant skills in API development and integration.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

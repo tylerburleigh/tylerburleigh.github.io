@@ -1,0 +1,24 @@
+{
+  "filename": "j2565f",
+  "responsibilities": [
+    "Develop large, distributed, and highly-available infrastructure.",
+    "Implement platform tools for feature teams to deploy and manage datastores.",
+    "Coach and mentor engineers at all levels.",
+    "Research and advocate for new technologies to accelerate environment creation.",
+    "Carry cross-team initiatives from end to end, including code reviews, design reviews, operational robustness, and security hygiene.",
+    "Participate in the team's on-call rotation."
+  ],
+  "qualifications": [
+    "Proficiency in or willingness to learn Golang.",
+    "Experience managing infrastructure with Terraform at scale.",
+    "Comfort with data storage systems such as PostgreSQL, MongoDB, Redis, and DynamoDB.",
+    "Ability to work on datastore reliability, including standard configurations, latency, throughput, availability, and performance analysis.",
+    "Expertise with Microsoft Azure and/or Amazon Web Services.",
+    "Ability to deliver work incrementally and iterate over solutions.",
+    "Passion for building highly reliable, maintainable, scalable, and secure systems.",
+    "Ownership, accountability, and attention to detail.",
+    "Comfort working on a fully-distributed team."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on developing infrastructure, implementing platform tools, mentoring engineers, and participating in cross-team initiatives. The skills required include proficiency in Golang, experience with infrastructure management tools like Terraform, and comfort with data storage systems. The job also requires expertise in cloud services like Microsoft Azure and Amazon Web Services, and a passion for building reliable and scalable systems.\n\nThere is no mention of working with AI models, natural language processing, or any specific tasks related to GenAI or LLMs. The focus is primarily on infrastructure, data storage, and cloud services, which are not directly related to GenAI or LLMs.\n\nTherefore, based on the provided responsibilities and skills, it does not appear that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

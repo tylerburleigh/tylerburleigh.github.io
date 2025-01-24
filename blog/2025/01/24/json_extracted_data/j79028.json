@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Design and implement infrastructure and platform components for leveraging LLM in production.",
+    "Tune and optimize LLM to improve response quality and optimize performance.",
+    "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+    "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+    "Participate in project planning, design, development, and code reviews.",
+    "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+    "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+  ],
+  "skills": [
+    "Fluency in a computing language, e.g. Python, Scala, C++, Java, etc.",
+    "Knowledge of AWS Bedrock, OpenAI or similar Generative AI platforms.",
+    "Experience with LLMOps, CI/CD, and IaC.",
+    "Familiar with the full AI/ML lifecycle from model development, training, testing, deployment, monitoring, and iterating.",
+    "Knowledge in prompt engineering and guardrails.",
+    "Excellent verbal and written communication.",
+    "Exceptional troubleshooting and problem-solving skills."
+  ],
+  "qualifications": [
+    "Bachelor's degree or Master’s degrees in Computer Science, Engineering, or a related field.",
+    "Experience with developing production AI/ML systems and platforms at scale, including retrieval-augmented generation (RAG) and embedding workflows.",
+    "Familiar with training and fine-tuning models at scale with experience in LLM evaluation."
+  ]
+}

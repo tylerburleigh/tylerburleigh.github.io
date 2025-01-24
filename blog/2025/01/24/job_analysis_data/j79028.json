@@ -1,0 +1,802 @@
+[
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention tuning and optimizing LLM to improve response quality and performance, which aligns with the fine-tuning and customization of language models. This involves training or fine-tuning LLMs for specific tasks, which is directly relevant to the responsibility of optimizing LLMs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention crafting or refining prompt instructions. However, the responsibility of tuning and optimizing LLMs could involve some aspects of prompt engineering to improve system outputs. While not explicitly stated, there is a potential indirect relevance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include tuning and optimizing LLMs, which would require evaluating their performance. This aligns with the activity of developing methodologies for evaluating the quality and reliability of LLMs. Therefore, this activity is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include designing and implementing infrastructure and platform components for leveraging LLM in production, as well as collaborating with platform engineering teams to integrate AI/ML systems into production environments. This directly relates to integrating LLM outputs into end-user experiences or pipelines, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention model interpretability or debugging. However, tuning and optimizing LLMs could involve analyzing model outputs to identify errors or potential improvements, which is part of debugging. There is some indirect relevance, but it is not explicitly stated.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include designing and implementing infrastructure and platform components for leveraging LLM in production, as well as building workflows and pipelines to process data from myriad sources into a knowledge base for various use cases. This aligns closely with the Activity's focus on designing end-to-end workflows for AI-driven pipelines, ensuring seamless integration of components like data storage and model hosting.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or planning for scalability in terms of infrastructure resources like GPUs or TPUs. While there is a focus on optimizing performance, the specific aspect of compute requirements and resource planning is not directly addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities include tuning and optimizing LLM to improve response quality and optimize performance, which aligns with the Activity's focus on employing techniques to maintain low response times and architecting strategies to handle spikes in requests. This indicates a direct relevance to performance optimization and latency control.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities do not explicitly mention model lifecycle management or governance, such as continuous retraining, versioning, or traceability. While there is a focus on collaboration and integration, the specific aspects of lifecycle management and governance are not directly covered.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities include collaborating with platform engineering teams to ensure AI/ML systems integrate successfully into production environments. This aligns with the Activity's focus on aligning generative AI services with existing enterprise systems and establishing APIs for a cohesive ecosystem, indicating relevance to system interoperability and integration.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or designing experiments to validate hypotheses. The focus is more on implementation, optimization, and integration rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities do not explicitly mention developing AI systems and algorithms for automated insights, such as analyzing user behavior or system performance. The focus is more on infrastructure, optimization, and integration rather than developing new AI systems for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation or developing methods for producing synthetic datasets. The focus is on leveraging existing data sources and optimizing performance rather than generating synthetic data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include optimizing performance and improving response quality, which implies the need to identify relevant performance metrics and success criteria. However, this is not explicitly stated, and the focus is more on implementation and optimization rather than defining metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets for AI evaluation and optimization. The focus is on leveraging existing data sources and optimizing performance rather than creating new datasets for evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not explicitly mention designing, running, or analyzing experiments such as A/B tests. The focus is more on implementation, optimization, and integration rather than experimental design and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. The focus is on leveraging existing data sources and optimizing performance rather than sampling data for evaluation purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing and implementing infrastructure, optimizing LLM performance, building data processing workflows, and collaborating with various teams. While these tasks involve data processing and optimization, they do not specifically mention designing labeling tasks for data annotation. The responsibilities are more aligned with system integration and performance optimization rather than data annotation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, nor do they involve overseeing annotation teams. The focus is on infrastructure, optimization, and collaboration with engineering and product teams. Therefore, collecting human annotation data is not directly relevant to the described responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include building workflows and pipelines to process data, which could involve analyzing data. However, the specific mention of analyzing human annotation data using statistical methods is not directly covered in the responsibilities. The focus is more on optimizing LLM performance and integrating AI/ML systems rather than analyzing annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on designing and implementing infrastructure and platform components, tuning and optimizing LLMs, building workflows and pipelines, and collaborating with various teams. While statistical methods are important in data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus seems to be more on engineering and integration rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include communicating insights and recommendations to business customers and leadership teams. This could involve data visualization and exploratory analysis to present findings clearly. However, the primary focus of the responsibilities is on infrastructure, optimization, and integration, rather than on data visualization itself. While there is some overlap, it is not a primary focus.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include building workflows and pipelines to process data from various sources into a knowledge base for different use cases. This aligns with data mining and analysis of large datasets to uncover trends and patterns. Additionally, optimizing LLMs could involve analyzing conversational datasets to improve model performance. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities explicitly mention building workflows and pipelines to process data from myriad sources into a knowledge base. This directly aligns with developing data models and pipelines for analytics, as it involves implementing scalable data processing and ETL workflows. This activity is highly relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics and success criteria. However, optimizing LLM performance and ensuring successful integration into production environments may require tracking and analyzing metrics to assess model health and guide decision-making. While not explicitly stated, this activity could be relevant in the context of performance optimization and integration.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention designing and implementing infrastructure and platform components for leveraging LLM in production, as well as collaborating with platform engineering teams to ensure AI/ML systems integrate successfully into production environments. These tasks align with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies, as well as ensuring performance, scalability, and reliability of AI systems in production. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention real-time monitoring and logging solutions or tracking model performance, latency, and errors in production. However, the responsibility to ensure AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs implies a need for monitoring and observability. Thus, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention implementing version control systems for datasets and model artifacts. However, the tasks related to building workflows and pipelines to process data and ensuring successful integration of AI/ML systems into production suggest an underlying need for data and model versioning to ensure reproducibility and traceability. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include participating in project planning, design, development, and code reviews, which implies a focus on ensuring quality and stability of systems. However, there is no explicit mention of automating validation steps or introducing guardrails like canary testing or shadow deployments. While these practices are beneficial, they are not directly referenced in the Job Responsibilities. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities include designing and implementing infrastructure and platform components for leveraging LLM in production, as well as optimizing performance. These tasks align with the Activity's focus on optimizing and scaling model-serving infrastructure and designing automated scaling policies. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities mention partnership across Engineering, Product Management, Security, and Design teams to solve technical and non-technical challenges. This implies a need for governance, compliance, and security practices. However, there is no explicit mention of establishing governance frameworks or implementing role-based access controls. While these practices are important, they are not directly referenced in the Job Responsibilities. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include tuning and optimizing LLM to improve response quality and optimize performance, which aligns with the Activity's focus on regular retraining, hyperparameter tuning, and performance evaluations. Additionally, the responsibility to communicate insights and recommendations suggests a feedback loop for continuous improvement. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on designing and implementing infrastructure, optimizing LLM performance, building data workflows, and collaborating with various teams. There is no mention of direct user interaction or gathering user insights through interviews or surveys. The responsibilities are more technical and system-oriented rather than user experience-focused.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities do not mention usability testing or prototyping. The focus is on infrastructure, optimization, and collaboration with engineering and product teams. There is no indication of involvement in user experience testing or prototyping activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities do not include tasks related to developing user personas or mapping user journeys. The responsibilities are centered around technical implementation, optimization, and collaboration, without a focus on user experience research or design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While the Job Responsibilities involve processing data from various sources, the focus is on building workflows and pipelines for technical purposes rather than analyzing qualitative data for user experience insights. The responsibilities do not mention synthesizing interview notes or survey responses.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing infrastructure and platform components, which aligns with the activity of building scalable, maintainable software solutions. Both involve defining system components and ensuring alignment with business needs and performance requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities mention tuning and optimizing LLM for performance, building workflows and pipelines, and participating in development and code reviews. These tasks are related to writing clean, modular, and efficient code, as well as maintaining code quality, which are key aspects of developing production-grade applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, they do involve collaborating with platform engineering teams to integrate AI/ML systems into production environments. This implies a need for streamlined deployment processes, which is a core aspect of CI/CD.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. However, ensuring AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs suggests a need for monitoring and incident management to maintain system health.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not specifically mention API development or system integration. However, building workflows and pipelines to process data from various sources could involve some level of system integration, but it is not explicitly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include tuning and optimizing LLM to improve response quality, which implies a focus on maintaining high-quality outputs. This aligns with the activity of developing automated test suites and maintaining test coverage to ensure software quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities involve designing and implementing infrastructure and platform components, which aligns with leveraging infrastructure-as-code tools to manage cloud resources. Additionally, the emphasis on collaboration and integration into production environments suggests a DevOps culture.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include tuning and optimizing LLM to improve response quality and optimize performance, which aligns with investigating system accuracy, robustness, and other key performance metrics. However, the responsibilities do not explicitly mention conducting research or designing experiments to validate hypotheses, which is a core part of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing and implementing infrastructure and platform components for leveraging LLM in production, as well as tuning and optimizing LLM. This aligns with building and refining AI methods, such as LLM judges and ML models, to analyze system performance. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation or the development of methods for producing synthetic datasets. The focus is more on building workflows and pipelines to process data from various sources, which does not directly relate to synthetic data generation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include tuning and optimizing LLM to improve response quality and optimize performance, which implies the need to identify and track performance metrics. However, the responsibilities do not explicitly mention defining measurable indicators or success criteria, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While building workflows and pipelines to process data might involve some data preparation, the specific task of preparing balanced, high-quality data annotations is not highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments such as A/B tests. The focus is more on collaboration, communication, and integration of AI/ML systems into production environments, rather than experimental analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j79028",
+    "responsibilities": [
+      "Design and implement infrastructure and platform components for leveraging LLM in production.",
+      "Tune and optimize LLM to improve response quality and optimize performance.",
+      "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+      "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+      "Participate in project planning, design, development, and code reviews.",
+      "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+      "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include building workflows and pipelines to process data from various sources, which could involve sampling data for evaluation. However, the specific task of using statistical methods to sample data is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  }
+]

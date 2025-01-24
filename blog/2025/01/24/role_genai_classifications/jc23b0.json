@@ -1,0 +1,34 @@
+{
+  "filename": "jc23b0",
+  "responsibilities": [
+    "Propose and establish technical designs to meet business and technical requirements.",
+    "Develop and maintain data engineering and ML solutions based on requirements and design specifications using appropriate tools and technologies.",
+    "Create and optimize data pipelines / ETL pipelines for performance.",
+    "Test and validate developed solutions to ensure they meet requirements.",
+    "Coach other members of the data engineering team on workflows, technical topics, and pipeline management.",
+    "Coach and manage junior Data and ML Engineers, providing guidance, mentorship, and support to foster their professional growth and ensure project success.",
+    "Create design and development documentation based on standards for knowledge transfer, training, and maintenance.",
+    "Work with business and product teams to understand requirements and translate them into technical needs.",
+    "Adhere to and promote best practices and standards for code management, automated testing, and deployments.",
+    "Leverage existing or create new standard data pipelines within Sanofi to bring value through business use cases.",
+    "Develop automated tests for CI/CD pipelines.",
+    "Gather and organize large and complex data assets, and perform relevant analysis.",
+    "Conduct peer reviews for quality, consistency, and rigor for production-level solutions.",
+    "Actively contribute to the Data Engineering community and define leading practices and frameworks.",
+    "Communicate results and findings in a clear, structured manner to stakeholders.",
+    "Stay up to date on the company\u2019s standards, industry practices, and emerging technologies."
+  ],
+  "skills": [
+    "Strong technical analysis and problem-solving skills related to data and technology solutions.",
+    "Excellent written, verbal, and interpersonal skills with the ability to communicate ideas, concepts, and solutions to peers and leaders.",
+    "Pragmatic and capable of solving complex issues with technical intuition and attention to detail.",
+    "Service-oriented, flexible, and approachable team player.",
+    "Proficient in SQL and relational database technologies/concepts.",
+    "Working knowledge of scripting languages (Python, Shell scripting).",
+    "Experience with cloud-based data platforms (Snowflake is a plus).",
+    "Experience with job scheduling and orchestration tools (Airflow is a plus).",
+    "Strong understanding of data structures and algorithms."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, machine learning (ML) solutions, and data pipeline management. The responsibilities include developing and maintaining data engineering and ML solutions, creating and optimizing data pipelines, and conducting data analysis. The skills required include proficiency in SQL, scripting languages like Python, and experience with cloud-based data platforms and job scheduling tools. There is no explicit mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on data engineering, data management, and traditional ML rather than on GenAI or LLMs.",
+  "is_genai_role": false
+}

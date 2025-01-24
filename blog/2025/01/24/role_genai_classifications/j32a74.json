@@ -1,0 +1,35 @@
+{
+  "filename": "j32a74",
+  "responsibilities": [
+    "Collaborate on engineering projects for product with a diverse, global team of researchers and engineers",
+    "Develop scalable distributed systems to process, filter, and deploy datasets for use with machine learning",
+    "Process large, unstructured, multi-modal (text, images, 3D models, code snippets, metadata) data sources into formats suitable for machine learning",
+    "Characterize machine learning datasets to provide insights",
+    "Produce data visualizations and summaries to communicate data characteristics to researchers and leadership",
+    "Work with legal and trust teams to ensure compliant and ethical use of data",
+    "Develop data pipelines into secure remote environments respecting and demonstrating security best practices",
+    "Write testable code that is well documented and easy to understand",
+    "Analyze errors and provide solutions to problems that arise"
+  ],
+  "qualifications": [
+    "Experience in data modelling, architecture, and processing skills with varied data representations such as 2D and 3D geometry",
+    "Experience with cloud services & architectures (AWS, Azure, etc.)",
+    "Proficiency in documenting code, architectures, and experiments",
+    "Experience with relational databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB, Cassandra)",
+    "Familiarity with frameworks such as Ray data, Metaflow, Hadoop, Spark, or Hive",
+    "Knowledge of vector data stores",
+    "Proficiency with Linux systems and bash terminals",
+    "Knowledge of cloud architectures and networking",
+    "Experience with computational geometry",
+    "Knowledge of statistics",
+    "Understanding of the design, manufacturing, AEC, or media & entertainment industries",
+    "Experience with Autodesk or similar products (CAD, CAE, CAM, etc.)",
+    "Initiative to provide solutions and to learn and develop new technologies",
+    "Ability to build prototypes from scratch and write maintainable code within existing codebases",
+    "Comfort with learning & collaborating across global locations",
+    "Ability to work in newly forming ambiguous areas",
+    "Ability to build scalable and maintainable systems that will be relied on by others"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on developing scalable distributed systems, processing large datasets, and ensuring compliant and ethical use of data. The skills required include data modeling, cloud services, relational and NoSQL databases, and computational geometry. There is no direct reference to working with language models or generative AI technologies. The focus seems to be more on data processing, architecture, and system development rather than on AI model development or deployment, particularly those related to GenAI or LLMs.",
+  "is_genai_role": false
+}

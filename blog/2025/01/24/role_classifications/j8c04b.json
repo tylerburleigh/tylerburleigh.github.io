@@ -1,0 +1,31 @@
+{
+  "filename": "j8c04b",
+  "responsibilities": [
+    "Design, develop, and maintain the Cloud infrastructure for AI/ML-enabled applications using infrastructure-as-code software tools.",
+    "Setup and maintain CI/CD pipelines and other developer tools.",
+    "Ensure Cloud infrastructure's security, availability, and reliability via monitoring, observability, and alerting.",
+    "Work closely with Software Engineers to optimize performance and scalability and deliver highly available customer-facing products.",
+    "Create infrastructure code and reference architectures for orchestrating environment creation, housekeeping, and deployment throughout the application and product life cycles.",
+    "Support pre-production and production environments, diagnose and troubleshoot problems in code and in the environment, conduct root cause analyses and incident response.",
+    "Act as a mentor for other members of the team.",
+    "Stay up to date with the latest developments in cloud technologies and operational tools."
+  ],
+  "skills": [
+    "Strong foundation of internet engineering fundamentals.",
+    "Strong background in applying DevOps methodologies.",
+    "Deep understanding of cloud technologies.",
+    "Experience with infrastructure-as-code or configuration management tools (e.g., Terraform, Puppet, Ansible, Salt, Chef).",
+    "Deep knowledge of containerization and packaging using technologies such as Docker, Podman, or CRI-O, Helm, or Kustomize.",
+    "Expert Unix/Linux and networking skills.",
+    "Proficient in system integration.",
+    "Deep understanding of web app hosting and micro-service architecture.",
+    "Proficient in SRE activities.",
+    "Proficient in infrastructure automation and deployment processes.",
+    "Experience hosting and scaling data infrastructure and integrating multi-cloud environments.",
+    "Working experience with ML-OPS/LLM-OPS preferred.",
+    "Value culture and good relationship-building with cross-functional teams."
+  ],
+  "analysis": "The Job responsibilities and skills focus heavily on cloud infrastructure, DevOps methodologies, CI/CD pipelines, infrastructure-as-code, containerization, and cloud technologies. These are key indicators of a role that is centered around managing and optimizing cloud-based environments, ensuring security, availability, and reliability, and supporting software engineers in delivering scalable and high-performance applications.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which does not align with the cloud infrastructure and DevOps focus of the Job.\n\n2. **AI/ML Engineer**: This role is more about transforming AI research into scalable solutions and developing data pipelines, which is not the primary focus of the Job.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is highly relevant as it involves setting up CI/CD pipelines, managing infrastructure for scalable AI deployments, and monitoring production models. The skills required, such as a strong DevOps background and familiarity with Docker, Kubernetes, and Terraform, align well with the Job's requirements.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating with SMEs, which does not match the cloud infrastructure and DevOps focus of the Job.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and statistical methods, which are not aligned with the cloud infrastructure and DevOps focus of the Job.\n\n6. **Data Engineer**: While this role involves data pipelines and cloud-based data ecosystems, it is more data-centric and less focused on the broader cloud infrastructure and DevOps aspects highlighted in the Job.\n\n7. **Product Manager**: This role is about driving product vision and strategy, which does not align with the technical and infrastructure-focused responsibilities of the Job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is not the primary focus of the Job, which is more about infrastructure and DevOps.\n\nThe most relevant option is the \"MLOps / AI Infrastructure Engineer\" as it closely matches the Job's focus on cloud infrastructure, DevOps methodologies, CI/CD pipelines, and infrastructure automation.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

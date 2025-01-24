@@ -1,0 +1,23 @@
+{
+  "filename": "j529d5",
+  "responsibilities": [
+    "Review features to identify privacy exposures and partner with teams to design mitigations.",
+    "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+    "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+    "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+    "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+  ],
+  "skills": [
+    "Superb communication skills",
+    "Passion for protecting privacy",
+    "Creative problem solving",
+    "Analytical and deductive reasoning skills",
+    "Ability to learn quickly and excitement for new things",
+    "Strong collaboration, communication, interpersonal, and organizational skills",
+    "Ability to analyze systems\u2019 architectures for privacy impact",
+    "Ability to solve complex problems independently"
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on privacy, data collection systems, and collaboration with technical experts to develop privacy technologies. The role involves reviewing features for privacy exposures, auditing products for privacy impact, and guiding the development of data collection systems while preserving privacy. The skills required include superb communication, passion for privacy, problem-solving, and the ability to analyze systems for privacy impact.\n\n1. **AI Research Scientist**: This role focuses on AI methodologies and experiments, which does not align with the privacy-centric responsibilities of the job.\n2. **AI/ML Engineer**: This role is about transforming research into AI solutions, which is not aligned with the privacy focus of the job.\n3. **MLOps / AI Infrastructure Engineer**: This role is about deploying and monitoring AI systems, not directly related to privacy.\n4. **AI Solution Architect**: This role involves designing AI solutions with a focus on privacy and security considerations, which aligns with the job's focus on privacy technologies and data collection systems.\n5. **Data Scientist**: This role focuses on data analysis and model development, not directly related to privacy.\n6. **Data Engineer**: This role is about data pipelines and architectures, not directly related to privacy.\n7. **Product Manager**: This role involves product vision and strategy, not directly related to privacy.\n8. **Software Engineer**: This role is about software development, not directly related to privacy.\n\nThe most relevant option is the AI Solution Architect, as it involves ensuring solutions comply with privacy considerations and guiding teams through solution implementation, which aligns with the job's focus on privacy technologies and data collection systems.",
+  "role_classification": 4,
+  "role_title": "AI Solution Architect"
+}

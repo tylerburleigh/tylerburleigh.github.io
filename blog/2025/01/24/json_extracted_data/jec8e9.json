@@ -1,0 +1,24 @@
+{
+  "responsibilities": [
+    "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+    "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+    "Improve the signal quality provided by the \"virtual driver's test\".",
+    "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+    "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+    "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+    "Simulate the most interesting situations and report the most interesting simulation results."
+  ],
+  "skills": [
+    "C++ basic competency",
+    "Python basic competency",
+    "SQL basic competency",
+    "Excitement about autonomous driving, Simulation + Evaluation"
+  ],
+  "qualifications": [
+    "2 years of full-time software engineering experience, or a quantitative PhD with at least 6 months of professional software engineering experience",
+    "1 year of industry or post-doc experience in a quantitative or quality-focused engineering role",
+    "Experience developing hypotheses, designing and running experiments, processing data from experiments, summarizing conclusions",
+    "B.Sc. in Computer Science",
+    "Experience working with large FAANG scale distributed systems"
+  ]
+}

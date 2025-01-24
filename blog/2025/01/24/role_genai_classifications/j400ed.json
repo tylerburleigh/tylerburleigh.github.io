@@ -1,0 +1,20 @@
+{
+  "filename": "j400ed",
+  "responsibilities": [
+    "Partner with a cross-functional team of engineers, research scientists, technical program managers, and product managers to deliver AI-powered products.",
+    "Design, develop, test, deploy, and support AI software components including foundation model training, large language model inference, similarity search, guardrails, model evaluation, experimentation, governance, and observability.",
+    "Leverage a broad stack of Open Source and SaaS AI technologies such as AWS Ultraclusters, Huggingface, VectorDBs, Nemo Guardrails, PyTorch, and more.",
+    "Invent and introduce state-of-the-art LLM optimization techniques to improve the performance of large scale production AI systems.",
+    "Contribute to the technical vision and the long term roadmap of foundational AI systems at Capital One."
+  ],
+  "skills": [
+    "Strong foundation in engineering and mathematics.",
+    "Expertise in hardware, software, and AI.",
+    "Ability to intuitively understand scientific publications and apply novel techniques in production.",
+    "Ability to adapt quickly and bring clarity to big, undefined problems.",
+    "Excellent communication and presentation skills.",
+    "Ability to lead and mentor an engineering team and influence cross-functional stakeholders."
+  ],
+  "analysis": "The job responsibilities clearly indicate involvement with Generative AI and language models. The responsibilities include designing, developing, and supporting AI software components such as foundation model training and large language model inference. The mention of \"large language model inference\" directly points to working with LLMs. Additionally, the responsibility to \"invent and introduce state-of-the-art LLM optimization techniques\" further confirms the focus on language models. The use of technologies like Huggingface, which is known for its work with transformers and language models, also supports this conclusion. The skills required, such as expertise in AI and the ability to apply novel techniques in production, align with the demands of working with advanced AI models, including LLMs.",
+  "is_genai_role": true
+}

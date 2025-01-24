@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Derive and implement novel real-time pose estimation algorithms.",
+    "Research, develop, and implement algorithms to solve large-scale mapping.",
+    "Collaborate with other engineers to develop algorithms for in-situ and in-factory multi-sensor calibration.",
+    "Work with multiple sensors such as GPS, IMU, camera, and wheel odometry.",
+    "Program and develop software in C++.",
+    "Deploy an estimator for SLAM/VIO in a real application.",
+    "Understand and utilize numerical stability, sensor modeling, and system/noise identification concepts.",
+    "Understand theoretical shortcomings in modern algorithms and problem solve to overcome them."
+  ],
+  "skills": [
+    "Proficiency in programming in C++.",
+    "Knowledge of classical machine learning, linear algebra, stochastic processes, geometric computer vision, and optimization (convex, nonlinear).",
+    "Experience with Kalman Filter, MAP, Sequential Monte Carlo (particle filter), Nonlinear Least squares, IRLS, and MHT.",
+    "Familiarity with GPS, IMU, camera, and wheel odometry.",
+    "Ability to work with multiple sensors and develop algorithms for sensor calibration.",
+    "Problem-solving skills to address theoretical shortcomings in algorithms."
+  ],
+  "qualifications": [
+    "Master of Science degree or the foreign equivalent in Electrical and Computer Engineering, Robotics, Machine Learning, Computer Science, Electrical Engineering, or a related field.",
+    "Three (3) years of experience in the position offered, as a software engineer, software engineer intern, or a related state estimation engineer role.",
+    "Three (3) years of experience with programming in C++, designing and developing software, and working with classical ML, linear algebra, stochastic processes, geometric computer vision, and optimization."
+  ]
+}

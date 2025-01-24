@@ -1,0 +1,20 @@
+{
+  "filename": "jec8e9",
+  "responsibilities": [
+    "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+    "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+    "Improve the signal quality provided by the \"virtual driver's test\".",
+    "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+    "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+    "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+    "Simulate the most interesting situations and report the most interesting simulation results."
+  ],
+  "qualifications": [
+    "C++ basic competency",
+    "Python basic competency",
+    "SQL basic competency",
+    "Excitement about autonomous driving, Simulation + Evaluation"
+  ],
+  "analysis": "The job responsibilities focus on building infrastructure for a \"virtual driver's test\" for the Waymo Driver, designing and operating simulation data pipelines, improving simulation quality, and applying machine learning models to enhance the efficiency of the tests. The skills required include basic competency in C++, Python, and SQL, along with an interest in autonomous driving and simulation evaluation.\n\nThe job primarily involves simulation, evaluation, and the application of machine learning models to improve the testing process for autonomous driving. There is no mention of working with Generative AI or language models (LLMs) specifically. The focus is on simulation and evaluation rather than generating content or processing natural language, which are typical applications of GenAI and LLMs.\n\nTherefore, based on the responsibilities and skills listed, this job does not appear to involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

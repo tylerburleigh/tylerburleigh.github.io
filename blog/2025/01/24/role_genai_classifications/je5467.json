@@ -1,0 +1,28 @@
+{
+  "filename": "je5467",
+  "responsibilities": [
+    "Work with Linux computing environments, common databasing schemes, networking practices, messaging formats and strategies, and programming in multiple software languages.",
+    "Support programs employing modern software development and test approaches and methods, including agile development, waterfall, prototyping, iterative and incremental development, spiral development, rapid application development, and quick-reaction capability (QRC) development efforts.",
+    "Support full software lifecycle projects, including requirements definition, design, software development, implementation, and test & verification for programs supporting the U.S. Government.",
+    "Develop software and algorithms, machine-learning algorithms, or artificial intelligence techniques and apply them to digital RF signal processing, RF engineering or spectrum theory, communication systems, electronic warfare, SIGINT processing, or related areas.",
+    "Implement basic software/application security, information assurance, confidentiality, integrity, and availability requirements for software to be delivered to the U.S. Government.",
+    "Take direction from more senior developers and work with minimal management oversight in small multi-disciplinary teams to achieve specific goals in mission-relevant timelines for the U.S. Government."
+  ],
+  "skills": [
+    "Proficiency in multiple software languages, such as C/C++, Java, JavaScript, and Python.",
+    "Experience with Unix/Linux programming environments.",
+    "Knowledge of industry-standard databases such as PostgreSQL.",
+    "Familiarity with common messaging formats such as Google Protocol Buffer and JSON and messaging brokers such as ActiveMQ and ZMQ.",
+    "Experience using JavaScript Libraries such as Bokeh.js and Leaflet.js.",
+    "Basic USRP knowledge.",
+    "Familiarity with build tools such as Gradle and/or Maven.",
+    "Comfortable with git and git branching/code review models.",
+    "Comfortable with web servlets, web sockets, and web servers (e.g., Glassfish).",
+    "Sound problem-solving, verbal and written communication, and organizational skills.",
+    "Experience with Microsoft Office products (Word, PowerPoint, Excel, and Project).",
+    "Self-starter with a willingness to work with others to conceptualize and develop innovative solutions to complex software challenges.",
+    "Excellent verbal and written communication, organizational, and interpersonal skills."
+  ],
+  "analysis": "The job responsibilities and skills listed focus on software development, particularly in environments related to Linux, databases, networking, and programming in multiple languages. The responsibilities include supporting software lifecycle projects, developing software and algorithms, and applying machine-learning algorithms or artificial intelligence techniques to areas like digital RF signal processing, RF engineering, or communication systems. However, there is no explicit mention of working with Generative AI (GenAI) or language models (LLMs). The focus seems to be more on traditional software development and machine learning applications in signal processing and related fields. The skills required also do not specifically mention GenAI or LLMs, but rather general programming, database, and software development skills.",
+  "is_genai_role": false
+}

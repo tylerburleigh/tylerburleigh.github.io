@@ -1,0 +1,23 @@
+{
+  "filename": "j3f956",
+  "responsibilities": [
+    "Work with embedded Linux filesystems to ensure smooth system operation.",
+    "Enhance the performance analysis infrastructure and tooling to streamline development processes.",
+    "Develop and maintain robust interfaces with various devices and sensors, including GNSS, IMU (Inertial Measurement Unit), and LTE.",
+    "Optimize Linux kernel drivers, kernel space code, and user space applications for performance and efficiency.",
+    "Develop and maintain low-level drivers and firmware for Microcontroller Units (MCUs).",
+    "Leverage prior experience with STM32 microcontrollers to contribute to ongoing projects."
+  ],
+  "skills": [
+    "Strong programming experience in C.",
+    "Extensive knowledge of Linux at the system level.",
+    "Proficiency in scripting languages like Bash or Python for automation tasks.",
+    "Expertise in ARM64-based platforms and development tools.",
+    "Experience with CUDA/OpenCL programming and video processing pipelines.",
+    "Knowledge of Controller Area Network (CAN) or CAN FD protocols.",
+    "Proven experience in designing, implementing, and verifying over-the-air (OTA) updates.",
+    "Familiarity with board bring-up procedures and hardware debugging techniques."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on embedded systems, Linux kernel development, and hardware interfacing. The responsibilities include working with embedded Linux filesystems, developing interfaces with devices and sensors, optimizing Linux kernel drivers, and developing low-level drivers and firmware for microcontrollers. The skills required include strong programming experience in C, knowledge of Linux at the system level, proficiency in scripting languages, expertise in ARM64-based platforms, and experience with hardware protocols like CAN.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on system-level programming, hardware interfacing, and performance optimization, which are not directly related to GenAI or LLMs. Therefore, it is unlikely that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

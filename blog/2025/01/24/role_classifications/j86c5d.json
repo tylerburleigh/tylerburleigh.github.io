@@ -1,0 +1,20 @@
+{
+  "filename": "j86c5d",
+  "responsibilities": [
+    "Design and build the platform for ML engineers and data scientists to understand and delight Discord's users and keep them safe.",
+    "Evaluate and integrate new machine learning frameworks and tools, including LLMs and generative AI.",
+    "Collaborate with model builders to ensure a smooth path from idea to production.",
+    "Set best practices in machine learning at Discord.",
+    "Create foundational datasets and models.",
+    "Lead projects and work directly with ML practitioners and other staff+ engineers."
+  ],
+  "skills": [
+    "Experience with orchestration systems such as Airflow, Dagster, or Argo.",
+    "Experience with real-time data processing tools like Spark, Flink, Dataflow, Kafka, or Pulsar.",
+    "Experience debugging and maintaining live production systems on Kubernetes.",
+    "Experience building ML models using modern frameworks."
+  ],
+  "analysis": "The job responsibilities and skills focus on building a platform for ML engineers and data scientists, integrating machine learning frameworks, collaborating with model builders, and setting best practices in machine learning. The skills required include experience with orchestration systems, real-time data processing tools, debugging and maintaining live production systems on Kubernetes, and building ML models using modern frameworks.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies, conducting experiments, and developing datasets. While there is some overlap in collaborating with model builders, the primary focus on research and experimentation does not align with the job's emphasis on platform building and integration.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions, productionizing AI models, and developing data pipelines. While there is some overlap in collaboration and model building, the job's focus on platform design and integration is not the primary focus here.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring AI systems, setting up CI/CD pipelines, and managing infrastructure. The job's responsibilities align well with this role, especially in terms of orchestration systems, Kubernetes, and maintaining production systems.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs. The focus on solution architecture and business alignment does not match the job's technical and platform-oriented responsibilities.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and experimentation. The job's emphasis on platform building and integration is not aligned with the data-centric focus of a Data Scientist.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures, which partially aligns with the job's focus on orchestration systems and data processing tools. However, the primary focus on ML platform building and integration is not the main focus here.\n\n7. **Product Manager**: This role involves driving product vision and strategy, which does not align with the technical and platform-oriented responsibilities of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which does not align with the job's specific focus on ML platform building and integration.\n\nThe job aligns most closely with the \"MLOps / AI Infrastructure Engineer\" role, as both focus on managing infrastructure, orchestration systems, and maintaining production systems.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

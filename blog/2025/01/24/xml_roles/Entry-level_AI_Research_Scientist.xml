@@ -1,0 +1,23 @@
+
+Identify the most common Responsibilities and Skills listed in the jobs below, returning a bulleted list in the format
+
+# Responsibilities
+- [responsibility]: [responsibility description]
+- [responsibility]: [responsibility description]
+...
+# Skills
+- [skill]: [skill description]
+- [skill]: [skill description]
+...
+<Job>
+<Responsibilities>['Work on advanced Machine Learning (ML) and Artificial Intelligence (AI) technologies, focusing on areas such as Large language models (LLMs), Generative AI, Search, Conversational Agents, and AI Optimization.', 'Pioneer innovations to address complex real-world problems and develop state-of-the-art AI solutions.', 'Design system and model architectures.', 'Conduct rigorous experimentation and model evaluations.', 'Apply AI/ML to various product problems to improve Atlassian products.', 'Actively contribute to Atlassian Intelligence features.']</Responsibilities>
+<Skills>['Proficiency in Python programming and ability to write clean, efficient, and well-documented code.', 'Expertise in managing data using Python libraries such as NumPy, Pandas, Matplotlib.', 'Experience leveraging models from Hugging Face.', 'Practical knowledge of applied machine learning and deep learning frameworks, like PyTorch.', 'Exposure to natural language processing (NLP), Computer Vision (CV), Reinforcement Learning (RL), and AI Optimization.', 'Familiarity with state-of-the-art research in machine learning and AI.', 'Ability to solve ambiguous and complex problems, navigate uncertain situations, and develop innovative solutions.']</Skills>
+</Job>
+<Job>
+<Responsibilities>['Develop LLM applications to evaluate data quality and solve problems of synthetic data capabilities.', 'Execute business solutions using LLM applications.', 'Identify and exploit vulnerabilities in LLMs and other generative AI models.', 'Develop training materials for red teaming and adversarial analysis.', 'Conduct training sessions with operation staff.', 'Create data creation and vulnerability testing scripts in Python/TypeScript.', 'Collaborate with ML Engineers and software engineers for robust implementation and deployment.', 'Analyze and visualize experimental prompt results.', 'Develop and teach new prompt engineering methods to ML engineers and software engineering staff.']</Responsibilities>
+<Skills>['Proficiency in writing Python or TypeScript for API-enabled scripts.', 'Ability to conduct analysis of model performance using statistics and data visualization.', 'Experience with frontier-scale LLMs (GPT, Claude, PaLM) for specific applications or implementations.', 'Familiarity with LLM evaluation metrics (BLUE, ROUGE, MAUVE, etc.) and statistics.', 'Strong written and verbal communication skills.', 'Creative mindset for experimentation and internal R&D.']</Skills>
+</Job>
+<Job>
+<Responsibilities>['Collaborate closely with product, design, and engineering teams to identify compelling traits for AI bots.', 'Write prompts to prototype new bot traits, generate datasets, and evaluate the quality of bot creation pipelines.', 'Iteratively improve Cantina’s features through prompt engineering and dataset creation.', 'Manage multiple ongoing projects and initiatives, effectively prioritizing work in a fast-paced and quickly changing environment.']</Responsibilities>
+<Skills>['Strong understanding of NLP, psychology, sociology, and prompt engineering.', 'Ability to communicate design concepts and processes to team members and stakeholders.', 'Capability to work independently in large ambiguous areas.', 'Experience in collaborating with product, design, and engineering teams.']</Skills>
+</Job>

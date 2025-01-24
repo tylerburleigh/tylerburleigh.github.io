@@ -1,0 +1,26 @@
+{
+  "filename": "j608fe",
+  "responsibilities": [
+    "Brainstorm with Product Managers, Designers, and Frontend Engineers to conceptualize and build new features for a large user base.",
+    "Produce high-quality results by leading or contributing heavily to large multi-functional projects with significant business impact.",
+    "Actively own features or systems and define their long-term health, while improving the health of surrounding systems.",
+    "Assist the support and operations team in triaging and resolving production issues.",
+    "Mentor other engineers and deeply review code.",
+    "Improve engineering standards, tooling, and processes."
+  ],
+  "qualifications": [
+    "Experience with machine learning and software engineering.",
+    "Ability to put machine learning models or data-derived artifacts into production at scale, especially for search applications.",
+    "Proficiency in functional or imperative programming languages: PHP, Python, Ruby, Go, C, Scala, or Java.",
+    "Experience with common ML frameworks like PyTorch, TensorFlow, Keras, XGBoost, or Scikit-learn.",
+    "Experience building batch data processing pipelines with tools like Apache Spark, Hadoop, EMR, Map Reduce, Airflow, Dagster, or Luigi.",
+    "Experience working on generative AI apps with Large Language Models and possibly fine-tuning them.",
+    "Analytical and data-driven mindset with the ability to measure success with complicated ML/AI products.",
+    "Ability to lead technical architecture discussions and drive technical decisions within the team.",
+    "Ability to write understandable, testable code with an eye towards maintainability.",
+    "Strong communication skills to explain complex technical concepts to designers, support, and other specialists.",
+    "Strong computer science fundamentals: data structures, algorithms, programming languages, distributed systems, and information retrieval."
+  ],
+  "analysis": "The job responsibilities focus on building new features, leading projects, owning systems, resolving production issues, mentoring, and improving engineering standards. These responsibilities do not explicitly mention Generative AI or language models.\n\nHowever, the skills section provides more insight. It mentions experience with machine learning and software engineering, which is a broad area that can include Generative AI. More specifically, it states \"Experience working on generative AI apps with Large Language Models and possibly fine-tuning them.\" This directly indicates that the job involves working with Generative AI and language models. Additionally, the mention of common ML frameworks like PyTorch and TensorFlow, which are often used in developing and deploying language models, further supports this.\n\nOverall, the skills required for the job clearly indicate involvement with Generative AI and language models, even though the responsibilities do not explicitly mention them.",
+  "is_genai_role": true
+}

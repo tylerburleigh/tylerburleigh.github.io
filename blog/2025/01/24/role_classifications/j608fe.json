@@ -1,0 +1,27 @@
+{
+  "filename": "j608fe",
+  "responsibilities": [
+    "Brainstorm with Product Managers, Designers, and Frontend Engineers to conceptualize and build new features for a large user base.",
+    "Produce high-quality results by leading or contributing heavily to large multi-functional projects with significant business impact.",
+    "Actively own features or systems and define their long-term health, while improving the health of surrounding systems.",
+    "Assist the support and operations team in triaging and resolving production issues.",
+    "Mentor other engineers and deeply review code.",
+    "Improve engineering standards, tooling, and processes."
+  ],
+  "skills": [
+    "Experience with machine learning and software engineering.",
+    "Ability to put machine learning models or data-derived artifacts into production at scale, especially for search applications.",
+    "Proficiency in functional or imperative programming languages: PHP, Python, Ruby, Go, C, Scala, or Java.",
+    "Experience with common ML frameworks like PyTorch, TensorFlow, Keras, XGBoost, or Scikit-learn.",
+    "Experience building batch data processing pipelines with tools like Apache Spark, Hadoop, EMR, Map Reduce, Airflow, Dagster, or Luigi.",
+    "Experience working on generative AI apps with Large Language Models and possibly fine-tuning them.",
+    "Analytical and data-driven mindset with the ability to measure success with complicated ML/AI products.",
+    "Ability to lead technical architecture discussions and drive technical decisions within the team.",
+    "Ability to write understandable, testable code with an eye towards maintainability.",
+    "Strong communication skills to explain complex technical concepts to designers, support, and other specialists.",
+    "Strong computer science fundamentals: data structures, algorithms, programming languages, distributed systems, and information retrieval."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an AI/ML Engineer (Option 2). Here's the breakdown:\n\n1. **Responsibilities:**\n   - The job involves brainstorming with cross-functional teams, leading or contributing to large projects, owning features or systems, resolving production issues, mentoring engineers, and improving engineering standards. These responsibilities align well with the AI/ML Engineer's focus on transforming research output into scalable AI solutions, collaborating with research scientists, and maintaining data pipelines.\n\n2. **Skills:**\n   - The job requires experience with machine learning, software engineering, and proficiency in programming languages like Python, which are essential for an AI/ML Engineer. The skills also include experience with ML frameworks (e.g., PyTorch, TensorFlow), building data processing pipelines, and working with generative AI apps, which are relevant to the AI/ML Engineer's role in productionizing AI models and developing data pipelines.\n\n3. **Comparison with Other Options:**\n   - The AI Research Scientist (Option 1) focuses more on investigating AI methodologies and conducting experiments, which is less aligned with the job's emphasis on production and engineering.\n   - The MLOps / AI Infrastructure Engineer (Option 3) is more focused on deployment and infrastructure, which is not the primary focus of the job.\n   - The AI Solution Architect (Option 4) and Product Manager (Option 7) roles are more strategic and design-oriented, which doesn't match the technical and engineering focus of the job.\n   - The Data Scientist (Option 5) and Data Engineer (Option 6) roles are more data-centric, whereas the job has a broader engineering and ML focus.\n   - The Software Engineer (Option 8) role is more general in software development, while the job has a specific focus on machine learning and AI.\n\nTherefore, the job is most similar to the AI/ML Engineer role, as it involves transforming research into scalable solutions, developing data pipelines, and collaborating with cross-functional teams.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

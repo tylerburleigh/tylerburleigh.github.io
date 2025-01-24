@@ -1,0 +1,27 @@
+{
+  "filename": "j6df47",
+  "responsibilities": [
+    "Own and manage cloud infrastructure (EKS, AKS) including production clusters",
+    "Drive usability improvements and enhance the efficiency of the continuous build and release processes",
+    "Implement and manage security measures to protect customer data and monitor networks and systems in partnership with the security team",
+    "Improve system observability to support rapid iteration and maintain service stability",
+    "Establish a foundation for an SRE function",
+    "Troubleshoot and resolve complex technical issues related to software and infrastructure"
+  ],
+  "qualifications": [
+    "Experience with AWS and/or Azure",
+    "Experience with Python",
+    "Experience with Kubernetes",
+    "Experience with Linux Systems Administration and Bash/Linux scripting",
+    "Experience with CI/CD (GitHub Actions, GitLab CI/CD, or Jenkins)",
+    "Strong understanding of cloud networking, TCP/IP, DNS, IAM",
+    "Experience with Containerization (Build & Release optimization), DataStore, Redis, and GPU workloads",
+    "Ability to understand others\u2019 code and to write your own for automation tasks",
+    "Experience providing technical leadership of DevOps teams",
+    "Experience with GitOps (ArgoCD, FluxCD, Helm templating) (Nice to Have)",
+    "Experience with Infrastructure as Code (Terraform, Cloudformation, or Pulumi) (Nice to Have)",
+    "Experience with Monitoring, Tracing & Alerting (Opentelemetry, Prometheus, Datadog, New Relic) (Nice to Have)"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on managing cloud infrastructure, improving system observability, implementing security measures, and troubleshooting technical issues. The skills required include experience with cloud platforms (AWS, Azure), Kubernetes, Linux systems, CI/CD, and containerization, among others. These are typical skills for a DevOps or Site Reliability Engineering (SRE) role, which involves managing and optimizing infrastructure and deployment processes.\n\nWhile some of the technologies mentioned, such as GPU workloads, could potentially be used in AI/ML contexts, there is no direct indication that this job involves working specifically with GenAI or LLMs. The focus is more on infrastructure management and DevOps practices rather than AI model development or deployment.\n\nTherefore, based on the provided information, it does not appear that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

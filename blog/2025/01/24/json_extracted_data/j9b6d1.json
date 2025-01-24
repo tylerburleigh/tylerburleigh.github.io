@@ -1,0 +1,32 @@
+{
+  "responsibilities": [
+    "Design and implement new service offerings on top of a strong cloud foundation",
+    "Support development teams in leveraging larger machine learning operations (MLOps)",
+    "Drive the design, implementation, and management for expanding observability infrastructure",
+    "Lead sustainable incident response, blameless postmortems, and production improvements",
+    "Collaborate with software development and infrastructure teams to design, implement, and maintain multiple business offerings",
+    "Automate deployment, scaling, and management of infrastructure using modern DevOps tools and practices",
+    "Monitor and optimize system performance, troubleshoot issues, and implement solutions",
+    "Manage and secure cloud-based environments (AWS)",
+    "Implement and maintain configuration management and infrastructure as code (IaC) using Terraform",
+    "Collaborate in designing and implementing security best practices throughout development and deployment pipelines",
+    "Participate in periodical On-Call responsibility",
+    "Define and document best practices across all pillars of DevOps/SRE"
+  ],
+  "skills": [
+    "Expertise with container-based technologies, e.g., Dockers, Kubernetes",
+    "Expertise with infrastructure as code, configuration management tools, and cloud automation, e.g., Terraform, CloudFormation",
+    "Good understanding of networking and security concepts",
+    "Experience in defining and building CI/CD processes and working with common CI/CD tools",
+    "Great programming skills in languages such as Python, Go, PowerShell",
+    "Experience in Linux Systems Administration, scripting, and troubleshooting in a production environment",
+    "Knowledge of monitoring and logging tools (Prometheus, ELK Stack, Grafana)",
+    "Knowledge in Jenkins, Groovy, CDK"
+  ],
+  "qualifications": [
+    "Bachelor’s degree or higher in Computer Science, Engineering, or related field",
+    "Proven experience in DevOps / SRE or a related field",
+    "5+ years of experience working with AWS (Amazon Web Services)",
+    "Relevant certifications (e.g., AWS Certified DevOps Engineer, Kubernetes certifications) are preferred"
+  ]
+}

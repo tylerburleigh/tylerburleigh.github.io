@@ -1,0 +1,25 @@
+{
+  "filename": "j5d997",
+  "responsibilities": [
+    "Develop LLM applications to evaluate data quality and solve problems of synthetic data capabilities.",
+    "Execute business solutions using LLM applications.",
+    "Identify and exploit vulnerabilities in LLMs and other generative AI models.",
+    "Develop training materials for red teaming and adversarial analysis.",
+    "Conduct training sessions with operation staff.",
+    "Create data creation and vulnerability testing scripts in Python/TypeScript.",
+    "Collaborate with ML Engineers and software engineers for robust implementation and deployment.",
+    "Analyze and visualize experimental prompt results.",
+    "Develop and teach new prompt engineering methods to ML engineers and software engineering staff."
+  ],
+  "skills": [
+    "Proficiency in writing Python or TypeScript for API-enabled scripts.",
+    "Ability to conduct analysis of model performance using statistics and data visualization.",
+    "Experience with frontier-scale LLMs (GPT, Claude, PaLM) for specific applications or implementations.",
+    "Familiarity with LLM evaluation metrics (BLUE, ROUGE, MAUVE, etc.) and statistics.",
+    "Strong written and verbal communication skills.",
+    "Creative mindset for experimentation and internal R&D."
+  ],
+  "analysis": "The job involves developing LLM applications, evaluating data quality, solving problems related to synthetic data, and exploiting vulnerabilities in LLMs. It also includes creating scripts in Python/TypeScript, collaborating with ML Engineers, and teaching prompt engineering methods. The skills required include proficiency in Python or TypeScript, experience with frontier-scale LLMs, and familiarity with LLM evaluation metrics.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies, conducting experiments, and collaborating with AI/ML Engineers. The responsibilities and skills align well with the job's focus on LLM applications, prompt engineering, and collaboration with engineers. The job's emphasis on developing and teaching new methods also fits with the research scientist's role in staying current with AI trends and developing datasets.\n\n2. **AI/ML Engineer**: This role is about transforming research into scalable solutions and collaborating with research scientists. While there is some overlap in collaboration, the primary focus on productionizing models and maintaining data pipelines does not align as closely with the job's responsibilities centered on LLM applications and vulnerability analysis.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is focused on deployment, scaling, and monitoring AI systems. The job's responsibilities do not align with infrastructure management or MLOps tasks.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs. While there is some overlap in collaboration and understanding LLM capabilities, the job's focus on developing applications and teaching methods is not a direct match for solution architecture.\n\n5. **Data Scientist**: This role involves statistical analysis, model development, and data visualization. While the job requires some analysis and visualization skills, the primary focus on LLM applications and vulnerability analysis is not a direct match for a data scientist's responsibilities.\n\n6. **Data Engineer**: This role is about designing data pipelines and architectures. The job's focus on LLM applications and vulnerability analysis does not align with data engineering tasks.\n\n7. **Product Manager**: This role involves driving product vision and strategy. The job's technical focus on LLM applications and vulnerability analysis does not align with product management responsibilities.\n\n8. **Software Engineer**: This role involves developing software applications and services. While there is some overlap in writing code and collaborating with engineers, the job's focus on LLM applications and teaching methods is not a direct match for a software engineer's responsibilities.\n\nThe job aligns most closely with the \"AI Research Scientist\" option due to its focus on LLM applications, prompt engineering, and collaboration with engineers, which are key aspects of the research scientist role.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

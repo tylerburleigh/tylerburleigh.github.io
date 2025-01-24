@@ -1,0 +1,20 @@
+{
+  "filename": "j28089",
+  "responsibilities": [
+    "Develop and maintain scalable, secure, and high-performance data architectures to support business needs.",
+    "Design, implement, and optimize complex data pipelines for real-time and batch processing using technologies such as Spark, Kafka, and cloud-based ETL tools.",
+    "Implement a robust data quality framework to ensure the highest quality of data on the platform.",
+    "Automate manual processes, monitor data systems, and resolve data quality issues.",
+    "Collaborate with data analysts and scientists to support data initiatives and ensure consistent, optimal data delivery architecture for ongoing projects."
+  ],
+  "skills": [
+    "Proven expertise in Spark and Databricks technologies.",
+    "Experience with machine learning workflows and LLMs.",
+    "Strong stakeholder management and communication skills.",
+    "Strong problem-solving skills and ability to work independently in a fast-paced environment.",
+    "Knowledge of data governance, security, and compliance best practices."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing and maintaining data architectures, designing and optimizing data pipelines, ensuring data quality, and collaborating with data analysts and scientists. The skills required include expertise in Spark and Databricks, machine learning workflows, stakeholder management, problem-solving, and knowledge of data governance and security.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which does not align with the job's focus on data architecture and pipelines.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which partially aligns with the job's focus on data pipelines. However, the primary focus is on AI solutions rather than data architecture.\n\n3. **MLOps / AI Infrastructure Engineer**: This role focuses on deploying and monitoring AI systems, which is not directly related to the job's focus on data architecture and pipelines.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and ensuring data governance, which partially aligns with the job's focus on data governance but not on data architecture and pipelines.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and collaboration with data engineers, which is not directly related to the job's focus on data architecture and pipelines.\n\n6. **Data Engineer**: This role involves designing and maintaining data pipelines and architectures, optimizing data ingestion and transformation processes, and ensuring data quality and governance. This aligns closely with the job's responsibilities and skills, making it the best fit.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which is not related to the job's focus on data architecture and pipelines.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is not directly related to the job's focus on data architecture and pipelines.\n\nThe job is most similar to the \"Data Engineer\" option, as both focus on data pipelines, architectures, and ensuring data quality and governance.",
+  "role_classification": 6,
+  "role_title": "Data Engineer"
+}

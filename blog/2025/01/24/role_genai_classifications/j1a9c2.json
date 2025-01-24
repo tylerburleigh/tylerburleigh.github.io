@@ -1,0 +1,24 @@
+{
+  "filename": "j1a9c2",
+  "responsibilities": [
+    "Ensure that systems which power ChatGPT training and development run smoothly.",
+    "Dive into large ML codebases to understand and debug systems issues.",
+    "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+    "Create reusable Python libraries with great abstractions usable across ML projects.",
+    "Profile large model reinforcement learning training and identify and address bottlenecks.",
+    "Identify experiment failures in a new research cluster.",
+    "Redesign data pipelines to handle diverse multimodal data.",
+    "Build front-end evaluation tooling for use across the company."
+  ],
+  "qualifications": [
+    "Experience working in complex technical environments.",
+    "Experience debugging ML systems.",
+    "Experience with reinforcement learning and/or transformers.",
+    "Proficiency in Python.",
+    "Experience with Kubernetes / distributed infrastructure.",
+    "Experience with GPUs.",
+    "Experience with one or more large-scale data systems such as Beam or Spark."
+  ],
+  "analysis": "The job responsibilities include ensuring systems that power ChatGPT training and development run smoothly, which directly indicates involvement with a language model, specifically ChatGPT, which is a well-known large language model. Additionally, the responsibilities mention profiling large model reinforcement learning training, which is a technique often used in training language models and generative AI systems. The skills required include experience with reinforcement learning and transformers, both of which are key components in the development and functioning of language models and generative AI. The mention of \"large ML codebases\" and \"large-scale data systems\" further supports the involvement with large language models or generative AI systems. Overall, the responsibilities and skills strongly suggest that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

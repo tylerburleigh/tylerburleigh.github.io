@@ -1,0 +1,32 @@
+{
+  "responsibilities": [
+    "Build and optimize data pipelines for efficient data ingestion, transformation, and loading from various sources while ensuring data quality and integrity.",
+    "Design, develop, and deploy Spark programs in the Databricks environment to process and analyze large volumes of data.",
+    "Work with event-based/streaming technologies to ingest and process data.",
+    "Work with structured, semi-structured, and unstructured data.",
+    "Optimize Databricks jobs for performance and scalability to handle big data workloads.",
+    "Monitor and troubleshoot Databricks jobs, identify and resolve issues or bottlenecks.",
+    "Implement best practices for data management, security, and governance within the Databricks environment.",
+    "Perform code reviews to ensure fit to requirements, optimal execution patterns, and adherence to established standards."
+  ],
+  "skills": [
+    "Proficient in developing programs in Python and SQL.",
+    "Experience with Data warehouse Dimensional data modeling.",
+    "Experience of Delta Lake, DWH, Data Integration, Cloud, Design, and Data Modelling.",
+    "Proficient writing SQL queries and programming including stored procedures and reverse engineering existing processes.",
+    "Experience designing and developing Enterprise Data Warehouse solutions."
+  ],
+  "qualifications": [
+    "Minimally a BA degree within an engineering and/or computer science discipline.",
+    "Master’s degree strongly preferred.",
+    "5+ years Python coding experience.",
+    "5+ years SQL Server based development of large datasets.",
+    "5+ years with experience developing and deploying ETL pipelines using Databricks Pyspark.",
+    "Experience in any cloud data warehouse like Synapse, Big Query, Redshift, Snowflake.",
+    "Experience in Data warehousing - OLTP, OLAP, Dimensions, Facts, and Data modeling.",
+    "Previous experience leading an enterprise-wide Cloud Data Platform migration with strong architectural and design skills.",
+    "Experience with Cloud-based data architectures, messaging, and analytics.",
+    "Cloud certification(s).",
+    "Any experience with Airflow is a plus."
+  ]
+}

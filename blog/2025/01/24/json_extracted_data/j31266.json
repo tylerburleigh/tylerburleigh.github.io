@@ -1,0 +1,39 @@
+{
+  "responsibilities": [
+    "Collaborate with program/project managers to develop milestones and deliverables.",
+    "Use existing procedures and tools to develop and safely execute network changes, and occasionally develop new procedures.",
+    "Develop solutions to enable front line support teams to act on network failure conditions.",
+    "Mentor junior engineers.",
+    "Participate in network solution and architecture design process and contribute to roadmaps development.",
+    "Participate in operational rotations as either primary or secondary.",
+    "Provide break-fix support for events and serve as the escalation point for event remediation.",
+    "Lead post-event root cause analysis.",
+    "Develop scripts to automate routine tasks for team and business units.",
+    "Coordinate with networking automation services for the development and integration of support tooling.",
+    "Coordinate with network monitoring to gather telemetry and create alert rules.",
+    "Build dashboards to represent data at various network layers and device roles to help identify network issues and anomalies.",
+    "Serve as SME on software development projects for network automation and network monitoring.",
+    "Collaborate with network vendor technical account team and internal Quality Assurance team to drive bug resolution and assist in the qualification of new firmware and/or operating systems."
+  ],
+  "skills": [
+    "Strong knowledge of protocols such as MPLS, BGP/OSPF/IS-IS, TCP, IPv4, IPv6, DNS, and DHCP.",
+    "Knowledge of VxLAN and EVPN.",
+    "Extensive experience with scripting or automation, preferably in Python, but must demonstrate expertise in scripting or compiled language.",
+    "Experience with networking protocols such as TCP/IP, VPN, DNS, DHCP, and SSL.",
+    "Experience with network monitoring and telemetry solutions.",
+    "Experience with network modeling and programming – YANG, OpenConfig, NETCONF.",
+    "Ability to use professional concepts and company objectives to resolve complex issues creatively and effectively.",
+    "Excellent organizational, verbal, and written communication skills.",
+    "Excellent judgment in influencing product roadmap direction, features, and priorities."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in CS or related engineering field with 5+ years of Network Engineering experience or master’s with 3+ years of Network Engineering experience.",
+    "Experience working in a large ISP or cloud provider environment.",
+    "Experience in RDMA Networking is a plus.",
+    "Experience working in a network operations role.",
+    "Capable of working under limited supervision.",
+    "Participate in an on-call rotation.",
+    "Fully competent in own area of expertise with the ability to lead projects or supervise lower-level personnel.",
+    "4 years of software engineering or related experience."
+  ]
+}

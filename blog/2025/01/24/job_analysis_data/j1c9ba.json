@@ -1,0 +1,602 @@
+[
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities include designing and implementing algorithms, training large language models (LLMs) on large data, and evaluating their performance. This aligns closely with the activity of fine-tuning and customizing language models, as it involves training or fine-tuning LLMs for specific tasks. The mention of employing advanced techniques for optimal performance also resonates with the responsibility of pushing the state of the art in LLMs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention prompt engineering or crafting prompt instructions. However, the responsibility of driving applied research that can be applied to product development may involve optimizing system outputs, which could include prompt engineering. Nonetheless, the connection is not as direct as with other activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "One of the job responsibilities is to evaluate the performance of large language models. This directly relates to the activity of developing and applying methodologies for evaluating the quality, reliability, and fairness of LLMs. The use of automated metrics and human-in-the-loop reviews for assessment is a relevant aspect of the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training and evaluation. While these tasks are crucial for the development of LLMs, they do not explicitly mention the integration of LLM outputs into end-user experiences or pipelines. Therefore, this activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention model interpretability or debugging. However, analyzing model outputs to identify errors and potential improvements could be part of evaluating model performance, which is a stated responsibility. Despite this indirect connection, the primary focus of the responsibilities is on research and development rather than interpretability and debugging.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on research, design, and implementation of algorithms, training large language models, and applying research to product development. While designing end-to-end workflows and ensuring seamless integration of components is important for deploying AI solutions, the responsibilities do not explicitly mention architecture or pipeline design. The focus is more on the research and development of models rather than the architectural aspects of AI systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities emphasize research, algorithm design, and model training, which inherently involve understanding computational demands. However, the responsibilities do not explicitly mention resource planning or infrastructure considerations. The focus is more on the research and development side rather than the operational or infrastructure planning aspects.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include evaluating the performance of large language models, which could involve performance optimization. However, the specific focus on latency control and architectural strategies for handling spikes in requests is not explicitly mentioned in the responsibilities. The emphasis is more on research and model evaluation rather than operational performance optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities involve designing and implementing algorithms, training models, and evaluating their performance, which are all part of the model lifecycle. However, the responsibilities do not explicitly mention lifecycle management or governance aspects such as versioning or retraining. The focus is more on the research and development phase rather than the ongoing management of models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training, with an emphasis on applying research to product development. While system interoperability and integration are important for deploying AI solutions, the responsibilities do not explicitly mention these aspects. The focus is more on the research and development of models rather than integration with existing systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include performing research to tackle unsolved problems, designing and implementing algorithms, and evaluating model performance. Conducting research to evaluate AI quality aligns closely with these responsibilities, as it involves investigating system accuracy and other performance metrics, which are essential for pushing the state of the art in AI.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing and implementing algorithms and training large language models, which aligns with developing AI systems and algorithms. The focus on automated insights through AI methods is relevant to the responsibilities of driving applied research and evaluating model performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training. While synthetic data generation can be a part of research and model training processes, the responsibilities do not explicitly mention data generation or manipulation. The emphasis is more on the development and evaluation of models rather than data generation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating the performance of large language models, which involves identifying relevant performance metrics and success criteria. This activity is directly related to the responsibility of evaluating model performance and ensuring that research can be applied to product development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training. While creating labeled datasets is important for AI evaluation and optimization, the responsibilities do not explicitly mention data preparation or annotation. The focus is more on the development and evaluation of models rather than data preparation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include performing research and evaluating model performance, which can involve designing and running experiments to test hypotheses. Analyzing experiments to draw insights aligns with the responsibility of driving applied research and improving product development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training. While sampling data for evaluation is a part of the evaluation process, the responsibilities do not explicitly mention data sampling. The focus is more on the development and evaluation of models rather than data sampling techniques.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on performing research, designing and implementing algorithms, training large language models, and driving applied research for product development. Designing labeling tasks for data annotation involves creating guidelines and workflows for data labeling, which is not directly mentioned in the job responsibilities. The responsibilities are more aligned with high-level research and development rather than the specifics of data annotation processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize research, algorithm design, and model training, with no mention of managing logistics or communication for annotation projects. Collecting human annotation data is a task that supports data preparation but is not directly related to the core responsibilities of research and model development as described in the job.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "Analyzing human annotation data involves using statistical methods to evaluate dataset quality, which could be tangentially related to evaluating model performance. However, the job responsibilities are more focused on high-level research and development of language models rather than the specifics of data analysis. The analysis of annotation data is not explicitly mentioned as part of the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on research, algorithm design, and training large language models (LLMs). While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The emphasis is more on algorithm design and model training rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on research, algorithm design, and model training. While data visualization can be a part of research, it is not explicitly mentioned as a responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include performing research to tackle real-world problems and training large language models on large data. This aligns with data mining and analysis of large conversational datasets, as understanding and analyzing large datasets is crucial for training and improving LLMs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities focus on designing algorithms and training models, which may involve developing data models and pipelines to handle large datasets efficiently. However, the responsibilities do not explicitly mention developing data models or pipelines for analytics purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating the performance of large language models, which requires defining metrics and success criteria to assess model health and guide decision-making. This activity is relevant as it aligns with the need to track and analyze model performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on research, algorithm design, training large language models, and applying research to product development. While these tasks are related to machine learning, they do not explicitly mention deployment or MLOps practices such as CI/CD pipelines, containerization, or real-time monitoring. Therefore, this Activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not mention monitoring or observability of models in production. The focus is on research, design, and evaluation of models, rather than operational aspects like tracking model performance or detecting data drift. Thus, this Activity is not relevant to the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities involve designing and implementing algorithms and training models, which could imply a need for versioning to manage different iterations of models and datasets. However, versioning is not explicitly mentioned, and the primary focus is on research and development rather than operational management. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include evaluating the performance of models, which could involve testing and validation. However, the responsibilities do not explicitly mention continuous testing, validation, or deployment strategies like canary testing. The focus is more on research and development rather than operational testing. Thus, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not mention infrastructure or scalability concerns. The focus is on research, algorithm design, and model training, rather than optimizing or scaling infrastructure. Therefore, this Activity is not relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not address governance, compliance, or security issues. The focus is on research and development of models, without mention of regulatory compliance or security practices. Thus, this Activity is not relevant to the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include evaluating model performance, which is a part of model lifecycle management. However, the responsibilities do not explicitly mention continuous improvement practices like retraining or hyperparameter tuning. The focus is more on initial research and development rather than ongoing lifecycle management. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on research to solve real-world problems, designing and implementing algorithms, and driving applied research for product development. These tasks are more technical and data-driven, involving large language models (LLMs) and algorithms. User interviews and surveys, which gather qualitative and quantitative insights on user needs, do not directly align with the technical and algorithmic nature of the responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities emphasize research, algorithm design, and the application of research to product development, particularly in the context of large language models. Usability testing and prototyping focus on user experience and interaction design, which are not directly related to the technical and research-oriented nature of the job responsibilities. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities are centered around technical research, algorithm design, and the application of research to product development, specifically with large language models. Persona development and user journey mapping are activities related to understanding user segments and their interactions, which do not directly align with the technical and research-focused nature of the responsibilities. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities involve performing research, designing algorithms, and applying research to product development, particularly with large language models. While qualitative data analysis involves synthesizing interview notes and survey responses, it does not directly relate to the technical and algorithmic focus of the job responsibilities. The responsibilities are more aligned with quantitative and technical research rather than qualitative analysis. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities mention designing and implementing algorithms and training large language models, which involves creating a structured approach to software development. This aligns with the activity of designing and implementing software architecture, as both require defining system components and ensuring alignment with performance requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities focus on research, algorithm design, and model training, which are more aligned with experimental and developmental stages rather than production-grade application development. There is no direct mention of writing production-level code or maintaining code quality, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not explicitly mention CI/CD processes. While CI/CD could be a part of the broader software development lifecycle, the responsibilities are more focused on research and development of models rather than automating build, test, and deployment processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not mention monitoring or incident management. The focus is on research and development of language models, which does not directly involve real-time system health monitoring or incident resolution.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not mention API development or system integration. The focus is on research and development of language models, which does not directly involve designing or implementing APIs for integration purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include evaluating the performance of large language models, which could involve some aspects of testing and quality assurance. However, the focus is more on research and development rather than comprehensive software testing and maintaining test coverage.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention DevOps practices or infrastructure management. The focus is on research and development of language models, which does not directly involve managing cloud resources or promoting a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include performing research to tackle unsolved real-world problems and pushing the state of the art in LLMs and assistants. This aligns with conducting research to evaluate AI quality, as both involve investigating system performance and using rigorous methodologies to guide improvements. The responsibility of driving applied research for product development also supports the relevance of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities mention independently designing and implementing algorithms, training large language models, and evaluating their performance. This is directly related to developing AI systems and algorithms, as both involve building and refining AI methods. The focus on training state-of-the-art LLMs aligns with continuously updating and refining models for automated insights.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. However, the task of training large language models on large data could imply the need for diverse datasets, which might include synthetic data. Nonetheless, without explicit mention of data generation or dataset creation, the relevance is not strongly supported.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating the performance of large language models, which inherently involves identifying performance metrics and success criteria. This activity is relevant as it aligns with the need to assess model health and guide decision-making, which is crucial for driving applied research and product development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While evaluating model performance might require labeled data, the responsibilities focus more on algorithm design, training, and research rather than data preparation. Therefore, this activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include performing research and evaluating model performance, which could involve designing and running experiments to test hypotheses or compare model variants. However, A/B testing is not explicitly mentioned, and the focus seems more on algorithm development and training rather than experimental analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j1c9ba",
+    "responsibilities": [
+      "Perform research to tackle unsolved real-world problems and push state of the art LLMs and assistants.",
+      "Independently design and implement algorithms, train state of the large language models (LLM) on large data, and evaluate their performance.",
+      "Drive applied research that can be applied to Meta product development."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve evaluating the performance of large language models, which may require sampling data for evaluation to ensure a representative dataset. However, the responsibilities do not explicitly mention data sampling, focusing more on algorithm design and training. Thus, the relevance is not strongly supported.",
+    "is_relevant": false
+  }
+]

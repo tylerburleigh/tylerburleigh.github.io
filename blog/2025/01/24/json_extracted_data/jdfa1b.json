@@ -1,0 +1,30 @@
+{
+  "responsibilities": [
+    "Contribute to all facets of the Cleerly data platform focusing on scale, performance, and reliability.",
+    "Work closely with business intelligence, data science, and operations teams as well as interdepartmental stakeholders.",
+    "Improve core product and reporting experiences, focusing on enhancing the ability to execute complex analyses and operations at scale.",
+    "Build Airflow DAGs for data transformation.",
+    "Create normalized data structures to ingest disparate client data.",
+    "Contribute to CI/CD pipeline and capabilities.",
+    "Build complex, repeatable validation and training data sets in coordination with data scientists.",
+    "Design methods for searching and storing massive amounts of imaging data at scale.",
+    "Generate aggregate reporting tables for business insight.",
+    "Code a data validation testing suite for the pipeline.",
+    "Perform code reviews and drive bug triage.",
+    "Participate in sprint planning and design meetings."
+  ],
+  "skills": [
+    "Strong SQL developer skills including experience in Postgres, Redshift, Snowflake or similar.",
+    "Excellent knowledge of Python, TypeScript, or other programming languages.",
+    "Experience developing and maintaining Airflow DAGs.",
+    "Experience implementing and maintaining CI/CD solutions.",
+    "Experience working with version control systems such as GitHub.",
+    "Strong written and verbal communication skills in English."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in Computer Science, Engineering, or equivalent experience.",
+    "5+ years of software development experience.",
+    "2+ years as a Data Engineer.",
+    "Demonstrated capability to solve problems with data."
+  ]
+}

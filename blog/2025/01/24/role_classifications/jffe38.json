@@ -1,0 +1,22 @@
+{
+  "filename": "jffe38",
+  "responsibilities": [
+    "Build machine learning models to detect unwanted or anomalous behaviors from users and API partners, and integrate them into our production system.",
+    "Improve automated detection and enforcement systems as needed.",
+    "Analyze user reports of inappropriate accounts and build machine learning models to detect similar instances proactively.",
+    "Surface abuse patterns to research teams to harden models at the training stage."
+  ],
+  "skills": [
+    "Proficiency in SQL, Python, and data analysis/data mining tools.",
+    "Proficiency in building trust and safety AI/ML systems, such as behavioral classifiers or anomaly detection.",
+    "Strong communication skills and ability to explain complex technical concepts to non-technical stakeholders.",
+    "Experience with machine learning frameworks like Scikit-Learn, TensorFlow, or PyTorch.",
+    "Experience with high-performance, large-scale ML systems.",
+    "Experience with language modeling with transformers.",
+    "Experience with reinforcement learning.",
+    "Experience with large-scale ETL."
+  ],
+  "analysis": "The job involves building machine learning models to detect unwanted or anomalous behaviors, improving automated detection systems, analyzing user reports, and surfacing abuse patterns. The skills required include proficiency in SQL, Python, data analysis, building trust and safety AI/ML systems, communication skills, experience with machine learning frameworks, high-performance ML systems, language modeling, reinforcement learning, and large-scale ETL.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not directly aligned with the job's focus on building and integrating ML models for detection and enforcement systems.\n\n2. **AI/ML Engineer**: This role involves transforming research output into scalable AI solutions, productionizing AI models, and developing data pipelines. While there is some overlap in skills (Python, model implementation), the primary focus on transforming research output is not a direct match for the job's responsibilities.\n\n3. **MLOps / AI Infrastructure Engineer**: This role focuses on deployment, scaling, and monitoring AI systems, which is not aligned with the job's focus on building and improving detection models.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which is not directly related to the job's focus on detection and enforcement systems.\n\n5. **Data Scientist**: This role involves statistical analysis, machine learning, and data visualization. The skills overlap significantly with the job's requirements, such as proficiency in Python, SQL, and ML frameworks. The responsibilities of developing predictive models and analyzing data align well with the job's focus on building detection models and analyzing user reports.\n\n6. **Data Engineer**: This role focuses on designing and maintaining data pipelines, which is not directly aligned with the job's focus on building ML models for detection.\n\n7. **Product Manager**: This role involves driving product vision and strategy, which is not aligned with the technical focus of the job.\n\n8. **Software Engineer**: This role involves software development and maintenance, which is not directly related to the job's focus on building ML models for detection.\n\nThe job's responsibilities and skills align most closely with the Data Scientist role, as both involve building and analyzing models, and require similar technical skills.",
+  "role_classification": 5,
+  "role_title": "Data Scientist"
+}

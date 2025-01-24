@@ -1,0 +1,29 @@
+{
+  "filename": "jeee1d",
+  "responsibilities": [
+    "Develop and integrate generative AI solutions with existing software teams building products.",
+    "Develop a scalable machine learning framework for data science products.",
+    "Develop scalable pipelines, tools, and services for building production-ready machine-learning models.",
+    "Work with data scientists to pilot products with beta customers.",
+    "Maintain a culture of simple, streamlined code and full CI/CD automation.",
+    "Develop simple, streamlined, and well-tested ML pipeline components."
+  ],
+  "qualifications": [
+    "Strong coding experience in Python.",
+    "Familiarity with PySpark and SQL.",
+    "Familiarity with popular Python libraries such as pandas, numpy, flask, matplotlib.",
+    "Familiarity with the AWS platform and services, including CI/CD automation methods.",
+    "Familiarity with AWS serverless methodology, particularly Fargate, Lambda, ECR.",
+    "Familiarity with CloudFormation, Terraform, or equivalent.",
+    "Experience with machine learning or generative AI libraries such as Langchain, llamaindex, Langsmith, and llamaguard.",
+    "Knowledge of open source Foundation models: llama3, llama2, mistral, falcon, phi.",
+    "Experience with orchestration frameworks: Mlflow, airflow.",
+    "Some knowledge of JavaScript (node.js) as a front end.",
+    "Experience or familiarity with Databricks AI services and Mosaic branded services.",
+    "Comfortable supporting troubleshooting and assessment of production issues.",
+    "Experience with monitoring tools such as Splunk, Datadog, Dynatrace.",
+    "Test writing discipline in standard development tools and processes, e.g., GitHub, Jira, Slack."
+  ],
+  "analysis": "The job responsibilities include developing and integrating generative AI solutions, which directly indicates involvement with Generative AI. Additionally, the skills section lists experience with generative AI libraries such as Langchain, llamaindex, Langsmith, and llamaguard, as well as knowledge of open-source foundation models like llama3, llama2, mistral, falcon, and phi. These are all related to language models and Generative AI. The combination of these responsibilities and skills clearly shows that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

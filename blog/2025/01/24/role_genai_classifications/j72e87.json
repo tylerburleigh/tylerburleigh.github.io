@@ -1,0 +1,33 @@
+{
+  "filename": "j72e87",
+  "responsibilities": [
+    "Lead and architect migration of data environments with performance and reliability.",
+    "Assess and understand the ETL jobs, workflows, BI tools, and reports.",
+    "Address technical inquiries concerning customization, integration, enterprise architecture, and general feature/functionality of data products.",
+    "Support an Agile software development lifecycle.",
+    "Contribute to the growth of the Data Exploitation Practice."
+  ],
+  "skills": [
+    "Experience in crafting database/data warehouse solutions in cloud environments (preferably AWS, alternatively Azure, GCP).",
+    "Proficiency in Microsoft data stack and Python.",
+    "Advanced working SQL knowledge and experience with relational databases, query authoring, and optimization.",
+    "Familiarity with big data tools such as Hadoop, Spark, Kafka, etc.",
+    "Experience with relational SQL and NoSQL databases, including Postgres and Cassandra.",
+    "Knowledge of data pipeline and workflow management tools like Azkaban, Luigi, Airflow, etc.",
+    "Experience with AWS cloud services such as EC2, EMR, RDS, Redshift (or Azure equivalents).",
+    "Experience with data streaming systems like Storm, Spark-Streaming, etc.",
+    "Proficiency in search tools such as Solr, Lucene, Elasticsearch.",
+    "Experience with object-oriented/object function scripting languages like Python, Java, C++, Scala, etc.",
+    "Experience with message queuing, stream processing, and highly scalable \u2018big data\u2019 data stores.",
+    "Experience manipulating, processing, and extracting value from large, disconnected datasets.",
+    "Experience manipulating structured and unstructured data for analysis.",
+    "Experience constructing complex queries to analyze results using databases or in a data processing development environment.",
+    "Experience with data modeling tools and processes.",
+    "Experience architecting data systems (transactional and warehouses).",
+    "Experience aggregating results and/or compiling information for reporting from multiple datasets.",
+    "Experience working in an Agile environment.",
+    "Experience supporting project teams of developers and data scientists who build web-based interfaces, dashboards, reports, and analytics/machine learning models."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on data environments, ETL processes, BI tools, and data architecture. The responsibilities include leading data migration, addressing technical inquiries about data products, and supporting Agile software development. The skills required are centered around database solutions, cloud environments, SQL, big data tools, data streaming systems, and data modeling. There is a mention of supporting project teams that build analytics/machine learning models, but there is no specific mention of Generative AI or language models (LLMs). The focus is more on data processing, data warehousing, and data exploitation rather than on developing or working with GenAI or LLMs.",
+  "is_genai_role": false
+}

@@ -1,0 +1,30 @@
+{
+  "filename": "j8c04b",
+  "responsibilities": [
+    "Design, develop, and maintain the Cloud infrastructure for AI/ML-enabled applications using infrastructure-as-code software tools.",
+    "Setup and maintain CI/CD pipelines and other developer tools.",
+    "Ensure Cloud infrastructure's security, availability, and reliability via monitoring, observability, and alerting.",
+    "Work closely with Software Engineers to optimize performance and scalability and deliver highly available customer-facing products.",
+    "Create infrastructure code and reference architectures for orchestrating environment creation, housekeeping, and deployment throughout the application and product life cycles.",
+    "Support pre-production and production environments, diagnose and troubleshoot problems in code and in the environment, conduct root cause analyses and incident response.",
+    "Act as a mentor for other members of the team.",
+    "Stay up to date with the latest developments in cloud technologies and operational tools."
+  ],
+  "qualifications": [
+    "Strong foundation of internet engineering fundamentals.",
+    "Strong background in applying DevOps methodologies.",
+    "Deep understanding of cloud technologies.",
+    "Experience with infrastructure-as-code or configuration management tools (e.g., Terraform, Puppet, Ansible, Salt, Chef).",
+    "Deep knowledge of containerization and packaging using technologies such as Docker, Podman, or CRI-O, Helm, or Kustomize.",
+    "Expert Unix/Linux and networking skills.",
+    "Proficient in system integration.",
+    "Deep understanding of web app hosting and micro-service architecture.",
+    "Proficient in SRE activities.",
+    "Proficient in infrastructure automation and deployment processes.",
+    "Experience hosting and scaling data infrastructure and integrating multi-cloud environments.",
+    "Working experience with ML-OPS/LLM-OPS preferred.",
+    "Value culture and good relationship-building with cross-functional teams."
+  ],
+  "analysis": "The job responsibilities focus on designing, developing, and maintaining cloud infrastructure for AI/ML-enabled applications, setting up CI/CD pipelines, ensuring security and reliability, and working closely with software engineers to optimize performance. The skills required include a strong foundation in internet engineering, DevOps methodologies, cloud technologies, infrastructure-as-code tools, containerization, Unix/Linux skills, system integration, and SRE activities. \n\nA key point in the skills section is the mention of \"Working experience with ML-OPS/LLM-OPS preferred.\" This indicates that the job may involve working with machine learning operations and potentially language model operations, which are related to managing and deploying machine learning models, including large language models (LLMs). \n\nWhile the primary focus of the job is on cloud infrastructure and DevOps, the mention of LLM-OPS suggests that there is an aspect of the job that involves working with language models. However, there is no explicit mention of Generative AI (GenAI) in the responsibilities or skills.\n\nOverall, the job does involve working with language models, as indicated by the preference for experience with LLM-OPS.",
+  "is_genai_role": true
+}

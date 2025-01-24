@@ -1,0 +1,31 @@
+{
+  "filename": "j39f1f",
+  "responsibilities": [
+    "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+    "Ensure data pipelines are optimized for real-time and batch processing.",
+    "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+    "Implement and enforce best practices for data governance, security, and quality.",
+    "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+    "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+    "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+    "Work closely with data scientists and AI engineers to understand data requirements.",
+    "Ensure seamless integration between data pipelines and AI/ML models.",
+    "Monitor system performance and optimize data workflows to meet scalability needs.",
+    "Debug and troubleshoot data pipeline issues.",
+    "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+  ],
+  "qualifications": [
+    "Proficiency in programming languages such as Python, Java, or Scala.",
+    "Experience with data processing frameworks like Apache Spark, Flink, or Hadoop.",
+    "Familiarity with cloud platforms (AWS/GCP/Azure) and their data services (e.g., S3, Redshift, BigQuery).",
+    "Expertise in SQL and NoSQL databases.",
+    "Knowledge of machine learning workflows and AI tools (e.g., TensorFlow, PyTorch) is a plus.",
+    "Strong problem-solving skills and attention to detail.",
+    "Experience with containerization and orchestration (e.g., Docker, Kubernetes).",
+    "Familiarity with stream processing platforms (e.g., Kafka).",
+    "Exposure to MLOps tools and practices.",
+    "Hands-on experience with version control (e.g., Git) and collaboration tools."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data engineering tasks, such as designing and maintaining ETL/ELT pipelines, working with big data technologies, and ensuring data governance and quality. The role involves collaboration with data scientists and AI engineers, which suggests involvement in AI/ML workflows. However, there is no specific mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The mention of AI tools like TensorFlow and PyTorch indicates a general AI/ML context, but these tools are not exclusively used for GenAI or LLMs. The job seems to be more about supporting AI/ML infrastructure and data needs rather than directly working with GenAI or LLMs.",
+  "is_genai_role": false
+}

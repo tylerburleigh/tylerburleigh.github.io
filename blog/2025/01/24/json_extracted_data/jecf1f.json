@@ -1,0 +1,34 @@
+{
+  "responsibilities": [
+    "Lead the design, implementation, and testing of data systems from architecture to production.",
+    "Contribute to the development of long-term data strategies and roadmaps.",
+    "Develop and maintain the “source of truth” data environment for Klaviyo.",
+    "Architect and productionize batch and real-time data systems for various needs.",
+    "Build ETLs to ingest multiple terabytes of data per day and support multi-petabyte data models.",
+    "Ensure the quality, performance, and stability of data systems through robust quality systems and monitoring practices.",
+    "Collaborate with cross-functional teams including Platform Engineering, Security, Product, Finance, Go-To-Market, Customer Success, Support, Sales, and Marketing.",
+    "Build data governance solutions into the platform, ensuring compliance and security standards.",
+    "Mentor and coach team members to enhance their skills and performance."
+  ],
+  "skills": [
+    "Strong understanding of cloud technologies, particularly AWS.",
+    "Experience with Infrastructure as Code (IaC) tooling such as Terraform.",
+    "Expertise in database design, including 3NF, dimensional modeling, data vault, or star schema.",
+    "Experience with Big Data technologies like Snowflake, Databricks/Spark, Trino.",
+    "Experience building real-time data pipelines and working with massive amounts of semi-structured data.",
+    "Knowledge of data and cloud engineering best practices.",
+    "Experience with Docker and container orchestration services like ECS, Kubernetes.",
+    "Experience building data products with a security-first mindset.",
+    "Ability to clearly communicate complex technical concepts to both technical and non-technical stakeholders.",
+    "Passion for learning new technologies and staying current with industry trends."
+  ],
+  "qualifications": [
+    "Proven track record of leading highly technical projects and delivering impactful results.",
+    "7+ years of data development experience in SQL and 3+ years in object-oriented programming languages (e.g., Python).",
+    "Leadership experience in the data infrastructure domain, focusing on building and maintaining data ecosystems at scale.",
+    "Familiarity with multi-petabyte data models and TB-scale ingestion workflows.",
+    "History of running POCs on emerging technologies and driving adoption where applicable.",
+    "A proactive approach to mentoring and supporting team growth.",
+    "Deep understanding of the software development lifecycle in an agile environment."
+  ]
+}

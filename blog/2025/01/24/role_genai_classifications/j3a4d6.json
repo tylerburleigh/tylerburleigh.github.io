@@ -1,0 +1,31 @@
+{
+  "filename": "j3a4d6",
+  "responsibilities": [
+    "Design, model, or implement data warehousing activities to contribute to the design and development of Meta products.",
+    "Manage and execute data warehouse plans for a product or a group of products to solve well-scoped problems.",
+    "Identify the data needed for a business problem and implement logging required to ensure availability of data.",
+    "Collaborate with engineers, product managers, and data scientists to understand data needs and represent key data insights visually.",
+    "Build data expertise and leverage data controls to ensure privacy, security, compliance, data quality, and operations.",
+    "Design, build, and launch new data models and visualizations in production.",
+    "Independently design, build, and launch new data extraction, transformation, and loading processes in production.",
+    "Support existing processes running in production and implement optimized solutions with limited guidance.",
+    "Define and manage SLA for data sets in allocated areas of ownership.",
+    "Work on problems of moderate scope where analysis of situations or data requires a review of a variety of factors.",
+    "Exercise judgment within defined procedures and practices to determine appropriate action."
+  ],
+  "qualifications": [
+    "Data Visualization using Tableau, R, Python, or PowerBI",
+    "Legacy Data Migration",
+    "Database systems including relational, distributed, NoSQL, and/or object databases",
+    "Custom ETL design, implementation, and maintenance",
+    "Object-oriented programming languages",
+    "Schema design and dimensional data modeling",
+    "Writing SQL statements",
+    "Analyzing data to identify deliverables, gaps, and inconsistencies",
+    "Managing and communicating data warehouse plans to internal clients",
+    "MapReduce or MPP system",
+    "Programming in Python"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data warehousing, data modeling, data visualization, and data management. The responsibilities include designing and implementing data warehousing activities, managing data warehouse plans, collaborating with engineers and data scientists, and building data models and visualizations. The skills required include data visualization tools (Tableau, R, Python, PowerBI), database systems, ETL processes, SQL, and programming in Python.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data management, data processing, and visualization, which are typical tasks for data engineering or data analysis roles. These tasks do not inherently involve working with GenAI or LLMs, which are more related to natural language processing, text generation, and AI model development.\n\nTherefore, based on the provided responsibilities and skills, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

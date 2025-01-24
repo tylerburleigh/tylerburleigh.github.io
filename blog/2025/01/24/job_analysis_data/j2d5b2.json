@@ -1,0 +1,112 @@
+[
+  {
+    "filename": "j2d5b2",
+    "responsibilities": [
+      "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+      "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+      "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+      "Implement model observation and performance monitoring.",
+      "Deploy and support enterprise-grade ML solutions.",
+      "Optimize machine learning models for production efficiency and cost.",
+      "Build MLOps solutions for various problem domains including clickstream, product demand, and logistics.",
+      "Design, build, and maintain ML CI/CD pipeline and workflows for data collection, analysis, experimentation, model training, serving, and monitoring.",
+      "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+      "Support production ML solutions for mission-critical applications.",
+      "Translate models to optimal production code and validate results with Data Science.",
+      "Evaluate third-party tools and frameworks for adoption.",
+      "Establish and enforce team development standards."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on machine learning pipelines, CI/CD frameworks, and MLOps solutions, with no specific mention of language models or fine-tuning tasks. The responsibilities are more aligned with infrastructure, deployment, and optimization of ML models in general, rather than the specific task of fine-tuning language models for domain-specific tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2d5b2",
+    "responsibilities": [
+      "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+      "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+      "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+      "Implement model observation and performance monitoring.",
+      "Deploy and support enterprise-grade ML solutions.",
+      "Optimize machine learning models for production efficiency and cost.",
+      "Build MLOps solutions for various problem domains including clickstream, product demand, and logistics.",
+      "Design, build, and maintain ML CI/CD pipeline and workflows for data collection, analysis, experimentation, model training, serving, and monitoring.",
+      "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+      "Support production ML solutions for mission-critical applications.",
+      "Translate models to optimal production code and validate results with Data Science.",
+      "Evaluate third-party tools and frameworks for adoption.",
+      "Establish and enforce team development standards."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention prompt engineering or the refinement of language model outputs. The focus is on building and maintaining ML pipelines, optimizing models, and supporting production ML solutions, which are not directly related to crafting and refining prompts for language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2d5b2",
+    "responsibilities": [
+      "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+      "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+      "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+      "Implement model observation and performance monitoring.",
+      "Deploy and support enterprise-grade ML solutions.",
+      "Optimize machine learning models for production efficiency and cost.",
+      "Build MLOps solutions for various problem domains including clickstream, product demand, and logistics.",
+      "Design, build, and maintain ML CI/CD pipeline and workflows for data collection, analysis, experimentation, model training, serving, and monitoring.",
+      "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+      "Support production ML solutions for mission-critical applications.",
+      "Translate models to optimal production code and validate results with Data Science.",
+      "Evaluate third-party tools and frameworks for adoption.",
+      "Establish and enforce team development standards."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "While the Job Responsibilities include implementing model observation and performance monitoring, they do not specifically address the evaluation of large language models using metrics like perplexity or BLEU. The focus is on general ML model performance and monitoring, not the specific evaluation of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2d5b2",
+    "responsibilities": [
+      "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+      "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+      "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+      "Implement model observation and performance monitoring.",
+      "Deploy and support enterprise-grade ML solutions.",
+      "Optimize machine learning models for production efficiency and cost.",
+      "Build MLOps solutions for various problem domains including clickstream, product demand, and logistics.",
+      "Design, build, and maintain ML CI/CD pipeline and workflows for data collection, analysis, experimentation, model training, serving, and monitoring.",
+      "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+      "Support production ML solutions for mission-critical applications.",
+      "Translate models to optimal production code and validate results with Data Science.",
+      "Evaluate third-party tools and frameworks for adoption.",
+      "Establish and enforce team development standards."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve deploying and supporting enterprise-grade ML solutions and building MLOps solutions, which could potentially include integrating ML outputs into applications. However, there is no specific mention of handling LLM outputs or tasks like content moderation or retrieval augmentation, which are specific to this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2d5b2",
+    "responsibilities": [
+      "Automate, scale, support, and cost-optimize enterprise-scale machine learning pipelines.",
+      "Collaborate with data scientists, data engineers, and platform engineers to establish CI/CD and infrastructure-as-code frameworks.",
+      "Develop reusable pipelining libraries and design scalable, highly-fault-tolerant architectures.",
+      "Implement model observation and performance monitoring.",
+      "Deploy and support enterprise-grade ML solutions.",
+      "Optimize machine learning models for production efficiency and cost.",
+      "Build MLOps solutions for various problem domains including clickstream, product demand, and logistics.",
+      "Design, build, and maintain ML CI/CD pipeline and workflows for data collection, analysis, experimentation, model training, serving, and monitoring.",
+      "Instrument observation and monitoring of pipeline performance, accuracy, and drift.",
+      "Support production ML solutions for mission-critical applications.",
+      "Translate models to optimal production code and validate results with Data Science.",
+      "Evaluate third-party tools and frameworks for adoption.",
+      "Establish and enforce team development standards."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention model interpretability or debugging. The focus is on optimizing and supporting ML models and pipelines, rather than analyzing model outputs for errors or biases, which is a key aspect of this Activity.",
+    "is_relevant": false
+  }
+]

@@ -1,0 +1,590 @@
+[
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities include training language models using reinforcement learning, which aligns with the activity of fine-tuning and customization of language models. Both involve modifying and optimizing language models for specific tasks or performance improvements. The mention of \"train language models\" in the responsibilities suggests a direct relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or crafting prompt instructions. However, designing experiments to exemplify failure modes and simulating expertise gaps could involve some level of prompt engineering to test and refine model outputs. While not directly stated, there is an indirect relevance due to the nature of designing experiments and optimizing model behavior.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include developing and evaluating methods for supervision of AI systems and analyzing model behavior, which directly relates to evaluating the quality and performance of language models. This activity is highly relevant as it involves assessing models, which is a key part of the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities focus on developing supervision protocols, designing experiments, and training models, but do not mention integrating LLM outputs into end-user experiences or applications. This activity is more about application integration, which is not covered in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include analyzing model behavior, which aligns with the activity of model interpretability and debugging. Understanding and refining model outputs to identify errors or biases is a part of analyzing behavior, making this activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities focus on developing and evaluating methods for AI supervision, designing experiments, and training language models. This Activity, which involves designing end-to-end workflows for AI-driven pipelines, does not directly align with the responsibilities, as it is more about system architecture rather than AI evaluation or experimentation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not mention anything about assessing computational demands or resource planning. They are more focused on AI supervision, experimentation, and model training. Therefore, this Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities do not address performance optimization or latency control. They are centered around AI supervision, designing experiments, and training models. This Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities do not include managing the lifecycle of models or governance. They focus on AI supervision, designing experiments, and training models. This Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities include developing new supervision protocols and gathering human annotations using these protocols. Designing labeling tasks for data annotation is relevant because it involves creating guidelines and workflows for consistent data labeling, which aligns with the need to gather human annotations effectively.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities mention gathering human annotations using new supervision protocols. Collecting human annotation data is directly relevant as it involves managing logistics and communication for annotation projects, which is essential for gathering high-quality human annotations as part of the job.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include analyzing the behavior of language models and comparing them. While this involves analysis, the specific mention of analyzing human annotation data is not explicitly covered in the responsibilities. However, analyzing annotation data could be a part of evaluating the effectiveness of supervision protocols, making it somewhat relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities involve developing and evaluating methods for AI systems, designing experiments, and analyzing model behavior. Statistical methods are crucial for hypothesis testing, inference, and data analysis, which are essential for designing experiments and evaluating AI systems. Therefore, applying statistical techniques aligns with the responsibilities of designing experiments and analyzing model behavior.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities focus on developing methods, designing experiments, and analyzing model behavior. While data visualization and exploratory analysis are valuable for communicating insights, the responsibilities do not explicitly mention the need for visualization or presenting findings. The focus is more on developing and evaluating methods and protocols rather than on data visualization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include designing experiments and analyzing model behavior, which may involve working with large datasets, especially in the context of language models. Data mining and analysis of conversational datasets can be relevant for uncovering trends and patterns that inform model improvements and supervision protocols. This aligns with the responsibilities of evaluating and supervising AI systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities do not explicitly mention the development of data models and pipelines. The focus is more on designing experiments, developing supervision protocols, and analyzing model behavior. While data models and pipelines are important for systematic analysis, they are not directly mentioned in the responsibilities, making this activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities involve evaluating methods and analyzing model behavior, which requires defining metrics and success criteria to assess the effectiveness of supervision protocols and model performance. This activity is directly relevant as it aligns with the need to track and analyze metrics to guide decision-making in the context of AI system evaluation and supervision.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on developing and evaluating methods for AI system supervision, designing experiments, and training language models. While these tasks are related to AI and machine learning, they do not explicitly mention deployment or MLOps practices such as CI/CD pipelines, containerization, or orchestration. The responsibilities are more research and development-oriented rather than operational.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring or observability of AI systems in production. The focus is on designing experiments, developing supervision protocols, and training models. Monitoring and observability are more relevant to the operational phase of AI systems, which is not the primary focus of the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not mention versioning of data or models. The focus is on developing methods, designing experiments, and training models. While versioning is important for reproducibility and traceability, it is not directly addressed in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities involve designing experiments and analyzing model behavior, which could imply some level of testing and validation. However, the responsibilities do not explicitly mention continuous testing or validation processes like unit tests or integration tests. The focus is more on research and development rather than operational testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not address infrastructure or scalability concerns. They focus on developing methods, designing experiments, and training models. Infrastructure and scalability are more related to the deployment and operational phase, which is not the primary focus of the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security. The focus is on developing supervision methods, designing experiments, and training models. These tasks are more research-oriented and do not directly involve governance or security practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include training language models and analyzing their behavior, which could be part of model lifecycle management. However, the responsibilities do not explicitly mention continuous improvement practices such as regular retraining or hyperparameter tuning. The focus is more on initial development and evaluation rather than ongoing lifecycle management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on developing and evaluating methods for AI systems, designing experiments, and training language models. These tasks are more technical and research-oriented, involving AI systems and models rather than user experience research. User interviews and surveys are typically used to gather insights on user needs and preferences, which do not align with the responsibilities of designing AI supervision protocols or training models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities involve designing experiments and evaluating AI systems, which are more focused on technical and experimental aspects rather than user experience. Usability testing and prototyping are activities aimed at improving user experience, which is not directly related to the responsibilities of developing supervision protocols or training language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities listed are centered around AI systems, supervision protocols, and model training, which are technical and research-focused. Persona development and user journey mapping are activities related to understanding user segments and improving user flows, which do not align with the technical nature of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While qualitative data analysis involves synthesizing data to identify themes and needs, the job responsibilities are more focused on technical tasks such as designing experiments and training models. The analysis of language model behavior might involve some qualitative aspects, but the primary focus is on technical evaluation and supervision of AI systems, which does not directly relate to qualitative data analysis in the context of user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on developing and evaluating methods for AI systems, designing experiments, and training language models. While these tasks require a strong understanding of software systems, they do not explicitly mention designing and implementing software architecture. The responsibilities are more research and experimentation-oriented rather than focused on building scalable software solutions.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities involve designing experiments, developing supervision protocols, and training language models. These tasks require coding and software development skills, but they are not directly related to developing production-grade applications. The focus is more on research and experimentation rather than creating applications for production environments.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not mention any tasks related to automating build, test, and deployment processes, or maintaining version control workflows. The focus is on research, experimentation, and training models, which are not directly related to CI/CD practices.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not include tasks related to monitoring system health or managing incidents. The focus is on developing methods, designing experiments, and training models, which do not directly involve monitoring or incident management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not mention API development or system integration. The tasks are centered around research, experimentation, and training language models, which do not directly involve designing or implementing APIs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities involve designing experiments and analyzing model behavior, which may require some level of testing and quality assurance. However, the responsibilities do not explicitly mention developing automated test suites or maintaining test coverage, which are key aspects of software testing and quality assurance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention tasks related to managing or provisioning cloud resources, or promoting a DevOps culture. The focus is on research, experimentation, and training models, which do not directly involve DevOps practices or infrastructure as code.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include tasks such as developing and evaluating methods for AI systems, designing experiments to exemplify failure modes, and analyzing model behavior. These tasks align with the Activity's focus on investigating system accuracy, robustness, and other performance metrics, as well as designing experiments to validate hypotheses. Both the Job Responsibilities and the Activity emphasize rigorous methodologies and evaluation, making this Activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on developing supervision protocols, designing experiments, and training language models using reinforcement learning. While these tasks involve developing AI systems, the emphasis is more on supervision and evaluation rather than building systems for automated insights. The Activity's focus on analyzing user behavior and system performance for insights does not directly align with the specific responsibilities listed, which are more about oversight and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation or the evaluation of such data. The focus is on supervision protocols, designing experiments, and training models. While synthetic data could be a part of experimentation, it is not explicitly mentioned or implied in the responsibilities. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include evaluating methods and analyzing model behavior, which implies a need to identify and track performance metrics. However, the responsibilities do not explicitly mention defining success criteria or specific metrics. While there is some overlap in the need for evaluation, the Activity's focus on defining and tracking metrics is not a direct match to the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities include developing new supervision protocols and gathering human annotations, which is closely related to creating labeled datasets. This Activity is relevant as it involves preparing data annotations, which aligns with the responsibility of gathering human annotations using new protocols.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include designing experiments to exemplify failure modes and simulate expertise gaps, which aligns with the Activity's focus on planning and executing controlled experiments. Both involve analyzing outcomes to draw insights, making this Activity relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j73564",
+    "responsibilities": [
+      "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+      "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+      "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+      "Develop new supervision protocols and gather human annotations using these protocols.",
+      "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. While evaluation is a part of the responsibilities, the specific task of sampling data is not highlighted. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  }
+]

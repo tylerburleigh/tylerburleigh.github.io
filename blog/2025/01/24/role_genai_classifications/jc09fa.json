@@ -1,0 +1,28 @@
+{
+  "filename": "jc09fa",
+  "responsibilities": [
+    "Design, develop, and maintain data pipelines to integrate, transform, and load data from diverse sources.",
+    "Optimize data workflows for performance, reliability, and scalability.",
+    "Collaborate with analysts and data scientists to maintain and enhance the data warehouse architecture.",
+    "Develop ETL/ELT processes to ensure timely and accurate data delivery.",
+    "Automate and monitor ETL workflows for continuous reliability.",
+    "Implement tools and frameworks to ensure data quality, accuracy, and consistency.",
+    "Proactively identify and resolve data issues.",
+    "Partner with software engineers, product managers, and business stakeholders to understand data requirements.",
+    "Share knowledge and collaborate to ensure alignment with organizational objectives.",
+    "Monitor and optimize the performance of data systems.",
+    "Troubleshoot and resolve data-related challenges in real-time.",
+    "Create and maintain documentation for data pipelines, workflows, and system configurations.",
+    "Promote best practices for data governance, coding standards, and security."
+  ],
+  "skills": [
+    "Proficiency with cloud platforms (AWS, Azure, or Google Cloud).",
+    "Hands-on experience with tools like Databricks, ELT/ETL (preferably Fivetran), SQL, Python, and Spark.",
+    "Familiarity with event-tracking tools like Segment (nice to have).",
+    "Strong analytical skills and the ability to solve complex data engineering challenges.",
+    "Ability to work effectively in cross-functional teams.",
+    "Ability to communicate technical concepts to diverse audiences."
+  ],
+  "analysis": "The job responsibilities focus on designing, developing, and maintaining data pipelines, optimizing data workflows, collaborating with analysts and data scientists, developing ETL/ELT processes, automating workflows, and ensuring data quality. The skills required include proficiency with cloud platforms, experience with data tools like Databricks, SQL, Python, and Spark, and strong analytical skills. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job is centered around data engineering, data integration, and data pipeline management, which are not directly related to GenAI or LLMs.",
+  "is_genai_role": false
+}

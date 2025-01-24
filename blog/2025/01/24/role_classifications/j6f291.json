@@ -1,0 +1,27 @@
+{
+  "filename": "j6f291",
+  "responsibilities": [
+    "Design, implement, and maintain robust infrastructure to support the development and deployment of generative AI and machine learning tools for the AI Accelerator.",
+    "Evaluate and compare different technical approaches, presenting their trade-offs to guide architectural decisions for AI projects.",
+    "Design and develop tools, components, and processes to support public cloud service intake, CI/CD, and security.",
+    "Lead proof of concept efforts for candidate architectures, products, and tools.",
+    "Adopt and communicate new concepts, ideas, techniques, best practices, and technology assistance at all organizational levels.",
+    "Assist in the remediation of application stability and performance.",
+    "Work to establish required cloud infrastructures and frameworks."
+  ],
+  "skills": [
+    "Extensive experience with Google Cloud Platform (GCP) or another cloud provider, including application hosting, BigQuery, and serverless computing.",
+    "Knowledge of cloud security principles and frameworks.",
+    "Hands-on experience with modern DevOps concepts and workflows.",
+    "Strong backend development expertise, particularly in building and integrating REST APIs with frameworks like FastAPI.",
+    "Practical experience in Python development, especially in data-driven environments and for building scalable applications.",
+    "Experience with cloud-native technologies such as Docker, Kubernetes, and Terraform for container orchestration and infrastructure as code.",
+    "Familiarity with CI/CD best practices, using tools such as GitHub Actions and Cloud Build.",
+    "Solid understanding of monitoring, alerting, and logging solutions within cloud-native ecosystems.",
+    "Confidence in communicating complex technical ideas to diverse audiences.",
+    "Development experience with Python and/or JavaScript/Typescript."
+  ],
+  "analysis": "The job responsibilities and skills focus on designing, implementing, and maintaining infrastructure for AI and machine learning tools, with a strong emphasis on cloud services, DevOps, and backend development. The responsibilities include evaluating technical approaches, developing tools for cloud services, leading proof of concept efforts, and establishing cloud infrastructures. The skills required include experience with cloud platforms (GCP), cloud security, DevOps, backend development, Python, Docker, Kubernetes, Terraform, and CI/CD practices.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which does not align with the infrastructure and DevOps focus of the job.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models and developing data pipelines, which is somewhat related but not as focused on infrastructure and cloud services as the job.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is highly relevant as it focuses on deploying, scaling, and monitoring AI systems, setting up CI/CD pipelines, and managing infrastructure with tools like Docker, Kubernetes, and cloud services. The skills and responsibilities align closely with the job's focus on cloud infrastructure, DevOps, and backend development.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating with stakeholders, which does not match the technical infrastructure focus of the job.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not aligned with the infrastructure and DevOps focus of the job.\n\n6. **Data Engineer**: While this role involves building data pipelines and managing data workflows, it is more data-focused rather than infrastructure and cloud services-focused.\n\n7. **Product Manager**: This role is about product vision and strategy, which does not match the technical and infrastructure focus of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is related but not as focused on cloud infrastructure and DevOps as the job.\n\nThe most relevant option is \"MLOps / AI Infrastructure Engineer\" as it aligns closely with the job's focus on cloud infrastructure, DevOps, and backend development.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

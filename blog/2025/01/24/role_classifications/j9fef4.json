@@ -1,0 +1,23 @@
+{
+  "filename": "j9fef4",
+  "responsibilities": [
+    "Develop end-to-end Machine Learning and Deep Learning solutions for enterprise use cases.",
+    "Help customers adopt NVIDIA AI SDKs and APIs by offering deep technical expertise.",
+    "Design GPU-accelerated data processing pipelines to optimize compute resource utilization and improve workload performance.",
+    "Provide feedback from first-time implementations to improve software products.",
+    "Educate vertical teams and build communities on NVIDIA AI software products."
+  ],
+  "skills": [
+    "Strong software engineering and debugging skills.",
+    "Experience with Python, C/C++, and Linux.",
+    "Expertise in using deep learning frameworks such as TensorFlow or PyTorch.",
+    "Real-world development of agentic RAG systems with frameworks like LangGraph, LlamaIndex, CrewAI.",
+    "Strong background with vector databases and advanced indexing techniques.",
+    "Ability to multitask effectively in a dynamic environment.",
+    "Clear written and oral communication skills.",
+    "Ability to collaborate effectively with executives and engineering teams."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an \"AI/ML Engineer\" (Option 2). Here's the breakdown:\n\n1. **Responsibilities**:\n   - The job involves developing end-to-end Machine Learning and Deep Learning solutions, which aligns with the AI/ML Engineer's focus on transforming research output into scalable AI solutions.\n   - Designing GPU-accelerated data processing pipelines and optimizing compute resource utilization is similar to the AI/ML Engineer's responsibility of developing and maintaining data pipelines for model training and inference.\n   - Providing feedback to improve software products and educating teams on AI software products can be seen as part of the collaboration and optimization tasks that an AI/ML Engineer would undertake.\n\n2. **Skills**:\n   - The job requires strong software engineering and debugging skills, experience with Python, C/C++, and Linux, and expertise in deep learning frameworks like TensorFlow or PyTorch. These are consistent with the AI/ML Engineer's need for proficiency in programming languages and software engineering best practices.\n   - The ability to multitask, communicate clearly, and collaborate effectively with executives and engineering teams is crucial for an AI/ML Engineer, who must work closely with Research Scientists and other stakeholders.\n\nWhile there are elements of the job that could relate to other roles, such as the MLOps / AI Infrastructure Engineer (Option 3) due to the focus on optimizing compute resources, the primary focus on developing and implementing AI solutions aligns more closely with the AI/ML Engineer role.\n\nOther options like AI Research Scientist, AI Solution Architect, Data Scientist, Data Engineer, Product Manager, and Software Engineer do not align as closely with the specific combination of responsibilities and skills outlined in the job description.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

@@ -1,0 +1,26 @@
+{
+  "filename": "j1365a",
+  "responsibilities": [
+    "Design, build, and maintain data pipelines that efficiently move and transform data between production systems and data lakes, ensuring data integrity and availability.",
+    "Optimize data storage and processing using formats like Parquet and other columnar storage solutions, ensuring that our data architecture is both performant and cost-effective.",
+    "Leverage expertise in Scala Spark, PySpark, or similar technologies to write scalable data processing jobs that handle large volumes of data with high efficiency.",
+    "Work with AWS cloud services to deploy, manage, and monitor data pipelines, ensuring they are resilient, secure, and scalable to meet the growing demands of the business.",
+    "Collaborate with data scientists and engineers to understand data requirements, build validations from use cases, troubleshoot issues, and continuously improve data infrastructure.",
+    "Help to create and cost-optimize ETLs to support custom features for ingestion into machine learning models.",
+    "Provide technical leadership and mentorship to junior engineers, promoting best practices in data engineering and helping to build a culture of continuous learning and improvement.",
+    "Create comprehensive documentation accessible to both technical and non-technical audiences.",
+    "Automate data pipeline monitoring and alerts.",
+    "Advise on the best data processing strategies to align with business objectives."
+  ],
+  "qualifications": [
+    "Proficiency in Scala Spark, PySpark, or similar data processing frameworks, with a proven ability to write efficient, scalable data processing jobs.",
+    "Familiarity with data storage formats like Parquet, and experience with columnar storage solutions and optimization techniques.",
+    "Hands-on experience with AWS services, such as S3, Glue, EMR, Redshift, or similar tools, to build and manage large-scale data processing workflows.",
+    "Strong understanding of data warehousing concepts, ETL/ELT processes, and data modeling techniques.",
+    "Excellent problem-solving skills, with the ability to troubleshoot complex data pipeline issues and ensure data quality across the system.",
+    "Strong communication and collaboration skills, with experience working in cross-functional teams to deliver data solutions that meet business needs.",
+    "A commitment to staying up-to-date with the latest trends and best practices in data engineering, with a passion for continuous improvement and innovation."
+  ],
+  "analysis": "The job described in the Responsibilities and Skills sections is primarily focused on data engineering tasks. The responsibilities include designing, building, and maintaining data pipelines, optimizing data storage and processing, leveraging technologies like Scala Spark and PySpark, working with AWS cloud services, and collaborating with data scientists and engineers. The skills required include proficiency in data processing frameworks, familiarity with data storage formats, experience with AWS services, and a strong understanding of data warehousing concepts.\n\nWhile there is a mention of supporting custom features for ingestion into machine learning models, there is no specific mention of working with Generative AI (GenAI) or language models (LLMs). The focus is on data engineering, data processing, and infrastructure rather than on developing or deploying GenAI or LLMs. Therefore, the job does not explicitly involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

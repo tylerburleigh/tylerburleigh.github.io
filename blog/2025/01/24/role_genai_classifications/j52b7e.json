@@ -1,0 +1,20 @@
+{
+  "filename": "j52b7e",
+  "responsibilities": [
+    "Drive core components of the ML Platform technical roadmap to design and build MLOps solutions with automated pipelines and standardized processes.",
+    "Develop, maintain, and enhance frameworks for machine learning model development and deployment.",
+    "Collaborate with ML model builders and application owners to determine business requirements and SLAs for API-enabled services.",
+    "Develop, maintain, and enhance infrastructure supporting machine learning services.",
+    "Support the development of new patterns for the deployment of machine learning models with CI/CD pipelines and automated testing."
+  ],
+  "qualifications": [
+    "Expertise in the machine learning model development cycle.",
+    "Strong understanding of data pipelines and data infrastructure.",
+    "Ability to develop software and document optimal processes.",
+    "Proficiency in Python, Ruby, or Java.",
+    "Experience with MLOps tooling such as KubeFlow, AWS Sagemaker, MlFlow, or similar.",
+    "Experience with cloud platforms, preferably AWS."
+  ],
+  "analysis": "The job responsibilities focus on developing and maintaining machine learning (ML) infrastructure, MLOps solutions, and automated pipelines. The responsibilities also include collaborating with ML model builders and supporting the deployment of ML models. The skills required include expertise in the ML model development cycle, understanding of data pipelines, proficiency in programming languages like Python, and experience with MLOps tools and cloud platforms.\n\nThere is no explicit mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on the infrastructure and operational aspects of machine learning rather than specific types of models or AI technologies. While the job involves working with machine learning models, it does not specifically indicate working with GenAI or LLMs.",
+  "is_genai_role": false
+}

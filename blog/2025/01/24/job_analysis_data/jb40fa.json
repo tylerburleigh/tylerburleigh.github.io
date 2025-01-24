@@ -1,0 +1,92 @@
+[
+  {
+    "filename": "jb40fa",
+    "responsibilities": [
+      "Formulate business problems as technical data problems while ensuring key business drivers are captured in collaboration with product stakeholders.",
+      "Work with product engineering to ensure implementability of solutions. Deliver prototypes and production code based on need.",
+      "Experiment with in-house and third-party data sets to test hypotheses on relevance and value of data to business problems.",
+      "Build needed data transformations on structured and unstructured data.",
+      "Build and experiment with modeling and scoring algorithms, including development of custom algorithms and use of packaged tools based on machine learning, data mining, and statistical techniques.",
+      "Devise and implement methods for adaptive learning with controls on effectiveness, methods for explaining model decisions where necessary, model validation, and A/B testing of models.",
+      "Devise and implement methods for efficiently monitoring model effectiveness and performance in production.",
+      "Devise and implement methods for automation of all parts of the predictive pipeline to minimize labor in development and production.",
+      "Contribute to the development and adoption of shared predictive analytics infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on data problems, model building, and predictive analytics, but do not specifically mention language models or fine-tuning. While there is a general emphasis on model development and experimentation, the responsibilities do not explicitly align with the fine-tuning of large language models for domain-specific tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb40fa",
+    "responsibilities": [
+      "Formulate business problems as technical data problems while ensuring key business drivers are captured in collaboration with product stakeholders.",
+      "Work with product engineering to ensure implementability of solutions. Deliver prototypes and production code based on need.",
+      "Experiment with in-house and third-party data sets to test hypotheses on relevance and value of data to business problems.",
+      "Build needed data transformations on structured and unstructured data.",
+      "Build and experiment with modeling and scoring algorithms, including development of custom algorithms and use of packaged tools based on machine learning, data mining, and statistical techniques.",
+      "Devise and implement methods for adaptive learning with controls on effectiveness, methods for explaining model decisions where necessary, model validation, and A/B testing of models.",
+      "Devise and implement methods for efficiently monitoring model effectiveness and performance in production.",
+      "Devise and implement methods for automation of all parts of the predictive pipeline to minimize labor in development and production.",
+      "Contribute to the development and adoption of shared predictive analytics infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention prompt engineering or working with large language models. The focus is more on data transformations, model building, and predictive analytics rather than crafting and refining prompts for language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb40fa",
+    "responsibilities": [
+      "Formulate business problems as technical data problems while ensuring key business drivers are captured in collaboration with product stakeholders.",
+      "Work with product engineering to ensure implementability of solutions. Deliver prototypes and production code based on need.",
+      "Experiment with in-house and third-party data sets to test hypotheses on relevance and value of data to business problems.",
+      "Build needed data transformations on structured and unstructured data.",
+      "Build and experiment with modeling and scoring algorithms, including development of custom algorithms and use of packaged tools based on machine learning, data mining, and statistical techniques.",
+      "Devise and implement methods for adaptive learning with controls on effectiveness, methods for explaining model decisions where necessary, model validation, and A/B testing of models.",
+      "Devise and implement methods for efficiently monitoring model effectiveness and performance in production.",
+      "Devise and implement methods for automation of all parts of the predictive pipeline to minimize labor in development and production.",
+      "Contribute to the development and adoption of shared predictive analytics infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include tasks related to model validation, monitoring model effectiveness, and performance in production, which align with evaluating models. However, there is no specific mention of large language models or the specific metrics used for their evaluation, such as perplexity or BLEU.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb40fa",
+    "responsibilities": [
+      "Formulate business problems as technical data problems while ensuring key business drivers are captured in collaboration with product stakeholders.",
+      "Work with product engineering to ensure implementability of solutions. Deliver prototypes and production code based on need.",
+      "Experiment with in-house and third-party data sets to test hypotheses on relevance and value of data to business problems.",
+      "Build needed data transformations on structured and unstructured data.",
+      "Build and experiment with modeling and scoring algorithms, including development of custom algorithms and use of packaged tools based on machine learning, data mining, and statistical techniques.",
+      "Devise and implement methods for adaptive learning with controls on effectiveness, methods for explaining model decisions where necessary, model validation, and A/B testing of models.",
+      "Devise and implement methods for efficiently monitoring model effectiveness and performance in production.",
+      "Devise and implement methods for automation of all parts of the predictive pipeline to minimize labor in development and production.",
+      "Contribute to the development and adoption of shared predictive analytics infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve working with product engineering to ensure implementability of solutions and contributing to shared predictive analytics infrastructure, which could relate to integrating models into applications. However, there is no specific mention of integrating large language models or handling content moderation and retrieval augmentation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb40fa",
+    "responsibilities": [
+      "Formulate business problems as technical data problems while ensuring key business drivers are captured in collaboration with product stakeholders.",
+      "Work with product engineering to ensure implementability of solutions. Deliver prototypes and production code based on need.",
+      "Experiment with in-house and third-party data sets to test hypotheses on relevance and value of data to business problems.",
+      "Build needed data transformations on structured and unstructured data.",
+      "Build and experiment with modeling and scoring algorithms, including development of custom algorithms and use of packaged tools based on machine learning, data mining, and statistical techniques.",
+      "Devise and implement methods for adaptive learning with controls on effectiveness, methods for explaining model decisions where necessary, model validation, and A/B testing of models.",
+      "Devise and implement methods for efficiently monitoring model effectiveness and performance in production.",
+      "Devise and implement methods for automation of all parts of the predictive pipeline to minimize labor in development and production.",
+      "Contribute to the development and adoption of shared predictive analytics infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include explaining model decisions and implementing methods for adaptive learning, which could relate to model interpretability. However, there is no specific mention of debugging or interpretability techniques for large language models.",
+    "is_relevant": false
+  }
+]

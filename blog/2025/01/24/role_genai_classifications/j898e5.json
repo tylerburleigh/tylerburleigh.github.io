@@ -1,0 +1,24 @@
+{
+  "filename": "j898e5",
+  "responsibilities": [
+    "Design, develop, and maintain large-scale data systems, architectures, and pipelines",
+    "Develop and maintain data pipelines to ensure data quality and integrity",
+    "Write efficient Python scripts to automate data processing, cleaning, and visualization tasks",
+    "Analyze large datasets to identify trends, opportunities, and challenges in retail operations",
+    "Optimize data processes and SQL queries for massive datasets",
+    "Utilize Large Language Models (LLMs) via APIs for natural language processing tasks",
+    "Collaborate with data scientists to develop predictive models and improve them",
+    "Communicate complex data insights and recommendations to non-technical stakeholders"
+  ],
+  "skills": [
+    "Strong SQL skills for querying and manipulating large datasets",
+    "Proficiency in Python for data analysis and automation",
+    "Experience with Airflow or similar workflow orchestrators",
+    "Experience with Airbyte or similar integration tools",
+    "Knowledge of machine learning algorithms and their implementation in production",
+    "Ability to work in a fast-paced environment and meet deadlines",
+    "Strong analytical, problem-solving, and communication skills"
+  ],
+  "analysis": "The job responsibilities include utilizing Large Language Models (LLMs) via APIs for natural language processing tasks. This directly indicates that the job involves working with language models. The skills section does not explicitly mention Generative AI or LLMs, but the presence of LLMs in the responsibilities is a clear indicator that the job involves working with language models. There is no explicit mention of Generative AI, but the use of LLMs suggests a focus on language model applications.",
+  "is_genai_role": true
+}

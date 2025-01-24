@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Conduct novel research applying AI/ML to OSK’s satellite hyperspectral imagery.",
+    "Help transition research to production, deploying models for both batch and online inference as well as embedded on the satellites.",
+    "Produce analytical infrastructure for AI/ML pipeline development.",
+    "Inform colleagues and mentor Individual Contributors about AI/ML opportunities and tasks.",
+    "Publish research in geospatial and/or AI conferences and write blog posts to showcase work.",
+    "Contribute to a cross-functional team responsible for the full algorithm development process, from human annotation to integration with the platform.",
+    "Develop new research that can lead to new products and publications.",
+    "Work collaboratively within the company to produce high-level engineering of both the data collection and information delivery platforms."
+  ],
+  "skills": [
+    "Proficiency in Python, Pytorch, ML Flow/ClearML, DVC, Ray, Dask, and the Python data science stack.",
+    "Comfortable training models in a cloud (AWS) environment.",
+    "Ability to use best practices to track ML experiments.",
+    "Excellent written and oral communication skills.",
+    "Familiarity with common remote sensing data types and tools, such as GeoTiffs, GDAL, rasterio, and xarray."
+  ],
+  "qualifications": [
+    "3+ years experience in ML/AI, or a PhD in Computer Science, Engineering, Physics, Mathematics, or a similar field.",
+    "Ability to work independently as well as collaboratively in a startup environment.",
+    "Relevant publications applying AI/ML to remote sensing data at top conferences.",
+    "Must be a U.S. citizen or a lawful permanent resident of the U.S., or eligible to obtain the required authorizations from the U.S. Department of State due to ITAR requirements."
+  ]
+}

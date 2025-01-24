@@ -1,0 +1,22 @@
+{
+  "responsibilities": [
+    "Improve, build and release OpenOCD, GDB, LLDB and SiFive TraceDecoder",
+    "Work and synchronize with upstream community on OpenOCD, GDB and LLDB",
+    "Engage with architecture, hardware engineering and other software engineering teams to review and refine new features",
+    "Apply best practices for software development life cycle, including code reviews, source control management, build processes, testing, and operations",
+    "Assist in developing new and innovative debug and performance tuning tools for SiFive processors",
+    "Work directly with SiFive customers, when needed, to provide awesome customer pre and post-sales support"
+  ],
+  "skills": [
+    "Proficiency in C/C++ and Python",
+    "Experience with git, shell scripting and Linux",
+    "Experience with CI tools like Jenkins",
+    "Experience with upstream development"
+  ],
+  "qualifications": [
+    "Experience in developing low-level debuggers like OpenOCD",
+    "Experience in GDB and/or LLDB development",
+    "Experience with low-level instruction trace",
+    "Knowledge of SoC performance monitoring architecture and concepts"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "responsibilities": [
+    "Own and manage cloud infrastructure (EKS, AKS) including production clusters",
+    "Drive usability improvements and enhance the efficiency of the continuous build and release processes",
+    "Implement and manage security measures to protect customer data and monitor networks and systems in partnership with the security team",
+    "Improve system observability to support rapid iteration and maintain service stability",
+    "Establish a foundation for an SRE function",
+    "Troubleshoot and resolve complex technical issues related to software and infrastructure"
+  ],
+  "skills": [
+    "Experience with AWS and/or Azure",
+    "Experience with Python",
+    "Experience with Kubernetes",
+    "Experience with Linux Systems Administration and Bash/Linux scripting",
+    "Experience with CI/CD (GitHub Actions, GitLab CI/CD, or Jenkins)",
+    "Strong understanding of cloud networking, TCP/IP, DNS, IAM",
+    "Experience with Containerization (Build & Release optimization), DataStore, Redis, and GPU workloads",
+    "Ability to understand others’ code and to write your own for automation tasks",
+    "Experience providing technical leadership of DevOps teams",
+    "Experience with GitOps (ArgoCD, FluxCD, Helm templating) (Nice to Have)",
+    "Experience with Infrastructure as Code (Terraform, Cloudformation, or Pulumi) (Nice to Have)",
+    "Experience with Monitoring, Tracing & Alerting (Opentelemetry, Prometheus, Datadog, New Relic) (Nice to Have)"
+  ],
+  "qualifications": [
+    "10+ years experience with AWS and/or Azure",
+    "10+ years experience with Python",
+    "3+ years experience with Kubernetes",
+    "3+ years experience with Linux Systems Administration and Bash/Linux scripting",
+    "Experience providing technical leadership of DevOps teams",
+    "Ability to meet applicable government contract requirements"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "filename": "j45f17",
+  "responsibilities": [
+    "Build scalable and extensible platforms, services, and tools using Java, Python, Go, and other relevant technologies.",
+    "Ensure automation, reliability, and security across multiple cloud environments (AWS, GCP, etc.).",
+    "Design and automate security best practices into the CI/CD deployment pipeline.",
+    "Work closely with data engineering, development, and IT teams to promote a culture of security awareness.",
+    "Investigate vulnerability findings within the environment and coordinate remediation efforts.",
+    "Ensure adherence to industry security standards (e.g., SOC 2, GDPR, HIPAA).",
+    "Maintain up-to-date container images, apply security patches, and implement robust security measures for regulatory compliance."
+  ],
+  "skills": [
+    "Proficiency in Java, Python, Go, or similar backend languages.",
+    "Experience in building, maintaining, and debugging services, internal tools, and frameworks.",
+    "Experience in automating and deploying large-scale production services in AWS, GCP, ECS & EKS, and/or GCP GKE.",
+    "Proficiency in managing CI/CD infrastructures and tools like Github Actions, Jenkins, ArgoCD, Gitlab.",
+    "Strong experience in security practices and AWS network engineering.",
+    "Familiarity with configuration management tools like Chef/Terraform.",
+    "Experience in designing, building, and managing complex deployment pipelines across multiple cloud providers."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on building and maintaining scalable platforms, services, and tools using programming languages like Java, Python, and Go. The role emphasizes automation, security, and deployment across cloud environments such as AWS and GCP. Key responsibilities include ensuring security best practices, investigating vulnerabilities, and maintaining compliance with industry standards. The skills required include proficiency in backend languages, experience with CI/CD infrastructures, and familiarity with configuration management tools.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on security, automation, and cloud infrastructure rather than on AI or language model development or deployment.",
+  "is_genai_role": false
+}

@@ -1,0 +1,22 @@
+{
+  "filename": "j3c63a",
+  "responsibilities": [
+    "Build and optimize data pipelines for efficient data ingestion, transformation, and loading from various sources while ensuring data quality and integrity.",
+    "Design, develop, and deploy Spark programs in the Databricks environment to process and analyze large volumes of data.",
+    "Work with event-based/streaming technologies to ingest and process data.",
+    "Work with structured, semi-structured, and unstructured data.",
+    "Optimize Databricks jobs for performance and scalability to handle big data workloads.",
+    "Monitor and troubleshoot Databricks jobs, identify and resolve issues or bottlenecks.",
+    "Implement best practices for data management, security, and governance within the Databricks environment.",
+    "Perform code reviews to ensure fit to requirements, optimal execution patterns, and adherence to established standards."
+  ],
+  "qualifications": [
+    "Proficient in developing programs in Python and SQL.",
+    "Experience with Data warehouse Dimensional data modeling.",
+    "Experience of Delta Lake, DWH, Data Integration, Cloud, Design, and Data Modelling.",
+    "Proficient writing SQL queries and programming including stored procedures and reverse engineering existing processes.",
+    "Experience designing and developing Enterprise Data Warehouse solutions."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering tasks, such as building and optimizing data pipelines, working with Spark and Databricks for data processing, and handling big data workloads. The skills required include proficiency in Python and SQL, experience with data modeling, data warehousing, and data integration. There is no mention of tasks related to Generative AI or language models, such as developing or fine-tuning models, working with natural language processing, or using AI for content generation. The focus is on data management, transformation, and analysis rather than AI model development or deployment.",
+  "is_genai_role": false
+}

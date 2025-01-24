@@ -1,0 +1,28 @@
+{
+  "responsibilities": [
+    "Build, maintain, and scale systems that deliver hundreds of millions of data points daily",
+    "Architect resilient distributed systems for near-realtime personalization and analytics",
+    "Enhance platform tooling towards self-service and improve user experience",
+    "Implement Privacy by Design in data ecosystem entry points",
+    "Develop and launch efficient and reliable data pipelines for data ingestion and transformation",
+    "Deploy data quality checks to ensure data quality and timeliness, and diagnose/fix issues to meet SLAs",
+    "Collaborate with product managers, engineers, data owners, data stewards, and customers to implement and maintain data products for analytics, ML, and reporting",
+    "Work with other engineers to improve reliability, documentation, and automation for self-service dataset support"
+  ],
+  "skills": [
+    "Building data pipelines and microservices using Java or Scala",
+    "Designing and developing large scale asynchronous eventing systems with platforms like Kafka",
+    "Building streaming data solutions using frameworks such as Spark",
+    "Leading small project teams and mentoring junior engineers",
+    "Scoping work and collaborating with multi-disciplinary teams",
+    "Working with modern data storage and orchestration tools like BigQuery, Postgres, and Airflow"
+  ],
+  "qualifications": [
+    "5+ years of experience in building data pipelines and microservices",
+    "3+ years of experience in designing and developing large scale asynchronous eventing systems",
+    "3+ years of experience in building streaming data solutions",
+    "Experience leading small project teams and mentoring junior engineers",
+    "Experience working with multi-disciplinary teams across organizational boundaries",
+    "Experience with modern data storage and orchestration tools"
+  ]
+}

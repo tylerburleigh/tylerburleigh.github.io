@@ -1,0 +1,29 @@
+{
+  "responsibilities": [
+    "Design, build, and operate highly-available Kubernetes-based infrastructure for the hybrid cloud platform.",
+    "Build and operate tools and processes for fully-automated bare-metal Linux-based host provisioning.",
+    "Collaborate with internal customers to build self-service interfaces on the Platform.",
+    "Instrument and optimize system and cluster performance, including power consumption and network performance.",
+    "Forecast and plan capacity increases to ensure resource availability while meeting budget targets.",
+    "Provide thought leadership on DevOps and Platform Engineering-centric system and process design.",
+    "Mentor and help develop engineers on sister teams in a collaborative way.",
+    "Participate in an on-call rotation with fellow team members."
+  ],
+  "skills": [
+    "Ability to automate processes using scripts, config management tools, and CI pipelines.",
+    "Solid understanding of networking fundamentals and storage technologies.",
+    "Strong communication skills and ability to publish easily understood documentation.",
+    "Experience with customer-facing SaaS products.",
+    "Problem-solving skills for new, ambiguous, or complex issues.",
+    "Ability to prioritize improvements effectively.",
+    "High standards in communication, feedback, continuous improvement, and operational excellence."
+  ],
+  "qualifications": [
+    "10+ years experience in Linux systems engineering roles supporting bare metal servers, virtualization, and container platforms.",
+    "Experience building and managing infrastructure in both public cloud and physical data center environments using IaC tools.",
+    "Experience building and managing Kubernetes clusters.",
+    "Experience automating the Linux boot environment (PXE, TFTP, Kickstart).",
+    "Proven ability to automate processes effectively.",
+    "Experience with relevant technologies such as CentOS/Rocky Linux, Kubernetes, Rancher RKE2, Longhorn, MinIO, Linux LVM and filesystems, Bash, Python, Ansible, Terraform, GitLab, Hashicorp Vault/Consul, AWS (EC2, S3, Glacier), Prometheus, Icinga/Nagios, Graphite, Grafana, CollectD, ELK/OpenSearch, Syslog, Journald, Nginx, HAProxy, Keepalived."
+  ]
+}

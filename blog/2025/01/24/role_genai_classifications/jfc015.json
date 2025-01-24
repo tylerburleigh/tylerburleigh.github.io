@@ -1,0 +1,27 @@
+{
+  "filename": "jfc015",
+  "responsibilities": [
+    "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+    "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+    "Work with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+    "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+    "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+    "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+    "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+    "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+    "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+  ],
+  "qualifications": [
+    "Excellent collaboration and communication skills with a focus on user experience.",
+    "Strong programming skills and hands-on experience with Python, PyTorch, or Jax.",
+    "Experience with developing and evaluating ML applications.",
+    "Experience writing automated unit, integration, and acceptance tests.",
+    "Experience using continuous integration systems.",
+    "Database and SQL skills.",
+    "Expertise in machine learning with a passion for model evaluation and applications.",
+    "Experience with natural language processing (NLP) and large language models like BERT, GPT, or Transformers.",
+    "Ability to stay on top of emerging trends in LLMs."
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with language models (LLMs). The responsibilities mention the use of internal and external LLMs to build grading models and integrate them into evaluation pipelines. Additionally, the skills section explicitly lists experience with natural language processing (NLP) and large language models like BERT, GPT, or Transformers, as well as the ability to stay on top of emerging trends in LLMs. These points strongly suggest that the job involves working with language models. While the job does not explicitly mention Generative AI (GenAI), the mention of LLMs, which are often used in generative tasks, implies a potential overlap with GenAI technologies.",
+  "is_genai_role": true
+}

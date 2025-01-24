@@ -1,0 +1,27 @@
+{
+  "filename": "jc4b9a",
+  "responsibilities": [
+    "Operationalize, deploy, manage, trouble-shoot, scale and evolve the GenAI based systems",
+    "Instrument the AI systems with observability and controllability",
+    "Monitor AI systems for performance and security",
+    "Analyze, fine-tune and optimize the performance of the AI systems",
+    "Manage, measure and improve the behavior of the AI systems",
+    "Automate AI deployments and operations",
+    "Ensure the security of AI systems by implementing standard methodologies and conducting regular security audits"
+  ],
+  "skills": [
+    "Proficiency with AI infrastructure components, automation tools, and scripting languages such as Python, Bash",
+    "Familiarity with one or more of the AI frameworks and tools such as AWS Bedrock and Sagemaker, HuggingFace TGI, TensorFlow, PyTorch, and Langchain/Llamaindex",
+    "Familiarity with open source LLM models, such as Llama, Mistral",
+    "Strong analytical and problem-solving skills",
+    "Superb communication and documentation skills",
+    "Knowledge of AI design patterns",
+    "Good interpersonal, negotiation, and influencing skills",
+    "DevOps experience is a big plus",
+    "Demonstrated expertise in the areas of accountability, critical thinking and emotional intelligence",
+    "Demonstrated effective change champion and ability to work effectively with others (including remote employees) to deliver complex, critical strategic IT initiatives"
+  ],
+  "analysis": "The job responsibilities and skills focus on operationalizing, deploying, managing, and optimizing AI systems, with a strong emphasis on infrastructure, automation, security, and performance monitoring. The skills required include proficiency with AI infrastructure components, automation tools, scripting languages, and familiarity with AI frameworks and tools. There is also a mention of DevOps experience being a plus.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which does not align with the operational and infrastructure focus of the job.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions and developing data pipelines, which partially aligns with the job's focus on deploying and managing AI systems, but lacks the strong emphasis on infrastructure and DevOps.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is a strong match as it focuses on ensuring reliable deployment, scaling, and monitoring of AI systems, setting up CI/CD pipelines, and managing infrastructure for scalable AI deployments. The skills required, such as a strong DevOps background and familiarity with orchestration/monitoring tools, align well with the job's requirements.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating with SMEs, which does not match the operational and infrastructure focus of the job.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not aligned with the operational and infrastructure focus of the job.\n\n6. **Data Engineer**: This role involves designing and maintaining data pipelines, which is not directly aligned with the AI system deployment and management focus of the job.\n\n7. **Product Manager**: This role is about driving product vision and strategy, which does not align with the operational and infrastructure focus of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is not directly aligned with the AI system deployment and management focus of the job.\n\nThe job is most similar to the \"MLOps / AI Infrastructure Engineer\" option, as both focus on the deployment, scaling, and monitoring of AI systems, with a strong emphasis on infrastructure and DevOps practices.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

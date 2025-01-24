@@ -1,0 +1,21 @@
+{
+  "filename": "jf90de",
+  "responsibilities": [
+    "Build and maintain core enterprise-wide AI infrastructure, integrating third-party AI models and tools.",
+    "Lead end-to-end delivery of AI solutions, from requirements gathering to production in collaboration with cross-functional partners.",
+    "Mentor colleagues to strengthen AI fluency, foster innovation, and influence roadmaps.",
+    "Act as a key contributor to AI strategy, identifying opportunities for impactful applications and enabling their delivery.",
+    "Ensure compliance with all applicable laws and regulations.",
+    "Perform other duties as assigned."
+  ],
+  "skills": [
+    "Proficiency in Python and statistical fundamentals (e.g., bias-variance trade-offs, probability distributions).",
+    "Familiarity with widely used AI frameworks and tools (e.g., LangChain, LlamaIndex) and prototyping libraries (e.g., Streamlit, Replit, Tesseract).",
+    "Experience or an interest in prototyping full-stack applications.",
+    "Knowledge of containerization and deployment tools (e.g., Docker, Kubernetes) or full-stack development (e.g., React, Golang).",
+    "Experimental mindset: comfort with testing hypotheses and iterating on failures."
+  ],
+  "analysis": "The Job responsibilities and skills focus on building and maintaining AI infrastructure, leading AI solution delivery, mentoring, contributing to AI strategy, and ensuring compliance. The skills required include proficiency in Python, familiarity with AI frameworks and tools, prototyping, containerization, and an experimental mindset.\n\n1. **AI Research Scientist**: This option focuses on cutting-edge AI methodologies, experiments, and staying current with AI research. The job does not align well with this option as it is more focused on infrastructure and delivery rather than research.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions, productionizing models, and developing data pipelines. While there is some overlap in skills like Python proficiency, the job's focus on infrastructure and strategy is not a perfect match.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about ensuring reliable deployment, scaling, and monitoring of AI systems, managing infrastructure, and setting up CI/CD pipelines. The job's responsibilities of building and maintaining AI infrastructure, integrating third-party models, and ensuring compliance align well with this option. The skills required, such as containerization and deployment tools, also match.\n\n4. **AI Solution Architect**: This role involves designing AI solutions, collaborating with SMEs, and providing thought leadership. While there is some overlap in strategy and collaboration, the job's focus on infrastructure and compliance is not a perfect fit.\n\n5. **Data Scientist**: This option focuses on statistical analysis, machine learning, and data visualization. The job's focus on AI infrastructure and strategy does not align with this option.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures. The job's focus on AI infrastructure and strategy does not align with this option.\n\n7. **Product Manager**: This role involves driving product vision and strategy, conducting research, and collaborating with teams. The job's focus on AI infrastructure and strategy does not align with this option.\n\n8. **Software Engineer**: This role involves designing and maintaining software applications. The job's focus on AI infrastructure and strategy does not align with this option.\n\nThe job aligns most closely with the MLOps / AI Infrastructure Engineer option due to its focus on AI infrastructure, deployment, and compliance, as well as the relevant skills in containerization and deployment tools.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

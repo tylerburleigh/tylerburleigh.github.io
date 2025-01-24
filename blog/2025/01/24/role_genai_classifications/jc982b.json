@@ -1,0 +1,25 @@
+{
+  "filename": "jc982b",
+  "responsibilities": [
+    "Design, develop, deploy, monitor, operate, and maintain existing or new elements of systems and infrastructure",
+    "Write well-crafted, well-tested, readable, maintainable code/scripts and configurations",
+    "Explain various trade-offs made in decisions",
+    "Participate in code reviews to ensure code quality and distribute knowledge",
+    "Lead projects from idea to positive execution",
+    "Analyze internal systems and processes to locate areas for improvement/automation",
+    "Incorporate considerations for business context, failure modes, monitoring, compliance, and security in work",
+    "Proactively participate in resolving ongoing incidents",
+    "Unblock, support, effectively communicate, and obtain buy-in across teams to achieve results",
+    "Share knowledge by giving brown bags, tech talks, and evangelizing appropriate tech and engineering best practices"
+  ],
+  "qualifications": [
+    "Proficiency in scripting languages to use APIs to automate manual processes",
+    "Experience with common CI tools (Jenkins, Buildkite, CircleCI, TeamCity)",
+    "Experience working with databases, relational or NoSQL",
+    "Experience developing and shipping ML models",
+    "Ability to design, debug, and run fault-tolerant, highly available, large-scale distributed systems",
+    "Experience working with public cloud platforms (e.g., AWS, GCP, Microsoft Azure)"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention working with Generative AI (GenAI) or language models (LLMs). The responsibilities focus on system design, development, deployment, and maintenance, as well as code quality, project leadership, and process improvement. The skills required include proficiency in scripting languages, experience with CI tools, databases, ML models, distributed systems, and cloud platforms. While there is a mention of developing and shipping ML models, it does not specifically indicate that these are GenAI or LLMs. The job seems to be more focused on general software engineering and infrastructure rather than specifically on GenAI or LLMs.",
+  "is_genai_role": false
+}

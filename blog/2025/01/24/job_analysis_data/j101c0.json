@@ -1,0 +1,852 @@
+[
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities mention developing scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs). This suggests involvement with LLMs, which aligns with the activity of fine-tuning and customizing language models. However, there is no explicit mention of training or fine-tuning models for domain-specific tasks or using techniques like parameter-efficient fine-tuning or prompt tuning. The focus seems more on the infrastructure and deployment aspects rather than the fine-tuning process itself.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not explicitly mention crafting and refining prompt instructions or optimizing system outputs through user testing and data-driven analysis. While the responsibilities involve working with large-scale data sets and deploying machine learning models, there is no direct reference to prompt engineering or iterative refinement of prompts for LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which aligns with evaluating and assessing model performance. However, there is no specific mention of methodologies for evaluating the quality, reliability, and fairness of large language models using automated metrics or human-in-the-loop reviews. The focus is more on maintaining performance rather than comprehensive evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities involve developing scalable data pipelines and architectures, supporting data collection, analysis, and processing tasks, and managing data flow between systems. These tasks suggest integration of LLM outputs into end-user experiences or pipelines, which aligns with the activity of integrating LLMs with downstream applications. The responsibilities also mention organizing and processing large batches of text, which could relate to handling content moderation or retrieval augmentation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which suggests an aspect of debugging. However, there is no explicit mention of analyzing model outputs for errors, biases, or potential improvements, or employing interpretability techniques. The focus is more on maintaining performance rather than interpretability and debugging.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include developing scalable data pipelines and architectures, incorporating MLOps best practices, and working with large-scale data sets. This aligns with designing end-to-end workflows for AI-driven pipelines, which involves data ingestion, preprocessing, and model integration. The focus on ensuring seamless integration of components is relevant to the responsibility of managing data flow between systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or resource planning for AI models. While there is a focus on developing scalable architectures, the specific task of planning for scalability in terms of compute resources is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance. This is related to performance optimization and latency control, as both involve ensuring models operate efficiently and effectively. However, the specific techniques mentioned, such as caching mechanisms and load balancing, are not explicitly covered in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include writing code for training, testing, and deploying machine learning models, as well as monitoring and troubleshooting them. This aligns with model lifecycle management, which involves continuous retraining and versioning to adapt to evolving data and requirements. The focus on maintaining accuracy and performance also relates to governance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities mention working with large-scale data sets and managing data flow between systems, which is relevant to aligning generative AI services with existing enterprise systems. Establishing APIs and messaging protocols for integration is a part of ensuring interoperability, which is indirectly related to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include supporting data collection, analysis, and content understanding, which can be related to evaluating AI quality. However, the specific task of conducting research to investigate system accuracy, robustness, and fairness is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include writing code for training, testing, and deploying machine learning models, as well as communicating findings through quantitative analysis and actionable insights. This aligns with developing AI systems and algorithms for automated insights, as both involve building and refining models to analyze data and derive insights.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. While there is a focus on data collection and processing, the specific task of developing methods for producing synthetic datasets is not covered in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which involves identifying performance metrics and success criteria. This task is relevant as it aligns with tracking and analyzing metrics to assess model health.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities mention supporting data collection and analysis, which can be related to creating labeled datasets. However, the specific task of preparing balanced, high-quality data annotations for AI evaluation and optimization is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include performing requirements analysis and collaborating with team members, which may involve designing and analyzing experiments. However, the specific task of running controlled experiments like A/B tests is not explicitly covered in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include supporting data collection and analysis, which can involve sampling data for evaluation. However, the specific task of using statistical methods to sample data is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing data pipelines, supporting data collection and analysis, and working with machine learning models. While these tasks involve data handling and processing, there is no specific mention of designing labeling tasks or creating annotation guidelines. The responsibilities are more aligned with data engineering and machine learning rather than data annotation and labeling.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include supporting data collection and analysis, which could tangentially relate to collecting human annotation data. However, the responsibilities do not explicitly mention managing annotation projects or overseeing teams for annotation tasks. The focus is more on data pipelines, model training, and data flow management, which are not directly related to human annotation data collection.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities involve data analysis and communicating findings through quantitative analysis and insights. While this could involve analyzing data, there is no specific mention of analyzing human annotation data. The responsibilities are more focused on machine learning model performance and data pipeline management rather than evaluating dataset quality through annotation data analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities mention tasks such as writing code for training, testing, and deploying machine learning models, as well as supporting data collection and analysis. These tasks often involve applying statistical techniques for model validation and interpretation. However, the responsibilities do not explicitly mention statistical methods or tools like scikit-learn or statsmodels. While statistical methods are likely relevant to the role, the responsibilities do not provide direct evidence of this.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include communicating findings through quantitative analysis, visuals, and actionable insights. This directly aligns with the activity of employing visualization tools to conduct exploratory data analysis and present findings. Therefore, data visualization and exploratory analysis are relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities mention working with large-scale data sets and organizing and processing large batches of text data. This aligns with the activity of exploring user-generated interactions at scale to uncover trends and patterns. Therefore, data mining and analysis of large conversational datasets are relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities include developing scalable data pipelines and architectures, incorporating MLOps best practices, and managing data flow between systems. These tasks are directly related to implementing scalable data processing and ETL workflows, as described in the activity. Therefore, developing data models and pipelines for analytics is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics or success criteria. However, monitoring and troubleshooting machine learning models to maintain accuracy and performance implies the need for metrics to assess model health. While not explicitly stated, defining metrics and success criteria is likely relevant to the role.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities mention \"Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs)\" and \"Write code for training, testing, and deploying machine learning models.\" These responsibilities align with the activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The mention of MLOps best practices directly relates to the deployment and operationalization of models, which is a core aspect of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities include \"Monitor and troubleshoot machine learning models to maintain accuracy and performance.\" This directly relates to the activity's focus on implementing real-time monitoring and logging solutions to track model performance, latency, and errors in production. The responsibility of monitoring models aligns with the need to detect data drift or concept drift, as described in the activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not explicitly mention version control systems for datasets and model artifacts. However, the responsibility to \"Develop scalable data pipelines and architectures\" and \"Write code for training, testing, and deploying machine learning models\" implies a need for reproducibility and traceability, which are addressed by data and model versioning. While not explicitly stated, versioning is a common practice in MLOps to ensure efficient rollbacks and compliance, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities include \"Write code for training, testing, and deploying machine learning models,\" which suggests a need for continuous testing and validation. The activity's focus on automating validation steps and introducing guardrails like canary testing or shadow deployments aligns with ensuring model stability and performance before full deployment. This is relevant to maintaining the accuracy and performance of machine learning models as mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities mention \"Develop scalable data pipelines and architectures\" and \"Work with large-scale data sets and manage data flow between systems.\" These responsibilities align with the activity's focus on optimizing and scaling model-serving infrastructure using cloud platforms and container orchestration tools. The need for scalability and handling large-scale data sets is directly relevant to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not explicitly mention governance, compliance, or security frameworks. While these are important aspects of MLOps, the responsibilities provided focus more on technical implementation and operational aspects rather than governance and compliance. Therefore, this activity is not directly relevant to the stated job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities include \"Monitor and troubleshoot machine learning models to maintain accuracy and performance\" and \"Perform requirements analysis, collaborate with team members, and document solutions.\" These responsibilities suggest an ongoing process of model evaluation and improvement, which aligns with the activity's focus on regular retraining, hyperparameter tuning, and performance evaluations. The establishment of feedback loops for continuous improvement is relevant to maintaining model performance over time.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on developing data pipelines, machine learning models, and data analysis. User interviews and surveys are primarily related to gathering user insights, which is more aligned with UX research rather than the technical and data-centric tasks described in the job responsibilities. There is no mention of direct user interaction or gathering user feedback in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities do not mention usability testing or prototyping. The focus is on data pipelines, machine learning models, and data analysis, which are technical tasks. Usability testing and prototyping are more relevant to UX design and research, which are not part of the described responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities related to understanding user behavior and improving user experience. The job responsibilities are centered around technical tasks such as data processing, machine learning, and data analysis, with no mention of user experience design or research. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While the job responsibilities include data analysis, the context is more technical, focusing on quantitative analysis, machine learning, and data processing. Qualitative data analysis in the context of UX research involves synthesizing user feedback and identifying themes, which is not aligned with the technical nature of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include developing scalable data pipelines and architectures, which aligns with designing and implementing software architecture. The focus on scalability and integration points in the activity description matches the need for managing data flow between systems and organizing large data sets mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities involve writing code for training, testing, and deploying machine learning models, which requires developing production-grade applications. The emphasis on clean, modular, and efficient code aligns with the need for maintaining code quality and readability in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities mention deploying machine learning models, there is no explicit mention of automating build, test, and deployment processes or maintaining version control workflows. The focus is more on MLOps best practices rather than CI/CD specifically.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which directly relates to implementing logging, metrics, and alerting solutions for system health. This activity is relevant as it involves real-time visibility and incident management.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention API development or system integration. While there is a focus on data flow between systems, it does not specifically relate to designing and implementing APIs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include writing code for testing machine learning models, which aligns with developing automated test suites. The focus on maintaining test coverage and reliability is relevant to ensuring the accuracy and performance of machine learning models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities mention incorporating MLOps best practices, which can include aspects of DevOps. However, there is no specific mention of infrastructure-as-code tools or managing cloud resources, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which aligns with investigating system accuracy and other performance metrics. However, there is no explicit mention of designing and carrying out experiments to validate hypotheses, which is a key part of this activity. Therefore, while there is some overlap, the specific focus on research and experimentation is not strongly reflected in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The responsibilities include developing scalable data pipelines and architectures, writing code for training, testing, and deploying machine learning models, and communicating findings through quantitative analysis. These tasks align with building and refining AI methods and continuously updating models, making this activity relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation or the evaluation of generated data. The focus is more on working with large-scale data sets and managing data flow, rather than creating synthetic datasets. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibilities include monitoring and troubleshooting machine learning models to maintain accuracy and performance, which involves tracking and analyzing performance metrics. This aligns with defining measurable indicators and assessing model health, making this activity relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities mention supporting data collection, analysis, and processing tasks, which could involve creating labeled datasets. However, there is no explicit mention of preparing data annotations or ensuring robust model training through labeled datasets. Therefore, while there is some potential overlap, the specific focus on labeled datasets is not strongly reflected in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing or running experiments such as A/B tests. The focus is more on developing and deploying machine learning models and managing data flow. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j101c0",
+    "responsibilities": [
+      "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+      "Support data collection, analysis, content understanding, storage, and processing tasks.",
+      "Write code for training, testing, and deploying machine learning models.",
+      "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+      "Perform requirements analysis, collaborate with team members, and document solutions.",
+      "Work with large-scale data sets and manage data flow between systems.",
+      "Organize and process large batches of text and geometric data.",
+      "Communicate findings through quantitative analysis, visuals, and actionable insights."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include supporting data collection, analysis, and processing tasks, which could involve sampling data for evaluation. However, there is no explicit mention of using statistical methods to sample data. Therefore, while there is some potential overlap, the specific focus on sampling data is not strongly reflected in the responsibilities.",
+    "is_relevant": false
+  }
+]

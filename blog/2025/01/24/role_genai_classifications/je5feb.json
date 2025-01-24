@@ -1,0 +1,23 @@
+{
+  "filename": "je5feb",
+  "responsibilities": [
+    "Understand the data needs of stakeholder teams in terms of key data models and reporting, and translate that into technical requirements.",
+    "Define, build, and manage key data pipelines in dbt that transform raw logs into canonical datasets.",
+    "Establish high data integrity standards and SLAs to ensure timely, accurate delivery of data.",
+    "Develop insightful and reliable dashboards to track performance of core metrics that will deliver insights to the whole company.",
+    "Build foundational data products, dashboards, and tools to enable self-serve analytics to scale across the company.",
+    "Influence the future roadmap of Product and GTM teams from a data systems perspective.",
+    "Become an expert in the organization\u2019s data models and the company's data architecture."
+  ],
+  "qualifications": [
+    "Expertise in building multi-step ETL jobs through tooling like dbt.",
+    "Proficiency with workflow management platforms like Airflow and version control management tools through GitHub.",
+    "Expertise in SQL and Python to transform data into accurate, clean data models.",
+    "Experience building data reporting and dashboarding in visualization tools like Hex.",
+    "A bias for action and urgency, not letting perfect be the enemy of the effective.",
+    "A \u201cfull-stack mindset\u201d, not hesitating to do what it takes to solve a problem end-to-end.",
+    "A strong disposition to thrive in ambiguity, taking initiative to create clarity and forward progress."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data management, data transformation, and analytics. The responsibilities include understanding data needs, building data pipelines, ensuring data integrity, developing dashboards, and influencing product roadmaps from a data perspective. The skills required include expertise in ETL jobs, workflow management, SQL, Python, and data visualization tools. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and analytics rather than AI or language model development or application.",
+  "is_genai_role": false
+}

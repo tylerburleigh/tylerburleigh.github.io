@@ -1,0 +1,26 @@
+{
+  "filename": "j101c0",
+  "responsibilities": [
+    "Develop scalable data pipelines and architectures, incorporating MLOps best practices for large language models (LLMs).",
+    "Support data collection, analysis, content understanding, storage, and processing tasks.",
+    "Write code for training, testing, and deploying machine learning models.",
+    "Monitor and troubleshoot machine learning models to maintain accuracy and performance.",
+    "Perform requirements analysis, collaborate with team members, and document solutions.",
+    "Work with large-scale data sets and manage data flow between systems.",
+    "Organize and process large batches of text and geometric data.",
+    "Communicate findings through quantitative analysis, visuals, and actionable insights."
+  ],
+  "skills": [
+    "Hands-on experience with training deep neural networks (e.g., CNNs, transformers).",
+    "Proficiency with at least one deep learning framework such as PyTorch or TensorFlow.",
+    "Experience with large language models (LLMs), embedding models, vector databases, and Retrieval-Augmented Generation (RAG) systems.",
+    "Experience with data modeling, architecture, and processing, including handling 2D/3D geometric data.",
+    "Proficiency in AWS cloud services, including SageMaker Studio, for scalable data processing and model development.",
+    "Strong understanding of fundamental computer science algorithms and their scalability.",
+    "Proficient in coding, covering both procedural and data-analytics-oriented languages (like Python).",
+    "Ability to convert theoretical concepts into practical, prototype-ready solutions."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing scalable data pipelines, working with large language models (LLMs), and incorporating MLOps best practices. The job also involves data collection, analysis, and processing tasks, as well as monitoring and troubleshooting machine learning models. The skills required include experience with deep learning frameworks, proficiency in AWS cloud services, and a strong understanding of computer science algorithms.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not the primary focus of the job. The job is more about implementation and maintenance rather than research.\n\n2. **AI/ML Engineer**: This option involves transforming research output into scalable AI solutions, developing data pipelines, and collaborating with research scientists. The responsibilities and skills align well with the job's focus on developing data pipelines, working with LLMs, and deploying machine learning models.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which aligns with some aspects of the job, such as monitoring and troubleshooting models. However, the job also emphasizes data pipeline development and model training, which is more aligned with the AI/ML Engineer role.\n\n4. **AI Solution Architect**: This option is about designing AI solutions and collaborating with SMEs, which is not the primary focus of the job. The job is more technical and hands-on with data pipelines and model deployment.\n\n5. **Data Scientist**: This option focuses on statistical analysis and data visualization, which is not the primary focus of the job. The job is more about developing data pipelines and deploying models.\n\n6. **Data Engineer**: This option involves designing and maintaining data pipelines, which aligns with part of the job. However, the job also involves working with LLMs and deploying machine learning models, which is more aligned with the AI/ML Engineer role.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not relevant to the job's technical focus on data pipelines and model deployment.\n\n8. **Software Engineer**: This option involves software development and system architecture, which is not the primary focus of the job. The job is more about data pipelines and machine learning models.\n\nThe job aligns most closely with the responsibilities and skills of the AI/ML Engineer, as it involves developing data pipelines, working with LLMs, and deploying machine learning models.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

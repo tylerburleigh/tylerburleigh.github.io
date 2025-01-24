@@ -1,0 +1,31 @@
+{
+  "filename": "j5f8d1",
+  "responsibilities": [
+    "Participate in the decision-making process during the design and development of applications.",
+    "Specialize in importing data from hospital applications into UHN DHP.",
+    "Deliver aggregate data to help clinicians and scientists streamline clinical workflows and research.",
+    "Build and run SQL queries for efficiently pulling data from hospital database systems.",
+    "Set up database views for projects that require access to regularly updated data.",
+    "Liaise across various UHN stakeholders to ensure projects follow UHN policies and meet all specifications.",
+    "Collaborate with internal/external resources to acquire data from Epic Clarity & Caboodle.",
+    "Build or modify Epic Clarity & Caboodle database views for projects.",
+    "Build or modify database queries to pull data from non-Epic databases and NoSQL MongoDB.",
+    "Identify and troubleshoot data quality issues.",
+    "Act as a primary support contact for Epic reporting needs.",
+    "Review peer reports for validity, accuracy, and completeness.",
+    "Identify, communicate, and resolve risks related to Epic Cogito data extract activities and initiatives."
+  ],
+  "qualifications": [
+    "Advanced knowledge of databases.",
+    "Excellent communication and interpersonal skills.",
+    "Background in data & analytics within a hospital environment.",
+    "Ability to lead requirements gathering sessions and document user requirements.",
+    "Ability to analyze data, problem-solve, and clearly communicate solutions to both technical and non-technical stakeholders.",
+    "Ability to effectively work both independently and in a team-oriented environment.",
+    "Strong project management skills.",
+    "Experience working in a fast-paced, dynamic environment.",
+    "Python/pandas experience for data processing/cleaning."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data management, database querying, and data extraction from hospital systems, specifically Epic Clarity  Caboodle. The responsibilities include building and running SQL queries, setting up database views, and troubleshooting data quality issues. The skills required include advanced knowledge of databases, data analytics, and experience with Python/pandas for data processing and cleaning. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data handling and reporting within a hospital environment, rather than on developing or utilizing AI models for natural language processing or generation tasks.",
+  "is_genai_role": false
+}

@@ -1,0 +1,39 @@
+{
+  "filename": "j630dd",
+  "responsibilities": [
+    "Design, develop, optimize, and maintain data architecture and pipelines adhering to ETL principles and business goals.",
+    "Develop and maintain scalable data pipelines and build out new integrations using AWS native technologies.",
+    "Define data requirements, gather and mine large scale structured and unstructured data, and validate data using various tools in the Big Data Environment.",
+    "Support standardization, customization, and ad hoc data analysis, and develop mechanisms to ingest, analyze, validate, normalize, and clean data.",
+    "Write unit/integration/performance test scripts and perform data analysis to troubleshoot and resolve data-related issues.",
+    "Implement processes and systems to drive data reconciliation and monitor data quality.",
+    "Lead the evaluation, implementation, and deployment of emerging tools and processes for analytic data engineering.",
+    "Develop and deliver communication and education plans on analytic data engineering capabilities, standards, and processes.",
+    "Solve complex data problems to deliver insights that help achieve business objectives.",
+    "Implement statistical data quality procedures on new data sources.",
+    "Collaborate with AI/ML engineers to create data products for analytics and data scientist team members.",
+    "Advise, consult, mentor, and coach other data and analytic professionals on data standards and practices."
+  ],
+  "qualifications": [
+    "Experience in the development of Hadoop APIs and MapReduce jobs for large scale data processing.",
+    "Hands-on programming experience in Apache Spark using SparkSQL and Spark Streaming or Apache Storm.",
+    "Experience with major components like Hive, Spark, and MapReduce.",
+    "Experience working with NoSQL data stores such as HBase, Cassandra, MongoDB.",
+    "Experienced in Hadoop clustering and Auto scaling.",
+    "Good knowledge in Apache Kafka & Apache Flume.",
+    "Knowledge of Spark and Kafka integration with multiple Spark jobs.",
+    "Advanced experience and understanding of data/Big Data, data integration, data modelling, AWS, and cloud technologies.",
+    "Ability to build processes that support data transformation, workload management, data structures, dependency, and metadata.",
+    "Ability to build and optimize queries (SQL), data sets, 'Big Data' pipelines, and architectures for structured and unstructured data.",
+    "Experience with or knowledge of Agile Software Development methodologies.",
+    "Proficiency in Data Engineering Programming Languages (e.g., Python).",
+    "Familiarity with Distributed Data Technologies (e.g., Pyspark).",
+    "Experience with cloud platform deployment and tools (e.g., Kubernetes).",
+    "Knowledge of relational SQL databases.",
+    "Experience with DevOps and continuous integration.",
+    "Proficiency in AWS cloud services and technologies (e.g., Lambda, S3, DMS, Step Functions, Event Bridge, Cloud Watch, RDS).",
+    "Experience with Databricks/ETL, IICS/DMS, GitHub, Event Bridge, Tidal."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data architecture, and big data technologies. The responsibilities include designing and maintaining data pipelines, working with AWS technologies, and collaborating with AI/ML engineers to create data products. The skills required include experience with Hadoop, Apache Spark, NoSQL databases, and cloud technologies like AWS. There is a strong emphasis on data processing, data integration, and data quality.\n\nWhile there is a mention of collaborating with AI/ML engineers, there is no specific mention of working with Generative AI (GenAI) or language models (LLMs). The focus is more on data engineering and big data processing rather than on developing or working with language models or generative AI technologies.\n\nTherefore, based on the responsibilities and skills provided, it does not appear that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

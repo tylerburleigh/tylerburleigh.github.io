@@ -1,0 +1,23 @@
+{
+  "filename": "j17d27",
+  "responsibilities": [
+    "Develop, evaluate, and improve generative models for real-world health/wellbeing applications.",
+    "Work on data and evaluation pipeline of both human and synthetic data for model evaluation.",
+    "Leverage ML technologies such as reinforcement learning with human feedback and adversarial models.",
+    "Work across the entire ML development cycle, including managing data from various endpoints and building scalable model evaluation pipelines.",
+    "Analyze model behavior, identify weaknesses, and drive design decisions with failure analysis.",
+    "Collaborate with engineers to build reliable end-to-end pipelines for long-term projects.",
+    "Work cross-functionally to apply algorithms to real-world applications with designers, clinical experts, and engineering teams.",
+    "Independently run and analyze ML experiments for real improvements."
+  ],
+  "skills": [
+    "Proficiency in Python and ML frameworks (e.g., PyTorch, TensorFlow).",
+    "Ability to write clean, performant code and collaborate using standard software development practices.",
+    "Experience with applied LLM development, prompt engineering, and chain of thought.",
+    "Experience in building data and inference pipelines to process large scale datasets.",
+    "Expertise in deep learning, including hands-on training and evaluation experience with transformers.",
+    "Strong communication skills and ability to work with multiple engineering teams on complex projects."
+  ],
+  "analysis": "The job responsibilities include developing, evaluating, and improving generative models, which directly indicates involvement with Generative AI (GenAI). The mention of leveraging ML technologies such as reinforcement learning with human feedback and adversarial models further supports this. Additionally, the responsibilities involve working on data and evaluation pipelines for both human and synthetic data, which is relevant to GenAI applications.\n\nIn the skills section, there is explicit mention of experience with applied LLM development, prompt engineering, and chain of thought, which are directly related to working with language models (LLMs). The expertise in deep learning, including hands-on training and evaluation experience with transformers, is also indicative of working with LLMs, as transformers are a foundational architecture for many LLMs.\n\nOverall, both the responsibilities and skills clearly indicate that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

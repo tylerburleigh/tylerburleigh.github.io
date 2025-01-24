@@ -1,0 +1,26 @@
+{
+  "filename": "j83a02",
+  "responsibilities": [
+    "Design, develop, and implement machine learning models for various applications, including resource planning optimization, predictive analytics, time-series forecasting, and natural language processing.",
+    "Research and implement innovative science-based algorithms to address specific business challenges.",
+    "Design and implement end-to-end machine learning workflows using AWS cloud (such as Sagemaker).",
+    "Collaborate with multi-functional teams, including data scientists, software engineers, and domain experts, to understand requirements and deliver effective solutions.",
+    "Document code, algorithms, and ensure reproducibility.",
+    "Provide technical mentorship in standard methodologies for model development and deployment to the data science team.",
+    "Effectively communicate technical concepts and insights to both technical and non-technical customers.",
+    "Deploy science models using pipeline established by engineers, including provisioning, cloud resource management, and containerization as necessary."
+  ],
+  "skills": [
+    "Proficiency in developing science models using Python, Java, or similar languages.",
+    "Expertise in SQL.",
+    "Proficiency with version control systems (e.g., Git) and coding practices.",
+    "Strong understanding of cloud platforms for ML pipeline such as AWS Sagemaker.",
+    "Experience with containerization & orchestration tools (e.g., Docker, Kubernetes).",
+    "Experience with Infrastructure as Code tools (e.g., Terraform, CloudFormation).",
+    "Strong problem-solving skills.",
+    "Ability to work independently and in a fast-paced environment.",
+    "Excellent oral and written communication skills."
+  ],
+  "analysis": "The job responsibilities include designing, developing, and implementing machine learning models for various applications, one of which is natural language processing (NLP). NLP is a field that often involves the use of language models, including large language models (LLMs). However, the job description does not explicitly mention working with Generative AI or LLMs specifically. The focus seems to be on a broader range of machine learning applications, including resource planning optimization, predictive analytics, and time-series forecasting.\n\nThe skills required for the job include proficiency in developing science models using programming languages like Python and Java, expertise in SQL, and experience with cloud platforms like AWS Sagemaker. While these skills are relevant to working with machine learning models, they do not specifically indicate a focus on Generative AI or LLMs.\n\nOverall, while the job involves natural language processing, which could potentially involve LLMs, there is no explicit mention or strong indication that the job specifically involves working with Generative AI or LLMs.",
+  "is_genai_role": false
+}

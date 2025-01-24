@@ -1,0 +1,27 @@
+{
+  "filename": "jf4127",
+  "responsibilities": [
+    "Design and maintain Maven\u2019s data transformation and analytics infrastructure to support Revenue Operations, Finance, and Go-to-Market (GTM) teams.",
+    "Build tools to automate enrollment forecasts, integrating key inputs from Customer Success, Member Growth Marketing (MGM), and Strategic Finance teams.",
+    "Partner with the GTM Architect, Salesforce Admin, and account leaders to design and develop data structures for financial and GTM reporting.",
+    "Cleanse and integrate historical datasets while implementing data governance to ensure accuracy and consistency.",
+    "Develop an understanding of Salesforce to effectively structure and utilize data, enabling comprehensive reporting on the deal lifecycle\u2014from lead generation to revenue recognition.",
+    "Drive operational efficiency by identifying areas for process improvement and recommending highly scalable solutions.",
+    "Act as a bridge between Revenue Operations, Product, Finance, Business Intelligence, and Engineering teams to optimize data structures and maximize actionable insights."
+  ],
+  "qualifications": [
+    "Fluency in SQL with proficiency in SQL development.",
+    "Hands-on experience with Python or R.",
+    "Ability to translate business requirements into technical specifications.",
+    "Proficient in using data modeling and visualization platforms; Looker is a plus.",
+    "Skilled in leveraging tools like dbt for cleaning, transforming, testing, and deploying analytics-ready datasets.",
+    "Experienced in managing and working with Data Lakes or Data Warehouses such as Snowflake, Trino, Redshift, and BigQuery.",
+    "Strong communication skills, with the ability to collaborate effectively and translate complex datasets or queries into clear, accessible insights for non-technical audiences.",
+    "Familiar with working with APIs for data integration and analysis.",
+    "Ability to learn general functional and technical aspects of firm's Financial and GTM systems whenever required.",
+    "Strong knowledge of Salesforce data structures.",
+    "Experience with Netsuite and forecasting applications is a plus."
+  ],
+  "analysis": "The job responsibilities and skills listed do not indicate any direct involvement with Generative AI (GenAI) or language models (LLMs). The responsibilities focus on data transformation, analytics infrastructure, data governance, and operational efficiency, primarily within the context of financial and go-to-market reporting. The skills required include proficiency in SQL, Python or R, data modeling, and working with data lakes or warehouses, which are typical for data engineering and analytics roles. There is no mention of tasks related to natural language processing, language model development, or generative AI applications. The focus is on data management, integration, and reporting rather than on AI or language model technologies.",
+  "is_genai_role": false
+}

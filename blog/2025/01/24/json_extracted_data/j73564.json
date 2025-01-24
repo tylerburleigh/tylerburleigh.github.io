@@ -1,0 +1,24 @@
+{
+  "responsibilities": [
+    "Develop and evaluate methods for evaluation and supervision of advanced AI systems.",
+    "Design experiments to exemplify failure modes of current supervision protocols for language models.",
+    "Design experiments to simulate expertise and capability gaps between supervisor and model for scalable oversight experiments.",
+    "Develop new supervision protocols and gather human annotations using these protocols.",
+    "Train language models using reinforcement learning, analyze their behavior, and compare between models."
+  ],
+  "skills": [
+    "Proficiency in frameworks like Pytorch, Jax, or Tensorflow.",
+    "Ability to interpret research literature and quickly turn new ideas into prototypes.",
+    "Strong written and verbal communication skills to operate in a cross-functional team.",
+    "Practical ML prototyping and debugging skills."
+  ],
+  "qualifications": [
+    "Commitment to promoting safe, secure, and trustworthy AI deployments.",
+    "Practical experience conducting technical research collaboratively.",
+    "A track record of published research in machine learning, particularly in generative AI.",
+    "At least three years of experience addressing sophisticated ML problems in a research setting or product development.",
+    "Hands-on experience with open source LLM fine-tuning or involvement in bespoke LLM fine-tuning projects.",
+    "Experience in crafting evaluations or a background in data science roles related to LLM technologies.",
+    "Experience working with cloud technology stack (e.g., AWS or GCP) and developing machine learning models in a cloud environment."
+  ]
+}

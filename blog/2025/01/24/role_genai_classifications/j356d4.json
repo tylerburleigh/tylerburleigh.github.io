@@ -1,0 +1,17 @@
+{
+  "filename": "j356d4",
+  "responsibilities": [
+    "Develop and maintain APIs using NVIDIA Triton Inference Server for scalable deployment of Large Language Models (LLM).",
+    "Implement and optimize pre-processing and post-processing pipelines tailored for LLMs to improve accuracy and efficiency.",
+    "Work with Retrieval-Augmented Generation (RAG) frameworks to enhance the model\u2019s response generation capabilities.",
+    "Collaborate with data scientists, software engineers, and product teams to integrate and deploy ML solutions into production.",
+    "Troubleshoot and resolve issues related to model inference, performance, and scalability."
+  ],
+  "qualifications": [
+    "Proficient in Python and relevant ML frameworks (e.g., PyTorch, TensorFlow).",
+    "Strong problem-solving skills.",
+    "Ability to work in a fast-paced environment."
+  ],
+  "analysis": "The job responsibilities clearly indicate involvement with Large Language Models (LLMs). The first responsibility mentions developing and maintaining APIs for scalable deployment of LLMs using NVIDIA Triton Inference Server. The second responsibility involves optimizing pipelines specifically tailored for LLMs. The third responsibility mentions working with Retrieval-Augmented Generation (RAG) frameworks, which are often used to enhance the capabilities of language models. These responsibilities strongly suggest that the job involves working with language models.\n\nThe skills section lists proficiency in Python and relevant ML frameworks like PyTorch and TensorFlow, which are commonly used in developing and deploying machine learning models, including LLMs. While the skills section does not explicitly mention LLMs or GenAI, the responsibilities provide clear evidence of working with these technologies.\n\nOverall, the job involves working with LLMs, which are a type of Generative AI, as they generate text-based responses and solutions.",
+  "is_genai_role": true
+}

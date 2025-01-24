@@ -1,0 +1,27 @@
+{
+  "filename": "j2b02b",
+  "responsibilities": [
+    "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+    "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+    "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+    "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+    "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+    "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+    "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+    "Build frameworks and tools that empower data producers to maintain high data quality.",
+    "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+  ],
+  "qualifications": [
+    "Expertise in Python or Scala, and strong proficiency in SQL for data modeling and optimization.",
+    "Hands-on experience with cloud data warehouses like Snowflake.",
+    "Familiarity with modern orchestration tools like Airflow or Dagster.",
+    "Experience with advanced data architectures, such as lakehouses and medallion architectures.",
+    "Proven ability to design and implement scalable ETL pipelines using technologies like dbt and Databricks.",
+    "Exposure to or interest in data platform concepts, such as building data contracts and governance frameworks.",
+    "Excellent problem-solving skills, with an ability to balance innovation with practical implementation.",
+    "Strong communication skills and the ability to work independently to gather requirements and align cross-functional stakeholders.",
+    "Knowledge of cloud ecosystems, especially AWS, as a plus."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering and data architecture. The responsibilities include designing and optimizing data systems, managing data pipelines, collaborating with teams to curate datasets, and supporting data governance initiatives. The skills required include expertise in Python or Scala, proficiency in SQL, experience with cloud data warehouses like Snowflake, and familiarity with orchestration tools like Airflow or Dagster. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data systems, data pipelines, and data governance, which are typical of data engineering roles rather than roles involving GenAI or LLMs.",
+  "is_genai_role": false
+}

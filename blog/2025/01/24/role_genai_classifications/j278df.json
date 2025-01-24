@@ -1,0 +1,18 @@
+{
+  "filename": "j278df",
+  "responsibilities": [
+    "Write and maintain core libraries and services for collaborative teams of robots, including motion deconfliction and contingency management of fast mover air vehicles.",
+    "Own major feature development and rollout of large, complex features for products, such as developing terminal-phase autonomy for various air vehicles and creating test plans on live surrogates.",
+    "Work closely with Anduril and 3rd party vehicle hardware teams, as well as operational subject matter experts, to align on requirements during product development and iterate towards a final design."
+  ],
+  "skills": [
+    "Expertise in computer vision, motion planning, SLAM, controls, estimation, and secure communications.",
+    "Proficiency in C++ or Rust in a Linux development environment.",
+    "Ability to troubleshoot and analyze remotely deployed software systems.",
+    "Experience working with and testing electrical and mechanical systems.",
+    "Knowledge of data structures, algorithms, concurrency, and code optimization.",
+    "Experience in multi-agent coordination of UAVs and complex frame transformation problems."
+  ],
+  "analysis": "The job responsibilities focus on developing and maintaining core libraries and services for collaborative teams of robots, particularly in the context of air vehicles. This includes motion deconfliction, contingency management, and terminal-phase autonomy. The skills required emphasize expertise in computer vision, motion planning, SLAM (Simultaneous Localization and Mapping), controls, estimation, and secure communications. Additionally, proficiency in programming languages like C++ or Rust, and experience with electrical and mechanical systems, are highlighted.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on robotics, motion planning, and multi-agent coordination, which are not directly related to GenAI or LLMs. The job seems to be more about developing autonomous systems and software for UAVs rather than working with language models or generative AI technologies.",
+  "is_genai_role": false
+}

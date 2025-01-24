@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention developing and managing infrastructure for training models, which could include language models. However, the focus is on Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models, not specifically on large language models or their fine-tuning. The responsibilities do not explicitly mention domain-specific tasks or techniques like parameter-efficient fine-tuning or prompt tuning, which are central to this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or refining prompt instructions for large language models. The focus is more on developing strategic solutions and influencing the AI community, rather than crafting and refining prompts for LLMs. Therefore, this Activity does not seem directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "One of the Job Responsibilities is to deliver solutions to improve the fairness of models, which aligns with evaluating the quality, reliability, and fairness of models. Although the responsibilities do not specifically mention large language models, the general task of model evaluation and performance assessment is relevant to the goal of improving model fairness and security.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities focus on developing infrastructure and solutions for model improvement and innovation, but they do not explicitly mention integrating model outputs into end-user experiences or pipelines. While integration could be a part of the broader task of accelerating innovation, it is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include developing state-of-the-art solutions for responsible AI, which could involve analyzing model outputs to identify errors, biases, or potential improvements. This aligns with the Activity of model interpretability and debugging, as understanding and refining models is crucial for responsible AI development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include developing and managing a scalable, reliable, optimized infrastructure for AI models, which aligns with designing end-to-end workflows for AI-driven pipelines. This activity is relevant as it involves ensuring seamless integration of components to deliver high-quality results, which is crucial for training, testing, and improving AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities mention developing a scalable infrastructure, which involves assessing computational demands and planning for scalability. This activity is relevant as it addresses the need for balancing performance, cost, and security, which are key considerations in managing AI model infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities focus on delivering strategic solutions to accelerate innovation and improve model performance. This activity is relevant as it involves employing techniques to maintain low response times and handle spikes in requests, which are essential for optimizing AI model performance and ensuring reliability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include developing state-of-the-art solutions for responsible AI, which involves continuous improvement and governance of AI models. This activity is relevant as it focuses on retraining, versioning, and ensuring traceability, which are critical for maintaining and improving AI models over time.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not explicitly mention system interoperability or integration with existing enterprise systems. While integration could be a part of managing AI models, the responsibilities focus more on developing and improving models rather than aligning them with other systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include delivering solutions to improve the fairness and security of AI models, which involves evaluating AI quality. This activity is relevant as it focuses on investigating system accuracy, robustness, and fairness, which are essential for developing responsible AI solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve developing AI models, which aligns with building and refining AI methods for automated insights. This activity is relevant as it focuses on analyzing user behavior and system performance, which are crucial for improving AI models and delivering strategic solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. While generating synthetic data could be part of improving AI models, the responsibilities focus more on developing and managing the infrastructure and solutions for AI models rather than data generation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include delivering solutions to improve AI models, which involves identifying performance metrics and success criteria. This activity is relevant as it focuses on defining measurable indicators to assess model health and guide decision-making, which is essential for improving AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While labeled datasets are important for AI evaluation and optimization, the responsibilities focus more on developing and managing AI models and infrastructure rather than data preparation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include delivering novel solutions to improve AI models, which could involve designing and analyzing experiments. This activity is relevant as it focuses on comparing model variants and analyzing outcomes to inform decisions, which is crucial for innovation and improvement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. While data sampling is important for AI evaluation, the responsibilities focus more on developing and managing AI models and infrastructure rather than data evaluation techniques.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on developing and managing infrastructure for AI models, improving fairness, security, and innovation, and influencing the AI community. Designing labeling tasks for data annotation is not directly mentioned or implied in these responsibilities. The focus is more on high-level strategic solutions and infrastructure management rather than the specifics of data annotation processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention or imply the collection of human annotation data. The responsibilities are centered around developing infrastructure and strategic solutions for AI models, which are higher-level tasks compared to the logistical and management tasks involved in collecting annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities do not explicitly mention analyzing human annotation data. The focus is on developing and managing infrastructure, improving model fairness and security, and influencing the AI community. While analyzing data could be a part of improving models, the responsibilities do not specifically highlight this activity, suggesting it is not a primary focus.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on developing and managing infrastructure for AI models, improving fairness, security, and innovation, and influencing the AI community. While statistical methods are crucial for data analysis and model validation, the responsibilities do not explicitly mention statistical techniques or hypothesis testing. The focus is more on infrastructure, fairness, security, and innovation rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities emphasize developing infrastructure and delivering strategic solutions for AI models. While data visualization and exploratory analysis are important for understanding data and communicating insights, the responsibilities do not explicitly mention these activities. The focus is more on infrastructure and strategic solutions rather than data visualization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include developing infrastructure for AI models and improving their fairness, security, and innovation. Data mining and analysis of large datasets could be relevant for understanding model performance and user interactions, which aligns with improving model fairness and innovation. However, the responsibilities do not explicitly mention data mining or analysis of conversational datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities involve developing and managing infrastructure for AI models, which could include data models and pipelines for analytics. This activity is relevant as it aligns with the need for scalable, reliable infrastructure to support AI model development and performance tracking.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities focus on improving AI models' fairness, security, and innovation. Defining metrics and success criteria is crucial for assessing model health and guiding decision-making, which aligns with the responsibilities of delivering strategic solutions and influencing the AI community. This activity is relevant as it supports the evaluation and improvement of AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention developing and managing a scalable, reliable, optimized infrastructure, which aligns with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The use of containerization, orchestration, and real-time monitoring to ensure performance, scalability, and reliability of AI systems in production is also relevant to the responsibilities of managing infrastructure for AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities emphasize improving the fairness, security, and innovation of AI models, which can be supported by real-time monitoring and logging solutions to track model performance, latency, and errors in production. Detecting data drift or concept drift early is crucial for maintaining reliability and minimizing downtime, which aligns with the responsibility of managing a scalable and reliable infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or the need for reproducibility and traceability throughout the model lifecycle. While these are important aspects of MLOps, they are not directly referenced in the given responsibilities, which focus more on infrastructure, fairness, security, and innovation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include delivering novel, strategic solutions to improve the fairness and security of AI models, which can be supported by automating validation steps and introducing guardrails like canary testing or shadow deployments. These practices help verify stability and ensure that changes do not negatively impact model performance, aligning with the responsibility of influencing the AI community with state-of-the-art solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The responsibility to architect, develop, and manage a scalable, reliable, optimized infrastructure directly relates to optimizing and scaling model-serving infrastructure using cloud platforms and container orchestration tools. Designing automated scaling policies to handle traffic spikes is relevant to ensuring consistent response times, which is a key aspect of managing infrastructure.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities explicitly mention improving the security of AI models, which aligns with establishing governance frameworks for data privacy, ethics, and regulatory compliance. Implementing role-based access controls, audit trails, and secure deployment practices is relevant to protecting intellectual property and sensitive information, supporting the responsibility of delivering secure solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities focus on delivering strategic solutions to accelerate innovation and influence the AI community with state-of-the-art solutions. While model lifecycle management and continuous improvement are important for adapting models to evolving data and requirements, these aspects are not explicitly mentioned in the responsibilities. The focus is more on infrastructure and strategic improvements rather than continuous model iteration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on developing and managing infrastructure for AI models, improving fairness, security, and innovation, and influencing the AI community. User interviews and surveys are typically used to gather insights on user needs and preferences, which are more aligned with user experience research rather than the technical and strategic focus of the job responsibilities. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities emphasize developing AI models and solutions, with a focus on fairness, security, and innovation. Usability testing and prototyping are activities related to enhancing user experience, which is not explicitly mentioned in the job responsibilities. The focus of the job is more on technical and strategic aspects rather than user experience, making this activity not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities centered around understanding user segments and improving user flows. The job responsibilities are focused on AI model development, fairness, security, and innovation, which do not directly involve user experience research or user journey mapping. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and needs, which is more aligned with user experience research. The job responsibilities are focused on technical and strategic aspects of AI model development, such as fairness, security, and innovation, rather than user experience. As such, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include developing and managing a scalable, reliable, optimized infrastructure, which aligns with designing and implementing software architecture. This involves defining system components and ensuring alignment with performance requirements, which is crucial for training and improving AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention delivering novel, strategic solutions and influencing the AI community, which implies the need for developing production-grade applications. Writing clean, modular, and efficient code is essential for implementing these solutions effectively.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While CI/CD is important for software engineering, the job responsibilities do not explicitly mention automating build, test, and deployment processes. The focus is more on developing models and solutions rather than the CI/CD pipeline.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. The focus is on developing and improving AI models rather than maintaining system health or resolving production incidents.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities do not explicitly mention API development or system integration. The focus is on developing AI models and solutions rather than enabling internal and external integrations.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities involve developing and improving AI models, which implies the need for software testing and quality assurance to ensure model accuracy and reliability. Testing is crucial for maintaining the quality of AI solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibility of managing a scalable, reliable, optimized infrastructure aligns with leveraging infrastructure-as-code tools and embracing a DevOps culture. This is essential for provisioning cloud resources and ensuring efficient feedback loops in AI model development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include delivering novel, strategic solutions to improve the fairness and security of Axon models, as well as influencing the AI community by developing state-of-the-art solutions for responsible AI. These tasks align with evaluating AI quality, as they involve investigating system accuracy, robustness, and fairness, which are key performance metrics. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on developing and managing infrastructure for AI models and delivering solutions to improve fairness, security, and innovation. While developing AI systems and algorithms for automated insights is related to building and refining AI methods, the job responsibilities do not explicitly mention analyzing user behavior or system performance for insights. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities include developing and managing infrastructure for AI models and improving model fairness and security. Synthetic data generation can be a part of improving AI models by providing diverse datasets for training and testing. However, the responsibilities do not explicitly mention synthetic data generation. Thus, while it could be indirectly relevant, it is not explicitly aligned with the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities involve improving the fairness and security of models and influencing the AI community with state-of-the-art solutions. Identifying performance metrics and success criteria is crucial for assessing model health and guiding decision-making, which aligns with the responsibility of delivering strategic solutions. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities include developing infrastructure for AI models and improving model fairness and security. Creating labeled datasets is essential for robust model training and performance measurement, which supports the development and improvement of AI models. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities focus on developing infrastructure and delivering solutions to improve model fairness, security, and innovation. Designing, running, and analyzing experiments can be part of validating and improving AI models, which aligns with the responsibility of delivering strategic solutions. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j8c73a",
+    "responsibilities": [
+      "Architect, develop and manage a scalable, reliable, optimized infrastructure to train, test, and improve Automatic Speech Recognition, Computer Vision, and Natural Language Understanding models.",
+      "Deliver novel, strategic solutions to improve the fairness of Axon models.",
+      "Deliver novel, strategic solutions to improve the security of Axon models.",
+      "Deliver novel, strategic solutions to accelerate innovation.",
+      "Influence the AI community by developing state-of-the-art solutions for responsible AI."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include developing infrastructure for AI models and improving model fairness and security. Sampling data for evaluation is a part of ensuring a representative dataset for training and evaluation, which supports the development and improvement of AI models. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  }
+]

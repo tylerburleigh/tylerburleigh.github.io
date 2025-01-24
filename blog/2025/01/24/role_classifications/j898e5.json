@@ -1,0 +1,25 @@
+{
+  "filename": "j898e5",
+  "responsibilities": [
+    "Design, develop, and maintain large-scale data systems, architectures, and pipelines",
+    "Develop and maintain data pipelines to ensure data quality and integrity",
+    "Write efficient Python scripts to automate data processing, cleaning, and visualization tasks",
+    "Analyze large datasets to identify trends, opportunities, and challenges in retail operations",
+    "Optimize data processes and SQL queries for massive datasets",
+    "Utilize Large Language Models (LLMs) via APIs for natural language processing tasks",
+    "Collaborate with data scientists to develop predictive models and improve them",
+    "Communicate complex data insights and recommendations to non-technical stakeholders"
+  ],
+  "skills": [
+    "Strong SQL skills for querying and manipulating large datasets",
+    "Proficiency in Python for data analysis and automation",
+    "Experience with Airflow or similar workflow orchestrators",
+    "Experience with Airbyte or similar integration tools",
+    "Knowledge of machine learning algorithms and their implementation in production",
+    "Ability to work in a fast-paced environment and meet deadlines",
+    "Strong analytical, problem-solving, and communication skills"
+  ],
+  "analysis": "The job responsibilities and skills focus on designing, developing, and maintaining data systems, pipelines, and architectures, with a strong emphasis on data quality, SQL, Python, and collaboration with data scientists. The job also involves utilizing Large Language Models (LLMs) for natural language processing tasks and communicating data insights to stakeholders.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which is not the primary focus of the job. The job does involve LLMs, but the emphasis is more on data systems and pipelines rather than AI research.\n\n2. **AI/ML Engineer**: This option involves transforming research into AI solutions and developing data pipelines, which aligns with some aspects of the job. However, the job's focus on data systems and SQL is more aligned with data engineering than AI/ML engineering.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which is not the primary focus of the job. The job is more about data systems and pipelines rather than AI infrastructure.\n\n4. **AI Solution Architect**: This option involves designing AI solutions and collaborating with stakeholders, which partially aligns with the job's responsibilities of communicating data insights. However, the job's focus on data systems and pipelines is not a primary focus here.\n\n5. **Data Scientist**: This option involves data analysis, predictive modeling, and collaboration with cross-functional teams, which aligns with some aspects of the job. However, the job's focus on data systems and pipelines is more aligned with data engineering.\n\n6. **Data Engineer**: This option involves designing and maintaining data pipelines and architectures, optimizing data processes, and collaborating with data scientists, which closely aligns with the job's responsibilities and skills. The job's emphasis on SQL, Python, and data quality is a strong match for this option.\n\n7. **Product Manager**: This option focuses on product vision, strategy, and collaboration, which is not the primary focus of the job. The job is more technical and data-focused.\n\n8. **Software Engineer**: This option involves software development and system architecture, which is not the primary focus of the job. The job is more about data systems and pipelines.\n\nThe job is most similar to the \"Data Engineer\" option, as it involves designing, developing, and maintaining data systems and pipelines, with a strong emphasis on SQL, Python, and collaboration with data scientists.",
+  "role_classification": 6,
+  "role_title": "Data Engineer"
+}

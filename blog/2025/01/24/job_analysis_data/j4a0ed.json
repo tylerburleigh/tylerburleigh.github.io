@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "j4a0ed",
+    "responsibilities": [
+      "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+      "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+      "Implement machine learning algorithms to automatically detect discrepancies, anomalies, and errors.",
+      "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+      "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+      "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+      "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on data engineering tasks such as assembling datasets, creating data pipelines, implementing machine learning algorithms, and maintaining ETL infrastructure. There is no mention of tasks related to training or fine-tuning language models, which is a specialized task in the field of machine learning and AI, particularly related to language models. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j4a0ed",
+    "responsibilities": [
+      "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+      "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+      "Implement machine learning algorithms to automatically detect discrepancies, anomalies, and errors.",
+      "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+      "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+      "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+      "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention any tasks related to crafting or refining prompts for language models. The focus is on data workflows, machine learning for anomaly detection, and infrastructure maintenance. Prompt engineering is a specific task related to optimizing language model outputs, which is not covered in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j4a0ed",
+    "responsibilities": [
+      "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+      "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+      "Implement machine learning algorithms to automatically detect discrepancies, anomalies, and errors.",
+      "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+      "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+      "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+      "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include implementing machine learning algorithms to detect discrepancies and errors, which may involve some form of model evaluation. However, the specific focus on evaluating large language models using metrics like perplexity or BLEU is not mentioned. The responsibilities are more aligned with data engineering and infrastructure rather than model evaluation in the context of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j4a0ed",
+    "responsibilities": [
+      "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+      "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+      "Implement machine learning algorithms to automatically detect discrepancies, anomalies, and errors.",
+      "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+      "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+      "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+      "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include building and maintaining infrastructure for data extraction, transformation, and loading, as well as collaborating with various teams to address technical challenges. While these tasks involve integration and workflow design, they do not specifically mention incorporating LLM outputs into applications. The focus is more on data pipelines and infrastructure rather than LLM integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j4a0ed",
+    "responsibilities": [
+      "Assemble large, complex datasets and create data pipelines that fulfill both functional and non-functional business requirements.",
+      "Identify and design enhancements to streamline data workflows and automate quality monitoring.",
+      "Implement machine learning algorithms to automatically detect discrepancies, anomalies, and errors.",
+      "Implement CI/CD practices to enhance data ingestion and delivery processes.",
+      "Build and maintain infrastructure for efficient extraction, transformation, and loading (ETL) of data from diverse sources.",
+      "Collaborate closely with data, design, product, and executive teams to address technical data-related challenges.",
+      "Provide technical assistance to various teams within the organization, ensuring their data infrastructure needs are met."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities mention implementing machine learning algorithms to detect discrepancies and errors, which could involve some level of debugging and analysis. However, there is no specific mention of model interpretability or debugging in the context of language models. The responsibilities are more focused on data engineering and infrastructure support.",
+    "is_relevant": false
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "filename": "jbd9cf",
+  "responsibilities": [
+    "Develop and implement robust tooling and testing solutions for the Motion Planner stack, ensuring code is production ready, well documented, and thoroughly tested.",
+    "Continuously improve the system's design to promote modularity and expandability, making it easier to adapt and extend in the future.",
+    "Work closely with users to understand their requirements, identify any pain points, and deliver impactful solutions.",
+    "Provide ongoing support for issues reported by users, assessing and prioritizing the criticality of these issues.",
+    "Take ownership of specific components and drive their technical roadmap, ensuring alignment with overall project goals.",
+    "Support team members to improve development practices, merge request reviews, debugging, and ideation sessions."
+  ],
+  "skills": [
+    "Robust development skills in modern C++ (C++17 or higher).",
+    "Proficiency with the C++ Standard library and modern features of the language.",
+    "Experience with build systems, particularly the Bazel framework.",
+    "Debugging skills, especially with gdb.",
+    "Solid software engineering foundations, including design patterns, algorithms, and data structures.",
+    "Experience with multi-threading in C++.",
+    "Knowledge of Python or Javascript (bonus)."
+  ],
+  "analysis": "The job responsibilities focus on developing and implementing tooling and testing solutions for a Motion Planner stack, improving system design, understanding user requirements, and providing support for issues. The skills required include proficiency in modern C++ and its standard library, experience with build systems like Bazel, debugging skills, and solid software engineering foundations. There is no mention of working with Generative AI, language models, or any related technologies such as natural language processing, machine learning, or AI model development. The focus is primarily on software engineering and development in C++.",
+  "is_genai_role": false
+}

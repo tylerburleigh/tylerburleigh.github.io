@@ -1,0 +1,28 @@
+{
+  "filename": "jb4074",
+  "responsibilities": [
+    "Assemble large, complex sets of data that meet non-functional and functional requirements.",
+    "Identify, design, and implement internal process improvements including re-designing infrastructure for greater scalability, optimizing data delivery, and automating manual processes.",
+    "Build required infrastructure for optimal extraction, transformation, and loading of data from various data sources.",
+    "Curate and maintain data that is stored in support of metrics and evaluation.",
+    "Work with developers to ensure key data points are stored in a Postgres database.",
+    "Collaborate with data providers and back-end API developers to normalize schemas and define data flows for persistence and analytics.",
+    "Design, build, test, maintain, and automate data collection/pipelines.",
+    "Develop Dashboards for Data Analytics.",
+    "Implement Artificial Intelligence/Machine Learning.",
+    "Use Agile methodologies to develop software."
+  ],
+  "skills": [
+    "Ability to assemble and manage large, complex data sets.",
+    "Proficiency in identifying, designing, and implementing process improvements.",
+    "Experience in building infrastructure for data extraction, transformation, and loading.",
+    "Capability to curate and maintain data for metrics and evaluation.",
+    "Collaboration skills with developers and data providers.",
+    "Experience in designing and automating data collection/pipelines.",
+    "Dashboard development for data analytics.",
+    "Implementation of Artificial Intelligence/Machine Learning.",
+    "Familiarity with Agile methodologies."
+  ],
+  "analysis": "The job responsibilities and skills focus primarily on data management, infrastructure development, and process optimization. Key tasks include assembling large data sets, designing and implementing process improvements, building infrastructure for data extraction and transformation, and developing dashboards for data analytics. There is a mention of implementing Artificial Intelligence/Machine Learning, but it is not specific to Generative AI or language models. The responsibilities and skills do not explicitly reference working with Generative AI (GenAI) or language models (LLMs). Instead, they emphasize data handling, infrastructure, and general AI/ML implementation, which can encompass a wide range of AI technologies beyond just GenAI or LLMs.",
+  "is_genai_role": false
+}

@@ -1,0 +1,25 @@
+{
+  "filename": "j1a9c2",
+  "responsibilities": [
+    "Ensure that systems which power ChatGPT training and development run smoothly.",
+    "Dive into large ML codebases to understand and debug systems issues.",
+    "Work with researchers to build tools for data management, model configuration, evaluation, and more.",
+    "Create reusable Python libraries with great abstractions usable across ML projects.",
+    "Profile large model reinforcement learning training and identify and address bottlenecks.",
+    "Identify experiment failures in a new research cluster.",
+    "Redesign data pipelines to handle diverse multimodal data.",
+    "Build front-end evaluation tooling for use across the company."
+  ],
+  "skills": [
+    "Experience working in complex technical environments.",
+    "Experience debugging ML systems.",
+    "Experience with reinforcement learning and/or transformers.",
+    "Proficiency in Python.",
+    "Experience with Kubernetes / distributed infrastructure.",
+    "Experience with GPUs.",
+    "Experience with one or more large-scale data systems such as Beam or Spark."
+  ],
+  "analysis": "The Job responsibilities and skills focus on ensuring the smooth operation of systems for ChatGPT training and development, debugging ML systems, working with researchers to build tools, creating reusable Python libraries, profiling large model reinforcement learning training, identifying experiment failures, redesigning data pipelines, and building front-end evaluation tooling. The skills required include experience in complex technical environments, debugging ML systems, reinforcement learning, proficiency in Python, Kubernetes, distributed infrastructure, GPUs, and large-scale data systems like Beam or Spark.\n\n1. **AI Research Scientist**: This option focuses on conducting experiments, collaborating with engineers, and staying current with AI research. The skills required are more research-oriented, focusing on LLMs, statistics, and experimental methods. This does not align well with the job's focus on system operations and infrastructure.\n\n2. **AI/ML Engineer**: This role involves productionizing AI models, developing data pipelines, and collaborating with researchers. The skills required include proficiency in Python and software engineering best practices. While there is some overlap in skills, the primary focus on transforming research output into scalable solutions does not fully align with the job's emphasis on system operations and debugging.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on reliable deployment, scaling, and monitoring of AI systems, setting up CI/CD pipelines, and managing infrastructure. The skills required include a strong DevOps background, familiarity with orchestration/monitoring tools, and optimizing compute usage. This aligns well with the job's responsibilities of ensuring system operations, debugging, and infrastructure management.\n\n4. **AI Solution Architect**: This role involves designing AI solutions, collaborating with SMEs, and providing thought leadership. The skills required focus on LLM capabilities, conversational design, and stakeholder management. This does not align with the job's technical and infrastructure focus.\n\n5. **Data Scientist**: This option focuses on statistical analysis, machine learning, and data visualization. The skills required include proficiency in Python, ML libraries, and data visualization tools. While there is some overlap in Python proficiency, the primary focus on data analysis does not align with the job's system operations and infrastructure focus.\n\n6. **Data Engineer**: This role involves designing and maintaining data pipelines and architectures. The skills required include proficiency in Python, SQL, distributed data processing frameworks, and cloud-based data ecosystems. While there is some overlap in data pipeline responsibilities, the primary focus on data engineering does not fully align with the job's emphasis on system operations and debugging.\n\n7. **Product Manager**: This role focuses on driving product vision and strategy, conducting research, and collaborating with teams. The skills required include product lifecycle management, communication, and stakeholder management. This does not align with the job's technical and infrastructure focus.\n\n8. **Software Engineer**: This option involves designing and maintaining software applications, writing code, and participating in system architecture discussions. The skills required include proficiency in programming languages, modern frameworks, and software design principles. While there is some overlap in Python proficiency, the primary focus on software development does not align with the job's system operations and infrastructure focus.\n\nThe most relevant option is the \"MLOps / AI Infrastructure Engineer\" as it aligns well with the job's focus on ensuring system operations, debugging, and infrastructure management.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

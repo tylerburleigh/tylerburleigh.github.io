@@ -1,0 +1,17 @@
+{
+  "filename": "jf832f",
+  "responsibilities": [
+    "Design and build experimental machine learning pipelines that underpin core functionality of our robotics solutions.",
+    "Keep up to date with the latest robotics ML research and implement promising techniques.",
+    "Collaborate with cross-functional teams to integrate AI models and data pipelines into real-world robotic applications, ensuring robust and scalable outcomes."
+  ],
+  "qualifications": [
+    "Understanding of multimodal models, modern ML architectures (transformers, diffusion models, etc.), and imitation / reinforcement learning.",
+    "Experience with deep learning frameworks such as PyTorch, JAX, TensorFlow, or similar.",
+    "Familiarity with robotics and simulation stacks.",
+    "Excellent oral and written communication skills.",
+    "Ability to work in a dynamic and collaborative team environment."
+  ],
+  "analysis": "The job involves designing and building machine learning pipelines for robotics solutions, which suggests a focus on applying AI techniques to robotics. The responsibilities mention keeping up to date with robotics ML research and integrating AI models into robotic applications. The skills required include understanding multimodal models and modern ML architectures like transformers and diffusion models, which are relevant to both GenAI and LLMs. However, the primary focus appears to be on robotics and simulation, rather than specifically on language models or generative AI. While transformers are a key component of LLMs, the context here is more about their application in robotics rather than language processing or generation. Therefore, the job does not explicitly involve working with GenAI or LLMs.",
+  "is_genai_role": false
+}

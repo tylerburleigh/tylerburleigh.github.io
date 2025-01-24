@@ -1,0 +1,702 @@
+[
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention designing and implementing solutions in specialized ML areas, which could include fine-tuning and customizing language models. However, there is no explicit mention of working with large language models or specific techniques like parameter-efficient fine-tuning. The responsibilities focus more on general software development, collaboration, documentation, and debugging, rather than specific tasks related to language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention prompt engineering or iterative refinement of language models. The responsibilities are more focused on software development, collaboration, and debugging, without specific reference to crafting and refining prompts for language models. Therefore, this activity does not seem directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include testing product or system development code and ensuring best practices, which could involve some form of evaluation and performance assessment. However, there is no specific mention of evaluating large language models or using metrics like perplexity or BLEU. The responsibilities are more general and do not focus on language model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include designing and implementing solutions, which could involve integrating outputs into applications. However, there is no specific mention of integrating large language model outputs or handling content moderation and retrieval augmentation. The focus is more on general software development and debugging rather than specific integration tasks related to language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include debugging and resolving product or system issues, which aligns with the activity of model interpretability and debugging. While the responsibilities do not specifically mention language models, the task of analyzing outputs to identify errors and employing debugging tools is relevant to the general debugging and issue resolution mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include designing and implementing solutions in specialized ML areas, which aligns with the activity of designing end-to-end workflows for AI-driven pipelines. The responsibility of ensuring best practices and efficiency in code reviews also supports the need for seamless integration of components in AI pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or resource planning. While there is a focus on debugging and resolving system issues, this does not directly relate to planning for scalability or infrastructure trade-offs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities include ensuring best practices for testability and efficiency, which could relate to performance optimization. However, there is no direct mention of latency control or advanced caching mechanisms, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities involve contributing to documentation and adapting content based on updates, which could relate to model lifecycle management. However, there is no explicit mention of continuous retraining, versioning, or governance, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities include collaborating with peers and stakeholders, which could involve system integration. However, there is no explicit mention of aligning AI services with enterprise systems or establishing APIs, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include triaging product or system issues and debugging, which involves analyzing system performance. This aligns with the activity of investigating system accuracy and designing experiments to validate hypotheses.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities include writing and testing development code and designing solutions in specialized ML areas, which aligns with building and refining AI methods for automated insights.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not explicitly mention synthetic data generation. While there is a focus on debugging and resolving issues, this does not directly relate to developing methods for producing synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include ensuring best practices for accuracy and efficiency, which could involve identifying performance metrics. However, there is no explicit mention of defining measurable indicators or success criteria, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. While there is a focus on contributing to documentation and adapting content, this does not directly relate to preparing data annotations for AI evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include collaborating with peers and stakeholders and ensuring best practices, which could involve designing and analyzing experiments. However, there is no explicit mention of A/B tests or controlled experiments, making this activity only partially relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. While there is a focus on debugging and resolving issues, this does not directly relate to using statistical methods for data sampling.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on writing and testing code, collaborating with peers, contributing to documentation, triaging product issues, and designing solutions in specialized ML areas. While these tasks involve technical skills and collaboration, they do not specifically mention designing labeling tasks for data annotation. The responsibilities do not indicate involvement in creating annotation guidelines or workflows, which are central to this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, overseeing performance of teams, or resolving ambiguities in data annotation. The focus is more on software development, collaboration, and problem-solving in technical domains rather than managing data annotation projects. Therefore, this activity does not align with the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include tasks such as debugging, resolving issues, and designing solutions in ML areas, which require analytical skills. However, there is no specific mention of using statistical methods to analyze annotation data or evaluating dataset quality. The responsibilities are more aligned with software development and system operations rather than data annotation analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities mention designing and implementing solutions in specialized ML areas, which could involve statistical methods. However, there is no explicit mention of applying statistical techniques for hypothesis testing, inference, or data analysis. The focus seems more on development code, design reviews, documentation, and debugging, rather than statistical modeling.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not explicitly mention data visualization or exploratory data analysis. The responsibilities focus on writing and testing code, collaborating on design and code reviews, contributing to documentation, and debugging. While these tasks could indirectly involve data visualization, it is not a primary focus of the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not specifically mention data mining or analysis of large conversational datasets. The responsibilities are more focused on code development, design reviews, documentation, and debugging. There is no direct reference to exploring user-generated interactions or uncovering trends in datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities do not explicitly mention developing data models or pipelines for analytics. The focus is on writing and testing code, design reviews, documentation, and debugging. While developing data models and pipelines could be part of implementing solutions in ML areas, it is not directly stated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics and success criteria. The responsibilities focus on code development, design reviews, documentation, and debugging. While defining metrics could be part of ensuring best practices and assessing model health, it is not directly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention \"Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field.\" This suggests involvement in deploying ML solutions, which aligns with the Activity's focus on designing and maintaining CI/CD pipelines for model deployment. The emphasis on ensuring performance, scalability, and reliability of AI systems in production is also relevant to the responsibilities of designing and implementing ML solutions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include \"Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.\" This aligns with the Activity's focus on implementing real-time monitoring and logging solutions to track model performance and detect issues early. The responsibility of analyzing sources of issues is relevant to monitoring and observability in MLOps.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or the management of datasets and model artifacts. While there is a general responsibility to \"Contribute to existing documentation or educational content,\" it does not directly relate to versioning. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include \"Write and test product or system development code,\" which suggests an involvement in testing processes. However, the specific focus on automating validation steps for models and introducing guardrails like canary testing is not explicitly mentioned. While there is some overlap, the direct relevance to continuous testing and validation in MLOps is not clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities mention \"Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure,\" which suggests involvement in infrastructure design and optimization. This aligns with the Activity's focus on optimizing and scaling model-serving infrastructure, making it relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not explicitly mention governance, compliance, or security frameworks. While there is a general responsibility to \"Collaborate with peers and stakeholders,\" it does not directly relate to establishing governance frameworks or implementing security practices. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include \"Design and implement solutions in one or more specialized ML areas,\" which could involve aspects of model lifecycle management. However, there is no explicit mention of continuous improvement practices such as retraining or hyperparameter tuning. While there is some potential overlap, the direct relevance to model lifecycle management and continuous improvement is not clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on writing and testing code, collaborating with peers, contributing to documentation, debugging, and designing solutions in specialized ML areas. User interviews and surveys are primarily about gathering user insights, which is not directly mentioned in the responsibilities. The responsibilities do not indicate direct involvement in user research activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities emphasize technical tasks such as coding, debugging, and designing solutions. Usability testing and prototyping are more aligned with user experience design rather than the technical development and debugging tasks described in the responsibilities. There is no mention of user testing or prototyping in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "Persona development and user journey mapping are activities related to understanding user segments and their interactions with a product. The job responsibilities focus on technical development and problem-solving, with no mention of user personas or journey mapping. These activities are not relevant to the described responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "Qualitative data analysis involves synthesizing user feedback to identify themes and needs. The job responsibilities are centered around technical tasks such as coding, debugging, and designing solutions, with no indication of analyzing qualitative user data. Therefore, this activity is not relevant to the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing solutions in specialized ML areas, which aligns with building scalable, maintainable software solutions. This involves defining system components and ensuring alignment with business needs and best practices, which is a core part of software architecture.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention writing and testing product or system development code, which directly relates to developing production-grade applications. This involves writing clean, modular, and efficient code, as well as performing testing and refactoring, which are essential for maintaining code quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, they do involve testing and ensuring best practices, which are integral to CI/CD processes. Automating build, test, and deployment processes could be inferred as part of ensuring efficiency and quality in software development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The responsibility of triaging product or system issues and debugging/tracking/resolving them aligns with monitoring and incident management. This involves real-time visibility into system health and collaborating to resolve production incidents, which is crucial for maintaining system operations and quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention API development or system integration. However, designing and implementing solutions in specialized ML areas might involve some level of system integration, but there is no direct mention of API development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibilities include writing and testing product or system development code and ensuring best practices, which are directly related to software testing and quality assurance. Developing automated test suites and maintaining test coverage are essential for meeting acceptance criteria and continuous improvement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not explicitly mention DevOps or infrastructure as code. While there is a focus on efficiency and best practices, there is no direct reference to managing and provisioning cloud resources or embracing a DevOps culture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include tasks such as writing and testing development code, collaborating through design and code reviews, contributing to documentation, and debugging issues. While these tasks involve technical skills and problem-solving, they do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy, robustness, or fairness. The responsibilities focus more on development and maintenance rather than research and evaluation of AI systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities mention designing and implementing solutions in specialized ML areas and leveraging ML infrastructure, which aligns with developing AI systems and algorithms. This suggests that the role involves creating and refining AI methods, which is relevant to the activity of developing AI systems for automated insights.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. While the responsibilities include designing and implementing ML solutions, there is no direct reference to developing methods for producing synthetic datasets or evaluating their quality. The focus is more on code development, collaboration, and debugging rather than data generation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include tasks such as triaging product or system issues and analyzing their impact on operations and quality. This involves understanding performance metrics and success criteria to assess and resolve issues. However, the responsibilities do not explicitly mention defining measurable indicators or tracking metrics, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets. While the responsibilities involve contributing to documentation and debugging, there is no direct reference to preparing data annotations or ensuring robust model training through labeled datasets. The focus is more on development and maintenance rather than data preparation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments such as A/B tests. While the responsibilities involve testing development code and collaborating on design reviews, there is no direct reference to planning or executing controlled experiments to compare model variants or features.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jb877b",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Collaborate with peers and stakeholders through design and code reviews to ensure best practices amongst available technologies (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality.",
+      "Design and implement solutions in one or more specialized ML areas, leverage ML infrastructure, and demonstrate expertise in a chosen field."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. While the responsibilities include debugging and resolving issues, there is no direct reference to using statistical methods to sample data or ensuring a representative dataset for evaluation. The focus is more on development and problem-solving rather than data sampling.",
+    "is_relevant": false
+  }
+]

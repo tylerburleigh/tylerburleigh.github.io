@@ -1,0 +1,22 @@
+{
+  "filename": "j3212f",
+  "responsibilities": [
+    "Use cutting edge ML and LLM techniques to power the Permitting and Regulatory product",
+    "Design and develop new modules for the app using spatial compute and modeling technologies",
+    "Build and support front-end features, creating reusable components where possible",
+    "Build and support an ETL platform for large geospatial datasets as well as regulatory and project risk data"
+  ],
+  "skills": [
+    "Strong computer science fundamentals",
+    "Ability to tinker, build, and push the limits of what\u2019s possible",
+    "Experience with React / NextJS",
+    "Proficiency in Python / FastAPI / Prefect",
+    "Familiarity with LLM (text-in text-out via OpenAI and others)",
+    "Experience with PostgresDB",
+    "Knowledge of Docker",
+    "Understanding of Mapbox-GL"
+  ],
+  "analysis": "The job responsibilities and skills provided focus on developing and supporting applications using machine learning (ML), large language models (LLM), spatial compute, and geospatial data. The job requires strong computer science fundamentals, proficiency in Python, experience with React/NextJS, and familiarity with Docker and Mapbox-GL.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which doesn't align with the job's focus on application development and geospatial data.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions, which partially aligns with the job's focus on using ML and LLM techniques. However, the job's emphasis on spatial compute and geospatial data is not a primary focus here.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is about deploying and monitoring AI systems, with a strong focus on infrastructure, which doesn't match the job's focus on application development and geospatial data.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which doesn't align with the job's focus on developing specific application features and handling geospatial data.\n\n5. **Data Scientist**: This role focuses on data analysis and model development, which doesn't match the job's focus on application development and geospatial data handling.\n\n6. **Data Engineer**: This option involves building data pipelines and architectures, which aligns with the job's responsibility of building and supporting an ETL platform for geospatial datasets. The skills required, such as proficiency in Python and experience with Docker, also match the job's requirements.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which doesn't align with the job's technical development focus.\n\n8. **Software Engineer**: This role involves developing software applications, which aligns with the job's focus on building front-end features and developing new modules. The required skills, such as proficiency in programming languages and experience with frameworks like React, match the job's requirements.\n\nThe job is a good fit with both the Data Engineer and Software Engineer options. However, the emphasis on building and supporting an ETL platform for geospatial datasets and the specific mention of spatial compute and modeling technologies suggest a stronger alignment with the Data Engineer role.",
+  "role_classification": 6,
+  "role_title": "Data Engineer"
+}

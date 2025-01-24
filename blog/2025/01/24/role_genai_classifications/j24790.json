@@ -1,0 +1,20 @@
+{
+  "filename": "j24790",
+  "responsibilities": [
+    "Develop solutions to scale message queue and streaming infrastructure.",
+    "Support data infrastructure including Kafka, Airflow, RabbitMQ, Trino, and GCP alternatives.",
+    "Work with users to determine capacity and functionality requirements.",
+    "Develop monitoring tools and maintain reliable operations.",
+    "Partner with database teams for optimal configuration of applications.",
+    "Collaborate on data migration tooling, change data capture analytics pipelines, and streaming solutions.",
+    "Migrate infrastructure to the cloud using GCP."
+  ],
+  "qualifications": [
+    "Expertise in developing backend services and ETL streaming.",
+    "Proficiency in message processing using compiled languages.",
+    "Experience with CI/CD tools such as Jenkins and GitLab.",
+    "Ability to write automation scripts and libraries in the data domain."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data infrastructure, message queue and streaming infrastructure, and cloud migration. The responsibilities include developing solutions for message queue and streaming infrastructure, supporting data infrastructure, and collaborating on data migration tooling and streaming solutions. The skills required include expertise in backend services, ETL streaming, message processing, and automation scripts in the data domain.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around data infrastructure and backend services rather than working with AI models or language processing technologies. Therefore, it does not appear to involve working with GenAI or LLMs.",
+  "is_genai_role": false
+}

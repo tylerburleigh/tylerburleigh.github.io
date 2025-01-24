@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "j553d8",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.",
+      "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on writing and testing code, participating in design reviews, reviewing code, contributing to documentation, and debugging systems. These tasks are more aligned with general software development and system maintenance rather than the specific task of fine-tuning and customizing large language models. There is no mention of training or fine-tuning models, which is a specialized task in the field of machine learning and AI.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j553d8",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.",
+      "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention crafting or refining prompts for language models, nor do they involve optimizing system outputs through user testing and data-driven analysis. The responsibilities are more focused on software development and system maintenance rather than the specific task of prompt engineering for large language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j553d8",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.",
+      "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include reviewing code and providing feedback to ensure best practices, which could involve some level of evaluation and assessment. However, there is no specific mention of evaluating large language models or using metrics like perplexity or BLEU. The focus is more on general software development practices rather than model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j553d8",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.",
+      "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities involve writing and testing code, which could potentially include integrating various components into a system. However, there is no specific mention of integrating large language model outputs into applications or handling content moderation and retrieval augmentation. The responsibilities are more general and do not specifically relate to the integration of LLMs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j553d8",
+    "responsibilities": [
+      "Write and test product or system development code.",
+      "Participate in, or lead design reviews with peers and stakeholders to decide amongst available technologies.",
+      "Review code developed by other developers and provide feedback to ensure best practices (e.g., style guidelines, checking code in, accuracy, testability, and efficiency).",
+      "Contribute to existing documentation or educational content and adapt content based on product/program updates and user feedback.",
+      "Triage product or system issues and debug/track/resolve by analyzing the sources of issues and the impact on hardware, network, or service operations and quality."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include triaging product or system issues and debugging, which aligns with the task of analyzing outputs to identify errors and potential improvements. However, there is no specific mention of model interpretability or using interpretability techniques for large language models. The debugging mentioned in the responsibilities is more general and not specific to LLMs.",
+    "is_relevant": false
+  }
+]

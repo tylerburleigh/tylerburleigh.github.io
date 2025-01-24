@@ -1,0 +1,802 @@
+[
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention \"Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.\" This directly aligns with the activity of fine-tuning and customization of language models, as it involves training or fine-tuning LLMs for specific tasks.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities explicitly mention \"a focus on prompt engineering and generative AI,\" which directly relates to crafting and refining prompt instructions to elicit desired behaviors from LLMs. This indicates a strong relevance to the activity of prompt engineering and iterative refinement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "While the Job Responsibilities do not explicitly mention model evaluation and performance assessment, ensuring \"high-quality code that meets business objectives, quality standards, and development guidelines\" implies a need for evaluating the performance of models to ensure they meet these standards. Therefore, this activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities do not explicitly mention integration with downstream applications. However, building \"reusable pipelines, processes, and tools to streamline LLM and generative AI workflows\" could imply some level of integration with other systems or applications. This suggests a potential relevance, but it is not strongly emphasized.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention model interpretability and debugging. However, ensuring \"high-quality code that meets business objectives, quality standards, and development guidelines\" could involve some level of debugging and analysis of model outputs to ensure quality. This suggests a potential relevance, but it is not strongly emphasized.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing, building, and serving LLMs, as well as building reusable pipelines and tools to streamline LLM and generative AI workflows. This aligns with the activity of designing end-to-end workflows for AI-driven pipelines, which involves data ingestion, preprocessing, model selection, and more. The focus on ensuring seamless integration of components to deliver high-quality generative results is relevant to the job's focus on high-quality code and meeting business objectives.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities mention working in Azure CPU  GPU environments, which implies a need to assess computational demands and plan for scalability. This aligns with the activity of assessing compute requirements and resource planning, including considerations for cloud infrastructure and balancing performance, cost, and security needs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities do not explicitly mention performance optimization or latency control. However, ensuring high-quality code and reacting to shifting priorities without compromising deadlines and momentum could imply a need for performance optimization. The activity's focus on maintaining low response times and handling spikes in requests is relevant to ensuring smooth operations, but it is not explicitly stated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include research and implementation of state-of-the-art LLM techniques, which may involve continuous retraining or fine-tuning. However, there is no explicit mention of model lifecycle management or governance, such as versioning or traceability, in the responsibilities. The focus is more on development and deployment rather than lifecycle management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not explicitly mention system interoperability or integration with existing enterprise systems. The focus is on designing, building, and serving LLMs, as well as managing stakeholder expectations and communication. While integration could be a part of the broader development process, it is not explicitly stated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include researching and implementing state-of-the-art LLM techniques, which implies a focus on evaluating AI quality. The activity of investigating system accuracy, robustness, and other performance metrics aligns with the responsibility of ensuring high-quality code and meeting business objectives.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on designing, building, and serving LLMs, as well as developing novel data sets and tooling. While these tasks involve developing AI systems, there is no explicit mention of developing algorithms for automated insights, such as analyzing user behavior or system performance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities include developing novel data sets to enable LLMs to perform new tasks. This aligns with the activity of developing methods for producing synthetic datasets to test or improve AI models. The focus on creating tooling/platforming to collect samples at scale is relevant to synthetic data generation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention identifying performance metrics or success criteria. However, ensuring high-quality code that meets business objectives and quality standards implies a need for defining and tracking performance metrics. The activity's focus on measurable indicators aligns with the responsibility of meeting development guidelines.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities include developing novel data sets and creating tooling/platforming to collect samples at scale. This aligns with the activity of preparing high-quality data annotations for robust model training and performance measurement. The focus on enabling LLMs to perform new tasks suggests a need for labeled datasets.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments such as A/B tests. The focus is on research, implementation, and development of LLM techniques, as well as managing stakeholder expectations. While experimentation could be part of the research process, it is not explicitly stated in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include developing novel data sets and creating tooling/platforming to collect samples at scale. This aligns with the activity of using statistical methods to sample data for evaluation, ensuring a representative and diverse dataset for training and evaluation. The focus on enabling LLMs to perform new tasks suggests a need for effective data sampling.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing, building, and serving LLMs, implementing state-of-the-art LLM techniques, developing novel data sets, and creating tooling/platforming to collect samples at scale. While these tasks involve data, they do not explicitly mention designing labeling tasks for data annotation. The responsibilities are more aligned with high-level AI model development and deployment rather than the specifics of data annotation task design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities include developing novel data sets and creating tooling/platforming to collect samples at scale. This suggests some involvement in data collection processes. However, the focus is on enabling LLMs to perform new tasks and not specifically on managing logistics and communication for annotation projects or overseeing performance of annotation teams. The responsibilities are more about the broader data set development rather than the specifics of human annotation data collection.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities do not explicitly mention analyzing human annotation data. The focus is on designing, building, and serving LLMs, implementing LLM techniques, and developing data sets. While analyzing data might be a part of ensuring high-quality code and meeting business objectives, the responsibilities do not specifically highlight the analysis of human annotation data using statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on designing, building, and serving LLMs, implementing state-of-the-art LLM techniques, developing novel data sets, and ensuring high-quality code. While statistical methods are fundamental in data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The focus is more on LLM techniques, prompt engineering, and generative AI, which may not directly involve traditional statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not explicitly mention data visualization or exploratory data analysis. The focus is on LLM techniques, generative AI, and building pipelines and tools. While data visualization can be a part of communicating progress to stakeholders, it is not a primary focus of the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include developing novel data sets and creating tooling/platforming to collect samples at scale, which aligns with data mining and analysis of large datasets. Additionally, exploring user-generated interactions to uncover trends and patterns is relevant to the responsibilities of designing and building LLMs to solve complex business challenges.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities mention building reusable pipelines, processes, and tools to streamline LLM and generative AI workflows. This aligns with developing data models and pipelines for analytics, as it involves implementing scalable data processing workflows to support LLM development and deployment.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities do not explicitly mention defining metrics and success criteria. However, ensuring high-quality code that meets business objectives and managing stakeholder expectations may involve defining and tracking metrics. Despite this indirect connection, the primary focus of the responsibilities is on LLM techniques and generative AI, rather than explicitly defining metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities include designing, building, and serving LLMs, as well as deploying state-of-the-art LLM techniques. This aligns with the activity of designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The use of containerization, orchestration, and real-time monitoring to ensure performance, scalability, and reliability of AI systems in production is relevant to the job's focus on building reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities do not explicitly mention real-time monitoring and logging solutions to track model performance, latency, and errors in production. However, ensuring high-quality code and managing stakeholder expectations could imply a need for monitoring and observability to maintain reliability and minimize downtime. The relevance is indirect but potentially significant for maintaining the quality and performance of deployed models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not explicitly mention implementing version control systems for datasets and model artifacts. However, the focus on developing novel data sets and creating tooling/platforming to collect samples at scale suggests a need for data management practices, which could include versioning to ensure reproducibility and traceability. This activity is relevant to maintaining organized and efficient data and model management.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities emphasize ensuring high-quality code that meets business objectives and quality standards. This aligns with the activity of automating validation steps for new or updated models, introducing guardrails like canary testing or shadow deployments to verify stability. Continuous testing and validation are crucial for maintaining the quality and reliability of AI systems, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities mention working with Azure (CPU  GPU environments) and building reusable pipelines, processes, and tools. This suggests a need for optimizing and scaling model-serving infrastructure, which aligns with the activity of using cloud platforms and container orchestration tools to handle traffic spikes and ensure consistent response times. The focus on infrastructure and scalability is relevant to the job's technical requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not explicitly mention governance, compliance, or security frameworks. While these are important aspects of deploying AI systems, the responsibilities focus more on technical development and deployment rather than regulatory or security concerns. Therefore, this activity is less directly relevant to the stated job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities include researching and implementing state-of-the-art LLM techniques, developing novel data sets, and ensuring high-quality code. These tasks suggest an ongoing process of model lifecycle management and continuous improvement, which aligns with the activity of planning regular retraining, hyperparameter tuning, and performance evaluations. Establishing feedback loops to incorporate production insights into future model iterations is relevant to the job's focus on evolving data and requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on designing, building, and deploying LLMs and generative AI solutions, with an emphasis on technical tasks such as pre-training, fine-tuning, and prompt engineering. There is no mention of gathering user insights or conducting interviews and surveys, which are central to this activity. The responsibilities are more aligned with technical development rather than user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities do not mention usability testing or prototyping. The focus is on developing LLMs, creating data sets, and building tools and pipelines. While usability testing and prototyping are important for user experience, they are not directly relevant to the technical and engineering tasks described in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities are centered around technical development and implementation of LLMs and generative AI, with no indication of creating user personas or mapping user journeys. These activities are typically part of UX research and design, which are not mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The job responsibilities involve developing novel data sets and ensuring high-quality code, but they do not mention qualitative data analysis related to user experience. The focus is on technical aspects of AI development rather than analyzing qualitative data from user research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing, building, and serving LLMs, which involves defining system components, data flows, and integration points. This aligns with the activity of designing and implementing software architecture, as both require creating scalable and maintainable solutions that meet business needs and performance requirements.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention ensuring high-quality code that meets business objectives and quality standards, which is directly related to writing clean, modular, and efficient code. Additionally, the focus on prompt engineering and generative AI suggests the need for production-grade applications. Therefore, this activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, the need to build reusable pipelines, processes, and tools to streamline workflows implies a focus on automation and efficiency, which are key aspects of CI/CD. Thus, this activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. The focus is more on development, research, and stakeholder management rather than operational aspects like system health monitoring or incident resolution. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not specifically mention API development or system integration. The focus is on LLMs, generative AI, and related tooling, which may involve some integration work, but it is not explicitly stated. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The responsibility to ensure high-quality code that meets quality standards suggests a focus on software testing and quality assurance. Although not explicitly mentioned, maintaining code quality likely involves testing and QA processes. Thus, this activity is relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities involve working with Azure environments, which may require managing and provisioning cloud resources. However, there is no explicit mention of infrastructure as code or a DevOps culture. The focus is more on AI development rather than infrastructure management. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include researching and implementing state-of-the-art LLM techniques, which aligns with conducting research to evaluate AI quality. The focus on prompt engineering and generative AI suggests a need to investigate system accuracy and other performance metrics, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing, building, and serving LLMs to solve business challenges, which requires developing AI systems and algorithms. The focus on generative AI and building reusable pipelines suggests a need for automated insights, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities mention developing novel data sets to enable LLMs to perform new tasks, which aligns with synthetic data generation. Creating tooling/platforming to collect samples at scale also suggests a need for synthetic data, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include ensuring high-quality code that meets business objectives and quality standards, which implies the need to identify performance metrics and success criteria. However, there is no explicit mention of defining measurable indicators, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities involve developing novel data sets and creating tooling/platforming to collect samples at scale, which suggests a need for creating labeled datasets for AI evaluation and optimization. This activity is relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments like A/B tests. While research and implementation of LLM techniques may involve some experimentation, there is no direct reference to controlled experiments, making this activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j42c68",
+    "responsibilities": [
+      "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+      "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment, with a focus on prompt engineering and generative AI.",
+      "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+      "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+      "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+      "Manage project stakeholder expectations and communicate progress.",
+      "React to shifting priorities without compromising deadlines and momentum."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include developing novel data sets and creating tooling/platforming to collect samples at scale, which implies a need for sampling data for evaluation. This activity is relevant to the responsibilities.",
+    "is_relevant": true
+  }
+]

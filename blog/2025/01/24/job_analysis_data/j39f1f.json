@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "j39f1f",
+    "responsibilities": [
+      "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+      "Ensure data pipelines are optimized for real-time and batch processing.",
+      "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+      "Implement and enforce best practices for data governance, security, and quality.",
+      "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+      "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+      "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+      "Work closely with data scientists and AI engineers to understand data requirements.",
+      "Ensure seamless integration between data pipelines and AI/ML models.",
+      "Monitor system performance and optimize data workflows to meet scalability needs.",
+      "Debug and troubleshoot data pipeline issues.",
+      "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on designing, building, and maintaining data pipelines for AI/ML workflows, optimizing data processing, and ensuring data quality and governance. There is no mention of tasks related to training or fine-tuning language models, which is a specialized task in the domain of machine learning model development. The responsibilities are more aligned with data engineering rather than model training or customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j39f1f",
+    "responsibilities": [
+      "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+      "Ensure data pipelines are optimized for real-time and batch processing.",
+      "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+      "Implement and enforce best practices for data governance, security, and quality.",
+      "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+      "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+      "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+      "Work closely with data scientists and AI engineers to understand data requirements.",
+      "Ensure seamless integration between data pipelines and AI/ML models.",
+      "Monitor system performance and optimize data workflows to meet scalability needs.",
+      "Debug and troubleshoot data pipeline issues.",
+      "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not include tasks related to crafting or refining prompts for language models. The focus is on data pipelines, data governance, and collaboration with data scientists and AI engineers for data requirements. Prompt engineering is a specific task related to optimizing language model outputs, which is not covered in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j39f1f",
+    "responsibilities": [
+      "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+      "Ensure data pipelines are optimized for real-time and batch processing.",
+      "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+      "Implement and enforce best practices for data governance, security, and quality.",
+      "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+      "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+      "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+      "Work closely with data scientists and AI engineers to understand data requirements.",
+      "Ensure seamless integration between data pipelines and AI/ML models.",
+      "Monitor system performance and optimize data workflows to meet scalability needs.",
+      "Debug and troubleshoot data pipeline issues.",
+      "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities do not mention evaluating or assessing the performance of language models. The responsibilities are centered around data pipeline optimization, data governance, and collaboration with AI teams. Model evaluation is a task typically associated with machine learning model development and assessment, which is not part of the described responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j39f1f",
+    "responsibilities": [
+      "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+      "Ensure data pipelines are optimized for real-time and batch processing.",
+      "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+      "Implement and enforce best practices for data governance, security, and quality.",
+      "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+      "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+      "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+      "Work closely with data scientists and AI engineers to understand data requirements.",
+      "Ensure seamless integration between data pipelines and AI/ML models.",
+      "Monitor system performance and optimize data workflows to meet scalability needs.",
+      "Debug and troubleshoot data pipeline issues.",
+      "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include ensuring seamless integration between data pipelines and AI/ML models, which could be related to integrating outputs from language models into workflows. However, the focus is more on data engineering aspects rather than handling content moderation or retrieval augmentation specific to language models. The integration mentioned in the responsibilities is more about data flow rather than application-level integration of LLM outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j39f1f",
+    "responsibilities": [
+      "Design, build, and maintain scalable, efficient, and reliable ETL/ELT pipelines for AI/ML workflows.",
+      "Ensure data pipelines are optimized for real-time and batch processing.",
+      "Collect, clean, and preprocess large and diverse datasets for AI model development.",
+      "Implement and enforce best practices for data governance, security, and quality.",
+      "Develop and maintain data storage solutions (e.g., data lakes, warehouses).",
+      "Work with big data technologies (e.g., Spark, Hadoop) and cloud platforms (e.g., AWS, GCP, Azure).",
+      "Collaborate with DevOps teams to automate workflows and CI/CD for data pipelines.",
+      "Work closely with data scientists and AI engineers to understand data requirements.",
+      "Ensure seamless integration between data pipelines and AI/ML models.",
+      "Monitor system performance and optimize data workflows to meet scalability needs.",
+      "Debug and troubleshoot data pipeline issues.",
+      "Maintain comprehensive documentation for data pipelines, workflows, and infrastructure."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities include debugging and troubleshooting data pipeline issues, but there is no mention of analyzing or interpreting model outputs. The focus is on data workflows and infrastructure rather than model interpretability or debugging, which are tasks specific to understanding and improving language model outputs.",
+    "is_relevant": false
+  }
+]

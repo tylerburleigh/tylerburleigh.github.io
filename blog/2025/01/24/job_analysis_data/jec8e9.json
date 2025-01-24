@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "jec8e9",
+    "responsibilities": [
+      "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+      "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+      "Improve the signal quality provided by the \"virtual driver's test\".",
+      "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+      "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+      "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+      "Simulate the most interesting situations and report the most interesting simulation results."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on building infrastructure, designing data pipelines, improving simulation quality, and applying ML models for the Waymo Driver's virtual test. There is no mention of training or fine-tuning large language models for domain-specific tasks, which is the focus of this Activity. The responsibilities are more aligned with simulation and data processing rather than language model customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jec8e9",
+    "responsibilities": [
+      "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+      "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+      "Improve the signal quality provided by the \"virtual driver's test\".",
+      "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+      "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+      "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+      "Simulate the most interesting situations and report the most interesting simulation results."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not involve crafting or refining prompt instructions for large language models. The tasks are centered around simulation, data pipelines, and evaluating driving capabilities, which do not require prompt engineering or iterative refinement of language models. Therefore, this Activity is not relevant to the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jec8e9",
+    "responsibilities": [
+      "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+      "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+      "Improve the signal quality provided by the \"virtual driver's test\".",
+      "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+      "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+      "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+      "Simulate the most interesting situations and report the most interesting simulation results."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "While the Job Responsibilities include evaluating the driving capability of the Waymo Driver and determining if virtual test results are predictive of real-world behavior, these tasks are related to simulation and driving performance rather than evaluating large language models. The methodologies for evaluating language models, such as perplexity or BLEU, are not applicable here.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jec8e9",
+    "responsibilities": [
+      "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+      "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+      "Improve the signal quality provided by the \"virtual driver's test\".",
+      "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+      "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+      "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+      "Simulate the most interesting situations and report the most interesting simulation results."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve designing and operating scalable simulation data pipelines, which could be considered a form of integration with downstream applications. However, the focus is on simulation and driving tests rather than incorporating LLM outputs into end-user experiences. The integration described in the Activity is specific to language models, which is not relevant to the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jec8e9",
+    "responsibilities": [
+      "Build the infrastructure to administer a \"virtual driver's test\" for the Waymo Driver.",
+      "Design, implement, and operate scalable simulation data pipelines to evaluate the driving capability of the Waymo Driver.",
+      "Improve the signal quality provided by the \"virtual driver's test\".",
+      "Improve the quality of individual simulations and that of the overarching simulation workflows.",
+      "Determine if the results of the \"virtual driver's test\" are predictive of the Waymo Driver's real-world driving behavior.",
+      "Apply ML models from partner teams to improve the efficiency of the \"virtual driver's test\".",
+      "Simulate the most interesting situations and report the most interesting simulation results."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not mention analyzing model outputs for errors, biases, or improvements in the context of language models. The focus is on improving simulation quality and evaluating driving tests, which do not require interpretability techniques or debugging tools for language models. Therefore, this Activity is not relevant to the responsibilities.",
+    "is_relevant": false
+  }
+]

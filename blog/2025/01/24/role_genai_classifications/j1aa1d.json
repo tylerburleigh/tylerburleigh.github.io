@@ -1,0 +1,24 @@
+{
+  "filename": "j1aa1d",
+  "responsibilities": [
+    "Engineer continuous improvements in stability and performance for private cloud compute.",
+    "Implement new functionality emerging from the research community in collaboration with product teams.",
+    "Write performant and scalable frameworks in Swift and C++ to distribute and coordinate ML inference tasks.",
+    "Integrate inference code into a full service stack to ensure reliable and performant user traffic service.",
+    "Develop code that is easy and safe to develop, update, and monitor."
+  ],
+  "skills": [
+    "Proficiency in programming languages: Swift, C, C++.",
+    "Experience with iOS/macOS and XCode.",
+    "Practical experience running and evaluating machine learning models for quality and performance metrics.",
+    "Familiarity with Apple ML stack (ANE, CoreML, MPS/Metal) and high-level general distributed ML stack (PyTorch-distributed, NCCL).",
+    "Understanding of high throughput inter-chip communication systems.",
+    "On-device iOS development skills.",
+    "Ability to produce reliable, maintainable, and deliverable software.",
+    "Comfortable working across multiple levels of abstraction.",
+    "Strong relationship handling and communication skills.",
+    "Ability to collaborate well with colleagues across a wide range of functions."
+  ],
+  "analysis": "The job responsibilities and skills focus on engineering improvements in stability and performance for private cloud compute, implementing new functionality from the research community, writing frameworks in Swift and C++ for ML inference tasks, and integrating inference code into a service stack. The skills required include proficiency in programming languages like Swift and C++, experience with iOS/macOS, and familiarity with Apple's ML stack and distributed ML stack. There is a mention of running and evaluating machine learning models, but there is no specific mention of Generative AI or language models (LLMs). The focus seems to be more on the infrastructure and performance aspects of machine learning rather than on developing or working with GenAI or LLMs.",
+  "is_genai_role": false
+}

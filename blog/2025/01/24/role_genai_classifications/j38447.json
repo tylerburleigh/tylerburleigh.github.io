@@ -1,0 +1,27 @@
+{
+  "filename": "j38447",
+  "responsibilities": [
+    "Build scalable distributed systems capable of handling high traffic from hundreds of thousands of devices deployed globally.",
+    "Work with high concurrency key-value storage systems such as Redis and DynamoDB.",
+    "Work with Postgres relational databases.",
+    "Work with logging and message passing technologies like Kafka and SQS.",
+    "Deploy services via Terraform and Kubernetes.",
+    "Develop large scale systems to interact with and configure products remotely.",
+    "Define and improve low-latency, high-throughput, high-reliability microservice architectures.",
+    "Design and develop features incorporating cutting edge computer vision.",
+    "Design clean APIs and implement them using Python and/or Go."
+  ],
+  "skills": [
+    "Ability to build scalable distributed systems.",
+    "Experience with high concurrency key-value storage systems (Redis, DynamoDB).",
+    "Experience with Postgres relational databases.",
+    "Familiarity with logging and message passing technologies (Kafka, SQS).",
+    "Experience deploying services via Terraform and Kubernetes.",
+    "Ability to develop large scale systems for remote interaction and configuration.",
+    "Knowledge of low-latency, high-throughput, high-reliability microservice architectures.",
+    "Experience in designing and developing features with computer vision.",
+    "Proficiency in designing clean APIs and implementing them using Python and/or Go."
+  ],
+  "analysis": "The job responsibilities and skills focus on building scalable distributed systems, working with key-value storage systems, relational databases, logging and message passing technologies, deploying services, and developing large-scale systems for remote interaction. Additionally, there is a mention of designing and developing features with computer vision, as well as designing clean APIs using Python and/or Go. \n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on system architecture, databases, deployment technologies, and computer vision, which are not directly related to GenAI or LLMs. \n\nComputer vision is a field of artificial intelligence, but it is distinct from Generative AI and language models, which typically involve natural language processing and generation tasks. Therefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

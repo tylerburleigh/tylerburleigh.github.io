@@ -1,0 +1,21 @@
+{
+  "filename": "jf4142",
+  "responsibilities": [
+    "Lead Projects: Plan, schedule, and deliver software projects on time and at the highest quality.",
+    "Build Teams: Manage and mentor developers, fostering collaboration and high performance.",
+    "Drive Strategy: Make key decisions on backend architecture, scalability, and infrastructure.",
+    "Collaborate Cross-Functionally: Align software, product, engineering, and department goals for seamless execution.",
+    "Optimize Processes: Streamline workflows, solve technical challenges, and improve productivity.",
+    "Oversee Deployments: Ensure smooth, efficient deployments and system performance."
+  ],
+  "skills": [
+    "Proficient in TypeScript and Golang, with extensive testing experience (unit, end-to-end, and load testing using Cypress, Playwright, k6).",
+    "Skilled in containerization (Docker, Kubernetes) and DevOps practices, including CI/CD pipelines, infrastructure as code (IaC), and system monitoring (Datadog, Grafana).",
+    "Experienced in developing and optimizing LLM applications, including Retrieval-Augmented Generation (RAG) and GPT-based solutions, with strong knowledge of deployment patterns, prompt engineering, and API integration (OpenAI, Anthropic, Gemini).",
+    "Proficient in ML frameworks (PyTorch), optimization techniques (quantization, model distillation), and vector databases (pgvector, Weaviate, Pinecone).",
+    "Experienced with LLM inference stacks (TensorRT-LLM, VLLM, llama.cpp) and developing RAG systems.",
+    "Strong problem-solving and analytical skills, with excellent communication to foster cross-functional collaboration and stakeholder alignment."
+  ],
+  "analysis": "The job responsibilities focus on leading software projects, managing teams, driving strategy, collaborating cross-functionally, optimizing processes, and overseeing deployments. These responsibilities do not explicitly mention working with Generative AI or language models.\n\nHowever, the skills section provides clear evidence of involvement with language models and Generative AI. The candidate is expected to have experience in developing and optimizing LLM applications, including Retrieval-Augmented Generation (RAG) and GPT-based solutions. There is also mention of deployment patterns, prompt engineering, and API integration with platforms like OpenAI, Anthropic, and Gemini, which are directly related to language models. Additionally, the skills include proficiency in ML frameworks, optimization techniques, and LLM inference stacks, all of which are relevant to working with LLMs and GenAI.\n\nGiven the skills required, it is evident that the job involves working with Generative AI and language models, despite the responsibilities not explicitly stating this.",
+  "is_genai_role": true
+}

@@ -1,0 +1,48 @@
+{
+  "responsibilities": [
+    "Develop and maintain monitoring, alerting, and logging systems to proactively detect and resolve incidents.",
+    "Perform root cause analysis and implement solutions to prevent recurrence.",
+    "Manage incident response, including on-call rotations, triaging, and escalation.",
+    "Create and manage Infrastructure as Code (IaC) using tools like Terraform.",
+    "Automate deployments, scaling, backups, and disaster recovery processes.",
+    "Develop and maintain CI/CD pipelines to ensure smooth deployment and rollback processes.",
+    "Analyze performance metrics and optimize infrastructure and application performance.",
+    "Define and enforce Service Level Objectives (SLOs) and Service Level Indicators (SLIs).",
+    "Conduct capacity planning and scaling to manage anticipated loads.",
+    "Implement security best practices, including network security, IAM policies, and encryption.",
+    "Conduct security audits and compliance checks to ensure regulatory adherence.",
+    "Respond to security incidents and implement remediation measures.",
+    "Work with development teams to ensure services are reliable, scalable, and easily monitored.",
+    "Collaborate with cross-functional teams to design, build, and maintain cloud infrastructure.",
+    "Identify and implement improvements to operational processes and workflows.",
+    "Design, implement, and test disaster recovery and business continuity plans.",
+    "Ensure regular backups and replication to minimize data loss and downtime."
+  ],
+  "skills": [
+    "Proficiency in developing and maintaining monitoring, alerting, and logging systems.",
+    "Ability to perform root cause analysis and implement preventive solutions.",
+    "Experience in managing incident response and on-call rotations.",
+    "Expertise in Infrastructure as Code (IaC) tools like Terraform.",
+    "Skills in automating deployments, scaling, backups, and disaster recovery processes.",
+    "Knowledge of CI/CD pipeline development and maintenance.",
+    "Ability to analyze performance metrics and optimize infrastructure and application performance.",
+    "Understanding of Service Level Objectives (SLOs) and Service Level Indicators (SLIs).",
+    "Capacity planning and scaling skills.",
+    "Knowledge of security best practices, including network security, IAM policies, and encryption.",
+    "Experience in conducting security audits and compliance checks.",
+    "Ability to respond to security incidents and implement remediation measures.",
+    "Collaboration skills with development and cross-functional teams.",
+    "Ability to identify and implement improvements to operational processes and workflows.",
+    "Experience in designing, implementing, and testing disaster recovery and business continuity plans."
+  ],
+  "qualifications": [
+    "Relevant experience in monitoring and incident management.",
+    "Experience with Infrastructure as Code (IaC) tools like Terraform.",
+    "Experience in automating deployments and disaster recovery processes.",
+    "Experience in developing and maintaining CI/CD pipelines.",
+    "Experience in performance and reliability optimization.",
+    "Knowledge of security best practices and compliance.",
+    "Experience in collaboration with development and cross-functional teams.",
+    "Experience in disaster recovery and business continuity planning."
+  ]
+}

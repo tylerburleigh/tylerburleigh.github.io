@@ -1,0 +1,29 @@
+{
+  "filename": "ja66d7",
+  "responsibilities": [
+    "Design, develop, and deploy data products and services to meet the analytical needs of the organization.",
+    "Create and maintain comprehensive data models that support various business functions and analytical requirements.",
+    "Develop and manage self-service data portals to empower business users with easy access to data.",
+    "Implement and manage ETL processes to integrate data from various sources into new data models and views.",
+    "Work closely with data analysts, data scientists, and other stakeholders to understand and deliver on data requirements.",
+    "Ensure data quality, security, and compliance with organizational standards and regulations.",
+    "Optimize database performance and ensure efficient data retrieval and processing.",
+    "Maintain comprehensive documentation of data engineering processes, data models, and data dictionaries.",
+    "Provide guidance and mentorship to junior data engineers and other team members."
+  ],
+  "skills": [
+    "Advanced knowledge of SQL Server and T-SQL programming.",
+    "Experience with PowerBI for data visualization and reporting.",
+    "Familiarity with MS Fabric for data integration and management.",
+    "Knowledge of programming languages such as Python or Java.",
+    "Proficiency in Microsoft Azure, including Azure Data Factory, Azure Databricks, and Azure Synapse Analytics (nice to have).",
+    "Strong understanding of data warehousing concepts and best practices.",
+    "Experience in developing and managing ETL pipelines.",
+    "Strong analytical and problem-solving skills with the ability to interpret complex data sets.",
+    "Excellent verbal and written communication skills, with the ability to convey technical information to non-technical stakeholders.",
+    "Proven ability to work collaboratively in a team environment and manage multiple priorities.",
+    "High attention to detail and a commitment to data accuracy and integrity."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data modeling, ETL processes, and data visualization. The responsibilities include designing and deploying data products, creating data models, managing ETL processes, and ensuring data quality and compliance. The skills required include advanced knowledge of SQL Server, experience with PowerBI, familiarity with MS Fabric, and proficiency in Microsoft Azure services. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and analytics rather than AI or language model development or deployment.",
+  "is_genai_role": false
+}

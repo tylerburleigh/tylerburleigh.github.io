@@ -1,0 +1,21 @@
+{
+  "filename": "jb8585",
+  "responsibilities": [
+    "Contribute and drive ML for Physical Design, Logical Synthesis, Verification and RTL generation.",
+    "Architect, guide and vet designs, algorithms and solutions, writing development code to solve ambiguous problems.",
+    "Identify unsolved impactful research problems in Chip Design, inspired by current and future real world needs.",
+    "Define Scope, plan and organise projects towards common goals.",
+    "Amplify impact by generalising solutions into reusable libraries for many use cases.",
+    "Share knowledge through publications, open sourcing and education."
+  ],
+  "qualifications": [
+    "Experience in Machine Learning (ML), especially on ML for hardware, ML for compilers or ML for optimization.",
+    "Experience with JAX, TensorFlow, PyTorch or similar.",
+    "Developed and maintained Machine Learning Infrastructure.",
+    "Self-directed engineer/research scientist who can drive new research ideas from conception, experimentation, to productionisation in a rapidly shifting landscape.",
+    "Excel at teamwork and cross-team collaborations.",
+    "Strong research experience and publications in Machine Learning, Differentiable Programming, Discrete Optimization, Reinforcement Learning, Chip & Hardware Design or related fields."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on Machine Learning (ML) applications in the context of hardware design, compilers, and optimization. The responsibilities include contributing to ML for physical design, logical synthesis, verification, and RTL generation, which are specific to chip design and hardware. The skills required include experience with ML frameworks like JAX, TensorFlow, and PyTorch, and a strong background in ML, differentiable programming, discrete optimization, and reinforcement learning. There is no mention of Generative AI (GenAI) or language models (LLMs) specifically. The focus is more on ML for hardware and optimization rather than natural language processing or generation tasks typically associated with GenAI or LLMs.",
+  "is_genai_role": false
+}

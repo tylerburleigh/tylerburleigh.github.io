@@ -1,0 +1,22 @@
+{
+  "filename": "j5ddcf",
+  "responsibilities": [
+    "Conduct in-depth reverse engineering and vulnerability analysis across various architectures and platforms, including x86/64, ARM, PowerPC, and more.",
+    "Research and analyze operating system and application internals, identifying and understanding security strengths and weaknesses of those systems.",
+    "Develop and enhance functionality by adding features and capabilities to undocumented interfaces.",
+    "Model and analyze in-memory compiled application behavior to identify potential vulnerabilities and improve security measures.",
+    "Develop and understand mobile/embedded systems and kernel modules, particularly related to vulnerability research.",
+    "Participate actively in the Vulnerability Research mentorship program, sharing knowledge and collaborating with colleagues."
+  ],
+  "skills": [
+    "Proficient understanding of wireless networking and associated security protocols, such as Wi-Fi (802.11), Bluetooth, or cellular networks (2G/3G/4G/5G).",
+    "Strong grasp of legacy exploit mitigations and bypass techniques, including Address Space Layout Randomization (ASLR), Data Execution Prevention (DEP/NX), Stack Cookies (Canaries), and Control Flow Integrity (CFI).",
+    "In-depth knowledge of security and network fundamentals, such as cryptography, authentication, access control, and network protocols (TCP/IP, UDP, DNS, HTTP, etc.).",
+    "Programming experience with both scripted languages (preferably Python3) and compiled languages (preferably C).",
+    "Familiarity with low-level architectures such as x86, ARM, or MIPS.",
+    "Experience with operating system internals and implementations, including Windows, Linux, or macOS.",
+    "Excellent oral, written, and interpersonal communication skills."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on reverse engineering, vulnerability analysis, and security research across various architectures and platforms. The responsibilities include tasks such as conducting reverse engineering, analyzing operating systems, developing features for undocumented interfaces, and working with mobile/embedded systems. The skills required include understanding wireless networking security protocols, exploit mitigations, network fundamentals, and programming in both scripted and compiled languages. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on security, vulnerability research, and low-level system analysis rather than on AI or language model development or application.",
+  "is_genai_role": false
+}

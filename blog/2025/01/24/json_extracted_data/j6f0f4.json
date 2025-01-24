@@ -1,0 +1,41 @@
+{
+  "responsibilities": [
+    "Design, implement, and maintain orchestration tools for workflows using Ray and Prefect.",
+    "Build and manage infrastructure for scalable data connectors to integrate with systems like S3, Snowflake, and Databricks.",
+    "Optimize compute resource utilization for AI pipelines and ensure reliable, fault-tolerant execution of tasks.",
+    "Develop and maintain robust CI/CD pipelines to support seamless model deployment and orchestration workflows.",
+    "Enhance the SnorkelFlow SDK to provide user-friendly access to compute layer functionalities.",
+    "Collaborate with AI Platform and Data Platform teams to ensure SDK usability and extensibility.",
+    "Build backend services to support compute operations, including job scheduling, resource allocation, and API integrations.",
+    "Partner with the Application team to design APIs that enable seamless orchestration and workflow management.",
+    "Implement monitoring tools and dashboards to track the performance and health of compute resources.",
+    "Define metrics and logging strategies to optimize orchestration pipelines and SDK efficiency.",
+    "Lead the design and development of core components of the compute platform, including orchestration workflows and connectors (for Senior Engineers).",
+    "Mentor and guide junior engineers, fostering growth within the team (for Senior Engineers).",
+    "Identify and drive improvements in infrastructure scalability and reliability (for Senior Engineers).",
+    "Collaborate with cross-functional teams to align the compute platform with overall product goals (for Senior Engineers)."
+  ],
+  "skills": [
+    "Proficiency in Python and familiarity with frameworks like FastAPI or Flask.",
+    "Basic understanding of orchestration tools and MLOps practices.",
+    "Strong problem-solving skills.",
+    "Experience with orchestration tools (e.g., Prefect, Ray, Airflow).",
+    "Expertise in building scalable APIs and SDKs.",
+    "Strong knowledge of MLOps practices, including CI/CD, Kubernetes, and model lifecycle management.",
+    "Experience with infrastructure scaling and integration of data connectors.",
+    "Ability to lead technical projects and mentor junior team members.",
+    "Experience with developing microservices pipelines and infrastructure.",
+    "Familiarity with vector databases and data storage solutions.",
+    "Knowledge of containerization and orchestration tools like Docker and Kubernetes.",
+    "Experience building data connectors for systems like Snowflake, Databricks, or S3.",
+    "Familiarity with observability tools like Prometheus, Grafana, DataDog, or OpenTelemetry."
+  ],
+  "qualifications": [
+    "Bachelor’s degree in Computer Science, Software Engineering, or a related field (for Entry-Level Engineers).",
+    "1-2 years of experience in backend development or infrastructure engineering (for Entry-Level Engineers).",
+    "Bachelor’s or Master’s degree in Computer Science, Software Engineering, or a related field (for Senior Engineers).",
+    "4-6 years of experience in backend or infrastructure engineering, including experience with orchestration tools (for Senior Engineers).",
+    "Proven expertise in Python, with experience in building scalable APIs and SDKs (for Senior Engineers).",
+    "Proven ability to lead technical projects and mentor junior team members (for Senior Engineers)."
+  ]
+}

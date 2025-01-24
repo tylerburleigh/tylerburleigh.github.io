@@ -1,0 +1,23 @@
+{
+  "filename": "jb0de2",
+  "responsibilities": [
+    "Build, maintain, and scale systems that deliver hundreds of millions of data points daily",
+    "Architect resilient distributed systems for near-realtime personalization and analytics",
+    "Enhance platform tooling towards self-service and improve user experience",
+    "Implement Privacy by Design in data ecosystem entry points",
+    "Develop and launch efficient and reliable data pipelines for data ingestion and transformation",
+    "Deploy data quality checks to ensure data quality and timeliness, and diagnose/fix issues to meet SLAs",
+    "Collaborate with product managers, engineers, data owners, data stewards, and customers to implement and maintain data products for analytics, ML, and reporting",
+    "Work with other engineers to improve reliability, documentation, and automation for self-service dataset support"
+  ],
+  "qualifications": [
+    "Building data pipelines and microservices using Java or Scala",
+    "Designing and developing large scale asynchronous eventing systems with platforms like Kafka",
+    "Building streaming data solutions using frameworks such as Spark",
+    "Leading small project teams and mentoring junior engineers",
+    "Scoping work and collaborating with multi-disciplinary teams",
+    "Working with modern data storage and orchestration tools like BigQuery, Postgres, and Airflow"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, system architecture, and data pipeline development. The responsibilities include building and maintaining data systems, architecting distributed systems, enhancing platform tooling, implementing privacy measures, and developing data pipelines. The skills required involve building data pipelines and microservices, designing asynchronous eventing systems, building streaming data solutions, and working with data storage and orchestration tools.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and infrastructure rather than on developing or deploying AI models, particularly those related to natural language processing or generation.\n\nTherefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

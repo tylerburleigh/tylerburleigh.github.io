@@ -1,0 +1,24 @@
+{
+  "filename": "jbfb91",
+  "responsibilities": [
+    "Design, develop, and maintain backend systems and APIs using Scala and related technologies.",
+    "Collaborate with data scientists and machine learning engineers to integrate AI models into the backend infrastructure.",
+    "Optimize and scale backend services to handle large volumes of data and ensure high performance.",
+    "Implement data storage and retrieval mechanisms, ensuring data integrity and security.",
+    "Work closely with frontend developers to define and implement APIs that meet the requirements of the user interface.",
+    "Collaborate with SREs to deploy and monitor backend services in a cloud environment.",
+    "Conduct code reviews, provide constructive feedback, and ensure adherence to coding standards.",
+    "Stay up-to-date with the latest industry trends and technologies, and proactively suggest improvements to enhance the backend infrastructure."
+  ],
+  "qualifications": [
+    "Proficient in Cats Effect or similar technologies, such as ZIO, Monix, or Scalaz.",
+    "Exceptional understanding of backend development principles, including RESTful APIs, microservices architecture, and database design.",
+    "Familiarity with cloud platforms (e.g., AWS, GCP, or Azure) and containerization technologies (e.g., Docker, Kubernetes).",
+    "Knowledge of distributed systems, scalability, and performance optimization techniques.",
+    "Familiarity with version control systems (e.g., Git) and agile development methodologies.",
+    "Excellent problem-solving skills.",
+    "Strong communication skills and ability to effectively articulate technical concepts to both technical and non-technical stakeholders."
+  ],
+  "analysis": "The job responsibilities primarily focus on backend development using Scala and related technologies. The key tasks include designing, developing, and maintaining backend systems and APIs, optimizing and scaling backend services, and collaborating with frontend developers and SREs. There is a mention of collaborating with data scientists and machine learning engineers to integrate AI models into the backend infrastructure. However, there is no specific mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities.\n\nThe skills required for the job include proficiency in backend development principles, cloud platforms, containerization technologies, distributed systems, and performance optimization. There is no explicit mention of skills related to Generative AI or language models.\n\nOverall, while the job involves integrating AI models into the backend infrastructure, there is no direct indication that it specifically involves working with Generative AI or language models. The focus seems to be more on backend development and integration of AI models in general, rather than specifically on GenAI or LLMs.",
+  "is_genai_role": false
+}

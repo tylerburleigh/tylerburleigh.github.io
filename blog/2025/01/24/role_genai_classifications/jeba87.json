@@ -1,0 +1,23 @@
+{
+  "filename": "jeba87",
+  "responsibilities": [
+    "Develop CI/CD pipelines using various tooling to drive rapid delivery of functionality.",
+    "Code and troubleshoot all infrastructure artifacts and their associated inter-working parts to promote re-use of code in different environments.",
+    "Automate manual processes to improve the efficiency, reliability, and security of Cloud-hosted networks and systems.",
+    "Serve as a DevOps advisor for client systems and networks within on-prem and cloud environments focusing on automation.",
+    "Introduce DevOps concepts and educate clients.",
+    "Participate in business development activities including demo creation and presenting to clients."
+  ],
+  "skills": [
+    "Experience with Terraform, SonaQube, Docker-Swarm.",
+    "Experience with designing and administering microservice architectures.",
+    "Experience using containers and popular container orchestration systems like Kubernetes.",
+    "Hands-on development experience with Bash, Python, Groovy, or Ruby.",
+    "Experience with open technologies like Infrastructure as Code (IaC) tools, including Docker, Kubernetes, OpenShift, Jenkins, GitHub, Puppet, Ansible, Git, and others.",
+    "Experience working with XML, JSON, and YAML for configuration.",
+    "Excellent written and verbal client-facing communication skills.",
+    "Experience with software development processes or Agile development, including Scrum, Kanban, rapid prototyping, or similar environment."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on DevOps practices, cloud infrastructure, automation, and containerization. The responsibilities include developing CI/CD pipelines, automating processes, and serving as a DevOps advisor, which are typical tasks in a DevOps role. The skills required include experience with tools like Terraform, Docker, Kubernetes, and scripting languages such as Bash and Python. There is no mention of Generative AI, language models, or any specific AI-related tasks or tools. The focus is on infrastructure, automation, and DevOps methodologies rather than AI or machine learning technologies.",
+  "is_genai_role": false
+}

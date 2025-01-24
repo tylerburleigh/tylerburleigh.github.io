@@ -1,0 +1,26 @@
+{
+  "filename": "j42c68",
+  "responsibilities": [
+    "Work closely with a team of AI engineers to design, build, and serve LLMs to solve complex business challenges using Azure (CPU & GPU environments).",
+    "Research and implement state-of-the-art LLM techniques including pre-training, fine-tuning, preference alignment, and deployment.",
+    "Focus on prompt engineering and generative AI more broadly.",
+    "Develop novel data sets that enable LLMs to perform new tasks and create tooling/platforming to collect these samples at scale.",
+    "Ensure high-quality code that meets business objectives, quality standards, and development guidelines.",
+    "Build reusable pipelines, processes, and tools to streamline LLM and generative AI workflows.",
+    "Manage project stakeholder expectations and issue communications on progress.",
+    "React to shifting priorities without compromising deadlines and momentum."
+  ],
+  "qualifications": [
+    "Strong Python data fundamentals coupled with a software mindset for making data processing and collection pipelines repeatable, scalable, and high quality.",
+    "Deep expertise in writing and reviewing production code in Python.",
+    "Understanding of the development lifecycle for LLMs, including developing data sets for pre-training, instruction tuning, and preference alignment.",
+    "Strong knowledge of LLM frameworks and libraries (such as transformers, trl, deepspeed, PyTorch).",
+    "Exposure to various ML techniques and their practical implementation in production at large scale.",
+    "Experience on distributed, high throughput, and low latency architectures.",
+    "Strong fundamentals in NLP techniques for text representation, semantic extraction techniques, data structures, and modeling.",
+    "Experience building software on top of major container technology (Kubernetes, Docker, etc.).",
+    "Multi-disciplinary approach to problem-solving, including excellent interpersonal and communication skills (written and verbal)."
+  ],
+  "analysis": "The job responsibilities clearly indicate involvement with Generative AI and language models. The responsibilities include designing, building, and serving LLMs, researching and implementing state-of-the-art LLM techniques, focusing on prompt engineering and generative AI, and developing data sets for LLMs. Additionally, the job involves building pipelines and tools to streamline LLM and generative AI workflows.\n\nThe skills required for the job further support this conclusion. The skills include understanding the development lifecycle for LLMs, strong knowledge of LLM frameworks and libraries, and strong fundamentals in NLP techniques. These skills are directly related to working with language models and generative AI technologies.\n\nOverall, both the responsibilities and skills are heavily focused on LLMs and generative AI, indicating that the job involves working with these technologies.",
+  "is_genai_role": true
+}

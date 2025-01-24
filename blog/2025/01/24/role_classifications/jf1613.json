@@ -1,0 +1,28 @@
+{
+  "filename": "jf1613",
+  "responsibilities": [
+    "Build AI models and features that directly impact Loop\u2019s business.",
+    "Train and deploy in-house multimodal LLMs.",
+    "Scale inference infrastructure.",
+    "Build out and ship AI agent workflows.",
+    "Extract, normalize, and link data using multimodal LLMs.",
+    "Ensure high accuracy in data models for customer data ingestion and normalization.",
+    "Expand AI capabilities into workflow automation and audit.",
+    "Develop and fine-tune multimodal LLMs to reduce hallucinations.",
+    "Build agents that audit freight invoices."
+  ],
+  "skills": [
+    "Proficiency in deep learning frameworks (e.g., PyTorch, Tensorflow).",
+    "Solid understanding of fundamental ML algorithms, especially multimodal LLMs.",
+    "Experience in fine-tuning LLMs and deploying them to production.",
+    "Ability to ship high-quality code to production.",
+    "Experience in cloud environments (AWS, Google, Azure).",
+    "Strong communication skills.",
+    "Willingness to collaborate in a cross-functional team environment.",
+    "Ability to keep up to date with the latest AI research.",
+    "Ability to work in a fast-paced environment."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on building, training, deploying, and scaling AI models, particularly multimodal LLMs, and ensuring high accuracy in data models. The skills required include proficiency in deep learning frameworks, experience in fine-tuning LLMs, and deploying them to production, as well as experience in cloud environments.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which aligns with the job's focus on developing and fine-tuning models. However, the job is more about deploying and scaling models rather than just research.\n\n2. **AI/ML Engineer**: This option is about transforming research into scalable AI solutions, which aligns well with the job's focus on deploying and scaling AI models and building AI agent workflows. The skills required, such as proficiency in Python and experience with API development, are relevant to the job.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which is relevant to the job's focus on scaling inference infrastructure. However, the job also involves building and fine-tuning models, which is not the primary focus of this option.\n\n4. **AI Solution Architect**: This option is about designing AI solutions and collaborating with teams, which is less aligned with the job's focus on building and deploying models.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is somewhat relevant, but the job is more focused on deploying and scaling models.\n\n6. **Data Engineer**: This option is about building data pipelines, which is not the primary focus of the job.\n\n7. **Product Manager**: This option is about driving product vision and strategy, which is not aligned with the job's technical focus.\n\n8. **Software Engineer**: This option is about developing software applications, which is not directly aligned with the job's focus on AI models and infrastructure.\n\nThe most relevant option is **AI/ML Engineer** (Option 2), as it involves transforming research into scalable AI solutions, which aligns with the job's focus on deploying and scaling AI models and building workflows.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

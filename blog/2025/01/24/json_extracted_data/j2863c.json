@@ -1,0 +1,22 @@
+{
+  "responsibilities": [
+    "Maintain and analyze metrics from operating systems, control planes, and applications to assist in fault detection and performance enhancement",
+    "Design, develop, and deploy tooling and systems that continually improve the reliability, scalability, and efficiency of our platform",
+    "Balance feature development speed and reliability with service-level objectives",
+    "Operate and improve our Infrastructure using industry best practices and tools",
+    "Participate in design and production readiness reviews, platform management, and capacity planning ceremonies with cross-functional teams",
+    "Document Infrastructure operations process and insights, identify repeatable actions, and automate repetitive tasks",
+    "Participate in on-call rotations, respond to incidents, and support other teams in mitigating customer-impacting events"
+  ],
+  "skills": [
+    "Ability to create production-ready code in one or more high-level languages, such as Go Lang, Python",
+    "Experience operating large-scale infrastructure in public cloud environments, such as AWS",
+    "Experience with infrastructure tooling (Terraform, Cloud Formation, Docker, Kubernetes, Ansible, Chef, Puppet)",
+    "Experience identifying nascent problems, performance bottlenecks, and areas for improvement",
+    "Ability to develop and execute plans to mitigate identified issues"
+  ],
+  "qualifications": [
+    "2+ years experience working on teams responsible for software development, automation, and systems engineering",
+    "Prior infrastructure experience with infra tooling, preferably in an AWS context"
+  ]
+}

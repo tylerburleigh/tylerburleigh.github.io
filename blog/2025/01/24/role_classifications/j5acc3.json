@@ -1,0 +1,23 @@
+{
+  "filename": "j5acc3",
+  "responsibilities": [
+    "Design and implement robust evaluation infrastructure to measure model capabilities and risks across multiple domains",
+    "Lead technical projects to build and scale evaluation systems that could become industry standards",
+    "Collaborate with domain experts to translate their insights into concrete evaluation frameworks",
+    "Build sandboxed testing environments and automated pipelines for continuous model assessment",
+    "Work closely with researchers to rapidly prototype and iterate on new evaluation approaches",
+    "Partner with cross-functional teams to advance Anthropic's safety mission",
+    "Contribute to Capability Reports that inform critical deployment decisions"
+  ],
+  "skills": [
+    "Strong software engineering skills with extensive Python experience",
+    "Ability to write clean, well-structured code that others can build upon",
+    "Experience working with distributed systems",
+    "Ability to define technical specifications and execute towards them",
+    "Self-starter who thrives in fast-paced, collaborative environments",
+    "Ability to balance urgency with careful, methodical implementation"
+  ],
+  "analysis": "The job responsibilities and skills focus on designing and implementing evaluation infrastructure for models, leading technical projects, collaborating with domain experts, building testing environments, and working closely with researchers. The skills required include strong software engineering skills, extensive Python experience, and experience with distributed systems.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies, conducting experiments, and developing datasets. While there is some overlap in evaluating AI models, the primary focus is on research and experimentation rather than building evaluation infrastructure.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable solutions, productionizing models, and developing data pipelines. While there is some overlap in collaborating with researchers, the focus is more on production and optimization rather than evaluation infrastructure.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring AI systems, setting up CI/CD pipelines, and managing infrastructure. The responsibilities align well with building and scaling evaluation systems, monitoring, and infrastructure management, making it a strong fit.\n\n4. **AI Solution Architect**: This role involves designing AI solutions, collaborating with SMEs, and providing thought leadership. The focus is on solution design and architecture rather than evaluation infrastructure.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and experimentation. While there is some overlap in experimentation, the primary focus is on data analysis rather than evaluation infrastructure.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures. While there is some overlap in building infrastructure, the focus is more on data management rather than model evaluation.\n\n7. **Product Manager**: This role focuses on product vision, strategy, and collaboration with cross-functional teams. The focus is on product management rather than technical evaluation infrastructure.\n\n8. **Software Engineer**: This role involves developing software applications, writing code, and participating in design discussions. While there is overlap in software engineering skills, the focus is more on application development rather than evaluation infrastructure.\n\nThe job aligns most closely with the \"MLOps / AI Infrastructure Engineer\" option, as both involve building and scaling evaluation systems, managing infrastructure, and collaborating with cross-functional teams.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

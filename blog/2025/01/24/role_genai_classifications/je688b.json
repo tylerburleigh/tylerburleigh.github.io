@@ -1,0 +1,21 @@
+{
+  "filename": "je688b",
+  "responsibilities": [
+    "Work with a team of security experts to leverage logs and security events from cloud-deployed applications to detect and respond to intrusion activity and attacks.",
+    "Participate in an on-call rotation and learn incident handling.",
+    "Collaborate cross-functionally with peer teams to negotiate and reach consensus solutions that improve security and privacy."
+  ],
+  "qualifications": [
+    "Strong critical thinking, communication, and leadership skills.",
+    "Experience with Python programming for data engineering or data science.",
+    "Experience with SQL.",
+    "Comfort working in a fast-paced, collaborative environment.",
+    "Experience with creating dashboards and visualizations in SQL- or Python-based tools (nice-to-have).",
+    "Experience with AWS infrastructure, especially analyzing cloud logs (nice-to-have).",
+    "Experience with Datadog for metrics and log analysis (nice-to-have).",
+    "Experience deploying code to a containerized environment via CI/CD (nice-to-have).",
+    "Experience with notebook-based analysis environments (nice-to-have)."
+  ],
+  "analysis": "The job responsibilities focus on security, specifically detecting and responding to intrusion activity and attacks, participating in incident handling, and collaborating with teams to improve security and privacy. The skills required include critical thinking, communication, leadership, Python programming for data engineering or data science, SQL, and experience with AWS infrastructure, Datadog, and CI/CD environments. There is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on security, data engineering, and cloud infrastructure, which are not directly related to GenAI or LLMs.",
+  "is_genai_role": false
+}

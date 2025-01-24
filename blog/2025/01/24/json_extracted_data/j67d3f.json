@@ -1,0 +1,25 @@
+{
+  "responsibilities": [
+    "Develop high-performance GPU-based inference pipelines for large multimodal diffusion models.",
+    "Build, optimize, and maintain serving infrastructure to deliver low-latency predictions at large scale.",
+    "Collaborate with DevOps teams to containerize models, manage autoscaling, and ensure uptime SLAs.",
+    "Leverage techniques like quantization, pruning, and distillation to reduce latency and memory footprint without compromising quality.",
+    "Implement continuous fine-tuning workflows to adapt models based on real-world data and feedback.",
+    "Design and maintain automated CI/CD pipelines for model deployment, versioning, and rollback.",
+    "Implement robust monitoring (latency, throughput, concept drift) and alerting for critical production systems.",
+    "Explore cutting-edge GPU acceleration frameworks to continuously improve throughput and reduce costs."
+  ],
+  "skills": [
+    "Proficiency with Python and at least one deep learning framework (PyTorch, TensorFlow).",
+    "Strong knowledge of containerization (Docker, Kubernetes) and microservice architectures for ML model serving.",
+    "Familiarity with compression techniques (quantization, pruning, distillation) for large-scale models.",
+    "Experience profiling and optimizing model inference (batching, concurrency, hardware utilization).",
+    "Hands-on experience with ML pipeline orchestration (Airflow, Kubeflow, Argo) and automated CI/CD for ML.",
+    "Strong grasp of logging, monitoring, and alerting tools (Prometheus, Grafana, etc.) in distributed systems."
+  ],
+  "qualifications": [
+    "Proven experience deploying deep learning models on GPU-based infrastructure (NVIDIA GPUs, CUDA, TensorRT, etc.).",
+    "Exposure to diffusion models, multimodal video generation, or large-scale generative architectures.",
+    "Experience with distributed training frameworks (FSDP, DeepSpeed, Megatron-LM) or HPC environments."
+  ]
+}

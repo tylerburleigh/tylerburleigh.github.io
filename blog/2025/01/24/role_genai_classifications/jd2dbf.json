@@ -1,0 +1,26 @@
+{
+  "filename": "jd2dbf",
+  "responsibilities": [
+    "Build and maintain data lake and big data pipelines/services.",
+    "Facilitate the movement of billions of messages each day.",
+    "Work with business stakeholders and platform/engineering teams to enable growth and retention strategies.",
+    "Help stakeholder teams ingest data faster into the data lake.",
+    "Improve data pipeline efficiency and instigate self-serve data engineering.",
+    "Build micro-services and architect/design self-serve capabilities at scale.",
+    "Work on AWS-based data lake using open source projects like Spark and Airflow.",
+    "Identify ways to improve the platform and user experience."
+  ],
+  "qualifications": [
+    "Strong programming skills in Python, Java, or Scala.",
+    "Experience writing SQL and structuring data.",
+    "Knowledge of data modeling and data warehousing concepts.",
+    "Experience building data pipelines, platforms, micro-services, and REST APIs.",
+    "Experience with Spark, Hive, Airflow, and other streaming technologies.",
+    "Familiarity with modern software development practices (Agile, TDD, CICD).",
+    "Strong focus on data quality and experience with tools/frameworks for detecting data issues.",
+    "Experience working on Amazon Web Services (EMR, Kinesis, RDS, S3, SQS).",
+    "Open-mindedness and willingness to try unconventional solutions."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering, data pipelines, and big data technologies. The responsibilities include building and maintaining data lakes, facilitating message movement, and working with stakeholders to improve data ingestion and pipeline efficiency. The skills required include programming in languages like Python, Java, or Scala, writing SQL, and experience with data modeling, data warehousing, and streaming technologies like Spark and Airflow. There is also a focus on AWS services and modern software development practices.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job seems to be centered around data engineering and infrastructure rather than AI or machine learning, particularly generative models or language models.",
+  "is_genai_role": false
+}

@@ -1,0 +1,30 @@
+{
+  "filename": "jf1c20",
+  "responsibilities": [
+    "Provide continuous proactive and reactive engineering support for business partners using AI products, ensuring high satisfaction.",
+    "Apply AI and machine learning techniques to build and launch generative AI solutions using Meta\u2019s Llama and other Large Language Models (LLM).",
+    "Develop and maintain performance monitoring systems for infrastructure and operations to ensure high availability of partner integrations.",
+    "Develop and troubleshoot large-scale distributed systems for business AI infrastructure and partner-specific integrations.",
+    "Analyze complex datasets for distributed systems to troubleshoot and improve systems.",
+    "Provide 24/7 on-call support coverage via rotation schedule, including weekends.",
+    "Work with Platform and Infrastructure teams to investigate and assess reported issues, agreeing on fixes for continuous improvements.",
+    "Proactively analyze information to identify trends/opportunities and recommend tactical improvements.",
+    "Deliver constructive feedback to peers to strengthen relationships and advance projects.",
+    "Create clear and concise documentation to communicate complex AI concepts to technical and non-technical stakeholders.",
+    "Evaluate priorities and project direction, identifying where to pause, remove roadblocks, or reprioritize resources."
+  ],
+  "skills": [
+    "Proficiency in AI and machine learning techniques.",
+    "Experience with large-scale distributed systems.",
+    "Ability to analyze complex datasets.",
+    "Strong troubleshooting skills.",
+    "Experience with the full web stack, REST API, Python, PHP/Hack, JavaScript/React development.",
+    "Debugging and bug management support skills.",
+    "Knowledge of fine-tuning and optimizations of PyTorch models and LLMs.",
+    "Ability to communicate with technical and business audiences.",
+    "Technical documentation creation skills."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on AI and machine learning, particularly in the context of large-scale distributed systems and infrastructure. Key responsibilities include providing engineering support for AI products, developing AI solutions using LLMs, maintaining performance monitoring systems, and troubleshooting distributed systems. The skills required include proficiency in AI and machine learning techniques, experience with distributed systems, and strong troubleshooting skills.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not the primary focus of the job. The job is more about engineering support and infrastructure rather than research.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions, which aligns with the job's focus on developing AI solutions and maintaining systems. However, the job's emphasis on infrastructure and support is not a perfect match.\n\n3. **MLOps / AI Infrastructure Engineer**: This option is a strong match as it focuses on ensuring reliable deployment, scaling, and monitoring of AI systems, which aligns with the job's responsibilities of maintaining performance monitoring systems, troubleshooting distributed systems, and providing 24/7 support. The skills required, such as a strong DevOps background and experience with monitoring tools, also align well with the job.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating with stakeholders, which does not align with the job's focus on engineering support and infrastructure.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not the primary focus of the job. The job is more about engineering and infrastructure support.\n\n6. **Data Engineer**: This role involves designing and maintaining data pipelines, which is not the primary focus of the job. The job is more about AI infrastructure and support.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which does not align with the job's focus on engineering support and infrastructure.\n\n8. **Software Engineer**: This role involves software development and system architecture, which is not the primary focus of the job. The job is more about AI infrastructure and support.\n\nThe job is most similar to the \"MLOps / AI Infrastructure Engineer\" option, as both focus on maintaining and supporting AI systems and infrastructure.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

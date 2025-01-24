@@ -1,0 +1,20 @@
+{
+  "filename": "j0549b",
+  "responsibilities": [
+    "Deploy and optimize large generative models (e.g., diffusion, transformer-based) for real-time or batch inference.",
+    "Build and maintain end-to-end ML pipelines, from data ingestion to model serving in production environments.",
+    "Improve model performance through techniques like quantization, pruning, or distributed model inference.",
+    "Collaborate closely with cross-functional teams (infrastructure, product, research) to integrate advanced ML features into the video creation platform.",
+    "Implement MLOps best practices, including monitoring, logging, and robust CI/CD workflows for ML."
+  ],
+  "skills": [
+    "Strong software engineering skills in Python (or similar).",
+    "Experience in cloud environments (AWS, GCP, or Azure).",
+    "Expertise in deep learning frameworks (e.g., PyTorch, TensorFlow).",
+    "Focus on inference optimization and high-throughput serving.",
+    "Familiarity with distributed training methods and large-scale data processing pipelines."
+  ],
+  "analysis": "The Job involves deploying and optimizing large generative models, building and maintaining ML pipelines, improving model performance, collaborating with cross-functional teams, and implementing MLOps best practices. The required skills include strong software engineering skills in Python, experience in cloud environments, expertise in deep learning frameworks, focus on inference optimization, and familiarity with distributed training methods.\n\n1. **AI Research Scientist**: This role focuses on investigating AI methodologies and conducting experiments, which is not aligned with the deployment and optimization focus of the Job.\n\n2. **AI/ML Engineer**: This role involves transforming research output into scalable AI solutions, productionizing AI models, and developing data pipelines, which aligns well with the Job's responsibilities of building ML pipelines and optimizing models.\n\n3. **MLOps / AI Infrastructure Engineer**: This role focuses on ensuring reliable deployment, scaling, and monitoring of AI systems, which aligns with the Job's focus on MLOps best practices and model serving in production environments.\n\n4. **AI Solution Architect**: This role is more about designing AI solutions and collaborating on high-level architectures, which does not align with the technical and optimization focus of the Job.\n\n5. **Data Scientist**: This role focuses on data analysis and model development, which is not directly aligned with the Job's focus on deployment and optimization of models.\n\n6. **Data Engineer**: This role is about designing data pipelines and architectures, which is not directly aligned with the Job's focus on model deployment and optimization.\n\n7. **Product Manager**: This role is about driving product vision and strategy, which is not aligned with the technical and engineering focus of the Job.\n\n8. **Software Engineer**: This role involves developing software applications, which is not specifically aligned with the ML and MLOps focus of the Job.\n\nThe Job is most similar to the roles of AI/ML Engineer and MLOps / AI Infrastructure Engineer. However, the emphasis on deploying and optimizing models, building ML pipelines, and implementing MLOps best practices makes it a closer fit to the MLOps / AI Infrastructure Engineer role.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

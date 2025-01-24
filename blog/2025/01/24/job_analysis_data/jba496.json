@@ -1,0 +1,902 @@
+[
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on machine learning integration projects, designing scalable integrations, optimizing software for ML models, and staying updated with advancements in machine learning. While these responsibilities involve machine learning, they do not specifically mention language models or fine-tuning them for domain-specific tasks. The focus is more on integration and optimization rather than customization of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities do not mention crafting or refining prompt instructions for language models. The responsibilities are centered around technical guidance, integration, optimization, and collaboration with cross-functional teams. There is no indication of working with prompts or iterative refinement of language model outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include building and maintaining robust automated test suites to ensure software quality, performance, and reliability. This aligns with evaluating and assessing performance, although it is not specific to language models. The focus is on software quality rather than the evaluation of language models using specific metrics like perplexity or BLEU.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include designing and implementing scalable integrations with machine learning frameworks and collaborating with cross-functional teams to integrate ML capabilities into products and services. This aligns with the activity of integrating LLM outputs into end-user experiences or pipelines, suggesting a relevance to integration tasks.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities do not explicitly mention model interpretability or debugging. The focus is on technical guidance, integration, optimization, and collaboration. While these tasks may involve some level of debugging, there is no specific mention of analyzing model outputs for errors or biases, which is central to this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing and implementing scalable and efficient integrations with machine learning frameworks, optimizing software for ML model training, and collaborating with cross-functional teams to integrate ML capabilities. These tasks align with designing end-to-end workflows and ensuring seamless integration of components, as described in the activity. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities mention optimizing software to accelerate ML model training and ensuring high throughput and low latency during inference. This aligns with assessing computational demands and planning for scalability, as described in the activity. However, there is no explicit mention of resource planning or infrastructure trade-offs in the job responsibilities. Thus, while there is some relevance, it is not strongly aligned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include optimizing software to ensure high throughput and low latency during inference, which directly relates to maintaining low response times and handling spikes in requests as described in the activity. This activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not explicitly mention model lifecycle management or governance, such as continuous retraining, versioning, or traceability. The focus is more on integration, optimization, and collaboration. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include collaborating with cross-functional teams to integrate ML capabilities into products and services, which aligns with aligning generative AI services with existing systems and establishing APIs for integration. This activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities mention analyzing ML models to make informed design decisions and staying up-to-date with advancements in machine learning. However, there is no explicit mention of conducting research to evaluate AI quality or designing experiments to validate hypotheses. Thus, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on integrating and optimizing machine learning frameworks and models, rather than developing new AI systems or algorithms for automated insights. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or related tasks. The focus is on integration, optimization, and collaboration with existing ML models and frameworks. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating trade-offs between different approaches and optimizing software for performance, which involves identifying and tracking performance metrics. However, there is no explicit mention of defining success criteria. Thus, while there is some relevance, it is not strongly aligned.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets or data annotation tasks. The focus is on integration, optimization, and collaboration with existing ML models and frameworks. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing or running experiments such as A/B tests. The focus is on integration, optimization, and collaboration with existing ML models and frameworks. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention data sampling or evaluation tasks. The focus is on integration, optimization, and collaboration with existing ML models and frameworks. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on machine learning integration, design, optimization, and collaboration with cross-functional teams. There is no mention of data annotation or labeling tasks. The responsibilities are more aligned with developing and integrating machine learning models and systems rather than preparing data for training these models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not include tasks related to managing or collecting human annotation data. The focus is on technical guidance, design, optimization, and collaboration for machine learning projects. There is no indication that the role involves overseeing annotation projects or managing data collection processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities emphasize analyzing ML models, optimizing software, and collaborating with technical teams. While analysis is a part of the job, it is related to model characteristics and design decisions rather than analyzing annotation data. The role does not seem to involve evaluating dataset quality or generating insights from annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on machine learning integration, design, optimization, and collaboration with cross-functional teams. While statistical methods are fundamental to data science, the responsibilities do not explicitly mention hypothesis testing, inference, or building statistical models. The emphasis is more on machine learning frameworks, model training, and API design rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on machine learning integration, optimization, and collaboration. While data visualization is important in data science, it is not directly relevant to the responsibilities outlined, which are more technical and related to software development and machine learning frameworks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not specifically mention data mining or analysis of conversational datasets. The focus is on machine learning integration, optimization, and collaboration with technical teams. While data mining is a part of data science, it is not directly relevant to the responsibilities, which are more about software and machine learning framework integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities do not explicitly mention developing data models or pipelines for analytics. The focus is on machine learning integration, optimization, and collaboration with technical teams. While developing data models and pipelines is important in data science, it is not directly relevant to the responsibilities, which are more about software development and machine learning framework integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating trade-offs between different approaches and developing detailed proposals for implementing new features. This implies a need to define metrics and success criteria to assess model health and guide decision-making. Additionally, optimizing software for high throughput and low latency during inference suggests a focus on performance metrics. Therefore, defining metrics and success criteria is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention designing and implementing scalable and efficient integrations with machine learning frameworks, optimizing software for high throughput and low latency, and collaborating with cross-functional teams to integrate ML capabilities. These tasks align with the Deployment and MLOps activity, which involves designing CI/CD pipelines and ensuring performance, scalability, and reliability of AI systems in production. The focus on integration and optimization in the responsibilities suggests a strong relevance to deployment and MLOps practices.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring or observability. However, the emphasis on ensuring high throughput and low latency during inference, as well as maintaining software quality, performance, and reliability, implies a need for monitoring and observability to track these metrics. While not directly stated, the responsibilities suggest an indirect relevance to monitoring and observability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention data and model versioning. However, the responsibilities include designing scalable integrations and ensuring compatibility with future frameworks, which may imply a need for versioning to manage changes over time. Despite this, there is no direct mention of version control systems or practices, making the relevance less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include building and maintaining robust automated test suites to ensure software quality, performance, and reliability. This directly aligns with the Continuous testing and validation activity, which involves automating validation steps and introducing guardrails to verify stability. The focus on testing and quality assurance in the responsibilities indicates a strong relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities mention designing and implementing scalable integrations and optimizing software for high throughput and low latency. These tasks align with the Infrastructure and scalability activity, which involves optimizing and scaling model-serving infrastructure. The focus on scalability and performance in the responsibilities suggests a strong relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security explicitly. The focus is more on technical integration, optimization, and collaboration rather than on establishing governance frameworks or implementing security practices. As such, there is no clear relevance to this activity based on the provided responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include staying up-to-date with advancements in machine learning and applying state-of-the-art techniques to enhance solutions. This suggests a focus on continuous improvement. However, there is no explicit mention of model lifecycle management tasks such as retraining or hyperparameter tuning. While there is an indirect relevance to continuous improvement, the lack of specific lifecycle management tasks makes the relevance less clear.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on technical aspects of machine learning integration, design, optimization, and collaboration with technical teams. There is no mention of gathering user insights or conducting interviews and surveys, which are central to this Activity. The responsibilities are more aligned with technical development rather than user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "While the Job Responsibilities emphasize technical development and integration of machine learning frameworks, there is a mention of designing scalable and user-friendly APIs. However, the focus is on technical design rather than usability testing or prototyping from a user experience perspective. The responsibilities do not explicitly involve conducting usability tests or iterating on prototypes based on user feedback.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities are centered around technical tasks such as providing technical guidance, designing integrations, optimizing software, and collaborating with technical teams. There is no indication of developing user personas or mapping user journeys, which are activities typically associated with user experience research rather than technical development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities do not mention qualitative data analysis related to user experience. The focus is on technical analysis of machine learning models and software optimization. There is no indication of synthesizing user feedback or translating qualitative findings into recommendations, which are key components of this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing scalable and efficient integrations with machine learning frameworks, which aligns with the activity of building scalable, maintainable software solutions. The focus on system components, data flows, and integration points is relevant to the responsibilities of ensuring compatibility with future frameworks and making informed design decisions for APIs.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities emphasize writing high-quality software, optimizing software for performance, and adhering to agile development practices. These align with the activity of writing clean, modular, and efficient code, performing testing, and maintaining code quality, which are essential for developing production-grade applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities mention building and maintaining robust automated test suites and delivering high-quality software, which are key components of CI/CD practices. However, there is no explicit mention of automating build, test, and deployment processes or maintaining version control workflows, which are central to CI/CD.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring, incident management, or real-time visibility into system health. While collaboration with cross-functional teams is mentioned, it is in the context of integrating ML capabilities rather than resolving production incidents or conducting post-mortems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities include designing and implementing scalable and efficient integrations and making informed design decisions for APIs. This directly relates to the activity of designing and implementing APIs for system integration, making it highly relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities explicitly mention building and maintaining robust automated test suites to ensure software quality, performance, and reliability. This aligns well with the activity of developing automated test suites and maintaining test coverage and reliability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not explicitly mention DevOps practices or the use of infrastructure-as-code tools. While there is a focus on collaboration and scalability, these are more related to software development and integration rather than infrastructure management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include staying up-to-date with advancements in machine learning and deep learning, and applying state-of-the-art techniques to enhance solutions. This suggests a focus on evaluating and improving AI quality. Additionally, the responsibility to analyze the characteristics of various ML models to make informed design decisions aligns with investigating system accuracy and other performance metrics. Therefore, conducting research to evaluate AI quality is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve designing and implementing scalable integrations with machine learning frameworks and optimizing software for ML model training and inference. While these tasks are related to developing AI systems, the specific focus on automated insights from user behavior or system performance is not explicitly mentioned. The responsibilities are more about integration and optimization rather than developing algorithms for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or related tasks. The focus is on integration, optimization, and collaboration with cross-functional teams. There is no indication of developing methods for producing synthetic datasets or evaluating their quality, realism, or fairness.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include evaluating trade-offs between different approaches and clearly articulating design choices, which implies a need to identify and track performance metrics. Additionally, optimizing software for high throughput and low latency during inference suggests a focus on performance metrics. Therefore, identifying performance metrics and success criteria is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is on integration, optimization, and collaboration with teams to enhance ML capabilities. While labeled datasets are crucial for AI evaluation and optimization, this specific task is not highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include evaluating trade-offs between different approaches and developing detailed proposals for implementing new features. This suggests a need for designing and analyzing experiments to compare model variants or features. However, A/B testing is not explicitly mentioned, so while there is some relevance, it is not a direct match.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jba496",
+    "responsibilities": [
+      "Lead and provide technical guidance to a team of machine learning engineers working on complex machine learning integration projects.",
+      "Design and implement scalable and efficient integrations with popular machine learning frameworks, such as PyTorch, while ensuring compatibility with future frameworks.",
+      "Analyze the characteristics of various ML models to make informed design decisions for scalable, intuitive, and user-friendly APIs.",
+      "Optimize software to accelerate ML model training and ensure high throughput and low latency during inference.",
+      "Stay up-to-date with advancements in machine learning and deep learning, and apply state-of-the-art techniques to enhance our solutions.",
+      "Evaluate trade-offs between different approaches, clearly articulate design choices, and develop detailed proposals for implementing new features.",
+      "Build and maintain robust automated test suites to ensure software quality, performance, and reliability.",
+      "Contribute to an agile team environment by delivering high-quality software and adhering to agile development practices.",
+      "Collaborate with cross-functional teams, including compiler engineers, kernel developers, and system architects, to integrate ML capabilities seamlessly into our products and services."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on integration, optimization, and collaboration with teams. While data sampling is important for evaluation, it is not explicitly covered in the responsibilities.",
+    "is_relevant": false
+  }
+]

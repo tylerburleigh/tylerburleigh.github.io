@@ -1,0 +1,29 @@
+{
+  "filename": "ja47f4",
+  "responsibilities": [
+    "Assist in designing and implementing new service offerings on a robust cloud foundation.",
+    "Support development teams in utilizing machine learning operations (MLOps) frameworks.",
+    "Contribute to the development and maintenance of observability infrastructure, staying updated with emerging technologies.",
+    "Participate in incident response, postmortems, and production improvements to support business growth.",
+    "Collaborate with software development and infrastructure teams to maintain and enhance multiple business offerings.",
+    "Help automate infrastructure deployment, scaling, and management using modern DevOps tools.",
+    "Monitor and optimize system performance, troubleshoot issues, and assist in implementing solutions.",
+    "Contribute to managing and securing cloud-based environments (AWS).",
+    "Support infrastructure as code (IaC) development and maintenance using Terraform.",
+    "Collaborate on implementing security best practices throughout development and deployment pipelines.",
+    "Participate in on-call responsibilities with team members.",
+    "Document and share best practices across DevOps processes."
+  ],
+  "qualifications": [
+    "Hands-on experience with AWS (Amazon Web Services).",
+    "Familiarity with container technologies like Docker and Kubernetes.",
+    "Experience with infrastructure as code tools such as Terraform or CloudFormation.",
+    "Understanding of networking and security concepts.",
+    "Basic knowledge of CI/CD processes and related tools.",
+    "Proficiency in a programming language such as Java or Python.",
+    "Experience in Linux system administration, scripting, and troubleshooting in production environments.",
+    "Exposure to monitoring and logging tools (e.g., Prometheus, ELK Stack, Grafana)."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on cloud infrastructure, DevOps, and MLOps. The responsibilities include designing and implementing service offerings on a cloud foundation, supporting development teams with MLOps frameworks, and managing cloud-based environments. The skills required include experience with AWS, container technologies, infrastructure as code tools, and programming languages like Java or Python. There is no specific mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on infrastructure, automation, and cloud services rather than on developing or deploying GenAI or LLMs.",
+  "is_genai_role": false
+}

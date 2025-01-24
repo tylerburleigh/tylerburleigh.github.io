@@ -1,0 +1,35 @@
+{
+  "responsibilities": [
+    "Develop and optimize scalable, efficient data pipelines for both batch and streaming data using AWS technologies.",
+    "Leverage advanced SQL skills to ensure high performance and scalability of data workflows.",
+    "Collaborate with stakeholders to design and deliver data products that align with business requirements.",
+    "Ensure data products are reliable, maintainable, and meet performance standards.",
+    "Implement robust data governance frameworks to ensure compliance with organizational policies and standards.",
+    "Establish and enforce data quality standards to maintain the accuracy, consistency, and integrity of data assets.",
+    "Apply data management fundamentals to optimize data organization, storage, and retrieval processes.",
+    "Write clean, reusable code in Python or similar programming languages to automate data workflows.",
+    "Identify opportunities for automation to improve the efficiency and reliability of data processes.",
+    "Leverage a deep understanding of data storage principles to design efficient, cost-effective storage solutions using AWS services such as S3, Redshift, and DynamoDB.",
+    "Work closely with data engineers, analysts, and data scientists to support data-driven initiatives.",
+    "Provide mentorship to junior engineers, promoting technical growth and knowledge sharing.",
+    "Assist in creating and managing dashboards or visualizations using tools like AWS QuickSight, Tableau, or similar BI tools."
+  ],
+  "skills": [
+    "Advanced SQL skills with demonstrated ability in query optimization and complex data transformations.",
+    "Strong programming skills in Python or similar programming languages, with experience in ETL/ELT pipeline development.",
+    "Proven experience implementing data governance frameworks and enforcing data quality standards.",
+    "Solid understanding of data management fundamentals, including governance, quality frameworks, and storage optimization.",
+    "Knowledge of data storage principles, such as partitioning, indexing, and data lifecycle management.",
+    "Hands-on experience with Kafka for streaming data pipelines and event-driven architectures is a plus.",
+    "Knowledge of machine learning workflows or data science concepts is desirable.",
+    "Experience working with genomic or bioinformatics data is a bonus.",
+    "Strong problem-solving and analytical skills.",
+    "Excellent communication skills, with the ability to convey complex technical concepts to non-technical stakeholders.",
+    "A proactive, collaborative mindset with a focus on delivering results."
+  ],
+  "qualifications": [
+    "Bachelor’s or Master’s degree in Computer Science, Data Engineering, or related field.",
+    "5+ years of experience in data engineering, working on large-scale data infrastructure.",
+    "Proficiency in the AWS stack, including services like Redshift, Glue, Lambda, S3, Kinesis, and DynamoDB."
+  ]
+}

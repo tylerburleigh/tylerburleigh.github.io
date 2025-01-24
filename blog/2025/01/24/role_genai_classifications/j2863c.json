@@ -1,0 +1,21 @@
+{
+  "filename": "j2863c",
+  "responsibilities": [
+    "Maintain and analyze metrics from operating systems, control planes, and applications to assist in fault detection and performance enhancement",
+    "Design, develop, and deploy tooling and systems that continually improve the reliability, scalability, and efficiency of our platform",
+    "Balance feature development speed and reliability with service-level objectives",
+    "Operate and improve our Infrastructure using industry best practices and tools",
+    "Participate in design and production readiness reviews, platform management, and capacity planning ceremonies with cross-functional teams",
+    "Document Infrastructure operations process and insights, identify repeatable actions, and automate repetitive tasks",
+    "Participate in on-call rotations, respond to incidents, and support other teams in mitigating customer-impacting events"
+  ],
+  "qualifications": [
+    "Ability to create production-ready code in one or more high-level languages, such as Go Lang, Python",
+    "Experience operating large-scale infrastructure in public cloud environments, such as AWS",
+    "Experience with infrastructure tooling (Terraform, Cloud Formation, Docker, Kubernetes, Ansible, Chef, Puppet)",
+    "Experience identifying nascent problems, performance bottlenecks, and areas for improvement",
+    "Ability to develop and execute plans to mitigate identified issues"
+  ],
+  "analysis": "The job responsibilities and skills listed focus on infrastructure management, reliability, scalability, and efficiency of a platform. The responsibilities include maintaining and analyzing metrics, designing and deploying tooling and systems, balancing feature development with reliability, operating and improving infrastructure, participating in design and production readiness reviews, documenting processes, and participating in on-call rotations. The skills required include creating production-ready code in high-level languages, operating large-scale infrastructure in public cloud environments, and using infrastructure tooling like Terraform, Docker, and Kubernetes.\n\nThere is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on infrastructure and platform management, rather than developing or deploying AI models or systems that involve natural language processing or generation.",
+  "is_genai_role": false
+}

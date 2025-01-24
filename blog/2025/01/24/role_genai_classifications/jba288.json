@@ -1,0 +1,19 @@
+{
+  "filename": "jba288",
+  "responsibilities": [
+    "Improve, build and release OpenOCD, GDB, LLDB and SiFive TraceDecoder",
+    "Work and synchronize with upstream community on OpenOCD, GDB and LLDB",
+    "Engage with architecture, hardware engineering and other software engineering teams to review and refine new features",
+    "Apply best practices for software development life cycle, including code reviews, source control management, build processes, testing, and operations",
+    "Assist in developing new and innovative debug and performance tuning tools for SiFive processors",
+    "Work directly with SiFive customers, when needed, to provide awesome customer pre and post-sales support"
+  ],
+  "qualifications": [
+    "Proficiency in C/C++ and Python",
+    "Experience with git, shell scripting and Linux",
+    "Experience with CI tools like Jenkins",
+    "Experience with upstream development"
+  ],
+  "analysis": "The job responsibilities focus on improving, building, and releasing debugging tools like OpenOCD, GDB, LLDB, and SiFive TraceDecoder. It involves working with upstream communities, engaging with architecture and hardware engineering teams, and developing new debugging and performance tuning tools for SiFive processors. The skills required include proficiency in C/C++ and Python, experience with git, shell scripting, Linux, CI tools like Jenkins, and upstream development.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on software development, debugging tools, and performance tuning for processors, which are not directly related to GenAI or LLMs. The job seems to be more about traditional software engineering and development for hardware-related tools rather than working with AI models or language processing technologies.",
+  "is_genai_role": false
+}

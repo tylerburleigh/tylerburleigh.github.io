@@ -1,0 +1,19 @@
+{
+  "filename": "j581ea",
+  "responsibilities": [
+    "Develop frontends, APIs, and microservices using technologies such as Python, Plotly Dash, GRPC, Postgres, ElasticSearch, Redis, Kafka, Kubernetes, and AWS.",
+    "Monitor and optimize the performance of metrics calculations and metrics query access to ensure high availability, scalability, and reliability.",
+    "Collaborate with ML engineers, software engineers, data engineers, and data scientists to understand business requirements and design a scalable and efficient metrics platform.",
+    "Integrate the metrics platform into the organization's CI/CD pipeline.",
+    "Develop frameworks and processes for the metrics lifecycle, including designing metrics, implementing metric calculations, comparison and traceability of metrics over time, and visualization of metrics and insight."
+  ],
+  "qualifications": [
+    "Proficiency in developing frontends, APIs, and microservices using Python, Plotly Dash, GRPC, Postgres, ElasticSearch, Redis, Kafka, Kubernetes, and AWS.",
+    "Ability to monitor and optimize performance for high availability, scalability, and reliability.",
+    "Strong collaboration skills to work with cross-functional teams including ML engineers, software engineers, data engineers, and data scientists.",
+    "Experience in integrating platforms into CI/CD pipelines.",
+    "Ability to develop frameworks and processes for metrics lifecycle management."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing frontends, APIs, and microservices using various technologies such as Python, Plotly Dash, GRPC, Postgres, ElasticSearch, Redis, Kafka, Kubernetes, and AWS. The role involves monitoring and optimizing performance, collaborating with cross-functional teams, integrating platforms into CI/CD pipelines, and developing frameworks for metrics lifecycle management. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on metrics platform development and integration, rather than on AI or language model development or deployment.",
+  "is_genai_role": false
+}

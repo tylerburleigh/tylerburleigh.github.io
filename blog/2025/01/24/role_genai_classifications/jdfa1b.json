@@ -1,0 +1,27 @@
+{
+  "filename": "jdfa1b",
+  "responsibilities": [
+    "Contribute to all facets of the Cleerly data platform focusing on scale, performance, and reliability.",
+    "Work closely with business intelligence, data science, and operations teams as well as interdepartmental stakeholders.",
+    "Improve core product and reporting experiences, focusing on enhancing the ability to execute complex analyses and operations at scale.",
+    "Build Airflow DAGs for data transformation.",
+    "Create normalized data structures to ingest disparate client data.",
+    "Contribute to CI/CD pipeline and capabilities.",
+    "Build complex, repeatable validation and training data sets in coordination with data scientists.",
+    "Design methods for searching and storing massive amounts of imaging data at scale.",
+    "Generate aggregate reporting tables for business insight.",
+    "Code a data validation testing suite for the pipeline.",
+    "Perform code reviews and drive bug triage.",
+    "Participate in sprint planning and design meetings."
+  ],
+  "qualifications": [
+    "Strong SQL developer skills including experience in Postgres, Redshift, Snowflake or similar.",
+    "Excellent knowledge of Python, TypeScript, or other programming languages.",
+    "Experience developing and maintaining Airflow DAGs.",
+    "Experience implementing and maintaining CI/CD solutions.",
+    "Experience working with version control systems such as GitHub.",
+    "Strong written and verbal communication skills in English."
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on data platform development, data transformation, data validation, and reporting, which are typical tasks in data engineering and data science roles. The skills required include SQL, Python, TypeScript, Airflow, CI/CD, and version control systems, which are common in data engineering and software development. There is no mention of working with AI models, natural language processing, or any specific tasks related to GenAI or LLMs. Therefore, based on the provided information, it does not appear that this job involves working with Generative AI or language models.",
+  "is_genai_role": false
+}

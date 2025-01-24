@@ -1,0 +1,21 @@
+{
+  "filename": "jffe38",
+  "responsibilities": [
+    "Build machine learning models to detect unwanted or anomalous behaviors from users and API partners, and integrate them into our production system.",
+    "Improve automated detection and enforcement systems as needed.",
+    "Analyze user reports of inappropriate accounts and build machine learning models to detect similar instances proactively.",
+    "Surface abuse patterns to research teams to harden models at the training stage."
+  ],
+  "qualifications": [
+    "Proficiency in SQL, Python, and data analysis/data mining tools.",
+    "Proficiency in building trust and safety AI/ML systems, such as behavioral classifiers or anomaly detection.",
+    "Strong communication skills and ability to explain complex technical concepts to non-technical stakeholders.",
+    "Experience with machine learning frameworks like Scikit-Learn, TensorFlow, or PyTorch.",
+    "Experience with high-performance, large-scale ML systems.",
+    "Experience with language modeling with transformers.",
+    "Experience with reinforcement learning.",
+    "Experience with large-scale ETL."
+  ],
+  "analysis": "The job responsibilities focus on building machine learning models to detect unwanted or anomalous behaviors, improving automated detection systems, analyzing user reports, and surfacing abuse patterns. These tasks are related to trust and safety AI/ML systems, which may not directly involve Generative AI or language models.\n\nHowever, when examining the skills required, there is a specific mention of \"Experience with language modeling with transformers.\" Transformers are a key technology used in the development of language models, including large language models (LLMs) like GPT. This indicates that the job does involve working with language models.\n\nAdditionally, the skills mention experience with machine learning frameworks like TensorFlow or PyTorch, which are commonly used in developing and deploying language models. The mention of \"Experience with reinforcement learning\" could also relate to training language models, as reinforcement learning is sometimes used in fine-tuning these models.\n\nOverall, while the primary focus of the job may be on trust and safety systems, the explicit mention of language modeling with transformers suggests that the job does involve working with language models.",
+  "is_genai_role": true
+}

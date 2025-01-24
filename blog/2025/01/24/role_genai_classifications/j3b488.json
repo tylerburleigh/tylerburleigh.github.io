@@ -1,0 +1,21 @@
+{
+  "filename": "j3b488",
+  "responsibilities": [
+    "Maintain Alchemy's batch pipelines that power our production serving systems",
+    "Set up frameworks and tools to help team members create and debug pipelines by themselves",
+    "Track data quality and latency, and set up monitors and alerts to ensure smooth operation",
+    "Build production DAG workflows for batch data processing and storage",
+    "Aggregate logs from multiple regions and multiple clouds",
+    "Design and implement our next generation data warehouse that aggregates internal and third-party data sources"
+  ],
+  "qualifications": [
+    "Ability to architect and build new systems as well as improve existing ones",
+    "Experience with high-throughput distributed systems",
+    "Self-starter attitude and the ability to execute new ideas with autonomy",
+    "Ability to find the right balance between perfection and shipping quickly",
+    "Passion for blockchain technologies and Web3",
+    "Hustler mentality, founding a company or building side projects is a plus"
+  ],
+  "analysis": "The job responsibilities focus on maintaining and building data pipelines, setting up frameworks and tools for data processing, tracking data quality, and designing data warehouses. These tasks are related to data engineering and infrastructure management. The skills required include experience with distributed systems, system architecture, and a passion for blockchain technologies. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data processing, storage, and infrastructure, rather than on AI model development or deployment.",
+  "is_genai_role": false
+}

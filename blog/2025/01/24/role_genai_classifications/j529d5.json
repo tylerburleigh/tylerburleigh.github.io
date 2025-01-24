@@ -1,0 +1,22 @@
+{
+  "filename": "j529d5",
+  "responsibilities": [
+    "Review features to identify privacy exposures and partner with teams to design mitigations.",
+    "Audit new products to identify bugs in development, and review customer data collected by engineering teams to drive decisions for privacy impact.",
+    "Communicate privacy risks and potential mitigations to senior leadership to drive decisions.",
+    "Guide the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy.",
+    "Partner with cryptographers and technical experts in SWE and AIML to develop our roadmap for privacy technologies, and provide guidance to engineers and leaders on the right privacy technology to use when developing new features."
+  ],
+  "qualifications": [
+    "Superb communication skills",
+    "Passion for protecting privacy",
+    "Creative problem solving",
+    "Analytical and deductive reasoning skills",
+    "Ability to learn quickly and excitement for new things",
+    "Strong collaboration, communication, interpersonal, and organizational skills",
+    "Ability to analyze systems\u2019 architectures for privacy impact",
+    "Ability to solve complex problems independently"
+  ],
+  "analysis": "The job responsibilities include guiding the development of data collection systems that enable training and evaluation of generative AI systems while preserving privacy. This explicitly mentions \"generative AI systems,\" indicating that the job involves working with Generative AI. The other responsibilities focus on privacy, auditing, and communication, which are relevant to the context of working with AI systems, but the key indicator is the direct mention of generative AI. The skills listed, such as creative problem solving and analytical skills, are supportive of roles involving AI, but the primary evidence comes from the responsibilities section.",
+  "is_genai_role": true
+}

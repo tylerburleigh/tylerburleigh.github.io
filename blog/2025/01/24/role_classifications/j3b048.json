@@ -1,0 +1,26 @@
+{
+  "filename": "j3b048",
+  "responsibilities": [
+    "Partner with product management to identify challenges, scope ML opportunities, and design solutions.",
+    "Understand business requirements and present technical solutions to non-technical team members.",
+    "Collaborate with engineering, data science, and product teams to implement ML and GenAI solutions in production environments.",
+    "Evaluate and improve existing machine learning models.",
+    "Leverage Google Cloud Platform and VertexAI for model training and deployment.",
+    "Enhance ML infrastructure and tools to keep aligned with industry best practices.",
+    "Work with big and novel data by data wrangling, feature engineering, model building, and visualization.",
+    "Process large quantities of data streamed from many different applications to test and build models.",
+    "Build DAGs, ETL pipelines, perform exploratory data analysis, and develop scalable solutions."
+  ],
+  "skills": [
+    "Proficient in developing in Python and SQL.",
+    "Experience with ML/AI frameworks and tools: PyTorch, Tensorflow, Sci-kit Learn, XGBoost, Pandas, Numpy, Flask, Langchain, Spark/Pyspark.",
+    "Experience with Google Cloud Platform - Vertex AI or other cloud platforms for ML implementation.",
+    "Experience working with BigQuery, Composer, DAGs, Spark/Pyspark, and other data tools.",
+    "Eagerness to learn new techniques and technologies.",
+    "Problem-solving skills and ability to contribute in a team environment.",
+    "Great interpersonal skills and experience working with cross-functional teams."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of an \"AI/ML Engineer\" (Option 2). Here's the breakdown:\n\n1. **Responsibilities**:\n   - The job involves collaborating with product management, engineering, data science, and product teams to implement ML and GenAI solutions, which aligns with the AI/ML Engineer's responsibility to transform research output into robust, scalable AI solutions.\n   - The job requires evaluating and improving existing machine learning models, which is similar to the AI/ML Engineer's task of productionizing AI models to meet performance and reliability requirements.\n   - Building DAGs, ETL pipelines, and developing scalable solutions are part of the job, which matches the AI/ML Engineer's responsibility to develop and maintain data pipelines for model training, inference, and monitoring.\n\n2. **Skills**:\n   - Proficiency in Python and SQL, and experience with ML/AI frameworks and tools like PyTorch, Tensorflow, and others, are required for the job, which aligns with the AI/ML Engineer's need for proficiency in Python and experience with software engineering best practices.\n   - Experience with Google Cloud Platform and tools like BigQuery and Composer is mentioned, which is relevant to the AI/ML Engineer's role in optimizing and refining model implementations.\n\nThe job's focus on leveraging cloud platforms for ML implementation and enhancing ML infrastructure aligns with the AI/ML Engineer's focus on transforming research into scalable solutions and maintaining data pipelines. While there are elements of data engineering and MLOps, the primary focus and skills align more closely with the AI/ML Engineer role.\n\nOther options like AI Research Scientist, MLOps/AI Infrastructure Engineer, and Data Scientist have some overlapping skills and responsibilities, but they do not match as closely as the AI/ML Engineer role. The AI Research Scientist focuses more on cutting-edge AI methodologies and experiments, the MLOps Engineer on infrastructure and deployment, and the Data Scientist on statistical analysis and insights, which are not the primary focus of the job description.\n\nTherefore, the most suitable option for the job is the AI/ML Engineer (Option 2).",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

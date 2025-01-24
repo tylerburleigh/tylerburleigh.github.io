@@ -1,0 +1,40 @@
+{
+  "filename": "j13dc6",
+  "responsibilities": [
+    "Develop and train state-of-the-art production-level Machine Translation models for LILT customers and translators.",
+    "Develop and maintain services (Python, Java) to query and transform customer data for adaptation experiments.",
+    "Contribute to engineering and product planning meetings to suggest and discuss improvements to the LILT machine-learning ecosystem.",
+    "Develop automated systems for production-level deployment of Machine Learning models (Kubernetes and Helm).",
+    "Identify performance bottlenecks and propose improvements in the research and development infrastructure.",
+    "Keep up to date with libraries and technologies in data caching, messaging systems, databases, and continuous improvement.",
+    "Keep up to date on the latest research in Machine Translation, Large Language Models, and similar fields.",
+    "Identify and develop proof of concept solutions for large-scale Natural Language processing systems.",
+    "Iterate and develop architecture for Multilingual Machine Translation and Creation models for deployment.",
+    "Identify and experiment with methods to improve large-scale data processing for ML model training.",
+    "Demonstrate good judgment in driving applied research initiatives within LILT.",
+    "Keep up to date with libraries and frameworks for neural networks.",
+    "Submit research projects to peer-reviewed conferences and publications.",
+    "Serve as Machine Translation Spokesperson and train non-technical teams on complex research ideas.",
+    "Develop graphical tools and methods to explain observed phenomena in Language models to customers."
+  ],
+  "skills": [
+    "Proficiency in developing and training Machine Translation models.",
+    "Experience with Python and Java for data transformation and querying.",
+    "Ability to contribute to engineering and product planning.",
+    "Skills in developing automated systems for ML model deployment.",
+    "Ability to identify and address performance bottlenecks.",
+    "Knowledge of data caching, messaging systems, databases, and continuous improvement technologies.",
+    "Familiarity with the latest research in Machine Translation and Large Language Models.",
+    "Ability to develop proof of concept solutions for NLP systems.",
+    "Skills in iterating and developing architecture for ML models.",
+    "Experience in improving large-scale data processing for ML training.",
+    "Ability to drive applied research initiatives.",
+    "Proficiency with neural network libraries and frameworks.",
+    "Experience in submitting research to peer-reviewed conferences.",
+    "Ability to train non-technical teams on research ideas.",
+    "Skills in developing graphical tools for customer-facing explanations."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on developing and deploying machine translation models, maintaining services for data transformation, and contributing to engineering and product planning. The job also involves developing automated systems for ML model deployment, identifying performance bottlenecks, and keeping up to date with the latest research in machine translation and large language models. Additionally, the job requires proficiency in Python and Java, experience with neural network libraries, and the ability to train non-technical teams on complex research ideas.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which aligns with the job's emphasis on research and development. However, the job's focus on production-level deployment and engineering aspects is not a primary focus here.\n\n2. **AI/ML Engineer**: This option involves transforming research into scalable AI solutions, productionizing AI models, and developing data pipelines, which aligns well with the job's responsibilities of developing and deploying machine translation models and maintaining services for data transformation.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which aligns with the job's responsibilities of developing automated systems for ML model deployment and identifying performance bottlenecks.\n\n4. **AI Solution Architect**: This option is more about designing AI solutions and collaborating with SMEs, which does not align closely with the job's focus on machine translation model development and deployment.\n\n5. **Data Scientist**: This option focuses on statistical analysis and model development, which is not the primary focus of the job, as it is more about machine translation and engineering.\n\n6. **Data Engineer**: This option focuses on data pipelines and architectures, which is somewhat relevant but not as closely aligned as the AI/ML Engineer or MLOps Engineer roles.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which does not align with the technical and research-focused nature of the job.\n\n8. **Software Engineer**: This option involves software development and system architecture, which is relevant but not as closely aligned with the specific focus on machine translation and ML model deployment.\n\nThe job's responsibilities and skills align most closely with the **AI/ML Engineer** role, as it involves transforming research into scalable solutions, productionizing models, and developing data pipelines, which are key aspects of the job description.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

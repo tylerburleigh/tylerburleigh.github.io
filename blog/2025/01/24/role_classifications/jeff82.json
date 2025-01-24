@@ -1,0 +1,32 @@
+{
+  "filename": "jeff82",
+  "responsibilities": [
+    "Support software design process based on functional requirements.",
+    "Consult with project teams and end users to identify application requirements.",
+    "Design and write detailed design specifications, develop, and implement new software features or modifications to existing software.",
+    "Participate in code reviews and provide feedback on code quality correctness and style.",
+    "Support CI/CD process for stability, efficiency, security, and quality of all shipped code.",
+    "Support Runtime platform maintenance, integration of new features, and release fixes.",
+    "Make recommendations for continuous improvement of SDLC and DevOps.",
+    "Design, develop, and implement test automation to improve efficiency and enforce quality/security baselines.",
+    "Support in creating and maintaining product documentation.",
+    "Participate in advanced support escalation for live site management."
+  ],
+  "skills": [
+    "Strong knowledge of Large Language Models (LLMs), including their architectures, training processes, and applications.",
+    "Working knowledge of the Git Source Control System.",
+    "Working knowledge of Agile software development principles.",
+    "Proficiency in Python, SQL, NoSQL, CSS, JavaScript, and RESTful services.",
+    "Excellent spoken and written communication and receptive listening skills, with the ability to present ideas in a clear, concise fashion to technical and non-technical audiences.",
+    "Ability to conform to shifting priorities, demands, and timelines through analytical and problem-solving capabilities.",
+    "Strong ability to work independently or in a team-oriented, collaborative environment.",
+    "Ability to take initiative and prioritize tasks, manage time, problem prevention, and problem-solving skills.",
+    "Proven experience as a hands-on engineer designing and delivering solutions to meet complex design and architectural challenges in a cloud services environment.",
+    "Prior experience building services that run on Microsoft Azure and Amazon Web Services Infrastructure.",
+    "Deep practical experience operating high-scale services in production environments.",
+    "Experience and opinions on what great observability looks like, what safe deployments look like, and whether to push code on Fridays."
+  ],
+  "analysis": "The job responsibilities and skills provided in the job description align most closely with the role of a \"Software Engineer\" (Option 8). The responsibilities such as supporting the software design process, participating in code reviews, supporting CI/CD processes, and making recommendations for continuous improvement of SDLC and DevOps are typical of a software engineering role. Additionally, the skills listed, such as proficiency in programming languages (Python, SQL, JavaScript), working knowledge of Git, Agile principles, and experience with cloud services (Azure, AWS), align well with the skills and tools expected of a Software Engineer. The focus on code quality, system performance, and scalability also matches the responsibilities of a Software Engineer. \n\nWhile there are elements of DevOps and cloud infrastructure in the job description, which could suggest a fit with the \"MLOps / AI Infrastructure Engineer\" (Option 3), the primary focus on software development and engineering principles makes Option 8 a more suitable match. The job does not emphasize AI-specific tasks or data science, which rules out Options 1, 2, 3, 4, 5, and 6. The role of a Product Manager (Option 7) is also not a fit, as the job description does not focus on product vision, strategy, or stakeholder management.\n\nTherefore, the job is most similar to the \"Software Engineer\" role.",
+  "role_classification": 8,
+  "role_title": "Software Engineer"
+}

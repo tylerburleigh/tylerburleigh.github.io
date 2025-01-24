@@ -1,0 +1,18 @@
+{
+  "filename": "jd4a59",
+  "responsibilities": [
+    "Construct reliable, high-quality datasets for training, testing, and running machine learning models.",
+    "Collaborate with software engineers, data engineers, data scientists, and quants to integrate data and models.",
+    "Work with technical and business stakeholders to define and build system requirements.",
+    "Implement and maintain data ingestion, storage, and processing systems for machine learning use cases."
+  ],
+  "qualifications": [
+    "Strong background in SQL for cloud data warehouses and relational databases.",
+    "Strong background in Python for scripting, data analysis, ML packages, and backend/microservice development.",
+    "Knowledge of supervised learning architectures such as regression, decision tree, and KNN.",
+    "Experience with multiple stages of the ML lifecycle, including feature engineering, training, validation, testing, deployment, and monitoring.",
+    "Experience with batch data pipelines and ETL orchestration tools."
+  ],
+  "analysis": "The job responsibilities and skills focus on constructing datasets, integrating data and models, and implementing data systems for machine learning use cases. The skills required include SQL, Python, knowledge of supervised learning architectures, and experience with the ML lifecycle and data pipelines. There is no specific mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on general machine learning, data engineering, and model integration rather than on generative or language-specific models.",
+  "is_genai_role": false
+}

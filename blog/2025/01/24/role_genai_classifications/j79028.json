@@ -1,0 +1,23 @@
+{
+  "filename": "j79028",
+  "responsibilities": [
+    "Design and implement infrastructure and platform components for leveraging LLM in production.",
+    "Tune and optimize LLM to improve response quality and optimize performance.",
+    "Build workflows and pipelines to process data from myriad sources into a knowledge base for various use cases.",
+    "Collaborate with platform engineering teams to ensure that AI/ML systems integrate successfully into production environments while adhering to performance and availability SLOs.",
+    "Participate in project planning, design, development, and code reviews.",
+    "Communicate verbally and in writing to business customers and leadership teams with various levels of technical knowledge, educating them about our systems, as well as sharing insights and recommendations.",
+    "Partnership across Engineering, Product Management, Security and Design teams to solve technical and non-technical challenges."
+  ],
+  "qualifications": [
+    "Fluency in a computing language, e.g. Python, Scala, C++, Java, etc.",
+    "Knowledge of AWS Bedrock, OpenAI or similar Generative AI platforms.",
+    "Experience with LLMOps, CI/CD, and IaC.",
+    "Familiar with the full AI/ML lifecycle from model development, training, testing, deployment, monitoring, and iterating.",
+    "Knowledge in prompt engineering and guardrails.",
+    "Excellent verbal and written communication.",
+    "Exceptional troubleshooting and problem-solving skills."
+  ],
+  "analysis": "The job responsibilities include designing and implementing infrastructure and platform components specifically for leveraging LLM (Large Language Models) in production, as well as tuning and optimizing LLMs to improve response quality and performance. This clearly indicates that the job involves working with language models. Additionally, the skills section mentions knowledge of AWS Bedrock, OpenAI, or similar Generative AI platforms, which are directly related to Generative AI. The mention of LLMOps, which refers to operations related to Large Language Models, further supports the involvement with language models. The knowledge in prompt engineering and guardrails is also relevant to working with language models and Generative AI. Overall, both the responsibilities and skills strongly indicate that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

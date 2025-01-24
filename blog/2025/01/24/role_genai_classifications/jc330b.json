@@ -1,0 +1,20 @@
+{
+  "filename": "jc330b",
+  "responsibilities": [
+    "Build or extend scalable, AWS-based storage and computing infrastructure",
+    "Develop a generalized research platform",
+    "Create a data ingestion and validation engine",
+    "Construct a model computation and signal generation pipeline",
+    "Develop a machine learning / Natural Language Processing pipeline"
+  ],
+  "skills": [
+    "Ability and desire to develop in Python",
+    "Ability and desire to develop in Java",
+    "Mastery of design patterns and object-oriented programming techniques",
+    "Strong understanding of best practices for large scale application design, SOA, microservices, distributed compute, containers, and use of the cloud",
+    "Strong attention to detail and passion for careful testing",
+    "Excellent communication skills"
+  ],
+  "analysis": "The job responsibilities include developing a machine learning / Natural Language Processing (NLP) pipeline, which suggests involvement with language processing technologies. However, there is no explicit mention of Generative AI or Large Language Models (LLMs) in the responsibilities. The focus seems to be on building infrastructure, data ingestion, and model computation pipelines, which are general tasks in machine learning and NLP but not specifically indicative of working with GenAI or LLMs.\n\nThe skills required include proficiency in Python and Java, design patterns, object-oriented programming, and cloud computing, which are common in many software development and data engineering roles. There is no specific mention of skills related to GenAI or LLMs, such as experience with specific frameworks or models like GPT, BERT, or similar.\n\nOverall, while the job involves machine learning and NLP, there is no clear indication that it specifically involves working with Generative AI or Large Language Models.",
+  "is_genai_role": false
+}

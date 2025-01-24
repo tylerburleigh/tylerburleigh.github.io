@@ -1,0 +1,27 @@
+{
+  "filename": "jf406c",
+  "responsibilities": [
+    "Identify, evaluate, and integrate diverse data sources into data products for the Generative AI program",
+    "Develop and optimize data processing workflows for chunking, indexing, and vectorization for both text and non-text data sources",
+    "Benchmark and implement various vector stores, embedding techniques, and retrieval methods",
+    "Create a flexible pipeline supporting multiple embedding algorithms, vector stores, and search types (e.g., vector search, hybrid search)",
+    "Implement and maintain auto-tagging systems and data preparation processes for LLMs",
+    "Integrate and optimize workflows using various vector store technologies",
+    "Write clean, maintainable data pipelines that generate AI and data science-ready outputs",
+    "Collaborate with data scientists and front-end engineers to design scalable AI-driven solutions",
+    "Communicate the technical approaches and associated benefits or drawbacks to multiple stakeholders via oral presentations or written documentation",
+    "Provide engineering oversight across projects and support data scientists and engineers in optimizing approaches",
+    "Continually scan the external environment for and bring in novel technological innovations that can be applied to our projects"
+  ],
+  "skills": [
+    "Deep understanding of modern data architectures incorporating AI/ML components including LLMs from vendor platforms such as AWS, Snowflake, Azure, and Databricks",
+    "Expertise in SQL, Python and related tools",
+    "Experience with RAG frameworks, knowledge base construction, and vector store technologies and their applications in AI",
+    "Experience with automation of quasi-experimental design techniques, such as A/B testing, to measure solution impact",
+    "Experience with data cleaning, tagging, and annotation processes",
+    "Experience with embedding techniques, similarity search algorithms, and information retrieval concepts",
+    "Deep understanding of data privacy standards and ethics"
+  ],
+  "analysis": "The job responsibilities and skills clearly indicate involvement with Generative AI and language models. The responsibilities mention the \"Generative AI program,\" \"data preparation processes for LLMs,\" and \"AI-driven solutions,\" which directly relate to working with Generative AI and language models. Additionally, the skills required include a \"deep understanding of modern data architectures incorporating AI/ML components including LLMs,\" \"experience with RAG frameworks,\" and \"embedding techniques,\" all of which are relevant to working with language models and Generative AI. The mention of \"vector store technologies,\" \"embedding techniques,\" and \"similarity search algorithms\" further supports the involvement with AI technologies that are often used in conjunction with language models.",
+  "is_genai_role": true
+}

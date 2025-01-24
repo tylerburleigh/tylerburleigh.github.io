@@ -1,0 +1,26 @@
+{
+  "filename": "j12c2d",
+  "responsibilities": [
+    "Work on research problems to improve vision and multimodal models.",
+    "Contribute to the development of open foundation models.",
+    "Experiment with mobile robots in real-world settings.",
+    "Build infrastructure for multimodal language models and digital agents or simulation infrastructure for mobile robotics.",
+    "Collaborate with researchers and engineers on other Ai2 teams.",
+    "Lead select projects and author scientific papers and presentations.",
+    "Develop infrastructure to deduplicate and analyze datasets at scale.",
+    "Optimize training and inference for language models.",
+    "Support and collaborate with an open-source community.",
+    "Use software engineering best practices in a research environment."
+  ],
+  "skills": [
+    "Deep knowledge of Python.",
+    "Strong understanding of modern deep learning and computer vision.",
+    "Experience with natural language processing.",
+    "Strong software engineering skills, particularly in building performant systems and debugging.",
+    "Experience with Python and PyTorch.",
+    "Familiarity with container technologies (e.g., Docker) for deploying web-based services."
+  ],
+  "analysis": "The job responsibilities and skills focus on research, development, and optimization of vision and multimodal models, infrastructure building, and collaboration with researchers and engineers. The skills required include deep knowledge of Python, understanding of deep learning and computer vision, experience with NLP, and familiarity with container technologies like Docker.\n\n1. **AI Research Scientist**: This option involves investigating AI methodologies, conducting experiments, and collaborating with engineers. The responsibilities align with the job's focus on research and development of models, but the skills required (LLMs, statistics, experimental methods) are not a perfect match.\n\n2. **AI/ML Engineer**: This role focuses on transforming research into scalable solutions, productionizing models, and collaborating with scientists. The job's emphasis on building infrastructure and optimizing models aligns well with this option, and the skills in Python and software engineering are relevant.\n\n3. **MLOps / AI Infrastructure Engineer**: This option involves deploying and monitoring AI systems, managing infrastructure, and using tools like Docker and Kubernetes. While there is some overlap in infrastructure management, the job's focus on research and model development is not a perfect fit.\n\n4. **AI Solution Architect**: This role is about designing AI solutions and collaborating with SMEs. The job's responsibilities do not align with the high-level solution design and business alignment focus of this option.\n\n5. **Data Scientist**: This option involves data analysis, model development, and collaboration with teams. The job's focus on vision and multimodal models and infrastructure development does not align with the data-centric responsibilities of a Data Scientist.\n\n6. **Data Engineer**: This role focuses on data pipelines and architecture. The job's responsibilities in model development and optimization do not align with the data engineering focus.\n\n7. **Product Manager**: This option involves driving product vision and strategy. The job's focus on research and model development does not align with the product management responsibilities.\n\n8. **Software Engineer**: This role involves developing software applications and maintaining systems. While there is some overlap in software engineering skills, the job's focus on research and model optimization is not a perfect fit.\n\nThe job aligns most closely with the **AI/ML Engineer** role, as both involve transforming research into scalable solutions, optimizing models, and collaborating with researchers and engineers. The skills in Python and software engineering are also relevant.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

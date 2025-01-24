@@ -1,0 +1,21 @@
+{
+  "filename": "jb1f28",
+  "responsibilities": [
+    "Own the core company data pipeline and scale up data processing flow to meet data growth at Outreach.",
+    "Implement systems for tracking and monitoring data integrity, quality, and consistency.",
+    "Develop frameworks and tools to support self-service data pipeline management (ETL) using big data technologies.",
+    "Collaborate with Data Science to leverage models for optimization and develop new models.",
+    "Work with the Data Platform team to efficiently shape data.",
+    "Collaborate with Product Management and User Interface Designers to effectively surface data."
+  ],
+  "qualifications": [
+    "Proficiency in Hadoop Ecosystem (MapReduce, Yarn, HDFS, Hive, Spark, Presto, Pig, HBase, Parquet).",
+    "Proficiency in at least one SQL language (MySQL, PostgreSQL, SqlServer, Oracle).",
+    "Strong understanding of SQL Engine and advanced performance tuning.",
+    "Strong skills in scripting languages (Python, Ruby, Perl, Bash).",
+    "Experience with workflow management tools (Airflow preferred).",
+    "Ability to work directly with data analytics to bridge business requirements with data engineering."
+  ],
+  "analysis": "The job responsibilities focus on managing and scaling data pipelines, ensuring data integrity, and collaborating with data science teams to leverage models for optimization. The skills required include proficiency in big data technologies, SQL, scripting languages, and workflow management tools. There is no explicit mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on data engineering, data processing, and collaboration with data science for optimization, which does not necessarily imply working with GenAI or LLMs.",
+  "is_genai_role": false
+}

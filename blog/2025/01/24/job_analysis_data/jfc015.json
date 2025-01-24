@@ -1,0 +1,902 @@
+[
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention using internal and external LLMs to build grading models and integrate them into evaluation pipelines. This suggests a focus on applying LLMs to specific tasks, which aligns with the idea of fine-tuning and customizing language models for domain-specific tasks. However, there is no explicit mention of fine-tuning or customization techniques in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not explicitly mention crafting or refining prompt instructions for LLMs. While there is a focus on building grading models and integrating them into evaluation pipelines, the specific activity of prompt engineering and iterative refinement is not directly addressed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include developing solutions that impact ML development, building grading models, and conducting research to improve data curation efficacy. These tasks imply a focus on evaluating and assessing model performance, which aligns with the activity of model evaluation and performance assessment.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities mention integrating grading models into evaluation pipelines, which suggests a focus on incorporating LLM outputs into workflows. This aligns with the activity of designing and implementing workflows that incorporate LLM outputs into end-user experiences or pipelines.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities include conducting research to identify grading errors, bias, and distribution disparity, which suggests a focus on analyzing model outputs for potential improvements. This aligns with the activity of model interpretability and debugging, where errors and biases are identified and addressed.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on machine learning research, data annotation, and model evaluation, which are more aligned with data quality and model development rather than designing end-to-end AI-driven pipelines. While there is mention of building pipelines to automate data quality assessment, it does not specifically relate to the architectural design of AI-driven pipelines as described in this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not mention anything about assessing computational demands or resource planning for AI models. The focus is more on research, data annotation, and model evaluation rather than infrastructure planning and resource management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities do not specifically address performance optimization or latency control. The responsibilities are more focused on research, data annotation, and model evaluation rather than optimizing AI system performance or managing latency.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not explicitly mention model lifecycle management or governance. The focus is on research, data annotation, and model evaluation, which are more about developing and assessing models rather than managing their lifecycle or governance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not mention system interoperability or integration with enterprise systems. The focus is on research, data annotation, and model evaluation, which are more about developing and assessing models rather than integrating them into broader systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include conducting research to improve data curation efficacy and uncovering patterns in data using statistical and ML-based methods. These tasks align with evaluating AI quality, as they involve assessing data and model performance, which is central to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve using internal and external LLMs to build grading models and integrating them into evaluation pipelines. This aligns with developing AI systems and algorithms for automated insights, as it involves creating models that can analyze and provide insights into data.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. The focus is on data annotation, model evaluation, and improving data curation efficacy, which do not directly relate to generating synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities involve developing solutions that impact future products and conducting research to improve data curation efficacy. These tasks require identifying performance metrics and success criteria to measure the impact and efficacy, aligning with this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities include applying innovative research in machine learning to tackle data annotation problems and building machine-based grading models. These tasks are directly related to creating labeled datasets for AI evaluation and optimization, as they involve preparing data for model training and assessment.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not explicitly mention designing, running, or analyzing experiments like A/B tests. The focus is more on data annotation, model evaluation, and research rather than experimental design and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities involve conducting research to improve data curation efficacy and employing data selection techniques. These tasks align with sampling data for evaluation, as they involve selecting and assessing data for model training and evaluation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The Job Responsibilities mention \"tackle complex data annotation and product evaluation problems\" and \"build machine-based grading models to reduce annotation costs and turnaround time.\" These tasks imply a need for clear annotation guidelines and workflows to ensure consistent and accurate data labeling, which aligns with the activity of designing labeling tasks for data annotation.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The Job Responsibilities do not explicitly mention managing logistics or communication for annotation projects or overseeing performance of annotation teams. While there is a focus on reducing annotation costs and improving data quality, the specific task of collecting human annotation data is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The Job Responsibilities include \"conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity\" and \"uncover patterns in data using modern statistical and ML-based methods to model data distributions.\" These tasks involve analyzing data to evaluate quality and generate insights, which aligns with the activity of analyzing human annotation data.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities mention using modern statistical and ML-based methods to model data distributions, which aligns with applying statistical techniques for data analysis. This suggests that statistical methods are relevant to the role, as they are likely used to uncover patterns in data and improve data curation efficacy.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "While the Job Responsibilities focus on data annotation, model development, and automation, there is no explicit mention of data visualization or exploratory analysis. The responsibilities are more centered on building models and pipelines rather than presenting data insights through visualization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include uncovering patterns in data using statistical and ML-based methods, which is related to data mining. However, there is no specific mention of analyzing large conversational datasets. The focus is more on data annotation and model evaluation rather than conversational data analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities include building pipelines to automate data quality assessment and integrating grading models into evaluation pipelines. This aligns with developing data models and pipelines for analytics, indicating that this activity is relevant to the role.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities do not explicitly mention defining metrics or success criteria. The focus is more on research, model development, and automation rather than tracking and analyzing specific metrics. Therefore, this activity may not be directly relevant to the responsibilities outlined.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on developing machine learning models, automating data quality assessment, and integrating grading models into evaluation pipelines. While these tasks involve building and deploying models, there is no explicit mention of designing and maintaining CI/CD pipelines, containerization, or orchestration, which are key aspects of Deployment and MLOps. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities include tasks such as building pipelines to automate data quality assessment and using statistical methods to model data distributions. These tasks imply a need for monitoring data quality and model performance. However, there is no explicit mention of real-time monitoring, logging solutions, or detecting data drift, which are central to Monitoring and observability. Thus, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention version control systems or the need for reproducibility and traceability of datasets and model artifacts. The focus is more on developing models and automating data quality assessments. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities emphasize developing solutions, building grading models, and automating data quality assessments. While these tasks require validation, there is no explicit mention of automating validation steps, unit tests, integration tests, or performance benchmarks, which are key aspects of Continuous testing and validation. Thus, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities focus on developing machine learning models, automating data quality assessments, and conducting research. There is no mention of optimizing or scaling model-serving infrastructure, cloud platforms, or container orchestration tools, which are central to Infrastructure and scalability. Therefore, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance frameworks, data privacy, ethics, regulatory compliance, or security practices. The focus is on developing models and automating data quality assessments. Therefore, this Activity is not directly relevant to the specified responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include tasks such as developing solutions, building grading models, and conducting research to improve data curation efficacy. These tasks imply a need for continuous improvement and adaptation of models to evolving data and requirements. However, there is no explicit mention of regular retraining, hyperparameter tuning, or establishing feedback loops, which are key aspects of Model lifecycle management and continuous improvement. Thus, this Activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on machine learning, data annotation, and model development, with no mention of direct user interaction or gathering user insights through interviews or surveys. The responsibilities are more technical and research-oriented, rather than user experience-focused.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities do not mention usability testing or prototyping. The focus is on developing machine learning models, data quality assessment, and research, which are not directly related to testing user interfaces or creating prototypes for user experience enhancement.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities are centered around machine learning, data annotation, and research, with no indication of creating user personas or mapping user journeys. The tasks are more aligned with technical development and data analysis rather than user experience design.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While the Job Responsibilities involve data analysis, they are focused on statistical and machine learning methods to model data distributions and improve data curation. The qualitative data analysis described in the activity is more about synthesizing user feedback, which is not directly relevant to the responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on machine learning, data annotation, and model evaluation, which are more research-oriented and data-centric. While software architecture is crucial for building scalable systems, the responsibilities do not explicitly mention designing or implementing software architecture. The focus is more on data pipelines, grading models, and research, which are not directly related to software architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities emphasize developing solutions that impact future products and building pipelines for data quality assessment. While these tasks may involve some level of application development, the responsibilities are more focused on research, data processing, and model evaluation rather than developing production-grade applications. The emphasis is on machine learning and data annotation rather than application development.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities do not mention any aspects of continuous integration and delivery. The focus is on research, data annotation, and model evaluation, which are more aligned with data science and machine learning rather than software engineering practices like CI/CD. There is no indication of automating build, test, or deployment processes in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not include any mention of monitoring or incident management. The focus is on research, data quality, and model evaluation, which are more related to data science and machine learning. Monitoring and incident management are typically associated with maintaining software systems, which is not the focus of the given responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities do not explicitly mention API development or system integration. The focus is on machine learning research, data annotation, and model evaluation. While APIs might be used in the process, the responsibilities do not highlight this as a primary task. The emphasis is more on data processing and model building rather than system integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities include building pipelines to automate data quality assessment and using grading models, which could involve some aspects of testing and quality assurance. However, the primary focus is on research and data annotation rather than traditional software testing and QA practices. The responsibilities do not explicitly mention developing test suites or maintaining test coverage.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not mention DevOps practices or infrastructure as code. The focus is on machine learning research, data annotation, and model evaluation, which are more aligned with data science rather than DevOps. There is no indication of managing or provisioning cloud resources or promoting a DevOps culture in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include tasks such as conducting research to improve data curation efficacy, uncovering patterns in data using modern statistical and ML-based methods, and employing data selection techniques. These tasks align with the Activity's focus on investigating system accuracy, robustness, fairness, and other key performance metrics. The responsibilities also mention building grading models and integrating them into evaluation pipelines, which suggests a focus on evaluating AI quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities mention developing solutions that impact future Apple products and the broader ML development ecosystem, collaborating to build machine-based grading models, and using LLMs to build grading models. These tasks are related to building and refining AI methods, which aligns with the Activity's focus on developing AI systems and algorithms for automated insights.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not explicitly mention synthetic data generation. While there is a focus on data quality and curation, as well as building pipelines to automate data assessment, there is no direct reference to developing methods for producing synthetic datasets. Therefore, this Activity is not directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include tasks such as conducting research to improve data curation efficacy and uncovering patterns in data, which may involve identifying performance metrics. However, there is no explicit mention of defining measurable indicators or tracking and analyzing these metrics. The focus is more on data quality and model development rather than explicitly identifying performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities mention building machine-based grading models to reduce annotation costs and conducting research to improve data curation efficacy. These tasks suggest a focus on data annotation and quality, which aligns with the Activity's focus on preparing balanced, high-quality data annotations for AI evaluation and optimization.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not explicitly mention designing, running, or analyzing experiments such as A/B tests. While there is a focus on research and evaluation, the responsibilities do not specifically reference controlled experiments or statistical analysis of outcomes. Therefore, this Activity is not directly relevant to the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jfc015",
+    "responsibilities": [
+      "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+      "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+      "Collaborate with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+      "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+      "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+      "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+      "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+      "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+      "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities include tasks such as building pipelines to automate the assessment of data quality and employing data selection techniques like novelty detection and active learning. These tasks suggest a focus on data evaluation and selection, which aligns with the Activity's focus on using statistical methods to sample data for evaluation.",
+    "is_relevant": true
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "filename": "je6c99",
+  "responsibilities": [
+    "Shape the architecture and scalability of the next-generation AI inference platform.",
+    "Lead the design and implementation of core systems for AI services, including resilient fault-tolerant queues, model catalogs, and scheduling mechanisms.",
+    "Build and scale infrastructure capable of handling millions of API requests per second.",
+    "Own critical subsystems for managed AI inference to serve large language models (LLMs) globally.",
+    "Collaborate cross-functionally to influence the long-term vision of the platform.",
+    "Develop a customer-facing API that serves real-world AI models.",
+    "Prototype rapidly, optimize performance on GPUs, and ensure high availability as part of MVP development.",
+    "Contribute to open-source AI frameworks and low-level performance optimizations."
+  ],
+  "skills": [
+    "Strong background in distributed systems design and implementation.",
+    "Experience with cloud-based services that can handle millions of requests.",
+    "Problem-solving skills around performance optimizations, particularly for AI inference on GPU-based systems.",
+    "Proactive and collaborative approach with the ability to work autonomously.",
+    "Strong communication skills, both written and verbal.",
+    "Passion for open-source contributions and AI inference frameworks.",
+    "Keen interest in customer-facing product development and building user-friendly APIs."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on building and scaling AI infrastructure, handling millions of API requests, and optimizing performance on GPUs. This aligns closely with the role of an \"MLOps / AI Infrastructure Engineer\" (Option 3), which emphasizes ensuring reliable deployment, scaling, and monitoring of AI systems in production, managing infrastructure for scalable AI deployments, and optimizing compute usage for cost-effective scaling. The skills required for the job, such as a strong background in distributed systems, cloud-based services, and performance optimizations, are also a good match for the skills and tools listed for the MLOps / AI Infrastructure Engineer, which include a strong DevOps background and experience with tools like Docker, Kubernetes, and Terraform.\n\nOther options, such as AI Research Scientist, AI/ML Engineer, and AI Solution Architect, have different primary focuses and responsibilities that do not align as closely with the job description. For example, the AI Research Scientist focuses more on research and experimentation, the AI/ML Engineer on transforming research into scalable solutions, and the AI Solution Architect on designing AI solutions aligned with business objectives. The job's emphasis on infrastructure and scalability makes it a better fit for the MLOps / AI Infrastructure Engineer role.\n\nTherefore, the job is most similar to Option 3, MLOps / AI Infrastructure Engineer.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

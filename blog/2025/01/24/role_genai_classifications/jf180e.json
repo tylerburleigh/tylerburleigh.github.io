@@ -1,0 +1,21 @@
+{
+  "filename": "jf180e",
+  "responsibilities": [
+    "Architect, deploy, and scale data storage and processing infrastructure to support analytics and data science workloads.",
+    "Manage and maintain data lake and clustered computing services, ensuring reliability, security, and scalability.",
+    "Build and optimize frameworks and tools to simplify big data technology usage.",
+    "Collaborate with cross-functional teams to align data infrastructure with business goals and requirements.",
+    "Ensure data governance and security best practices across all platforms.",
+    "Monitor, troubleshoot, and optimize system performance and resource utilization."
+  ],
+  "qualifications": [
+    "Proficiency in Kubernetes and Helm for container orchestration.",
+    "Hands-on experience with clustered computing technologies such as Spark, Trino, Flink, Ray, Kafka, StarRocks, or similar.",
+    "Programming skills in C++, C#, Java, or Python.",
+    "Scripting skills in Python or Bash for automation and tooling.",
+    "Strong understanding of data storage technologies, distributed computing, and big data processing pipelines.",
+    "Knowledge of data security best practices and managing access in complex systems."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data infrastructure, big data processing, and system performance optimization. The responsibilities include tasks such as architecting and scaling data storage, managing data lakes, optimizing big data frameworks, and ensuring data governance and security. The skills required include proficiency in container orchestration, clustered computing technologies, programming, and scripting, as well as a strong understanding of data storage and distributed computing.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data infrastructure and processing rather than on developing or working with AI models, particularly those related to natural language processing or generation.\n\nTherefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

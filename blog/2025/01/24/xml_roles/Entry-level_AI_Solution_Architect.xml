@@ -1,0 +1,19 @@
+
+Identify the most common Responsibilities and Skills listed in the jobs below, returning a bulleted list in the format
+
+# Responsibilities
+- [responsibility]: [responsibility description]
+- [responsibility]: [responsibility description]
+...
+# Skills
+- [skill]: [skill description]
+- [skill]: [skill description]
+...
+<Job>
+<Responsibilities>['Develop next-gen AI-enabled PaaS platform, including AI Tooling, Application Platform, and Application Integration Services.', 'Collaborate closely with a team of experts, including AI researchers and PaaS engineers, to integrate advanced AI features into existing solutions.', 'Analyze, investigate, and implement Gen AI solutions for Cloud Service features and technologies focusing on Agentic Orchestration and Agent Builder frameworks.']</Responsibilities>
+<Skills>['Proficiency in Python, Java, and SQL.', 'Strong foundation in algorithms, data structure, and object-oriented programming.', 'Strong knowledge of AI LLM.', 'Solid understanding of Deep Learning principles, especially in NLP.', 'Hands-on experience with ANNs (e.g., RNN, LSTM, GRU) and deep learning frameworks (e.g., TensorFlow, PyTorch).', 'Expertise in advanced Generative AI tools and concepts including Transformers, LLM, Fine-tuning, (Graph) RAG, and Vector Databases.', 'Solid understanding of AI agents, Agentic Orchestration, AI Agent Workflow Automation, and Agent Builder frameworks such as Lang Chain.', 'Excellent communication and organization skills.', 'Attention to detail and ability to multi-task under pressure and changing priorities.']</Skills>
+</Job>
+<Job>
+<Responsibilities>['Configure and fine-tune generative AI models for content creation related to precious metals, commodities, and cryptocurrencies.', 'Collaborate with product teams to design and implement custom workflows for AI-based content generation.', 'Evaluate model outputs for accuracy, quality, and compliance with editorial guidelines.', 'Streamline editorial processes by incorporating AI tools into CMS workflows.', 'Identify and address pain points in editorial workflows to reduce manual effort and improve output quality.', 'Integrate AI-driven features to enhance user experience on kitco.com.', 'Create documentation, training materials, and best practices for AI-enhanced tools.', 'Work closely with Full-Stack Developers for smooth integration of AI services.', 'Coordinate with data specialists to manage and refine training datasets.', 'Partner with DevOps and infrastructure teams to deploy and maintain AI services.', 'Monitor AI-driven workflows and troubleshoot performance or data quality issues.', 'Implement metrics and analytics to measure AI effectiveness and propose improvements.', 'Ensure AI-based solutions align with privacy, security, and ethical standards.', 'Stay updated with emerging technologies and experiment with new models or frameworks.']</Responsibilities>
+<Skills>['Familiarity with CMS integrations and API-based data flows.', 'Basic understanding of front-end and back-end development workflows.', 'Knowledge of containerization and orchestration in cloud environments.', 'Understanding of journalistic principles and editorial processes.', 'Ability to balance AI benefits with editorial standards of accuracy and quality.', 'Excellent written and verbal communication skills.', 'Strong project management and coordination skills.', 'Proactive mindset for identifying issues and implementing solutions.', 'Enthusiasm for continuous learning and testing new AI approaches.']</Skills>
+</Job>

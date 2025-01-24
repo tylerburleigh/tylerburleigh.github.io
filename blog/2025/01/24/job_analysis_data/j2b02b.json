@@ -1,0 +1,97 @@
+[
+  {
+    "filename": "j2b02b",
+    "responsibilities": [
+      "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+      "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+      "Shape data workflows while exploring platform-oriented challenges such as data contracts, validation frameworks, and governance tools.",
+      "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+      "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+      "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+      "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+      "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+      "Build frameworks and tools that empower data producers to maintain high data quality.",
+      "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on designing and optimizing data systems, managing data pipelines, and enhancing data governance. There is no mention of working with language models or tasks related to fine-tuning or customizing them. The responsibilities are more aligned with data engineering and architecture rather than machine learning or language model customization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2b02b",
+    "responsibilities": [
+      "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+      "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+      "Shape data workflows while exploring platform-oriented challenges such as data contracts, validation frameworks, and governance tools.",
+      "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+      "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+      "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+      "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+      "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+      "Build frameworks and tools that empower data producers to maintain high data quality.",
+      "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention any tasks related to crafting or refining prompts for language models. The focus is on data systems, pipelines, and governance, which are not directly related to prompt engineering or iterative refinement of language model outputs.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2b02b",
+    "responsibilities": [
+      "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+      "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+      "Shape data workflows while exploring platform-oriented challenges such as data contracts, validation frameworks, and governance tools.",
+      "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+      "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+      "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+      "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+      "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+      "Build frameworks and tools that empower data producers to maintain high data quality.",
+      "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The responsibilities include optimizing Snowflake usage and performance, which involves performance assessment, but this is specific to data systems rather than language models. There is no indication of evaluating language models or using metrics like perplexity or BLEU, which are specific to language model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2b02b",
+    "responsibilities": [
+      "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+      "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+      "Shape data workflows while exploring platform-oriented challenges such as data contracts, validation frameworks, and governance tools.",
+      "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+      "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+      "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+      "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+      "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+      "Build frameworks and tools that empower data producers to maintain high data quality.",
+      "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities involve designing and maintaining data pipelines and collaborating with teams to curate datasets, which could involve integration with downstream applications. However, there is no specific mention of incorporating LLM outputs or handling content moderation related to language models. The focus is more on data systems and governance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j2b02b",
+    "responsibilities": [
+      "Design, build, and optimize scalable data systems that empower decision-making and innovation at Zocdoc.",
+      "Collaborate with cross-functional teams to manage data pipelines, improve governance, and enhance tools and processes.",
+      "Shape data workflows while exploring platform-oriented challenges such as data contracts, validation frameworks, and governance tools.",
+      "Design and maintain scalable data pipelines for ingestion, transformation, and delivery across multiple data sources.",
+      "Collaborate with Analytics Engineers and Product teams to curate datasets and establish data contracts.",
+      "Develop and manage modern data architectures, such as lakehouses and medallion layers.",
+      "Optimize Snowflake usage and performance, ensuring data quality and cost efficiency.",
+      "Support data governance initiatives by implementing validation mechanisms, managing metadata, and maintaining schema consistency.",
+      "Build frameworks and tools that empower data producers to maintain high data quality.",
+      "Proactively monitor and improve the performance of data workflows, reducing bottlenecks, and ensuring reliability at scale."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not include tasks related to analyzing model outputs or employing interpretability techniques. The focus is on data systems, pipelines, and governance, which do not involve debugging or interpreting language models.",
+    "is_relevant": false
+  }
+]

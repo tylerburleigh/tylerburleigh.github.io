@@ -1,0 +1,26 @@
+{
+  "filename": "j6f291",
+  "responsibilities": [
+    "Design, implement, and maintain robust infrastructure to support the development and deployment of generative AI and machine learning tools for the AI Accelerator.",
+    "Evaluate and compare different technical approaches, presenting their trade-offs to guide architectural decisions for AI projects.",
+    "Design and develop tools, components, and processes to support public cloud service intake, CI/CD, and security.",
+    "Lead proof of concept efforts for candidate architectures, products, and tools.",
+    "Adopt and communicate new concepts, ideas, techniques, best practices, and technology assistance at all organizational levels.",
+    "Assist in the remediation of application stability and performance.",
+    "Work to establish required cloud infrastructures and frameworks."
+  ],
+  "qualifications": [
+    "Extensive experience with Google Cloud Platform (GCP) or another cloud provider, including application hosting, BigQuery, and serverless computing.",
+    "Knowledge of cloud security principles and frameworks.",
+    "Hands-on experience with modern DevOps concepts and workflows.",
+    "Strong backend development expertise, particularly in building and integrating REST APIs with frameworks like FastAPI.",
+    "Practical experience in Python development, especially in data-driven environments and for building scalable applications.",
+    "Experience with cloud-native technologies such as Docker, Kubernetes, and Terraform for container orchestration and infrastructure as code.",
+    "Familiarity with CI/CD best practices, using tools such as GitHub Actions and Cloud Build.",
+    "Solid understanding of monitoring, alerting, and logging solutions within cloud-native ecosystems.",
+    "Confidence in communicating complex technical ideas to diverse audiences.",
+    "Development experience with Python and/or JavaScript/Typescript."
+  ],
+  "analysis": "The job responsibilities include designing, implementing, and maintaining infrastructure to support the development and deployment of generative AI and machine learning tools. This explicitly mentions \"generative AI,\" indicating that the job involves working with generative AI technologies. Additionally, the responsibilities involve evaluating technical approaches for AI projects, which could include generative AI models. The skills required for the job focus on cloud platforms, DevOps, backend development, and cloud-native technologies, which are essential for deploying and managing AI models, including generative AI models. However, there is no explicit mention of language models or LLMs in the responsibilities or skills. Despite this, the mention of generative AI is sufficient to conclude that the job involves working with generative AI technologies.",
+  "is_genai_role": true
+}

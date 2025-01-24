@@ -1,0 +1,62 @@
+[
+  {
+    "filename": "j256db",
+    "responsibilities": [
+      "Work with a creative team responsible for the bring-up of new hardware platforms (vehicles, sensors, compute) and for building a multi-platform software stack",
+      "Develop software and ML methods to accelerate performance improvement of new platforms in relation to existing mature platforms",
+      "Build evaluation tools and infrastructure to measure performance of new platforms in comparison to existing mature platforms"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities focus on working with hardware platforms, developing software and ML methods, and building evaluation tools for performance measurement. Fine-tuning and customization of language models is not directly related to these responsibilities, as it involves training or fine-tuning large language models for domain-specific tasks, which is more aligned with software development for language processing rather than hardware platform performance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j256db",
+    "responsibilities": [
+      "Work with a creative team responsible for the bring-up of new hardware platforms (vehicles, sensors, compute) and for building a multi-platform software stack",
+      "Develop software and ML methods to accelerate performance improvement of new platforms in relation to existing mature platforms",
+      "Build evaluation tools and infrastructure to measure performance of new platforms in comparison to existing mature platforms"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities do not mention any tasks related to crafting or refining prompt instructions for language models. The focus is on hardware platforms and performance improvement, which does not align with the activities of prompt engineering and iterative refinement of language models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j256db",
+    "responsibilities": [
+      "Work with a creative team responsible for the bring-up of new hardware platforms (vehicles, sensors, compute) and for building a multi-platform software stack",
+      "Develop software and ML methods to accelerate performance improvement of new platforms in relation to existing mature platforms",
+      "Build evaluation tools and infrastructure to measure performance of new platforms in comparison to existing mature platforms"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include building evaluation tools and infrastructure to measure performance of new platforms. While this involves performance assessment, it is specific to hardware platforms rather than large language models. The methodologies for evaluating language models are not directly applicable to the responsibilities described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j256db",
+    "responsibilities": [
+      "Work with a creative team responsible for the bring-up of new hardware platforms (vehicles, sensors, compute) and for building a multi-platform software stack",
+      "Develop software and ML methods to accelerate performance improvement of new platforms in relation to existing mature platforms",
+      "Build evaluation tools and infrastructure to measure performance of new platforms in comparison to existing mature platforms"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities do not mention integrating outputs into end-user experiences or pipelines, nor do they involve content moderation or retrieval augmentation. The focus is on hardware and software development for performance improvement, which does not align with integrating language model outputs into applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j256db",
+    "responsibilities": [
+      "Work with a creative team responsible for the bring-up of new hardware platforms (vehicles, sensors, compute) and for building a multi-platform software stack",
+      "Develop software and ML methods to accelerate performance improvement of new platforms in relation to existing mature platforms",
+      "Build evaluation tools and infrastructure to measure performance of new platforms in comparison to existing mature platforms"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not involve analyzing model outputs for errors or biases, nor do they mention using interpretability techniques or debugging tools. The focus is on hardware platforms and performance improvement, which does not align with the interpretability and debugging of language models.",
+    "is_relevant": false
+  }
+]

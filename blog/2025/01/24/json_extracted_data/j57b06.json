@@ -1,0 +1,27 @@
+{
+  "responsibilities": [
+    "Be responsible for data engineering activities including data ingestion, data modelling, data processing, and data governance.",
+    "Work with the team to improve the data pipeline to process large-scale data efficiently.",
+    "Be a data steward to educate and promote the importance of data and a data-driven culture.",
+    "Collaborate with key stakeholders, product owners, and external vendors to define solutions for business and technical requirements.",
+    "Lead, participate, guide, and mentor other team members on data processing design and implementation best practices."
+  ],
+  "skills": [
+    "Experience developing large-scale data processing pipelines and implementing ETL using modern tools and best practices.",
+    "Strong knowledge of SQL (MySQL, PostgreSQL) and experience with NoSQL databases.",
+    "Extensive experience with various AWS services (e.g., EC2, S3, Athena, Lambda, Kinesis Firehose, Redshift).",
+    "Experience with Airflow, EKS, EMR, Redshift, Kubernetes.",
+    "Good Hadoop ecosystem knowledge (e.g., Hadoop, Spark, Kafka, Hive, Presto).",
+    "Proficient in at least one programming language and scripting languages (Python, Java, Scala, Bash).",
+    "Experience with CICD tools such as Github Actions and CircleCI.",
+    "Familiar with Agile/Scrum software development methodologies.",
+    "Excellent written and verbal communication and presentation skills.",
+    "Bonus skills: DevOps skills, experience creating visualization and dashboards, experience with Health or IOT or Mobile Device Management business, experience with Lakehouse architectures, operational experience tuning and debugging large volume Spark jobs."
+  ],
+  "qualifications": [
+    "7+ years of professional experience in software and big data, with most of them from a product company.",
+    "Experience on large-scale multi-tier cloud applications and environments.",
+    "Deep understanding of data engineering principles and hands-on experience with large-scale analytics systems.",
+    "BS or MS in Computer Science or equivalent education."
+  ]
+}

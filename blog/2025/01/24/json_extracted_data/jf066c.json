@@ -1,0 +1,37 @@
+{
+  "responsibilities": [
+    "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta’s Llama)",
+    "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+    "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+    "Optimize prompt engineering and model selection for different use cases",
+    "Implement caching strategies and fallback mechanisms for AI service integrations",
+    "Develop monitoring and observability solutions for AI-enhanced systems",
+    "Collaborate with product teams to identify opportunities for AI integration",
+    "Write technical documentation and integration guides",
+    "Ensure compliance with AI service providers' terms of service and rate limits"
+  ],
+  "skills": [
+    "Strong programming skills in Rust, JavaScript/TypeScript, or similar languages",
+    "Experience working with REST APIs and building API integrations",
+    "Familiarity with LLM APIs (OpenAI, Anthropic, etc.) and prompt engineering",
+    "Understanding of distributed systems and microservices architecture",
+    "Experience with version control systems (Git) and CI/CD pipelines",
+    "Knowledge of AI/ML concepts and natural language processing",
+    "Experience with container orchestration (Kubernetes, Docker)",
+    "Familiarity with WebAssembly and canister development",
+    "Experience with real-time systems and websocket implementations",
+    "Programming Languages: Rust, JavaScript/TypeScript, Python",
+    "Frameworks & Tools: Node.js, React, Internet Computer SDK",
+    "AI/ML: LLM APIs, prompt engineering, vector embeddings",
+    "Infrastructure: Docker, Kubernetes, CI/CD",
+    "Protocols: REST, GraphQL, WebSocket",
+    "Version Control: Git, GitHub"
+  ],
+  "qualifications": [
+    "Bachelor's degree in Computer Science, Software Engineering, or related field",
+    "3+ years of software development experience",
+    "Experience with the Internet Computer ecosystem and Motoko programming language (preferred)",
+    "Track record of building developer tools or developer experience improvements (preferred)",
+    "Contributions to open-source projects (preferred)"
+  ]
+}

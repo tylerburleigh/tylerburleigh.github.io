@@ -1,0 +1,22 @@
+{
+  "filename": "jf9641",
+  "responsibilities": [
+    "Partner with data engineers and architects to design and implement scalable database solutions and data models, organizing both structured and unstructured data.",
+    "Develop processes for data cleansing, enrichment, and validation to improve quality and reliability.",
+    "Collaborate with data scientists to develop machine learning models to enhance the data transformation pipelines, such as transformer-based methods to create probabilistic record matching.",
+    "Monitor, solve, and optimize data pipelines for performance and efficiency.",
+    "Document data architecture designs, integration procedures, and data management workflows in a clear, comprehensive manner.",
+    "Continuously evaluate new cloud technologies and data processing frameworks to enhance pipeline performance.",
+    "Develop automation scripts and tools to ease the deployment, scaling, and management of data systems within the cloud environment."
+  ],
+  "skills": [
+    "Strong background in machine learning, NLP, and foundation models.",
+    "Proficiency with big data processing frameworks such as Apache Spark.",
+    "Experience with programming languages like Python, Scala, or SQL.",
+    "Ability to write efficient, well-documented code and maintain version control in collaboration with a team.",
+    "Excellent problem-solving skills and the capacity to work under tight deadlines in a fast-paced environment.",
+    "Previous work in agile development environments and knowledge of project management tools such as JIRA."
+  ],
+  "analysis": "The job responsibilities include collaborating with data scientists to develop machine learning models, specifically mentioning transformer-based methods for probabilistic record matching. Transformers are a key component of many language models, including those used in Generative AI. Additionally, the skills section highlights a strong background in machine learning, NLP (Natural Language Processing), and foundation models. Foundation models often refer to large pre-trained models, which are a type of language model. The mention of NLP and foundation models further suggests that the job involves working with language models or Generative AI technologies.",
+  "is_genai_role": true
+}

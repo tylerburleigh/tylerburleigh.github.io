@@ -1,0 +1,34 @@
+{
+  "filename": "j4de42",
+  "responsibilities": [
+    "Design, build, and maintain services and deployment for Snorkel\u2019s enterprise platforms",
+    "Design, build, and improve observability and alerting for Snorkel\u2019s enterprise platforms",
+    "Contribute to Snorkel\u2019s inhouse deployment management software for installation and upgrades of various deployments for Snorkel\u2019s enterprise customers",
+    "Build and maintain Snorkel\u2019s production and staging infrastructure; own our k8s and cloud strategy",
+    "Work closely with various engineering teams in defining test strategies and build infrastructure to execute the same",
+    "Deploy and optimize CI/CD pipelines across multiple environments and continuously improve development and deployment best practices",
+    "Collaborate with enterprise customers to understand product use cases and translate into engineering specifications, and deliver high-quality solutions",
+    "Participate in on-call rotations, post-incident reviews, and other operational duties to ensure service delivery quality",
+    "Work a hybrid schedule with three days per week in our Redwood City HQ or the SF office"
+  ],
+  "skills": [
+    "Strong development and debugging skills in Python",
+    "Strong experience with cloud platforms and infrastructure as code (Terraform, CloudFormation, Helm)",
+    "Practical experience with Docker containerization and clustering (Kubernetes/EKS/GKE)",
+    "Proficiency in code and system health, diagnosis, resolution, and software test engineering",
+    "Strong communication and coding skills",
+    "Regularly follows the best software engineering practices and holds a high bar for the team by leading design, code review, and test plan reviews",
+    "Extremely well versed in building and managing cloud infrastructure for enterprise platforms on (AWS, GCP, Azure) and services like EC2, EKS, VPC etc",
+    "Experience in one or more of the build tools like Bazel, Gradle, Make etc.",
+    "Designed and implemented developer-friendly APIs or tools to boost developer productivity",
+    "Familiarity in deployment, monitoring, and maintenance of large-scale enterprise software products",
+    "Familiarity in developing and releasing infrastructure software for SaaS and on-prem platforms",
+    "Hands-on experience setting up and operating Kubernetes clusters at scale",
+    "Experience with large scale distributed computing systems for ML Training or Serving, eg: Ray, Spark, Tensorflow etc",
+    "Hands-on experience in creating and maintaining metrics and dashboards on observability platforms such as New Relic, DataDog, Chronosphere, or similar tools",
+    "Experience building services and infrastructure for Machine learning and AI Systems",
+    "Experience in cloud networking, security, and service mesh like istio"
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on infrastructure, deployment, and cloud services for enterprise platforms. The responsibilities include designing and maintaining services, improving observability, managing deployment software, and optimizing CI/CD pipelines. The skills required emphasize cloud platforms, containerization, cloud infrastructure, and distributed computing systems for machine learning and AI systems.\n\nWhile there is a mention of \"Experience building services and infrastructure for Machine learning and AI Systems\" and \"Experience with large scale distributed computing systems for ML Training or Serving,\" there is no specific mention of working with Generative AI (GenAI) or language models (LLMs). The focus is more on the infrastructure and deployment aspects rather than the development or application of GenAI or LLMs.\n\nTherefore, based on the provided responsibilities and skills, the job does not explicitly involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

@@ -1,0 +1,31 @@
+{
+  "filename": "j01aaf",
+  "responsibilities": [
+    "Design, build, and maintain scalable data pipelines while ensuring data reliability, accuracy, and integrity.",
+    "Lead data ingestion, transformation, and warehousing initiatives to support business objectives.",
+    "Design and implement data pipelines to collect, ingest, and transform data from various sources into a structured format.",
+    "Collaborate with the team to monitor and maintain data quality standards, perform data validation, and resolve data quality issues.",
+    "Design and maintain data warehousing solutions to store and manage large volumes of data efficiently.",
+    "Work on automating routine data engineering tasks to improve efficiency and reliability.",
+    "Develop and maintain lightweight data applications for ML interfaces, simple CRUD operations, and quick interactive analysis.",
+    "Identify and implement optimizations to all parts of the data stack to improve data pipeline performance and reduce processing times.",
+    "Create and maintain documentation for data pipelines, processes, and data flows.",
+    "Collaborate with cross-functional teams including data analysts, data scientists, other engineering teams, and business stakeholders to understand data requirements and deliver data solutions.",
+    "Stay up to date with industry best practices and emerging technologies in data engineering.",
+    "Serve as an informal leader on the data engineering team, collaborating with other data engineers on solution designs, and help to continually raise the collective competency of the team by sharing learnings and mentoring team members in earlier stages of their careers.",
+    "Interact effectively with leadership, team members, other engineering/technical teams, and business stakeholders to drive projects to effective and timely resolutions."
+  ],
+  "qualifications": [
+    "Proficiency with SQL and Python in data engineering workflows.",
+    "Proficiency in utilizing and managing data integration and ETL tools (e.g., Stitch/Talend, Airbyte, Fivetran, etc).",
+    "Experience with data orchestration and workflow management tools (e.g., Dagster, Airflow).",
+    "Applied knowledge of data warehousing concepts and technologies (e.g., Snowflake, AWS Redshift, Google BigQuery, etc).",
+    "Experience in deployment of various data pipelines and components and ML-ops solutions within cloud computing platforms, particularly in AWS.",
+    "Excellent problem-solving skills and attention to detail.",
+    "Strong communication and teamwork skills, with a demonstrated competency for collaboration and mentoring.",
+    "Ability to work in a fast-paced, collaborative environment.",
+    "Aptitude for continuous improvement through learning and sharing, along with an ability to quickly and effectively adopt and adapt to new technologies and tools."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data engineering tasks. The responsibilities include designing and maintaining data pipelines, data warehousing, data quality monitoring, and automation of data engineering tasks. The skills required include proficiency in SQL and Python, experience with data integration and ETL tools, data orchestration, and workflow management tools, as well as knowledge of data warehousing technologies. There is also mention of developing lightweight data applications for ML interfaces and deploying ML-ops solutions within cloud platforms.\n\nHowever, there is no explicit mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is more on data engineering, data pipelines, and data warehousing rather than on developing or working with GenAI or LLMs. While there is a mention of ML interfaces, it does not specifically indicate the use of GenAI or LLMs.\n\nOverall, the job seems to be centered around data engineering and infrastructure rather than directly involving Generative AI or language models.",
+  "is_genai_role": false
+}

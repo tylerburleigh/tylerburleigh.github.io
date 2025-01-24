@@ -1,0 +1,30 @@
+{
+  "responsibilities": [
+    "Work with a multi-disciplinary team",
+    "Design and build proof-of-concept analytics or software solutions for customer projects using current ML / deep learning / LLM best practices and technologies",
+    "Build new capabilities for data intensive processing and analysis on specialized high performance systems using state of the art open source technologies",
+    "Prepare and present research findings at scientific seminars, conferences, and workshops",
+    "Publish technical reports and refereed journal articles",
+    "Mentor junior staff"
+  ],
+  "skills": [
+    "Proficiency with UNIX, shell (bash) scripting, automating tasks and application setup via scripts",
+    "Bash scripting with multi-node utilization (for ML, distributed processing, utilities, setup scripts)",
+    "Understanding and application of the machine learning process using common environments and libraries, either traditional (e.g. pandas, scikit-learn) or deep learning technologies (e.g. PyTorch, TensorFlow)",
+    "Experience with applying the above by setting up and running AI/ML training jobs (e.g. in Python scripts/notebooks, or as configuration running as part of a cloud service)",
+    "Experience with container & virtualization technologies like Singularity, Docker",
+    "Good written and verbal communication skills and oral presentation skills",
+    "Experience designing and training neural networks, DNNs using libraries such as TensorFlow, PyTorch",
+    "Experience with AI/ML training at scale using distributed libraries/frameworks such as Dask, Spark",
+    "Familiarity with GPU accelerated AI/ML (e.g. Rapids)",
+    "Experience working with LLM concepts and frameworks (RAG, embeddings, vector databases, prompt engineering, agents, ollama, langchain, langsmith)",
+    "Experience fine-tuning existing large language models (LLMs) for domain specific use cases",
+    "Experience delivering trained machine learning models, i.e. MLOps (e.g. deploying a model as a service, model evaluation and monitoring, model versioning and storage)",
+    "Experience working with High Performance Computing",
+    "Writing pbs/slurm scripts to orchestrate ML model training"
+  ],
+  "qualifications": [
+    "Bachelor’s Degree or equivalent and 2-5 years of related work experience, or Master's Degree with 1-3 years of experience",
+    "Must be a U.S. Citizen and able to obtain and maintain a Secret security clearance"
+  ]
+}

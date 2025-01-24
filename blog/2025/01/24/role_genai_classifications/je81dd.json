@@ -1,0 +1,24 @@
+{
+  "filename": "je81dd",
+  "responsibilities": [
+    "Manage and execute data warehouse plans for a product or a group of products to solve well-scoped problems.",
+    "Identify the data needed for a business problem and implement logging required to ensure availability of data, while working with data infrastructure to triage issues and resolve.",
+    "Collaborate with engineers, product managers, and data scientists to understand data needs, representing key data insights in a meaningful way.",
+    "Build data expertise and leverage data controls to ensure privacy, security, compliance, data quality, and operations for allocated areas of ownership.",
+    "Design, build, and launch new data models and visualizations in production, leveraging common development toolkits.",
+    "Independently design, build, and launch new data extraction, transformation, and loading processes in production, mentoring others around efficient queries.",
+    "Support existing processes running in production and implement optimized solutions with limited guidance.",
+    "Define and manage SLA for data sets in allocated areas of ownership."
+  ],
+  "skills": [
+    "SQL",
+    "ETL (Extract, Transform, Load)",
+    "Data modeling",
+    "Schema design and dimensional data modeling",
+    "Programming languages: Python, C++, C#, and/or Scala",
+    "Dashboarding & Visualization",
+    "Telemetry and Logging design"
+  ],
+  "analysis": "The job responsibilities focus on managing and executing data warehouse plans, identifying and implementing data logging, collaborating with engineers and data scientists, building data expertise, designing and launching data models and visualizations, and supporting data processes. The skills required include SQL, ETL, data modeling, schema design, programming languages like Python, C++, C#, and/or Scala, dashboarding and visualization, and telemetry and logging design.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The job is centered around data management, data modeling, and data infrastructure, which are typical for data engineering roles. The focus is on data extraction, transformation, loading processes, and ensuring data quality and compliance, rather than on developing or working with GenAI or LLMs.",
+  "is_genai_role": false
+}

@@ -1,0 +1,902 @@
+[
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention optimizing prompt engineering and model selection for different use cases, which suggests a focus on using existing models effectively rather than training or fine-tuning them. There is no explicit mention of training or fine-tuning language models, which is the core of this Activity. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities explicitly mention optimizing prompt engineering and model selection for different use cases. This aligns closely with the Activity of crafting and refining prompt instructions to elicit desired behaviors from large language models. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities do not explicitly mention evaluating the quality, reliability, or fairness of large language models. While there is a focus on optimizing prompt engineering and model selection, this does not directly imply the development and application of methodologies for model evaluation. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include designing and implementing integrations between developer tools and LLM APIs, as well as creating intelligent automation tools that leverage LLMs. This aligns with the Activity of designing and implementing workflows that incorporate LLM outputs into end-user experiences or pipelines. Therefore, this Activity is relevant to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not mention analyzing model outputs for errors, biases, or potential improvements, nor do they mention employing interpretability techniques and debugging tools. The focus is more on integration and optimization rather than interpretability and debugging. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include designing and implementing integrations between developer tools and LLM APIs, developing API wrappers, and creating automation tools leveraging LLMs. These tasks align with designing end-to-end workflows and ensuring seamless integration of components, as described in the activity. Both focus on creating cohesive systems that integrate various components to deliver high-quality results.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or planning for scalability, which are the main focus of this activity. The responsibilities are more centered around integration, optimization, and compliance rather than infrastructure planning and resource management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities include optimizing prompt engineering and model selection, implementing caching strategies, and developing monitoring solutions. These tasks are related to performance optimization and maintaining low response times, as described in the activity. Both involve strategies to enhance system performance and reliability.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities do not specifically mention model lifecycle management or governance, such as retraining, versioning, or traceability. The focus is more on integration, optimization, and compliance rather than managing the lifecycle of AI models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities include developing API wrappers, facilitating communication between components, and collaborating with product teams for AI integration. These tasks align with aligning generative AI services with existing systems and establishing APIs, as described in the activity. Both focus on ensuring interoperability and seamless integration.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities do not explicitly mention conducting research to evaluate AI quality, such as investigating system accuracy or designing experiments. The focus is more on integration, optimization, and compliance rather than research and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include creating intelligent automation tools leveraging LLMs, which could involve developing AI systems for automated insights. However, the responsibilities do not explicitly mention building or refining AI methods for analyzing user behavior or system performance, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention developing methods for producing synthetic datasets or evaluating their quality. The focus is more on integration, optimization, and compliance rather than data generation for testing or improving AI models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include optimizing prompt engineering and model selection, which may involve identifying performance metrics and success criteria. However, the responsibilities do not explicitly mention defining measurable indicators or tracking metrics, which is the main focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention preparing data annotations or creating labeled datasets. The focus is more on integration, optimization, and compliance rather than data preparation for AI evaluation and optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing or running experiments, such as A/B tests, to compare model variants or features. The focus is more on integration, optimization, and compliance rather than experimental analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation or ensuring a representative dataset. The focus is more on integration, optimization, and compliance rather than data sampling for evaluation purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on integrating AI services, developing API wrappers, creating automation tools, and optimizing AI models. Designing labeling tasks for data annotation involves creating guidelines and workflows for data labeling, which is not directly related to the integration and development tasks described in the job responsibilities. There is no mention of data annotation or labeling tasks in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities are centered around AI service integration, API development, and automation tools, with no mention of data collection or human annotation. Collecting human annotation data involves managing logistics and communication for annotation projects, which does not align with the technical and integration-focused responsibilities listed.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "Analyzing human annotation data involves using statistical methods to evaluate dataset quality, which is not mentioned in the job responsibilities. The responsibilities are more focused on AI integration, API development, and automation, rather than data analysis or evaluation of annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on integrating AI services, developing API wrappers, creating automation tools, and optimizing AI models. While these tasks may involve some data analysis, they do not explicitly mention the use of statistical methods for hypothesis testing or model validation. The responsibilities are more aligned with software development and AI integration rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not mention data visualization or exploratory data analysis. The focus is on developing integrations, API wrappers, and automation tools, as well as optimizing AI models. While data visualization could be a part of understanding AI model performance, it is not explicitly stated as a responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities include optimizing prompt engineering and model selection, which could involve analyzing conversational datasets to improve AI models. However, the primary focus is on integration and development rather than data mining. While there is a potential overlap, it is not a direct match with the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities do not explicitly mention developing data models or pipelines for analytics. The focus is on integrating AI services, developing API wrappers, and creating automation tools. While data models and pipelines could support these tasks, they are not directly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include optimizing prompt engineering and model selection, which may involve defining metrics and success criteria to assess model performance. Additionally, developing monitoring and observability solutions for AI-enhanced systems could require defining and tracking metrics. This activity is relevant as it aligns with assessing and guiding AI model performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on integrating AI services, developing API wrappers, and creating automation tools, but they do not explicitly mention designing and maintaining CI/CD pipelines or containerization, which are central to this Activity. While there is a general overlap in ensuring robust systems, the specific tasks of deployment and MLOps are not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "One of the Job Responsibilities explicitly mentions developing monitoring and observability solutions for AI-enhanced systems. This directly aligns with the Activity's focus on implementing real-time monitoring and logging solutions to track model performance and detect issues early.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not mention version control systems for datasets or model artifacts, nor do they discuss ensuring reproducibility and traceability. The focus is more on integration and optimization rather than versioning, making this Activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention automating validation steps or testing models before deployment. The focus is more on integration, optimization, and compliance, rather than testing and validation processes, making this Activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not explicitly mention optimizing and scaling model-serving infrastructure or designing automated scaling policies. The focus is more on integration and optimization of AI services rather than infrastructure and scalability, making this Activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "One of the Job Responsibilities is to ensure compliance with AI service providers' terms of service and rate limits. This aligns with the Activity's focus on governance, compliance, and security, although the Activity is broader in scope, covering data privacy and regulatory compliance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities do not mention planning regular retraining, hyperparameter tuning, or performance evaluations. The focus is more on integration, optimization, and compliance rather than continuous improvement of models, making this Activity less relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on technical tasks related to AI integration, API development, and automation tools. There is no mention of gathering user insights or conducting interviews and surveys, which are central to this Activity. The responsibilities are more aligned with backend development and AI service integration rather than user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities do not include tasks related to usability testing or prototyping. The focus is on developing integrations, API wrappers, and automation tools, which are technical in nature. There is no indication that the role involves testing user interfaces or creating prototypes to enhance user experience.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities are centered around technical development and AI integration, with no mention of user personas or journey mapping. These tasks are typically associated with UX research and design, which are not part of the described responsibilities. The role is more focused on backend and system-level tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities do not involve qualitative data analysis related to user research. The tasks are technical and involve AI service integration, API development, and automation tools. There is no indication that the role requires analyzing qualitative data from user research activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include designing and implementing integrations between developer tools and LLM APIs, as well as developing API wrappers and middleware. These tasks require a strong understanding of software architecture to ensure that the integrations are scalable and maintainable. Therefore, this activity is relevant as it involves defining system components and integration points, which align with the responsibilities of creating robust integrations.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities involve developing and maintaining API wrappers and middleware, which requires writing clean, modular, and efficient code. This aligns with the activity of developing production-grade applications, as both involve adhering to coding standards and ensuring code quality. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, they do involve developing and maintaining robust integrations and middleware, which could benefit from automated build, test, and deployment processes. However, without explicit mention of CI/CD practices, the relevance is less direct. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities include developing monitoring and observability solutions for AI-enhanced systems. This directly aligns with the activity of implementing logging, metrics, and alerting solutions for real-time visibility into system health. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities explicitly mention developing and maintaining API wrappers and middleware, as well as designing and implementing integrations. This directly aligns with the activity of API development and system integration, which involves designing and implementing APIs for internal and external integrations. Therefore, this activity is highly relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities do not explicitly mention software testing or quality assurance. While developing robust integrations may implicitly require some level of testing, the responsibilities do not focus on developing automated test suites or maintaining test coverage. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities do not explicitly mention DevOps practices or infrastructure as code. While efficient integration and middleware development may benefit from a DevOps culture, the responsibilities focus more on API development and AI service integration rather than infrastructure management. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities focus on integrating AI services, developing API wrappers, and creating automation tools. While these tasks involve AI, they do not explicitly mention evaluating AI quality through research or experiments. The responsibilities are more implementation-focused rather than research-focused.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include creating intelligent automation tools and optimizing prompt engineering, which could involve developing AI systems and algorithms. However, the focus is on integration and productivity improvement rather than developing systems for automated insights specifically.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on integrating existing AI services and tools rather than generating data for AI model training or testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include optimizing prompt engineering and model selection, which may involve identifying performance metrics to some extent. However, the primary focus is on integration and implementation rather than defining and tracking performance metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets. The focus is on integrating AI services and developing tools rather than preparing datasets for AI evaluation or optimization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities do not mention designing or running experiments like A/B tests. The focus is on implementing and maintaining integrations and tools rather than conducting experiments to compare model variants or features.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jf066c",
+    "responsibilities": [
+      "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+      "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+      "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+      "Optimize prompt engineering and model selection for different use cases",
+      "Implement caching strategies and fallback mechanisms for AI service integrations",
+      "Develop monitoring and observability solutions for AI-enhanced systems",
+      "Collaborate with product teams to identify opportunities for AI integration",
+      "Write technical documentation and integration guides",
+      "Ensure compliance with AI service providers' terms of service and rate limits"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation. The focus is on integration and tool development rather than data sampling for AI evaluation purposes.",
+    "is_relevant": false
+  }
+]

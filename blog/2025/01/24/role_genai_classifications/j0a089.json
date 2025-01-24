@@ -1,0 +1,29 @@
+{
+  "filename": "j0a089",
+  "responsibilities": [
+    "Design, build, and maintain advanced data models utilizing SQL, dbt, and BigQuery to support comprehensive data analytics and reporting requirements.",
+    "Develop resilient fact and dimension tables and data marts, transforming raw data into structured datasets to ensure integrity and efficiency.",
+    "Enhance the self-service data product, improving user-friendliness and empowering teams to retrieve data independently.",
+    "Serve as the primary point of contact for key data models, offering guidance and support to analysts and team members.",
+    "Ensure the GTM teams at Rewind have the data needed to drive strategic and actionable insights.",
+    "Engage with cross-functional teams (e.g. Product, Finance, Marketing) to comprehend their data needs and translate them into actionable features.",
+    "Provide mentorship and coaching to junior team members, define and delegate work, and collaborate with cross-functional stakeholders.",
+    "Ensure adherence to best practices, data governance standards, and optimal database structures and schemas.",
+    "Develop and execute comprehensive data validation and testing procedures to ensure the accuracy and reliability of data outputs.",
+    "Meticulously document the data sources, models, and pipeline with best practices in mind and ensure no barriers to this information.",
+    "Educate stakeholders on data best practices, usage guidelines, and the significance of maintaining data confidence."
+  ],
+  "qualifications": [
+    "Expert knowledge of SQL.",
+    "Proficiency in cloud data warehousing (e.g., BigQuery, Snowflake, Databricks).",
+    "A solid understanding of database structures, schemas, and data modelling techniques.",
+    "Familiarity with Modern Data Stack tools (e.g., Fivetran, dbt, Hightouch, Census).",
+    "Experience with BI tools like Metabase for data visualization and reporting.",
+    "Strong analytical and problem-solving skills.",
+    "Excellent communication and interpersonal skills.",
+    "Ability to mentor and coach junior team members.",
+    "Familiarity with data governance principles and data quality assurance."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data modeling, data analytics, and data warehousing. The responsibilities include designing and maintaining data models, developing data marts, enhancing self-service data products, and ensuring data integrity and efficiency. The skills required include expertise in SQL, proficiency in cloud data warehousing, understanding of database structures, and experience with BI tools for data visualization.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data management, analytics, and reporting, rather than on natural language processing or AI model development. The tools and technologies mentioned, such as BigQuery, dbt, and Metabase, are related to data engineering and business intelligence, not AI or language models.\n\nTherefore, based on the provided information, the job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

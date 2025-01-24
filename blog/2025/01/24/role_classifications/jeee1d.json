@@ -1,0 +1,30 @@
+{
+  "filename": "jeee1d",
+  "responsibilities": [
+    "Develop and integrate generative AI solutions with existing software teams building products.",
+    "Develop a scalable machine learning framework for data science products.",
+    "Develop scalable pipelines, tools, and services for building production-ready machine-learning models.",
+    "Work with data scientists to pilot products with beta customers.",
+    "Maintain a culture of simple, streamlined code and full CI/CD automation.",
+    "Develop simple, streamlined, and well-tested ML pipeline components."
+  ],
+  "skills": [
+    "Strong coding experience in Python.",
+    "Familiarity with PySpark and SQL.",
+    "Familiarity with popular Python libraries such as pandas, numpy, flask, matplotlib.",
+    "Familiarity with the AWS platform and services, including CI/CD automation methods.",
+    "Familiarity with AWS serverless methodology, particularly Fargate, Lambda, ECR.",
+    "Familiarity with CloudFormation, Terraform, or equivalent.",
+    "Experience with machine learning or generative AI libraries such as Langchain, llamaindex, Langsmith, and llamaguard.",
+    "Knowledge of open source Foundation models: llama3, llama2, mistral, falcon, phi.",
+    "Experience with orchestration frameworks: Mlflow, airflow.",
+    "Some knowledge of JavaScript (node.js) as a front end.",
+    "Experience or familiarity with Databricks AI services and Mosaic branded services.",
+    "Comfortable supporting troubleshooting and assessment of production issues.",
+    "Experience with monitoring tools such as Splunk, Datadog, Dynatrace.",
+    "Test writing discipline in standard development tools and processes, e.g., GitHub, Jira, Slack."
+  ],
+  "analysis": "The Job responsibilities and skills focus on developing and integrating AI solutions, building machine learning frameworks, and maintaining CI/CD automation. The skills required include strong coding experience in Python, familiarity with AWS services, machine learning libraries, and orchestration frameworks like MLflow and Airflow.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not aligned with the job's focus on developing and integrating AI solutions and maintaining CI/CD automation.\n\n2. **AI/ML Engineer**: This option involves transforming research output into scalable AI solutions, productionizing AI models, and developing data pipelines, which aligns well with the job's focus on developing scalable machine learning frameworks and pipelines.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which partially aligns with the job's focus on CI/CD automation and orchestration frameworks but is more infrastructure-focused.\n\n4. **AI Solution Architect**: This option involves designing AI solutions and collaborating with SMEs, which is more strategic and less focused on the hands-on development and integration tasks described in the job.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not aligned with the job's focus on developing AI solutions and maintaining CI/CD automation.\n\n6. **Data Engineer**: This option involves building data pipelines and architectures, which is not directly aligned with the job's focus on AI solution development and integration.\n\n7. **Product Manager**: This option focuses on product vision and strategy, which is not aligned with the technical development and integration tasks described in the job.\n\n8. **Software Engineer**: This option involves software development and maintenance, which partially aligns with the job's focus on coding and CI/CD but lacks the specific focus on AI and machine learning frameworks.\n\nThe most relevant option is **AI/ML Engineer** (Option 2), as it involves developing scalable AI solutions and maintaining data pipelines, which aligns well with the job's responsibilities and skills.",
+  "role_classification": 2,
+  "role_title": "AI/ML Engineer"
+}

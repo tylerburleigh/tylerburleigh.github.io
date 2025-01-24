@@ -1,0 +1,25 @@
+{
+  "filename": "ja4cc1",
+  "responsibilities": [
+    "Interact with customers directly to understand their business problems and help them define and implement scalable ML/DL solutions.",
+    "Research, develop, and implement state-of-the-art AI and ML solutions to deploy scalable solutions into production.",
+    "Collaborate and coordinate with product managers, designers, engineers, and other key stakeholders to define requirements, scope, and architecture for new features and enhancements.",
+    "Push forward AI technology initiatives, helping to discover and keep Procore on the leading edge.",
+    "Communicate effectively by clearly articulating results and ideas to customers, managers, and key decision makers.",
+    "Foster a healthy and inclusive team environment, provide technical guidance to other engineers, and act as a mentor."
+  ],
+  "qualifications": [
+    "Proficiency in Python with a focus on scalable, maintainable code.",
+    "Experience in training and deploying models using PyTorch and TensorFlow, including YOLOv8-v11, Transformers, Mask R-CNN, DETR, and Swin Transformers.",
+    "Skilled in fine-tuning LLMs, VLMs, and NLP technologies for specialized applications.",
+    "Ability to design workflows for data collection, annotation, feature engineering, model training, and evaluation.",
+    "Proficiency in distributed GPU training with CUDA and cuDNN for multi-GPU systems.",
+    "Proficiency in containerization, microservices, and deployment using Docker, Kubernetes, and cloud platforms like AWS.",
+    "Strong knowledge of Ray for distributed execution, ArgoCD for GitOps workflows, and Kubernetes for managing ML applications.",
+    "Proficiency in Git and building robust CI/CD pipelines for efficient development and deployment.",
+    "Experience with monitoring tools like Datadog, New Relic, and Sumo Logic for ensuring system reliability and performance.",
+    "Solid understanding of Agile practices with a proven track record of delivering iterative, high-quality results."
+  ],
+  "analysis": "The job responsibilities include researching, developing, and implementing state-of-the-art AI and ML solutions, which suggests involvement with advanced AI technologies. The skills section specifically mentions experience in training and deploying models using Transformers and fine-tuning LLMs (Large Language Models), which are directly related to language models and Generative AI. Additionally, the mention of NLP (Natural Language Processing) technologies further supports the involvement with language models. The combination of these skills and responsibilities indicates that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

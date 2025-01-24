@@ -1,0 +1,15 @@
+
+Identify the most common Responsibilities and Skills listed in the jobs below, returning a bulleted list in the format
+
+# Responsibilities
+- [responsibility]: [responsibility description]
+- [responsibility]: [responsibility description]
+...
+# Skills
+- [skill]: [skill description]
+- [skill]: [skill description]
+...
+<Job>
+<Responsibilities>['Develop machine learning technologies for generative AI models focused on image/video generation.', 'Implement and optimize machine learning solutions.', 'Ship machine learning solutions in Apple products.', 'Engage and collaborate with several teams across Apple to deliver the best products.']</Responsibilities>
+<Skills>['Strong programming, debugging, and problem-solving skills.', 'Proficiency in machine learning frameworks, e.g., PyTorch.', 'Deep understanding of neural networks.', 'Experience in designing and optimizing networks.']</Skills>
+</Job>

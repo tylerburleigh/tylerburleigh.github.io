@@ -1,0 +1,22 @@
+{
+  "filename": "j2cdc0",
+  "responsibilities": [
+    "Implement end to end data pipelines to extract and transform data from a variety of sources for multiple business initiatives.",
+    "Design and implement reusable base data models in Snowflake to support multiple data applications such as analytics and marketing tools.",
+    "Optimize data pipelines with a focus on data quality testing to improve data observability.",
+    "Work cross functionally with other data and business functions to champion data engineering initiatives and ensure that projects are delivered on time aligned to stakeholder expectations.",
+    "Contribute to data infrastructure decisions and implementations."
+  ],
+  "qualifications": [
+    "Proficiency in object-oriented and functional scripting languages (Python).",
+    "Ability to author queries (SQL) and familiarity with relational databases.",
+    "Knowledge of data modeling techniques for data warehousing.",
+    "Experience with data platforms such as Snowflake, Redshift, or BigQuery.",
+    "Familiarity with data transformation tools (DBT) and containerized applications (Docker).",
+    "Understanding of cloud platforms (Azure, AWS, GCP).",
+    "Desire to continuously learn and implement the latest technologies and analytical tools.",
+    "Open and transparent communication skills, with the ability to adjust communication for both technical and non-technical audiences."
+  ],
+  "analysis": "The job responsibilities focus on data engineering tasks such as implementing data pipelines, designing data models, optimizing data quality, and working with data infrastructure. The skills required include proficiency in programming languages like Python, SQL, and familiarity with data platforms and cloud services. There is no mention of working with Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is primarily on data engineering, data warehousing, and cloud platforms, without any specific reference to AI or language models.",
+  "is_genai_role": false
+}

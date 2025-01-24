@@ -1,0 +1,28 @@
+{
+  "filename": "jd9283",
+  "responsibilities": [
+    "Design, build, and deliver ML models and components that solve real-world business problems in collaboration with Product and Data Science teams.",
+    "Inform ML infrastructure decisions using understanding of ML modeling techniques and issues.",
+    "Solve complex problems by writing and testing application code, developing and validating ML models, and automating tests and deployment.",
+    "Collaborate as part of a cross-functional Agile team to create and enhance software for big data and ML applications.",
+    "Retrain, maintain, and monitor models in production.",
+    "Leverage or build cloud-based architectures, technologies, and platforms to deliver optimized ML models at scale.",
+    "Construct optimized data pipelines to feed ML models.",
+    "Leverage continuous integration and continuous deployment best practices, including test automation and monitoring.",
+    "Ensure all code is well-managed to reduce vulnerabilities and models are well-governed from a risk perspective.",
+    "Use programming languages like Python, Scala, or Java."
+  ],
+  "qualifications": [
+    "Proficiency in programming languages such as Python, Scala, or Java.",
+    "Experience with ML frameworks like scikit-learn, PyTorch, Dask, Spark, or TensorFlow.",
+    "Ability to design and build data-intensive solutions using distributed computing.",
+    "Experience in productionizing, monitoring, and maintaining models.",
+    "Knowledge of cloud-based architectures and platforms.",
+    "Understanding of ML modeling techniques, including model training, hyperparameter tuning, and validation.",
+    "Experience with continuous integration and continuous deployment best practices.",
+    "Ability to construct and optimize data pipelines.",
+    "Familiarity with Responsible and Explainable AI practices."
+  ],
+  "analysis": "The job responsibilities and skills focus on designing, building, and delivering machine learning (ML) models and components to solve real-world business problems. The responsibilities include collaborating with product and data science teams, making ML infrastructure decisions, writing and testing application code, developing and validating ML models, and automating tests and deployment. The job also involves working with big data and ML applications, retraining and monitoring models in production, and leveraging cloud-based architectures and platforms.\n\nThe skills required include proficiency in programming languages like Python, Scala, or Java, experience with ML frameworks such as scikit-learn, PyTorch, Dask, Spark, or TensorFlow, and the ability to design and build data-intensive solutions using distributed computing. The job also requires knowledge of cloud-based architectures, understanding of ML modeling techniques, and familiarity with Responsible and Explainable AI practices.\n\nThere is no specific mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on general ML models and infrastructure, rather than on generative models or language models specifically. While some of the ML frameworks mentioned (e.g., PyTorch, TensorFlow) can be used for building GenAI or LLMs, the job description does not explicitly indicate that the role involves working with these types of models.",
+  "is_genai_role": false
+}

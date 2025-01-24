@@ -1,0 +1,752 @@
+[
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on building features within the Remitly app, developing backend services, and integrating ML-driven components into customer-facing experiences. While these tasks involve software development and machine learning, there is no specific mention of fine-tuning or customizing large language models. The responsibilities do not indicate a need for domain-specific language model training or advanced fine-tuning techniques.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities include contributing to a virtual assistant and developing ML-driven components, which could involve some level of prompt engineering to optimize user interactions. However, the responsibilities do not explicitly mention crafting or refining prompts for large language models, nor do they emphasize iterative refinement of such models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The responsibilities mention developing ML-driven components and delivering complex projects, which could involve some evaluation of model performance. However, there is no explicit mention of methodologies for evaluating large language models or using specific metrics like perplexity or BLEU. The focus seems to be more on application development rather than model evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include building features within the app and developing backend services, which could involve integrating ML components into user experiences. This aligns with designing workflows that incorporate LLM outputs into applications. The mention of developing customer-facing experiences suggests a potential relevance to integrating LLMs into the app.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "While the job involves developing ML-driven components, there is no specific mention of analyzing model outputs for errors or biases, or employing interpretability techniques. The responsibilities focus more on feature development and integration rather than debugging or refining models for interpretability.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities include developing ML-driven components into customer-facing experiences and building backend services. This suggests a need for designing workflows and integrating components, which aligns with creating architecture blueprints for AI-driven pipelines. However, the focus on generative AI is not explicitly mentioned in the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not explicitly mention assessing computational demands or resource planning for AI models. While building backend services might involve some level of resource planning, the specific focus on large-scale AI models and infrastructure trade-offs is not evident.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities emphasize delivering high-quality projects and building backend services, which could involve performance optimization and latency control. However, there is no specific mention of advanced caching mechanisms or load balancing strategies related to generative AI.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities include developing ML-driven components, which may involve some aspects of model lifecycle management. However, there is no explicit mention of continuous retraining, versioning, or governance of models, particularly in the context of generative AI.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities involve partnering with product managers and engineers, which may require system interoperability and integration. However, there is no specific mention of aligning generative AI services with enterprise systems or establishing APIs, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities do not explicitly mention conducting research to evaluate AI quality. While developing ML-driven components might involve some evaluation, the specific focus on system accuracy, robustness, and fairness is not evident.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities include developing ML-driven components, which could involve building AI systems and algorithms for insights. However, there is no explicit mention of automated insights or analyzing user behavior, which are key aspects of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation. While developing ML-driven components might involve data considerations, there is no explicit focus on producing synthetic datasets or evaluating their quality.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities emphasize delivering high-quality projects, which may involve identifying performance metrics and success criteria. However, there is no explicit mention of defining measurable indicators or tracking metrics, particularly in the context of AI evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. While developing ML-driven components might involve data preparation, there is no specific focus on data annotations or ensuring robust model training.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities do not explicitly mention designing or running experiments. While developing ML-driven components might involve some experimentation, there is no specific focus on A/B tests or analyzing outcomes using statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not mention sampling data for evaluation. While developing ML-driven components might involve data evaluation, there is no specific focus on using statistical methods to ensure a representative dataset.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on building features within the Remitly app, developing backend services, and integrating ML-driven components into customer-facing experiences. While these tasks may involve some level of data handling and possibly machine learning, there is no explicit mention of designing labeling tasks for data annotation. The responsibilities do not indicate a need for creating annotation guidelines or workflows, which are specific to data annotation processes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention managing logistics or communication for annotation projects, nor do they involve overseeing performance of annotation teams. The focus is on building app features, backend services, and ML-driven components, which do not directly relate to collecting human annotation data. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include developing ML-driven components, which might involve some data analysis. However, there is no specific mention of analyzing human annotation data or using statistical methods to evaluate dataset quality. The responsibilities are more aligned with software development and product feature delivery rather than data annotation analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities mention developing ML-driven components into customer-facing experiences, which may involve applying statistical techniques for model building and validation. However, the responsibilities do not explicitly mention statistical methods or hypothesis testing, which are core to this activity. The focus seems more on software development and product features rather than data science-specific tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities do not explicitly mention data visualization or exploratory data analysis. The focus is on building features, backend services, and ML-driven components, which may indirectly involve data analysis, but there is no direct mention of employing visualization tools or presenting data insights to stakeholders.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "One of the responsibilities is to contribute to Remitly's virtual assistant and help center within the app. This could involve analyzing conversational datasets to improve the virtual assistant's performance. However, the responsibilities do not explicitly mention data mining or analysis of large datasets, so the relevance is not strongly indicated.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities focus on building backend services and developing ML-driven components, which could involve creating data models and pipelines. However, the responsibilities do not explicitly mention developing data models or ETL workflows for analytics purposes. The focus is more on software development and product features.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include delivering end-to-end complex projects and partnering with product managers to achieve product and business goals. Defining metrics and success criteria could be relevant to assessing the success of these projects and aligning with business goals. However, the responsibilities do not explicitly mention defining or tracking metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities mention developing ML-driven components into customer-facing experiences, which implies the need for deploying machine learning models. The activity of designing and maintaining CI/CD pipelines for model deployment is relevant to ensuring these ML components are effectively integrated and maintained in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or observability of ML models. However, ensuring the reliability and performance of ML-driven components could implicitly require monitoring solutions. Given the focus on delivering high-quality projects, this activity could be relevant, but it is not explicitly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not explicitly mention data and model versioning. While versioning is important for maintaining ML-driven components, there is no direct reference to this activity in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The job responsibilities emphasize delivering high-quality projects and product features. Continuous testing and validation are crucial for ensuring the stability and quality of ML-driven components before deployment. This activity aligns with the responsibility of delivering complex projects with high quality.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities include building backend services in Go on AWS, which suggests a focus on infrastructure. However, there is no explicit mention of scaling model-serving infrastructure or handling traffic spikes, which are specific to this activity. The relevance is indirect and not clearly stated.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The job responsibilities do not mention governance, compliance, or security aspects related to ML operations. While these are important considerations, they are not directly referenced in the responsibilities provided.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities include developing ML-driven components, which implies a need for ongoing model lifecycle management and improvement. However, there is no explicit mention of retraining, hyperparameter tuning, or performance evaluations in the responsibilities. The relevance is indirect.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on building features, developing backend services, and integrating ML-driven components into customer-facing experiences. While these tasks are related to product development, they do not explicitly mention gathering user insights through interviews or surveys. The responsibilities emphasize technical development and collaboration with product managers and engineers, rather than direct user research activities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities include building new features and developing customer-facing experiences, which could benefit from usability testing and prototyping to ensure a high-quality user experience. However, the responsibilities do not explicitly mention conducting usability tests or creating prototypes. The focus is more on technical development and delivering complex projects.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The job responsibilities do not mention creating user personas or mapping user journeys. The focus is on technical development, building features, and achieving product and business goals. While understanding user personas and journeys can inform product development, these activities are not explicitly part of the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The job responsibilities do not include tasks related to analyzing qualitative data from user research. The focus is on building features, developing backend services, and integrating ML components. While qualitative data analysis can provide insights for product development, it is not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include building new features within the Remitly app, developing backend services, and delivering complex projects. These tasks require designing and implementing software architecture to ensure scalability, maintainability, and alignment with business needs. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The responsibilities mention building new features, developing backend services, and delivering high-quality projects, which involve writing clean, modular, and efficient code. This aligns with developing production-grade applications, making this activity relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "While the job responsibilities do not explicitly mention CI/CD, delivering end-to-end complex projects with high quality implies the need for streamlined build, test, and deployment processes. Thus, CI/CD is likely relevant to maintaining high software quality in this role.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. However, ensuring high-quality delivery and partnering with engineers across teams may involve some level of monitoring and incident management. Without explicit mention, this activity is less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities include building backend services and developing customer-facing experiences, which often involve API development and system integration. This activity is relevant as it supports the creation of robust and secure services.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "Delivering high-quality projects and features implies a focus on software testing and quality assurance. Although not explicitly mentioned, maintaining code quality and reliability is essential, making this activity relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities include building backend services on AWS, which may involve infrastructure management. However, there is no explicit mention of DevOps practices or infrastructure as code, making this activity less directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities mention developing ML-driven components into customer-facing experiences, which implies a need for evaluating AI quality to ensure these components function effectively. However, the responsibilities do not explicitly mention conducting research or evaluating AI quality through experiments or methodologies, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities include developing ML-driven components into customer-facing experiences, which aligns with building and refining AI methods. This suggests a relevance to developing AI systems and algorithms, as these components likely require such development to analyze user behavior or system performance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation or any tasks related to creating datasets for AI models. The focus is more on building features and backend services rather than data generation for AI model training or testing.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "While the job responsibilities involve delivering complex projects and partnering with product managers to achieve goals, they do not explicitly mention identifying performance metrics or success criteria. This activity is more focused on defining and tracking metrics, which is not directly addressed in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not mention creating labeled datasets or any tasks related to data preparation for AI evaluation. The focus is on building features and backend services, not on dataset creation or optimization for AI models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include developing ML-driven components and delivering complex projects, which may involve testing and analyzing new features. However, there is no explicit mention of designing or running experiments like A/B tests, which is the focus of this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "j76df3",
+    "responsibilities": [
+      "Build new features within the Remitly app to help customers resolve common issues.",
+      "Contribute to Remitly's virtual assistant and help center within the app.",
+      "Build backend services in Go on AWS.",
+      "Develop ML-driven components into customer-facing experiences.",
+      "Deliver end-to-end complex projects and product features with high autonomy and quality.",
+      "Partner with product managers and engineers across teams to help achieve product and business goals."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not mention sampling data for evaluation or any tasks related to data evaluation. The focus is on building features and backend services, not on data sampling for AI model evaluation.",
+    "is_relevant": false
+  }
+]

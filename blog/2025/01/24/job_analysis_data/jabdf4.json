@@ -1,0 +1,802 @@
+[
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities focus on leading a research team, experimenting with AI capabilities and risks, informing various stakeholders about AI, and designing evaluations and mitigation strategies. While these tasks involve working with AI models, there is no specific mention of fine-tuning or customizing language models for domain-specific tasks. The responsibilities are more aligned with high-level research, risk assessment, and policy design rather than the technical task of fine-tuning models.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities include experimenting with AI capabilities and risks, which could involve crafting and refining prompts to test model behaviors. However, the primary focus of the responsibilities is on research, risk assessment, and informing stakeholders, rather than the specific task of prompt engineering. While there might be some overlap in experimenting with AI models, the responsibilities do not explicitly mention prompt engineering.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The job responsibilities include designing evaluations and mitigation strategies for the Responsible Scaling Policy and determining the AI Safety Level (ASL) of Anthropic\u2019s models. These tasks align closely with the activity of developing and applying methodologies for evaluating the quality, reliability, and fairness of large language models. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities do not mention designing or implementing workflows that incorporate LLM outputs into end-user experiences or pipelines. The focus is more on research, risk assessment, and informing stakeholders rather than integration with downstream applications. Therefore, this activity is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The job responsibilities involve experimenting with AI capabilities and risks, which could include analyzing model outputs to identify errors, biases, or potential improvements. However, the primary focus is on high-level research and risk assessment rather than the technical task of model interpretability and debugging. While there might be some overlap, the responsibilities do not explicitly mention this activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities focus on leading research, experimenting with AI capabilities and risks, informing stakeholders about AI, and managing a team. This activity involves designing workflows for AI-driven pipelines, which is more aligned with solution architecture rather than research or risk assessment. Therefore, it is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not mention resource planning or compute requirements. They are more focused on research, evaluation, and informing stakeholders about AI capabilities and risks. This activity is more relevant to infrastructure planning, which is not a focus of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities do not specifically mention performance optimization or latency control. They are centered around research, evaluation, and informing stakeholders about AI capabilities and risks. This activity is more relevant to system performance engineering, which is not a focus of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include determining the AI Safety Level and designing evaluations and mitigation strategies, which could involve aspects of model lifecycle management and governance. However, the primary focus is on research and risk assessment rather than lifecycle management. Therefore, this activity is somewhat relevant but not a primary focus.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not mention system interoperability or integration. They are more focused on research, evaluation, and informing stakeholders about AI capabilities and risks. This activity is more relevant to system integration, which is not a focus of the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include experimenting with frontier capabilities and risks from AI models and determining the AI Safety Level. Conducting research to evaluate AI quality aligns well with these responsibilities, as it involves investigating system accuracy, robustness, and other performance metrics.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities focus on research, evaluation, and informing stakeholders about AI capabilities and risks. Developing AI systems and algorithms for automated insights is more about building and refining AI methods, which is not explicitly mentioned in the job responsibilities. Therefore, it is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities include experimenting with AI models and designing evaluations, which could involve synthetic data generation to test or improve models. However, synthetic data generation is not explicitly mentioned, so its relevance is indirect.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include determining the AI Safety Level and designing evaluations, which could involve identifying performance metrics and success criteria. This activity is relevant as it aligns with evaluating AI capabilities and risks.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities focus on research, evaluation, and informing stakeholders about AI capabilities and risks. Creating labeled datasets is a part of AI evaluation and optimization, which aligns with the responsibilities of designing evaluations and determining AI Safety Levels.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include experimenting with AI models and designing evaluations, which aligns with designing, running, and analyzing experiments. This activity is relevant as it involves experimentation and analysis to inform decisions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities include designing evaluations and determining AI Safety Levels, which could involve sampling data for evaluation. This activity is relevant as it supports the evaluation process by ensuring representative datasets.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on leading a research team, experimenting with AI capabilities and risks, informing various stakeholders about AI, and managing a team. There is no mention of designing labeling tasks or creating annotation guidelines, which are specific to data annotation processes. The responsibilities are more aligned with high-level research, evaluation, and management rather than detailed data annotation tasks.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities do not mention collecting human annotation data or managing logistics for annotation projects. The focus is on research, evaluation, and informing stakeholders about AI capabilities and risks. While managing a team is part of the responsibilities, it is not specifically related to overseeing annotation projects or data collection.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include designing evaluations and determining the AI Safety Level, which may involve some form of data analysis. However, there is no explicit mention of analyzing human annotation data or using statistical methods to evaluate dataset quality. The responsibilities are more focused on high-level research and risk assessment rather than detailed data analysis related to annotation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The job responsibilities focus on leading a research team, experimenting with AI capabilities and risks, informing various stakeholders about AI capabilities and risks, and designing evaluations and mitigation strategies. While statistical methods could be relevant for analyzing data related to AI models and their risks, the responsibilities do not explicitly mention the use of statistical techniques or building predictive models. The focus seems to be more on strategic and evaluative aspects rather than data science techniques.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The job responsibilities include informing stakeholders about AI capabilities and risks, which could involve presenting findings in a clear and compelling manner. However, the responsibilities do not explicitly mention data visualization or exploratory data analysis as part of the role. The focus is more on strategic communication and evaluation rather than data analysis and visualization.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The job responsibilities do not mention data mining or analysis of large datasets. The focus is on leading a research team, experimenting with AI capabilities, and informing stakeholders about AI risks. While data analysis could be a part of understanding AI capabilities, the responsibilities do not explicitly mention working with large conversational datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The job responsibilities do not mention developing data models or pipelines for analytics. The focus is on leading research, evaluating AI capabilities and risks, and informing stakeholders. While data models and pipelines could support these activities, they are not explicitly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The job responsibilities include designing evaluations and mitigation strategies, which could involve defining metrics and success criteria to assess AI models' safety and performance. This activity aligns with determining the AI Safety Level (ASL) of models and ensuring responsible scaling, making it relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The job responsibilities focus on leading research, experimenting with AI capabilities and risks, informing stakeholders about AI, and designing evaluations and mitigation strategies. While these tasks involve understanding AI models and their implications, they do not explicitly mention the deployment or operational aspects of machine learning models, such as CI/CD pipelines, containerization, or real-time monitoring, which are central to MLOps.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The responsibilities include determining the AI Safety Level and designing mitigation strategies, which could involve some level of monitoring and observability to ensure models are safe and reliable. However, the primary focus is on research and informing stakeholders, rather than implementing real-time monitoring solutions or tracking model performance in production environments.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The job responsibilities do not explicitly mention data and model versioning. The focus is more on research, evaluation, and informing stakeholders about AI capabilities and risks. While versioning could be a part of ensuring reproducibility in research, it is not directly highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The responsibilities include designing evaluations and mitigation strategies, which could involve some form of testing and validation to ensure the safety and reliability of AI models. However, the specific activities related to continuous testing, such as automating validation steps or using canary testing, are not explicitly mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The job responsibilities do not mention infrastructure optimization or scalability. The focus is on research, evaluation, and informing stakeholders about AI capabilities and risks, rather than on optimizing or scaling model-serving infrastructure.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The responsibilities include informing governments and industry about national security-relevant capabilities, which could involve some aspects of governance, compliance, and security. However, the specific activities related to establishing governance frameworks or implementing secure deployment practices are not explicitly mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The job responsibilities focus on research, evaluation, and informing stakeholders about AI capabilities and risks. While model lifecycle management and continuous improvement could be relevant to ensuring the models are up-to-date and effective, these activities are not explicitly mentioned in the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The job responsibilities focus on leading research, experimenting with AI capabilities, informing stakeholders about AI risks, and managing a team. While these tasks involve research and communication, they do not specifically mention gathering user insights or conducting interviews and surveys related to user experience. The focus is more on AI capabilities and risks rather than user needs and preferences.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The job responsibilities do not mention usability testing or prototyping. The focus is on AI model capabilities, risks, and informing stakeholders, which are not directly related to enhancing user experience through usability testing or prototyping.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The responsibilities do not include tasks related to developing user personas or mapping user journeys. The focus is on AI research, risk assessment, and informing stakeholders, which are not directly related to understanding user segments or improving user flows.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While qualitative data analysis is a research activity, the job responsibilities do not specifically mention analyzing qualitative data related to user experience. The focus is on AI capabilities, risks, and informing stakeholders, which may involve data analysis but not in the context of user experience research.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on leading research, experimenting with AI capabilities, informing stakeholders about AI risks, and managing a team. While these tasks may involve some level of software architecture, the primary focus is on AI research and policy rather than software engineering. Therefore, designing and implementing software architecture is not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities do not explicitly mention developing applications. The focus is on AI research, risk assessment, and policy design. While developing applications could be a part of experimenting with AI models, it is not a primary responsibility. Thus, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The responsibilities do not mention CI/CD processes. The role is more focused on research, evaluation, and policy rather than software development practices. Therefore, continuous integration and delivery are not directly relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not include monitoring or incident management. The focus is on AI research, risk assessment, and informing stakeholders. Monitoring and incident management are more relevant to operational roles in software engineering, not the research-focused role described.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities do not mention API development or system integration. The role is centered around AI research and policy, which does not directly involve developing or integrating APIs. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities do not explicitly mention software testing or quality assurance. The focus is on AI research, risk evaluation, and policy design. While testing might be a part of experimenting with AI models, it is not a primary responsibility. Thus, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibilities do not include DevOps or infrastructure management. The role is focused on AI research, risk assessment, and policy, which do not directly involve DevOps practices or infrastructure as code. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include experimenting with frontier capabilities and risks from AI models, which aligns with conducting research to evaluate AI quality. The responsibility to design evaluations and mitigation strategies also suggests a focus on assessing AI performance metrics, which is a key aspect of this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities do not explicitly mention developing AI systems or algorithms for automated insights. The focus is more on evaluating and informing about AI capabilities and risks, rather than building or refining AI methods for insights.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not mention synthetic data generation. The focus is on evaluating AI models and informing stakeholders about AI capabilities and risks, rather than generating synthetic datasets.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The responsibility to determine the AI Safety Level (ASL) of Anthropic\u2019s models implies a need to identify performance metrics and success criteria. This aligns with the activity of defining measurable indicators to assess model health and guide decision-making.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. The focus is more on evaluating and experimenting with AI models, rather than preparing data annotations for model training and evaluation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The responsibility to experiment with frontier capabilities and risks from AI models suggests a need to design, run, and analyze experiments. This aligns with the activity of planning and executing controlled experiments to compare model variants or new features.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jabdf4",
+    "responsibilities": [
+      "Lead the Research arm of the Frontier Red Team at Anthropic.",
+      "Experiment with frontier capabilities and risks from AI models.",
+      "Inform the company, government, labs, and civil society about AI capabilities and risks.",
+      "Focus on informing governments' and industry\u2019s understanding of national security-relevant capabilities.",
+      "Design evaluations and mitigation strategies for the Responsible Scaling Policy.",
+      "Determine the AI Safety Level (ASL) of Anthropic\u2019s models.",
+      "Manage a team of 5 - 10 people."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. While evaluating AI models is a focus, the specific task of sampling data is not highlighted in the responsibilities.",
+    "is_relevant": false
+  }
+]

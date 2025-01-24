@@ -1,0 +1,24 @@
+{
+  "filename": "j48be5",
+  "responsibilities": [
+    "Design, build, and maintain systems for training and evaluating models.",
+    "Work closely with Applied Scientists to build systems for training large multimodal models.",
+    "Evaluate performance of the training infrastructure, diagnose problems, and address gaps.",
+    "Develop reliable infrastructure to schedule training and model evaluation jobs across clusters.",
+    "Collaborate with researchers to create new techniques, infrastructure, and tooling for emerging research capabilities.",
+    "Manage project prioritization, deliverables, timelines, and stakeholder communication.",
+    "Educate the team on best practices and influence technical strategy.",
+    "Operate in a dynamic environment to deliver high-quality software."
+  ],
+  "skills": [
+    "Ability to evaluate and diagnose performance issues in training infrastructure.",
+    "Experience in developing reliable infrastructure for scheduling jobs across clusters.",
+    "Strong collaboration skills with researchers and scientists.",
+    "Project management skills, including prioritization and communication.",
+    "Ability to educate and influence team on best practices and technical strategy.",
+    "Adaptability to operate in a dynamic and fast-paced environment."
+  ],
+  "analysis": "The Job responsibilities and skills focus on designing, building, and maintaining systems for training and evaluating models, collaborating with researchers, managing project prioritization, and operating in a dynamic environment. The skills emphasize evaluating and diagnosing performance issues, developing reliable infrastructure, collaboration, project management, and adaptability.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies, conducting experiments, and collaborating with engineers. While there is some overlap in collaboration, the primary focus on research and experimentation does not align with the infrastructure and system-building focus of the Job.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable solutions, productionizing models, and developing data pipelines. While there is some overlap in collaboration and infrastructure, the focus on productionizing models and data pipelines is not the primary focus of the Job.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on ensuring reliable deployment, scaling, and monitoring of AI systems, setting up CI/CD pipelines, and managing infrastructure. The responsibilities and skills of the Job align well with this option, as both emphasize infrastructure, collaboration, and operating in dynamic environments.\n\n4. **AI Solution Architect**: This role involves designing AI solutions, collaborating with SMEs, and providing thought leadership. The focus on solution design and architecture does not align with the infrastructure and system-building focus of the Job.\n\n5. **Data Scientist**: This role focuses on data analysis, model development, and presenting findings. The focus on data analysis and model development does not align with the infrastructure and system-building focus of the Job.\n\n6. **Data Engineer**: This role involves designing data pipelines and architectures, optimizing data processes, and ensuring data readiness. While there is some overlap in infrastructure, the focus on data pipelines and architectures is not the primary focus of the Job.\n\n7. **Product Manager**: This role involves driving product vision, conducting research, and collaborating with teams. The focus on product management and strategy does not align with the infrastructure and system-building focus of the Job.\n\n8. **Software Engineer**: This role involves designing and maintaining software applications, writing code, and participating in system architecture. While there is some overlap in system design and collaboration, the focus on software development does not align with the infrastructure and system-building focus of the Job.\n\nThe Job aligns most closely with the \"MLOps / AI Infrastructure Engineer\" option, as both emphasize infrastructure, collaboration, and operating in dynamic environments.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

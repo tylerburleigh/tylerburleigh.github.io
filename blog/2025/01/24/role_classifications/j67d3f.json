@@ -1,0 +1,24 @@
+{
+  "filename": "j67d3f",
+  "responsibilities": [
+    "Develop high-performance GPU-based inference pipelines for large multimodal diffusion models.",
+    "Build, optimize, and maintain serving infrastructure to deliver low-latency predictions at large scale.",
+    "Collaborate with DevOps teams to containerize models, manage autoscaling, and ensure uptime SLAs.",
+    "Leverage techniques like quantization, pruning, and distillation to reduce latency and memory footprint without compromising quality.",
+    "Implement continuous fine-tuning workflows to adapt models based on real-world data and feedback.",
+    "Design and maintain automated CI/CD pipelines for model deployment, versioning, and rollback.",
+    "Implement robust monitoring (latency, throughput, concept drift) and alerting for critical production systems.",
+    "Explore cutting-edge GPU acceleration frameworks to continuously improve throughput and reduce costs."
+  ],
+  "skills": [
+    "Proficiency with Python and at least one deep learning framework (PyTorch, TensorFlow).",
+    "Strong knowledge of containerization (Docker, Kubernetes) and microservice architectures for ML model serving.",
+    "Familiarity with compression techniques (quantization, pruning, distillation) for large-scale models.",
+    "Experience profiling and optimizing model inference (batching, concurrency, hardware utilization).",
+    "Hands-on experience with ML pipeline orchestration (Airflow, Kubeflow, Argo) and automated CI/CD for ML.",
+    "Strong grasp of logging, monitoring, and alerting tools (Prometheus, Grafana, etc.) in distributed systems."
+  ],
+  "analysis": "The job responsibilities and skills focus on developing and optimizing GPU-based inference pipelines, maintaining serving infrastructure, containerization, model compression, CI/CD pipelines, and monitoring production systems. These align closely with the responsibilities and skills of the \"MLOps / AI Infrastructure Engineer\" option. This option emphasizes reliable deployment, scaling, and monitoring of AI systems, setting up CI/CD pipelines, managing infrastructure with Docker and Kubernetes, and optimizing compute usage, which are all relevant to the job description.\n\nThe \"AI/ML Engineer\" option also has some overlap, particularly in productionizing AI models and maintaining data pipelines, but it is less focused on the infrastructure and DevOps aspects that are central to the job description.\n\nThe other options, such as \"AI Research Scientist,\" \"AI Solution Architect,\" \"Data Scientist,\" \"Data Engineer,\" \"Product Manager,\" and \"Software Engineer,\" do not align as closely with the job's focus on infrastructure, deployment, and optimization of AI systems.\n\nTherefore, the \"MLOps / AI Infrastructure Engineer\" is the most similar to the job description provided.",
+  "role_classification": 3,
+  "role_title": "MLOps / AI Infrastructure Engineer"
+}

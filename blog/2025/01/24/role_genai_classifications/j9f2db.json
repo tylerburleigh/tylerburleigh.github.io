@@ -1,0 +1,29 @@
+{
+  "filename": "j9f2db",
+  "responsibilities": [
+    "Drive technical leadership within the engineering team, shaping systems design, refining processes, and guiding strategic planning and execution.",
+    "Architect and implement scalable cloud-based solutions that process millions of documents using cutting-edge AI/ML technologies, including LLMs.",
+    "Collaborate cross-functionally with engineers, product managers, scientists, legal experts, and stakeholders to deliver innovative, market-leading software products.",
+    "Spearhead initiatives and lead teams with autonomy, fostering a culture of excellence, self-organization, and continuous improvement.",
+    "Stay at the forefront of evolving technologies, adapting swiftly to changes in cloud platforms, AI/ML advancements, and industry trends.",
+    "Ensure robust support for client applications and backend services, optimizing performance and reliability.",
+    "Oversee the entire software development lifecycle, from conception through deployment, emphasizing best practices in planning, implementation, testing, and CI/CD.",
+    "Champion process improvements, implementing methodologies that enhance team efficiency, code quality, and overall project outcomes.",
+    "Mentor junior engineers, promoting engineering culture and skill development across the team and the enterprise.",
+    "Contribute to technical decision-making, influencing the direction of product design, cloud infrastructure, and application architecture."
+  ],
+  "qualifications": [
+    "Strong focus on cloud-native application hosting and maintenance.",
+    "Expertise in designing, deploying, and maintaining larger-scale distributed applications.",
+    "Proficiency in backend application development using Python, containerization (Docker), SQL databases, CI/CD tools (e.g., Azure DevOps), and version control systems (e.g., GitHub, Azure DevOps).",
+    "Comprehensive understanding of the entire software development lifecycle, including agile methodologies, testing, monitoring, and incident management.",
+    "Exceptional communication skills, both written and verbal.",
+    "Ability to solve complex technical problems creatively and effectively.",
+    "Strong organizational and leadership skills.",
+    "Adaptability and eagerness to learn new technologies and methodologies.",
+    "Interest in learning and using Rust to implement services.",
+    "Experience with AI/ML technologies, especially model hosting and deployment (MLOps), processing large document volumes, and/or NLP (Natural Language Processing)."
+  ],
+  "analysis": "The job responsibilities and skills indicate a strong involvement with AI/ML technologies, particularly with language models. The responsibilities explicitly mention \"Architect and implement scalable cloud-based solutions that process millions of documents using cutting-edge AI/ML technologies, including LLMs.\" This directly points to the use of Large Language Models, which are a type of Generative AI. Additionally, the skills section highlights experience with AI/ML technologies, model hosting and deployment (MLOps), and NLP (Natural Language Processing), all of which are relevant to working with language models and generative AI. The combination of these responsibilities and skills strongly suggests that the job involves working with Generative AI and language models.",
+  "is_genai_role": true
+}

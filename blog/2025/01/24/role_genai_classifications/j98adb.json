@@ -1,0 +1,26 @@
+{
+  "filename": "j98adb",
+  "responsibilities": [
+    "Design, build and maintain core data infrastructure pieces that support various data use cases.",
+    "Enhance the data stack, lineage monitoring, and alerting to prevent incidents and improve data quality.",
+    "Implement best practices for data management, storage, and security to ensure data integrity and compliance with regulations.",
+    "Own the core company data pipeline, converting business needs into efficient and reliable data pipelines.",
+    "Participate in code reviews to ensure code quality and share knowledge.",
+    "Lead efforts to evaluate and integrate new technologies and tools to enhance data infrastructure.",
+    "Define and manage evolving data models and data schemas.",
+    "Manage SLA for data sets that power company metrics.",
+    "Mentor junior team members, providing guidance and support in their professional development.",
+    "Collaborate with data scientists, analysts, and other stakeholders to drive efficiencies in their work, supporting complex data processing, storage, and orchestration."
+  ],
+  "qualifications": [
+    "Proficiency in SQL and Python, with the ability to translate complexity into efficient code.",
+    "Experience with data workflow development and management tools (e.g., dbt, Airflow).",
+    "Solid understanding of distributed computing principles.",
+    "Experience with cloud-based data platforms such as AWS, GCP, or Azure.",
+    "Strong analytical and problem-solving skills.",
+    "Excellent communication and collaboration skills.",
+    "Experience with data tooling, data governance, business intelligence, and data privacy is a plus."
+  ],
+  "analysis": "The job responsibilities and skills listed focus primarily on data infrastructure, data management, and data engineering. The responsibilities include designing and maintaining data infrastructure, enhancing data quality, implementing data management best practices, and managing data pipelines. The skills required include proficiency in SQL and Python, experience with data workflow tools, understanding distributed computing, and experience with cloud-based data platforms.\n\nThere is no mention of Generative AI (GenAI) or language models (LLMs) in the responsibilities or skills. The focus is on data engineering and infrastructure rather than on developing or working with AI models or language models. The job seems to be centered around data processing, storage, and orchestration rather than AI model development or deployment.\n\nTherefore, based on the provided information, this job does not involve working with Generative AI or language models.",
+  "is_genai_role": false
+}

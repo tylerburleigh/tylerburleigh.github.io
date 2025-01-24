@@ -1,0 +1,34 @@
+{
+  "filename": "jf066c",
+  "responsibilities": [
+    "Design and implement integrations between existing developer tools and various LLM APIs (e.g., OpenAI, Anthropic, Meta\u2019s Llama)",
+    "Develop and maintain robust API wrappers and middleware to facilitate smooth communication between Internet Computer components and AI services",
+    "Create intelligent automation tools that leverage LLMs to improve developer productivity",
+    "Optimize prompt engineering and model selection for different use cases",
+    "Implement caching strategies and fallback mechanisms for AI service integrations",
+    "Develop monitoring and observability solutions for AI-enhanced systems",
+    "Collaborate with product teams to identify opportunities for AI integration",
+    "Write technical documentation and integration guides",
+    "Ensure compliance with AI service providers' terms of service and rate limits"
+  ],
+  "skills": [
+    "Strong programming skills in Rust, JavaScript/TypeScript, or similar languages",
+    "Experience working with REST APIs and building API integrations",
+    "Familiarity with LLM APIs (OpenAI, Anthropic, etc.) and prompt engineering",
+    "Understanding of distributed systems and microservices architecture",
+    "Experience with version control systems (Git) and CI/CD pipelines",
+    "Knowledge of AI/ML concepts and natural language processing",
+    "Experience with container orchestration (Kubernetes, Docker)",
+    "Familiarity with WebAssembly and canister development",
+    "Experience with real-time systems and websocket implementations",
+    "Programming Languages: Rust, JavaScript/TypeScript, Python",
+    "Frameworks & Tools: Node.js, React, Internet Computer SDK",
+    "AI/ML: LLM APIs, prompt engineering, vector embeddings",
+    "Infrastructure: Docker, Kubernetes, CI/CD",
+    "Protocols: REST, GraphQL, WebSocket",
+    "Version Control: Git, GitHub"
+  ],
+  "analysis": "The job involves designing and implementing integrations between developer tools and LLM APIs, developing API wrappers, creating automation tools, optimizing prompt engineering, and ensuring compliance with AI service providers. The skills required include strong programming skills in Rust, JavaScript/TypeScript, experience with REST APIs, familiarity with LLM APIs, understanding of distributed systems, and experience with container orchestration.\n\n1. **AI Research Scientist**: This option focuses on investigating AI methodologies and conducting experiments, which is not aligned with the job's focus on integration and development of tools and APIs.\n\n2. **AI/ML Engineer**: This role involves transforming research into scalable AI solutions and developing data pipelines, which is somewhat related but not directly aligned with the job's focus on API integration and middleware development.\n\n3. **MLOps / AI Infrastructure Engineer**: This option focuses on deployment, scaling, and monitoring of AI systems, which aligns with some aspects of the job like developing monitoring solutions and implementing caching strategies. However, the primary focus on infrastructure management is not a perfect match.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which is not directly related to the job's focus on technical integration and development.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not relevant to the job's focus on API and tool integration.\n\n6. **Data Engineer**: This role involves building data pipelines and architectures, which is not aligned with the job's focus on AI service integration and middleware development.\n\n7. **Product Manager**: This role focuses on product vision and strategy, which is not relevant to the technical and integration-focused responsibilities of the job.\n\n8. **Software Engineer**: This option involves developing software applications and services, which aligns with the job's focus on developing API wrappers, middleware, and automation tools. The skills required, such as programming in JavaScript/TypeScript, experience with REST APIs, and familiarity with containerization, are also a good match.\n\nThe job is most similar to the \"Software Engineer\" option, as it involves developing and maintaining software solutions, integrating APIs, and optimizing systems, which aligns well with the responsibilities and skills listed for the job.",
+  "role_classification": 8,
+  "role_title": "Software Engineer"
+}

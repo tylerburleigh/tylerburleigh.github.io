@@ -1,0 +1,30 @@
+{
+  "filename": "jc5bc2",
+  "responsibilities": [
+    "Design, develop, and maintain features and algorithms for our products",
+    "Write clear and maintainable code",
+    "Participate in code reviews and help maintain codebase quality",
+    "Support deployments and help keep them up to date and functioning",
+    "Participate in daily standups, sprint plannings, and retrospectives",
+    "Conduct field tests",
+    "Write technical documentation"
+  ],
+  "qualifications": [
+    "Strong programming experience in C++ (std, Eigen, OpenCV)",
+    "Experience with Python and Go is a plus",
+    "Proficiency with code version control systems \u2013 git",
+    "High standard for delivering and achieving quality",
+    "Independent and quick learner",
+    "Strong communication and presentation skills",
+    "Experience working with images; Lidar and point cloud data are a plus",
+    "Experience with embedded systems, Linux, communication protocols, and networking is a plus",
+    "Software productization experience (C++ compilers, CMake, unit/integration testing) is a plus",
+    "Knowledge in statistics, linear algebra, estimation theory, and computer vision is a plus",
+    "Previous exposure to visualization and graphics rendering tools (e.g., meshlab, Unreal Engine, CARLA or equivalents) is a plus",
+    "Experience with real-time middleware frameworks, multi-threading, and multi-processing is a plus",
+    "Familiarity with data and cloud tools (AWS, dvc) is a plus",
+    "Hands-on experience with mechanical and electrical tools, and driving vehicles is a plus"
+  ],
+  "analysis": "The job responsibilities and skills listed do not explicitly mention Generative AI (GenAI) or language models (LLMs). The responsibilities focus on software development, code maintenance, and technical documentation, which are common in many software engineering roles. The skills required include strong programming experience in C++, Python, and Go, as well as experience with embedded systems, Linux, and communication protocols. There is also a focus on working with images, Lidar, point cloud data, and computer vision, which suggests a focus on image processing and possibly robotics or autonomous systems. The mention of visualization and graphics rendering tools, real-time middleware frameworks, and cloud tools further supports this focus. However, there is no indication of working with natural language processing, language models, or generative AI technologies. Therefore, it is unlikely that this job involves working with GenAI or LLMs.",
+  "is_genai_role": false
+}

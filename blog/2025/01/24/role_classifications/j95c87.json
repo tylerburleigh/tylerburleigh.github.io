@@ -1,0 +1,27 @@
+{
+  "filename": "j95c87",
+  "responsibilities": [
+    "Co-design future hardware for programmability and performance with hardware vendors.",
+    "Assist hardware vendors in developing optimal kernels and add support for it in our compiler.",
+    "Develop performance estimates for critical kernels for different hardware configurations.",
+    "Work with machine learning engineers, kernel engineers, and compiler developers to understand their vision and needs from high-performance accelerators.",
+    "Manage communication and coordination with internal and external partners.",
+    "Influence the roadmap of hardware partners to optimize them for OpenAI\u2019s workloads.",
+    "Evaluate potential partners\u2019 accelerators and platforms.",
+    "Build simulations and performance models to progressively improve decision-making fidelity.",
+    "Understand and influence roadmaps for hardware partners for datacenter networks, racks, and buildings as the scope of the role and team grows."
+  ],
+  "skills": [
+    "Strong experience in software/hardware co-design.",
+    "Deep understanding of GPU and/or other AI accelerators.",
+    "Experience with CUDA or a related accelerator programming language.",
+    "Experience driving Machine Learning accuracy with low precision formats.",
+    "Familiarity with the fundamentals of deep learning computing and chip microarchitecture.",
+    "Ability to actively collaborate with ML engineers, kernel writers, and compiler developers.",
+    "Strong coding skills in C/C++ and Python.",
+    "Strong understanding of LLMs and challenges related to their training and inference."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on hardware and software co-design, performance optimization, and collaboration with hardware vendors and internal teams to enhance AI accelerators. The role requires a deep understanding of GPU and AI accelerators, experience with CUDA or similar languages, and strong coding skills in C/C++ and Python. It also involves managing communication with partners and influencing hardware roadmaps.\n\n1. **AI Research Scientist**: This option focuses on AI methodologies, experiments, and model evaluation, which does not align with the hardware and performance optimization focus of the job.\n\n2. **AI/ML Engineer**: This role is about transforming research into scalable solutions, which is more software-focused and does not match the hardware co-design and optimization aspects of the job.\n\n3. **MLOps / AI Infrastructure Engineer**: This option involves deployment and monitoring of AI systems, with a focus on infrastructure and DevOps, which is not aligned with the hardware co-design and performance modeling responsibilities of the job.\n\n4. **AI Solution Architect**: This role is about designing AI solutions and collaborating on business objectives, which does not match the technical and hardware-focused nature of the job.\n\n5. **Data Scientist**: This option focuses on data analysis and model development, which is not relevant to the hardware and performance optimization responsibilities of the job.\n\n6. **Data Engineer**: This role involves data pipelines and architecture, which is not related to the hardware and software co-design focus of the job.\n\n7. **Product Manager**: This option is about product vision and strategy, which does not align with the technical and hardware-focused responsibilities of the job.\n\n8. **Software Engineer**: This role involves software development and system architecture, which partially aligns with the coding skills required but does not cover the hardware co-design and performance optimization aspects.\n\nNone of the options directly match the job's focus on hardware co-design, performance optimization, and collaboration with hardware vendors. The job is highly specialized in hardware-software integration and performance modeling, which is not covered by any of the provided options.",
+  "role_classification": 0,
+  "role_title": "Other"
+}

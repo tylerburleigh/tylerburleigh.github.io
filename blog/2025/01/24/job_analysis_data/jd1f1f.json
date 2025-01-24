@@ -1,0 +1,802 @@
+[
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The Job Responsibilities mention developing and refining prompting strategies to leverage large language models, which aligns with the concept of prompt tuning mentioned in this Activity. However, there is no explicit mention of training or fine-tuning models for domain-specific tasks in the responsibilities. The focus seems more on using existing models effectively rather than customizing them through fine-tuning.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The Job Responsibilities explicitly mention developing and refining prompting strategies to effectively leverage large language models. This directly aligns with the Activity's focus on crafting and refining prompt instructions to elicit desired behaviors from LLMs. The responsibilities also emphasize creative exploration and rigorous evaluation, which are consistent with iterative refinement.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The Job Responsibilities include balancing creative exploration with rigorous evaluation of feasibility and impact, which suggests an interest in assessing the performance of models. However, there is no specific mention of methodologies for evaluating the quality, reliability, and fairness of LLMs, which is the focus of this Activity. The responsibilities seem more oriented towards practical application and prototyping rather than formal evaluation metrics.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The Job Responsibilities include building functional prototypes that demonstrate technical viability and product potential, which suggests an interest in integrating LLM outputs into end-user experiences or pipelines. This aligns with the Activity's focus on designing and implementing workflows that incorporate LLM outputs. Additionally, advocating for product and usability considerations early in the research process supports the relevance of this Activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "The Job Responsibilities do not explicitly mention analyzing model outputs for errors, biases, or potential improvements, nor do they mention employing interpretability techniques or debugging tools. The focus is more on prototyping and leveraging LLMs rather than on interpretability and debugging, which are the main aspects of this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The Job Responsibilities focus on rapid experimentation, creative exploration, prototype building, and leveraging large language models. While these responsibilities involve technical and product potential aspects, they do not explicitly mention designing end-to-end workflows or integrating components like data storage and model hosting, which are central to this Activity. Therefore, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The Job Responsibilities do not mention assessing computational demands or planning for scalability, which are the main focus of this Activity. The responsibilities are more aligned with experimentation, prototype building, and leveraging AI capabilities rather than infrastructure planning. Thus, this Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The Job Responsibilities emphasize experimentation, prototype building, and leveraging AI capabilities, but do not specifically address performance optimization or latency control. These aspects are more related to system architecture and infrastructure, which are not covered in the Job Responsibilities. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The Job Responsibilities do not mention model lifecycle management or governance, such as retraining, versioning, or traceability. The focus is more on experimentation, prototype building, and leveraging AI capabilities. As such, this Activity is not directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The Job Responsibilities do not explicitly mention system interoperability or integration with enterprise systems. The focus is on experimentation, prototype building, and leveraging AI capabilities, which do not directly relate to aligning AI services with existing systems. Therefore, this Activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include designing and executing experiments to test hypotheses and evaluating feasibility and impact, which align with conducting research to evaluate AI quality. This Activity is relevant as it involves investigating system performance and validating hypotheses, which are part of the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities focus on experimentation, prototype building, and leveraging AI capabilities, which can involve developing AI systems and algorithms. However, the specific mention of automated insights is not directly covered. While there is some overlap, the primary focus of the Job Responsibilities does not align with this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not mention synthetic data generation. The focus is on experimentation, prototype building, and leveraging AI capabilities, which do not directly involve creating synthetic datasets. Therefore, this Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities involve evaluating feasibility and impact, which can include identifying performance metrics and success criteria. This Activity is relevant as it aligns with the need to assess model health and guide decision-making, which is part of the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not explicitly mention creating labeled datasets. The focus is on experimentation, prototype building, and leveraging AI capabilities, which do not directly involve data annotation. Therefore, this Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities include designing and executing experiments to test hypotheses, which directly aligns with designing, running, and analyzing experiments like A/B tests. This Activity is relevant as it involves experimentation and analysis, which are key components of the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The Job Responsibilities do not explicitly mention sampling data for evaluation. The focus is on experimentation, prototype building, and leveraging AI capabilities, which do not directly involve data sampling. Therefore, this Activity is not relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on designing and executing experiments, building prototypes, and developing strategies for leveraging AI capabilities. While these tasks involve creativity, evaluation, and documentation, they do not explicitly mention data annotation or labeling tasks. The responsibilities are more aligned with high-level research and development rather than the detailed work of creating annotation guidelines and workflows.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "The job responsibilities emphasize experimentation, prototype building, and strategy development for AI models. There is no mention of managing logistics or overseeing annotation projects, which are key components of collecting human annotation data. The focus is more on testing AI capabilities and product development rather than data collection and management.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "The job responsibilities include evaluating feasibility and impact, which could involve some level of data analysis. However, the primary focus is on experimentation, prototype development, and strategy refinement. Analyzing human annotation data is not explicitly mentioned, and the responsibilities seem to be more about leveraging AI capabilities rather than analyzing annotation data.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities focus on designing and executing experiments, building prototypes, and developing prompting strategies for AI capabilities. While these tasks may involve some level of statistical analysis, the responsibilities do not explicitly mention the application of statistical techniques or the use of tools like scikit-learn or statsmodels for hypothesis testing or model validation. The emphasis is more on experimentation, prototyping, and leveraging AI models rather than on statistical methods.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities include tasks such as generating documentation and advocating for product and usability considerations, which may involve some level of data visualization to communicate findings. However, the primary focus is on experimentation, prototyping, and AI model development rather than on conducting exploratory data analysis or using visualization tools to present insights. Therefore, while there might be some overlap, data visualization is not a core responsibility.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities emphasize experimenting with AI capabilities, building prototypes, and developing prompting strategies. While these tasks may involve working with conversational datasets, the responsibilities do not explicitly mention data mining or analyzing large datasets to uncover trends or patterns. The focus is more on leveraging AI models and prototyping rather than on data mining and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities do not explicitly mention developing data models or pipelines for analytics. The focus is on experimenting with AI capabilities, building prototypes, and developing prompting strategies. While these tasks may involve some data processing, the responsibilities do not emphasize implementing scalable data processing workflows or ETL pipelines for analytics purposes.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities include tasks such as designing experiments and evaluating feasibility and impact, which may involve defining metrics and success criteria to assess the outcomes of experiments and prototypes. However, the responsibilities do not explicitly mention defining measurable indicators or tracking metrics. The focus is more on experimentation and prototyping rather than on systematic metric definition and analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities focus on designing experiments, building prototypes, and developing prompting strategies, which are more aligned with research and development rather than deployment and operationalization of models. While there is a mention of \"functional prototypes,\" it does not explicitly relate to maintaining CI/CD pipelines or ensuring production-level performance, scalability, and reliability, which are the core aspects of this Activity.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not mention monitoring or observability of models in production. The focus is on experimentation, prototyping, and documentation, which are more aligned with the research phase rather than operational monitoring. Therefore, this Activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities do not explicitly mention versioning of data or models. The responsibilities are more focused on experimentation, prototyping, and documentation, which do not directly involve implementing version control systems for datasets or model artifacts. Thus, this Activity is not relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities include \"Design and execute rapid experiments to test hypotheses,\" which suggests a focus on testing and validation, albeit in a research context. However, the specific mention of automating validation steps and introducing guardrails for model stability in production is not directly covered in the responsibilities. The focus is more on minimal viable testing approaches rather than continuous testing in a production environment.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not mention infrastructure optimization or scalability. The focus is on experimentation, prototyping, and documentation, which are more aligned with research and development rather than scaling model-serving infrastructure. Therefore, this Activity is not directly relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not mention governance, compliance, or security. The focus is on experimentation, prototyping, and documentation, which do not directly involve establishing governance frameworks or implementing security practices. Thus, this Activity is not relevant to the stated responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include \"Develop and refine prompting strategies to effectively leverage large language models\" and \"Advocate for product and usability considerations early in the research process,\" which suggest an ongoing process of refinement and improvement. However, the specific mention of regular retraining, hyperparameter tuning, and performance evaluations is not directly covered. The focus is more on initial development and experimentation rather than continuous improvement in a production context.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on designing experiments, building prototypes, and developing strategies for AI capabilities. While these tasks involve understanding user needs to some extent, there is no explicit mention of conducting user interviews or surveys to gather insights. The responsibilities are more aligned with technical and product development rather than direct user research methods like interviews and surveys.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities include building functional prototypes and advocating for product and usability considerations. This aligns with the activity of usability testing and prototyping, as both involve creating prototypes and evaluating their usability to enhance user experience. The focus on product potential and usability considerations suggests relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities do not explicitly mention creating user personas or mapping user journeys. The focus is more on technical viability, product potential, and prompting strategies for AI models. While understanding user needs is important, the responsibilities do not directly align with the specific activities of persona development and user journey mapping.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "The Job Responsibilities emphasize experimentation, prototyping, and documentation, but do not specifically mention qualitative data analysis. While some level of analysis might be involved in evaluating experiments and prototypes, the responsibilities do not explicitly align with synthesizing qualitative data from interviews or surveys.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities include building functional prototypes and balancing creative exploration with rigorous evaluation. While these tasks involve some level of design and implementation, they are more focused on experimentation and prototyping rather than full-scale software architecture. The responsibilities do not explicitly mention defining system components, data flows, or integration points, which are key aspects of software architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities emphasize rapid experimentation, prototyping, and leveraging AI capabilities, which are more aligned with research and development rather than developing production-grade applications. The responsibilities do not mention writing clean, modular, and efficient code for production environments or performing extensive testing and refactoring, which are crucial for production-grade applications.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "The job responsibilities focus on experimentation, prototyping, and documentation for hand-off to product teams. While these tasks may benefit from CI/CD practices, the responsibilities do not explicitly mention automating build, test, and deployment processes or maintaining version control workflows, which are central to CI/CD.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities are centered around experimentation, prototyping, and research, with no mention of monitoring, logging, or incident management. These responsibilities are more aligned with early-stage development and research rather than maintaining and managing production systems.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The job responsibilities include building functional prototypes and developing prompting strategies, which may involve some level of API development and integration. However, the focus is on leveraging AI capabilities and experimentation rather than designing and implementing robust APIs for system integration.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "The job responsibilities involve rapid experimentation and prototyping, which may include some level of testing to ensure functionality. However, the responsibilities do not explicitly mention developing automated test suites or maintaining test coverage, which are key aspects of software testing and quality assurance.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The job responsibilities focus on experimentation, prototyping, and research, with no mention of managing or provisioning cloud resources or embracing a DevOps culture. These responsibilities are more aligned with early-stage development and research rather than infrastructure management and operations.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The Job Responsibilities include designing and executing rapid experiments to test hypotheses about emerging AI capabilities, which aligns with the Activity's focus on investigating system accuracy, robustness, and other performance metrics. The emphasis on rigorous evaluation and experimentation in the Job Responsibilities suggests a strong relevance to this Activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The Job Responsibilities mention building functional prototypes and developing prompting strategies to leverage large language models, which could relate to developing AI systems and algorithms. However, the focus is more on experimentation and evaluation rather than building and refining AI methods for automated insights. Thus, the relevance is less direct.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "The Job Responsibilities do not explicitly mention synthetic data generation or related tasks. The focus is more on experimentation, evaluation, and prototype development rather than data generation. Therefore, this Activity does not seem directly relevant to the Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The Job Responsibilities include balancing creative exploration with rigorous evaluation, which implies a need to identify and track performance metrics. However, there is no explicit mention of defining measurable indicators or success criteria, making the relevance indirect.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The Job Responsibilities do not mention creating labeled datasets or data annotation tasks. The focus is more on experimentation, prototype development, and leveraging large language models, which does not directly involve dataset creation.",
+    "is_relevant": false
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The Job Responsibilities explicitly mention designing and executing rapid experiments to test hypotheses, which aligns closely with the Activity of designing, running, and analyzing experiments. This suggests a strong relevance to the Job Responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "jd1f1f",
+    "responsibilities": [
+      "Design and execute rapid experiments to test hypotheses about emerging AI capabilities, with a focus on minimal viable testing approaches",
+      "Balance creative exploration of possibilities with rigorous evaluation of feasibility and impact",
+      "Build functional prototypes that demonstrate both technical viability and product potential",
+      "Develop and refine prompting strategies to effectively leverage large language models",
+      "Generate documentation to streamline hand-off to product teams",
+      "Advocate for product and usability considerations early in the research process",
+      "Flexibly contribute to a range of Labs initiatives based on organizational priorities"
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "While the Job Responsibilities focus on experimentation and evaluation, there is no specific mention of sampling data for evaluation. The tasks seem more oriented towards testing hypotheses and prototype development rather than data sampling.",
+    "is_relevant": false
+  }
+]

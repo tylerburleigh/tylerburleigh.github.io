@@ -1,0 +1,33 @@
+{
+  "filename": "j20e2d",
+  "responsibilities": [
+    "Drive strategic direction, program capture, and research and development tasks related to mathematics, computer software, and algorithm development.",
+    "Lead programs as a Principal Investigator.",
+    "Lead program capture and proposal writing efforts.",
+    "Organize and lead program execution to meet program deliverables and metrics.",
+    "Design, develop, and test mathematical algorithms for projects involving signal/image processing and machine learning.",
+    "Design, develop, and test software related to signal/image processing and machine learning.",
+    "Work closely with team members to develop solutions to challenging problems.",
+    "Prepare and present results to customers, executives, and technical staff."
+  ],
+  "skills": [
+    "Proven track record of writing winning proposals to DARPA, IARPA, and other DoD and IC organizations.",
+    "At least 5 years of experience with program capture and leading programs as PI.",
+    "Strong foundation in numerical techniques (FFT, Monte Carlo, finite elements, linear algebra, PDEs, ODEs, statistics).",
+    "Expertise in machine learning/artificial intelligence, image processing, and signal processing.",
+    "Signal Processing Expertise: Fourier analysis, noise modeling, and understanding of complex signal properties.",
+    "Radar Expertise: Pulse compression, Doppler processing, digital filter banks, synthetic aperture radar, and signal phenomenology.",
+    "Communications Expertise: ADC/DAC, digital modulation, wireless channel modeling, probability and random processes, dispersive channels, and MIMO.",
+    "Simulation experience: Matlab/Python/C++ experience modeling communications and/or radar hardware for performance analysis and signal generation.",
+    "Experience with prototyping and analyzing algorithms.",
+    "Experience with CUDA and GPU programming.",
+    "Experience with Rancher/Kubernetes.",
+    "Familiarity with scientific programming in Python.",
+    "Strong skills in organizing and coordinating projects and activities.",
+    "Excellent interpersonal and communication (presentation & writing) skills.",
+    "Coursework in software development and computer architecture.",
+    "Coursework in algorithms."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on mathematics, computer software, algorithm development, signal/image processing, and machine learning. The responsibilities include designing, developing, and testing mathematical algorithms and software for signal/image processing and machine learning, which are related to AI but not specifically to Generative AI or language models. The skills required include expertise in machine learning/artificial intelligence, image processing, signal processing, radar, and communications, along with experience in simulation, CUDA, GPU programming, and scientific programming in Python. There is no explicit mention of Generative AI, language models, or tasks typically associated with LLMs, such as natural language processing, text generation, or working with large-scale language datasets. The focus is more on technical and algorithmic aspects of AI related to signal and image processing rather than generative or language model applications.",
+  "is_genai_role": false
+}

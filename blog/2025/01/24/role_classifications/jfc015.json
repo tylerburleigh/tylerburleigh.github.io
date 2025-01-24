@@ -1,0 +1,28 @@
+{
+  "filename": "jfc015",
+  "responsibilities": [
+    "Apply innovative research in machine learning to tackle complex data annotation and product evaluation problems.",
+    "Develop solutions that significantly impact future Apple products and the broader ML development ecosystem.",
+    "Work with a multidisciplinary team to build machine-based grading models to reduce annotation costs and turnaround time.",
+    "Build pipelines to automate the assessment of data quality used for training foundational and adapter models.",
+    "Showcase groundbreaking research work by publishing and presenting at premier academic venues.",
+    "Use internal and external LLMs to build grading models and integrate them into evaluation pipelines.",
+    "Conduct research to improve data curation efficacy by identifying grading errors, bias, and distribution disparity.",
+    "Uncover patterns in data using modern statistical and ML-based methods to model data distributions.",
+    "Employ data selection techniques such as novelty detection, active learning, and core-set selection for diverse data types."
+  ],
+  "skills": [
+    "Excellent collaboration and communication skills with a focus on user experience.",
+    "Strong programming skills and hands-on experience with Python, PyTorch, or Jax.",
+    "Experience with developing and evaluating ML applications.",
+    "Experience writing automated unit, integration, and acceptance tests.",
+    "Experience using continuous integration systems.",
+    "Database and SQL skills.",
+    "Expertise in machine learning with a passion for model evaluation and applications.",
+    "Experience with natural language processing (NLP) and large language models like BERT, GPT, or Transformers.",
+    "Ability to stay on top of emerging trends in LLMs."
+  ],
+  "analysis": "The job responsibilities and skills focus heavily on machine learning, data annotation, model evaluation, and the use of large language models (LLMs). The responsibilities include applying machine learning research, developing solutions for ML ecosystems, building grading models, automating data quality assessment, and conducting research to improve data curation. The skills required include strong programming skills, experience with ML applications, expertise in machine learning, and familiarity with LLMs like BERT and GPT.\n\n1. **AI Research Scientist**: This option aligns well with the job as it involves investigating AI methodologies, conducting experiments, and staying current with AI research. The job's focus on ML and LLMs matches the skills and responsibilities of an AI Research Scientist, particularly in terms of model evaluation and research.\n\n2. **AI/ML Engineer**: While this role involves transforming research into scalable solutions, the job's focus on research and model evaluation is more aligned with a research scientist role rather than an engineering role focused on productionizing models.\n\n3. **MLOps / AI Infrastructure Engineer**: This role is more about deployment, scaling, and monitoring AI systems, which does not align with the research and model evaluation focus of the job.\n\n4. **AI Solution Architect**: This role involves designing AI solutions and collaborating with SMEs, which is not the primary focus of the job described.\n\n5. **Data Scientist**: While there is some overlap in terms of data analysis and model development, the job's emphasis on ML research and LLMs is more aligned with an AI Research Scientist.\n\n6. **Data Engineer**: This role focuses on data pipelines and architecture, which is not the primary focus of the job.\n\n7. **Product Manager**: This role is about driving product vision and strategy, which does not align with the research and technical focus of the job.\n\n8. **Software Engineer**: This role involves software development, which is not the primary focus of the job.\n\nThe job is most similar to the \"AI Research Scientist\" option due to its focus on machine learning research, model evaluation, and the use of LLMs.",
+  "role_classification": 1,
+  "role_title": "AI Research Scientist"
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Fine-tuning and customization of language models",
+    "analysis": "The job responsibilities include conducting research and development on large language models (LLM), which aligns with the activity of fine-tuning and customizing language models. The responsibility of managing life-cycle model development, including model training, also supports the relevance of this activity, as fine-tuning is a part of model training.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Prompt engineering and iterative refinement",
+    "analysis": "The job responsibilities mention transforming ideas into production and managing model development, which could involve crafting and refining prompts to optimize model outputs. However, there is no explicit mention of prompt engineering in the responsibilities. Given the focus on LLMs, it is likely relevant, but not explicitly stated.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model evaluation and performance assessment",
+    "analysis": "The responsibility of managing life-cycle model development, including deployment and maintenance, implies a need for evaluating model performance. This aligns with the activity of model evaluation and performance assessment, as it is crucial for ensuring the quality and reliability of models in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Integration with downstream applications",
+    "analysis": "The job responsibilities include applying models in business scenarios, which suggests integrating LLM outputs into end-user experiences or pipelines. This aligns with the activity of integration with downstream applications, as it involves designing workflows that incorporate model outputs into practical applications.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Prompt Engineering and Large Language Models (LLMs)",
+    "activity": "Model interpretability and debugging",
+    "analysis": "While the job responsibilities focus on model development and application, there is no explicit mention of model interpretability or debugging. However, analyzing model outputs for errors and improvements is a common part of managing model life-cycles, suggesting some relevance to this activity.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Architecture blueprint for AI-driven pipelines",
+    "analysis": "The job responsibilities include managing life-cycle model development, which involves model training, deployment, maintenance, and application in business scenarios. This aligns with designing end-to-end workflows for AI-driven pipelines, as both involve integrating various components to deliver high-quality results. Therefore, this activity is relevant to the job responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Compute requirements and resource planning",
+    "analysis": "The job responsibilities do not explicitly mention assessing computational demands or resource planning. While managing model deployment might involve some level of resource planning, the specific focus on compute requirements and scalability is not directly addressed in the responsibilities. Thus, this activity is not clearly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Performance optimization and latency control",
+    "analysis": "The job responsibilities focus on transforming ideas into production and managing model life-cycle development. While performance optimization and latency control are important for production systems, these specific aspects are not explicitly mentioned in the responsibilities. Therefore, this activity is not directly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Model lifecycle management and governance",
+    "analysis": "The job responsibilities include managing life-cycle model development, which directly relates to planning continuous retraining, versioning, and governance of models. This activity is highly relevant as it aligns with the responsibilities of managing model training, deployment, and maintenance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "System interoperability and integration",
+    "analysis": "The job responsibilities do not explicitly mention system interoperability or integration with existing enterprise systems. While transforming ideas into production might involve some integration, the specific focus on interoperability is not directly addressed. Therefore, this activity is not clearly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include conducting development and research on cutting-edge technologies, which aligns with conducting research to evaluate AI quality. Both involve investigating system performance and guiding improvements, making this activity relevant.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities involve conducting development and research on technologies like NLP and generative modeling, which can include developing AI systems and algorithms. This activity is relevant as it aligns with the responsibility of transforming ideas into production and managing model development.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Synthetic data generation",
+    "analysis": "The job responsibilities do not explicitly mention synthetic data generation. While research and development might involve data-related tasks, the specific focus on generating synthetic datasets is not directly addressed. Therefore, this activity is not clearly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include transforming ideas into production and managing model development, which may involve identifying performance metrics and success criteria. However, this is not explicitly mentioned, making the relevance of this activity uncertain.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. While managing model training might involve data preparation, the specific task of creating labeled datasets is not directly addressed. Therefore, this activity is not clearly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include conducting research and managing model development, which can involve designing and analyzing experiments to validate hypotheses. This activity is relevant as it aligns with the responsibility of transforming ideas into production and improving models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Solution Architecture for Generative AI",
+    "activity": "Sampling data for evaluation",
+    "analysis": "The job responsibilities do not explicitly mention sampling data for evaluation. While research and model development might involve data evaluation, the specific task of sampling data is not directly addressed. Therefore, this activity is not clearly relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Designing labeling tasks for data annotation",
+    "analysis": "The job responsibilities focus on development and research in computer vision, natural language processing, and model lifecycle management. Designing labeling tasks for data annotation is relevant to these responsibilities as it involves creating datasets that are crucial for training and evaluating models in these fields. Accurate data labeling is essential for the success of machine learning models, which aligns with the responsibility of managing model development and application.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Collecting human annotation data",
+    "analysis": "Collecting human annotation data is a foundational step in creating datasets for training and evaluating models in computer vision and natural language processing. The job responsibilities include model training and deployment, which require high-quality data. Therefore, managing the logistics and quality of annotation projects is relevant to ensuring the data used in model development is reliable and accurate.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Annotation and Labeling",
+    "activity": "Analyzing human annotation data",
+    "analysis": "Analyzing human annotation data involves using statistical methods to evaluate dataset quality and generate insights. This activity is relevant to the job responsibilities as it supports the development and maintenance of models by ensuring the data used is of high quality. The ability to analyze and improve data quality directly impacts the effectiveness of model training and deployment, which are key responsibilities mentioned in the job description.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Statistical methods",
+    "analysis": "The Job Responsibilities mention conducting research and development in areas like computer vision, natural language processing, and generative modeling, which often involve statistical methods for model training and validation. However, the responsibilities do not explicitly mention statistical techniques or tools like scikit-learn or statsmodels. The focus seems more on model development and deployment rather than statistical analysis.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data visualization and exploratory analysis",
+    "analysis": "The Job Responsibilities do not explicitly mention data visualization or exploratory data analysis. The focus is more on model development, deployment, and application in business scenarios. While data visualization can be a part of communicating insights from models, it is not directly highlighted in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Data mining and analysis of large conversational datasets",
+    "analysis": "The Job Responsibilities include working with natural language processing and large language models, which may involve analyzing large conversational datasets. This activity aligns with exploring user-generated interactions and uncovering trends, which can be relevant for model improvements and application in business scenarios.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Developing data models and pipelines for analytics",
+    "analysis": "The Job Responsibilities involve managing the life-cycle of model development, including training, deployment, and maintenance. Developing data models and pipelines is a crucial part of this process, as it supports systematic performance tracking and feature engineering, which are essential for deploying models in business scenarios.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Data Science, Data Engineering, and Analytics",
+    "activity": "Define metrics and success criteria",
+    "analysis": "The Job Responsibilities mention transforming ideas into production and applying models in business scenarios, which require defining metrics and success criteria to assess model health and guide decision-making. This activity is relevant as it aligns with tracking and analyzing model performance, which is crucial for successful deployment and maintenance.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Deployment and MLOps",
+    "analysis": "The Job Responsibilities mention \"Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios.\" This directly aligns with the Activity's focus on designing and maintaining CI/CD pipelines for robust model deployment, versioning, and rollback strategies. The emphasis on ensuring performance, scalability, and reliability of AI systems in production is also relevant to the responsibilities of transforming ideas into production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Monitoring and observability",
+    "analysis": "The Job Responsibilities do not explicitly mention monitoring and observability. However, the responsibility of \"Managing life-cycle model development\" could imply the need for monitoring model performance and detecting issues like data drift. While not explicitly stated, this Activity could be considered relevant as it supports maintaining reliability and minimizing downtime, which are crucial for production systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Data and model versioning",
+    "analysis": "The Job Responsibilities include \"Managing life-cycle model development,\" which encompasses model training, deployment, and maintenance. Data and model versioning are essential components of lifecycle management, ensuring reproducibility and traceability. This Activity is relevant as it supports efficient rollbacks and compliance, which are important for maintaining and updating models in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Continuous testing and validation",
+    "analysis": "The Job Responsibilities do not explicitly mention testing and validation. However, the responsibility of \"Managing life-cycle model development\" implies the need for ensuring model stability and performance before deployment. Continuous testing and validation are critical for verifying model stability and performance, making this Activity relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Infrastructure and scalability",
+    "analysis": "The Job Responsibilities do not explicitly mention infrastructure and scalability. However, the responsibility of \"Managing life-cycle model development\" includes deployment and maintenance, which require scalable infrastructure to handle production demands. This Activity is relevant as it ensures consistent response times and efficient resource utilization, which are important for production systems.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Governance, compliance, and security",
+    "analysis": "The Job Responsibilities do not explicitly mention governance, compliance, or security. While these are important aspects of deploying models in production, they are not directly addressed in the given responsibilities. Therefore, this Activity is not directly relevant to the specified Job Responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Machine Learning Operations (MLOps)",
+    "activity": "Model lifecycle management and continuous improvement",
+    "analysis": "The Job Responsibilities include \"Managing life-cycle model development,\" which directly relates to model lifecycle management and continuous improvement. This Activity's focus on regular retraining, hyperparameter tuning, and performance evaluations aligns with adapting models to evolving data and requirements, making it highly relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "User interviews and surveys",
+    "analysis": "The Job Responsibilities focus on development and research in computer vision, natural language processing, and related fields, as well as managing model life-cycles. User interviews and surveys are typically associated with gathering user insights for UX design, which is not directly related to the technical and research-oriented responsibilities described. Therefore, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Usability testing and prototyping",
+    "analysis": "The Job Responsibilities emphasize technical research and development in AI and machine learning, with no mention of user experience design or testing. Usability testing and prototyping are more aligned with UX design roles, which focus on improving user interaction with products. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Persona development and user journey mapping",
+    "analysis": "The Job Responsibilities are centered around technical research and model development in AI fields, with no indication of involvement in user experience design or understanding user journeys. Persona development and user journey mapping are UX activities that do not align with the technical focus of the job responsibilities. Therefore, this activity is not relevant.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "User Experience (UX) Research",
+    "activity": "Qualitative data analysis",
+    "analysis": "While qualitative data analysis involves synthesizing user feedback, the Job Responsibilities are focused on technical research and development in AI and machine learning. There is no mention of analyzing qualitative user data or translating it into UX improvements. Thus, this activity is not relevant to the job responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "Designing and implementing software architecture",
+    "analysis": "The job responsibilities focus on development and research in computer vision, natural language processing, and model lifecycle management. While these tasks require a strong understanding of software architecture, the responsibilities do not explicitly mention designing or implementing software architecture. The focus is more on model development and deployment rather than system architecture.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "Developing production-grade applications",
+    "analysis": "The job responsibilities include transforming ideas into production and managing model deployment, which aligns with developing production-grade applications. This activity is relevant as it involves writing efficient code and ensuring the application is ready for production, which is a part of deploying models in business scenarios.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "Continuous integration and delivery (CI/CD)",
+    "analysis": "Managing the lifecycle of model development, including deployment and maintenance, suggests a need for continuous integration and delivery processes. Automating build, test, and deployment processes is relevant to ensuring models are efficiently deployed and maintained in production environments.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "Monitoring and incident management",
+    "analysis": "The job responsibilities do not explicitly mention monitoring or incident management. While these are important for maintaining production systems, the responsibilities focus more on model development and deployment rather than ongoing system health monitoring and incident resolution.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "API development and system integration",
+    "analysis": "The responsibilities do not explicitly mention API development or system integration. However, deploying models in business scenarios may require some level of integration, but it is not a primary focus of the listed responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "Software testing and quality assurance",
+    "analysis": "While the job responsibilities do not explicitly mention software testing, ensuring the quality of models through testing is an implicit part of managing the lifecycle of model development. Testing is crucial for maintaining code quality and ensuring models perform as expected in production.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "Software Engineering",
+    "activity": "DevOps and infrastructure as code",
+    "analysis": "The responsibilities include managing model deployment and maintenance, which can benefit from a DevOps approach and infrastructure as code to ensure efficient and scalable deployment processes. This activity is relevant as it supports the lifecycle management of models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Conducting research to evaluate AI quality",
+    "analysis": "The job responsibilities include conducting development and research on cutting-edge technologies like computer vision, NLP, and generative modeling, as well as managing life-cycle model development. Evaluating AI quality by investigating system accuracy, robustness, and other performance metrics aligns with these responsibilities, as it involves research and experimentation to improve AI models.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Developing AI systems and algorithms for automated insights",
+    "analysis": "The job responsibilities mention conducting research and managing model development, which includes model training and application in business scenarios. Developing AI systems and algorithms for automated insights is relevant as it involves building and refining AI methods, which is part of the model development and application process.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Synthetic data generation",
+    "analysis": "While the job responsibilities focus on research, model development, and application, they do not explicitly mention synthetic data generation. However, generating synthetic data can be a part of the research and development process to improve AI models. Given the context of AI Evaluation, Experimentation, and Research, this activity could be relevant, but it is not directly mentioned in the responsibilities.",
+    "is_relevant": false
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Identifying performance metrics and success criteria",
+    "analysis": "The job responsibilities include managing life-cycle model development and transforming ideas into production, which requires identifying performance metrics and success criteria to assess model health and guide decision-making. This activity is relevant as it aligns with the need to track and analyze metrics for model development and application.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Creating labeled datasets for AI evaluation and optimization",
+    "analysis": "The job responsibilities do not explicitly mention creating labeled datasets. However, preparing high-quality data annotations is crucial for robust model training and evaluation, which is part of managing life-cycle model development. This activity is indirectly relevant to the responsibilities.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Designing, running, and analyzing experiments (A/B tests)",
+    "analysis": "The job responsibilities include conducting research and managing model development, which may involve designing and analyzing experiments to compare model variants or features. This activity is relevant as it aligns with the need to validate hypotheses and inform product or research decisions.",
+    "is_relevant": true
+  },
+  {
+    "filename": "je908d",
+    "responsibilities": [
+      "Conducting development and research on cutting-edge computer vision (CV), natural language processing (NLP), multi-modality, large language models (LLM), and generative modeling.",
+      "Following state-of-the-art (SoTA) progress in relevant fields and transforming ideas into production.",
+      "Managing life-cycle model development, including model training, deployment, maintenance, and application in business scenarios."
+    ],
+    "category": "AI Evaluation, Experimentation and Research",
+    "activity": "Sampling data for evaluation",
+    "analysis": "Sampling data for evaluation is a part of ensuring a representative dataset for training and evaluation, which is crucial for model development and application. While not explicitly mentioned, this activity supports the responsibilities of managing life-cycle model development and conducting research.",
+    "is_relevant": true
+  }
+]
