@@ -286,13 +286,13 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p>So with that motivation, I set about to collect some data and look at the job market for these sorts of roles. What responsibilities and skills are being advertised most often, what kinds of titles are being used for these roles, and what kind of compensation is being offered at different levels of seniority?</p>
 <p>To accomplish this, I built a custom web scraper to collect ~1000 job postings from ai-jobs.net. My code gathers job details like the title, company, location, salary, and posting date – from a range of U.S. and Canadian cities, covering entry-level, mid-level, and senior positions. I then use a Large Language Model (LLM) to extract each job’s key responsibilities, required skills, and qualifications. Afterwards, I classify each position to see whether it involves working with Generative AI or large language models, and if so, categorize it further into four major AI roles: (1) AI Research Scientist, (2) AI/ML Engineer, (3) MLOps/AI Infrastructure Engineer, and (4) AI Solution Architect. I believe this set of roles is a good representation of different areas of focus.</p>
 <p>Finally, I integrate the various metadata and classifications into a comprehensive dataset. I observe that GenAI/LLM positions command consistently high salary ranges across the four different roles, particularly at more senior levels. Senior-level roles tended to offer median salaries in the $195K–$210K range, while mid-level roles generally clustered around $165K–$180K. Entry-level salaries showed greater variation (likely due to the small sample size) but still landed in competitive ranges of roughly $155K–$205K in many postings. These roles often share common technical demands—like proficiency with large-scale model training, distributed computing, and LLM-specific knowledge—though each role emphasizes distinct priorities (research vs.&nbsp;production, for example).</p>
-<p>Of course, this analysis is not without limitations. For example, I am relying on a single job board, and I scraped jobs during a limited window of time. I also have not rigorously validated the LLM classifications – although I have implemented many prompt engineering best practices, and have used some of the more powerful LLMs (4o and o1). I also think the responsibilities and skills that were identified at the end as belonging to the pre-defined roles used in classification speak to the relative accuracy of the classifications. The salary analysis also does not distinguish between base salary and total compensation, large vs.&nbsp;small companies, and so on. But overall, I think this gives some sense of the job market for these roles.</p>
+<p>Of course, this analysis is not without limitations. For example, I am relying on a single job board, and I scraped jobs during a limited window of time. I also have not rigorously validated the LLM classifications – although I have implemented many prompt engineering best practices, and have used some of the more powerful LLMs (4o and o1). To some extent, the responsibilities and skills that were recovered from the original job postings classified into the four pre-defined roles do speak to the relative accuracy of the role classifications. The salary analysis also does not distinguish between base salary and total compensation, remote vs.&nbsp;in-person opportunities, large vs.&nbsp;small companies, and so on. But overall, I think this gives some sense of the job market for these roles.</p>
 </section>
 <section id="scraping-job-postings" class="level1">
 <h1>Scraping job postings</h1>
 <p>I’ll scrape job postings from ai-jobs.net. This is an aggregator that specializes in AI jobs of all kinds, sourcing jobs from over 60 countries, and in my experience, it does a pretty good job.</p>
 <p>The code below implements a web scraper for job postings from ai-jobs.net. It collects job postings from major cities in the US and Canada, searching across entry-level, mid-level, and senior positions. For each job, it gets the title, company, location, salary, description, and posting date. The scraper saves each job as a JSON file and keeps track of what it has already scraped to avoid duplicates. It includes error handling and logging to track any problems that occur during scraping.</p>
-<div id="41c29970" class="cell" data-code-fold-show="false" data-execution_count="1">
+<div id="1aae9dd8" class="cell" data-code-fold-show="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Click to view the Job Posting Scraper code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
@@ -587,7 +587,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="aed6bad3" class="cell" data-execution_count="2">
+<div id="c9dbbf07" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#logging.basicConfig(level=logging.INFO)</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#scraper = AIJobScraper()</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#scrape_results = scraper.scrape_jobs(test=False)</span></span>
@@ -597,7 +597,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <section id="general-purpose-llm-completion-function" class="level1">
 <h1>General-purpose LLM completion function</h1>
 <p>For the classification tasks, I’ll write a general-purpose LLM completion function. This function takes a prompt and a model as parameters, and returns the completion from the OpenAI API.</p>
-<div id="3dabefd6" class="cell" data-execution_count="3">
+<div id="565febfc" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> AsyncOpenAI</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -616,7 +616,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <h1>Extract Responsibilities, Skills, and Qualifications</h1>
 <p>The code below uses an LLM to extract key information from job postings that will be used to classify them into different role categories. It uses OpenAI’s GPT-4o model to analyze job descriptions and extract three key components: responsibilities, skills, and qualifications. The system processes multiple jobs concurrently with rate limiting, saves the extracted data as JSON files, and includes retry logic for handling API rate limits. The code uses <code>asyncio</code> for concurrent processing and includes error handling and logging. It also checks for previously processed jobs to avoid duplicate work.</p>
 <p>Also included is code that implements data preprocessing steps. This code has functions to load JSON files into a pandas DataFrame, uses a list of keywords to filter out certain jobs that are not relevant to the analysis, and removes duplicate or highly similar job descriptions using TF-IDF vectorization and cosine similarity. The main function <code>process_job_listings()</code> combines these steps, taking a directory path, similarity threshold, and filter keywords as parameters. It returns a dictionary containing the processed DataFrame along with counts of the original and filtered entries.</p>
-<div id="a091aa26" class="cell" data-code-fold-show="false" data-execution_count="4">
+<div id="2be9cf1c" class="cell" data-code-fold-show="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Click to view the code for LLM extraction</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -850,7 +850,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="f82744ac" class="cell" data-execution_count="5">
+<div id="aaaa0726" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> process_job_listings()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> results[<span class="st">'processed_data'</span>]</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Original count of listings: </span><span class="sc">{</span>results[<span class="st">"original_count"</span>]<span class="sc">}</span><span class="ss">'</span>)</span>
@@ -861,7 +861,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 Filtered count of listings: 680</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>&lt;Task pending name='Task-1' coro=&lt;JobProcessor.process_jobs() running at /tmp/ipykernel_1340113/2751672584.py:118&gt;&gt;</code></pre>
+<pre><code>&lt;Task pending name='Task-1' coro=&lt;JobProcessor.process_jobs() running at /tmp/ipykernel_1343524/2751672584.py:118&gt;&gt;</code></pre>
 </div>
 </div>
 </section>
@@ -869,7 +869,7 @@ Filtered count of listings: 680</code></pre>
 <h1>Classification</h1>
 <section id="classify-jobs-as-relevant-to-genaillm-work-or-not" class="level2">
 <h2 class="anchored" data-anchor-id="classify-jobs-as-relevant-to-genaillm-work-or-not">Classify jobs as relevant to GenAI/LLM work or not</h2>
-<div id="9e0980c9" class="cell" data-code-fold-show="false" data-execution_count="6">
+<div id="392213f0" class="cell" data-code-fold-show="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Click to view the code for job classification as GenAI/LLM relevant or not</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nest_asyncio</span>
@@ -1068,7 +1068,7 @@ Filtered count of listings: 680</code></pre>
 <span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.DataFrame(all_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="d63b0c35" class="cell" data-execution_count="7">
+<div id="850094fc" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>loader <span class="op">=</span> JobDataLoader()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>jobs <span class="op">=</span> loader.read_json_files()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(jobs)</span>
@@ -1098,7 +1098,7 @@ Filtered count of listings: 680</code></pre>
 </ol>
 <p>The code below implements an automated job classification system that uses an LLM to categorize job postings into the eight predefined roles listed above (four GenAI-focused and four related roles). It consists of several classes that work together: JobClassifier handles the core classification logic by comparing job descriptions against detailed role templates, JobData and ClassificationResult provide structured data containers, and JobProcessor manages the overall pipeline from loading jobs to saving results. The system processes jobs concurrently using asyncio, includes error handling and rate limiting, and outputs both an analysis explaining the classification and a final numerical category (0-8) for each job, with all results saved as JSON files for further analysis.</p>
 <p>Definitions of the roles can be found in the <code>JOB_DESCRIPTIONS</code> variable.</p>
-<div id="cc515257" class="cell" data-code-fold-show="false" data-execution_count="8">
+<div id="3f218381" class="cell" data-code-fold-show="false" data-execution_count="8">
 <details class="code-fold">
 <summary>Click to view the code for job classification into pre-defined roles</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
@@ -1505,7 +1505,7 @@ Filtered count of listings: 680</code></pre>
 <span id="cb10-402"><a href="#cb10-402" aria-hidden="true" tabindex="-1"></a>    loop.run_until_complete(processor.process_jobs())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="4cf3b066" class="cell" data-execution_count="9">
+<div id="adb200c2" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>logging.basicConfig(level<span class="op">=</span>logging.INFO)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>loader <span class="op">=</span> JobDataLoader()</span>
@@ -1513,11 +1513,11 @@ Filtered count of listings: 680</code></pre>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(jobs)</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>classify_job_roles(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2025-01-24 13:42:22,302 - INFO - Found 739 total files
-2025-01-24 13:42:22,303 - INFO - Found 247 relevant GenAI files
-2025-01-24 13:42:22,303 - INFO - Already processed: 247 files
-2025-01-24 13:42:22,304 - INFO - Remaining to process: 0 files
-2025-01-24 13:42:22,305 - INFO - Processing 0 remaining jobs</code></pre>
+<pre><code>2025-01-24 13:50:53,982 - INFO - Found 739 total files
+2025-01-24 13:50:53,982 - INFO - Found 247 relevant GenAI files
+2025-01-24 13:50:53,983 - INFO - Already processed: 247 files
+2025-01-24 13:50:53,983 - INFO - Remaining to process: 0 files
+2025-01-24 13:50:53,984 - INFO - Processing 0 remaining jobs</code></pre>
 </div>
 </div>
 </section>
@@ -1526,7 +1526,7 @@ Filtered count of listings: 680</code></pre>
 <h1>Load final data</h1>
 <p>Now I’ll load and combine all of the different data outputs into a single dataframe.</p>
 <p>The code block below uses a DataLoader class with helper classes DataPaths and SalaryProcessor to handle the data processing pipeline. The code merges job posting data with role classifications, processes salary information by converting CAD to USD and extracting salary ranges, and filters the results to only include the four specific AI-related roles of interest: AI Research Scientist, AI Solution Architect, AI/ML Engineer, and MLOps/AI Infrastructure Engineer. The code includes error handling for JSON file loading and salary processing. The final output is a pandas DataFrame containing the merged and processed data, which includes job details, role classifications, and standardized salary information.</p>
-<div id="9abc2b34" class="cell" data-code-fold-show="false" data-execution_count="10">
+<div id="90478a0d" class="cell" data-code-fold-show="false" data-execution_count="10">
 <details class="code-fold">
 <summary>Click to view the code for loading and merging all data sources</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> List, Tuple, Optional, Dict</span>
@@ -1635,7 +1635,7 @@ Filtered count of listings: 680</code></pre>
 <span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span>, <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="afb8d362" class="cell" data-execution_count="11">
+<div id="956b29cd" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the loader and load the data</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if the csv file exists</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(<span class="st">'genai_job_data.csv'</span>):</span>
@@ -1677,7 +1677,7 @@ Name: count, dtype: int64</code></pre>
 <h1>Salary analysis</h1>
 <p>First I’ll analyze the salary data for each role and experience level. I’ll use a RandomForest model to adjust for location differences, and convert any CAD denominated salaries to USD. I’m interested to see what compensation is like for each role, and if there are any significant differences in compensation between the roles.</p>
 <p>The code below implements a salary analysis system for the job posting data. It processes salary information across different roles and experience levels, handling currency conversions (CAD to USD) and adjusting for location differences using a RandomForest model. For each role and level combination, it calculates salary ranges, removes statistical outliers, and provides sample sizes. The system includes configuration settings for analysis parameters and comprehensive error handling. The code uses pandas for data manipulation and scikit-learn for the location adjustment model, with results formatted as salary ranges in USD.</p>
-<div id="0ed0e295" class="cell" data-code-fold-show="false" data-execution_count="12">
+<div id="31bda13e" class="cell" data-code-fold-show="false" data-execution_count="12">
 <details class="code-fold">
 <summary>Click to view the code for salary analysis</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
@@ -1948,13 +1948,13 @@ Name: count, dtype: int64</code></pre>
 <span id="cb16-266"><a href="#cb16-266" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (residuals <span class="op">-</span> residuals.mean()) <span class="op">/</span> residuals.std()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="6cdf0633" class="cell" data-execution_count="13">
+<div id="1bb5d00e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>salary_analyzer <span class="op">=</span> SalaryAnalyzer()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>salary_df <span class="op">=</span> salary_analyzer.analyze_role_salaries(df)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>salary_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>2025-01-24 13:42:22,680 - INFO - Starting salary analysis with 187 records
-2025-01-24 13:42:25,667 - INFO - Salary analysis completed successfully</code></pre>
+<pre><code>2025-01-24 13:50:54,315 - INFO - Starting salary analysis with 187 records
+2025-01-24 13:50:56,541 - INFO - Salary analysis completed successfully</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -2081,7 +2081,7 @@ Name: count, dtype: int64</code></pre>
 <h1>Job responsibilities</h1>
 <p>Next, I’m interested to see what the job responsibilities are for some of these roles, and how they differ. I’ll use an LLM to identify the most common responsibilities and skills for a given role. This task will be quite complex, involving a lot of input data. So a model like <code>o1</code> will be more appropriate. I don’t have access to <code>o1</code> via API, so I’ll use the web interface to generate completions, and prepare XML files for the inputs to this task – allowing me to copy-paste the XML into the chat.</p>
 <p>As we’ll see, Research Scientists lean heavily into discovery, theoretical advances, publication, and cutting-edge experimentation, whereas ML Engineers center on production-grade systems, robust architecture, MLOps, and aligning with business needs. Although in many cases, the lines between these roles will be blurred.</p>
-<div id="4c8546c1" class="cell" data-code-fold-show="false" data-execution_count="14">
+<div id="4cfcd29c" class="cell" data-code-fold-show="false" data-execution_count="14">
 <details class="code-fold">
 <summary>Click to view the code for XML generation</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> logging</span>
@@ -2182,7 +2182,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb19-96"><a href="#cb19-96" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.save_xml(combo[<span class="st">'level'</span>], combo[<span class="st">'role_title'</span>], xml_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="7ddf9c35" class="cell" data-execution_count="15">
+<div id="3ba63869" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>xml_generator <span class="op">=</span> XMLGenerator()</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>xml_generator.generate_all_xml(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2290,7 +2290,7 @@ Eagerness to stay on top of new AI research, frameworks, and technologies to inn
 <section id="job-titles" class="level1">
 <h1>Job titles</h1>
 <p>What are the most common job titles for these roles?</p>
-<div id="fe23eea8" class="cell" data-code-fold-show="false" data-execution_count="16">
+<div id="1e3bf41f" class="cell" data-code-fold-show="false" data-execution_count="16">
 <details class="code-fold">
 <summary>Click to view the code for aggregating titles</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> aggregate_titles_by_role_level(df: pd.DataFrame, output_dir: <span class="bu">str</span> <span class="op">=</span> <span class="st">'role_titles'</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
@@ -2325,7 +2325,7 @@ Eagerness to stay on top of new AI research, frameworks, and technologies to inn
 <span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Saved titles for </span><span class="sc">{</span>level<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>role<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="750bafc0" class="cell" data-execution_count="17">
+<div id="ad7b0699" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>aggregate_titles_by_role_level(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Saved titles for Entry-level AI Research Scientist
@@ -2864,7 +2864,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>Finally, I integrate the various metadata and classifications into a comprehensive dataset. I observe that GenAI/LLM positions command consistently high salary ranges across the four different roles, particularly at more senior levels. Senior-level roles tended to offer median salaries in the $195K–$210K range, while mid-level roles generally clustered around $165K–$180K. Entry-level salaries showed greater variation (likely due to the small sample size) but still landed in competitive ranges of roughly $155K–$205K in many postings. These roles often share common technical demands—like proficiency with large-scale model training, distributed computing, and LLM-specific knowledge—though each role emphasizes distinct priorities (research vs. production, for example).</span>
 <span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>Of course, this analysis is not without limitations. For example, I am relying on a single job board, and I scraped jobs during a limited window of time. I also have not rigorously validated the LLM classifications -- although I have implemented many prompt engineering best practices, and have used some of the more powerful LLMs (4o and o1). I also think the responsibilities and skills that were identified at the end as belonging to the pre-defined roles used in classification speak to the relative accuracy of the classifications. The salary analysis also does not distinguish between base salary and total compensation, large vs. small companies, and so on. But overall, I think this gives some sense of the job market for these roles.</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>Of course, this analysis is not without limitations. For example, I am relying on a single job board, and I scraped jobs during a limited window of time. I also have not rigorously validated the LLM classifications -- although I have implemented many prompt engineering best practices, and have used some of the more powerful LLMs (4o and o1). To some extent, the responsibilities and skills that were recovered from the original job postings classified into the four pre-defined roles do speak to the relative accuracy of the role classifications. The salary analysis also does not distinguish between base salary and total compensation, remote vs. in-person opportunities, large vs. small companies, and so on. But overall, I think this gives some sense of the job market for these roles.</span>
 <span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Scraping job postings</span></span>
 <span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a></span>
