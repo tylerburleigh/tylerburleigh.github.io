@@ -265,7 +265,7 @@ gtag('config', 'G-PRHQZ8HPLB', { 'anonymize_ip': true});
 <p>In this post, I want to share a project I recently released on GitHub: a <a href="https://github.com/tylerburleigh/LLM-RAG-Longevity-Coach">RAG-Powered LLM Longevity Coach</a>.</p>
 <p>This application implements a Retrieval-Augmented Generation (RAG) chatbot that offers personalized health and longevity advice — ideal for anyone (like myself) who is both curious about health and longevity, and also curious about how LLMs can tap into large datasets in a more targeted and efficient way.</p>
 <p>The chatbot leverages both a large language model (LLM) and a vector-based retrieval system (i.e., FAISS) to ensure that only the most relevant user data is used to generate responses. This post will walk you through the motivation, the workflow, and practical considerations for building a RAG-powered health app.</p>
-<p>I built this in a weekend, collaborating with an AI coding assistant (currently I am using <a href="https://cursor.ai/">Cursor AI</a> with a Claude 3.5 Sonnet model). However it has taken longer than that to collect my own health information for the vector store. I have been using this app (and a more nascent version of it) for a few weeks now, and it seems to provide useful insights that can be the starting points for actionable steps to improve longevity. Of course, the usual disclaimer applies: I am not a doctor, and the advice provided by the LLM is not intended to be a substitute for professional medical advice.</p>
+<p>I built this in a weekend, collaborating with an AI coding assistant (currently I am using <a href="https://cursor.com">Cursor AI</a> with a Claude 3.5 Sonnet model). However it has taken longer than that to collect my own health information for the vector store. I have been using this app (and a more nascent version of it) for a few weeks now, and it seems to provide useful insights that can be the starting points for actionable steps to improve longevity. Of course, the usual disclaimer applies: I am not a doctor, and the advice provided by the LLM is not intended to be a substitute for professional medical advice.</p>
 <section id="motivation-and-context" class="level2">
 <h2 class="anchored" data-anchor-id="motivation-and-context">Motivation and context</h2>
 <p>Health-related information can become extensive. Simply dumping all of your medical details into a prompt often leads to bloated responses, token overuse, and confusion in the generated content.</p>
@@ -298,7 +298,7 @@ The system analyzes the user’s question (e.g., “heart disease risk”) and f
 <li><p><strong>Retrieving Relevant Information</strong><br>
 A vector-based search kicks in, using FAISS to efficiently look up documents from a large repository of user health data. Only the top-matching documents are returned.</p></li>
 <li><p><strong>Generating the Response</strong><br>
-The final query plus the retrieved snippets are passed into the LLM. Since the model only sees relevant info, it produces a more trustworthy, concise answer.</p></li>
+The final query plus the retrieved snippets are passed into the LLM. Since the model only sees relevant info, it produces a more relevant answer.</p></li>
 </ol>
 </section>
 <section id="screenshots" class="level2">
@@ -829,7 +829,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>The chatbot leverages both a large language model (LLM) and a vector-based retrieval system (i.e., FAISS) to ensure that only the most relevant user data is used to generate responses. This post will walk you through the motivation, the workflow, and practical considerations for building a RAG-powered health app.</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>I built this in a weekend, collaborating with an AI coding assistant (currently I am using <span class="co">[</span><span class="ot">Cursor AI</span><span class="co">](https://cursor.ai/)</span> with a Claude 3.5 Sonnet model). However it has taken longer than that to collect my own health information for the vector store. I have been using this app (and a more nascent version of it) for a few weeks now, and it seems to provide useful insights that can be the starting points for actionable steps to improve longevity. Of course, the usual disclaimer applies: I am not a doctor, and the advice provided by the LLM is not intended to be a substitute for professional medical advice.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>I built this in a weekend, collaborating with an AI coding assistant (currently I am using <span class="co">[</span><span class="ot">Cursor AI</span><span class="co">](https://cursor.com)</span> with a Claude 3.5 Sonnet model). However it has taken longer than that to collect my own health information for the vector store. I have been using this app (and a more nascent version of it) for a few weeks now, and it seems to provide useful insights that can be the starting points for actionable steps to improve longevity. Of course, the usual disclaimer applies: I am not a doctor, and the advice provided by the LLM is not intended to be a substitute for professional medical advice.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Motivation and context</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -866,7 +866,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>   A vector-based search kicks in, using FAISS to efficiently look up documents from a large repository of user health data. Only the top-matching documents are returned.</span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Generating the Response**  </span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>   The final query plus the retrieved snippets are passed into the LLM. Since the model only sees relevant info, it produces a more trustworthy, concise answer.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>   The final query plus the retrieved snippets are passed into the LLM. Since the model only sees relevant info, it produces a more relevant answer.</span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="fu">## Screenshots</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
