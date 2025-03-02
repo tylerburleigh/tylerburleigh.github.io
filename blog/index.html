@@ -331,7 +331,7 @@ window.Quarto = {
   <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2019</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(18)</span></div><div class="category" data-category="R1BU">GPT <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R2VuQUk=">GenAI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExN">LLM <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TExNLWFzLWp1ZGdl">LLM-as-judge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNLWV2YWxz">LLM-evals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(9)</span></div><div class="category" data-category="UkFH">RAG <span class="quarto-category-count">(1)</span></div><div class="category" data-category="am9iLW1hcmtldA==">job-market <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(7)</span></div><div class="category" data-category="cHJvbXB0LWVuZ2luZWVyaW5n">prompt-engineering <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(11)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(19)</span></div><div class="category" data-category="R1BU">GPT <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R2VuQUk=">GenAI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExN">LLM <span class="quarto-category-count">(3)</span></div><div class="category" data-category="TExNLWFzLWp1ZGdl">LLM-as-judge <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TExNLWV2YWxz">LLM-evals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(9)</span></div><div class="category" data-category="UkFH">RAG <span class="quarto-category-count">(1)</span></div><div class="category" data-category="am9iLW1hcmtldA==">job-market <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFjaGluZS1sZWFybmluZw==">machine-learning <span class="quarto-category-count">(7)</span></div><div class="category" data-category="bXVsdGktdGhyZWFkaW5n">multi-threading <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3J0aG9nb25hbGl0eQ==">orthogonality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvbXB0LWVuZ2luZWVyaW5n">prompt-engineering <span class="quarto-category-count">(5)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(12)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -344,7 +344,48 @@ window.Quarto = {
 <div id="listing-posts_2025" class="quarto-listing quarto-listing-container-custom">
 <div class="list blog">
     
-    <div class="blog-entry" data-index="0" data-categories="UkFHJTJDTExNJTJDcHl0aG9u" data-listing-date-sort="1738472400000" data-listing-file-modified-sort="1738671581833" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="823">
+    <div class="blog-entry" data-index="0" data-categories="cHJvbXB0LWVuZ2luZWVyaW5nJTJDcHl0aG9uJTJDTExNJTJDbXVsdGktdGhyZWFkaW5nJTJDb3J0aG9nb25hbGl0eQ==" data-listing-date-sort="1740891600000" data-listing-file-modified-sort="1740931727317" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="51" data-listing-word-count-sort="10181">
+        <div class="metadata">          
+            <p class="date listing-date">March 2, 2025</p>
+        </div>
+        <div class="body">
+            <p class="title listing-title"><a href="../blog/2025/03/02/index.html">Using a multi-threaded prompt architecture to speed up LLM Judge evaluation of orthogonal quality dimensions</a></p>
+
+            
+            <div class="post-categories listing-categories">
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('prompt-engineering'); return false;">
+                    prompt-engineering
+                </div>
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('python'); return false;">
+                    python
+                </div>
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('LLM'); return false;">
+                    LLM
+                </div>
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('multi-threading'); return false;">
+                    multi-threading
+                </div>
+                
+                <div class="post-category listing-category" onclick="window.quartoListingCategory('orthogonality'); return false;">
+                    orthogonality
+                </div>
+                
+            </div>
+            
+
+            <p class="description listing-description">In this post, I explore how multi-threading can improve the latency of LLM Judges. I introduce the concept of "orthogonality" as a key heuristic for determining when LLM Judge evaluation tasks can be parallelized without sacrificing quality. Then, I run a controlled experiment using MT Bench data to demonstrate the latency benefits of multi-threading, finding that the multi-threaded approach reduced latency by 38% compared to the single-threaded approach. The code used to run this experiment is also provided.
+</p>
+            
+            
+        </div>
+        
+    </div>
+    
+    <div class="blog-entry" data-index="1" data-categories="UkFHJTJDTExNJTJDcHl0aG9u" data-listing-date-sort="1738472400000" data-listing-file-modified-sort="1738671581833" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="823">
         <div class="metadata">          
             <p class="date listing-date">February 2, 2025</p>
         </div>
@@ -376,7 +417,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="1" data-categories="cHJvbXB0LWVuZ2luZWVyaW5nJTJDcHl0aG9uJTJDam9iLW1hcmtldCUyQ0dlbkFJJTJDTExN" data-listing-date-sort="1737694800000" data-listing-file-modified-sort="1737744506878" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="98" data-listing-word-count-sort="19514">
+    <div class="blog-entry" data-index="2" data-categories="cHJvbXB0LWVuZ2luZWVyaW5nJTJDcHl0aG9uJTJDam9iLW1hcmtldCUyQ0dlbkFJJTJDTExN" data-listing-date-sort="1737694800000" data-listing-file-modified-sort="1737744506878" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="98" data-listing-word-count-sort="19514">
         <div class="metadata">          
             <p class="date listing-date">January 24, 2025</p>
         </div>
@@ -416,7 +457,7 @@ window.Quarto = {
         
     </div>
     
-    <div class="blog-entry" data-index="2" data-categories="cHJvbXB0LWVuZ2luZWVyaW5nJTJDcHl0aG9uJTJDTExNLWFzLWp1ZGdlJTJDTExNLWV2YWxz" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1736807991661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55" data-listing-word-count-sort="10994">
+    <div class="blog-entry" data-index="3" data-categories="cHJvbXB0LWVuZ2luZWVyaW5nJTJDcHl0aG9uJTJDTExNLWFzLWp1ZGdlJTJDTExNLWV2YWxz" data-listing-date-sort="1736658000000" data-listing-file-modified-sort="1736807991661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55" data-listing-word-count-sort="10994">
         <div class="metadata">          
             <p class="date listing-date">January 12, 2025</p>
         </div>
