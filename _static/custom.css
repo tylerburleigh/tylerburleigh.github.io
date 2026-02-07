@@ -1,0 +1,145 @@
+/* Google Fonts — Jost (headings/nav) + Libre Franklin (body) */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Font Awesome CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Font overrides */
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+}
+
+/* Profile image (homepage) */
+div.profile-pic img {
+  border-radius: 500px;
+  width: 80%;
+  max-width: 190px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Giscus comment reactions spacing */
+.gsc-reactions {
+  margin-top: 1em;
+}
+
+/* Reduce gap between article header and content (outline/TOC block) */
+div.block.my-10 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Bottom padding so content isn't flush against viewport bottom */
+article {
+  padding-bottom: 4rem;
+}
+
+/* Card footer padding */
+.card .footer {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* CV embed */
+.embed-container {
+  position: relative;
+  padding-bottom: 129%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth link transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+/* ========================================
+   Landing page hero
+   ======================================== */
+
+.landing-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+/* Profile image — circular frame */
+.landing-hero .profile-frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.3);
+}
+
+.landing-hero .profile-frame .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--profile-x) var(--profile-y);
+  display: block;
+}
+
+.landing-hero .profile-frame .profile-img img {
+  margin-top: -32px;
+}
+
+/* Name heading */
+.landing-hero h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Bio paragraph */
+.landing-hero p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: left;
+  margin: 1rem auto 0;
+  max-width: 640px;
+}
+
+/* Blog heading */
+.landing-hero h2 {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .landing-hero .profile-frame {
+  box-shadow: 0 36px 100px rgba(0, 0, 0, 0.8);
+}

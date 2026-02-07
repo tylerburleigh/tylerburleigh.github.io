@@ -1,0 +1,31 @@
+---
+title: "A simplified protocol to screen out VPS and international respondents using Qualtrics"
+date: 2019-02-01
+author:
+  - name: Nicholas Winter
+  - name: Tyler Burleigh
+  - name: Ryan Kennedy
+  - name: Scott Clifford
+doi: 10.2139/ssrn.3327274
+options:
+  categories:
+    - Online Research
+    - Research Methods
+    - Mechanical Turk
+    - Qualtrics
+  pub-info:
+    reference: >-
+      Winter, N., Burleigh, T., Kennedy, R., & Clifford, S. (2019). A simplified protocol to screen out VPS and international respondents using Qualtrics. Available at SSRN 3327274. doi: <a href="https://doi.org/10.2139/ssrn.3327274"><code>10.2139/ssrn.3327274 </code></a>
+    links:
+      - name: Preprint
+        url: 'Winter, Burleigh, Kennedy, Clifford - 2019 - A Simplified Protocol to Screen Out VPS and International Respondents Using Qualtrics.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.2139/ssrn.3327274
+        icon: fa-solid fa-scroll
+---
+
+## Abstract
+
+This protocol is a much simplified update of our original protocol for screening out international and VPS respondents from Qualtrics surveys. It utilizes Qualtrics' built-in Web Service functionality to interact with IP Hub in looking up potentially problematic respondents.
