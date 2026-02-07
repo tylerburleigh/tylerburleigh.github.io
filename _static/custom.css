@@ -115,7 +115,7 @@ a {
   display: block;
 }
 
-.landing-hero .profile-frame .profile-img {
+.landing-hero .profile-frame .profile-img img {
   margin-top: -32px;
 }
 
@@ -151,7 +151,22 @@ a {
 
 /* Center primary content on large screens (match the ~120% zoom look) */
 @media (min-width: 1024px) {
+  article.article-grid {
+    grid-template-columns: [screen-start] 1fr [body-start] minmax(0, 900px) [body-end] 1fr [screen-end];
+  }
+
+  article.article-grid > * {
+    grid-column: body;
+  }
+
+  article.article-grid .col-margin,
+  article.article-grid .col-margin-left,
+  article.article-grid .col-margin-right {
+    grid-column: body;
+  }
+
   main.article-grid > article.article {
+    justify-self: center;
     width: min(100%, 900px);
     margin-left: auto;
     margin-right: auto;
