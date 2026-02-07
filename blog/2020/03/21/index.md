@@ -3,12 +3,9 @@ title: 'COVID-19 case growth and the Big 5 Personality traits'
 date: 2020-03-21
 description: 'Does the growth in COVID-19 cases have anything to do with Big 5 Personality traits? To answer this question, I compute country-level aggregates on the Big 5 test, and a country-level aggregate that represents for "growth" over time in coronavirus cases, using data current as of March 20, 2020.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - python
+options:
+  categories:
+    - python
 ---
 
 

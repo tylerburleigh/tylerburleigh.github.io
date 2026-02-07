@@ -3,13 +3,10 @@ title: 'Encoding high cardinality features with "embeddings"'
 date: 2023-09-19
 description: "In this post I show how the performance of an ML model can be improved by encoding high cardinality features using \"embeddings\", a method that uses deep learning to represent categorical features as vectors. I compare the performance of embedding encoding with other common categorical encoding methods: one-hot, label, frequency, and target encoding."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - R
+options:
+  categories:
+    - machine-learning
+    - R
 ---
 
 

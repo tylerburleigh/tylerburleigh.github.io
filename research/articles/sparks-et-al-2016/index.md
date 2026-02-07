@@ -5,22 +5,23 @@ author:
   - name: Adam Sparks
   - name: Tyler Burleigh
   - name: Pat Barclay
-categories:
-  - 'Social Cognition'
-  - Experimental
-  - 'Meta-Analysis'
-pub-info:
-  reference: >-
-    Sparks, A., Burleigh, T., & Barclay, P. (2016). We can see inside: Accurate prediction of Prisoner's Dilemma decisions in announced games following a face-to-face interaction. Evolution and Human Behavior, 37(3), 210-216. doi: <a href="https://doi.org/10.1016/j.evolhumbehav.2015.11.003"><code>10.1016/j.evolhumbehav.2015.11.003</code></a>
-  links:
-    - name: 'Open Access'
-      url: 'Sparks_Burleigh_Barclay_2016_accurate_PD_predictions.pdf'
-      icon: fa-solid fa-file-pdf
-      local: true
-    - name: Final version
-      url: https://doi.org/10.1016/j.evolhumbehav.2015.11.003
-      icon: fa-solid fa-scroll
 doi: 10.1016/j.evolhumbehav.2015.11.003
+options:
+  categories:
+    - 'Social Cognition'
+    - Experimental
+    - 'Meta-Analysis'
+  pub-info:
+    reference: >-
+      Sparks, A., Burleigh, T., & Barclay, P. (2016). We can see inside: Accurate prediction of Prisoner's Dilemma decisions in announced games following a face-to-face interaction. Evolution and Human Behavior, 37(3), 210-216. doi: <a href="https://doi.org/10.1016/j.evolhumbehav.2015.11.003"><code>10.1016/j.evolhumbehav.2015.11.003</code></a>
+    links:
+      - name: 'Open Access'
+        url: 'Sparks_Burleigh_Barclay_2016_accurate_PD_predictions.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.1016/j.evolhumbehav.2015.11.003
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract

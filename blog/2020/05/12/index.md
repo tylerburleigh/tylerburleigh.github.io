@@ -3,12 +3,9 @@ title: 'Modeling cognitive impairment using NHANES data'
 date: '2020-05-12'
 description: 'I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - python
+options:
+  categories:
+    - python
 ---
 
 In this blog post, I build a machine learning model to predict possible cases of cognitive impairment / dementia in a population of individuals over the age of 60. My data for this model comes from the 2013-2014 NHANES (National Health and Nutrition Examination Survey) study cohort, which is a nationally representative, longitudinal study of health in the US.

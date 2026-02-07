@@ -2,10 +2,11 @@
 title: "RAG-Powered LLM Longevity Coach"
 date: "2025-02-02"
 description: "A simple RAG-powered 'Longevity Coach' that uses a vector store and an LLM to deliver targeted health insights informed by user-provided health data (including genetics, lab results, supplements/medications taken, etc.). By using RAG, the app reduces token usage and ensures only the most relevant data is used to respond to user queries."
-categories:
-  - RAG
-  - LLM
-  - python
+options:
+  categories:
+    - RAG
+    - LLM
+    - python
 ---
 
 In this post, I want to share a project I recently released on GitHub: a [RAG-Powered LLM Longevity Coach](https://github.com/tylerburleigh/LLM-RAG-Longevity-Coach).

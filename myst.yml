@@ -7,8 +7,7 @@ project:
     - name: Tyler Burleigh
       website: https://tylerburleigh.com
       github: tylerburleigh
-  github: https://github.com/tylerburleigh/tylerburleigh.github.io
-  thumbnail: files/profiles/tyler-burleigh-2023.jpg
+  github: https://github.com/tylerburleigh
   plugins:
     - type: executable
       path: src/blogpost.py
@@ -33,16 +32,19 @@ project:
     - file: research.md
       children:
         - pattern: "research/articles/**/*.md"
+          hidden: true
     - file: cv/index.md
-    - file: 404.md
+      hidden: true
 
 site:
   template: book-theme
   options:
+    style: _static/custom.css
     folders: true
     logo_text: Tyler Burleigh
     analytics_google: G-PRHQZ8HPLB
     favicon: files/favico.png
+    theme_light: true
   domains:
     - tylerburleigh.github.io
   actions:

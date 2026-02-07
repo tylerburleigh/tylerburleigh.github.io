@@ -3,13 +3,10 @@ title: 'Building a prediction model to detect spam email'
 date: 2023-08-19
 description: "Using the spam email dataset from Tidy Tuesday Week 33, I walk through the process of building and evaluating a prediction model using decision tree and random forest machine learning algorithms."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - R
+options:
+  categories:
+    - machine-learning
+    - R
 ---
 
 Getting back into the swing of things. This is my first blog post in more than 3 years!

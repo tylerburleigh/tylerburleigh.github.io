@@ -3,13 +3,10 @@ title: 'Predicting t-shirt size from height and weight'
 date: 2019-09-27
 description: "Using body measurement data from the National Health and Nutrition Examination Survey (NHANES), I created a model that predicts Gildan t-shirt sizes from height and weight."
 image: gildan_unisex_size_chart.png
-twitter-card:
-  image: "gildan_unisex_size_chart.png"
-open-graph:
-  image: "gildan_unisex_size_chart.png"
-categories:
-  - machine-learning
-  - R
+options:
+  categories:
+    - machine-learning
+    - R
 ---
 
 Today I was given a task that sounded pretty straight-forward: What t-shirt size would you send to someone if you don't know their shirt size, but instead you know their height, weight, and gender?

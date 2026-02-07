@@ -3,13 +3,10 @@ title: 'Using a logistic regression model to predict heart disease'
 date: 2020-03-20
 description: 'I trained a logistic regression model to predict heart disease, using 14 attributes and 303 observations (e.g., age, sex, chest pain, resting ECG). Then I evaluated its performance.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - python
+options:
+  categories:
+    - machine-learning
+    - python
 ---
 
 

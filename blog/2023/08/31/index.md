@@ -3,12 +3,9 @@ title: 'Joining messy dataframes using fuzzy joining, string cleaning, and colum
 date: 2023-08-31
 description: 'Tidy Tuesday this week presented a challenge: "There are two datasets this week for which the rows align, but the values might not precisely line up for a clean join." In this post I walkthrough my solution that uses a combination of fuzzy joining, string cleaning, and column binding.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - R
+options:
+  categories:
+    - R
 ---
 
 From the [dataset description](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-08-29/readme.md):

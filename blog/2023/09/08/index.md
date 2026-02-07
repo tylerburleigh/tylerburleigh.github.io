@@ -3,13 +3,10 @@ title: 'Using random forest based outlier detection to clean a training dataset'
 date: 2023-09-08
 description: "In this post, I explore whether a random forest model can be improved by using random forest based multivariate outlier detection and imputation methods, and by reducing feature multicollinearity. Supporting the common wisdom that random forest models are robust to outliers and multicollinearity, these data cleaning steps led to only marginal improvements in out-of-sample model performance."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - R
+options:
+  categories:
+    - machine-learning
+    - R
 ---
 
 # The Challenge

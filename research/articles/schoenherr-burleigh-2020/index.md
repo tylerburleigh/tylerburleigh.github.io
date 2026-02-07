@@ -4,19 +4,20 @@ date: 2020-04-01
 author:
   - name: Jordan Schoenherr
   - name: Tyler Burleigh
-categories:
-  - Uncanny Valley
-  - Cognition
-  - Categorical Perception
-  - Experimental
-pub-info:
-  reference: >-
-    Schoenherr, J. R., & Burleigh, T. J. (2020). Dissociating affective and cognitive dimensions of uncertainty by altering regulatory focus. Acta Psychologica, 205, 103017. doi: <a href="https://doi.org/10.1016/j.actpsy.2020.103017"><code>10.1016/j.actpsy.2020.103017</code></a>
-  links:
-    - name: Final version
-      url: https://doi.org/10.1016/j.actpsy.2020.103017
-      icon: fa-solid fa-scroll
 doi: 10.1016/j.actpsy.2020.103017
+options:
+  categories:
+    - Uncanny Valley
+    - Cognition
+    - Categorical Perception
+    - Experimental
+  pub-info:
+    reference: >-
+      Schoenherr, J. R., & Burleigh, T. J. (2020). Dissociating affective and cognitive dimensions of uncertainty by altering regulatory focus. Acta Psychologica, 205, 103017. doi: <a href="https://doi.org/10.1016/j.actpsy.2020.103017"><code>10.1016/j.actpsy.2020.103017</code></a>
+    links:
+      - name: Final version
+        url: https://doi.org/10.1016/j.actpsy.2020.103017
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract

@@ -2,12 +2,13 @@
 title: "Analysis of the GenAI/LLM job market in January 2025"
 date: 2025-01-24
 description: "A data-driven exploration of the  GenAI/LLM job market for science and engineering roles in January 2025. I scrape ~1000 job postings from ai-jobs.net, perform data extraction and classification using LLMs, and then analyze the data to identify patterns and insights about the GenAI/LLM job market, including salary ranges, skill requirements, and role distribution."
-categories:
-  - prompt-engineering
-  - python
-  - job-market
-  - GenAI
-  - LLM
+options:
+  categories:
+    - prompt-engineering
+    - python
+    - job-market
+    - GenAI
+    - LLM
 ---
 
 
@@ -19,7 +20,7 @@ So with that motivation, I set about to collect some data and look at the job ma
 
 To accomplish this, I built a custom web scraper to collect ~1000 job postings from ai-jobs.net. My code gathers job details like the title, company, location, salary, and posting date -- from a range of U.S. and Canadian cities, covering entry-level, mid-level, and senior positions. I then use a Large Language Model (LLM) to extract each job's key responsibilities, required skills, and qualifications. Afterwards, I classify each position to see whether it involves working with Generative AI or large language models, and if so, categorize it further into four major AI roles: (1) AI Research Scientist, (2) AI/ML Engineer, (3) MLOps/AI Infrastructure Engineer, and (4) AI Solution Architect. I believe this set of roles is a good representation of different areas of focus.
 
-Finally, I integrate the various metadata and classifications into a comprehensive dataset. I observe that GenAI/LLM positions command consistently high salary ranges across the four different roles, particularly at more senior levels. Senior-level roles tended to offer median salaries in the $195K–$210K range, while mid-level roles generally clustered around $165K–$180K. Entry-level salaries showed greater variation (likely due to the small sample size) but still landed in competitive ranges of roughly $155K–$205K in many postings. These roles often share common technical demands—like proficiency with large-scale model training, distributed computing, and LLM-specific knowledge—though each role emphasizes distinct priorities (research vs. production, for example).
+Finally, I integrate the various metadata and classifications into a comprehensive dataset. I observe that GenAI/LLM positions command consistently high salary ranges across the four different roles, particularly at more senior levels. Senior-level roles tended to offer median salaries in the $195K-$210K range, while mid-level roles generally clustered around $165K-$180K. Entry-level salaries showed greater variation (likely due to the small sample size) but still landed in competitive ranges of roughly $155K-$205K in many postings. These roles often share common technical demands—like proficiency with large-scale model training, distributed computing, and LLM-specific knowledge—though each role emphasizes distinct priorities (research vs. production, for example).
 
 Of course, this analysis is not without limitations. For example, I am relying on a single job board, and I scraped jobs during a limited window of time. I also have not rigorously validated the LLM classifications -- although I have implemented many prompt engineering best practices, and have used some of the more powerful LLMs (4o and o1). To some extent, the responsibilities and skills that were recovered from the original job postings classified into the four pre-defined roles do speak to the relative accuracy of the role classifications. The salary analysis also does not distinguish between base salary and total compensation, remote vs. in-person opportunities, large vs. small companies, and so on. But overall, I think this gives some sense of the job market for these roles.
 

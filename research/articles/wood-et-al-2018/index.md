@@ -6,21 +6,22 @@ author:
   - name: Serge Desmarais
   - name: Tyler Burleigh
   - name: Robin Milhausen
-categories:
-  - Sexuality
-  - 'Consensual Non-Monogamy'
-pub-info:
-  reference: >-
-    Wood, J., Desmarais, S., Burleigh, T., & Milhausen, R. (2018). Reasons for sex and relational outcomes in consensually nonmonogamous and monogamous relationships: A self-determination theory approach. Journal of Social and Personal Relationships, 35(4), 632-654. doi: <a href="https://doi.org/10.1177/0265407517743082"><code>10.1177/0265407517743082</code></a>
-  links:
-    - name: Preprint
-      url: 'Wood et al - 2018 - Reasons for sex in CNM and monogamous relationships.pdf'
-      icon: fa-solid fa-file-pdf
-      local: true
-    - name: Final version
-      url: https://doi.org/10.1177/0265407517743082
-      icon: fa-solid fa-scroll
 doi: 10.1177/0265407517743082
+options:
+  categories:
+    - Sexuality
+    - 'Consensual Non-Monogamy'
+  pub-info:
+    reference: >-
+      Wood, J., Desmarais, S., Burleigh, T., & Milhausen, R. (2018). Reasons for sex and relational outcomes in consensually nonmonogamous and monogamous relationships: A self-determination theory approach. Journal of Social and Personal Relationships, 35(4), 632-654. doi: <a href="https://doi.org/10.1177/0265407517743082"><code>10.1177/0265407517743082</code></a>
+    links:
+      - name: Preprint
+        url: 'Wood et al - 2018 - Reasons for sex in CNM and monogamous relationships.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.1177/0265407517743082
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract

@@ -5,23 +5,24 @@ author:
   - name: Tyler Burleigh
   - name: Jordan Schoenherr
   - name: Guy L. Lacroix
-categories:
-  - Uncanny Valley
-  - Categorical Perception
-  - Cognition
-  - Experimental
-pub-info:
-  reference: >-
-    Burleigh, T. J., Schoenherr, J. R., & Lacroix, G. L. (2013). Does the uncanny valley exist? An empirical test of the relationship between eeriness and the human likeness of digitally created faces. Computers in human behavior, 29(3), 759-771. doi: <a href="https://doi.org/10.1016/j.chb.2012.11.021"><code>10.1016/j.chb.2012.11.021</code></a>
-  links:
-    - name: 'Preprint'
-      url: 'Burleigh et al - Does the uncanny valley exist.pdf'
-      icon: fa-solid fa-file-pdf
-      local: true
-    - name: Final version
-      url: https://doi.org/10.1016/j.chb.2012.11.021
-      icon: fa-solid fa-scroll
 doi: 10.1016/j.chb.2012.11.021
+options:
+  categories:
+    - Uncanny Valley
+    - Categorical Perception
+    - Cognition
+    - Experimental
+  pub-info:
+    reference: >-
+      Burleigh, T. J., Schoenherr, J. R., & Lacroix, G. L. (2013). Does the uncanny valley exist? An empirical test of the relationship between eeriness and the human likeness of digitally created faces. Computers in human behavior, 29(3), 759-771. doi: <a href="https://doi.org/10.1016/j.chb.2012.11.021"><code>10.1016/j.chb.2012.11.021</code></a>
+    links:
+      - name: 'Preprint'
+        url: 'Burleigh et al - Does the uncanny valley exist.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.1016/j.chb.2012.11.021
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract

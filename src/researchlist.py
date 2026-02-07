@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import re
 import sys
 from yaml import safe_load
 from pathlib import Path
@@ -37,53 +38,58 @@ plugin = {
     ],
 }
 
+# Strip HTML tags from reference text
+def strip_html(text):
+    return re.sub(r"<[^>]+>", "", text)
+
+
 # Build AST nodes for each article
 children = []
 for article in articles:
-    pub_info = article.get("pub-info", {})
+    opts = article.get("options", {})
+    pub_info = opts.get("pub-info", {})
     reference = pub_info.get("reference", article.get("title", "Untitled"))
+    clean_reference = strip_html(reference)
     links = pub_info.get("links", [])
 
-    # Build link list
-    link_nodes = [
-        u.list_item([
+    # Build footer children: topics on one line, links on the next
+    footer_children = []
+
+    cat_text = ", ".join(opts.get("categories", []) or [])
+    if cat_text:
+        footer_children.append(
             {"type": "paragraph", "children": [
-                u.link([u.text("Full details")], f"/{article['path']}")
+                u.strong([u.text("Topics: ")]),
+                u.text(cat_text),
             ]}
-        ])
-    ]
+        )
+
+    link_nodes = []
     for lnk in (links or []):
         url = lnk.get("url", "")
         if lnk.get("local"):
             article_dir = "/".join(article["path"].split("/")[:-1])
             url = f"/{article_dir}/{url}"
+        if link_nodes:
+            link_nodes.append(u.text(" | "))
         link_nodes.append(
-            u.list_item([
-                {"type": "paragraph", "children": [
-                    u.link([u.text(lnk.get("name", "Link"))], url)
-                ]}
-            ])
+            u.link([u.text(lnk.get("name", "Link"))], url)
         )
+    if link_nodes:
+        footer_children.append({"type": "paragraph", "children": link_nodes})
 
-    # Build category tags
-    cat_text = ", ".join(article.get("categories", []) or [])
+    card = {
+        "type": "card",
+        "url": f"/{article['path']}",
+        "children": [
+            {"type": "cardTitle", "children": [u.text(article.get("title", "Untitled"))]},
+            {"type": "paragraph", "children": [u.text(clean_reference)]},
+        ],
+    }
+    if footer_children:
+        card["children"].append({"type": "footer", "children": footer_children})
 
-    card_children = [
-        {"type": "paragraph", "children": [{"type": "html", "value": reference}]},
-    ]
-    if cat_text:
-        card_children.append(
-            {"type": "paragraph", "children": [
-                u.strong([u.text("Topics: ")]),
-                u.text(cat_text)
-            ]}
-        )
-    card_children.append(u.list_(link_nodes))
-
-    children.append({
-        "type": "div",
-        "children": card_children,
-    })
+    children.append(card)
 
 
 def declare_result(content):

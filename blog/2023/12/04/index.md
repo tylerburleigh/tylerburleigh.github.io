@@ -3,15 +3,12 @@ title: 'Tackling the GSM8K (grade school math) with GPT-3.5 and self-consistency
 date: 2023-12-04
 description: "In this post, I use the \"Self-Consistency\" prompt engineering strategy to improve the performance of a GPT-3.5 based model tasked with solving problems from the GSM8K (grade school math) dataset. I explore two implementations of this strategy, finding that one is more effective than the other. Overall, I find that this strategy is effective, leading to an increase in the percentage of correct answers from 75% at baseline to 93% with the strongest implementation of the strategy."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - GPT
-  - prompt-engineering
-  - python
-  - R
+options:
+  categories:
+    - GPT
+    - prompt-engineering
+    - python
+    - R
 ---
 
 I've been interested in AI tutoring applications for education for a long time, and with today's Large Language Models like GPT, which have been shown to [perform extremely well on standardized tests](https://openai.com/research/gpt-4) like the SAT and GRE, it seems that building these applications is now achievable. In fact, some companies have already started building these applications, like Khan Academy's own [Khanmigo](https://www.khanacademy.org/khan-labs).

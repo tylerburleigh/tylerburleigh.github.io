@@ -4,23 +4,24 @@ date: 2015-01-21
 author:
   - name: Tyler Burleigh
   - name: Jordan Schoenherr
-categories:
-  - Uncanny Valley
-  - Categorical Perception
-  - Cognition
-  - Experimental
-pub-info:
-  reference: >-
-    Burleigh, T. J., & Schoenherr, J. R. (2015). A reappraisal of the uncanny valley: categorical perception or frequency-based sensitization?. Frontiers in Psychology, 5, 1488. doi: <a href="https://doi.org/10.3389/fpsyg.2014.01488"><code>10.3389/fpsyg.2014.01488</code></a>
-  links:
-    - name: 'Open access'
-      url: 'Burleigh and Schoenherr - 2015 - A reappraisal of the uncanny valley.pdf'
-      icon: fa-solid fa-file-pdf
-      local: true
-    - name: Final version
-      url: https://doi.org/10.3389/fpsyg.2014.01488
-      icon: fa-solid fa-scroll
 doi: 10.3389/fpsyg.2014.01488
+options:
+  categories:
+    - Uncanny Valley
+    - Categorical Perception
+    - Cognition
+    - Experimental
+  pub-info:
+    reference: >-
+      Burleigh, T. J., & Schoenherr, J. R. (2015). A reappraisal of the uncanny valley: categorical perception or frequency-based sensitization?. Frontiers in Psychology, 5, 1488. doi: <a href="https://doi.org/10.3389/fpsyg.2014.01488"><code>10.3389/fpsyg.2014.01488</code></a>
+    links:
+      - name: 'Open access'
+        url: 'Burleigh and Schoenherr - 2015 - A reappraisal of the uncanny valley.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.3389/fpsyg.2014.01488
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract
@@ -30,6 +31,6 @@ The uncanny valley (UCV) hypothesis describes a non-linear relationship between 
 
 ## Important figure
 
-![FIGURE 12: Test categorization response accuracy in the unequal frequency, unequal distribution condition. Stimulus values correspond to stimuli selected from the training range (i.e., stimuli 3–13). Error bars represent 1 standard error of the mean (N = 60).](fig12.jpg)
+![FIGURE 12: Test categorization response accuracy in the unequal frequency, unequal distribution condition. Stimulus values correspond to stimuli selected from the training range (i.e., stimuli 3-13). Error bars represent 1 standard error of the mean (N = 60).](fig12.jpg)
 
 

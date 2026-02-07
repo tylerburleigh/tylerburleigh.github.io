@@ -3,12 +3,9 @@ title: 'Using data normalization to better compare change over time in regions w
 date: 2023-08-25
 description: "I use data normalization to better compare the changes in refugee outflows in different regions from 2010 to 2022. Four regions are identified with large increases over their 2010 baseline."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - R
+options:
+  categories:
+    - R
 ---
 
 For this post, I'll be using the Week 34 [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) dataset, which contains data on refugee movement around the world. I want to look at the change in refugee outflows over time in different nations, and see if I can identify countries with meaningfully large increases in refugee outflows.

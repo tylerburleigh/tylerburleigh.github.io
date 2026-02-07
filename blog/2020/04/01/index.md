@@ -3,13 +3,10 @@ title: 'Using tensorflow with EfficientNet to predict plant diseases'
 date: '2020-04-01'
 description: 'I use tensorflow with an EfficientNet base model (via transfer learning) to predict plant diseases for the Plant Pathology 2020 Kaggle challenge. Using this model, I achieved 94% out of sample accuracy.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - python
+options:
+  categories:
+    - machine-learning
+    - python
 ---
 
 As I continue to practice using tensorflow for image recognition tasks, I thought I would experiment with the <a href="https://www.kaggle.com/c/plant-pathology-2020-fgvc7">Plant Pathology</a> dataset on Kaggle. Like MNIST, this is an image recognition challenge. But in contrast to the simplicity of MNIST, this challenge is about making "fine-grained" visual discriminations. The images are larger and in RGB color, and the features are smaller and more nuanced.

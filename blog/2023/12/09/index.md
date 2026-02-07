@@ -3,15 +3,12 @@ title: 'AI Math Tutoring: Using GPT to generate "step-by-step guidance"'
 date: 2023-12-09
 description: "In this post, I show how an AI Tutor feature like \"step-by-step guidance\" can be built to help students on multi-step math problems, and how this guidance can be validated."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - GPT
-  - prompt-engineering
-  - python
-  - R
+options:
+  categories:
+    - GPT
+    - prompt-engineering
+    - python
+    - R
 ---
 
 Imagine you're developing an AI Math Tutor application: You have a set of math questions that student users can answer, along with the correct answers to those questions. Students will sometimes get stuck answering multi-step problems, and in those situations you want them to be able to ask an AI tutor for help. An AI Tutoring interaction that can be helpful is one where a student asks the tutor for step-by-step guidance.

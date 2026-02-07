@@ -3,13 +3,10 @@ title: 'Using GPT-4 for classification'
 date: 2023-10-08
 description: "In this post, I use GPT-4 to classify US grant-funding agencies into 10 categories using government agency names. Then I summarize funding by category."
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - GPT
-  - R
+options:
+  categories:
+    - GPT
+    - R
 ---
 
 GPT is a powerful new tool in the Data Science toolkit. Used correctly, it can increase productivity while decreasing the "drudgery" of boring tasks like data cleaning. I've been trying to find ways to integrate GPT into my data science workflow, and I thought it might be fun to use it with the latest Tidy Tuesday. ([US Government Grant Opportunities](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-10-03/readme.md)). So in this blog post, I use GPT to classify US grant-funding agencies into categories using government agency names.

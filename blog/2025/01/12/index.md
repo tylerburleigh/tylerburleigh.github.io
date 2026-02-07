@@ -2,11 +2,12 @@
 title: "Challenging SAMRE: Comparing multi-round debate-style LLM evaluation to a robust (and much simpler) baseline"
 date: 2025-01-12
 description: "In this post, I re-evaluate a method that was recently published in arXiv, critiquing their baseline model and then designing a new baseline model that implements standard best practices for comparison with the new method. I find that the new evaluation method proposed in the paper does not perform better than this robust baseline. This serves to highlight the importance of implementing best practices in baseline models for comparison with new methods, as well as being skeptical of claims in research papers that compare new methods to baseline."
-categories:
-  - prompt-engineering
-  - python
-  - LLM-as-judge
-  - LLM-evals
+options:
+  categories:
+    - prompt-engineering
+    - python
+    - LLM-as-judge
+    - LLM-evals
 ---
 
 I've been doing a lot of work with LLM-based evaluations lately, and I've been thinking about how to improve the quality of these evaluations.

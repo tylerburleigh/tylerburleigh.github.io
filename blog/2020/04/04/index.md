@@ -3,13 +3,10 @@ title: Identifying pneumonia from chest x-rays using EfficientNet
 date: '2020-04-04'
 description: 'I was interested in trying tensorflow + EfficientNet on another image classification task. This time, I used it to predict pneumonia on chest x-ray images. Using this model, I achieved 97% out of sample accuracy.'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - machine-learning
-  - python
+options:
+  categories:
+    - machine-learning
+    - python
 ---
 
 In my last post I used EfficientNet to [identify plant diseases](https://tylerburleigh.com/blog/predicting-plant-diseases-using-efficientnet/). I was surprised at how well this pre-trained model worked, with so few modifications, and I was curious how an approach like this might generalize to other visual image detection problems. In this post I use a similar approach to identify childhood pneumonia from chest x-ray images, using the [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) dataset on Kaggle. Using this approach, I was able to achieve 97% accuracy, 97% precision, and 97% recall.

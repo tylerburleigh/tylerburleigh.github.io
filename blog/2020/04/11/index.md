@@ -3,12 +3,9 @@ title: Estimating how many people live near a landmark / point-of-interest
 date: '2020-04-11'
 description: 'In this post, I start with a point-of-interest, "Times Square, NYC", and using the Census API I find out how many people live within the census tract that contains this POI (a tract is one of the smallest sub-divisions for which the Census provides population estimates).'
 image: social-image.png
-twitter-card:
-  image: "social-image.png"
-open-graph:
-  image: "social-image.png"
-categories:
-  - python
+options:
+  categories:
+    - python
 ---
 
 

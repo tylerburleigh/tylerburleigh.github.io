@@ -4,23 +4,24 @@ date: 2018-11-09
 author:
   - name: Alicia Rubel
   - name: Tyler Burleigh
-categories:
-  - Online Research
-  - Demographics
-  - Sexuality
-  - 'Consensual Non-Monogamy'
-pub-info:
-  reference: >-
-    Burleigh, T., & Rubel, A. (2018). Counting polyamorists who count: Prevalence and definitions of an under-researched form of consensual nonmonogamy. doi: <a href="https://doi.org/10.1177/1363460718779781"><code>10.1177/1363460718779781</code></a>
-  links:
-    - name: Preprint
-      url: 'Rubel & Burleigh - 2018 - Counting polyamorists who count.pdf'
-      icon: fa-solid fa-file-pdf
-      local: true
-    - name: Final version
-      url: https://doi.org/10.1177/1363460718779781
-      icon: fa-solid fa-scroll
 doi: 10.1177/1363460718779781
+options:
+  categories:
+    - Online Research
+    - Demographics
+    - Sexuality
+    - 'Consensual Non-Monogamy'
+  pub-info:
+    reference: >-
+      Burleigh, T., & Rubel, A. (2018). Counting polyamorists who count: Prevalence and definitions of an under-researched form of consensual nonmonogamy. doi: <a href="https://doi.org/10.1177/1363460718779781"><code>10.1177/1363460718779781</code></a>
+    links:
+      - name: Preprint
+        url: 'Rubel & Burleigh - 2018 - Counting polyamorists who count.pdf'
+        icon: fa-solid fa-file-pdf
+        local: true
+      - name: Final version
+        url: https://doi.org/10.1177/1363460718779781
+        icon: fa-solid fa-scroll
 ---
 
 ## Abstract
