@@ -149,26 +149,13 @@ a {
   box-shadow: 0 36px 100px rgba(0, 0, 0, 0.8);
 }
 
-/* Center primary content on large screens (match the ~120% zoom look) */
+/* Center landing hero on large screens without breaking sidebar layouts */
 @media (min-width: 1024px) {
-  article.article-grid {
-    grid-template-columns: [screen-start] 1fr [body-start] minmax(0, 900px) [body-end] 1fr [screen-end];
-  }
-
-  article.article-grid > * {
-    grid-column: body;
-  }
-
-  article.article-grid .col-margin,
-  article.article-grid .col-margin-left,
-  article.article-grid .col-margin-right {
-    grid-column: body;
-  }
-
-  main.article-grid > article.article {
-    justify-self: center;
+  article.article-grid > .landing-hero {
+    grid-column: page;
     width: min(100%, 900px);
     margin-left: auto;
     margin-right: auto;
+    justify-self: center;
   }
 }
