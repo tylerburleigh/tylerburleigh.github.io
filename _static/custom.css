@@ -172,10 +172,3 @@ a {
     margin-right: auto;
   }
 }
-
-@media (min-width: 1280px) {
-  .subgrid-gap {
-    -moz-column-gap: 0;
-    column-gap: 0;
-  }
-}
