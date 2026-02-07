@@ -1,0 +1,316 @@
+---
+title: 'Using random forest based outlier detection to clean a training dataset'
+date: 2023-09-08
+description: "In this post, I explore whether a random forest model can be improved by using random forest based multivariate outlier detection and imputation methods, and by reducing feature multicollinearity. Supporting the common wisdom that random forest models are robust to outliers and multicollinearity, these data cleaning steps led to only marginal improvements in out-of-sample model performance."
+image: social-image.png
+twitter-card:
+  image: "social-image.png"
+open-graph:
+  image: "social-image.png"
+categories:
+  - machine-learning
+  - R
+---
+
+# The Challenge
+
+For this blog post, I will be tackling the Kaggle compettition [Improve a Fixed Model the Data-Centric Way!](https://www.kaggle.com/competitions/playground-series-s3e21/overview)
+
+This is the challenge of the competition: Improve a dataset that is being used to train a random forest model. The model is fixed, so model performance can only be improved by modifying the dataset. In terms of dataset modifications, there are some additional limitations:
+
+- Rows can be removed, but not added
+- Columns cannot be removed or added
+- Values in the dataset that are used to train the model can be transformed, but those transformations will not be applied to the validation dataset (which is held out until the challenge comes to an end)
+
+This means that many of the tools available to a data scientist for improving an ML model, such as hyperparameter tuning, or data pre-processing applied to both training and test/validation datasets, are not available. The best options, therefore, will be to find ways to clean the training dataset that will yield better performance in the untouched validation dataset.
+
+In this post, I will explore whether the training data can be improved using multivariate outlier imputation and by reducing feature multicollinearity.
+
+# Load libraries
+
+```r
+library(tidyverse)
+library(tidymodels)
+library(ranger)
+library(Metrics)
+```
+
+# Parallel backend
+
+```r
+library(doFuture)
+registerDoFuture()
+plan(multisession, workers=4)
+```
+
+# Load the data
+
+```r
+sample_submission <- read_csv('sample_submission.csv', show_col_types = F)
+```
+
+# Train/test split
+
+```r
+set.seed(42)
+train_ids <- (sample_submission %>% sample_frac(0.75))$id
+test_ids <- (sample_submission %>% filter(!id %in% train_ids))$id
+train <- sample_submission %>% filter(id %in% train_ids)
+test <- sample_submission %>% filter(id %in% test_ids)
+```
+
+# Model pipeline and baseline
+
+## Model pipeline
+
+Before doing anything else, I want to create a model pipeline function and establish a baseline of model performance. This pipeline and baseline model will allow me to quickly iterate, test, and benchmark changes to the training dataset.
+
+```r
+fit_ranger_cv <- function(train, test, model_name){
+  set.seed(42)
+  model_ranger <-
+    # The parameters here mirror those that
+    # will be used in the competition model
+    rand_forest(trees = 1000,
+                min_n = 7) %>%
+    set_engine("ranger") %>%
+    set_mode("regression")
+
+  workflow_ranger <-
+    workflow() %>%
+    add_formula(target ~ .) %>%
+    add_model(model_ranger)
+
+  folds <- vfold_cv(train, v = 5)
+
+  fit_ranger <-
+    workflow_ranger %>%
+    fit_resamples(folds)
+
+  # Get in-sample performance over resamples
+  round((fit_ranger %>%
+    collect_metrics() %>%
+    filter(.metric == 'rmse'))$mean, 3) -> train_perf
+
+  # Evaluate performance on out-of-sample (test) data
+  ranger_fit <-
+    workflow_ranger %>%
+    fit(train)
+
+  round(rmse(test$target, predict(ranger_fit, test)$.pred), 3) -> test_perf
+
+  # Combine in-sample and out-of-sample into a dataframe
+  df_perf <- data.frame(model = model_name,
+                        train_perf = train_perf,
+                        test_perf = test_perf)
+  return(df_perf)
+}
+```
+
+## Baseline performance
+
+```r
+baseline_fit <- fit_ranger_cv(train %>% select(-id), test %>% select(-id), 'baseline')
+baseline_fit
+```
+
+I'm going to run that again so I can be sure the RNG seed is set properly and the results are reproducible -- otherwise I'll be chasing a moving target!
+
+```r
+baseline_fit <- fit_ranger_cv(train %>% select(-id), test %>% select(-id), 'baseline')
+baseline_fit
+```
+
+# Outlier detection and removal / imputation
+
+Outlier detection, sometimes called anomaly detection, involves identifying values that are "extreme" in relation to other records in the dataset. For example, a value might be considered an outlier if it deviates from the mean by more than 3 standard deviations. The impact of outliers on model performance will depend on the model. Linear regressions are fairly sensitive to outliers, whereas random forest models tend to be fairly robust to them. Nevertheless, multivariate outliers can still be a source of noise in training datasets, particularly smaller datasets.
+
+Here I will consider several methods of outlier detection, pick one, and then proceed to consider removal/imputation.
+
+## 1. Outlier detection
+
+### Univariate outlier detection
+
+One simple univariate outlier detection method involves a "Z-score threshold". In a normally distributed dataset, 99% of values will tend to fall between a Z-score of -3 to +3. This is why a Z-score threshold of +/- 3 is often used to identify outliers in practice.
+
+For example, here's a plot of the percentage of outliers found for each variable. I can see that some variables contained more outliers than others. In particular, there were 6 features with more than 3% extreme values.
+
+```r
+train %>%
+  select(-id) %>%
+  outliers::scores(type="z") %>%
+  pivot_longer(everything()) %>%
+  group_by(name) %>%
+  summarize(n_outlier = sum(abs(value) > 3),
+            pct_outlier = round(sum(abs(value) > 3)/n()*100,2)) %>%
+  arrange(pct_outlier) -> train_pct_outlier
+
+train_pct_outlier %>%
+  ggplot(aes(x = fct_inorder(name), y = pct_outlier)) +
+    geom_bar(stat='identity') +
+    coord_flip() +
+    xlab("Feature") +
+    ylab("% values exceeding 3 z-score threshold") +
+    geom_hline(yintercept = 3)
+
+train_pct_outlier %>%
+  filter(pct_outlier > 3) %>%
+  arrange(desc(pct_outlier))
+```
+
+Other options for univariate outlier detection include using the inter-quartile range (IQR) or percentile-based thresholds.
+
+### Multivariate outlier detection
+
+Another option is multivariate outlier detection. For multivariate outlier detection, random forest based methods have been growing in popularity within the data science community. There are two methods that I'll consider here.
+
+#### Isolation forest
+
+The "isolation forest" works by trying to identify variables that can be isolated in branches when randomly splitting the data. From the `isotree` [package documentation](https://search.r-project.org/CRAN/refmans/isotree/html/isolation.forest.html):
+
+> Isolation Forest is an algorithm originally developed for outlier detection that consists in splitting sub-samples of the data according to some attribute/feature/column at random. The idea is that, the rarer the observation, the more likely it is that a random uniform split on some feature would put outliers alone in one branch, and the fewer splits it will take to isolate an outlier observation like this.
+
+Importantly, this method operates at the row level, allowing us to identify anomalous records, but not pinpoint specifically which features on which those records may have been outliers.
+
+```r
+library(isotree)
+isofor <- isolation.forest(train %>% select(-id), ntrees = 500, nthreads = 4)
+iso_preds <- predict(isofor, train %>% select(-id))
+train[which.max(iso_preds), ]
+```
+
+#### outForest
+
+The `outForest` package implements a different random forest method of outlier detection in which each variable is regressed onto all others, and outliers are detected based on the difference between the observed value and the out-of-bag predicted value. This has the advantage of identifying outliers on both a row and column basis, providing more flexibility in terms of how outliers can be dealt with.
+
+```r
+library(outForest)
+set.seed(42)
+outfor <- outForest(train %>% select(-id),
+                    verbose = 0)
+outForest::outliers(outfor) %>%
+  select(-rmse, -threshold) %>%
+  head()
+```
+
+Below we can see the outliers identified for each variable and how anomalous those outliers were. Using this data, I can then choose a threshold and replace anomalous values by imputation. The `outForest` package provides different methods of imputation out of the box, defaulting to predictive mean matching.
+
+I'll use this method for detection because it's multivariate, intuitive, and flexible.
+
+```r
+plot(outfor, what = "scores")
+```
+
+## 2. Outlier removal or imputation
+
+Now that I've decided on an outlier detection method, the next step is to decide what to do about the outliers. There's two main ways outliers can be handled: Removal or imputation. Removal is often an extreme measure that can lead to information loss, so I tend to prefer imputation over removal.
+
+Since I've decided to use `outForest`, I can also use its out-of-the-box imputation methods.
+
+First, I'll go back to the dataframe containing the outliers that it had detected and try to refine the threshold. By default, it was using a score threshold of 3. But I'm not comfortable with imputing so many values. My gut tells me that if I'm identifying more than 3-5% of the records as outliers, then my threshold is too low and I'm catching too many potentially legitimate values.
+
+Here I can see that a score threshold of 8 yields around 2% outliers on a row-basis. That seems more reasonable
+
+```r
+round((nrow(outForest::outliers(outfor) %>%
+        select(-replacement, -rmse, -threshold) %>%
+        filter(abs(score) > 8) %>%
+        distinct(row))/nrow(sample_submission)*100), 1)
+```
+
+Using this threshold, I will now impute the values.
+
+```r
+set.seed(42)
+outfor2 <- outForest(train %>% select(-id),
+                      verbose = 0,
+                      replace = "pmm",
+                      threshold = 8)
+train_outlier_adjusted <- outfor2$Data
+```
+
+Here I can see one of the outliers previously identified, and the value that was imputed for it.
+
+```r
+train[1021,]$NO2_3
+train_outlier_adjusted[1021,]$NO2_3
+```
+
+And now I can quickly run the random forest model again, with the new imputed training dataset, and compare it against the baseline model.
+
+I see that outlier imputation has improved in-sample performance considerably (which is to be expected since the training dataset on which the cross-validation was performed is now much cleaner!), but it actually had a fairly marginal impact on out-of-sample performance.
+
+```r
+ranger_fit_1 <- fit_ranger_cv(train_outlier_adjusted, test %>% select(-id), 'outliers imputed')
+
+ranger_fit_1 %>%
+  mutate(train_pct_improved = round((baseline_fit$train_perf-train_perf)/baseline_fit$train_perf*100, 2),
+         test_pct_improved = round((baseline_fit$test_perf-test_perf)/baseline_fit$test_perf*100, 2)) %>%
+  bind_rows(baseline_fit) -> ranger_fit_1
+
+ranger_fit_1
+```
+
+# Feature multicollinearity
+
+Another option for data cleanup I can explore is addressing feature multicollinearity. This is when two or more features in the dataset are highly correlated. Like outliers, the impact of this will depend on the model. Random forest models are typically robust to multicollinearity when it comes to model performance, but it can severely impact the feature importances.
+
+Nevertheless, I can explore whether addressing feature multicollinearity would improve model performance.
+
+Some of the features are highly correlated (at r > .6), namely:
+
+- `NH4_1` with `NH4_2`
+
+- `NO3_1` with `NO3_2`
+
+- `NO3_6` with `NO3_7`
+
+- `NO3_3` with `NO3_6`
+
+- `BOD5_1` with `BOD5_7`
+
+```r
+lares::corr_cross(
+  train %>% select(-target, -id),
+  max_pvalue = 0.05,
+  top = 10
+)
+```
+
+A simple fix for collinearity here would be to remove one variable from each of these pairs. I'll remove the one with the larger numerical suffix. This is somewhat arbitrary. And fitting the model again, I see that removing collinear features improved in-sample and out-of-sample performance only marginally.
+
+```r
+train %>%
+  select(-NH4_2, -NO3_2, -NO3_7, -NO3_6, -BOD5_2) -> train_with_collinearity_fix
+
+test %>%
+  select(-NH4_2, -NO3_2, -NO3_7, -NO3_6, -BOD5_2) -> test_with_collinearity_fix
+
+ranger_fit_2 <- fit_ranger_cv(train_with_collinearity_fix, test_with_collinearity_fix, 'fix collinearity')
+
+ranger_fit_2 %>%
+  mutate(train_pct_improved = round((baseline_fit$train_perf-train_perf)/baseline_fit$train_perf*100, 2),
+         test_pct_improved = round((baseline_fit$test_perf-test_perf)/baseline_fit$test_perf*100, 2)) %>%
+  bind_rows(ranger_fit_1) -> ranger_fit_2
+
+ranger_fit_2
+```
+
+So to summarize: I've used two methods to clean the dataset: 1) random forest based multivariate outlier detection and imputation, and 2) removing multicollinear features. These cleanup techniques achieved only marginal gains in out-of-sample model performance with a random forest model, supporting the common wisdom that random forest models are robust to outliers and multicollinearity.
+
+
+<script src="https://giscus.app/client.js"
+        data-repo="tylerburleigh/tylerburleigh.github.io"
+        data-repo-id="R_kgDOKMo8ww"
+        data-category="Blog comments"
+        data-category-id="DIC_kwDOIg6EJc4CSz92"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

@@ -1,0 +1,29 @@
+---
+title: "How to Screen Out VPS and International Respondents Using Qualtrics: A Protocol"
+date: 2018-11-21
+author:
+  - name: Tyler Burleigh
+  - name: Ryan Kennedy
+  - name: Scott Clifford
+categories:
+  - Research Methods
+  - Online Research
+  - Mechanical Turk
+  - Qualtrics
+pub-info:
+  reference: >-
+    Burleigh, T., Kennedy, R., & Clifford, S. (2018). How to screen out VPS and international respondents using Qualtrics: A protocol. Available at SSRN 3265459. doi: <a href="https://doi.org/10.2139/ssrn.3265459"><code>10.2139/ssrn.3265459 </code></a>
+  links:
+    - name: 'Preprint'
+      url: 'Burleigh, Rubel & Meegan - 2017 - Zero-sum thinking & anti-CNM prejudice.pdf'
+      icon: fa-solid fa-file-pdf
+      local: true
+    - name: Final version
+      url: https://doi.org/10.2139/ssrn.3265459
+      icon: fa-solid fa-scroll
+doi: 10.2139/ssrn.3265459
+---
+
+## Abstract
+
+This protocol provides a method and code used to screen out respondents on Amazon's Mechanical Turk (MTurk), or other microtask service providers, who are using VPS to cover their location or are responding from a country other than the one the researcher is targeting. It is designed for surveys using Qualtrics software, although it could be easily adapted for other online survey systems that provide JavaScript support. This protocol is likely to be broadly useful in addressing the quality crisis that has affected MTurk studies.

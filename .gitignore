@@ -1,17 +1,15 @@
-# R stuff
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+# MyST build output
+_build/
 
-# Quarto stuff
-/.quarto/
-_site/
-**/*_cache/*
+# Generated feeds
+rss.xml
+atom.xml
 
-# Miscellaneous stuff
+# Python
+__pycache__/
+*.pyc
+
+# Miscellaneous
 design-assets/*
 static/etc/*
 .DS_Store
-
-/.luarc.json
