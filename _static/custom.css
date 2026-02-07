@@ -151,3 +151,28 @@ a {
     justify-self: center;
   }
 }
+
+/* Balance the book-theme grid at large sizes so content centers consistently */
+@media (min-width: 1280px) {
+  .article-grid {
+    grid-template-columns:
+      [screen-start] .25rem
+      [screen-inset-start] 1fr
+      [page-start] 3rem
+      [page-inset-start] minmax(4rem, 9rem)
+      [body-outset-start] 3rem
+      [body-start gutter-left-start] 1rem
+      [body-inset-start] minmax(8ch, 10ch)
+      [middle-start] minmax(8ch, 10ch)
+      [gutter-left-end] minmax(8ch, 10ch) minmax(8ch, 10ch)
+      [gutter-right-start] minmax(8ch, 10ch)
+      [middle-end] minmax(8ch, 10ch)
+      [body-inset-end] 1rem
+      [body-end gutter-right-end] 3rem
+      [body-outset-end] minmax(4rem, 9rem)
+      [page-inset-end] 3rem
+      [page-end] 1fr
+      [screen-inset-end] .25rem
+      [screen-end];
+  }
+}
