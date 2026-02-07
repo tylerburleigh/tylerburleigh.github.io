@@ -153,7 +153,7 @@ a {
 }
 
 /* Balance the book-theme grid at >=1024px so content stays centered across zooms */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .article-grid {
     grid-template-columns:
       [screen-start] .25rem
