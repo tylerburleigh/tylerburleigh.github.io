@@ -283,6 +283,11 @@ a {
   box-shadow: 0 36px 100px rgba(0, 0, 0, 0.8);
 }
 
+/* Hide next/prev footer links on landing page */
+article:has(.landing-hero) .myst-footer-links {
+  display: none;
+}
+
 /* Center landing hero on large screens without breaking sidebar layouts */
 @media (min-width: 1024px) {
   article.article-grid > .landing-hero {

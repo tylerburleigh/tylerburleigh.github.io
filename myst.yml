@@ -33,8 +33,6 @@ project:
       children:
         - pattern: "research/articles/**/*.md"
           hidden: true
-    - file: cv/index.md
-      hidden: true
 
 site:
   template: book-theme

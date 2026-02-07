@@ -3,6 +3,7 @@ title: "Tyler Burleigh"
 site:
   hide_toc: true
   hide_title_block: true
+  hide_outline: true
 ---
 
 <div class="landing-hero">
@@ -88,3 +89,31 @@ site:
     <span class="visually-hidden">I'm an AI Research Scientist with a multidisciplinary background in experimental psychology and data science. At Khan Academy, I work with Generative AI technologies like Large Language Models (LLMs), engaging in the full lifecycle of AI development — from research and solution architecture to engineering and evaluation. My mission is to build high-quality, reliable AI experiences that make education more accessible, engaging, and effective for learners worldwide.</span>
   </p>
 </div>
+
+## Resume
+
+**Education**
+- **PhD, Applied Cognitive Science** — University of Guelph, Canada (2011–2017)
+- Master of Arts, Psychology — Carleton University, Canada (2009–2011)
+- Bachelor of Arts, Psychology (CS Minor) — Bishop's University, Canada (2005–2009)
+
+**Work Experience**
+
+- **Senior AI Research Scientist** — Khan Academy (Feb 2024–Present)
+  - _Senior AI Research Scientist (Oct 2025–Present)_
+  - _Senior Prompt Engineer (Feb 2024–Oct 2025)_
+
+- Data Scientist III — Prodigy Education (Jun 2020–Feb 2024)
+  - _Data Scientist III (Jan 2024–Feb 2024)_
+  - _Data Scientist II (Jan 2022–Jan 2024)_
+  - _Data Scientist I (Jun 2020–Jan 2022)_
+
+- Data Scientist — Clover Health (Nov 2018–Mar 2020)
+
+- Research Scientist — Datacubed Health (Jan 2018–Nov 2018)
+
+- Adjunct Associate Professor — Columbia University (Aug 2018–Dec 2018)
+
+- Assistant Research Scientist — New York University (Mar 2017–Dec 2017)
+
+**Contact**: tylerburleigh@gmail.com
