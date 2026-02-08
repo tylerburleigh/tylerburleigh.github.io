@@ -27,6 +27,13 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt
       - run: myst build --html --ci
+      - name: Preserve original PDF URLs
+        run: |
+          find research/articles -name '*.pdf' | while read src; do
+            dest="_build/html/$src"
+            mkdir -p "$(dirname "$dest")"
+            cp "$src" "$dest"
+          done
       - name: Default light theme
         run: |
           python3 - <<'PY'
