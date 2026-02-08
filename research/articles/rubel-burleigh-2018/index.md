@@ -24,6 +24,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} rubel-burleigh-2018
+:::
+
+
 ## Abstract
 
 Despite a growing interest in polyamory, it is unknown how many polyamorists there are in the general population. In acknowledging that the meaning of "polyamory" is contested (e.g. Klesse, 2014), we estimated the prevalence of polyamory when it was defined as: (1) an identity, (2) relationship beliefs/preferences, (3) relationship status, and (4) relationship agreements. We recruited 972 individuals from Mechanical Turk and used a sample weighting procedure to approximate a representative sample of the population of the USA. Point prevalence estimates ranged from about 0.6% to 5%, and lifetime estimates ranged from about 2% to 23%. Thus, we estimate that there are at least 1.44 million adults in the USA who count as polyamorous.

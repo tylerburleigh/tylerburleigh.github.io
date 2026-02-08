@@ -18,6 +18,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-2015
+:::
+
+
 ## Abstract
 
 This commentary responds to MacDorman & Entezari's study on individual differences predicting sensitivity to the uncanny valley. It argues for the importance of examining individual-level response patterns rather than relying on group-level analyses when studying uncanny valley sensitivity, challenging whether aggregate-level findings about individual differences in uncanny valley responses adequately capture the heterogeneity of individual response patterns.

@@ -21,6 +21,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} martin-et-al-2017
+:::
+
+
 ## Abstract
 
 Consensual non-monogamy (CNM) has gained increasing academic interest and popularity within the media. The purpose of this study was to investigate agreements and communication across diverse relationship types. Participants were recruited through Amazon's Mechanical Turk, reported their 'relationship type' (polyamorous, swinging, open, monogamous), and completed a questionnaire about their agreements and related variables. The most common agreement among CNM participants was to have sex and romantic relationships with whomever they want, as long as there were no secrets. Monogamous participants were most willing to consider engaging in sex with others, as long as it was together. Communication about agreements was more frequently reported in CNM compared to monogamous participants. Overall, this research suggests that participants' agreements are largely consistent with their identified relationship type; CNM may be characterized by more frequent relational communication than monogamous relationships, but may also rely on a degree of implicit communication.

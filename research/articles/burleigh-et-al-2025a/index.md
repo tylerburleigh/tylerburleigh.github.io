@@ -19,6 +19,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-et-al-2025a
+:::
+
+
 ## Abstract
 
 Large language models used in conversation-based assessment often provide inappropriate hints that compromise validity. This paper demonstrates that self-critique -- a simple prompt engineering technique -- effectively constrains this behavior. Using synthetic conversations and high school math data, self-critique dramatically reduced the rate of inappropriate hints from 65.9% to 6.1%, balancing maintaining student engagement while ensuring fair comparisons, without requiring model fine-tuning.

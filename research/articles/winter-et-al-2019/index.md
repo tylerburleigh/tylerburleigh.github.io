@@ -26,6 +26,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} winter-et-al-2019
+:::
+
+
 ## Abstract
 
 This protocol is a much simplified update of our original protocol for screening out international and VPS respondents from Qualtrics surveys. It utilizes Qualtrics' built-in Web Service functionality to interact with IP Hub in looking up potentially problematic respondents.

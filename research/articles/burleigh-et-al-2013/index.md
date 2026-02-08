@@ -25,6 +25,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-et-al-2013
+:::
+
+
 ## Abstract
 
 The uncanny valley theory (UVT) (Mori, 1970) proposes that when stimuli are defined by a near-perfect resemblance to humans they cause people to experience greater negative affect relative to when they have perfect human likeness (HL) or little to no HL. Empirical research to support this non-linear relationship between negative affect and HL has been inconclusive, however, and a satisfactory causal explanation has not yet emerged to explain existing findings. In two studies, we examined the relationship between HL and eeriness using digital human faces. First, we examined the relationship between HL and eeriness while controlling for extraneous variation in stimulus appearance. We created two HL continua by manipulating the facial proportions and polygon count of several digital human models. Second, we proposed and tested two causal hypotheses regarding the uncanny valley phenomenon that we refer to as category conflict and feature atypicality. We created two additional HL continua by manipulating the skin coloration and category membership of models. Across these continua we introduced an atypical feature. Our results suggest that HL is linearly related to emotional response, except under conditions where HL varies by category membership, suggesting that previous empirical findings might be explained as a category conflict.

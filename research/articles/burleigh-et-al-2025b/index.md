@@ -19,6 +19,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-et-al-2025b
+:::
+
+
 ## Abstract
 
 Story retell assessments provide valuable insights into reading comprehension but face implementation barriers due to time-intensive administration and scoring. This study examines whether Large Language Models (LLMs) can reliably replicate human judgment in grading story retells using synthetic response data. The system uses AI to generate 150 synthetic responses per item for iterative testing. Across 17 items and 68 iteration cycles, scoring reliability improved from 59% to 100% of items meeting criteria. Results support hybrid assessment architectures where AI handles routine scoring, enabling more frequent formative assessment while directing teacher expertise toward students requiring nuanced support.

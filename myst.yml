@@ -13,6 +13,8 @@ project:
       path: src/blogpost.py
     - type: executable
       path: src/researchlist.py
+    - type: executable
+      path: src/articleinfo.py
   toc:
     - file: index.md
     - file: blog.md
@@ -42,7 +44,7 @@ site:
     logo_text: Tyler Burleigh
     analytics_google: G-PRHQZ8HPLB
     favicon: files/favico.png
-    theme_light: true
+    theme_light: false
   domains:
     - tylerburleigh.github.io
   actions:

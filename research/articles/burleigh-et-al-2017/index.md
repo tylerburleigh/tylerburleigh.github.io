@@ -26,6 +26,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-et-al-2017
+:::
+
+
 ## Abstract
 
 Consensual non-monogamy (CNM) is a relationship in which individuals agree that romantic or sexual relationships with others are permissible or desirable (e.g. polyamory or open relationships). Although anti-CNM prejudice is prevalent, it is not well understood. We propose that one of the bases of anti-CNM prejudice is zero-sum thinking about love -- the perception that one person's love gained is another's love lost. We outline our theory and then present three studies that test our predictions. In these studies, participants read a vignette that depicted characters who were in a CNM or monogamous relationship, and then judged aspects of the characters and their relationship. In Study 1, participants who read the CNM vignette judged the protagonist's love for their initial romantic partner before and after they became involved with a second partner. Zero-sum thinking was operationally defined as the within-subject change in love ratings. In Studies 2 and 3, participants rated their agreement with items from a new preliminary measure of zero-sum romantic beliefs. We measured CNM devaluation by asking for ratings of the relationships and of individuals in the relationships. Supporting our predictions, in all three studies we found that zero-sum thinking about love was associated with increased CNM devaluation. We end by briefly discussing the implications of our findings.

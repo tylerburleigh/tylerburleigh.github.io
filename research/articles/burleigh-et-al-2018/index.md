@@ -25,6 +25,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} burleigh-et-al-2018
+:::
+
+
 ## Abstract
 
 This protocol provides a method and code used to screen out respondents on Amazon's Mechanical Turk (MTurk), or other microtask service providers, who are using VPS to cover their location or are responding from a country other than the one the researcher is targeting. It is designed for surveys using Qualtrics software, although it could be easily adapted for other online survey systems that provide JavaScript support. This protocol is likely to be broadly useful in addressing the quality crisis that has affected MTurk studies.

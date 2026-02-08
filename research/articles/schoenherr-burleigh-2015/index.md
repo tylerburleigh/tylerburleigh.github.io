@@ -22,6 +22,10 @@ options:
         icon: fa-solid fa-scroll
 ---
 
+:::{articleinfo} schoenherr-burleigh-2015
+:::
+
+
 ## Abstract
 
 Considered individually, folkbiological categories, biological anomalies and monsters, as well as human categories represent individual cultural products of human categorization. Instead, we suggest that the uncanny valley might reflect a primary response to unfamiliar or covert categories. In the absence of having prior knowledge of an individual or group, the relative distinctiveness of a category, due to a lower frequency of exposure, will produce negative affect—an inversion of the mere-exposure effect. The deceptive simplicity of learning mechanisms can lead to important individual and social consequences.
