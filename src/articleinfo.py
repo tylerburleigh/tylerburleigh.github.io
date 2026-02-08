@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+from urllib.parse import quote
 from yaml import safe_load
 from pathlib import Path
 import unist as u
@@ -67,6 +68,17 @@ def build_info_nodes(meta):
         if link_nodes:
             link_nodes.append(u.text(" | "))
         link_nodes.append(u.link([u.text(lnk.get("name", "Link"))], url))
+
+    # Auto-detect full-text markdown (any .md that isn't index.md)
+    article_dir_path = root / "/".join(meta["_path"].split("/")[:-1])
+    fulltext_md = next((f for f in article_dir_path.glob("*.md") if f.name != "index.md"), None)
+    if fulltext_md:
+        article_dir = "/".join(meta["_path"].split("/")[:-1])
+        md_url = f"https://tylerburleigh.com/{article_dir}/{quote(fulltext_md.name)}"
+        if link_nodes:
+            link_nodes.append(u.text(" | "))
+        link_nodes.append(u.link([u.text("Markdown")], md_url))
+
     if link_nodes:
         inner_children.append({"type": "paragraph", "children": link_nodes})
 

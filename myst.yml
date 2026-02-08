@@ -33,7 +33,7 @@ project:
             - pattern: "blog/2019/**/*.md"
     - file: research.md
       children:
-        - pattern: "research/articles/**/*.md"
+        - pattern: "research/articles/*/index.md"
           hidden: true
 
 site:
