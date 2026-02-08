@@ -29,6 +29,11 @@ ARTICLES_DIR = Path("research/articles")
 # Rate-limit delay between API calls (seconds)
 API_DELAY = 0.5
 
+# Titles to exclude from sync (e.g. unpublished posters with no public record)
+EXCLUDED_TITLES = [
+    "The Uncanny Valley: Do Framing and Familiarity Effects Alter Affective Responses?",
+]
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -385,6 +390,11 @@ def run(dry_run: bool = False, verbose: bool = False) -> None:
     for work in orcid_works:
         doi = work.get("doi", "")
         title = work["title"]
+
+        # Check exclusion list
+        if any(titles_similar(title, exc) for exc in EXCLUDED_TITLES):
+            skipped.append({"title": title, "doi": doi, "reason": "excluded"})
+            continue
 
         # Check if already exists locally by DOI
         if doi and doi.lower() in local_dois:
