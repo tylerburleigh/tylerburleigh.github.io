@@ -97,7 +97,7 @@ a {
    ======================================== */
 
 .landing-hero {
-  max-width: 720px;
+  max-width: 920px;
   margin: 0 auto;
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -134,10 +134,207 @@ a {
   font-size: 1.05rem;
   line-height: 1.7;
   text-align: left;
-  margin: 1rem auto 0;
-  max-width: 640px;
+  max-width: none;
   --hero-bio-size: 1.05rem;
 }
+
+.landing-hero .terminal-command {
+  margin: 0 0 0.75rem;
+}
+
+.landing-hero .hero-bio {
+  margin: -0.75rem 0 0;
+}
+
+/* ========================================
+   Dracula terminal window
+   ======================================== */
+
+.terminal-window {
+  background: #282a36;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  max-width: 900px;
+  margin: 1rem auto 0;
+  overflow: hidden;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+.terminal-titlebar {
+  background: #44475a;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.terminal-titlebar-left {
+  color: #f8f8f2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+.terminal-sparkle {
+  color: #ffb86c;
+  margin-right: 0.25rem;
+}
+
+.terminal-title {
+  color: #6272a4;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+}
+
+.terminal-titlebar-right {
+  color: #6272a4;
+  font-size: 0.8rem;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+  margin-left: auto;
+}
+
+.terminal-body {
+  padding: 1.25rem 1.5rem;
+  color: #f8f8f2;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", "Cascadia Code", monospace;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.terminal-body p:last-of-type {
+  margin-top: 0px !important;
+}
+
+.terminal-body .hero-bio {
+  color: #f8f8f2;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.terminal-command {
+  font-family: inherit;
+  font-size: inherit;
+  text-align: right;
+}
+
+/* Command bubble — hidden until "submitted" from input */
+.command-bubble {
+  display: inline-block;
+  background: #44475a;
+  color: #f8f8f2;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  opacity: 0;
+  animation: fade-in 0.001s 1.7s forwards;
+}
+
+/* Typewriter in the input field */
+.input-typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  vertical-align: bottom;
+  color: #f8f8f2;
+  animation:
+    typewriter-cmd 1s steps(22) 0s forwards,
+    input-submit 0.15s 1.4s forwards;
+}
+
+@keyframes typewriter-cmd {
+  from { width: 0; }
+  to { width: 22ch; }
+}
+
+@keyframes input-submit {
+  from { opacity: 1; width: 22ch; }
+  to { opacity: 0; width: 0; }
+}
+
+/* Thinking indicator */
+.terminal-thinking {
+  color: #6272a4;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  text-align: left;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  animation:
+    thinking-show 0.3s 2.3s forwards,
+    thinking-hide 0.3s 4.1s forwards;
+}
+
+.thinking-sparkle {
+  color: #ffb86c;
+}
+
+.thinking-dots span {
+  opacity: 0;
+}
+.thinking-dots span:nth-child(1) { animation: fade-in 0.001s 2.6s forwards; }
+.thinking-dots span:nth-child(2) { animation: fade-in 0.001s 3.0s forwards; }
+.thinking-dots span:nth-child(3) { animation: fade-in 0.001s 3.4s forwards; }
+
+@keyframes thinking-show {
+  to { opacity: 1; max-height: 3em; margin-top: 0.75rem; margin-bottom: 0.75rem; }
+}
+
+@keyframes thinking-hide {
+  to { opacity: 0; max-height: 0; margin: 0; }
+}
+
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+
+/* Response sparkle */
+.terminal-response-sparkle {
+  color: #ffb86c;
+  font-weight: 700;
+  opacity: 0;
+  animation: fade-in 0.001s 4.4s forwards;
+}
+
+/* Input field at bottom */
+.terminal-input {
+  border-top: 1px solid #44475a;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 1.05rem;
+}
+
+.terminal-input-prompt {
+  color: #bd93f9;
+  font-weight: 700;
+}
+
+
+.terminal-input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: #6272a4;
+  vertical-align: -0.1em;
+  animation: caret-blink 0.9s steps(2, start) infinite;
+}
+
+/* Dracula syntax-highlight colors for keywords */
+.typing-word.dc-cyan   { color: #8be9fd; }
+.typing-word.dc-pink   { color: #ff79c6; }
+.typing-word.dc-orange { color: #ffb86c; }
+.typing-word.dc-green  { color: #50fa7b; }
+.typing-word.dc-purple { color: #bd93f9; }
+.typing-word.dc-yellow { color: #f1fa8c; }
 
 /* Typing effect (word-by-word, CSS-only) */
 .landing-hero .typing-words {
@@ -159,73 +356,75 @@ a {
   animation: word-reveal var(--word-duration) steps(1, end) forwards;
 }
 
-.landing-hero .typing-word:nth-child(1) { animation-delay: 0s; }
-.landing-hero .typing-word:nth-child(2) { animation-delay: 0.075s; }
-.landing-hero .typing-word:nth-child(3) { animation-delay: 0.15s; }
-.landing-hero .typing-word:nth-child(4) { animation-delay: 0.225s; }
-.landing-hero .typing-word:nth-child(5) { animation-delay: 0.3s; }
-.landing-hero .typing-word:nth-child(6) { animation-delay: 0.375s; }
-.landing-hero .typing-word:nth-child(7) { animation-delay: 0.45s; }
-.landing-hero .typing-word:nth-child(8) { animation-delay: 0.525s; }
-.landing-hero .typing-word:nth-child(9) { animation-delay: 0.6s; }
-.landing-hero .typing-word:nth-child(10) { animation-delay: 0.675s; }
-.landing-hero .typing-word:nth-child(11) { animation-delay: 0.75s; }
-.landing-hero .typing-word:nth-child(12) { animation-delay: 0.825s; }
-.landing-hero .typing-word:nth-child(13) { animation-delay: 0.9s; }
-.landing-hero .typing-word:nth-child(14) { animation-delay: 0.975s; }
-.landing-hero .typing-word:nth-child(15) { animation-delay: 1.05s; }
-.landing-hero .typing-word:nth-child(16) { animation-delay: 1.125s; }
-.landing-hero .typing-word:nth-child(17) { animation-delay: 1.2s; }
-.landing-hero .typing-word:nth-child(18) { animation-delay: 1.275s; }
-.landing-hero .typing-word:nth-child(19) { animation-delay: 1.35s; }
-.landing-hero .typing-word:nth-child(20) { animation-delay: 1.425s; }
-.landing-hero .typing-word:nth-child(21) { animation-delay: 1.5s; }
-.landing-hero .typing-word:nth-child(22) { animation-delay: 1.575s; }
-.landing-hero .typing-word:nth-child(23) { animation-delay: 1.65s; }
-.landing-hero .typing-word:nth-child(24) { animation-delay: 1.725s; }
-.landing-hero .typing-word:nth-child(25) { animation-delay: 1.8s; }
-.landing-hero .typing-word:nth-child(26) { animation-delay: 1.875s; }
-.landing-hero .typing-word:nth-child(27) { animation-delay: 1.95s; }
-.landing-hero .typing-word:nth-child(28) { animation-delay: 2.025s; }
-.landing-hero .typing-word:nth-child(29) { animation-delay: 2.1s; }
-.landing-hero .typing-word:nth-child(30) { animation-delay: 2.175s; }
-.landing-hero .typing-word:nth-child(31) { animation-delay: 2.25s; }
-.landing-hero .typing-word:nth-child(32) { animation-delay: 2.325s; }
-.landing-hero .typing-word:nth-child(33) { animation-delay: 2.4s; }
-.landing-hero .typing-word:nth-child(34) { animation-delay: 2.475s; }
-.landing-hero .typing-word:nth-child(35) { animation-delay: 2.55s; }
-.landing-hero .typing-word:nth-child(36) { animation-delay: 2.625s; }
-.landing-hero .typing-word:nth-child(37) { animation-delay: 2.7s; }
-.landing-hero .typing-word:nth-child(38) { animation-delay: 2.775s; }
-.landing-hero .typing-word:nth-child(39) { animation-delay: 2.85s; }
-.landing-hero .typing-word:nth-child(40) { animation-delay: 2.925s; }
-.landing-hero .typing-word:nth-child(41) { animation-delay: 3s; }
-.landing-hero .typing-word:nth-child(42) { animation-delay: 3.075s; }
-.landing-hero .typing-word:nth-child(43) { animation-delay: 3.15s; }
-.landing-hero .typing-word:nth-child(44) { animation-delay: 3.225s; }
-.landing-hero .typing-word:nth-child(45) { animation-delay: 3.3s; }
-.landing-hero .typing-word:nth-child(46) { animation-delay: 3.375s; }
-.landing-hero .typing-word:nth-child(47) { animation-delay: 3.45s; }
-.landing-hero .typing-word:nth-child(48) { animation-delay: 3.525s; }
-.landing-hero .typing-word:nth-child(49) { animation-delay: 3.6s; }
-.landing-hero .typing-word:nth-child(50) { animation-delay: 3.675s; }
-.landing-hero .typing-word:nth-child(51) { animation-delay: 3.75s; }
-.landing-hero .typing-word:nth-child(52) { animation-delay: 3.825s; }
-.landing-hero .typing-word:nth-child(53) { animation-delay: 3.9s; }
-.landing-hero .typing-word:nth-child(54) { animation-delay: 3.975s; }
-.landing-hero .typing-word:nth-child(55) { animation-delay: 4.05s; }
-.landing-hero .typing-word:nth-child(56) { animation-delay: 4.125s; }
-.landing-hero .typing-word:nth-child(57) { animation-delay: 4.2s; }
-.landing-hero .typing-word:nth-child(58) { animation-delay: 4.275s; }
-.landing-hero .typing-word:nth-child(59) { animation-delay: 4.35s; }
-.landing-hero .typing-word:nth-child(60) { animation-delay: 4.425s; }
-.landing-hero .typing-word:nth-child(61) { animation-delay: 4.5s; }
-.landing-hero .typing-word:nth-child(62) { animation-delay: 4.575s; }
-.landing-hero .typing-word:nth-child(63) { animation-delay: 4.65s; }
-.landing-hero .typing-word:nth-child(64) { animation-delay: 4.725s; }
-.landing-hero .typing-word:nth-child(65) { animation-delay: 4.8s; }
-.landing-hero .typing-word:nth-child(66) { animation-delay: 4.875s; }
-.landing-hero .typing-word:nth-child(67) { animation-delay: 4.95s; }
+.landing-hero .typing-word:nth-child(1) { animation-delay: 4.6s; }
+.landing-hero .typing-word:nth-child(2) { animation-delay: 4.7s; }
+.landing-hero .typing-word:nth-child(3) { animation-delay: 4.8s; }
+.landing-hero .typing-word:nth-child(4) { animation-delay: 4.9s; }
+.landing-hero .typing-word:nth-child(5) { animation-delay: 5.0s; }
+.landing-hero .typing-word:nth-child(6) { animation-delay: 5.1s; }
+.landing-hero .typing-word:nth-child(7) { animation-delay: 5.2s; }
+.landing-hero .typing-word:nth-child(8) { animation-delay: 5.3s; }
+.landing-hero .typing-word:nth-child(9) { animation-delay: 5.4s; }
+.landing-hero .typing-word:nth-child(10) { animation-delay: 5.5s; }
+.landing-hero .typing-word:nth-child(11) { animation-delay: 5.6s; }
+.landing-hero .typing-word:nth-child(12) { animation-delay: 5.7s; }
+.landing-hero .typing-word:nth-child(13) { animation-delay: 5.8s; }
+.landing-hero .typing-word:nth-child(14) { animation-delay: 5.9s; }
+.landing-hero .typing-word:nth-child(15) { animation-delay: 6.0s; }
+.landing-hero .typing-word:nth-child(16) { animation-delay: 6.1s; }
+.landing-hero .typing-word:nth-child(17) { animation-delay: 6.2s; }
+.landing-hero .typing-word:nth-child(18) { animation-delay: 6.3s; }
+.landing-hero .typing-word:nth-child(19) { animation-delay: 6.4s; }
+.landing-hero .typing-word:nth-child(20) { animation-delay: 6.5s; }
+.landing-hero .typing-word:nth-child(21) { animation-delay: 6.6s; }
+.landing-hero .typing-word:nth-child(22) { animation-delay: 6.7s; }
+.landing-hero .typing-word:nth-child(23) { animation-delay: 6.8s; }
+.landing-hero .typing-word:nth-child(24) { animation-delay: 6.9s; }
+.landing-hero .typing-word:nth-child(25) { animation-delay: 7.0s; }
+.landing-hero .typing-word:nth-child(26) { animation-delay: 7.1s; }
+.landing-hero .typing-word:nth-child(27) { animation-delay: 7.2s; }
+.landing-hero .typing-word:nth-child(28) { animation-delay: 7.3s; }
+.landing-hero .typing-word:nth-child(29) { animation-delay: 7.4s; }
+.landing-hero .typing-word:nth-child(30) { animation-delay: 7.5s; }
+.landing-hero .typing-word:nth-child(31) { animation-delay: 7.6s; }
+.landing-hero .typing-word:nth-child(32) { animation-delay: 7.7s; }
+.landing-hero .typing-word:nth-child(33) { animation-delay: 7.8s; }
+.landing-hero .typing-word:nth-child(34) { animation-delay: 7.9s; }
+.landing-hero .typing-word:nth-child(35) { animation-delay: 8.0s; }
+.landing-hero .typing-word:nth-child(36) { animation-delay: 8.1s; }
+.landing-hero .typing-word:nth-child(37) { animation-delay: 8.2s; }
+.landing-hero .typing-word:nth-child(38) { animation-delay: 8.3s; }
+.landing-hero .typing-word:nth-child(39) { animation-delay: 8.4s; }
+.landing-hero .typing-word:nth-child(40) { animation-delay: 8.5s; }
+.landing-hero .typing-word:nth-child(41) { animation-delay: 8.6s; }
+.landing-hero .typing-word:nth-child(42) { animation-delay: 8.7s; }
+.landing-hero .typing-word:nth-child(43) { animation-delay: 8.8s; }
+.landing-hero .typing-word:nth-child(44) { animation-delay: 8.9s; }
+.landing-hero .typing-word:nth-child(45) { animation-delay: 9.0s; }
+.landing-hero .typing-word:nth-child(46) { animation-delay: 9.1s; }
+.landing-hero .typing-word:nth-child(47) { animation-delay: 9.2s; }
+.landing-hero .typing-word:nth-child(48) { animation-delay: 9.3s; }
+.landing-hero .typing-word:nth-child(49) { animation-delay: 9.4s; }
+.landing-hero .typing-word:nth-child(50) { animation-delay: 9.5s; }
+.landing-hero .typing-word:nth-child(51) { animation-delay: 9.6s; }
+.landing-hero .typing-word:nth-child(52) { animation-delay: 9.7s; }
+.landing-hero .typing-word:nth-child(53) { animation-delay: 9.8s; }
+.landing-hero .typing-word:nth-child(54) { animation-delay: 9.9s; }
+.landing-hero .typing-word:nth-child(55) { animation-delay: 10.0s; }
+.landing-hero .typing-word:nth-child(56) { animation-delay: 10.1s; }
+.landing-hero .typing-word:nth-child(57) { animation-delay: 10.2s; }
+.landing-hero .typing-word:nth-child(58) { animation-delay: 10.3s; }
+.landing-hero .typing-word:nth-child(59) { animation-delay: 10.4s; }
+.landing-hero .typing-word:nth-child(60) { animation-delay: 10.5s; }
+.landing-hero .typing-word:nth-child(61) { animation-delay: 10.6s; }
+.landing-hero .typing-word:nth-child(62) { animation-delay: 10.7s; }
+.landing-hero .typing-word:nth-child(63) { animation-delay: 10.8s; }
+.landing-hero .typing-word:nth-child(64) { animation-delay: 10.9s; }
+.landing-hero .typing-word:nth-child(65) { animation-delay: 11.0s; }
+.landing-hero .typing-word:nth-child(66) { animation-delay: 11.1s; }
+.landing-hero .typing-word:nth-child(67) { animation-delay: 11.2s; }
+.landing-hero .typing-word:nth-child(68) { animation-delay: 11.3s; }
+.landing-hero .typing-word:nth-child(69) { animation-delay: 11.4s; }
 
 .landing-hero .typing-words::after {
   content: "";
@@ -233,11 +432,12 @@ a {
   width: 0.12em;
   height: 1em;
   margin-left: 0.1em;
-  background: currentColor;
+  background: #50fa7b;
   vertical-align: -0.1em;
   font-size: var(--hero-bio-size);
   line-height: 1;
-  animation: caret-blink 0.9s steps(2, start) infinite;
+  opacity: 0;
+  animation: caret-blink 0.9s steps(2, start) 4.6s infinite;
 }
 
 .landing-hero .typing-fallback {
@@ -267,6 +467,21 @@ a {
   }
   .landing-hero .typing-fallback {
     display: inline;
+    color: #f8f8f2;
+  }
+  .terminal-thinking {
+    display: none;
+  }
+  .command-bubble {
+    opacity: 1;
+    animation: none;
+  }
+  .input-typewriter {
+    display: none;
+  }
+  .terminal-response-sparkle {
+    opacity: 1;
+    animation: none;
   }
 }
 

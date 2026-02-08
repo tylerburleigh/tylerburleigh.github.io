@@ -15,37 +15,51 @@ site:
     />
   </div>
   <h1 class="hero-name">Tyler Burleigh</h1>
+  <div class="terminal-window">
+    <div class="terminal-titlebar">
+      <span class="terminal-titlebar-left"><span class="terminal-sparkle">✻</span> Claude Code</span>
+      <span class="terminal-title">TERMINAL</span>
+      <span class="terminal-titlebar-right">claude-opus-4-6</span>
+    </div>
+    <div class="terminal-body">
+  <p class="terminal-command"><span class="command-bubble">Who is Tyler Burleigh?</span></p>
+  <div class="terminal-thinking">
+    <span class="thinking-sparkle">✻</span> Thinking<span class="thinking-dots"><span>.</span><span>.</span><span>.</span></span>
+  </div>
   <p class="hero-bio">
+    <span class="terminal-response-sparkle">✻ </span>
     <span class="typing-words" aria-hidden="true">
-      <span class="typing-word">I'm </span>
+      <span class="typing-word dc-pink">Tyler </span>
+      <span class="typing-word dc-pink">Burleigh </span>
+      <span class="typing-word">is </span>
       <span class="typing-word">an </span>
-      <span class="typing-word">AI </span>
-      <span class="typing-word">Research </span>
-      <span class="typing-word">Scientist </span>
+      <span class="typing-word dc-cyan">AI </span>
+      <span class="typing-word dc-cyan">Research </span>
+      <span class="typing-word dc-cyan">Scientist </span>
       <span class="typing-word">with </span>
       <span class="typing-word">a </span>
       <span class="typing-word">multidisciplinary </span>
       <span class="typing-word">background </span>
       <span class="typing-word">in </span>
-      <span class="typing-word">experimental </span>
-      <span class="typing-word">psychology </span>
+      <span class="typing-word dc-purple">experimental </span>
+      <span class="typing-word dc-purple">psychology </span>
       <span class="typing-word">and </span>
-      <span class="typing-word">data </span>
-      <span class="typing-word">science. </span>
+      <span class="typing-word dc-purple">data </span>
+      <span class="typing-word dc-purple">science. </span>
       <span class="typing-word">At </span>
-      <span class="typing-word">Khan </span>
-      <span class="typing-word">Academy, </span>
-      <span class="typing-word">I </span>
-      <span class="typing-word">work </span>
+      <span class="typing-word dc-pink">Khan </span>
+      <span class="typing-word dc-pink">Academy, </span>
+      <span class="typing-word">he </span>
+      <span class="typing-word">works </span>
       <span class="typing-word">with </span>
-      <span class="typing-word">Generative </span>
-      <span class="typing-word">AI </span>
+      <span class="typing-word dc-cyan">Generative </span>
+      <span class="typing-word dc-cyan">AI </span>
       <span class="typing-word">technologies </span>
       <span class="typing-word">like </span>
-      <span class="typing-word">Large </span>
-      <span class="typing-word">Language </span>
-      <span class="typing-word">Models </span>
-      <span class="typing-word">(LLMs), </span>
+      <span class="typing-word dc-orange">Large </span>
+      <span class="typing-word dc-orange">Language </span>
+      <span class="typing-word dc-orange">Models </span>
+      <span class="typing-word dc-orange">(LLMs), </span>
       <span class="typing-word">engaging </span>
       <span class="typing-word">in </span>
       <span class="typing-word">the </span>
@@ -56,15 +70,15 @@ site:
       <span class="typing-word">development </span>
       <span class="typing-word">— </span>
       <span class="typing-word">from </span>
-      <span class="typing-word">research </span>
+      <span class="typing-word dc-green">research </span>
       <span class="typing-word">and </span>
-      <span class="typing-word">solution </span>
-      <span class="typing-word">architecture </span>
+      <span class="typing-word dc-green">solution </span>
+      <span class="typing-word dc-green">architecture </span>
       <span class="typing-word">to </span>
-      <span class="typing-word">engineering </span>
+      <span class="typing-word dc-green">engineering </span>
       <span class="typing-word">and </span>
-      <span class="typing-word">evaluation. </span>
-      <span class="typing-word">My </span>
+      <span class="typing-word dc-green">evaluation. </span>
+      <span class="typing-word">His </span>
       <span class="typing-word">mission </span>
       <span class="typing-word">is </span>
       <span class="typing-word">to </span>
@@ -75,20 +89,31 @@ site:
       <span class="typing-word">experiences </span>
       <span class="typing-word">that </span>
       <span class="typing-word">make </span>
-      <span class="typing-word">education </span>
+      <span class="typing-word dc-pink">education </span>
       <span class="typing-word">more </span>
-      <span class="typing-word">accessible, </span>
-      <span class="typing-word">engaging, </span>
+      <span class="typing-word dc-yellow">accessible, </span>
+      <span class="typing-word dc-yellow">engaging, </span>
       <span class="typing-word">and </span>
-      <span class="typing-word">effective </span>
+      <span class="typing-word dc-yellow">effective </span>
       <span class="typing-word">for </span>
       <span class="typing-word">learners </span>
       <span class="typing-word">worldwide.</span>
     </span>
-    <span class="typing-fallback">I'm an AI Research Scientist with a multidisciplinary background in experimental psychology and data science. At Khan Academy, I work with Generative AI technologies like Large Language Models (LLMs), engaging in the full lifecycle of AI development — from research and solution architecture to engineering and evaluation. My mission is to build high-quality, reliable AI experiences that make education more accessible, engaging, and effective for learners worldwide.</span>
-    <span class="visually-hidden">I'm an AI Research Scientist with a multidisciplinary background in experimental psychology and data science. At Khan Academy, I work with Generative AI technologies like Large Language Models (LLMs), engaging in the full lifecycle of AI development — from research and solution architecture to engineering and evaluation. My mission is to build high-quality, reliable AI experiences that make education more accessible, engaging, and effective for learners worldwide.</span>
+    <span class="typing-fallback">Tyler Burleigh is an AI Research Scientist with a multidisciplinary background in experimental psychology and data science. At Khan Academy, he works with Generative AI technologies like Large Language Models (LLMs), engaging in the full lifecycle of AI development — from research and solution architecture to engineering and evaluation. His mission is to build high-quality, reliable AI experiences that make education more accessible, engaging, and effective for learners worldwide.</span>
+    <span class="visually-hidden">Tyler Burleigh is an AI Research Scientist with a multidisciplinary background in experimental psychology and data science. At Khan Academy, he works with Generative AI technologies like Large Language Models (LLMs), engaging in the full lifecycle of AI development — from research and solution architecture to engineering and evaluation. His mission is to build high-quality, reliable AI experiences that make education more accessible, engaging, and effective for learners worldwide.</span>
   </p>
+    </div>
+    <div class="terminal-input">
+      <span class="terminal-input-prompt">&gt;</span>
+      <span class="input-typewriter">Who is Tyler Burleigh?</span>
+      <span class="terminal-input-cursor"></span>
+    </div>
+  </div>
 </div>
+
+<hr/>
+
+<br/>
 
 ## Resume
 
