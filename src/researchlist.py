@@ -69,7 +69,8 @@ for article in articles:
         url = lnk.get("url", "")
         if lnk.get("local"):
             article_dir = "/".join(article["path"].split("/")[:-1])
-            url = f"/{article_dir}/{url}"
+            # Use absolute URL so MyST treats it as external and skips asset hashing
+            url = f"https://tylerburleigh.com/{article_dir}/{url}"
         if link_nodes:
             link_nodes.append(u.text(" | "))
         link_nodes.append(
