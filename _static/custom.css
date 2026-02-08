@@ -270,6 +270,206 @@ a {
   }
 }
 
+/* ========================================
+   Google Scholar citation widget
+   ======================================== */
+
+.gs-widget {
+  max-width: 520px;
+  margin: 1.5rem auto;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #444;
+}
+
+/* --- Header row (Cited by + VIEW ALL) --- */
+.gs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0;
+}
+
+.gs-title {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.gs-view-all {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #3348b5;
+  text-decoration: none;
+}
+
+.gs-view-all:hover {
+  text-decoration: underline;
+}
+
+/* --- Stats table (replicates GS two-column layout) --- */
+.gs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.gs-widget .gs-table th {
+  font-weight: bold;
+  color: #333;
+  text-align: right !important;
+  padding: 0.3rem 0.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.gs-widget .gs-table th:first-child {
+  text-align: left !important;
+}
+
+.gs-table tbody td {
+  padding: 0.45rem 0.6rem;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.gs-table .gs-row-label {
+  text-align: left;
+  font-weight: 400;
+  color: #333;
+}
+
+/* --- Bar chart --- */
+.gs-chart-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.gs-chart-area {
+  flex: 1;
+  position: relative;
+  height: 200px;
+}
+
+.gs-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.gs-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.gs-bar {
+  width: 100%;
+  max-width: 42px;
+  background: #9e9e9e;
+  border-radius: 1px;
+  min-height: 2px;
+  transition: background 0.2s;
+}
+
+.gs-bar:hover {
+  background: #757575;
+}
+
+.gs-year {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Y-axis labels (right side) */
+.gs-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 22px; /* align with bar area, above year labels */
+  min-width: 2rem;
+}
+
+.gs-tick {
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1;
+}
+
+/* Gridlines */
+.gs-gridline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid #eee;
+  z-index: 0;
+}
+
+/* Footer */
+.gs-footer {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+.gs-footer a {
+  color: #999;
+  text-decoration: underline;
+}
+
+/* Dark mode */
+[data-theme="dark"] .gs-widget {
+  color: #ccc;
+}
+
+[data-theme="dark"] .gs-table thead th {
+  color: #999;
+  border-bottom-color: #444;
+}
+
+[data-theme="dark"] .gs-table .gs-row-label {
+  color: #ddd;
+}
+
+[data-theme="dark"] .gs-bar {
+  background: #888;
+}
+
+[data-theme="dark"] .gs-bar:hover {
+  background: #aaa;
+}
+
+[data-theme="dark"] .gs-year,
+[data-theme="dark"] .gs-tick {
+  color: #999;
+}
+
+[data-theme="dark"] .gs-gridline {
+  border-top-color: #333;
+}
+
+[data-theme="dark"] .gs-footer {
+  color: #777;
+}
+
+[data-theme="dark"] .gs-footer a {
+  color: #888;
+}
+
 /* Blog heading */
 .landing-hero h2 {
   font-family: 'Jost', sans-serif;
