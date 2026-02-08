@@ -1,4 +1,4 @@
-# Research publications
+# Research
 
 <div class="gs-widget">
   <div class="gs-header">
