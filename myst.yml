@@ -19,6 +19,9 @@ project:
     - file: index.md
     - file: blog.md
       children:
+        - title: "2026"
+          children:
+            - pattern: "blog/2026/**/*.md"
         - title: "2025"
           children:
             - pattern: "blog/2025/**/*.md"
