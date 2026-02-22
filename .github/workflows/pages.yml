@@ -84,9 +84,14 @@ jobs:
           <script>
           // giscus-loader
           (function() {
+            var inserted = false;
             function loadGiscus() {
+              if (inserted) return;
               var article = document.querySelector('article');
               if (!article) return;
+              // Check if we already added it
+              if (document.querySelector('.giscus-container')) return;
+              inserted = true;
               var container = document.createElement('div');
               container.className = 'giscus-container';
               container.style.cssText = 'max-width:800px;margin:2rem auto;padding:0 1rem;';
@@ -107,13 +112,22 @@ jobs:
               script.crossOrigin = 'anonymous';
               script.async = true;
               container.appendChild(script);
-              article.parentNode.insertBefore(container, article.nextSibling);
+              article.after(container);
             }
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', function() { setTimeout(loadGiscus, 100); });
-            } else {
-              setTimeout(loadGiscus, 100);
-            }
+            // Use MutationObserver to detect when React finishes rendering
+            var observer = new MutationObserver(function(mutations) {
+              var article = document.querySelector('article');
+              if (article && !inserted) {
+                // Wait a tick for React to settle
+                setTimeout(function() {
+                  loadGiscus();
+                  observer.disconnect();
+                }, 500);
+              }
+            });
+            observer.observe(document.documentElement, {childList: true, subtree: true});
+            // Fallback: try after 3 seconds regardless
+            setTimeout(function() { loadGiscus(); observer.disconnect(); }, 3000);
           })();
           </script>
           """
