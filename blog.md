@@ -4,7 +4,6 @@ description: "Blog posts by Tyler Burleigh on AI, LLMs, prompt engineering, data
 
 # Blog
 
-Below are my blog posts. You can browse by year in the sidebar.
 
 :::{postlist}
 :number: 50
