@@ -75,6 +75,40 @@ jobs:
                   text = theme_script_re.sub(inject, text, count=1)
                   path.write_text(text, encoding="utf-8")
           PY
+      - name: Add Giscus comments to blog posts
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          giscus = """
+          <div class="giscus-container" style="max-width:800px;margin:2rem auto;padding:0 1rem;">
+            <script src="https://giscus.app/client.js"
+              data-repo="tylerburleigh/tylerburleigh.github.io"
+              data-repo-id="R_kgDOKMo8ww"
+              data-category="General"
+              data-category-id="DIC_kwDOKMo8w84CY9SM"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="top"
+              data-theme="preferred_color_scheme"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+            </script>
+          </div>
+          """
+
+          root = Path("_build/html/blog")
+          for path in root.rglob("index.html"):
+              text = path.read_text(encoding="utf-8")
+              if "giscus" in text:
+                  continue
+              text = text.replace("</article>", giscus + "</article>")
+              path.write_text(text, encoding="utf-8")
+          PY
       - name: Fix sitemap and robots.txt URLs
         run: |
           sed -i 's|http://localhost:[0-9]*|https://tylerburleigh.com|g' _build/html/sitemap.xml
