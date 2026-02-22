@@ -81,32 +81,49 @@ jobs:
           from pathlib import Path
 
           giscus = """
-          <div class="giscus-container" style="max-width:800px;margin:2rem auto;padding:0 1rem;">
-            <script src="https://giscus.app/client.js"
-              data-repo="tylerburleigh/tylerburleigh.github.io"
-              data-repo-id="R_kgDOKMo8ww"
-              data-category="General"
-              data-category-id="DIC_kwDOKMo8w84CY9SM"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="0"
-              data-input-position="top"
-              data-theme="preferred_color_scheme"
-              data-lang="en"
-              data-loading="lazy"
-              crossorigin="anonymous"
-              async>
-            </script>
-          </div>
+          <script>
+          // giscus-loader
+          (function() {
+            function loadGiscus() {
+              var article = document.querySelector('article');
+              if (!article) return;
+              var container = document.createElement('div');
+              container.className = 'giscus-container';
+              container.style.cssText = 'max-width:800px;margin:2rem auto;padding:0 1rem;';
+              var script = document.createElement('script');
+              script.src = 'https://giscus.app/client.js';
+              script.setAttribute('data-repo', 'tylerburleigh/tylerburleigh.github.io');
+              script.setAttribute('data-repo-id', 'R_kgDOKMo8ww');
+              script.setAttribute('data-category', 'General');
+              script.setAttribute('data-category-id', 'DIC_kwDOKMo8w84CY9SM');
+              script.setAttribute('data-mapping', 'pathname');
+              script.setAttribute('data-strict', '0');
+              script.setAttribute('data-reactions-enabled', '1');
+              script.setAttribute('data-emit-metadata', '0');
+              script.setAttribute('data-input-position', 'top');
+              script.setAttribute('data-theme', 'preferred_color_scheme');
+              script.setAttribute('data-lang', 'en');
+              script.setAttribute('data-loading', 'lazy');
+              script.crossOrigin = 'anonymous';
+              script.async = true;
+              container.appendChild(script);
+              article.parentNode.insertBefore(container, article.nextSibling);
+            }
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', function() { setTimeout(loadGiscus, 100); });
+            } else {
+              setTimeout(loadGiscus, 100);
+            }
+          })();
+          </script>
           """
 
           root = Path("_build/html/blog")
           for path in root.rglob("index.html"):
               text = path.read_text(encoding="utf-8")
-              if "giscus" in text:
+              if "giscus-loader" in text:
                   continue
-              text = text.replace("</article>", giscus + "</article>")
+              text = text.replace("</body>", giscus + "</body>")
               path.write_text(text, encoding="utf-8")
           PY
       - name: Fix sitemap and robots.txt URLs
