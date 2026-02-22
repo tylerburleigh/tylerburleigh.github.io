@@ -88,20 +88,3 @@ If you want to try the app, you can get the code at the [GitHub repository](http
 ## Conclusion
 
 Building an LLM-based chatbot in the health and longevity domain presents unique challenges: large, variable datasets and a high need for personalized yet accurate responses. Using a RAG approach strikes the right balance between efficiency and user-specific context. By gathering only the "must-know" details from a vector store, we reduce token usage, and produce more reliable insights.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

@@ -335,20 +335,3 @@ df %>%
 ```
 
 Overall, this analysis provides strong evidence in favor of the multiple-attempts implementation of `Self-Consistency`, and weaker evidence in favor of the single-prompt "imagined experts" implementation. The best implementation involved asking the LLM to generate only 1 answer per attempt, while giving it 10 attempts in total. Using this implementation of the strategy, performance was increased from 75% correct answers at baseline to 93% correct answers.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

@@ -15,11 +15,11 @@ options:
     reference: >-
       Ferrey, A. E., Burleigh, T. J., & Fenske, M. J. (2015). Stimulus-category competition, inhibition, and affective devaluation: a novel account of the uncanny valley. Frontiers in psychology, 6, 249. doi: <a href="https://doi.org/10.3389/fpsyg.2015.00249"><code>10.3389/fpsyg.2015.00249</code></a>
     links:
-      - name: Preprint
+      - name: Preprint (PDF)
         url: 'Ferrey, Burleigh and Fenske - 2015 - Stimulus-category competition.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.3389/fpsyg.2015.00249
         icon: fa-solid fa-scroll
 ---

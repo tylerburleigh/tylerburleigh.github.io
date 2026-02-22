@@ -14,7 +14,7 @@ options:
     reference: >-
       Burleigh, T., Han, J., & Dicerbo, K. (2025). Beyond the Hint: Using Self-Critique to Constrain LLM Feedback in Conversation-Based Assessment. Proceedings of the Artificial Intelligence in Measurement and Education Conference (AIME-Con), 79-85.
     links:
-      - name: Final version
+      - name: Publisher page
         url: https://aclanthology.org/2025.aimecon-sessions.9/
         icon: fa-solid fa-scroll
 ---

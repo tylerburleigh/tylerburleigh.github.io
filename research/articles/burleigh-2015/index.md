@@ -13,7 +13,7 @@ options:
     reference: >-
       Burleigh, T. J. (2015). A challenge to the study of individual differences in uncanny valley sensitivity. Interaction Studies, 16(2), 186-192. doi: <a href="https://doi.org/10.1075/IS.16.2.04BUR"><code>10.1075/IS.16.2.04BUR</code></a>
     links:
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.1075/IS.16.2.04BUR
         icon: fa-solid fa-scroll
 ---

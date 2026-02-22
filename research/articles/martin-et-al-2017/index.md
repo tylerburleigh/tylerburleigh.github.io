@@ -16,7 +16,7 @@ options:
     reference: >-
       Martin, S., Milhausen, R. R., Beaton, J., Wood, J., Desmarais, S., & Burleigh, T. J. (2017). Relationship Agreements and Communication in Monogamous and Consensually Non-Monogamous Relationships. Master's thesis, University of Guelph.
     links:
-      - name: Final version
+      - name: Publisher page
         url: https://atrium.lib.uoguelph.ca/items/3c36683c-61fb-499e-a477-5184aa8c51c1
         icon: fa-solid fa-scroll
 ---

@@ -58,13 +58,14 @@ def build_info_nodes(meta):
             ],
         })
 
-    # Links line
+    # Links line — order: local/PDF, then Markdown, then external/Publisher
     link_nodes = []
-    for lnk in links:
-        url = lnk.get("url", "")
-        if lnk.get("local"):
-            article_dir = "/".join(meta["_path"].split("/")[:-1])
-            url = f"https://tylerburleigh.com/{article_dir}/{url}"
+    local_links = [l for l in links if l.get("local")]
+    external_links = [l for l in links if not l.get("local")]
+
+    for lnk in local_links:
+        article_dir = "/".join(meta["_path"].split("/")[:-1])
+        url = f"https://tylerburleigh.com/{article_dir}/{lnk.get('url', '')}"
         if link_nodes:
             link_nodes.append(u.text(" | "))
         link_nodes.append(u.link([u.text(lnk.get("name", "Link"))], url))
@@ -75,9 +76,20 @@ def build_info_nodes(meta):
     if fulltext_md:
         article_dir = "/".join(meta["_path"].split("/")[:-1])
         md_url = f"https://tylerburleigh.com/{article_dir}/{quote(fulltext_md.name)}"
+        # Derive label from the first local PDF link's role name
+        if local_links and local_links[0].get("name", "").endswith(" (PDF)"):
+            role = local_links[0]["name"][:-len(" (PDF)")]
+            md_label = f"{role} (Markdown)"
+        else:
+            md_label = "Full text (Markdown)"
         if link_nodes:
             link_nodes.append(u.text(" | "))
-        link_nodes.append(u.link([u.text("Markdown")], md_url))
+        link_nodes.append(u.link([u.text(md_label)], md_url))
+
+    for lnk in external_links:
+        if link_nodes:
+            link_nodes.append(u.text(" | "))
+        link_nodes.append(u.link([u.text(lnk.get("name", "Link"))], lnk.get("url", "")))
 
     if link_nodes:
         inner_children.append({"type": "paragraph", "children": link_nodes})

@@ -15,11 +15,11 @@ options:
     reference: >-
       Burleigh, T. J., & Schoenherr, J. R. (2015). A reappraisal of the uncanny valley: categorical perception or frequency-based sensitization?. Frontiers in Psychology, 5, 1488. doi: <a href="https://doi.org/10.3389/fpsyg.2014.01488"><code>10.3389/fpsyg.2014.01488</code></a>
     links:
-      - name: 'Open access'
+      - name: 'Open access (PDF)'
         url: 'Burleigh and Schoenherr - 2015 - A reappraisal of the uncanny valley.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.3389/fpsyg.2014.01488
         icon: fa-solid fa-scroll
 ---

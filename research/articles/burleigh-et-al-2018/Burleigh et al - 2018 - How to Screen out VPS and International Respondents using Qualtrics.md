@@ -46,16 +46,7 @@ MxI5ODpZT2kmVnlsR5iMcjBrRWpjxVZOKXIRKU1sNmdZb30EMA==
 
 ### 2. Add Embedded Data Fields in Qualtrics
 
-Go to the Survey Flow of your Qualtrics survey. At the top of your survey, add an embedded data field with entries:  
-- IP  
-- IP_countryCode  
-- IP_countryName  
-- IP_asn  
-- IP_isp  
-- IP_check  
-- IP_block  
-
-Move this block to the top of your survey.
+Next, go to the Survey Flow of your Qualtrics survey. At the top of your survey, add an embedded data field with entries: IP, IP_countryCode, IP_countryName, IP_asn, IP_isp, IP_check, and IP_block. Then move this block to the top of your survey.
 
 ---
 
@@ -75,11 +66,17 @@ As of this writing, you can also just paste in this snippet (version 3.3.1):
 
 Click Save. You will want to add a warning to the beginning of the survey to tell people who are in the U.S. to turn off their VPNs or any ad blocking software they are using. This will prevent you from receiving complaints from some Turkers. From our piloting, it also appears that this is an effective way to initially screen out people who you do not want to take the survey (we noticed a significant drop in the number of international IPs testing our system once we added the warning).
 
+> **Warning!**
+>
+> This survey uses a protocol to check that you are responding from inside the U.S. and not using a Virtual Private Server (VPS), Virtual Private Network (VPN), or proxy to hide your country. In order to take this survey, please turn off your VPS/VPN/proxy if you are using one and also any ad blocking applications. Failure to do this might prevent you from completing the HIT.
+>
+> For more information on why we are requesting this, see this post from TurkPrime (https://goo.gl/WD6QD4)
+
 ---
 
 ### 5. Add JavaScript to the Consent/Intro Page
 
-Go to the second element in your survey (the screen after the warning message—usually the consent script or study introduction). Click on the question options gear and select "Add JavaScript." Delete the default script and replace it with the script below (or it can be found here: [https://gist.github.com/tylerburleigh/64641a79ce73995740cd629ba7f7b48f](https://gist.github.com/tylerburleigh/64641a79ce73995740cd629ba7f7b48f)). Be sure to replace `PUT_YOUR_API_KEY_HERE` with your API key for IP Hub.
+Then go to the second element in your survey (the screen after the warning message—usually the consent script or study introduction). Click on the question options gear and select "Add JavaScript." Delete the default script and replace it with the script below (or it can be found here: [https://gist.github.com/tylerburleigh/64641a79ce73995740cd629ba7f7b48f](https://gist.github.com/tylerburleigh/64641a79ce73995740cd629ba7f7b48f)). Be sure to replace `PUT_YOUR_API_KEY_HERE` with your API key for IP Hub.
 
 ```javascript
 Qualtrics.SurveyEngine.addOnload(function() {
@@ -112,7 +109,7 @@ Qualtrics.SurveyEngine.addOnload(function() {
 
 ### 6. PHP Function for IP Check (Optional)
 
-If you are fine with using our site to host the PHP, you do not need to take any action in this step. This JavaScript calls a PHP function hosted at:  
+[If you are fine with using our site to host the PHP, you do not need to take any action in this step.] This JavaScript calls a PHP function hosted at:  
 [https://ipcheck.dynu.net/s/ipCheck.php](https://ipcheck.dynu.net/s/ipCheck.php)
 
 You can also copy the code from this site ([https://gist.github.com/tylerburleigh/a93a6e8c50e8af1279736207b56acb5d](https://gist.github.com/tylerburleigh/a93a6e8c50e8af1279736207b56acb5d)), or below, and host it on your preferred site.
@@ -179,26 +176,31 @@ This will ensure that the embedded data parameters we set at the top of the surv
 
 #### VPS Warning
 
-> **Sorry, you are not eligible to participate in this survey.**  
-> Our system has detected that you are using a Virtual Private Server (VPS) or proxy. If you believe this is an error, please contact the requester.
+> **Our system has detected that you are using a Virtual Private Server (VPS) or proxy to mask your country location.** As has been widely reported, this has caused a number of problems with MTurk data (https://goo.gl/WD6QD4).
+>
+> Because of this, we cannot let you participate in this study. If you are located in the U.S., please turn off your VPS the next time you participate in a survey-based HIT, as we requested in the warning message at the beginning. If you are outside of the U.S., we apologize, but this study is directed only towards U.S. Participants.
+>
+> Thank you for your interest in our study.
 
 #### Out of US Warning
 
-> **Sorry, you are not eligible to participate in this survey.**  
-> Our system has detected that you are not located in the United States. If you believe this is an error, please contact the requester.
+> **Our system has detected that you are attempting to take this survey from a location outside of the U.S.** Unfortunately, this study is directed only towards participants in the U.S. and we cannot accept responses from those in other countries (as per our IRB protocol).
+>
+> Thank you for your interest in our study.
 
 #### Still Missing Warning
 
 *(This message is added defensively—steps have been taken to ensure ad blockers or quick responses do not affect the protocol. In our pilot, we find a small number of cases (about 1.6%) where the JavaScript does not return information and they need to be checked after the survey is complete):*
 
-> **Sorry, we were unable to verify your location.**  
-> If you believe this is an error, please contact the requester.
+> **For some reason we were still unable to verify your country location.** We ask you to please assist us in getting this protocol correct. Please enter your MTurk worker ID below and contact the requester for this HIT to report the problem.
+>
+> Once you click Next, you will be taken to the survey (and certifying that you are taking this survey from the U.S. and not using a VPS). We will be checking locations manually for those who reach this point and you will be contacted if this check identifies you as violating these requirements.
 
 ---
 
 ### 9. Set Up Branch Logic in Survey Flow
 
-Go back to the Survey Flow. After the first question, add two Branches that respond to Embedded Data.
+Now go back to the Survey Flow. After the first question, add two Branches that respond to Embedded Data.
 
 - For the first one, set it to activate “If IP_block is Equal to 1”. Move your VPS warning text underneath this branch and then add an End of Survey option below it.
 - For the second Branch, set it to activate “If IP_countryCode is Not Equal to US”, then create two sub-Branches for “If IP_countryCode is Not Empty” and “If IP_countryCode is Empty”. Drag your out of US warning underneath under the first sub-Branch and add an End of Survey option below it. Under your second sub-Branch where IP_countryCode is empty (this means that there was an error in the IP trace) drag your location missing warning.
@@ -215,16 +217,21 @@ Now nobody (or at least very few people) outside of the US or using a detected s
 
 #### Final Note: Appeals Process
 
-Although we did not run into this problem in the pilot of this protocol, there is always the possibility of false positives—people who are screened out that should not have been. When we used this protocol, we also included an appeal process for Turkers. We added to the information screens shown above the line:
+[One final note. Although we did not run into this problem in the pilot of this protocol, there is always the possibility of false positives—people who are screened out that should not have been. When we used this protocol, we also included an appeal process for Turkers. We added to the information screens shown above the line:
 
 > “If you have received this message in error, please contact the requester and enter your MTurk worker ID in the box below”
 
-and added a text box for entry (see illustration below). While several did enter their worker IDs, we have yet to receive a contact following up to appeal their exclusion.
+and added a text box for entry (see illustration below). While several did enter their worker IDs, we have yet to receive a contact following up to appeal their exclusion.]
 
 #### VPS Exclusion Message with Appeal Process
 
-> **Sorry, you are not eligible to participate in this survey.**  
-> Our system has detected that you are using a Virtual Private Server (VPS) or proxy. If you believe this is an error, please contact the requester and enter your MTurk worker ID below.
+> **Our system has detected that you are using a Virtual Private Server (VPS) or proxy to mask your country location.** As has been widely reported, this has caused a number of problems with MTurk data (https://goo.gl/WD6QD4).
+>
+> Because of this, we cannot let you participate in this study. If you are located in the U.S., please turn off your VPS the next time you participate in a survey-based HIT, as we requested in the warning message at the beginning. If you are outside of the U.S., we apologize, but this study is directed only towards U.S. Participants.
+>
+> Thank you for your interest in our study.
+>
+> If you have received this message in error, please report it to the requester for this study and enter your MTurk Worker ID below.
 
 ---
 

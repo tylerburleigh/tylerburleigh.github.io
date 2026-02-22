@@ -17,11 +17,11 @@ options:
     reference: >-
       Burleigh, T. J., Rubel, A. N., & Meegan, D. V. (2017). Wanting 'the whole loaf': Zero-sum thinking about love is associated with prejudice against consensual non-monogamists. Psychology & Sexuality, 8(1-2), 24-40. doi: <a href="https://doi.org/10.1080/19419899.2016.1269020"><code>10.1080/19419899.2016.1269020</code></a>
     links:
-      - name: 'Preprint'
+      - name: 'Preprint (PDF)'
         url: 'Burleigh, Rubel & Meegan - 2017 - Zero-sum thinking & anti-CNM prejudice.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.1080/19419899.2016.1269020
         icon: fa-solid fa-scroll
 ---

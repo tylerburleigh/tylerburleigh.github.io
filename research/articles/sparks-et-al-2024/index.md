@@ -15,7 +15,7 @@ options:
     reference: >-
       Sparks, A., Burleigh, T., & Barclay, P. (2024). Expressed disapproval does not sustain long-term cooperation as effectively as costly punishment. Evolutionary Human Sciences, 6, e53. doi: <a href="https://doi.org/10.1017/ehs.2024.41"><code>10.1017/ehs.2024.41</code></a>
     links:
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.1017/ehs.2024.41
         icon: fa-solid fa-scroll
 ---

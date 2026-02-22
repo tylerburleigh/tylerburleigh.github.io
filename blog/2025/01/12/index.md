@@ -1248,20 +1248,3 @@ Overall across these three metrics, the story is the same: SAMRE did not perform
 # Conclusion
 
 In this post, I have shown that SAMRE does not perform better than a well-engineered baseline method. Prompt engineers need to remain cautious and resist the urge to use complex methods that may seem more sophisticated than standard best practices, without first testing them against a well-engineered baseline.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
