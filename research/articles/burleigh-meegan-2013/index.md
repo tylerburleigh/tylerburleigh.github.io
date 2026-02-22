@@ -16,11 +16,11 @@ options:
     reference: >-
       Burleigh, T. J., & Meegan, D. V. (2013). Keeping up with the Joneses affects perceptions of distributive justice. Social justice research, 26, 120-131. doi: <a href="https://doi.org/10.1007/s11211-013-0181-3"><code>10.1007/s11211-013-0181-3</code></a>
     links:
-      - name: Preprint
+      - name: Preprint (PDF)
         url: 'Burleigh and Meegan - 2013 - Keeping up with the Joneses.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.1007/s11211-013-0181-3
         icon: fa-solid fa-scroll
 ---

@@ -550,20 +550,3 @@ confusion_matrix
 
 
 Here we can see where the mistakes were made. We made 46 (28+18) correct predictions and 15 (10+5) incorrect predictions. 5 errors were false-positive errors and 10 were false-negative errors. Depending on how we plan to use this data, one of these types of errors might be more important than the other. For example, maybe we want to minimize false-negatives, because we don't want to run the risk of missing a diagnosis and taking proactive measures to treat it.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

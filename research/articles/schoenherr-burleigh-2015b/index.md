@@ -13,7 +13,7 @@ options:
     reference: >-
       Schoenherr, J. R., & Burleigh, T. J. (2015). Dissociating Category Structure and Affective Ratings Using Promotion and Prevention Foci in a Categorization Task. Conference poster. Later published as Schoenherr & Burleigh (2020) in Acta Psychologica, 205, 103017.
     links:
-      - name: Published version
+      - name: Publisher page
         url: https://doi.org/10.1016/j.actpsy.2020.103017
         icon: fa-solid fa-scroll
 ---

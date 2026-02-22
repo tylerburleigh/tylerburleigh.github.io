@@ -174,20 +174,3 @@ print(steps.split('\n')[3])
 Providing steps one-at-a-time could be implemented as part of a "progressive" hint system. In an educational math game, for example, the student could receive full points for giving a correct answer with zero assistance, and the number of points earned could be reduced every time they ask for a step hint.
 
 In this implementation I've deliberately removed the results from each step. But we could imagine an interaction where the AI first gives a step, and then optionally provides the result obtained at that step. This could help the student figure out at which step they're making a mistake.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

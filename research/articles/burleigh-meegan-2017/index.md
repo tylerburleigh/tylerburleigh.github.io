@@ -16,11 +16,11 @@ options:
     reference: >-
       Burleigh, T. J., & Meegan, D. V. (2018). Risky prospects and risk aversion tendencies: does competition in the classroom depend on grading practices and knowledge of peer-status?. Social Psychology of Education, 21, 323-335. doi: <a href="https://doi.org/10.1007/s11218-017-9414-x"><code>10.1007/s11218-017-9414-x</code></a>
     links:
-      - name: Preprint
+      - name: Preprint (PDF)
         url: 'Burleigh & Meegan - 2017 - Risky prospects, competition in the classroom.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.1007/s11218-017-9414-x
         icon: fa-solid fa-scroll
 ---

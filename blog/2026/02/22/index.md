@@ -1,5 +1,5 @@
 ---
-title: "Tyler's AI Coding Playbook (February 2026)"
+title: "Research, Plan, Implement, Review: My Agentic Engineering Workflow"
 date: 2026-02-22
 description: |
   The most reliable way I've found to build with AI coding models is to separate work into distinct stages — research, planning, and implementation — with review cycles between each. You build up written artifacts that serve as a shared source of truth, implement in small phases, and review at every step.
@@ -7,13 +7,13 @@ options:
   categories:
     - AI
     - software-engineering
-    - Claude Code
+    - claude-code
     - workflow
 ---
 
 The most reliable way I've found to build with AI coding models is to separate work into distinct stages — research, planning, and implementation — with review cycles between each. You build up written artifacts (`RESEARCH.md`, `PLAN.md`, `PLAN-CHECKLIST.md`) that serve as a shared source of truth, implement in small phases, and review at every step.
 
-## The problem
+# The problem
 
 Without structure, working with AI coding agents tends to go the same way: you give the model a prompt, it produces something that's close but not quite right, and you spend the rest of the session correcting it. As complexity grows, this back-and-forth compounds — the model carries forward bad assumptions, the context window fills up with failed attempts, and you end up doing most of the work yourself.
 
@@ -24,7 +24,7 @@ This process avoids that by:
 - Starting fresh sessions at each stage so the model isn't weighed down by prior confusion
 - Working in small phases so problems stay contained and recoverable
 
-## Principles
+# Principles
 
 - **AI agents are fallible and cut corners.** They miss things, take shortcuts, and make confident-sounding mistakes. A single pass is rarely enough. Build in review cycles and expect to catch errors.
 - **Fresh context windows prevent compounding confusion.** Starting a new session for each stage means the model isn't carrying forward misunderstandings or stale assumptions.
@@ -42,7 +42,7 @@ This process avoids that by:
 
   Be explicit about scope upfront. During review, ask the agent to identify where it may have over-engineered.
 
-## The process
+# The process
 
 The steps below correspond to this diagram:
 
@@ -50,11 +50,17 @@ The steps below correspond to this diagram:
 flowchart TD
     A[1. Problem Statement] --> B[2. Research]
     B --> C[3. Research Review]
-    C --> D[4. Planning]
+    C --> C1{Satisfied?}
+    C1 -- No --> B
+    C1 -- Yes --> D[4. Planning]
     D --> E[5. Plan Review]
-    E --> F[6. Implement Phase N]
+    E --> E1{Satisfied?}
+    E1 -- No --> D
+    E1 -- Yes --> F[6. Implement Phase N]
     F --> G[7. Implementation Review]
-    G --> H[8. Commit]
+    G --> G1{Satisfied?}
+    G1 -- No --> F
+    G1 -- Yes --> H[8. Commit]
     H --> I{More phases?}
     I -- Yes --> F
     I -- No --> J[9. Final Review]
@@ -70,15 +76,15 @@ flowchart TD
 
 2. **Research.** Ask the agent to research the codebase (existing project) or do web research (greenfield), writing everything to `RESEARCH.md`. Read it yourself and revise as necessary — the model may miss things or get details wrong.
 
-3. **Research review.** New session. Tell the agent: "Review RESEARCH.md for accuracy and completeness." Read its feedback, then tell it to revise. Answer any questions and tell it which points to ignore if any are off-base. Getting the research right prevents bad assumptions from cascading into the plan.
+3. **Research review.** New session. Tell the agent: "Review RESEARCH.md for accuracy and completeness." Read its feedback, then tell it to revise. Answer any questions and tell it which points to ignore if any are off-base. Repeat until you're satisfied — getting the research right prevents bad assumptions from cascading into the plan.
 
 4. **Planning.** New session. Give the agent your problem statement, tell it to read `RESEARCH.md` and develop a plan, saving to `PLAN.md`. For complex work, also have it write `PLAN-CHECKLIST.md` breaking work into phases and tasks — this gives the model a way to track progress during implementation.
 
-5. **Plan review.** New session. Tell the agent: "Review PLAN.md as a senior engineer." Read its recommendations and clarifying questions, then tell it to revise. Tell it which points to ignore if any are off-base — e.g., "Revise PLAN.md to address your feedback, but ignore points 2 and 5."
+5. **Plan review.** New session. Tell the agent: "Review PLAN.md as a senior engineer." Read its recommendations and clarifying questions, then tell it to revise. Tell it which points to ignore if any are off-base — e.g., "Revise PLAN.md to address your feedback, but ignore points 2 and 5." Repeat until the plan is solid.
 
 6. **Implementation.** New session. "Implement Phase 1 of PLAN.md, using PLAN-CHECKLIST.md to track your work."
 
-7. **Implementation review.** New session. "Review the implementation of Phase 1 against PLAN.md as a senior engineer." Read its feedback, then tell it to address its own recommendations.
+7. **Implementation review.** New session. "Review the implementation of Phase 1 against PLAN.md as a senior engineer." Read its feedback, then tell it to address its own recommendations. Repeat until the phase is clean.
 
 8. **Commit.** Once satisfied with a phase, commit all changes. Pushing is a separate decision — commit to preserve the checkpoint.
 
@@ -88,9 +94,19 @@ Repeat steps 6–8 for each phase.
 
 10. **Refactoring (optional).** New session. "Review all changes on this branch and identify high-leverage refactoring opportunities." Save to `REFACTOR_PLAN.md`. Review yourself — not every suggestion is worth pursuing. Then implement in a new session, followed by another review pass. Worth considering when the implementation involved a lot of back-and-forth, touched many files, or introduced patterns that could be cleaned up.
 
-## Tooling
+# Related methodologies
 
-### Branching strategy: git worktrees
+This playbook didn't emerge in a vacuum. Several methodologies have converged on similar ideas — separating research, planning, and implementation when working with AI coding agents. Two worth knowing about:
+
+**Research, Plan, Implement (RPI)** is the closest relative. Developed by [Dex Horthy](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents) at HumanLayer, RPI follows the same three-phase structure: research the codebase first, produce a plan, then implement phase by phase. Like this playbook, RPI emphasizes fresh context windows between phases and persisting work as markdown artifacts. Where RPI goes deeper is in **context window management** — Horthy's "Dumb Zone" concept (model performance degrades when context exceeds ~40% capacity) drives the entire workflow design, with explicit compaction points between phases. Where this playbook goes further is in **review cycles** — RPI treats implementation review as optional, while this playbook builds review into every phase transition and adds advanced techniques like cross-model review.
+
+**Spec-Driven Development (SDD)** is broader. Popularized in 2025 by [Thoughtworks](https://www.thoughtworks.com/en-us/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices), Amazon's [Kiro IDE](https://kiro.dev), and GitHub's [Spec Kit](https://github.com/github/spec-kit), SDD treats the specification as the primary artifact — code is derived from it, not the other way around. The workflow is similar (Specify → Plan → Task → Implement), but SDD is more formal and tool-oriented. An [arXiv paper by Piskala](https://arxiv.org/html/2602.00180v1) identifies three levels of rigor, from "spec-first" (specs guide development) to "spec-as-source" (specs are the only human-edited artifact, code is fully generated). This playbook shares SDD's "write it down before you code" philosophy but is more lightweight — markdown files and git, no specialized tooling required.
+
+Both methodologies emerged as responses to the same problem: unstructured "vibe coding" with AI agents produces unreliable results. The convergence across independent practitioners and organizations suggests the core insight is sound — **the bottleneck in AI-assisted development isn't code generation, it's ensuring the model understands what to build before it starts building.**
+
+# Tooling
+
+## Branching strategy: git worktrees
 
 Git worktrees let you check out multiple branches into separate directories. This is useful with AI agents because you can run multiple agents in parallel, each on a different feature branch in its own worktree — without them stepping on each other's files.
 
@@ -110,7 +126,7 @@ Each worktree is a full working directory with its own branch. Open separate ter
 git worktree remove ../myproject-feature-x
 ```
 
-### Code intelligence: Language Server Protocol (LSP) plugins
+## Code intelligence: Language Server Protocol (LSP) plugins
 
 Claude Code supports [LSP plugins](https://code.claude.com/docs/en/discover-plugins#code-intelligence) that give the agent the same code intelligence that powers VS Code — jump to definition, find references, and real-time type error detection. After every file edit, the language server analyzes changes and reports errors back automatically, so the agent catches type errors, missing imports, and syntax issues without running a compiler or linter.
 
@@ -152,7 +168,7 @@ npm install -g typescript-language-server typescript
 - **Precise navigation.** Jump-to-definition and find-references are more accurate than grep-based search, helping the agent understand code structure and dependencies.
 - **Fewer broken edits.** Without an LSP, the agent can confidently produce code with subtle type mismatches that only surface at runtime. With one, those errors are caught inline.
 
-### Static analysis: mypy, ruff, and pyright
+## Static analysis: mypy, ruff, and pyright
 
 Static analysis tools catch entire categories of bugs before runtime and give both you and the model a tighter feedback loop during implementation.
 
@@ -169,71 +185,40 @@ Static analysis tools catch entire categories of bugs before runtime and give bo
 - **Better AI output.** Type annotations and enforced lint rules give the agent more signal about how to write correct, consistent code.
 - **Pre-commit hooks.** Wire all three into pre-commit or CI so nothing gets merged without passing. This automated gatekeeper catches mechanical errors, freeing your reviews to focus on logic and architecture.
 
-## Advanced
+# Advanced
 
-### Cross-model review cycles
+## Scaling with multiple agents
 
-A single model reviewing its own output tends to have the same blindspots on the review pass that it had during implementation. Even a fresh session of the same model shares those underlying tendencies.
+The process above uses one agent at a time, switching sessions between stages. This works, but it has two limitations: the same model reviewing its own work tends to share the same blind spots across sessions, and the human is in the loop at every step.
 
-You can get better results by introducing a different model into the review cycle. Models trained on different data with different architectures produce largely uncorrelated errors — where one is consistently weak, another may be strong. This is the same principle behind ensembling in machine learning.
+You can address both by distributing work across multiple agents with different roles, models, and permissions.
 
-**In practice:**
+**Use different models for different roles.** Models trained on different data with different architectures produce largely uncorrelated errors — the same principle behind ensembling in machine learning. Use one model to implement and a different model to review. Where one is consistently weak, the other is often strong. Two strong models usually captures most of the benefit. Focus cross-model review on substance — logic errors, type mismatches, missing edge cases — not formatting opinions.
 
-1. **Implement with your primary model** as described in the process above.
-2. **Review with a different model.** Hand the code to a different frontier model with the same review prompt. It will flag different things.
-3. **Revise with the second model.** Have it address its own feedback.
-4. **Review the revisions with the original model.** It catches things the second model introduced or missed, and you converge on something stronger than either would produce alone.
+**Match model capability to task complexity.** Not every stage demands the same level of reasoning. Research, planning, and review require synthesis and judgment. Implementation — guided by a detailed plan — is largely mechanical. Use your strongest model for research, planning, and review; use a faster, cheaper model for implementation. The strong model does the thinking, the fast model does the typing. If the faster model struggles with a particular phase, escalate to the stronger model rather than burning cycles.
 
-Two strong models usually captures most of the benefit.
+**Enforce hard boundaries between agents.** A fresh session resets the context window but not the model's tendencies. Hard boundaries make the reviewer genuinely independent: different models with different failure modes, different permissions (the implementer edits files, the reviewer can only read and flag issues), and automated gates (tests, type checks, linters must pass before the reviewer sees the code). Structured handoffs — where the implementer summarizes what it changed and the reviewer gets that summary plus the diff, not the full conversation history — prevent the reviewer from being anchored by the implementer's reasoning.
 
-**When this is worth the overhead:**
+**Automate the inner loop, keep humans at the leverage points.** Hard boundaries are what let you safely defer human involvement. With independent agents and automated gates, the human doesn't need to be in the loop for every phase. A more automated workflow:
 
-- **High-stakes code.** Security, financial calculations, data integrity, complex state management.
-- **Complex logic.** Multi-step algorithms, intricate control flow, many edge cases.
-- **Unfamiliar territory.** When you can't easily verify the code yourself. If both models agree, you have more confidence. If they disagree, investigate.
-- **Diminishing returns from same-model review.** If two review cycles with the same model keep saying "looks good," a different model will often find fresh issues.
+1. **Research and planning** — Agent produces `RESEARCH.md` and `PLAN.md`. **Human reviews and approves the plan.** (Highest leverage — errors here cascade into everything downstream.)
+2. **Implementation loop** — For each phase, the implementer agent executes, automated gates run, and a reviewer agent (different model) reviews against `PLAN.md`. They iterate until the reviewer is satisfied. No human involvement required.
+3. **Pull request** — **Human reviews** the cumulative changes as a PR. The artifacts (`RESEARCH.md`, `PLAN.md`, the commit history) become the PR description, giving full visibility into the agent's reasoning.
 
-**What to watch for:**
+This reduces human touchpoints from ~12 (every review gate) to ~2 (plan and PR). The key insight: **the more detailed your plan, the more safely you can delegate to autonomous execution.** A plan that says "add authentication" invites the agent to make dozens of unsupervised decisions. A plan that specifies the middleware structure, session handling, and error responses leaves little room to go wrong.
 
-- Different models have different style preferences. Focus on substance — logic errors, type mismatches, missing edge cases — not formatting opinions.
-- Give the second model the relevant artifacts (`PLAN.md`, `RESEARCH.md`) so it understands intent, not just code.
-- This adds cost and time. Use it selectively where the risk of subtle bugs justifies the extra passes.
+| Plan detail | Safe autonomy level |
+| :---------- | :------------------ |
+| High-level goal | Human-in-the-loop for every step |
+| Phased plan with architecture decisions made | Autonomous per phase, review between phases |
+| Detailed plan with file paths and function signatures | Autonomous implementation, human reviews PR |
+| Exact specifications with test cases | Fully autonomous with automated verification |
 
-### Tiered models: strong for thinking, fast for typing
+**The tradeoff:** you're trading immediate human oversight for throughput. This works when the plan is detailed enough to constrain the implementation and the automated gates are comprehensive enough to catch regressions. It doesn't work when requirements are fuzzy, the test suite is thin, or the task requires judgment calls the plan didn't anticipate. Start with the fully human-in-the-loop process. Automate the inner loop once you trust your plans and your gates.
 
-Not every stage demands the same level of reasoning. Research, planning, and review require synthesis, tradeoff analysis, and judgment. Implementation — especially guided by a detailed plan — is largely mechanical: translate specifications into code, follow established patterns.
+## Extended context: 1M context models
 
-**The idea:** Use your strongest model for research, planning, and review. Use a faster, cheaper model for implementation. The strong model does the thinking; the fast model does the typing.
-
-**Why this works:**
-
-- **A good plan constrains the implementation.** When `PLAN.md` specifies which files to create, what functions to write, and how components interact, the implementing model doesn't need frontier-level reasoning — it needs to follow instructions and write clean code.
-- **Cost scales with tokens.** Implementation is the most token-heavy stage. Moving it to a cheaper model can cut total cost significantly.
-- **Speed matters during implementation.** Faster models mean shorter feedback loops during implement-review-fix cycles.
-- **Review catches what implementation misses.** If the smaller model makes a mistake, the stronger model catches it during review. You're trusting its ability to follow instructions, then verifying with the stronger model.
-
-**The workflow:**
-
-1. **Research** (strong model) — Write `RESEARCH.md`.
-2. **Plan** (strong model) — Write `PLAN.md` and `PLAN-CHECKLIST.md`.
-3. **Plan review** (strong model) — Critique, revise.
-4. **Implement Phase N** (fast model) — Follow the plan.
-5. **Implementation review** (strong model) — Review against plan.
-6. **Fix issues** (fast model) — Address feedback.
-7. **Repeat** until done.
-
-**When to use the strong model for implementation:**
-
-- The plan is intentionally high-level and leaves design decisions to the implementer.
-- The implementation involves novel logic not well-specified in the plan — complex algorithms, concurrency, security-sensitive code.
-- You're prototyping and the plan is evolving as you build.
-- The smaller model keeps struggling with a particular phase despite clear instructions — escalate rather than burn cycles.
-
-The goal isn't to always use the cheapest model — it's to match cognitive demand to model capability.
-
-### Extended context: 1M context models
-
-Claude Code offers 1M context variants of both Sonnet and Opus via the `/model` command. These models accept up to 1 million tokens of context — roughly 5x the standard 200k window — but are billed at a higher rate as extra usage ($6/$22.50 per Mtok for Sonnet, $10/$37.50 per Mtok for Opus).
+Claude Code offers 1M context variants of both Sonnet and Opus via the `/model` command. These models accept up to 1 million tokens of context — roughly 5x the standard 200k window — but are billed at a higher rate for input beyond 200k tokens ($6/$22.50 per Mtok for Sonnet, $10/$37.50 per Mtok for Opus). Note: as of February 2026, 1M context models require API usage and are not available on subscription plans.
 
 Because of the cost, these probably shouldn't be your default — but they can be used strategically.
 

@@ -294,20 +294,3 @@ ranger_fit_2
 ```
 
 So to summarize: I've used two methods to clean the dataset: 1) random forest based multivariate outlier detection and imputation, and 2) removing multicollinear features. These cleanup techniques achieved only marginal gains in out-of-sample model performance with a random forest model, supporting the common wisdom that random forest models are robust to outliers and multicollinearity.
-
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

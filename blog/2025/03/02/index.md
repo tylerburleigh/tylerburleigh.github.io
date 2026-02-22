@@ -1016,19 +1016,3 @@ This analysis has some limitations that are worth noting. Namely, I didn't evalu
 ## Conclusion
 
 This experiment demonstrated the significant performance benefits of a multi-threaded approach when implementing an LLM judge to evaluate text quality across multiple dimensions. By breaking down the evaluation task into six orthogonal dimensions and processing them in parallel, latency was reduced by ~38% compared to evaluating all dimensions in a single LLM call. At the same time, token usage increased, which may result in higher quality evaluations -- but this was not here.
-
-<script src="https://giscus.app/client.js"
-        data-repo="tylerburleigh/tylerburleigh.github.io"
-        data-repo-id="R_kgDOKMo8ww"
-        data-category="Blog comments"
-        data-category-id="DIC_kwDOIg6EJc4CSz92"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>

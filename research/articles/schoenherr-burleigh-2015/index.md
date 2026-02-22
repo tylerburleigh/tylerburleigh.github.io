@@ -13,11 +13,11 @@ options:
     reference: >-
       Schoenherr, J. R., & Burleigh, T. J. (2015). Uncanny sociocultural categories. Frontiers in Psychology, 5, 1456. doi: <a href="https://doi.org/10.3389/fpsyg.2014.01456"><code>10.3389/fpsyg.2014.01456</code></a>
     links:
-      - name: Preprint
+      - name: Preprint (PDF)
         url: 'Schoenherr and Burleigh - 2015 - Uncanny sociocultural categories.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.3389/fpsyg.2014.01456
         icon: fa-solid fa-scroll
 ---

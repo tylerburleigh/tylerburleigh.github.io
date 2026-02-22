@@ -17,11 +17,11 @@ options:
     reference: >-
       Winter, N., Burleigh, T., Kennedy, R., & Clifford, S. (2019). A simplified protocol to screen out VPS and international respondents using Qualtrics. Available at SSRN 3327274. doi: <a href="https://doi.org/10.2139/ssrn.3327274"><code>10.2139/ssrn.3327274 </code></a>
     links:
-      - name: Preprint
+      - name: Preprint (PDF)
         url: 'Winter, Burleigh, Kennedy, Clifford - 2019 - A Simplified Protocol to Screen Out VPS and International Respondents Using Qualtrics.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.2139/ssrn.3327274
         icon: fa-solid fa-scroll
 ---

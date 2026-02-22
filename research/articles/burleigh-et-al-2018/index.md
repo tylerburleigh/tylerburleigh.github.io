@@ -16,11 +16,11 @@ options:
     reference: >-
       Burleigh, T., Kennedy, R., & Clifford, S. (2018). How to screen out VPS and international respondents using Qualtrics: A protocol. Available at SSRN 3265459. doi: <a href="https://doi.org/10.2139/ssrn.3265459"><code>10.2139/ssrn.3265459 </code></a>
     links:
-      - name: 'Preprint'
+      - name: 'Preprint (PDF)'
         url: 'Burleigh, Rubel & Meegan - 2017 - Zero-sum thinking & anti-CNM prejudice.pdf'
         icon: fa-solid fa-file-pdf
         local: true
-      - name: Final version
+      - name: Publisher page
         url: https://doi.org/10.2139/ssrn.3265459
         icon: fa-solid fa-scroll
 ---

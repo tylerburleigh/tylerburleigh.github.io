@@ -14,7 +14,7 @@ options:
     reference: >-
       Burleigh, T., Chen, J., & Dicerbo, K. (2025). Pre-Pilot Optimization of Conversation-Based Assessment Items Using Synthetic Response Data. Proceedings of the Artificial Intelligence in Measurement and Education Conference (AIME-Con), 61-68.
     links:
-      - name: Final version
+      - name: Publisher page
         url: https://aclanthology.org/2025.aimecon-sessions.7/
         icon: fa-solid fa-scroll
 ---
