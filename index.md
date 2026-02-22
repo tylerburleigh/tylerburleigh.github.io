@@ -1,5 +1,6 @@
 ---
-title: "Tyler Burleigh"
+title: "About"
+description: "Tyler Burleigh is an AI Research Scientist at Khan Academy with a background in experimental psychology and data science. He works with LLMs across the full AI development lifecycle."
 site:
   hide_toc: true
   hide_title_block: true

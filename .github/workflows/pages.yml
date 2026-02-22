@@ -27,6 +27,8 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt
       - run: myst build --html --ci
+        env:
+          BASE_URL: https://tylerburleigh.com
       - name: Preserve original PDF URLs
         run: |
           find research/articles -name '*.pdf' | while read src; do
@@ -75,6 +77,10 @@ jobs:
                   text = theme_script_re.sub(inject, text, count=1)
                   path.write_text(text, encoding="utf-8")
           PY
+      - name: Fix sitemap and robots.txt URLs
+        run: |
+          sed -i 's|http://localhost:[0-9]*|https://tylerburleigh.com|g' _build/html/sitemap.xml
+          sed -i 's|http://localhost:[0-9]*|https://tylerburleigh.com|g' _build/html/robots.txt
       - run: |
           cp CNAME _build/html/CNAME
           if [ -f rss.xml ]; then cp rss.xml _build/html/rss.xml; fi

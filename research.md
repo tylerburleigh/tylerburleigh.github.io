@@ -1,3 +1,7 @@
+---
+description: "Research publications by Tyler Burleigh spanning AI in education, cognitive science, decision-making, and psychology."
+---
+
 # Research
 
 <div class="gs-widget">

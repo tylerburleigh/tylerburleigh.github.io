@@ -47,9 +47,8 @@ site:
     logo_text: Tyler Burleigh
     analytics_google: G-PRHQZ8HPLB
     favicon: files/favico.png
-    theme_light: false
   domains:
-    - tylerburleigh.github.io
+    - tylerburleigh.com
   actions:
     - title: RSS
       url: https://tylerburleigh.com/rss.xml
