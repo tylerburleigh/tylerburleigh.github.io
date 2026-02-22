@@ -123,7 +123,7 @@ jobs:
               text = path.read_text(encoding="utf-8")
               if "giscus-loader" in text:
                   continue
-              text = text.replace("</body>", giscus + "</body>")
+              text = text.replace("</html>", "</html>" + giscus)
               path.write_text(text, encoding="utf-8")
           PY
       - name: Fix sitemap and robots.txt URLs
