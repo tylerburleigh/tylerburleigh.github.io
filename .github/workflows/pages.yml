@@ -27,8 +27,6 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt
       - run: myst build --html --ci
-        env:
-          BASE_URL: https://tylerburleigh.com
       - name: Preserve original PDF URLs
         run: |
           find research/articles -name '*.pdf' | while read src; do
