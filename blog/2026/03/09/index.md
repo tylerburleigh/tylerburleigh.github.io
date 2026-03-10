@@ -2,7 +2,7 @@
 title: "Build Capabilities, Not Factories: Lessons from Building a Deep Research Agent"
 date: 2026-03-09
 description: |
-  I built two deep research systems for AI agents: a multi-phase pipeline that took months, and a set of four CLI tools plus a prompt that took a weekend. I'm now convinced the simpler system is better.
+  I built two deep research systems for AI agents: a 10,000-line pipeline that took months, and four CLI tools plus a prompt that took a weekend. The simpler system performed just as well — and taught me a design principle: build tools that extend what an agent can do, not systems that replace what an agent can think.
 options:
   categories:
     - AI
